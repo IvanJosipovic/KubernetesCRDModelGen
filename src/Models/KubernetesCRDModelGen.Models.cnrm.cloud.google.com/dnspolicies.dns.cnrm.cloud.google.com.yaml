@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: dnspolicies.dns.cnrm.cloud.google.com
 spec:
   group: dns.cnrm.cloud.google.com
@@ -54,28 +53,22 @@ spec:
           spec:
             properties:
               alternativeNameServerConfig:
-                description: >-
+                description: |-
                   Sets an alternative name server for the associated networks.
-
                   When specified, all DNS queries are forwarded to a name server that you choose.
-
                   Names such as .internal are not available when an alternative name server is specified.
                 properties:
                   targetNameServers:
-                    description: >-
+                    description: |-
                       Sets an alternative name server for the associated networks. When specified,
-
                       all DNS queries are forwarded to a name server that you choose. Names such as .internal
-
                       are not available when an alternative name server is specified.
                     items:
                       properties:
                         forwardingPath:
-                          description: >-
+                          description: |-
                             Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding
-
                             decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
-
                             to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"].
                           type: string
                         ipv4Address:
@@ -92,19 +85,15 @@ spec:
                 description: A textual description field. Defaults to 'Managed by Config Connector'.
                 type: string
               enableInboundForwarding:
-                description: >-
+                description: |-
                   Allows networks bound to this policy to receive DNS queries sent
-
                   by VMs or applications over VPN connections. When enabled, a
-
                   virtual IP address will be allocated from each of the sub-networks
-
                   that are bound to this policy.
                 type: boolean
               enableLogging:
-                description: >-
+                description: |-
                   Controls whether logging is enabled for the networks bound to this policy.
-
                   Defaults to no logging if not set.
                 type: boolean
               networks:
@@ -180,7 +169,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

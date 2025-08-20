@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: projects.resourcemanager.cnrm.cloud.google.com
 spec:
   group: resourcemanager.cnrm.cloud.google.com
@@ -91,11 +90,9 @@ spec:
                     type: string
                 type: object
               folderRef:
-                description: >-
+                description: |-
                   The folder that this resource belongs to. Changing this forces the
-
                   resource to be migrated to the newly specified folder. Only one of
-
                   folderRef or organizationRef may be specified.
                 oneOf:
                 - not:
@@ -126,13 +123,10 @@ spec:
                 description: The display name of the project.
                 type: string
               organizationRef:
-                description: >-
+                description: |-
                   The organization that this resource belongs to. Changing this
-
                   forces the resource to be migrated to the newly specified
-
                   organization. Only one of folderRef or organizationRef may be
-
                   specified.
                 oneOf:
                 - not:
@@ -204,7 +198,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

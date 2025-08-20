@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: notebookinstances.notebooks.cnrm.cloud.google.com
 spec:
   group: notebooks.cnrm.cloud.google.com
@@ -102,7 +101,7 @@ spec:
                 description: Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
                 type: boolean
               instanceOwners:
-                description: >-
+                description: |-
                   Input only. The owner of this instance after creation. Format: `alias@example.com`
 
                    Currently supports one owner only. If not specified, all of the service
@@ -242,7 +241,7 @@ spec:
                 description: The NotebookInstance name. If not given, the metadata.name will be used.
                 type: string
               serviceAccountRef:
-                description: >-
+                description: |-
                   The service account on this instance, giving access to other Google
                    Cloud services.
                    You can use any service account within the same project, but you
@@ -277,7 +276,7 @@ spec:
                     type: string
                 type: object
               serviceAccountScopes:
-                description: >-
+                description: |-
                   Optional. The URIs of service account scopes to be included in
                    Compute Engine instances.
 
@@ -295,7 +294,7 @@ spec:
                 description: Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
                 properties:
                   enableIntegrityMonitoring:
-                    description: >-
+                    description: |-
                       Defines whether the instance has integrity monitoring enabled.
 
                        Enables monitoring and attestation of the boot integrity of the instance.
@@ -304,7 +303,7 @@ spec:
                        the instance is created. Enabled by default.
                     type: boolean
                   enableSecureBoot:
-                    description: >-
+                    description: |-
                       Defines whether the instance has Secure Boot enabled.
 
                        Secure Boot helps ensure that the system only runs authentic software by
@@ -454,7 +453,7 @@ spec:
                           description: Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
                           type: boolean
                         deviceName:
-                          description: >-
+                          description: |-
                             Indicates a unique device name of your choice that is reflected into the
                              `/dev/disk/by-id/google-*` tree of a Linux operating system running
                              within the instance. This name can be used to reference the device for
@@ -473,7 +472,7 @@ spec:
                           items:
                             properties:
                               type:
-                                description: >-
+                                description: |-
                                   The ID of a supported feature. Read  Enabling guest operating system
                                    features to see a list of available options.
                                    Valid values:
@@ -492,7 +491,7 @@ spec:
                           format: int64
                           type: integer
                         interface:
-                          description: >-
+                          description: |-
                             Indicates the disk interface to use for attaching this disk, which is
                              either SCSI or NVME. The default is SCSI. Persistent disks must always
                              use SCSI and the request will fail if you attempt to attach a persistent
@@ -513,7 +512,7 @@ spec:
                             type: string
                           type: array
                         mode:
-                          description: >-
+                          description: |-
                             The mode in which to attach this disk, either `READ_WRITE` or
                              `READ_ONLY`. If not specified, the default is to attach the disk in
                              `READ_WRITE` mode. Valid values:
@@ -525,7 +524,7 @@ spec:
                           description: Indicates a valid partial or full URL to an existing Persistent Disk resource.
                           type: string
                         type:
-                          description: >-
+                          description: |-
                             Indicates the type of the disk, either `SCRATCH` or `PERSISTENT`.
                              Valid values:
 
@@ -635,7 +634,7 @@ spec:
                 description: Whether the end user authorizes Google Cloud to install GPU driver on this instance. If this field is empty or set to false, the GPU driver won't be installed. Only applicable to instances with GPUs.
                 type: boolean
               instanceOwners:
-                description: >-
+                description: |-
                   Input only. The owner of this instance after creation. Format: `alias@example.com`
 
                    Currently supports one owner only. If not specified, all of the service
@@ -775,7 +774,7 @@ spec:
                 description: The NotebookInstance name. If not given, the metadata.name will be used.
                 type: string
               serviceAccountRef:
-                description: >-
+                description: |-
                   The service account on this instance, giving access to other Google
                    Cloud services.
                    You can use any service account within the same project, but you
@@ -810,7 +809,7 @@ spec:
                     type: string
                 type: object
               serviceAccountScopes:
-                description: >-
+                description: |-
                   Optional. The URIs of service account scopes to be included in
                    Compute Engine instances.
 
@@ -828,7 +827,7 @@ spec:
                 description: Optional. Shielded VM configuration. [Images using supported Shielded VM features](https://cloud.google.com/compute/docs/instances/modifying-shielded-vm).
                 properties:
                   enableIntegrityMonitoring:
-                    description: >-
+                    description: |-
                       Defines whether the instance has integrity monitoring enabled.
 
                        Enables monitoring and attestation of the boot integrity of the instance.
@@ -837,7 +836,7 @@ spec:
                        the instance is created. Enabled by default.
                     type: boolean
                   enableSecureBoot:
-                    description: >-
+                    description: |-
                       Defines whether the instance has Secure Boot enabled.
 
                        Secure Boot helps ensure that the system only runs authentic software by
@@ -987,7 +986,7 @@ spec:
                           description: Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
                           type: boolean
                         deviceName:
-                          description: >-
+                          description: |-
                             Indicates a unique device name of your choice that is reflected into the
                              `/dev/disk/by-id/google-*` tree of a Linux operating system running
                              within the instance. This name can be used to reference the device for
@@ -1006,7 +1005,7 @@ spec:
                           items:
                             properties:
                               type:
-                                description: >-
+                                description: |-
                                   The ID of a supported feature. Read  Enabling guest operating system
                                    features to see a list of available options.
                                    Valid values:
@@ -1025,7 +1024,7 @@ spec:
                           format: int64
                           type: integer
                         interface:
-                          description: >-
+                          description: |-
                             Indicates the disk interface to use for attaching this disk, which is
                              either SCSI or NVME. The default is SCSI. Persistent disks must always
                              use SCSI and the request will fail if you attempt to attach a persistent
@@ -1046,7 +1045,7 @@ spec:
                             type: string
                           type: array
                         mode:
-                          description: >-
+                          description: |-
                             The mode in which to attach this disk, either `READ_WRITE` or
                              `READ_ONLY`. If not specified, the default is to attach the disk in
                              `READ_WRITE` mode. Valid values:
@@ -1058,7 +1057,7 @@ spec:
                           description: Indicates a valid partial or full URL to an existing Persistent Disk resource.
                           type: string
                         type:
-                          description: >-
+                          description: |-
                             Indicates the type of the disk, either `SCRATCH` or `PERSISTENT`.
                              Valid values:
 
@@ -1087,7 +1086,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

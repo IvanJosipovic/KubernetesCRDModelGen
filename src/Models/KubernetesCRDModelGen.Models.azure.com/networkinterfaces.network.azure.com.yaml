@@ -45,33 +45,24 @@ spec:
     name: v1api20201101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkInterface.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,26 +70,23 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               dnsSettings:
                 description: 'DnsSettings: The DNS settings in network interface.'
                 properties:
                   dnsServers:
-                    description: >-
+                    description: |-
                       DnsServers: List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution.
-
                       'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
                     items:
                       type: string
                     type: array
                   internalDnsNameLabel:
-                    description: >-
+                    description: |-
                       InternalDnsNameLabel: Relative DNS name for this NIC used for internal communications between VMs in the same virtual
-
                       network.
                     type: string
                 type: object
@@ -137,11 +125,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -166,11 +152,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -195,11 +179,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -224,11 +206,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -272,11 +252,9 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -298,11 +276,9 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -326,11 +302,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -358,11 +332,9 @@ spec:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -384,41 +356,33 @@ spec:
                 - Standard
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -429,33 +393,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -465,11 +422,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -486,11 +441,9 @@ spec:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -529,28 +482,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -570,33 +517,28 @@ spec:
                 description: 'DnsSettings: The DNS settings in network interface.'
                 properties:
                   appliedDnsServers:
-                    description: >-
+                    description: |-
                       AppliedDnsServers: If the VM that uses this NIC is part of an Availability Set, then this list will have the union of
-
                       all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of
-
                       those VMs.
                     items:
                       type: string
                     type: array
                   dnsServers:
-                    description: >-
+                    description: |-
                       DnsServers: List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution.
-
                       'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
                     items:
                       type: string
                     type: array
                   internalDnsNameLabel:
-                    description: >-
+                    description: |-
                       InternalDnsNameLabel: Relative DNS name for this NIC used for internal communications between VMs in the same virtual
-
                       network.
                     type: string
                   internalDomainNameSuffix:
-                    description: >-
+                    description: |-
                       InternalDomainNameSuffix: Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of
-
                       the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
                     type: string
                   internalFqdn:
@@ -842,35 +784,25 @@ spec:
     name: v1api20201101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20201101.NetworkInterface
-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/networkInterface.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -881,29 +813,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               dnsSettings:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.NetworkInterfaceDnsSettings
-
                   DNS settings of a network interface.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   dnsServers:
@@ -918,17 +846,15 @@ spec:
               enableIPForwarding:
                 type: boolean
               extendedLocation:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.ExtendedLocation
-
                   ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -938,43 +864,37 @@ spec:
                 type: object
               ipConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20201101.NetworkInterfaceIPConfiguration_NetworkInterface_SubResourceEmbedded
-
                     IPConfiguration in a network interface.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     applicationGatewayBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.ApplicationGatewayBackendAddressPool_NetworkInterface_SubResourceEmbedded
-
                           Backend Address Pool of an application gateway.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -992,28 +912,24 @@ spec:
                       type: array
                     applicationSecurityGroups:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.ApplicationSecurityGroupSpec_NetworkInterface_SubResourceEmbedded
-
                           An application security group in a resource group.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -1031,28 +947,24 @@ spec:
                       type: array
                     loadBalancerBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.BackendAddressPool_NetworkInterface_SubResourceEmbedded
-
                           Pool of backend IP addresses.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -1070,28 +982,24 @@ spec:
                       type: array
                     loadBalancerInboundNatRules:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.InboundNatRule_NetworkInterface_SubResourceEmbedded
-
                           Inbound NAT rule of the load balancer.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -1118,28 +1026,24 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     publicIPAddress:
-                      description: >-
+                      description: |-
                         Storage version of v1api20201101.PublicIPAddressSpec_NetworkInterface_SubResourceEmbedded
-
                         Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1155,28 +1059,24 @@ spec:
                           type: object
                       type: object
                     subnet:
-                      description: >-
+                      description: |-
                         Storage version of v1api20201101.Subnet_NetworkInterface_SubResourceEmbedded
-
                         Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1193,28 +1093,24 @@ spec:
                       type: object
                     virtualNetworkTaps:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.VirtualNetworkTapSpec_NetworkInterface_SubResourceEmbedded
-
                           Virtual Network Tap resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -1235,28 +1131,24 @@ spec:
               location:
                 type: string
               networkSecurityGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.NetworkSecurityGroupSpec_NetworkInterface_SubResourceEmbedded
-
                   NetworkSecurityGroup resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -1274,48 +1166,39 @@ spec:
               nicType:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.NetworkInterfaceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1325,33 +1208,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1363,11 +1239,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1378,28 +1252,24 @@ spec:
                     type: string
                 type: object
               privateLinkService:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.PrivateLinkServiceSpec
-
                   Private link service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -1422,17 +1292,15 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20201101.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded
-
               A network interface in a resource group.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -1447,28 +1315,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1485,17 +1347,15 @@ spec:
                   type: object
                 type: array
               dnsSettings:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.NetworkInterfaceDnsSettings_STATUS
-
                   DNS settings of a network interface.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   appliedDnsServers:
@@ -1514,17 +1374,15 @@ spec:
                     type: string
                 type: object
               dscpConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.SubResource_STATUS
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -1537,17 +1395,15 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.ExtendedLocation_STATUS
-
                   ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -1563,32 +1419,28 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20201101.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded
-
                     IPConfiguration in a network interface.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     applicationGatewayBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Backend Address Pool of an application gateway.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -1597,17 +1449,15 @@ spec:
                       type: array
                     applicationSecurityGroups:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded
-
                           An application security group in a resource group.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -1620,17 +1470,15 @@ spec:
                       type: string
                     loadBalancerBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Pool of backend IP addresses.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -1639,17 +1487,15 @@ spec:
                       type: array
                     loadBalancerInboundNatRules:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Inbound NAT rule of the load balancer.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -1667,17 +1513,15 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     privateLinkConnectionProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20201101.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS
-
                         PrivateLinkConnection properties for the network interface.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         fqdns:
@@ -1692,34 +1536,30 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: >-
+                      description: |-
                         Storage version of v1api20201101.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded
-
                         Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     subnet:
-                      description: >-
+                      description: |-
                         Storage version of v1api20201101.Subnet_STATUS_NetworkInterface_SubResourceEmbedded
-
                         Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
@@ -1729,17 +1569,15 @@ spec:
                       type: string
                     virtualNetworkTaps:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20201101.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Virtual Network Tap resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -1757,17 +1595,15 @@ spec:
               name:
                 type: string
               networkSecurityGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded
-
                   NetworkSecurityGroup resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -1778,34 +1614,30 @@ spec:
               primary:
                 type: boolean
               privateEndpoint:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded
-
                   Private endpoint resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
                 type: object
               privateLinkService:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded
-
                   Private link service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -1821,17 +1653,15 @@ spec:
                 type: object
               tapConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20201101.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded
-
                     Tap configuration in a Network Interface.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1841,17 +1671,15 @@ spec:
               type:
                 type: string
               virtualMachine:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.SubResource_STATUS
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -1879,33 +1707,24 @@ spec:
     name: v1api20240301
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/networkInterface.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1930,9 +1749,8 @@ spec:
                 - None
                 type: string
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               disableTcpStateTracking:
@@ -1942,24 +1760,21 @@ spec:
                 description: 'DnsSettings: The DNS settings in network interface.'
                 properties:
                   dnsServers:
-                    description: >-
+                    description: |-
                       DnsServers: List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution.
-
                       'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
                     items:
                       type: string
                     type: array
                   internalDnsNameLabel:
-                    description: >-
+                    description: |-
                       InternalDnsNameLabel: Relative DNS name for this NIC used for internal communications between VMs in the same virtual
-
                       network.
                     type: string
                 type: object
               enableAcceleratedNetworking:
-                description: >-
+                description: |-
                   EnableAcceleratedNetworking: If the network interface is configured for accelerated networking. Not applicable to VM
-
                   sizes which require accelerated networking.
                 type: boolean
               enableIPForwarding:
@@ -1991,11 +1806,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -2020,11 +1833,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -2047,11 +1858,9 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2075,11 +1884,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -2104,11 +1911,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -2131,15 +1936,13 @@ spec:
                       description: 'Primary: Whether this is a primary customer address on the network interface.'
                       type: boolean
                     privateIPAddress:
-                      description: >-
+                      description: |-
                         PrivateIPAddress: Private IP address of the IP configuration. It can be a single IP address or a CIDR block in the
-
                         format <address>/<prefix-length>.
                       type: string
                     privateIPAddressPrefixLength:
-                      description: >-
+                      description: |-
                         PrivateIPAddressPrefixLength: The private IP address prefix length. If specified and the allocation method is dynamic,
-
                         the service will allocate a CIDR block instead of a single IP address.
                       maximum: 128
                       minimum: 1
@@ -2163,11 +1966,9 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2189,11 +1990,9 @@ spec:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2217,11 +2016,9 @@ spec:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -2249,11 +2046,9 @@ spec:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -2275,41 +2070,33 @@ spec:
                 - Standard
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2320,33 +2107,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2356,11 +2136,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -2377,11 +2155,9 @@ spec:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -2429,28 +2205,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2473,33 +2243,28 @@ spec:
                 description: 'DnsSettings: The DNS settings in network interface.'
                 properties:
                   appliedDnsServers:
-                    description: >-
+                    description: |-
                       AppliedDnsServers: If the VM that uses this NIC is part of an Availability Set, then this list will have the union of
-
                       all DNS servers from all NICs that are part of the Availability Set. This property is what is configured on each of
-
                       those VMs.
                     items:
                       type: string
                     type: array
                   dnsServers:
-                    description: >-
+                    description: |-
                       DnsServers: List of DNS servers IP addresses. Use 'AzureProvidedDNS' to switch to azure provided DNS resolution.
-
                       'AzureProvidedDNS' value cannot be combined with other IPs, it must be the only value in dnsServers collection.
                     items:
                       type: string
                     type: array
                   internalDnsNameLabel:
-                    description: >-
+                    description: |-
                       InternalDnsNameLabel: Relative DNS name for this NIC used for internal communications between VMs in the same virtual
-
                       network.
                     type: string
                   internalDomainNameSuffix:
-                    description: >-
+                    description: |-
                       InternalDomainNameSuffix: Even if internalDnsNameLabel is not specified, a DNS entry is created for the primary NIC of
-
                       the VM. This DNS name can be constructed by concatenating the VM name with the value of internalDomainNameSuffix.
                     type: string
                   internalFqdn:
@@ -2514,9 +2279,8 @@ spec:
                     type: string
                 type: object
               enableAcceleratedNetworking:
-                description: >-
+                description: |-
                   EnableAcceleratedNetworking: If the network interface is configured for accelerated networking. Not applicable to VM
-
                   sizes which require accelerated networking.
                 type: boolean
               enableIPForwarding:
@@ -2608,15 +2372,13 @@ spec:
                       description: 'Primary: Whether this is a primary customer address on the network interface.'
                       type: boolean
                     privateIPAddress:
-                      description: >-
+                      description: |-
                         PrivateIPAddress: Private IP address of the IP configuration. It can be a single IP address or a CIDR block in the
-
                         format <address>/<prefix-length>.
                       type: string
                     privateIPAddressPrefixLength:
-                      description: >-
+                      description: |-
                         PrivateIPAddressPrefixLength: The private IP address prefix length. If specified and the allocation method is dynamic,
-
                         the service will allocate a CIDR block instead of a single IP address.
                       type: integer
                     privateIPAddressVersion:
@@ -2770,35 +2532,25 @@ spec:
     name: v1api20240301storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20240301.NetworkInterface
-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/networkInterface.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkInterfaces/{networkInterfaceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2809,9 +2561,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               auxiliaryMode:
@@ -2819,25 +2570,22 @@ spec:
               auxiliarySku:
                 type: string
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               disableTcpStateTracking:
                 type: boolean
               dnsSettings:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.NetworkInterfaceDnsSettings
-
                   DNS settings of a network interface.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   dnsServers:
@@ -2852,17 +2600,15 @@ spec:
               enableIPForwarding:
                 type: boolean
               extendedLocation:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ExtendedLocation
-
                   ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -2872,43 +2618,37 @@ spec:
                 type: object
               ipConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240301.NetworkInterfaceIPConfiguration_NetworkInterface_SubResourceEmbedded
-
                     IPConfiguration in a network interface.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     applicationGatewayBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.ApplicationGatewayBackendAddressPool_NetworkInterface_SubResourceEmbedded
-
                           Backend Address Pool of an application gateway.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -2926,28 +2666,24 @@ spec:
                       type: array
                     applicationSecurityGroups:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.ApplicationSecurityGroupSpec_NetworkInterface_SubResourceEmbedded
-
                           An application security group in a resource group.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -2964,28 +2700,24 @@ spec:
                         type: object
                       type: array
                     gatewayLoadBalancer:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.SubResource
-
                         Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -3002,28 +2734,24 @@ spec:
                       type: object
                     loadBalancerBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.BackendAddressPool_NetworkInterface_SubResourceEmbedded
-
                           Pool of backend IP addresses.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -3041,28 +2769,24 @@ spec:
                       type: array
                     loadBalancerInboundNatRules:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.InboundNatRule_NetworkInterface_SubResourceEmbedded
-
                           Inbound NAT rule of the load balancer.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -3091,28 +2815,24 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     publicIPAddress:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.PublicIPAddressSpec_NetworkInterface_SubResourceEmbedded
-
                         Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -3128,28 +2848,24 @@ spec:
                           type: object
                       type: object
                     subnet:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.Subnet_NetworkInterface_SubResourceEmbedded
-
                         Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: 'Reference: Resource ID.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -3166,28 +2882,24 @@ spec:
                       type: object
                     virtualNetworkTaps:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.VirtualNetworkTapSpec_NetworkInterface_SubResourceEmbedded
-
                           Virtual Network Tap resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           reference:
                             description: 'Reference: Resource ID.'
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -3208,28 +2920,24 @@ spec:
               location:
                 type: string
               networkSecurityGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.NetworkSecurityGroupSpec_NetworkInterface_SubResourceEmbedded
-
                   NetworkSecurityGroup resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -3247,48 +2955,39 @@ spec:
               nicType:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.NetworkInterfaceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3298,33 +2997,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3336,11 +3028,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -3351,28 +3041,24 @@ spec:
                     type: string
                 type: object
               privateLinkService:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.PrivateLinkServiceSpec
-
                   Private link service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -3397,17 +3083,15 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20240301.NetworkInterface_STATUS_NetworkInterface_SubResourceEmbedded
-
               A network interface in a resource group.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               auxiliaryMode:
@@ -3426,28 +3110,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -3466,17 +3144,15 @@ spec:
               disableTcpStateTracking:
                 type: boolean
               dnsSettings:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.NetworkInterfaceDnsSettings_STATUS
-
                   DNS settings of a network interface.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   appliedDnsServers:
@@ -3495,17 +3171,15 @@ spec:
                     type: string
                 type: object
               dscpConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SubResource_STATUS
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -3518,17 +3192,15 @@ spec:
               etag:
                 type: string
               extendedLocation:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ExtendedLocation_STATUS
-
                   ExtendedLocation complex type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -3544,32 +3216,28 @@ spec:
                 type: string
               ipConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240301.NetworkInterfaceIPConfiguration_STATUS_NetworkInterface_SubResourceEmbedded
-
                     IPConfiguration in a network interface.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     applicationGatewayBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.ApplicationGatewayBackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Backend Address Pool of an application gateway.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -3578,17 +3246,15 @@ spec:
                       type: array
                     applicationSecurityGroups:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.ApplicationSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded
-
                           An application security group in a resource group.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -3598,17 +3264,15 @@ spec:
                     etag:
                       type: string
                     gatewayLoadBalancer:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.SubResource_STATUS
-
                         Reference to another subresource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
@@ -3618,17 +3282,15 @@ spec:
                       type: string
                     loadBalancerBackendAddressPools:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.BackendAddressPool_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Pool of backend IP addresses.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -3637,17 +3299,15 @@ spec:
                       type: array
                     loadBalancerInboundNatRules:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.InboundNatRule_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Inbound NAT rule of the load balancer.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -3667,17 +3327,15 @@ spec:
                     privateIPAllocationMethod:
                       type: string
                     privateLinkConnectionProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.NetworkInterfaceIPConfigurationPrivateLinkConnectionProperties_STATUS
-
                         PrivateLinkConnection properties for the network interface.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         fqdns:
@@ -3692,34 +3350,30 @@ spec:
                     provisioningState:
                       type: string
                     publicIPAddress:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.PublicIPAddress_STATUS_NetworkInterface_SubResourceEmbedded
-
                         Public IP address resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     subnet:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.Subnet_STATUS_NetworkInterface_SubResourceEmbedded
-
                         Subnet in a virtual network resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
@@ -3729,17 +3383,15 @@ spec:
                       type: string
                     virtualNetworkTaps:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240301.VirtualNetworkTap_STATUS_NetworkInterface_SubResourceEmbedded
-
                           Virtual Network Tap resource.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           id:
@@ -3757,17 +3409,15 @@ spec:
               name:
                 type: string
               networkSecurityGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.NetworkSecurityGroup_STATUS_NetworkInterface_SubResourceEmbedded
-
                   NetworkSecurityGroup resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -3778,34 +3428,30 @@ spec:
               primary:
                 type: boolean
               privateEndpoint:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.PrivateEndpoint_STATUS_NetworkInterface_SubResourceEmbedded
-
                   Private endpoint resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
                 type: object
               privateLinkService:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.PrivateLinkService_STATUS_NetworkInterface_SubResourceEmbedded
-
                   Private link service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -3821,17 +3467,15 @@ spec:
                 type: object
               tapConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240301.NetworkInterfaceTapConfiguration_STATUS_NetworkInterface_SubResourceEmbedded
-
                     Tap configuration in a Network Interface.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -3841,17 +3485,15 @@ spec:
               type:
                 type: string
               virtualMachine:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SubResource_STATUS
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:

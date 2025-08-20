@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: computepacketmirrorings.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -73,9 +72,8 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           Resource URL to the forwarding rule representing the ILB configured as destination of the mirrored traffic.
-
 
                           Allowed value: The `selfLink` field of a `ComputeForwardingRule` resource.
                         type: string
@@ -142,9 +140,8 @@ spec:
                             - external
                           properties:
                             external:
-                              description: >-
+                              description: |-
                                 Resource URL to the virtual machine instance which is being mirrored.
-
 
                                 Allowed value: The `selfLink` field of a `ComputeInstance` resource.
                               type: string
@@ -182,9 +179,8 @@ spec:
                             - external
                           properties:
                             external:
-                              description: >-
+                              description: |-
                                 Resource URL to the subnetwork for which traffic from/to all VM instances will be mirrored.
-
 
                                 Allowed value: The `selfLink` field of a `ComputeSubnetwork` resource.
                               type: string
@@ -224,9 +220,8 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           URL of the network resource.
-
 
                           Allowed value: The `selfLink` field of a `ComputeNetwork` resource.
                         type: string
@@ -262,9 +257,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The project for the resource
-
 
                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                     type: string
@@ -343,7 +337,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

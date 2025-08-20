@@ -36,25 +36,18 @@ spec:
         description: Intent is the Schema for the Intents API. Provides an Amazon Lex intent resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -85,24 +72,18 @@ spec:
               forProvider:
                 properties:
                   conclusionStatement:
-                    description: >-
+                    description: |-
                       The statement that you want Amazon Lex to convey to the user
-
                       after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
-
                       you provide a Lambda function in the fulfillment_activity. If you return the intent to the client
-
                       application, you can't specify this element. The follow_up_prompt and conclusion_statement are
-
                       mutually exclusive. You can specify only one. Attributes are documented under statement.
                     items:
                       properties:
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -113,29 +94,24 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   confirmationPrompt:
-                    description: >-
+                    description: |-
                       Prompts the user to confirm the intent. This question should
-
                       have a yes or no answer. You you must provide both the rejection_statement and confirmation_prompt,
-
                       or neither. Attributes are documented under prompt.
                     items:
                       properties:
@@ -143,11 +119,9 @@ spec:
                           description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                           type: number
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -158,45 +132,38 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   createVersion:
-                    description: >-
+                    description: |-
                       Determines if a new slot type version is created when the initial
-
                       resource is created and on each update. Defaults to false.
                     type: boolean
                   description:
                     description: A description of the intent. Must be less than or equal to 200 characters in length.
                     type: string
                   dialogCodeHook:
-                    description: >-
+                    description: |-
                       Specifies a Lambda function to invoke for each user input. You can
-
                       invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
                     items:
                       properties:
                         messageVersion:
-                          description: >-
+                          description: |-
                             The version of the request-response that you want Amazon Lex to use
-
                             to invoke your Lambda function. For more information, see
-
                             Using Lambda Functions. Must be less than or equal to 5 characters in length.
                           type: string
                         uri:
@@ -205,13 +172,10 @@ spec:
                       type: object
                     type: array
                   followUpPrompt:
-                    description: >-
+                    description: |-
                       Amazon Lex uses this prompt to solicit additional activity after
-
                       fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-
                       user to order a drink. The follow_up_prompt field and the conclusion_statement field are mutually
-
                       exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
                     items:
                       properties:
@@ -223,11 +187,9 @@ spec:
                                 description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                                 type: number
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -238,38 +200,31 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
                           type: array
                         rejectionStatement:
-                          description: >-
+                          description: |-
                             If the user answers "no" to the question defined in the prompt field,
-
                             Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
-
                             documented below under statement.
                           items:
                             properties:
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -280,19 +235,16 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
@@ -300,27 +252,22 @@ spec:
                       type: object
                     type: array
                   fulfillmentActivity:
-                    description: >-
+                    description: |-
                       Describes how the intent is fulfilled. For example, after a
-
                       user provides all of the information for a pizza order, fulfillment_activity defines how the bot
-
                       places an order with a local pizza store. Attributes are documented under fulfillment_activity.
                     items:
                       properties:
                         codeHook:
-                          description: >-
+                          description: |-
                             A description of the Lambda function that is run to fulfill the intent.
-
                             Required if type is CodeHook. Attributes are documented under code_hook.
                           items:
                             properties:
                               messageVersion:
-                                description: >-
+                                description: |-
                                   The version of the request-response that you want Amazon Lex to use
-
                                   to invoke your Lambda function. For more information, see
-
                                   Using Lambda Functions. Must be less than or equal to 5 characters in length.
                                 type: string
                               uri:
@@ -329,46 +276,36 @@ spec:
                             type: object
                           type: array
                         type:
-                          description: >-
+                          description: |-
                             How the intent should be fulfilled, either by running a Lambda function or by
-
                             returning the slot data to the client application. Type can be either ReturnIntent or CodeHook, as documented here.
                           type: string
                       type: object
                     type: array
                   parentIntentSignature:
-                    description: >-
+                    description: |-
                       A unique identifier for the built-in intent to base this
-
                       intent on. To find the signature for an intent, see
-
                       Standard Built-in Intents
-
                       in the Alexa Skills Kit.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   rejectionStatement:
-                    description: >-
+                    description: |-
                       When the user answers "no" to the question defined in
-
                       confirmation_prompt, Amazon Lex responds with this statement to acknowledge that the intent was
-
                       canceled. You must provide both the rejection_statement and the confirmation_prompt, or neither.
-
                       Attributes are documented under statement.
                     items:
                       properties:
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -379,38 +316,32 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   sampleUtterances:
-                    description: >-
+                    description: |-
                       An array of utterances (strings) that a user might say to signal
-
                       the intent. For example, "I want {PizzaSize} pizza", "Order {Quantity} {PizzaSize} pizzas".
-
                       In each utterance, a slot name is enclosed in curly braces. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   slot:
-                    description: >-
+                    description: |-
                       An list of intent slots. At runtime, Amazon Lex elicits required slot values
-
                       from the user using prompts defined in the slots. Attributes are documented under slot.
                     items:
                       properties:
@@ -421,29 +352,22 @@ spec:
                           description: The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
                           type: string
                         priority:
-                          description: >-
+                          description: |-
                             Directs Lex the order in which to elicit this slot value from the user.
-
                             For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-
                             the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-
                             values is arbitrary. Must be between 1 and 100.
                           type: number
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                         sampleUtterances:
-                          description: >-
+                          description: |-
                             If you know a specific pattern with which users might respond to
-
                             an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-
                             is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                           items:
                             type: string
@@ -452,18 +376,16 @@ spec:
                           description: Specifies whether the slot is required or optional.
                           type: string
                         slotType:
-                          description: >-
+                          description: |-
                             The type of the slot, either a custom slot type that you defined or one of
-
                             the built-in slot types. Must be less than or equal to 100 characters in length.
                           type: string
                         slotTypeVersion:
                           description: The version of the slot type. Must be less than or equal to 64 characters in length.
                           type: string
                         valueElicitationPrompt:
-                          description: >-
+                          description: |-
                             The prompt that Amazon Lex uses to elicit the slot value
-
                             from the user. Attributes are documented under prompt.
                           items:
                             properties:
@@ -471,11 +393,9 @@ spec:
                                 description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                                 type: number
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -486,19 +406,16 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
@@ -509,46 +426,31 @@ spec:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   conclusionStatement:
-                    description: >-
+                    description: |-
                       The statement that you want Amazon Lex to convey to the user
-
                       after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
-
                       you provide a Lambda function in the fulfillment_activity. If you return the intent to the client
-
                       application, you can't specify this element. The follow_up_prompt and conclusion_statement are
-
                       mutually exclusive. You can specify only one. Attributes are documented under statement.
                     items:
                       properties:
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -559,29 +461,24 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   confirmationPrompt:
-                    description: >-
+                    description: |-
                       Prompts the user to confirm the intent. This question should
-
                       have a yes or no answer. You you must provide both the rejection_statement and confirmation_prompt,
-
                       or neither. Attributes are documented under prompt.
                     items:
                       properties:
@@ -589,11 +486,9 @@ spec:
                           description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                           type: number
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -604,45 +499,38 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   createVersion:
-                    description: >-
+                    description: |-
                       Determines if a new slot type version is created when the initial
-
                       resource is created and on each update. Defaults to false.
                     type: boolean
                   description:
                     description: A description of the intent. Must be less than or equal to 200 characters in length.
                     type: string
                   dialogCodeHook:
-                    description: >-
+                    description: |-
                       Specifies a Lambda function to invoke for each user input. You can
-
                       invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
                     items:
                       properties:
                         messageVersion:
-                          description: >-
+                          description: |-
                             The version of the request-response that you want Amazon Lex to use
-
                             to invoke your Lambda function. For more information, see
-
                             Using Lambda Functions. Must be less than or equal to 5 characters in length.
                           type: string
                         uri:
@@ -651,13 +539,10 @@ spec:
                       type: object
                     type: array
                   followUpPrompt:
-                    description: >-
+                    description: |-
                       Amazon Lex uses this prompt to solicit additional activity after
-
                       fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-
                       user to order a drink. The follow_up_prompt field and the conclusion_statement field are mutually
-
                       exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
                     items:
                       properties:
@@ -669,11 +554,9 @@ spec:
                                 description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                                 type: number
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -684,38 +567,31 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
                           type: array
                         rejectionStatement:
-                          description: >-
+                          description: |-
                             If the user answers "no" to the question defined in the prompt field,
-
                             Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
-
                             documented below under statement.
                           items:
                             properties:
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -726,19 +602,16 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
@@ -746,27 +619,22 @@ spec:
                       type: object
                     type: array
                   fulfillmentActivity:
-                    description: >-
+                    description: |-
                       Describes how the intent is fulfilled. For example, after a
-
                       user provides all of the information for a pizza order, fulfillment_activity defines how the bot
-
                       places an order with a local pizza store. Attributes are documented under fulfillment_activity.
                     items:
                       properties:
                         codeHook:
-                          description: >-
+                          description: |-
                             A description of the Lambda function that is run to fulfill the intent.
-
                             Required if type is CodeHook. Attributes are documented under code_hook.
                           items:
                             properties:
                               messageVersion:
-                                description: >-
+                                description: |-
                                   The version of the request-response that you want Amazon Lex to use
-
                                   to invoke your Lambda function. For more information, see
-
                                   Using Lambda Functions. Must be less than or equal to 5 characters in length.
                                 type: string
                               uri:
@@ -775,40 +643,31 @@ spec:
                             type: object
                           type: array
                         type:
-                          description: >-
+                          description: |-
                             How the intent should be fulfilled, either by running a Lambda function or by
-
                             returning the slot data to the client application. Type can be either ReturnIntent or CodeHook, as documented here.
                           type: string
                       type: object
                     type: array
                   parentIntentSignature:
-                    description: >-
+                    description: |-
                       A unique identifier for the built-in intent to base this
-
                       intent on. To find the signature for an intent, see
-
                       Standard Built-in Intents
-
                       in the Alexa Skills Kit.
                     type: string
                   rejectionStatement:
-                    description: >-
+                    description: |-
                       When the user answers "no" to the question defined in
-
                       confirmation_prompt, Amazon Lex responds with this statement to acknowledge that the intent was
-
                       canceled. You must provide both the rejection_statement and the confirmation_prompt, or neither.
-
                       Attributes are documented under statement.
                     items:
                       properties:
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -819,38 +678,32 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   sampleUtterances:
-                    description: >-
+                    description: |-
                       An array of utterances (strings) that a user might say to signal
-
                       the intent. For example, "I want {PizzaSize} pizza", "Order {Quantity} {PizzaSize} pizzas".
-
                       In each utterance, a slot name is enclosed in curly braces. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   slot:
-                    description: >-
+                    description: |-
                       An list of intent slots. At runtime, Amazon Lex elicits required slot values
-
                       from the user using prompts defined in the slots. Attributes are documented under slot.
                     items:
                       properties:
@@ -861,29 +714,22 @@ spec:
                           description: The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
                           type: string
                         priority:
-                          description: >-
+                          description: |-
                             Directs Lex the order in which to elicit this slot value from the user.
-
                             For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-
                             the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-
                             values is arbitrary. Must be between 1 and 100.
                           type: number
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                         sampleUtterances:
-                          description: >-
+                          description: |-
                             If you know a specific pattern with which users might respond to
-
                             an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-
                             is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                           items:
                             type: string
@@ -892,18 +738,16 @@ spec:
                           description: Specifies whether the slot is required or optional.
                           type: string
                         slotType:
-                          description: >-
+                          description: |-
                             The type of the slot, either a custom slot type that you defined or one of
-
                             the built-in slot types. Must be less than or equal to 100 characters in length.
                           type: string
                         slotTypeVersion:
                           description: The version of the slot type. Must be less than or equal to 64 characters in length.
                           type: string
                         valueElicitationPrompt:
-                          description: >-
+                          description: |-
                             The prompt that Amazon Lex uses to elicit the slot value
-
                             from the user. Attributes are documented under prompt.
                           items:
                             properties:
@@ -911,11 +755,9 @@ spec:
                                 description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                                 type: number
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -926,19 +768,16 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
@@ -949,30 +788,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -986,11 +815,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -1001,26 +828,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -1031,13 +852,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1065,30 +883,23 @@ spec:
                     description: The ARN of the Lex intent.
                     type: string
                   checksum:
-                    description: >-
+                    description: |-
                       Checksum identifying the version of the intent that was created. The checksum is not
-
                       included as an argument because the resource will add it automatically when updating the intent.
                     type: string
                   conclusionStatement:
-                    description: >-
+                    description: |-
                       The statement that you want Amazon Lex to convey to the user
-
                       after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
-
                       you provide a Lambda function in the fulfillment_activity. If you return the intent to the client
-
                       application, you can't specify this element. The follow_up_prompt and conclusion_statement are
-
                       mutually exclusive. You can specify only one. Attributes are documented under statement.
                     items:
                       properties:
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -1099,29 +910,24 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   confirmationPrompt:
-                    description: >-
+                    description: |-
                       Prompts the user to confirm the intent. This question should
-
                       have a yes or no answer. You you must provide both the rejection_statement and confirmation_prompt,
-
                       or neither. Attributes are documented under prompt.
                     items:
                       properties:
@@ -1129,11 +935,9 @@ spec:
                           description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                           type: number
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -1144,27 +948,23 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   createVersion:
-                    description: >-
+                    description: |-
                       Determines if a new slot type version is created when the initial
-
                       resource is created and on each update. Defaults to false.
                     type: boolean
                   createdDate:
@@ -1174,18 +974,15 @@ spec:
                     description: A description of the intent. Must be less than or equal to 200 characters in length.
                     type: string
                   dialogCodeHook:
-                    description: >-
+                    description: |-
                       Specifies a Lambda function to invoke for each user input. You can
-
                       invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
                     items:
                       properties:
                         messageVersion:
-                          description: >-
+                          description: |-
                             The version of the request-response that you want Amazon Lex to use
-
                             to invoke your Lambda function. For more information, see
-
                             Using Lambda Functions. Must be less than or equal to 5 characters in length.
                           type: string
                         uri:
@@ -1194,13 +991,10 @@ spec:
                       type: object
                     type: array
                   followUpPrompt:
-                    description: >-
+                    description: |-
                       Amazon Lex uses this prompt to solicit additional activity after
-
                       fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-
                       user to order a drink. The follow_up_prompt field and the conclusion_statement field are mutually
-
                       exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
                     items:
                       properties:
@@ -1212,11 +1006,9 @@ spec:
                                 description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                                 type: number
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -1227,38 +1019,31 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
                           type: array
                         rejectionStatement:
-                          description: >-
+                          description: |-
                             If the user answers "no" to the question defined in the prompt field,
-
                             Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
-
                             documented below under statement.
                           items:
                             properties:
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -1269,19 +1054,16 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
@@ -1289,27 +1071,22 @@ spec:
                       type: object
                     type: array
                   fulfillmentActivity:
-                    description: >-
+                    description: |-
                       Describes how the intent is fulfilled. For example, after a
-
                       user provides all of the information for a pizza order, fulfillment_activity defines how the bot
-
                       places an order with a local pizza store. Attributes are documented under fulfillment_activity.
                     items:
                       properties:
                         codeHook:
-                          description: >-
+                          description: |-
                             A description of the Lambda function that is run to fulfill the intent.
-
                             Required if type is CodeHook. Attributes are documented under code_hook.
                           items:
                             properties:
                               messageVersion:
-                                description: >-
+                                description: |-
                                   The version of the request-response that you want Amazon Lex to use
-
                                   to invoke your Lambda function. For more information, see
-
                                   Using Lambda Functions. Must be less than or equal to 5 characters in length.
                                 type: string
                               uri:
@@ -1318,9 +1095,8 @@ spec:
                             type: object
                           type: array
                         type:
-                          description: >-
+                          description: |-
                             How the intent should be fulfilled, either by running a Lambda function or by
-
                             returning the slot data to the client application. Type can be either ReturnIntent or CodeHook, as documented here.
                           type: string
                       type: object
@@ -1331,38 +1107,29 @@ spec:
                     description: The date when the $LATEST version of this intent was updated.
                     type: string
                   parentIntentSignature:
-                    description: >-
+                    description: |-
                       A unique identifier for the built-in intent to base this
-
                       intent on. To find the signature for an intent, see
-
                       Standard Built-in Intents
-
                       in the Alexa Skills Kit.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   rejectionStatement:
-                    description: >-
+                    description: |-
                       When the user answers "no" to the question defined in
-
                       confirmation_prompt, Amazon Lex responds with this statement to acknowledge that the intent was
-
                       canceled. You must provide both the rejection_statement and the confirmation_prompt, or neither.
-
                       Attributes are documented under statement.
                     items:
                       properties:
                         message:
-                          description: >-
+                          description: |-
                             A set of messages, each of which provides a message string and its type.
-
                             You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                             Attributes are documented under message. Must contain between 1 and 15 messages.
                           items:
                             properties:
@@ -1373,38 +1140,32 @@ spec:
                                 description: The content type of the message string.
                                 type: string
                               groupNumber:
-                                description: >-
+                                description: |-
                                   Identifies the message group that the message belongs to. When a group
-
                                   is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                 type: number
                             type: object
                           type: array
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                       type: object
                     type: array
                   sampleUtterances:
-                    description: >-
+                    description: |-
                       An array of utterances (strings) that a user might say to signal
-
                       the intent. For example, "I want {PizzaSize} pizza", "Order {Quantity} {PizzaSize} pizzas".
-
                       In each utterance, a slot name is enclosed in curly braces. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   slot:
-                    description: >-
+                    description: |-
                       An list of intent slots. At runtime, Amazon Lex elicits required slot values
-
                       from the user using prompts defined in the slots. Attributes are documented under slot.
                     items:
                       properties:
@@ -1415,29 +1176,22 @@ spec:
                           description: The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
                           type: string
                         priority:
-                          description: >-
+                          description: |-
                             Directs Lex the order in which to elicit this slot value from the user.
-
                             For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-
                             the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-
                             values is arbitrary. Must be between 1 and 100.
                           type: number
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                         sampleUtterances:
-                          description: >-
+                          description: |-
                             If you know a specific pattern with which users might respond to
-
                             an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-
                             is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                           items:
                             type: string
@@ -1446,18 +1200,16 @@ spec:
                           description: Specifies whether the slot is required or optional.
                           type: string
                         slotType:
-                          description: >-
+                          description: |-
                             The type of the slot, either a custom slot type that you defined or one of
-
                             the built-in slot types. Must be less than or equal to 100 characters in length.
                           type: string
                         slotTypeVersion:
                           description: The version of the slot type. Must be less than or equal to 64 characters in length.
                           type: string
                         valueElicitationPrompt:
-                          description: >-
+                          description: |-
                             The prompt that Amazon Lex uses to elicit the slot value
-
                             from the user. Attributes are documented under prompt.
                           items:
                             properties:
@@ -1465,11 +1217,9 @@ spec:
                                 description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                                 type: number
                               message:
-                                description: >-
+                                description: |-
                                   A set of messages, each of which provides a message string and its type.
-
                                   You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                   Attributes are documented under message. Must contain between 1 and 15 messages.
                                 items:
                                   properties:
@@ -1480,19 +1230,16 @@ spec:
                                       description: The content type of the message string.
                                       type: string
                                     groupNumber:
-                                      description: >-
+                                      description: |-
                                         Identifies the message group that the message belongs to. When a group
-
                                         is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                       type: number
                                   type: object
                                 type: array
                               responseCard:
-                                description: >-
+                                description: |-
                                   The response card. Amazon Lex will substitute session attributes and
-
                                   slot values into the response card. For more information, see
-
                                   Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                                 type: string
                             type: object
@@ -1509,24 +1256,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1537,9 +1280,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1553,11 +1295,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -1588,25 +1328,18 @@ spec:
         description: Intent is the Schema for the Intents API. Provides an Amazon Lex intent resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1616,19 +1349,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -1637,23 +1364,17 @@ spec:
               forProvider:
                 properties:
                   conclusionStatement:
-                    description: >-
+                    description: |-
                       The statement that you want Amazon Lex to convey to the user
-
                       after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
-
                       you provide a Lambda function in the fulfillment_activity. If you return the intent to the client
-
                       application, you can't specify this element. The follow_up_prompt and conclusion_statement are
-
                       mutually exclusive. You can specify only one. Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -1664,39 +1385,32 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   confirmationPrompt:
-                    description: >-
+                    description: |-
                       Prompts the user to confirm the intent. This question should
-
                       have a yes or no answer. You you must provide both the rejection_statement and confirmation_prompt,
-
                       or neither. Attributes are documented under prompt.
                     properties:
                       maxAttempts:
                         description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                         type: number
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -1707,43 +1421,36 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   createVersion:
-                    description: >-
+                    description: |-
                       Determines if a new slot type version is created when the initial
-
                       resource is created and on each update. Defaults to false.
                     type: boolean
                   description:
                     description: A description of the intent. Must be less than or equal to 200 characters in length.
                     type: string
                   dialogCodeHook:
-                    description: >-
+                    description: |-
                       Specifies a Lambda function to invoke for each user input. You can
-
                       invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
                     properties:
                       messageVersion:
-                        description: >-
+                        description: |-
                           The version of the request-response that you want Amazon Lex to use
-
                           to invoke your Lambda function. For more information, see
-
                           Using Lambda Functions. Must be less than or equal to 5 characters in length.
                         type: string
                       uri:
@@ -1751,13 +1458,10 @@ spec:
                         type: string
                     type: object
                   followUpPrompt:
-                    description: >-
+                    description: |-
                       Amazon Lex uses this prompt to solicit additional activity after
-
                       fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-
                       user to order a drink. The follow_up_prompt field and the conclusion_statement field are mutually
-
                       exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
                     properties:
                       prompt:
@@ -1767,11 +1471,9 @@ spec:
                             description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                             type: number
                           message:
-                            description: >-
+                            description: |-
                               A set of messages, each of which provides a message string and its type.
-
                               You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                               Attributes are documented under message. Must contain between 1 and 15 messages.
                             items:
                               properties:
@@ -1782,36 +1484,29 @@ spec:
                                   description: The content type of the message string.
                                   type: string
                                 groupNumber:
-                                  description: >-
+                                  description: |-
                                     Identifies the message group that the message belongs to. When a group
-
                                     is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                   type: number
                               type: object
                             type: array
                           responseCard:
-                            description: >-
+                            description: |-
                               The response card. Amazon Lex will substitute session attributes and
-
                               slot values into the response card. For more information, see
-
                               Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                             type: string
                         type: object
                       rejectionStatement:
-                        description: >-
+                        description: |-
                           If the user answers "no" to the question defined in the prompt field,
-
                           Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
-
                           documented below under statement.
                         properties:
                           message:
-                            description: >-
+                            description: |-
                               A set of messages, each of which provides a message string and its type.
-
                               You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                               Attributes are documented under message. Must contain between 1 and 15 messages.
                             items:
                               properties:
@@ -1822,43 +1517,35 @@ spec:
                                   description: The content type of the message string.
                                   type: string
                                 groupNumber:
-                                  description: >-
+                                  description: |-
                                     Identifies the message group that the message belongs to. When a group
-
                                     is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                   type: number
                               type: object
                             type: array
                           responseCard:
-                            description: >-
+                            description: |-
                               The response card. Amazon Lex will substitute session attributes and
-
                               slot values into the response card. For more information, see
-
                               Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                             type: string
                         type: object
                     type: object
                   fulfillmentActivity:
-                    description: >-
+                    description: |-
                       Describes how the intent is fulfilled. For example, after a
-
                       user provides all of the information for a pizza order, fulfillment_activity defines how the bot
-
                       places an order with a local pizza store. Attributes are documented under fulfillment_activity.
                     properties:
                       codeHook:
-                        description: >-
+                        description: |-
                           A description of the Lambda function that is run to fulfill the intent.
-
                           Required if type is CodeHook. Attributes are documented under code_hook.
                         properties:
                           messageVersion:
-                            description: >-
+                            description: |-
                               The version of the request-response that you want Amazon Lex to use
-
                               to invoke your Lambda function. For more information, see
-
                               Using Lambda Functions. Must be less than or equal to 5 characters in length.
                             type: string
                           uri:
@@ -1866,44 +1553,34 @@ spec:
                             type: string
                         type: object
                       type:
-                        description: >-
+                        description: |-
                           How the intent should be fulfilled, either by running a Lambda function or by
-
                           returning the slot data to the client application. Type can be either ReturnIntent or CodeHook, as documented here.
                         type: string
                     type: object
                   parentIntentSignature:
-                    description: >-
+                    description: |-
                       A unique identifier for the built-in intent to base this
-
                       intent on. To find the signature for an intent, see
-
                       Standard Built-in Intents
-
                       in the Alexa Skills Kit.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   rejectionStatement:
-                    description: >-
+                    description: |-
                       When the user answers "no" to the question defined in
-
                       confirmation_prompt, Amazon Lex responds with this statement to acknowledge that the intent was
-
                       canceled. You must provide both the rejection_statement and the confirmation_prompt, or neither.
-
                       Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -1914,37 +1591,31 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   sampleUtterances:
-                    description: >-
+                    description: |-
                       An array of utterances (strings) that a user might say to signal
-
                       the intent. For example, "I want {PizzaSize} pizza", "Order {Quantity} {PizzaSize} pizzas".
-
                       In each utterance, a slot name is enclosed in curly braces. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   slot:
-                    description: >-
+                    description: |-
                       An list of intent slots. At runtime, Amazon Lex elicits required slot values
-
                       from the user using prompts defined in the slots. Attributes are documented under slot.
                     items:
                       properties:
@@ -1955,29 +1626,22 @@ spec:
                           description: The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
                           type: string
                         priority:
-                          description: >-
+                          description: |-
                             Directs Lex the order in which to elicit this slot value from the user.
-
                             For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-
                             the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-
                             values is arbitrary. Must be between 1 and 100.
                           type: number
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                         sampleUtterances:
-                          description: >-
+                          description: |-
                             If you know a specific pattern with which users might respond to
-
                             an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-
                             is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                           items:
                             type: string
@@ -1986,29 +1650,25 @@ spec:
                           description: Specifies whether the slot is required or optional.
                           type: string
                         slotType:
-                          description: >-
+                          description: |-
                             The type of the slot, either a custom slot type that you defined or one of
-
                             the built-in slot types. Must be less than or equal to 100 characters in length.
                           type: string
                         slotTypeVersion:
                           description: The version of the slot type. Must be less than or equal to 64 characters in length.
                           type: string
                         valueElicitationPrompt:
-                          description: >-
+                          description: |-
                             The prompt that Amazon Lex uses to elicit the slot value
-
                             from the user. Attributes are documented under prompt.
                           properties:
                             maxAttempts:
                               description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                               type: number
                             message:
-                              description: >-
+                              description: |-
                                 A set of messages, each of which provides a message string and its type.
-
                                 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                 Attributes are documented under message. Must contain between 1 and 15 messages.
                               items:
                                 properties:
@@ -2019,19 +1679,16 @@ spec:
                                     description: The content type of the message string.
                                     type: string
                                   groupNumber:
-                                    description: >-
+                                    description: |-
                                       Identifies the message group that the message belongs to. When a group
-
                                       is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                     type: number
                                 type: object
                               type: array
                             responseCard:
-                              description: >-
+                              description: |-
                                 The response card. Amazon Lex will substitute session attributes and
-
                                 slot values into the response card. For more information, see
-
                                 Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                               type: string
                           type: object
@@ -2041,45 +1698,30 @@ spec:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   conclusionStatement:
-                    description: >-
+                    description: |-
                       The statement that you want Amazon Lex to convey to the user
-
                       after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
-
                       you provide a Lambda function in the fulfillment_activity. If you return the intent to the client
-
                       application, you can't specify this element. The follow_up_prompt and conclusion_statement are
-
                       mutually exclusive. You can specify only one. Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -2090,39 +1732,32 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   confirmationPrompt:
-                    description: >-
+                    description: |-
                       Prompts the user to confirm the intent. This question should
-
                       have a yes or no answer. You you must provide both the rejection_statement and confirmation_prompt,
-
                       or neither. Attributes are documented under prompt.
                     properties:
                       maxAttempts:
                         description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                         type: number
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -2133,43 +1768,36 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   createVersion:
-                    description: >-
+                    description: |-
                       Determines if a new slot type version is created when the initial
-
                       resource is created and on each update. Defaults to false.
                     type: boolean
                   description:
                     description: A description of the intent. Must be less than or equal to 200 characters in length.
                     type: string
                   dialogCodeHook:
-                    description: >-
+                    description: |-
                       Specifies a Lambda function to invoke for each user input. You can
-
                       invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
                     properties:
                       messageVersion:
-                        description: >-
+                        description: |-
                           The version of the request-response that you want Amazon Lex to use
-
                           to invoke your Lambda function. For more information, see
-
                           Using Lambda Functions. Must be less than or equal to 5 characters in length.
                         type: string
                       uri:
@@ -2177,13 +1805,10 @@ spec:
                         type: string
                     type: object
                   followUpPrompt:
-                    description: >-
+                    description: |-
                       Amazon Lex uses this prompt to solicit additional activity after
-
                       fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-
                       user to order a drink. The follow_up_prompt field and the conclusion_statement field are mutually
-
                       exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
                     properties:
                       prompt:
@@ -2193,11 +1818,9 @@ spec:
                             description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                             type: number
                           message:
-                            description: >-
+                            description: |-
                               A set of messages, each of which provides a message string and its type.
-
                               You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                               Attributes are documented under message. Must contain between 1 and 15 messages.
                             items:
                               properties:
@@ -2208,36 +1831,29 @@ spec:
                                   description: The content type of the message string.
                                   type: string
                                 groupNumber:
-                                  description: >-
+                                  description: |-
                                     Identifies the message group that the message belongs to. When a group
-
                                     is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                   type: number
                               type: object
                             type: array
                           responseCard:
-                            description: >-
+                            description: |-
                               The response card. Amazon Lex will substitute session attributes and
-
                               slot values into the response card. For more information, see
-
                               Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                             type: string
                         type: object
                       rejectionStatement:
-                        description: >-
+                        description: |-
                           If the user answers "no" to the question defined in the prompt field,
-
                           Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
-
                           documented below under statement.
                         properties:
                           message:
-                            description: >-
+                            description: |-
                               A set of messages, each of which provides a message string and its type.
-
                               You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                               Attributes are documented under message. Must contain between 1 and 15 messages.
                             items:
                               properties:
@@ -2248,43 +1864,35 @@ spec:
                                   description: The content type of the message string.
                                   type: string
                                 groupNumber:
-                                  description: >-
+                                  description: |-
                                     Identifies the message group that the message belongs to. When a group
-
                                     is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                   type: number
                               type: object
                             type: array
                           responseCard:
-                            description: >-
+                            description: |-
                               The response card. Amazon Lex will substitute session attributes and
-
                               slot values into the response card. For more information, see
-
                               Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                             type: string
                         type: object
                     type: object
                   fulfillmentActivity:
-                    description: >-
+                    description: |-
                       Describes how the intent is fulfilled. For example, after a
-
                       user provides all of the information for a pizza order, fulfillment_activity defines how the bot
-
                       places an order with a local pizza store. Attributes are documented under fulfillment_activity.
                     properties:
                       codeHook:
-                        description: >-
+                        description: |-
                           A description of the Lambda function that is run to fulfill the intent.
-
                           Required if type is CodeHook. Attributes are documented under code_hook.
                         properties:
                           messageVersion:
-                            description: >-
+                            description: |-
                               The version of the request-response that you want Amazon Lex to use
-
                               to invoke your Lambda function. For more information, see
-
                               Using Lambda Functions. Must be less than or equal to 5 characters in length.
                             type: string
                           uri:
@@ -2292,38 +1900,29 @@ spec:
                             type: string
                         type: object
                       type:
-                        description: >-
+                        description: |-
                           How the intent should be fulfilled, either by running a Lambda function or by
-
                           returning the slot data to the client application. Type can be either ReturnIntent or CodeHook, as documented here.
                         type: string
                     type: object
                   parentIntentSignature:
-                    description: >-
+                    description: |-
                       A unique identifier for the built-in intent to base this
-
                       intent on. To find the signature for an intent, see
-
                       Standard Built-in Intents
-
                       in the Alexa Skills Kit.
                     type: string
                   rejectionStatement:
-                    description: >-
+                    description: |-
                       When the user answers "no" to the question defined in
-
                       confirmation_prompt, Amazon Lex responds with this statement to acknowledge that the intent was
-
                       canceled. You must provide both the rejection_statement and the confirmation_prompt, or neither.
-
                       Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -2334,37 +1933,31 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   sampleUtterances:
-                    description: >-
+                    description: |-
                       An array of utterances (strings) that a user might say to signal
-
                       the intent. For example, "I want {PizzaSize} pizza", "Order {Quantity} {PizzaSize} pizzas".
-
                       In each utterance, a slot name is enclosed in curly braces. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   slot:
-                    description: >-
+                    description: |-
                       An list of intent slots. At runtime, Amazon Lex elicits required slot values
-
                       from the user using prompts defined in the slots. Attributes are documented under slot.
                     items:
                       properties:
@@ -2375,29 +1968,22 @@ spec:
                           description: The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
                           type: string
                         priority:
-                          description: >-
+                          description: |-
                             Directs Lex the order in which to elicit this slot value from the user.
-
                             For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-
                             the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-
                             values is arbitrary. Must be between 1 and 100.
                           type: number
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                         sampleUtterances:
-                          description: >-
+                          description: |-
                             If you know a specific pattern with which users might respond to
-
                             an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-
                             is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                           items:
                             type: string
@@ -2406,29 +1992,25 @@ spec:
                           description: Specifies whether the slot is required or optional.
                           type: string
                         slotType:
-                          description: >-
+                          description: |-
                             The type of the slot, either a custom slot type that you defined or one of
-
                             the built-in slot types. Must be less than or equal to 100 characters in length.
                           type: string
                         slotTypeVersion:
                           description: The version of the slot type. Must be less than or equal to 64 characters in length.
                           type: string
                         valueElicitationPrompt:
-                          description: >-
+                          description: |-
                             The prompt that Amazon Lex uses to elicit the slot value
-
                             from the user. Attributes are documented under prompt.
                           properties:
                             maxAttempts:
                               description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                               type: number
                             message:
-                              description: >-
+                              description: |-
                                 A set of messages, each of which provides a message string and its type.
-
                                 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                 Attributes are documented under message. Must contain between 1 and 15 messages.
                               items:
                                 properties:
@@ -2439,19 +2021,16 @@ spec:
                                     description: The content type of the message string.
                                     type: string
                                   groupNumber:
-                                    description: >-
+                                    description: |-
                                       Identifies the message group that the message belongs to. When a group
-
                                       is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                     type: number
                                 type: object
                               type: array
                             responseCard:
-                              description: >-
+                              description: |-
                                 The response card. Amazon Lex will substitute session attributes and
-
                                 slot values into the response card. For more information, see
-
                                 Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                               type: string
                           type: object
@@ -2461,30 +2040,20 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -2498,11 +2067,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -2513,26 +2080,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -2543,13 +2104,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -2577,29 +2135,22 @@ spec:
                     description: The ARN of the Lex intent.
                     type: string
                   checksum:
-                    description: >-
+                    description: |-
                       Checksum identifying the version of the intent that was created. The checksum is not
-
                       included as an argument because the resource will add it automatically when updating the intent.
                     type: string
                   conclusionStatement:
-                    description: >-
+                    description: |-
                       The statement that you want Amazon Lex to convey to the user
-
                       after the intent is successfully fulfilled by the Lambda function. This element is relevant only if
-
                       you provide a Lambda function in the fulfillment_activity. If you return the intent to the client
-
                       application, you can't specify this element. The follow_up_prompt and conclusion_statement are
-
                       mutually exclusive. You can specify only one. Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -2610,39 +2161,32 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   confirmationPrompt:
-                    description: >-
+                    description: |-
                       Prompts the user to confirm the intent. This question should
-
                       have a yes or no answer. You you must provide both the rejection_statement and confirmation_prompt,
-
                       or neither. Attributes are documented under prompt.
                     properties:
                       maxAttempts:
                         description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                         type: number
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -2653,26 +2197,22 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   createVersion:
-                    description: >-
+                    description: |-
                       Determines if a new slot type version is created when the initial
-
                       resource is created and on each update. Defaults to false.
                     type: boolean
                   createdDate:
@@ -2682,17 +2222,14 @@ spec:
                     description: A description of the intent. Must be less than or equal to 200 characters in length.
                     type: string
                   dialogCodeHook:
-                    description: >-
+                    description: |-
                       Specifies a Lambda function to invoke for each user input. You can
-
                       invoke this Lambda function to personalize user interaction. Attributes are documented under code_hook.
                     properties:
                       messageVersion:
-                        description: >-
+                        description: |-
                           The version of the request-response that you want Amazon Lex to use
-
                           to invoke your Lambda function. For more information, see
-
                           Using Lambda Functions. Must be less than or equal to 5 characters in length.
                         type: string
                       uri:
@@ -2700,13 +2237,10 @@ spec:
                         type: string
                     type: object
                   followUpPrompt:
-                    description: >-
+                    description: |-
                       Amazon Lex uses this prompt to solicit additional activity after
-
                       fulfilling an intent. For example, after the OrderPizza intent is fulfilled, you might prompt the
-
                       user to order a drink. The follow_up_prompt field and the conclusion_statement field are mutually
-
                       exclusive. You can specify only one. Attributes are documented under follow_up_prompt.
                     properties:
                       prompt:
@@ -2716,11 +2250,9 @@ spec:
                             description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                             type: number
                           message:
-                            description: >-
+                            description: |-
                               A set of messages, each of which provides a message string and its type.
-
                               You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                               Attributes are documented under message. Must contain between 1 and 15 messages.
                             items:
                               properties:
@@ -2731,36 +2263,29 @@ spec:
                                   description: The content type of the message string.
                                   type: string
                                 groupNumber:
-                                  description: >-
+                                  description: |-
                                     Identifies the message group that the message belongs to. When a group
-
                                     is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                   type: number
                               type: object
                             type: array
                           responseCard:
-                            description: >-
+                            description: |-
                               The response card. Amazon Lex will substitute session attributes and
-
                               slot values into the response card. For more information, see
-
                               Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                             type: string
                         type: object
                       rejectionStatement:
-                        description: >-
+                        description: |-
                           If the user answers "no" to the question defined in the prompt field,
-
                           Amazon Lex responds with this statement to acknowledge that the intent was canceled. Attributes are
-
                           documented below under statement.
                         properties:
                           message:
-                            description: >-
+                            description: |-
                               A set of messages, each of which provides a message string and its type.
-
                               You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                               Attributes are documented under message. Must contain between 1 and 15 messages.
                             items:
                               properties:
@@ -2771,43 +2296,35 @@ spec:
                                   description: The content type of the message string.
                                   type: string
                                 groupNumber:
-                                  description: >-
+                                  description: |-
                                     Identifies the message group that the message belongs to. When a group
-
                                     is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                   type: number
                               type: object
                             type: array
                           responseCard:
-                            description: >-
+                            description: |-
                               The response card. Amazon Lex will substitute session attributes and
-
                               slot values into the response card. For more information, see
-
                               Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                             type: string
                         type: object
                     type: object
                   fulfillmentActivity:
-                    description: >-
+                    description: |-
                       Describes how the intent is fulfilled. For example, after a
-
                       user provides all of the information for a pizza order, fulfillment_activity defines how the bot
-
                       places an order with a local pizza store. Attributes are documented under fulfillment_activity.
                     properties:
                       codeHook:
-                        description: >-
+                        description: |-
                           A description of the Lambda function that is run to fulfill the intent.
-
                           Required if type is CodeHook. Attributes are documented under code_hook.
                         properties:
                           messageVersion:
-                            description: >-
+                            description: |-
                               The version of the request-response that you want Amazon Lex to use
-
                               to invoke your Lambda function. For more information, see
-
                               Using Lambda Functions. Must be less than or equal to 5 characters in length.
                             type: string
                           uri:
@@ -2815,9 +2332,8 @@ spec:
                             type: string
                         type: object
                       type:
-                        description: >-
+                        description: |-
                           How the intent should be fulfilled, either by running a Lambda function or by
-
                           returning the slot data to the client application. Type can be either ReturnIntent or CodeHook, as documented here.
                         type: string
                     type: object
@@ -2827,37 +2343,28 @@ spec:
                     description: The date when the $LATEST version of this intent was updated.
                     type: string
                   parentIntentSignature:
-                    description: >-
+                    description: |-
                       A unique identifier for the built-in intent to base this
-
                       intent on. To find the signature for an intent, see
-
                       Standard Built-in Intents
-
                       in the Alexa Skills Kit.
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   rejectionStatement:
-                    description: >-
+                    description: |-
                       When the user answers "no" to the question defined in
-
                       confirmation_prompt, Amazon Lex responds with this statement to acknowledge that the intent was
-
                       canceled. You must provide both the rejection_statement and the confirmation_prompt, or neither.
-
                       Attributes are documented under statement.
                     properties:
                       message:
-                        description: >-
+                        description: |-
                           A set of messages, each of which provides a message string and its type.
-
                           You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                           Attributes are documented under message. Must contain between 1 and 15 messages.
                         items:
                           properties:
@@ -2868,37 +2375,31 @@ spec:
                               description: The content type of the message string.
                               type: string
                             groupNumber:
-                              description: >-
+                              description: |-
                                 Identifies the message group that the message belongs to. When a group
-
                                 is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                               type: number
                           type: object
                         type: array
                       responseCard:
-                        description: >-
+                        description: |-
                           The response card. Amazon Lex will substitute session attributes and
-
                           slot values into the response card. For more information, see
-
                           Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                         type: string
                     type: object
                   sampleUtterances:
-                    description: >-
+                    description: |-
                       An array of utterances (strings) that a user might say to signal
-
                       the intent. For example, "I want {PizzaSize} pizza", "Order {Quantity} {PizzaSize} pizzas".
-
                       In each utterance, a slot name is enclosed in curly braces. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   slot:
-                    description: >-
+                    description: |-
                       An list of intent slots. At runtime, Amazon Lex elicits required slot values
-
                       from the user using prompts defined in the slots. Attributes are documented under slot.
                     items:
                       properties:
@@ -2909,29 +2410,22 @@ spec:
                           description: The name of the intent slot that you want to create. The name is case sensitive. Must be less than or equal to 100 characters in length.
                           type: string
                         priority:
-                          description: >-
+                          description: |-
                             Directs Lex the order in which to elicit this slot value from the user.
-
                             For example, if the intent has two slots with priorities 1 and 2, AWS Lex first elicits a value for
-
                             the slot with priority 1. If multiple slots share the same priority, the order in which Lex elicits
-
                             values is arbitrary. Must be between 1 and 100.
                           type: number
                         responseCard:
-                          description: >-
+                          description: |-
                             The response card. Amazon Lex will substitute session attributes and
-
                             slot values into the response card. For more information, see
-
                             Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                           type: string
                         sampleUtterances:
-                          description: >-
+                          description: |-
                             If you know a specific pattern with which users might respond to
-
                             an Amazon Lex request for a slot value, you can provide those utterances to improve accuracy. This
-
                             is optional. In most cases, Amazon Lex is capable of understanding user utterances. Must have between 1 and 10 items in the list, and each item must be less than or equal to 200 characters in length.
                           items:
                             type: string
@@ -2940,29 +2434,25 @@ spec:
                           description: Specifies whether the slot is required or optional.
                           type: string
                         slotType:
-                          description: >-
+                          description: |-
                             The type of the slot, either a custom slot type that you defined or one of
-
                             the built-in slot types. Must be less than or equal to 100 characters in length.
                           type: string
                         slotTypeVersion:
                           description: The version of the slot type. Must be less than or equal to 64 characters in length.
                           type: string
                         valueElicitationPrompt:
-                          description: >-
+                          description: |-
                             The prompt that Amazon Lex uses to elicit the slot value
-
                             from the user. Attributes are documented under prompt.
                           properties:
                             maxAttempts:
                               description: The number of times to prompt the user for information. Must be a number between 1 and 5 (inclusive).
                               type: number
                             message:
-                              description: >-
+                              description: |-
                                 A set of messages, each of which provides a message string and its type.
-
                                 You can specify the message string in plain text or in Speech Synthesis Markup Language (SSML).
-
                                 Attributes are documented under message. Must contain between 1 and 15 messages.
                               items:
                                 properties:
@@ -2973,19 +2463,16 @@ spec:
                                     description: The content type of the message string.
                                     type: string
                                   groupNumber:
-                                    description: >-
+                                    description: |-
                                       Identifies the message group that the message belongs to. When a group
-
                                       is assigned to a message, Amazon Lex returns one message from each group in the response. Must be a number between 1 and 5 (inclusive).
                                     type: number
                                 type: object
                               type: array
                             responseCard:
-                              description: >-
+                              description: |-
                                 The response card. Amazon Lex will substitute session attributes and
-
                                 slot values into the response card. For more information, see
-
                                 Example: Using a Response Card. Must be less than or equal to 50000 characters in length.
                               type: string
                           type: object
@@ -3001,24 +2488,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -3029,9 +2512,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -3045,11 +2527,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

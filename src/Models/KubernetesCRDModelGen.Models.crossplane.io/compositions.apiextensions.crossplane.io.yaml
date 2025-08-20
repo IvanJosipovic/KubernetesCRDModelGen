@@ -30,36 +30,26 @@ spec:
     name: v1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           A Composition defines a collection of managed resources or functions that
-
           Crossplane uses to create and manage new composite resources.
 
-
           Read the Crossplane documentation for
-
           [more information about Compositions](https://docs.crossplane.io/latest/concepts/compositions).
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -68,9 +58,8 @@ spec:
             description: CompositionSpec specifies desired state of a composition.
             properties:
               compositeTypeRef:
-                description: >-
+                description: |-
                   CompositeTypeRef specifies the type of composite resource that this
-
                   composition is compatible with.
                 properties:
                   apiVersion:
@@ -88,29 +77,22 @@ spec:
                   rule: self == oldSelf
               mode:
                 default: Pipeline
-                description: >-
+                description: |-
                   Mode controls what type or "mode" of Composition will be used.
 
-
                   "Pipeline" indicates that a Composition specifies a pipeline of
-
                   functions, each of which is responsible for producing composed
-
                   resources that Crossplane should create or update.
                 enum:
                 - Pipeline
                 type: string
               pipeline:
-                description: >-
+                description: |-
                   Pipeline is a list of composition function steps that will be used when a
-
                   composite resource referring to this composition is created. One of
-
                   resources and pipeline must be specified - you cannot specify both.
 
-
                   The Pipeline is only used by the "Pipeline" mode of Composition. It is
-
                   ignored by other modes.
                 items:
                   description: A PipelineStep in a function pipeline.
@@ -118,18 +100,16 @@ spec:
                     credentials:
                       description: Credentials are optional credentials that the function needs.
                       items:
-                        description: >-
+                        description: |-
                           FunctionCredentials are optional credentials that a function
-
                           needs to run.
                         properties:
                           name:
                             description: Name of this set of credentials.
                             type: string
                           secretRef:
-                            description: >-
+                            description: |-
                               A SecretRef is a reference to a secret containing credentials that should
-
                               be supplied to the function.
                             properties:
                               name:
@@ -160,9 +140,8 @@ spec:
                       - name
                       x-kubernetes-list-type: map
                     functionRef:
-                      description: >-
+                      description: |-
                         FunctionRef is a reference to the function this step should
-
                         execute.
                       properties:
                         name:
@@ -172,29 +151,23 @@ spec:
                       - name
                       type: object
                     input:
-                      description: >-
+                      description: |-
                         Input is an optional, arbitrary Kubernetes resource (i.e. a resource
-
                         with an apiVersion and kind) that will be passed to the function as
-
                         the 'input' of its RunFunctionRequest.
                       type: object
                       x-kubernetes-embedded-resource: true
                       x-kubernetes-preserve-unknown-fields: true
                     requirements:
-                      description: >-
+                      description: |-
                         Requirements are resource requirements that will be satisfied before
-
                         this pipeline step is called for the first time. This allows
-
                         pre-populating required resources without requiring a function to
-
                         request them first.
                       properties:
                         requiredResources:
-                          description: >-
+                          description: |-
                             RequiredResources is a list of resources that must be fetched before
-
                             this function is called.
                           items:
                             description: RequiredResourceSelector selects a required resource.
@@ -208,9 +181,8 @@ spec:
                               matchLabels:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   MatchLabels specifies the set of labels to match for finding the
-
                                   required resource. When specified, Name is ignored.
                                 type: object
                               name:
@@ -220,9 +192,8 @@ spec:
                                 description: Namespace of the required resource if it is namespaced.
                                 type: string
                               requirementName:
-                                description: >-
+                                description: |-
                                   RequirementName is the unique name to identify this required resource
-
                                   in the Required Resources map in the function request.
                                 type: string
                             required:
@@ -252,11 +223,9 @@ spec:
                 - step
                 x-kubernetes-list-type: map
               writeConnectionSecretsToNamespace:
-                description: >-
+                description: |-
                   WriteConnectionSecretsToNamespace specifies the namespace in which the
-
                   connection secrets of composite resource dynamically provisioned using
-
                   this composition will be created.
                 type: string
             required:

@@ -32,7 +32,7 @@ spec:
               concurrency:
                 description: The number of worker threads to run.
                 format: int32
-                minimum: 0
+                minimum: 0.0
                 nullable: true
                 type: integer
               environmentVariables:
@@ -115,9 +115,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

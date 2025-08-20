@@ -36,25 +36,18 @@ spec:
         description: Application is the Schema for the Applications API. Provides a AWS Kinesis Analytics Application
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -65,9 +58,8 @@ spec:
               forProvider:
                 properties:
                   cloudwatchLoggingOptions:
-                    description: >-
+                    description: |-
                       The CloudWatch log stream options to monitor application errors.
-
                       See CloudWatch Logging Options below for more details.
                     properties:
                       logStreamArn:
@@ -87,26 +79,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -120,9 +106,8 @@ spec:
                         description: Selector for a Stream in cloudwatchlogs to populate logStreamArn.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -138,26 +123,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -182,26 +161,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -215,9 +188,8 @@ spec:
                         description: Selector for a Role in iam to populate roleArn.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -233,26 +205,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -271,9 +237,8 @@ spec:
                     description: Input configuration of the application. See Inputs below for more details.
                     properties:
                       kinesisFirehose:
-                        description: >-
+                        description: |-
                           The Kinesis Firehose configuration for the streaming source. Conflicts with kinesis_stream.
-
                           See Kinesis Firehose below for more details.
                         properties:
                           resourceArn:
@@ -284,9 +249,8 @@ spec:
                             type: string
                         type: object
                       kinesisStream:
-                        description: >-
+                        description: |-
                           The Kinesis Stream configuration for the streaming source. Conflicts with kinesis_firehose.
-
                           See Kinesis Stream below for more details.
                         properties:
                           resourceArn:
@@ -306,26 +270,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -339,9 +297,8 @@ spec:
                             description: Selector for a Stream in kinesis to populate resourceArn.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -357,26 +314,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -401,26 +352,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -434,9 +379,8 @@ spec:
                             description: Selector for a Role in iam to populate roleArn.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -452,26 +396,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -484,9 +422,8 @@ spec:
                         description: The Name Prefix to use when creating an in-application stream.
                         type: string
                       parallelism:
-                        description: >-
+                        description: |-
                           The number of Parallel in-application streams to create.
-
                           See Parallelism below for more details.
                         properties:
                           count:
@@ -494,9 +431,8 @@ spec:
                             type: number
                         type: object
                       processingConfiguration:
-                        description: >-
+                        description: |-
                           The Processing Configuration to transform records as they are received from the stream.
-
                           See Processing Configuration below for more details.
                         properties:
                           lambda:
@@ -514,9 +450,8 @@ spec:
                         description: The Schema format of the data in the streaming source. See Source Schema below for more details.
                         properties:
                           recordColumns:
-                            description: >-
+                            description: |-
                               The Record Column mapping for the streaming source data element.
-
                               See Record Columns below for more details.
                             items:
                               properties:
@@ -535,21 +470,18 @@ spec:
                             description: The Encoding of the record in the streaming source.
                             type: string
                           recordFormat:
-                            description: >-
+                            description: |-
                               The Record Format and mapping information to schematize a record.
-
                               See Record Format below for more details.
                             properties:
                               mappingParameters:
-                                description: >-
+                                description: |-
                                   The Mapping Information for the record format.
-
                                   See Mapping Parameters below for more details.
                                 properties:
                                   csv:
-                                    description: >-
+                                    description: |-
                                       Mapping information when the record format uses delimiters.
-
                                       See CSV Mapping Parameters below for more details.
                                     properties:
                                       recordColumnDelimiter:
@@ -560,9 +492,8 @@ spec:
                                         type: string
                                     type: object
                                   json:
-                                    description: >-
+                                    description: |-
                                       Mapping information when JSON is the record format on the streaming source.
-
                                       See JSON Mapping Parameters below for more details.
                                     properties:
                                       recordRowPath:
@@ -573,9 +504,8 @@ spec:
                             type: object
                         type: object
                       startingPositionConfiguration:
-                        description: >-
+                        description: |-
                           The point at which the application starts processing records from the streaming source.
-
                           See Starting Position Configuration below for more details.
                         items:
                           properties:
@@ -590,9 +520,8 @@ spec:
                     items:
                       properties:
                         kinesisFirehose:
-                          description: >-
+                          description: |-
                             The Kinesis Firehose configuration for the destination stream. Conflicts with kinesis_stream.
-
                             See Kinesis Firehose below for more details.
                           properties:
                             resourceArn:
@@ -612,26 +541,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -645,9 +568,8 @@ spec:
                               description: Selector for a DeliveryStream in firehose to populate resourceArn.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -663,26 +585,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -707,26 +623,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -740,9 +650,8 @@ spec:
                               description: Selector for a Role in iam to populate roleArn.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -758,26 +667,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -787,9 +690,8 @@ spec:
                               type: object
                           type: object
                         kinesisStream:
-                          description: >-
+                          description: |-
                             The Kinesis Stream configuration for the destination stream. Conflicts with kinesis_firehose.
-
                             See Kinesis Stream below for more details.
                           properties:
                             resourceArn:
@@ -822,9 +724,8 @@ spec:
                       type: object
                     type: array
                   referenceDataSources:
-                    description: >-
+                    description: |-
                       An S3 Reference Data Source for the application.
-
                       See Reference Data Sources below for more details.
                     properties:
                       s3:
@@ -844,9 +745,8 @@ spec:
                         description: The Schema format of the data in the streaming source. See Source Schema below for more details.
                         properties:
                           recordColumns:
-                            description: >-
+                            description: |-
                               The Record Column mapping for the streaming source data element.
-
                               See Record Columns below for more details.
                             items:
                               properties:
@@ -865,21 +765,18 @@ spec:
                             description: The Encoding of the record in the streaming source.
                             type: string
                           recordFormat:
-                            description: >-
+                            description: |-
                               The Record Format and mapping information to schematize a record.
-
                               See Record Format below for more details.
                             properties:
                               mappingParameters:
-                                description: >-
+                                description: |-
                                   The Mapping Information for the record format.
-
                                   See Mapping Parameters below for more details.
                                 properties:
                                   csv:
-                                    description: >-
+                                    description: |-
                                       Mapping information when the record format uses delimiters.
-
                                       See CSV Mapping Parameters below for more details.
                                     properties:
                                       recordColumnDelimiter:
@@ -890,9 +787,8 @@ spec:
                                         type: string
                                     type: object
                                   json:
-                                    description: >-
+                                    description: |-
                                       Mapping information when JSON is the record format on the streaming source.
-
                                       See JSON Mapping Parameters below for more details.
                                     properties:
                                       recordRowPath:
@@ -907,15 +803,13 @@ spec:
                         type: string
                     type: object
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   startApplication:
-                    description: >-
+                    description: |-
                       Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined starting_position must be configured.
-
                       To modify an application's starting position, first stop the application by setting start_application = false, then update starting_position and set start_application = true.
                     type: boolean
                   tags:
@@ -928,31 +822,21 @@ spec:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   cloudwatchLoggingOptions:
-                    description: >-
+                    description: |-
                       The CloudWatch log stream options to monitor application errors.
-
                       See CloudWatch Logging Options below for more details.
                     properties:
                       logStreamArn:
@@ -972,26 +856,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1005,9 +883,8 @@ spec:
                         description: Selector for a Stream in cloudwatchlogs to populate logStreamArn.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1023,26 +900,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1067,26 +938,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1100,9 +965,8 @@ spec:
                         description: Selector for a Role in iam to populate roleArn.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1118,26 +982,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1156,9 +1014,8 @@ spec:
                     description: Input configuration of the application. See Inputs below for more details.
                     properties:
                       kinesisFirehose:
-                        description: >-
+                        description: |-
                           The Kinesis Firehose configuration for the streaming source. Conflicts with kinesis_stream.
-
                           See Kinesis Firehose below for more details.
                         properties:
                           resourceArn:
@@ -1169,9 +1026,8 @@ spec:
                             type: string
                         type: object
                       kinesisStream:
-                        description: >-
+                        description: |-
                           The Kinesis Stream configuration for the streaming source. Conflicts with kinesis_firehose.
-
                           See Kinesis Stream below for more details.
                         properties:
                           resourceArn:
@@ -1191,26 +1047,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1224,9 +1074,8 @@ spec:
                             description: Selector for a Stream in kinesis to populate resourceArn.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -1242,26 +1091,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1286,26 +1129,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1319,9 +1156,8 @@ spec:
                             description: Selector for a Role in iam to populate roleArn.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -1337,26 +1173,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1369,9 +1199,8 @@ spec:
                         description: The Name Prefix to use when creating an in-application stream.
                         type: string
                       parallelism:
-                        description: >-
+                        description: |-
                           The number of Parallel in-application streams to create.
-
                           See Parallelism below for more details.
                         properties:
                           count:
@@ -1379,9 +1208,8 @@ spec:
                             type: number
                         type: object
                       processingConfiguration:
-                        description: >-
+                        description: |-
                           The Processing Configuration to transform records as they are received from the stream.
-
                           See Processing Configuration below for more details.
                         properties:
                           lambda:
@@ -1399,9 +1227,8 @@ spec:
                         description: The Schema format of the data in the streaming source. See Source Schema below for more details.
                         properties:
                           recordColumns:
-                            description: >-
+                            description: |-
                               The Record Column mapping for the streaming source data element.
-
                               See Record Columns below for more details.
                             items:
                               properties:
@@ -1420,21 +1247,18 @@ spec:
                             description: The Encoding of the record in the streaming source.
                             type: string
                           recordFormat:
-                            description: >-
+                            description: |-
                               The Record Format and mapping information to schematize a record.
-
                               See Record Format below for more details.
                             properties:
                               mappingParameters:
-                                description: >-
+                                description: |-
                                   The Mapping Information for the record format.
-
                                   See Mapping Parameters below for more details.
                                 properties:
                                   csv:
-                                    description: >-
+                                    description: |-
                                       Mapping information when the record format uses delimiters.
-
                                       See CSV Mapping Parameters below for more details.
                                     properties:
                                       recordColumnDelimiter:
@@ -1445,9 +1269,8 @@ spec:
                                         type: string
                                     type: object
                                   json:
-                                    description: >-
+                                    description: |-
                                       Mapping information when JSON is the record format on the streaming source.
-
                                       See JSON Mapping Parameters below for more details.
                                     properties:
                                       recordRowPath:
@@ -1458,9 +1281,8 @@ spec:
                             type: object
                         type: object
                       startingPositionConfiguration:
-                        description: >-
+                        description: |-
                           The point at which the application starts processing records from the streaming source.
-
                           See Starting Position Configuration below for more details.
                         items:
                           properties:
@@ -1475,9 +1297,8 @@ spec:
                     items:
                       properties:
                         kinesisFirehose:
-                          description: >-
+                          description: |-
                             The Kinesis Firehose configuration for the destination stream. Conflicts with kinesis_stream.
-
                             See Kinesis Firehose below for more details.
                           properties:
                             resourceArn:
@@ -1497,26 +1318,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1530,9 +1345,8 @@ spec:
                               description: Selector for a DeliveryStream in firehose to populate resourceArn.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -1548,26 +1362,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1592,26 +1400,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1625,9 +1427,8 @@ spec:
                               description: Selector for a Role in iam to populate roleArn.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -1643,26 +1444,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1672,9 +1467,8 @@ spec:
                               type: object
                           type: object
                         kinesisStream:
-                          description: >-
+                          description: |-
                             The Kinesis Stream configuration for the destination stream. Conflicts with kinesis_firehose.
-
                             See Kinesis Stream below for more details.
                           properties:
                             resourceArn:
@@ -1707,9 +1501,8 @@ spec:
                       type: object
                     type: array
                   referenceDataSources:
-                    description: >-
+                    description: |-
                       An S3 Reference Data Source for the application.
-
                       See Reference Data Sources below for more details.
                     properties:
                       s3:
@@ -1729,9 +1522,8 @@ spec:
                         description: The Schema format of the data in the streaming source. See Source Schema below for more details.
                         properties:
                           recordColumns:
-                            description: >-
+                            description: |-
                               The Record Column mapping for the streaming source data element.
-
                               See Record Columns below for more details.
                             items:
                               properties:
@@ -1750,21 +1542,18 @@ spec:
                             description: The Encoding of the record in the streaming source.
                             type: string
                           recordFormat:
-                            description: >-
+                            description: |-
                               The Record Format and mapping information to schematize a record.
-
                               See Record Format below for more details.
                             properties:
                               mappingParameters:
-                                description: >-
+                                description: |-
                                   The Mapping Information for the record format.
-
                                   See Mapping Parameters below for more details.
                                 properties:
                                   csv:
-                                    description: >-
+                                    description: |-
                                       Mapping information when the record format uses delimiters.
-
                                       See CSV Mapping Parameters below for more details.
                                     properties:
                                       recordColumnDelimiter:
@@ -1775,9 +1564,8 @@ spec:
                                         type: string
                                     type: object
                                   json:
-                                    description: >-
+                                    description: |-
                                       Mapping information when JSON is the record format on the streaming source.
-
                                       See JSON Mapping Parameters below for more details.
                                     properties:
                                       recordRowPath:
@@ -1792,9 +1580,8 @@ spec:
                         type: string
                     type: object
                   startApplication:
-                    description: >-
+                    description: |-
                       Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined starting_position must be configured.
-
                       To modify an application's starting position, first stop the application by setting start_application = false, then update starting_position and set start_application = true.
                     type: boolean
                   tags:
@@ -1807,22 +1594,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1837,11 +1618,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -1855,13 +1634,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1882,9 +1658,8 @@ spec:
                     description: The ARN of the Kinesis Analytics Appliation.
                     type: string
                   cloudwatchLoggingOptions:
-                    description: >-
+                    description: |-
                       The CloudWatch log stream options to monitor application errors.
-
                       See CloudWatch Logging Options below for more details.
                     properties:
                       id:
@@ -1916,9 +1691,8 @@ spec:
                         description: The ARN of the Kinesis Analytics Application.
                         type: string
                       kinesisFirehose:
-                        description: >-
+                        description: |-
                           The Kinesis Firehose configuration for the streaming source. Conflicts with kinesis_stream.
-
                           See Kinesis Firehose below for more details.
                         properties:
                           resourceArn:
@@ -1929,9 +1703,8 @@ spec:
                             type: string
                         type: object
                       kinesisStream:
-                        description: >-
+                        description: |-
                           The Kinesis Stream configuration for the streaming source. Conflicts with kinesis_firehose.
-
                           See Kinesis Stream below for more details.
                         properties:
                           resourceArn:
@@ -1945,9 +1718,8 @@ spec:
                         description: The Name Prefix to use when creating an in-application stream.
                         type: string
                       parallelism:
-                        description: >-
+                        description: |-
                           The number of Parallel in-application streams to create.
-
                           See Parallelism below for more details.
                         properties:
                           count:
@@ -1955,9 +1727,8 @@ spec:
                             type: number
                         type: object
                       processingConfiguration:
-                        description: >-
+                        description: |-
                           The Processing Configuration to transform records as they are received from the stream.
-
                           See Processing Configuration below for more details.
                         properties:
                           lambda:
@@ -1975,9 +1746,8 @@ spec:
                         description: The Schema format of the data in the streaming source. See Source Schema below for more details.
                         properties:
                           recordColumns:
-                            description: >-
+                            description: |-
                               The Record Column mapping for the streaming source data element.
-
                               See Record Columns below for more details.
                             items:
                               properties:
@@ -1996,21 +1766,18 @@ spec:
                             description: The Encoding of the record in the streaming source.
                             type: string
                           recordFormat:
-                            description: >-
+                            description: |-
                               The Record Format and mapping information to schematize a record.
-
                               See Record Format below for more details.
                             properties:
                               mappingParameters:
-                                description: >-
+                                description: |-
                                   The Mapping Information for the record format.
-
                                   See Mapping Parameters below for more details.
                                 properties:
                                   csv:
-                                    description: >-
+                                    description: |-
                                       Mapping information when the record format uses delimiters.
-
                                       See CSV Mapping Parameters below for more details.
                                     properties:
                                       recordColumnDelimiter:
@@ -2021,9 +1788,8 @@ spec:
                                         type: string
                                     type: object
                                   json:
-                                    description: >-
+                                    description: |-
                                       Mapping information when JSON is the record format on the streaming source.
-
                                       See JSON Mapping Parameters below for more details.
                                     properties:
                                       recordRowPath:
@@ -2037,9 +1803,8 @@ spec:
                             type: object
                         type: object
                       startingPositionConfiguration:
-                        description: >-
+                        description: |-
                           The point at which the application starts processing records from the streaming source.
-
                           See Starting Position Configuration below for more details.
                         items:
                           properties:
@@ -2064,9 +1829,8 @@ spec:
                           description: The ARN of the Kinesis Analytics Application.
                           type: string
                         kinesisFirehose:
-                          description: >-
+                          description: |-
                             The Kinesis Firehose configuration for the destination stream. Conflicts with kinesis_stream.
-
                             See Kinesis Firehose below for more details.
                           properties:
                             resourceArn:
@@ -2077,9 +1841,8 @@ spec:
                               type: string
                           type: object
                         kinesisStream:
-                          description: >-
+                          description: |-
                             The Kinesis Stream configuration for the destination stream. Conflicts with kinesis_firehose.
-
                             See Kinesis Stream below for more details.
                           properties:
                             resourceArn:
@@ -2112,9 +1875,8 @@ spec:
                       type: object
                     type: array
                   referenceDataSources:
-                    description: >-
+                    description: |-
                       An S3 Reference Data Source for the application.
-
                       See Reference Data Sources below for more details.
                     properties:
                       id:
@@ -2137,9 +1899,8 @@ spec:
                         description: The Schema format of the data in the streaming source. See Source Schema below for more details.
                         properties:
                           recordColumns:
-                            description: >-
+                            description: |-
                               The Record Column mapping for the streaming source data element.
-
                               See Record Columns below for more details.
                             items:
                               properties:
@@ -2158,21 +1919,18 @@ spec:
                             description: The Encoding of the record in the streaming source.
                             type: string
                           recordFormat:
-                            description: >-
+                            description: |-
                               The Record Format and mapping information to schematize a record.
-
                               See Record Format below for more details.
                             properties:
                               mappingParameters:
-                                description: >-
+                                description: |-
                                   The Mapping Information for the record format.
-
                                   See Mapping Parameters below for more details.
                                 properties:
                                   csv:
-                                    description: >-
+                                    description: |-
                                       Mapping information when the record format uses delimiters.
-
                                       See CSV Mapping Parameters below for more details.
                                     properties:
                                       recordColumnDelimiter:
@@ -2183,9 +1941,8 @@ spec:
                                         type: string
                                     type: object
                                   json:
-                                    description: >-
+                                    description: |-
                                       Mapping information when JSON is the record format on the streaming source.
-
                                       See JSON Mapping Parameters below for more details.
                                     properties:
                                       recordRowPath:
@@ -2203,15 +1960,13 @@ spec:
                         type: string
                     type: object
                   region:
-                    description: >-
+                    description: |-
                       Region where this resource will be managed. Defaults to the Region set in the provider configuration.
-
                       Region is the region you'd like your resource to be created in.
                     type: string
                   startApplication:
-                    description: >-
+                    description: |-
                       Whether to start or stop the Kinesis Analytics Application. To start an application, an input with a defined starting_position must be configured.
-
                       To modify an application's starting position, first stop the application by setting start_application = false, then update starting_position and set start_application = true.
                     type: boolean
                   status:
@@ -2239,24 +1994,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -2267,9 +2018,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -2283,11 +2033,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

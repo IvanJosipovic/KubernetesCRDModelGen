@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: deploymentmanagerdeployments.deploymentmanager.cnrm.cloud.google.com
 spec:
   group: deploymentmanager.cnrm.cloud.google.com
@@ -54,29 +53,20 @@ spec:
           spec:
             properties:
               createPolicy:
-                description: >-
+                description: |-
                   Immutable. Set the policy to use for creating new resources. Only used on
-
                   create and update. Valid values are 'CREATE_OR_ACQUIRE' (default) or
-
                   'ACQUIRE'. If set to 'ACQUIRE' and resources do not already exist,
-
                   the deployment will fail. Note that updating this field does not
-
                   actually affect the deployment, just how it is updated. Default value: "CREATE_OR_ACQUIRE" Possible values: ["ACQUIRE", "CREATE_OR_ACQUIRE"].
                 type: string
               deletePolicy:
-                description: >-
+                description: |-
                   Immutable. Set the policy to use for deleting new resources on update/delete.
-
                   Valid values are 'DELETE' (default) or 'ABANDON'. If 'DELETE',
-
                   resource is deleted after removal from Deployment Manager. If
-
                   'ABANDON', the resource is only removed from Deployment Manager
-
                   and is not actually deleted. Note that updating this field does not
-
                   actually change the deployment, just how it is updated. Default value: "DELETE" Possible values: ["ABANDON", "DELETE"].
                 type: string
               description:
@@ -115,9 +105,8 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               target:
-                description: >-
+                description: |-
                   Parameters that define your deployment, including the deployment
-
                   configuration and relevant templates.
                 properties:
                   config:
@@ -130,11 +119,9 @@ spec:
                     - content
                     type: object
                   imports:
-                    description: >-
+                    description: |-
                       Specifies import files for this configuration. This can be
-
                       used to import templates or other files. For example, you might
-
                       import a text file in order to use the file in a template.
                     items:
                       properties:
@@ -142,9 +129,8 @@ spec:
                           description: The full contents of the template that you want to import.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             The name of the template to import, as declared in the YAML
-
                             configuration.
                           type: string
                       type: object
@@ -183,9 +169,8 @@ spec:
                 description: Unique identifier for deployment. Output only.
                 type: string
               manifest:
-                description: >-
+                description: |-
                   Output only. URL of the manifest representing the last manifest that
-
                   was successfully deployed.
                 type: string
               observedGeneration:
@@ -204,7 +189,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

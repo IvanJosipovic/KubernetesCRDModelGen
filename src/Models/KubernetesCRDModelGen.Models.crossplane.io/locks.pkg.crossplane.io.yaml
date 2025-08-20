@@ -23,25 +23,18 @@ spec:
         description: Lock is the CRD type that tracks package dependencies.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -54,9 +47,8 @@ spec:
                   description: APIVersion of the package.
                   type: string
                 dependencies:
-                  description: >-
+                  description: |-
                     Dependencies are the list of dependencies of this package. The order of
-
                     the dependencies will dictate the order in which they are resolved.
                   items:
                     description: A Dependency is a dependency of a package in the lock.
@@ -65,9 +57,8 @@ spec:
                         description: APIVersion of the package.
                         type: string
                       constraints:
-                        description: >-
+                        description: |-
                           Constraints is a valid semver range or a digest, which will be used to select a valid
-
                           dependency version.
                         type: string
                       kind:
@@ -77,9 +68,8 @@ spec:
                         description: Package is the OCI image name without a tag or digest.
                         type: string
                       type:
-                        description: >-
+                        description: |-
                           Type is the type of package. Can be either Configuration or Provider.
-
                           Deprecated: Specify an apiVersion and kind instead.
                         enum:
                         - Configuration
@@ -101,9 +91,8 @@ spec:
                   description: Source is the OCI image name without a tag or digest.
                   type: string
                 type:
-                  description: >-
+                  description: |-
                     Type is the type of package.
-
                     Deprecated: Specify an apiVersion and kind instead.
                   enum:
                   - Configuration
@@ -129,24 +118,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -157,9 +142,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:

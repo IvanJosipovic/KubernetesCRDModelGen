@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: runjobs.run.cnrm.cloud.google.com
 spec:
   group: run.cnrm.cloud.google.com
@@ -56,14 +55,11 @@ spec:
               annotations:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
 
-
                   Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected on new resources.
-
                   All system annotations in v1 now have a corresponding field in v2 Job.
-
 
                   This field follows Kubernetes annotations' namespacing, limits, and rules.
                 type: object
@@ -84,11 +80,9 @@ spec:
                 description: Arbitrary version identifier for the API client.
                 type: string
               launchStage:
-                description: >-
+                description: |-
                   The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
-
                   If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
-
 
                   For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"].
                 type: string
@@ -131,14 +125,11 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
 
-
                       Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
-
                       All system annotations in v1 now have a corresponding field in v2 ExecutionTemplate.
-
 
                       This field follows Kubernetes annotations' namespacing, limits, and rules.
                     type: object
@@ -248,9 +239,8 @@ spec:
                               description: 'URL of the Container image in Google Container Registry or Google Artifact Registry. More info: https://kubernetes.io/docs/concepts/containers/images.'
                               type: string
                             livenessProbe:
-                              description: >-
+                              description: |-
                                 DEPRECATED. `liveness_probe` is deprecated. This field is not supported by the Cloud Run API. Periodic probe of container liveness. Container will be restarted if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-
                                 This field is not supported in Cloud Run Job currently.
                               properties:
                                 failureThreshold:
@@ -298,9 +288,8 @@ spec:
                               description: Name of the container specified as a DNS_LABEL.
                               type: string
                             ports:
-                              description: >-
+                              description: |-
                                 List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible.
-
 
                                 If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
                               items:
@@ -323,9 +312,8 @@ spec:
                                   type: object
                               type: object
                             startupProbe:
-                              description: >-
+                              description: |-
                                 DEPRECATED. `startup_probe` is deprecated. This field is not supported by the Cloud Run API. Startup probe of application within the container. All other probes are disabled if a startup probe is provided, until it succeeds. Container will not be added to service endpoints if the probe fails. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
-
                                 This field is not supported in Cloud Run Job currently.
                               properties:
                                 failureThreshold:
@@ -452,9 +440,8 @@ spec:
                             type: string
                         type: object
                       timeout:
-                        description: >-
+                        description: |-
                           Max allowed time duration the Task may be active before the system will actively try to mark it failed and kill associated containers. This applies per attempt of a task, meaning each retry can run for the full timeout.
-
 
                           A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
                         type: string
@@ -628,11 +615,9 @@ spec:
                             items:
                               properties:
                                 networkRef:
-                                  description: >-
+                                  description: |-
                                     The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both
-
                                     network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
-
                                     looked up from the subnetwork.
                                   oneOf:
                                   - not:
@@ -660,11 +645,9 @@ spec:
                                       type: string
                                   type: object
                                 subnetworkRef:
-                                  description: >-
+                                  description: |-
                                     The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or subnetwork must be specified. If both
-
                                     network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
-
                                     subnetwork with the same name with the network will be used.
                                   oneOf:
                                   - not:
@@ -757,16 +740,14 @@ spec:
                 items:
                   properties:
                     completionTime:
-                      description: >-
+                      description: |-
                         Completion timestamp of the execution.
-
 
                         A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                       type: string
                     createTime:
-                      description: >-
+                      description: |-
                         Creation timestamp of the execution.
-
 
                         A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                       type: string
@@ -779,15 +760,12 @@ spec:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
               reconciling:
-                description: >-
+                description: |-
                   Returns true if the Job is currently being acted upon by the system to bring it into the desired state.
-
 
                   When a new Job is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Job to the desired state. This process is called reconciliation. While reconciliation is in process, observedGeneration and latest_succeeded_execution, will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the state matches the Job, or there was an error, and reconciliation failed. This state can be found in terminalCondition.state.
 
-
                   If reconciliation succeeded, the following fields will match: observedGeneration and generation, latest_succeeded_execution and latestCreatedExecution.
-
 
                   If reconciliation failed, observedGeneration and latest_succeeded_execution will have the state of the last succeeded execution or empty for newly created Job. Additional information on the failure can be found in terminalCondition and conditions.
                 type: boolean
@@ -799,9 +777,8 @@ spec:
                       description: A reason for the execution condition.
                       type: string
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         Last time the condition transitioned from one status to another.
-
 
                         A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                       type: string
@@ -841,7 +818,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

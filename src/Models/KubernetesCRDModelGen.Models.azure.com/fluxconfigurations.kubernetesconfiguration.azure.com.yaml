@@ -45,33 +45,24 @@ spec:
     name: v1api20230501
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/fluxconfiguration.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -88,9 +79,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -101,9 +91,8 @@ spec:
                     description: 'ContainerName: The Azure Blob container name to sync from the url endpoint for the flux configuration.'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   managedIdentity:
@@ -120,9 +109,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -139,9 +127,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -155,9 +142,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -165,9 +151,8 @@ spec:
                         - name
                         type: object
                       clientCertificateSendChain:
-                        description: >-
+                        description: |-
                           ClientCertificateSendChain: Specifies whether to include x5c header in client claims when acquiring a token to enable
-
                           subject name / issuer based authentication for the Client Certificate
                         type: boolean
                       clientId:
@@ -180,9 +165,8 @@ spec:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -196,9 +180,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -215,9 +198,8 @@ spec:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -236,9 +218,8 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               bucket:
@@ -251,9 +232,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -267,9 +247,8 @@ spec:
                     description: 'Insecure: Specify whether to use insecure communication when puling data from the S3 bucket.'
                     type: boolean
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   syncIntervalInSeconds:
@@ -286,9 +265,8 @@ spec:
                 description: 'ConfigurationProtectedSettings: Key-value pairs of protected configuration settings for the configuration'
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name is the name of the Kubernetes secret being referenced.
-
                       The secret must be in the same namespace as the resource
                     type: string
                 required:
@@ -304,9 +282,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -317,9 +294,8 @@ spec:
                     description: 'HttpsUser: Plaintext HTTPS username used to access private git repositories over HTTPS'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   repositoryRef:
@@ -329,9 +305,8 @@ spec:
                         description: 'Branch: The git repository branch name to checkout.'
                         type: string
                       commit:
-                        description: >-
+                        description: |-
                           Commit: The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence
-
                           over semver.
                         type: string
                       semver:
@@ -342,9 +317,8 @@ spec:
                         type: string
                     type: object
                   sshKnownHosts:
-                    description: >-
+                    description: |-
                       SshKnownHosts: Base64-encoded known_hosts value containing public SSH keys required to access private git repositories
-
                       over SSH
                     type: string
                   syncIntervalInSeconds:
@@ -362,17 +336,15 @@ spec:
                   description: The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     dependsOn:
-                      description: >-
+                      description: |-
                         DependsOn: Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile
-
                         until all dependencies have completed their reconciliation.
                       items:
                         type: string
                       type: array
                     force:
-                      description: >-
+                      description: |-
                         Force: Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field
-
                         change.
                       type: boolean
                     path:
@@ -407,9 +379,8 @@ spec:
                       description: 'Prune: Enable/disable garbage collections of Kubernetes objects created by this Kustomization.'
                       type: boolean
                     retryIntervalInSeconds:
-                      description: >-
+                      description: |-
                         RetryIntervalInSeconds: The interval at which to re-reconcile the Kustomization on the cluster in the event of failure
-
                         on reconciliation.
                       type: integer
                     syncIntervalInSeconds:
@@ -425,47 +396,38 @@ spec:
                 description: 'Kustomizations: Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.'
                 type: object
               namespace:
-                description: >-
+                description: |-
                   Namespace: The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters,
-
                   hyphen and period only.
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -476,33 +438,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -512,11 +467,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an
-
                   extension resource, which means that any other Azure resource can be its owner.
                 properties:
                   armId:
@@ -568,9 +521,8 @@ spec:
                     description: 'ContainerName: The Azure Blob container name to sync from the url endpoint for the flux configuration.'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   managedIdentity:
@@ -584,9 +536,8 @@ spec:
                     description: 'ServicePrincipal: Parameters to authenticate using Service Principal.'
                     properties:
                       clientCertificateSendChain:
-                        description: >-
+                        description: |-
                           ClientCertificateSendChain: Specifies whether to include x5c header in client claims when acquiring a token to enable
-
                           subject name / issuer based authentication for the Client Certificate
                         type: boolean
                       clientId:
@@ -616,9 +567,8 @@ spec:
                     description: 'Insecure: Specify whether to use insecure communication when puling data from the S3 bucket.'
                     type: boolean
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   syncIntervalInSeconds:
@@ -632,9 +582,8 @@ spec:
                     type: string
                 type: object
               complianceState:
-                description: >-
+                description: |-
                   ComplianceState: Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the
-
                   managed objects.
                 type: string
               conditions:
@@ -650,28 +599,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -702,9 +645,8 @@ spec:
                     description: 'HttpsUser: Plaintext HTTPS username used to access private git repositories over HTTPS'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   repositoryRef:
@@ -714,9 +656,8 @@ spec:
                         description: 'Branch: The git repository branch name to checkout.'
                         type: string
                       commit:
-                        description: >-
+                        description: |-
                           Commit: The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence
-
                           over semver.
                         type: string
                       semver:
@@ -727,9 +668,8 @@ spec:
                         type: string
                     type: object
                   sshKnownHosts:
-                    description: >-
+                    description: |-
                       SshKnownHosts: Base64-encoded known_hosts value containing public SSH keys required to access private git repositories
-
                       over SSH
                     type: string
                   syncIntervalInSeconds:
@@ -743,9 +683,8 @@ spec:
                     type: string
                 type: object
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               kustomizations:
@@ -753,17 +692,15 @@ spec:
                   description: The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     dependsOn:
-                      description: >-
+                      description: |-
                         DependsOn: Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile
-
                         until all dependencies have completed their reconciliation.
                       items:
                         type: string
                       type: array
                     force:
-                      description: >-
+                      description: |-
                         Force: Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field
-
                         change.
                       type: boolean
                     name:
@@ -801,9 +738,8 @@ spec:
                       description: 'Prune: Enable/disable garbage collections of Kubernetes objects created by this Kustomization.'
                       type: boolean
                     retryIntervalInSeconds:
-                      description: >-
+                      description: |-
                         RetryIntervalInSeconds: The interval at which to re-reconcile the Kustomization on the cluster in the event of failure
-
                         on reconciliation.
                       type: integer
                     syncIntervalInSeconds:
@@ -822,9 +758,8 @@ spec:
                 description: 'Name: The name of the resource'
                 type: string
               namespace:
-                description: >-
+                description: |-
                   Namespace: The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters,
-
                   hyphen and period only.
                 type: string
               provisioningState:
@@ -834,9 +769,8 @@ spec:
                 description: 'ReconciliationWaitDuration: Maximum duration to wait for flux configuration reconciliation. E.g PT1H, PT5M, P1D'
                 type: string
               repositoryPublicKey:
-                description: >-
+                description: |-
                   RepositoryPublicKey: Public Key associated with this fluxConfiguration (either generated within the cluster or provided
-
                   by the user).
                 type: string
               scope:
@@ -855,9 +789,8 @@ spec:
                 description: 'StatusUpdatedAt: Datetime the fluxConfiguration synced its status on the cluster with Azure.'
                 type: string
               statuses:
-                description: >-
+                description: |-
                   Statuses: Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects
-
                   provisioned by the fluxConfiguration.
                 items:
                   description: Statuses of objects deployed by the user-specified kustomizations from the git repository.
@@ -873,9 +806,8 @@ spec:
                           type: string
                       type: object
                     complianceState:
-                      description: >-
+                      description: |-
                         ComplianceState: Compliance state of the applied object showing whether the applied object has come into a ready state
-
                         on the cluster.
                       type: string
                     helmReleaseProperties:
@@ -968,35 +900,25 @@ spec:
     name: v1api20230501storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230501.FluxConfiguration
-
           Generator information:
-
           - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/stable/2023-05-01/fluxconfiguration.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1007,38 +929,33 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureBlob:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.AzureBlobDefinition
-
                   Parameters to reconcile to the AzureBlob source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   accountKey:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -1050,35 +967,31 @@ spec:
                   localAuthRef:
                     type: string
                   managedIdentity:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.ManagedIdentityDefinition
-
                       Parameters to authenticate using a Managed Identity.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientId:
                         type: string
                     type: object
                   sasToken:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -1086,32 +999,28 @@ spec:
                     - name
                     type: object
                   servicePrincipal:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.ServicePrincipalDefinition
-
                       Parameters to authenticate using Service Principal.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificate:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -1119,18 +1028,16 @@ spec:
                         - name
                         type: object
                       clientCertificatePassword:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -1142,18 +1049,16 @@ spec:
                       clientId:
                         type: string
                       clientIdFromConfig:
-                        description: >-
+                        description: |-
                           ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -1161,18 +1066,16 @@ spec:
                         - name
                         type: object
                       clientSecret:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -1182,18 +1085,16 @@ spec:
                       tenantId:
                         type: string
                       tenantIdFromConfig:
-                        description: >-
+                        description: |-
                           ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -1209,38 +1110,33 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               bucket:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.BucketDefinition
-
                   Parameters to reconcile to the Bucket source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   accessKey:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -1261,47 +1157,41 @@ spec:
                     type: string
                 type: object
               configurationProtectedSettings:
-                description: >-
+                description: |-
                   SecretMapReference is a reference to a Kubernetes secret in the same namespace as
-
                   the resource it is on.
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name is the name of the Kubernetes secret being referenced.
-
                       The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
                 type: object
               gitRepository:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.GitRepositoryDefinition
-
                   Parameters to reconcile to the GitRepository source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   httpsCACert:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -1313,17 +1203,15 @@ spec:
                   localAuthRef:
                     type: string
                   repositoryRef:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.RepositoryRefDefinition
-
                       The source reference for the GitRepository object.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       branch:
@@ -1346,17 +1234,15 @@ spec:
                 type: object
               kustomizations:
                 additionalProperties:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501.KustomizationDefinition
-
                     The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     dependsOn:
@@ -1368,17 +1254,15 @@ spec:
                     path:
                       type: string
                     postBuild:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501.PostBuildDefinition
-
                         The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         substitute:
@@ -1387,17 +1271,15 @@ spec:
                           type: object
                         substituteFrom:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230501.SubstituteFromDefinition
-
                               Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               kind:
@@ -1424,48 +1306,39 @@ spec:
               namespace:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.FluxConfigurationOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1475,33 +1348,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1513,11 +1379,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an
-
                   extension resource, which means that any other Azure resource can be its owner.
                 properties:
                   armId:
@@ -1548,31 +1412,27 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20230501.FluxConfiguration_STATUS
-
               The Flux Configuration object returned in Get & Put response.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureBlob:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.AzureBlobDefinition_STATUS
-
                   Parameters to reconcile to the AzureBlob source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   containerName:
@@ -1580,34 +1440,30 @@ spec:
                   localAuthRef:
                     type: string
                   managedIdentity:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.ManagedIdentityDefinition_STATUS
-
                       Parameters to authenticate using a Managed Identity.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientId:
                         type: string
                     type: object
                   servicePrincipal:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.ServicePrincipalDefinition_STATUS
-
                       Parameters to authenticate using Service Principal.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificateSendChain:
@@ -1625,17 +1481,15 @@ spec:
                     type: string
                 type: object
               bucket:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.BucketDefinition_STATUS
-
                   Parameters to reconcile to the Bucket source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   bucketName:
@@ -1665,28 +1519,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1709,17 +1557,15 @@ spec:
               errorMessage:
                 type: string
               gitRepository:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.GitRepositoryDefinition_STATUS
-
                   Parameters to reconcile to the GitRepository source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   httpsUser:
@@ -1727,17 +1573,15 @@ spec:
                   localAuthRef:
                     type: string
                   repositoryRef:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.RepositoryRefDefinition_STATUS
-
                       The source reference for the GitRepository object.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       branch:
@@ -1762,17 +1606,15 @@ spec:
                 type: string
               kustomizations:
                 additionalProperties:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501.KustomizationDefinition_STATUS
-
                     The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     dependsOn:
@@ -1786,17 +1628,15 @@ spec:
                     path:
                       type: string
                     postBuild:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501.PostBuildDefinition_STATUS
-
                         The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         substitute:
@@ -1805,17 +1645,15 @@ spec:
                           type: object
                         substituteFrom:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230501.SubstituteFromDefinition_STATUS
-
                               Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               kind:
@@ -1861,31 +1699,27 @@ spec:
                 type: string
               statuses:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501.ObjectStatusDefinition_STATUS
-
                     Statuses of objects deployed by the user-specified kustomizations from the git repository.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     appliedBy:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501.ObjectReferenceDefinition_STATUS
-
                         Object reference to a Kubernetes object on a cluster
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
@@ -1896,33 +1730,29 @@ spec:
                     complianceState:
                       type: string
                     helmReleaseProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501.HelmReleasePropertiesDefinition_STATUS
-
                         Properties for HelmRelease objects
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         failureCount:
                           type: integer
                         helmChartRef:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230501.ObjectReferenceDefinition_STATUS
-
                             Object reference to a Kubernetes object on a cluster
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             name:
@@ -1945,17 +1775,15 @@ spec:
                       type: string
                     statusConditions:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230501.ObjectStatusConditionDefinition_STATUS
-
                           Status condition of Kubernetes object
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           lastTransitionTime:
@@ -2000,33 +1828,24 @@ spec:
     name: v1api20241101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/fluxConfigurations/stable/2024-11-01/fluxconfiguration.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2043,9 +1862,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -2056,9 +1874,8 @@ spec:
                     description: 'ContainerName: The Azure Blob container name to sync from the url endpoint for the flux configuration.'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   managedIdentity:
@@ -2075,9 +1892,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -2094,9 +1910,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -2110,9 +1925,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -2120,9 +1934,8 @@ spec:
                         - name
                         type: object
                       clientCertificateSendChain:
-                        description: >-
+                        description: |-
                           ClientCertificateSendChain: Specifies whether to include x5c header in client claims when acquiring a token to enable
-
                           subject name / issuer based authentication for the Client Certificate
                         type: boolean
                       clientId:
@@ -2135,9 +1948,8 @@ spec:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -2151,9 +1963,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -2170,9 +1981,8 @@ spec:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -2191,9 +2001,8 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               bucket:
@@ -2206,9 +2015,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -2222,9 +2030,8 @@ spec:
                     description: 'Insecure: Specify whether to use insecure communication when puling data from the S3 bucket.'
                     type: boolean
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   syncIntervalInSeconds:
@@ -2241,9 +2048,8 @@ spec:
                 description: 'ConfigurationProtectedSettings: Key-value pairs of protected configuration settings for the configuration'
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name is the name of the Kubernetes secret being referenced.
-
                       The secret must be in the same namespace as the resource
                     type: string
                 required:
@@ -2259,9 +2065,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -2272,9 +2077,8 @@ spec:
                     description: 'HttpsUser: Plaintext HTTPS username used to access private git repositories over HTTPS'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   provider:
@@ -2290,9 +2094,8 @@ spec:
                         description: 'Branch: The git repository branch name to checkout.'
                         type: string
                       commit:
-                        description: >-
+                        description: |-
                           Commit: The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence
-
                           over semver.
                         type: string
                       semver:
@@ -2303,9 +2106,8 @@ spec:
                         type: string
                     type: object
                   sshKnownHosts:
-                    description: >-
+                    description: |-
                       SshKnownHosts: Base64-encoded known_hosts value containing public SSH keys required to access private git repositories
-
                       over SSH
                     type: string
                   syncIntervalInSeconds:
@@ -2323,17 +2125,15 @@ spec:
                   description: The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     dependsOn:
-                      description: >-
+                      description: |-
                         DependsOn: Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile
-
                         until all dependencies have completed their reconciliation.
                       items:
                         type: string
                       type: array
                     force:
-                      description: >-
+                      description: |-
                         Force: Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field
-
                         change.
                       type: boolean
                     path:
@@ -2368,9 +2168,8 @@ spec:
                       description: 'Prune: Enable/disable garbage collections of Kubernetes objects created by this Kustomization.'
                       type: boolean
                     retryIntervalInSeconds:
-                      description: >-
+                      description: |-
                         RetryIntervalInSeconds: The interval at which to re-reconcile the Kustomization on the cluster in the event of failure
-
                         on reconciliation.
                       type: integer
                     syncIntervalInSeconds:
@@ -2386,9 +2185,8 @@ spec:
                 description: 'Kustomizations: Array of kustomizations used to reconcile the artifact pulled by the source type on the cluster.'
                 type: object
               namespace:
-                description: >-
+                description: |-
                   Namespace: The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters,
-
                   hyphen and period only.
                 type: string
               ociRepository:
@@ -2404,9 +2202,8 @@ spec:
                         description: 'MediaType: The first layer matching the specified media type will be used.'
                         type: string
                       operation:
-                        description: >-
+                        description: |-
                           Operation: The operation to be performed on the selected layer. The default value is 'extract', but it can be set to
-
                           'copy'.
                         enum:
                         - copy
@@ -2414,18 +2211,16 @@ spec:
                         type: string
                     type: object
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   repositoryRef:
                     description: 'RepositoryRef: The source reference for the OCIRepository object.'
                     properties:
                       digest:
-                        description: >-
+                        description: |-
                           Digest: The image digest to pull from OCI repository, the value should be in the format ‘sha256:’. This takes
-
                           precedence over semver.
                         type: string
                       semver:
@@ -2454,9 +2249,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -2470,9 +2264,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -2486,9 +2279,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -2529,41 +2321,33 @@ spec:
                     type: object
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2574,33 +2358,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2610,11 +2387,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an
-
                   extension resource, which means that any other Azure resource can be its owner.
                 properties:
                   armId:
@@ -2667,9 +2442,8 @@ spec:
                     description: 'ContainerName: The Azure Blob container name to sync from the url endpoint for the flux configuration.'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   managedIdentity:
@@ -2683,9 +2457,8 @@ spec:
                     description: 'ServicePrincipal: Parameters to authenticate using Service Principal.'
                     properties:
                       clientCertificateSendChain:
-                        description: >-
+                        description: |-
                           ClientCertificateSendChain: Specifies whether to include x5c header in client claims when acquiring a token to enable
-
                           subject name / issuer based authentication for the Client Certificate
                         type: boolean
                       clientId:
@@ -2715,9 +2488,8 @@ spec:
                     description: 'Insecure: Specify whether to use insecure communication when puling data from the S3 bucket.'
                     type: boolean
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   syncIntervalInSeconds:
@@ -2731,9 +2503,8 @@ spec:
                     type: string
                 type: object
               complianceState:
-                description: >-
+                description: |-
                   ComplianceState: Combined status of the Flux Kubernetes resources created by the fluxConfiguration or created by the
-
                   managed objects.
                 type: string
               conditions:
@@ -2749,28 +2520,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2801,9 +2566,8 @@ spec:
                     description: 'HttpsUser: Plaintext HTTPS username used to access private git repositories over HTTPS'
                     type: string
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   provider:
@@ -2816,9 +2580,8 @@ spec:
                         description: 'Branch: The git repository branch name to checkout.'
                         type: string
                       commit:
-                        description: >-
+                        description: |-
                           Commit: The commit SHA to checkout. This value must be combined with the branch name to be valid. This takes precedence
-
                           over semver.
                         type: string
                       semver:
@@ -2829,9 +2592,8 @@ spec:
                         type: string
                     type: object
                   sshKnownHosts:
-                    description: >-
+                    description: |-
                       SshKnownHosts: Base64-encoded known_hosts value containing public SSH keys required to access private git repositories
-
                       over SSH
                     type: string
                   syncIntervalInSeconds:
@@ -2845,9 +2607,8 @@ spec:
                     type: string
                 type: object
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               kustomizations:
@@ -2855,17 +2616,15 @@ spec:
                   description: The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     dependsOn:
-                      description: >-
+                      description: |-
                         DependsOn: Specifies other Kustomizations that this Kustomization depends on. This Kustomization will not reconcile
-
                         until all dependencies have completed their reconciliation.
                       items:
                         type: string
                       type: array
                     force:
-                      description: >-
+                      description: |-
                         Force: Enable/disable re-creating Kubernetes resources on the cluster when patching fails due to an immutable field
-
                         change.
                       type: boolean
                     name:
@@ -2903,9 +2662,8 @@ spec:
                       description: 'Prune: Enable/disable garbage collections of Kubernetes objects created by this Kustomization.'
                       type: boolean
                     retryIntervalInSeconds:
-                      description: >-
+                      description: |-
                         RetryIntervalInSeconds: The interval at which to re-reconcile the Kustomization on the cluster in the event of failure
-
                         on reconciliation.
                       type: integer
                     syncIntervalInSeconds:
@@ -2924,9 +2682,8 @@ spec:
                 description: 'Name: The name of the resource'
                 type: string
               namespace:
-                description: >-
+                description: |-
                   Namespace: The namespace to which this configuration is installed to. Maximum of 253 lower case alphanumeric characters,
-
                   hyphen and period only.
                 type: string
               ociRepository:
@@ -2942,25 +2699,22 @@ spec:
                         description: 'MediaType: The first layer matching the specified media type will be used.'
                         type: string
                       operation:
-                        description: >-
+                        description: |-
                           Operation: The operation to be performed on the selected layer. The default value is 'extract', but it can be set to
-
                           'copy'.
                         type: string
                     type: object
                   localAuthRef:
-                    description: >-
+                    description: |-
                       LocalAuthRef: Name of a local secret on the Kubernetes cluster to use as the authentication secret rather than the
-
                       managed or user-provided configuration secrets.
                     type: string
                   repositoryRef:
                     description: 'RepositoryRef: The source reference for the OCIRepository object.'
                     properties:
                       digest:
-                        description: >-
+                        description: |-
                           Digest: The image digest to pull from OCI repository, the value should be in the format ‘sha256:’. This takes
-
                           precedence over semver.
                         type: string
                       semver:
@@ -3018,9 +2772,8 @@ spec:
                 description: 'ReconciliationWaitDuration: Maximum duration to wait for flux configuration reconciliation. E.g PT1H, PT5M, P1D'
                 type: string
               repositoryPublicKey:
-                description: >-
+                description: |-
                   RepositoryPublicKey: Public Key associated with this fluxConfiguration (either generated within the cluster or provided
-
                   by the user).
                 type: string
               scope:
@@ -3039,9 +2792,8 @@ spec:
                 description: 'StatusUpdatedAt: Datetime the fluxConfiguration synced its status on the cluster with Azure.'
                 type: string
               statuses:
-                description: >-
+                description: |-
                   Statuses: Statuses of the Flux Kubernetes resources created by the fluxConfiguration or created by the managed objects
-
                   provisioned by the fluxConfiguration.
                 items:
                   description: Statuses of objects deployed by the user-specified kustomizations from the git repository.
@@ -3057,9 +2809,8 @@ spec:
                           type: string
                       type: object
                     complianceState:
-                      description: >-
+                      description: |-
                         ComplianceState: Compliance state of the applied object showing whether the applied object has come into a ready state
-
                         on the cluster.
                       type: string
                     helmReleaseProperties:
@@ -3152,35 +2903,25 @@ spec:
     name: v1api20241101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20241101.FluxConfiguration
-
           Generator information:
-
           - Generated from: /kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/fluxConfigurations/stable/2024-11-01/fluxconfiguration.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{clusterRp}/{clusterResourceName}/{clusterName}/providers/Microsoft.KubernetesConfiguration/fluxConfigurations/{fluxConfigurationName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -3191,38 +2932,33 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureBlob:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.AzureBlobDefinition
-
                   Parameters to reconcile to the AzureBlob source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   accountKey:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -3234,35 +2970,31 @@ spec:
                   localAuthRef:
                     type: string
                   managedIdentity:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.ManagedIdentityDefinition
-
                       Parameters to authenticate using a Managed Identity.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientId:
                         type: string
                     type: object
                   sasToken:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -3270,32 +3002,28 @@ spec:
                     - name
                     type: object
                   servicePrincipal:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.ServicePrincipalDefinition
-
                       Parameters to authenticate using Service Principal.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificate:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -3303,18 +3031,16 @@ spec:
                         - name
                         type: object
                       clientCertificatePassword:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -3326,18 +3052,16 @@ spec:
                       clientId:
                         type: string
                       clientIdFromConfig:
-                        description: >-
+                        description: |-
                           ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -3345,18 +3069,16 @@ spec:
                         - name
                         type: object
                       clientSecret:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -3366,18 +3088,16 @@ spec:
                       tenantId:
                         type: string
                       tenantIdFromConfig:
-                        description: >-
+                        description: |-
                           ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes configmap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes configmap being referenced.
-
                               The configmap must be in the same namespace as the resource
                             type: string
                         required:
@@ -3393,38 +3113,33 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               bucket:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.BucketDefinition
-
                   Parameters to reconcile to the Bucket source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   accessKey:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -3445,47 +3160,41 @@ spec:
                     type: string
                 type: object
               configurationProtectedSettings:
-                description: >-
+                description: |-
                   SecretMapReference is a reference to a Kubernetes secret in the same namespace as
-
                   the resource it is on.
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name is the name of the Kubernetes secret being referenced.
-
                       The secret must be in the same namespace as the resource
                     type: string
                 required:
                 - name
                 type: object
               gitRepository:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.GitRepositoryDefinition
-
                   Parameters to reconcile to the GitRepository source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   httpsCACert:
-                    description: >-
+                    description: |-
                       SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                       the resource it is on.
                     properties:
                       key:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -3499,17 +3208,15 @@ spec:
                   provider:
                     type: string
                   repositoryRef:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.RepositoryRefDefinition
-
                       The source reference for the GitRepository object.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       branch:
@@ -3532,17 +3239,15 @@ spec:
                 type: object
               kustomizations:
                 additionalProperties:
-                  description: >-
+                  description: |-
                     Storage version of v1api20241101.KustomizationDefinition
-
                     The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     dependsOn:
@@ -3554,17 +3259,15 @@ spec:
                     path:
                       type: string
                     postBuild:
-                      description: >-
+                      description: |-
                         Storage version of v1api20241101.PostBuildDefinition
-
                         The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         substitute:
@@ -3573,17 +3276,15 @@ spec:
                           type: object
                         substituteFrom:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20241101.SubstituteFromDefinition
-
                               Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               kind:
@@ -3610,33 +3311,29 @@ spec:
               namespace:
                 type: string
               ociRepository:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.OCIRepositoryDefinition
-
                   Parameters to reconcile to the OCIRepository source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   insecure:
                     type: boolean
                   layerSelector:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.LayerSelectorDefinition
-
                       Parameters to specify which layer to pull from the OCI artifact. By default, the first layer in the artifact is pulled.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       mediaType:
@@ -3647,17 +3344,15 @@ spec:
                   localAuthRef:
                     type: string
                   repositoryRef:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.OCIRepositoryRefDefinition
-
                       The source reference for the OCIRepository object.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       digest:
@@ -3674,32 +3369,28 @@ spec:
                   timeoutInSeconds:
                     type: integer
                   tlsConfig:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.TlsConfigDefinition
-
                       Parameters to authenticate using TLS config for OCI repository.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       caCertificate:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -3707,18 +3398,16 @@ spec:
                         - name
                         type: object
                       clientCertificate:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -3726,18 +3415,16 @@ spec:
                         - name
                         type: object
                       privateKey:
-                        description: >-
+                        description: |-
                           SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                           the resource it is on.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret being referenced.
-
                               The secret must be in the same namespace as the resource
                             type: string
                         required:
@@ -3750,32 +3437,28 @@ spec:
                   useWorkloadIdentity:
                     type: boolean
                   verify:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.VerifyDefinition
-
                       Parameters to verify the authenticity of an OCI Artifact.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       matchOidcIdentity:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20241101.MatchOidcIdentityDefinition
-
                             MatchOIDCIdentity defines the criteria for matching the identity while verifying an OCI artifact.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             issuer:
@@ -3793,48 +3476,39 @@ spec:
                     type: object
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.FluxConfigurationOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3844,33 +3518,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3882,11 +3549,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. This resource is an
-
                   extension resource, which means that any other Azure resource can be its owner.
                 properties:
                   armId:
@@ -3917,31 +3582,27 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20241101.FluxConfiguration_STATUS
-
               The Flux Configuration object returned in Get & Put response.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureBlob:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.AzureBlobDefinition_STATUS
-
                   Parameters to reconcile to the AzureBlob source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   containerName:
@@ -3949,34 +3610,30 @@ spec:
                   localAuthRef:
                     type: string
                   managedIdentity:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.ManagedIdentityDefinition_STATUS
-
                       Parameters to authenticate using a Managed Identity.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientId:
                         type: string
                     type: object
                   servicePrincipal:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.ServicePrincipalDefinition_STATUS
-
                       Parameters to authenticate using Service Principal.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       clientCertificateSendChain:
@@ -3994,17 +3651,15 @@ spec:
                     type: string
                 type: object
               bucket:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.BucketDefinition_STATUS
-
                   Parameters to reconcile to the Bucket source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   bucketName:
@@ -4034,28 +3689,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -4078,17 +3727,15 @@ spec:
               errorMessage:
                 type: string
               gitRepository:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.GitRepositoryDefinition_STATUS
-
                   Parameters to reconcile to the GitRepository source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   httpsUser:
@@ -4098,17 +3745,15 @@ spec:
                   provider:
                     type: string
                   repositoryRef:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.RepositoryRefDefinition_STATUS
-
                       The source reference for the GitRepository object.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       branch:
@@ -4133,17 +3778,15 @@ spec:
                 type: string
               kustomizations:
                 additionalProperties:
-                  description: >-
+                  description: |-
                     Storage version of v1api20241101.KustomizationDefinition_STATUS
-
                     The Kustomization defining how to reconcile the artifact pulled by the source type on the cluster.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     dependsOn:
@@ -4157,17 +3800,15 @@ spec:
                     path:
                       type: string
                     postBuild:
-                      description: >-
+                      description: |-
                         Storage version of v1api20241101.PostBuildDefinition_STATUS
-
                         The postBuild definitions defining variable substitutions for this Kustomization after kustomize build.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         substitute:
@@ -4176,17 +3817,15 @@ spec:
                           type: object
                         substituteFrom:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20241101.SubstituteFromDefinition_STATUS
-
                               Array of ConfigMaps/Secrets from which the variables are substituted for this Kustomization.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               kind:
@@ -4215,33 +3854,29 @@ spec:
               namespace:
                 type: string
               ociRepository:
-                description: >-
+                description: |-
                   Storage version of v1api20241101.OCIRepositoryDefinition_STATUS
-
                   Parameters to reconcile to the OCIRepository source kind type.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   insecure:
                     type: boolean
                   layerSelector:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.LayerSelectorDefinition_STATUS
-
                       Parameters to specify which layer to pull from the OCI artifact. By default, the first layer in the artifact is pulled.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       mediaType:
@@ -4252,17 +3887,15 @@ spec:
                   localAuthRef:
                     type: string
                   repositoryRef:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.OCIRepositoryRefDefinition_STATUS
-
                       The source reference for the OCIRepository object.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       digest:
@@ -4279,17 +3912,15 @@ spec:
                   timeoutInSeconds:
                     type: integer
                   tlsConfig:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.TlsConfigDefinition_STATUS
-
                       Parameters to authenticate using TLS config for OCI repository.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                     type: object
@@ -4298,32 +3929,28 @@ spec:
                   useWorkloadIdentity:
                     type: boolean
                   verify:
-                    description: >-
+                    description: |-
                       Storage version of v1api20241101.VerifyDefinition_STATUS
-
                       Parameters to verify the authenticity of an OCI Artifact.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       matchOidcIdentity:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20241101.MatchOidcIdentityDefinition_STATUS
-
                             MatchOIDCIdentity defines the criteria for matching the identity while verifying an OCI artifact.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             issuer:
@@ -4356,31 +3983,27 @@ spec:
                 type: string
               statuses:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20241101.ObjectStatusDefinition_STATUS
-
                     Statuses of objects deployed by the user-specified kustomizations from the git repository.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     appliedBy:
-                      description: >-
+                      description: |-
                         Storage version of v1api20241101.ObjectReferenceDefinition_STATUS
-
                         Object reference to a Kubernetes object on a cluster
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
@@ -4391,33 +4014,29 @@ spec:
                     complianceState:
                       type: string
                     helmReleaseProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20241101.HelmReleasePropertiesDefinition_STATUS
-
                         Properties for HelmRelease objects
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         failureCount:
                           type: integer
                         helmChartRef:
-                          description: >-
+                          description: |-
                             Storage version of v1api20241101.ObjectReferenceDefinition_STATUS
-
                             Object reference to a Kubernetes object on a cluster
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             name:
@@ -4440,17 +4059,15 @@ spec:
                       type: string
                     statusConditions:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20241101.ObjectStatusConditionDefinition_STATUS
-
                           Status condition of Kubernetes object
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           lastTransitionTime:

@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: gkebackupbackups.gkebackup.cnrm.cloud.google.com
 spec:
   group: gkebackup.cnrm.cloud.google.com
@@ -82,7 +81,7 @@ spec:
                     type: string
                 type: object
               deleteLockDays:
-                description: >-
+                description: |-
                   Optional. Minimum age for this Backup (in days). If this field is set to a
                    non-zero value, the Backup will be "locked" against deletion (either manual
                    or automatic deletion) for the number of days provided (measured from the
@@ -107,7 +106,7 @@ spec:
                 description: The GKEBackupBackup name. If not given, the metadata.name will be used.
                 type: string
               retainDays:
-                description: >-
+                description: |-
                   Optional. The age (in days) after which this Backup will be automatically
                    deleted. Must be an integer value >= 0:
 
@@ -175,7 +174,7 @@ spec:
                         description: Output only. A list of the Backup for GKE CRD versions found in the cluster.
                         type: object
                       cluster:
-                        description: >-
+                        description: |-
                           Output only. The source cluster from which this Backup was created.
                            Valid formats:
 
@@ -225,7 +224,7 @@ spec:
                     description: Output only. This flag indicates whether this Backup resource was created manually by a user or via a schedule in the BackupPlan. A value of True means that the Backup was created manually.
                     type: boolean
                   permissiveMode:
-                    description: >-
+                    description: |-
                       Output only. If false, Backup will fail when Backup for GKE detects
                        Kubernetes configuration that is non-standard or
                        requires additional setup to restore.
@@ -301,7 +300,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

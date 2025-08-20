@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: containerclusters.container.cnrm.cloud.google.com
 spec:
   group: container.cnrm.cloud.google.com
@@ -188,9 +187,8 @@ spec:
                     description: Contains defaults for a node pool created by NAP.
                     properties:
                       bootDiskKMSKeyRef:
-                        description: >-
+                        description: |-
                           Immutable. The Customer Managed Encryption Key used to encrypt the
-
                           boot disk attached to each node in the node pool.
                         oneOf:
                         - not:
@@ -296,7 +294,7 @@ spec:
                             description: Settings for blue-green upgrade strategy.
                             properties:
                               nodePoolSoakDuration:
-                                description: >-
+                                description: |-
                                   Time needed after draining entire blue pool. After this period, blue pool will be cleaned up.
 
                                   																A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
@@ -311,7 +309,7 @@ spec:
                                     description: Percentage of the bool pool nodes to drain in a batch. The range of this field should be (0.0, 1.0].
                                     type: number
                                   batchSoakDuration:
-                                    description: >-
+                                    description: |-
                                       Soak time after each batch gets drained.
 
                                       																			A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
@@ -975,11 +973,9 @@ spec:
                     description: Immutable. Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or newer CPU platform.
                     type: string
                   nodeGroupRef:
-                    description: >-
+                    description: |-
                       Immutable. Setting this field will assign instances
-
                       of this pool to run on the specified node group. This is useful
-
                       for running workloads on sole tenant nodes.
                     oneOf:
                     - not:
@@ -1276,9 +1272,8 @@ spec:
                     description: The internal IP address of this cluster's master endpoint.
                     type: string
                   privateEndpointSubnetworkRef:
-                    description: >-
+                    description: |-
                       Immutable. Subnetwork in cluster's network where master's endpoint
-
                       will be provisioned.
                     oneOf:
                     - not:
@@ -1332,15 +1327,11 @@ spec:
                 description: Configuration options for the Release channel feature, which provide more control over automatic upgrades of your GKE clusters. Note that removing this field from your config will not unenroll it. Instead, use the "UNSPECIFIED" channel.
                 properties:
                   channel:
-                    description: >-
+                    description: |-
                       The selected release channel. Accepted values are:
-
                       * UNSPECIFIED: Not set.
-
                       * RAPID: Weekly upgrade cadence; Early testers and developers who requires new features.
-
                       * REGULAR: Multiple per month upgrade cadence; Production users who need features not yet offered in the Stable channel.
-
                       * STABLE: Every few months upgrade cadence; Production users who need stability above all else, and for whom frequent upgrades are too risky.
                     type: string
                 required:
@@ -1428,9 +1419,8 @@ spec:
                 description: Configuration for the use of Kubernetes Service Accounts in GCP IAM policies.
                 properties:
                   identityNamespace:
-                    description: >-
+                    description: |-
                       DEPRECATED. This field will be removed in a future major release as it has been deprecated in the API. Use `workloadPool` instead; `workloadPool` field will supersede this field.
-
                       Enables workload identity.
                     type: string
                   workloadPool:
@@ -1520,7 +1510,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

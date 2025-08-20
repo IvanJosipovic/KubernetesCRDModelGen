@@ -1,32 +1,47 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: parallels.flows.knative.dev
   labels:
-    knative.dev/crd-install: true
-    duck.knative.dev/addressable: true
+    knative.dev/crd-install: "true"
+    duck.knative.dev/addressable: "true"
     app.kubernetes.io/version: 1.19.1
     app.kubernetes.io/name: knative-eventing
+  name: parallels.flows.knative.dev
 spec:
   group: flows.knative.dev
+  names:
+    categories:
+    - all
+    - knative
+    - flows
+    kind: Parallel
+    plural: parallels
+    singular: parallel
+  scope: Namespaced
   versions:
-  - name: v1
-    served: true
-    storage: true
-    subresources:
-      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.address.url
+      name: URL
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=="Ready")].reason
+      name: Reason
+      type: string
+    name: v1
     schema:
       openAPIV3Schema:
         description: Parallel defines conditional branches that will be wired in series through Channels and Subscriptions.
-        type: object
         properties:
           spec:
             description: Spec defines the desired state of the Parallel.
-            type: object
             properties:
               branches:
                 description: Branches is the list of Filter/Subscribers pairs.
-                type: array
                 items:
                   type: object
                   x-kubernetes-preserve-unknown-fields: true
@@ -162,9 +177,9 @@ spec:
                         audience:
                           description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                           type: string
+                type: array
               channelTemplate:
                 description: ChannelTemplate specifies which Channel CRD to use. If left unspecified, it is set to the default Channel CRD for the namespace (or cluster, in case there are no defaults for the namespace).
-                type: object
                 properties:
                   apiVersion:
                     description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
@@ -176,13 +191,12 @@ spec:
                     description: Spec defines the Spec to use for each channel created. Passed in verbatim to the Channel CRD as Spec section.
                     type: object
                     x-kubernetes-preserve-unknown-fields: true
+                type: object
               reply:
                 description: Reply is a Reference to where the result of a case Subscriber gets sent to when the case does not have a Reply
-                type: object
                 properties:
                   ref:
                     description: Ref points to an Addressable.
-                    type: object
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -196,6 +210,7 @@ spec:
                       namespace:
                         description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is optional field, it gets defaulted to the object holding it if left out.'
                         type: string
+                    type: object
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                     type: string
@@ -205,13 +220,13 @@ spec:
                   audience:
                     description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
+                type: object
+            type: object
           status:
             description: Status represents the current state of the Parallel. This data may be out of date.
-            type: object
             properties:
               address:
                 description: Parallel is Addressable. It exposes the endpoint as an URI to get events delivered into the Parallel.
-                type: object
                 properties:
                   name:
                     type: string
@@ -221,9 +236,9 @@ spec:
                     type: string
                   audience:
                     type: string
+                type: object
               addresses:
                 description: Parallel is Addressable. It exposes the endpoints as URIs to get events delivered into the Parallel.
-                type: array
                 items:
                   type: object
                   properties:
@@ -235,25 +250,25 @@ spec:
                       type: string
                     audience:
                       type: string
+                type: array
               annotations:
                 description: Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.
                 type: object
                 x-kubernetes-preserve-unknown-fields: true
               auth:
                 description: Auth provides the relevant information for OIDC authentication.
-                type: object
                 properties:
                   serviceAccountName:
                     description: ServiceAccountName is the name of the generated service account used for this components OIDC authentication.
                     type: string
                   serviceAccountNames:
                     description: ServiceAccountNames is the list of names of the generated service accounts used for this components OIDC authentication.
-                    type: array
                     items:
                       type: string
+                    type: array
+                type: object
               branchStatuses:
                 description: BranchStatuses is an array of corresponding to branch statuses. Matches the Spec.Branches array in the order.
-                type: array
                 items:
                   type: object
                   properties:
@@ -402,9 +417,9 @@ spec:
                             uid:
                               description: 'UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids'
                               type: string
+                type: array
               policies:
                 description: List of applied EventPolicies
-                type: array
                 items:
                   type: object
                   properties:
@@ -414,9 +429,9 @@ spec:
                     name:
                       description: The name of the applied EventPolicy
                       type: string
+                type: array
               conditions:
                 description: Conditions the latest available observations of a resource's current state.
-                type: array
                 items:
                   type: object
                   properties:
@@ -435,13 +450,12 @@ spec:
                     type:
                       description: Type of condition.
                       type: string
+                type: array
               ingressChannelStatus:
                 description: IngressChannelStatus corresponds to the ingress channel status.
-                type: object
                 properties:
                   channel:
                     description: Channel is the reference to the underlying channel.
-                    type: object
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -464,10 +478,9 @@ spec:
                       uid:
                         description: 'UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids'
                         type: string
+                    type: object
                   ready:
                     description: ReadyCondition indicates whether the Channel is ready or not.
-                    type: object
-                    x-kubernetes-preserve-unknown-fields: true
                     properties:
                       message:
                         description: A human readable message indicating details about the transition.
@@ -484,29 +497,16 @@ spec:
                       type:
                         description: Type of condition.
                         type: string
+                    type: object
+                    x-kubernetes-preserve-unknown-fields: true
+                type: object
               observedGeneration:
                 description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
-                type: integer
                 format: int64
-    additionalPrinterColumns:
-    - name: URL
-      type: string
-      jsonPath: .status.address.url
-    - name: Age
-      type: date
-      jsonPath: .metadata.creationTimestamp
-    - name: Ready
-      type: string
-      jsonPath: .status.conditions[?(@.type=="Ready")].status
-    - name: Reason
-      type: string
-      jsonPath: .status.conditions[?(@.type=="Ready")].reason
-  names:
-    kind: Parallel
-    plural: parallels
-    singular: parallel
-    categories:
-    - all
-    - knative
-    - flows
-  scope: Namespaced
+                type: integer
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

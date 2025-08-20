@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: documentaiprocessorversions.documentai.cnrm.cloud.google.com
 spec:
   group: documentai.cnrm.cloud.google.com
@@ -212,7 +211,7 @@ spec:
                                   type: array
                               type: object
                             name:
-                              description: >-
+                              description: |-
                                 Name of the type. It must be unique within the schema file and
                                  cannot be a "Common Type".  The following naming conventions are used:
 
@@ -439,7 +438,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

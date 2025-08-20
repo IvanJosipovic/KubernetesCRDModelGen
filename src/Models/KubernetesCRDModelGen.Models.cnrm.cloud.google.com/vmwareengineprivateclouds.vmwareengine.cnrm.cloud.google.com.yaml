@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: vmwareengineprivateclouds.vmwareengine.cnrm.cloud.google.com
 spec:
   group: vmwareengine.cnrm.cloud.google.com
@@ -64,7 +63,7 @@ spec:
                 - message: Location field is immutable
                   rule: self == oldSelf
               managementCluster:
-                description: >-
+                description: |-
                   Required. Input only. The management cluster for this private cloud.
                    This field is required during creation of the private cloud to provide
                    details for the default cluster.
@@ -73,7 +72,7 @@ spec:
                    `ManagementCluster.clusterId`, `ManagementCluster.nodeTypeId`.
                 properties:
                   clusterID:
-                    description: >-
+                    description: |-
                       Required. The user-provided identifier of the new `Cluster`.
                        The identifier must meet the following requirements:
 
@@ -311,7 +310,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

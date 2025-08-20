@@ -36,25 +36,18 @@ spec:
         description: StandardAppVersion is the Schema for the StandardAppVersions API. Standard App Version resource to create a new version of standard GAE Application.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -68,45 +61,39 @@ spec:
                     description: Allows App Engine second generation runtimes to access the legacy bundled services.
                     type: boolean
                   automaticScaling:
-                    description: >-
+                    description: |-
                       Automatic scaling is based on request rate, response latencies, and other application metrics.
-
                       Structure is documented below.
                     properties:
                       maxConcurrentRequests:
-                        description: >-
+                        description: |-
                           Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-
                           Defaults to a runtime-specific value.
                         type: number
                       maxIdleInstances:
                         description: Maximum number of idle instances that should be maintained for this version.
                         type: number
                       maxPendingLatency:
-                        description: >-
+                        description: |-
                           Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       minIdleInstances:
                         description: Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
                         type: number
                       minPendingLatency:
-                        description: >-
+                        description: |-
                           Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       standardSchedulerSettings:
-                        description: >-
+                        description: |-
                           Scheduler settings for standard environment.
-
                           Structure is documented below.
                         properties:
                           maxInstances:
-                            description: >-
+                            description: |-
                               Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.
-
                               Note: Starting from March 2025, App Engine sets the maxInstances default for standard environment deployments to 20. This change doesn't impact existing apps. To override the default, specify a new value between 0 and 2147483647, and deploy a new version or redeploy over an existing version. To disable the maxInstances default configuration setting, specify the maximum permitted value 2147483647.
                             type: number
                           minInstances:
@@ -121,15 +108,13 @@ spec:
                         type: object
                     type: object
                   basicScaling:
-                    description: >-
+                    description: |-
                       Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
-
                       Structure is documented below.
                     properties:
                       idleTimeout:
-                        description: >-
+                        description: |-
                           Duration of time after the last request that an instance must wait before the instance is shut down.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
                         type: string
                       maxInstances:
@@ -140,17 +125,14 @@ spec:
                     description: If set to true, the service will be deleted if it is the last version.
                     type: boolean
                   deployment:
-                    description: >-
+                    description: |-
                       Code and application artifacts that make up this version.
-
                       Structure is documented below.
                     properties:
                       files:
-                        description: >-
+                        description: |-
                           Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-
                           All files must be readable using the credentials supplied with this call.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -166,9 +148,8 @@ spec:
                           type: object
                         type: array
                       zip:
-                        description: >-
+                        description: |-
                           Zip File
-
                           Structure is documented below.
                         properties:
                           filesCount:
@@ -180,9 +161,8 @@ spec:
                         type: object
                     type: object
                   entrypoint:
-                    description: >-
+                    description: |-
                       The entrypoint for the application.
-
                       Structure is documented below.
                     properties:
                       shell:
@@ -196,38 +176,31 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   handlers:
-                    description: >-
+                    description: |-
                       An ordered list of URL-matching patterns that should be applied to incoming requests.
-
                       The first matching URL handles the request and other request handlers are not attempted.
-
                       Structure is documented below.
                     items:
                       properties:
                         authFailAction:
-                          description: >-
+                          description: |-
                             Actions to take when the user is not logged in.
-
                             Possible values are: AUTH_FAIL_ACTION_REDIRECT, AUTH_FAIL_ACTION_UNAUTHORIZED.
                           type: string
                         login:
-                          description: >-
+                          description: |-
                             Methods to restrict access to a URL based on login status.
-
                             Possible values are: LOGIN_OPTIONAL, LOGIN_ADMIN, LOGIN_REQUIRED.
                           type: string
                         redirectHttpResponseCode:
-                          description: >-
+                          description: |-
                             30x code to use when performing redirects for the secure field.
-
                             Possible values are: REDIRECT_HTTP_RESPONSE_CODE_301, REDIRECT_HTTP_RESPONSE_CODE_302, REDIRECT_HTTP_RESPONSE_CODE_303, REDIRECT_HTTP_RESPONSE_CODE_307.
                           type: string
                         script:
-                          description: >-
+                          description: |-
                             Executes a script to handle the requests that match this URL pattern.
-
                             Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
-
                             Structure is documented below.
                           properties:
                             scriptPath:
@@ -235,44 +208,37 @@ spec:
                               type: string
                           type: object
                         securityLevel:
-                          description: >-
+                          description: |-
                             Security (HTTPS) enforcement for this URL.
-
                             Possible values are: SECURE_DEFAULT, SECURE_NEVER, SECURE_OPTIONAL, SECURE_ALWAYS.
                           type: string
                         staticFiles:
-                          description: >-
+                          description: |-
                             Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
-
                             Structure is documented below.
                           properties:
                             applicationReadable:
-                              description: >-
+                              description: |-
                                 Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
-
                                 static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
-
                                 against both your code and static data storage resource quotas.
                               type: boolean
                             expiration:
-                              description: >-
+                              description: |-
                                 Time a static file served by this handler should be cached by web proxies and browsers.
-
                                 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
                               type: string
                             httpHeaders:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 HTTP headers to use for all responses from these URLs.
-
                                 An object containing a list of "key:value" value pairs.".
                               type: object
                               x-kubernetes-map-type: granular
                             mimeType:
-                              description: >-
+                              description: |-
                                 MIME type used to serve all files served by this handler.
-
                                 Defaults to file-specific MIME types, which are derived from each file's filename extension.
                               type: string
                             path:
@@ -286,36 +252,30 @@ spec:
                               type: string
                           type: object
                         urlRegex:
-                          description: >-
+                          description: |-
                             URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
-
                             All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
                           type: string
                       type: object
                     type: array
                   inboundServices:
-                    description: >-
+                    description: |-
                       A list of the types of messages that this application is able to receive.
-
                       Each value may be one of: INBOUND_SERVICE_MAIL, INBOUND_SERVICE_MAIL_BOUNCE, INBOUND_SERVICE_XMPP_ERROR, INBOUND_SERVICE_XMPP_MESSAGE, INBOUND_SERVICE_XMPP_SUBSCRIBE, INBOUND_SERVICE_XMPP_PRESENCE, INBOUND_SERVICE_CHANNEL_PRESENCE, INBOUND_SERVICE_WARMUP.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   instanceClass:
-                    description: >-
+                    description: |-
                       Instance class that is used to run this version. Valid values are
-
                       AutomaticScaling: F1, F2, F4, F4_1G
-
                       BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
-
                       Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
                     type: string
                   libraries:
-                    description: >-
+                    description: |-
                       Configuration for third-party Python runtime libraries that are required by the application.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -328,17 +288,14 @@ spec:
                       type: object
                     type: array
                   manualScaling:
-                    description: >-
+                    description: |-
                       A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
-
                       Structure is documented below.
                     properties:
                       instances:
-                        description: >-
+                        description: |-
                           Number of instances to assign to the service at the start.
-
                           Note: When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
-
                           Modules API set_num_instances() you must use lifecycle.ignore_changes = ["manual_scaling"[0].instances] to prevent drift detection.
                         type: number
                     type: object
@@ -346,20 +303,17 @@ spec:
                     description: If set to true, the application version will not be deleted.
                     type: boolean
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   runtime:
                     description: Desired runtime. Example python27.
                     type: string
                   runtimeApiVersion:
-                    description: >-
+                    description: |-
                       The version of the API in the given runtime environment.
-
                       Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/<language>/config/appref
-
                       Substitute <language> with python, java, php, ruby, go or nodejs.
                     type: string
                   service:
@@ -382,26 +336,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -415,9 +363,8 @@ spec:
                     description: Selector for a ServiceAccount in cloudplatform to populate serviceAccount.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -433,26 +380,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -464,9 +405,8 @@ spec:
                     description: Whether multiple requests can be dispatched to this version at once.
                     type: boolean
                   vpcAccessConnector:
-                    description: >-
+                    description: |-
                       Enables VPC connectivity for standard apps.
-
                       Structure is documented below.
                     properties:
                       egressSetting:
@@ -480,70 +420,55 @@ spec:
                 - service
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   appEngineApis:
                     description: Allows App Engine second generation runtimes to access the legacy bundled services.
                     type: boolean
                   automaticScaling:
-                    description: >-
+                    description: |-
                       Automatic scaling is based on request rate, response latencies, and other application metrics.
-
                       Structure is documented below.
                     properties:
                       maxConcurrentRequests:
-                        description: >-
+                        description: |-
                           Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-
                           Defaults to a runtime-specific value.
                         type: number
                       maxIdleInstances:
                         description: Maximum number of idle instances that should be maintained for this version.
                         type: number
                       maxPendingLatency:
-                        description: >-
+                        description: |-
                           Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       minIdleInstances:
                         description: Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
                         type: number
                       minPendingLatency:
-                        description: >-
+                        description: |-
                           Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       standardSchedulerSettings:
-                        description: >-
+                        description: |-
                           Scheduler settings for standard environment.
-
                           Structure is documented below.
                         properties:
                           maxInstances:
-                            description: >-
+                            description: |-
                               Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.
-
                               Note: Starting from March 2025, App Engine sets the maxInstances default for standard environment deployments to 20. This change doesn't impact existing apps. To override the default, specify a new value between 0 and 2147483647, and deploy a new version or redeploy over an existing version. To disable the maxInstances default configuration setting, specify the maximum permitted value 2147483647.
                             type: number
                           minInstances:
@@ -558,15 +483,13 @@ spec:
                         type: object
                     type: object
                   basicScaling:
-                    description: >-
+                    description: |-
                       Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
-
                       Structure is documented below.
                     properties:
                       idleTimeout:
-                        description: >-
+                        description: |-
                           Duration of time after the last request that an instance must wait before the instance is shut down.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
                         type: string
                       maxInstances:
@@ -577,17 +500,14 @@ spec:
                     description: If set to true, the service will be deleted if it is the last version.
                     type: boolean
                   deployment:
-                    description: >-
+                    description: |-
                       Code and application artifacts that make up this version.
-
                       Structure is documented below.
                     properties:
                       files:
-                        description: >-
+                        description: |-
                           Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-
                           All files must be readable using the credentials supplied with this call.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -603,9 +523,8 @@ spec:
                           type: object
                         type: array
                       zip:
-                        description: >-
+                        description: |-
                           Zip File
-
                           Structure is documented below.
                         properties:
                           filesCount:
@@ -617,9 +536,8 @@ spec:
                         type: object
                     type: object
                   entrypoint:
-                    description: >-
+                    description: |-
                       The entrypoint for the application.
-
                       Structure is documented below.
                     properties:
                       shell:
@@ -633,38 +551,31 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   handlers:
-                    description: >-
+                    description: |-
                       An ordered list of URL-matching patterns that should be applied to incoming requests.
-
                       The first matching URL handles the request and other request handlers are not attempted.
-
                       Structure is documented below.
                     items:
                       properties:
                         authFailAction:
-                          description: >-
+                          description: |-
                             Actions to take when the user is not logged in.
-
                             Possible values are: AUTH_FAIL_ACTION_REDIRECT, AUTH_FAIL_ACTION_UNAUTHORIZED.
                           type: string
                         login:
-                          description: >-
+                          description: |-
                             Methods to restrict access to a URL based on login status.
-
                             Possible values are: LOGIN_OPTIONAL, LOGIN_ADMIN, LOGIN_REQUIRED.
                           type: string
                         redirectHttpResponseCode:
-                          description: >-
+                          description: |-
                             30x code to use when performing redirects for the secure field.
-
                             Possible values are: REDIRECT_HTTP_RESPONSE_CODE_301, REDIRECT_HTTP_RESPONSE_CODE_302, REDIRECT_HTTP_RESPONSE_CODE_303, REDIRECT_HTTP_RESPONSE_CODE_307.
                           type: string
                         script:
-                          description: >-
+                          description: |-
                             Executes a script to handle the requests that match this URL pattern.
-
                             Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
-
                             Structure is documented below.
                           properties:
                             scriptPath:
@@ -672,44 +583,37 @@ spec:
                               type: string
                           type: object
                         securityLevel:
-                          description: >-
+                          description: |-
                             Security (HTTPS) enforcement for this URL.
-
                             Possible values are: SECURE_DEFAULT, SECURE_NEVER, SECURE_OPTIONAL, SECURE_ALWAYS.
                           type: string
                         staticFiles:
-                          description: >-
+                          description: |-
                             Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
-
                             Structure is documented below.
                           properties:
                             applicationReadable:
-                              description: >-
+                              description: |-
                                 Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
-
                                 static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
-
                                 against both your code and static data storage resource quotas.
                               type: boolean
                             expiration:
-                              description: >-
+                              description: |-
                                 Time a static file served by this handler should be cached by web proxies and browsers.
-
                                 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
                               type: string
                             httpHeaders:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 HTTP headers to use for all responses from these URLs.
-
                                 An object containing a list of "key:value" value pairs.".
                               type: object
                               x-kubernetes-map-type: granular
                             mimeType:
-                              description: >-
+                              description: |-
                                 MIME type used to serve all files served by this handler.
-
                                 Defaults to file-specific MIME types, which are derived from each file's filename extension.
                               type: string
                             path:
@@ -723,36 +627,30 @@ spec:
                               type: string
                           type: object
                         urlRegex:
-                          description: >-
+                          description: |-
                             URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
-
                             All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
                           type: string
                       type: object
                     type: array
                   inboundServices:
-                    description: >-
+                    description: |-
                       A list of the types of messages that this application is able to receive.
-
                       Each value may be one of: INBOUND_SERVICE_MAIL, INBOUND_SERVICE_MAIL_BOUNCE, INBOUND_SERVICE_XMPP_ERROR, INBOUND_SERVICE_XMPP_MESSAGE, INBOUND_SERVICE_XMPP_SUBSCRIBE, INBOUND_SERVICE_XMPP_PRESENCE, INBOUND_SERVICE_CHANNEL_PRESENCE, INBOUND_SERVICE_WARMUP.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   instanceClass:
-                    description: >-
+                    description: |-
                       Instance class that is used to run this version. Valid values are
-
                       AutomaticScaling: F1, F2, F4, F4_1G
-
                       BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
-
                       Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
                     type: string
                   libraries:
-                    description: >-
+                    description: |-
                       Configuration for third-party Python runtime libraries that are required by the application.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -765,17 +663,14 @@ spec:
                       type: object
                     type: array
                   manualScaling:
-                    description: >-
+                    description: |-
                       A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
-
                       Structure is documented below.
                     properties:
                       instances:
-                        description: >-
+                        description: |-
                           Number of instances to assign to the service at the start.
-
                           Note: When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
-
                           Modules API set_num_instances() you must use lifecycle.ignore_changes = ["manual_scaling"[0].instances] to prevent drift detection.
                         type: number
                     type: object
@@ -783,20 +678,17 @@ spec:
                     description: If set to true, the application version will not be deleted.
                     type: boolean
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   runtime:
                     description: Desired runtime. Example python27.
                     type: string
                   runtimeApiVersion:
-                    description: >-
+                    description: |-
                       The version of the API in the given runtime environment.
-
                       Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/<language>/config/appref
-
                       Substitute <language> with python, java, php, ruby, go or nodejs.
                     type: string
                   serviceAccount:
@@ -816,26 +708,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -849,9 +735,8 @@ spec:
                     description: Selector for a ServiceAccount in cloudplatform to populate serviceAccount.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -867,26 +752,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -898,9 +777,8 @@ spec:
                     description: Whether multiple requests can be dispatched to this version at once.
                     type: boolean
                   vpcAccessConnector:
-                    description: >-
+                    description: |-
                       Enables VPC connectivity for standard apps.
-
                       Structure is documented below.
                     properties:
                       egressSetting:
@@ -914,22 +792,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -944,11 +816,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -962,13 +832,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -996,45 +863,39 @@ spec:
                     description: Allows App Engine second generation runtimes to access the legacy bundled services.
                     type: boolean
                   automaticScaling:
-                    description: >-
+                    description: |-
                       Automatic scaling is based on request rate, response latencies, and other application metrics.
-
                       Structure is documented below.
                     properties:
                       maxConcurrentRequests:
-                        description: >-
+                        description: |-
                           Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-
                           Defaults to a runtime-specific value.
                         type: number
                       maxIdleInstances:
                         description: Maximum number of idle instances that should be maintained for this version.
                         type: number
                       maxPendingLatency:
-                        description: >-
+                        description: |-
                           Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       minIdleInstances:
                         description: Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
                         type: number
                       minPendingLatency:
-                        description: >-
+                        description: |-
                           Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       standardSchedulerSettings:
-                        description: >-
+                        description: |-
                           Scheduler settings for standard environment.
-
                           Structure is documented below.
                         properties:
                           maxInstances:
-                            description: >-
+                            description: |-
                               Maximum number of instances to run for this version. Set to zero to disable maxInstances configuration.
-
                               Note: Starting from March 2025, App Engine sets the maxInstances default for standard environment deployments to 20. This change doesn't impact existing apps. To override the default, specify a new value between 0 and 2147483647, and deploy a new version or redeploy over an existing version. To disable the maxInstances default configuration setting, specify the maximum permitted value 2147483647.
                             type: number
                           minInstances:
@@ -1049,15 +910,13 @@ spec:
                         type: object
                     type: object
                   basicScaling:
-                    description: >-
+                    description: |-
                       Basic scaling creates instances when your application receives requests. Each instance will be shut down when the application becomes idle. Basic scaling is ideal for work that is intermittent or driven by user activity.
-
                       Structure is documented below.
                     properties:
                       idleTimeout:
-                        description: >-
+                        description: |-
                           Duration of time after the last request that an instance must wait before the instance is shut down.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
                         type: string
                       maxInstances:
@@ -1068,17 +927,14 @@ spec:
                     description: If set to true, the service will be deleted if it is the last version.
                     type: boolean
                   deployment:
-                    description: >-
+                    description: |-
                       Code and application artifacts that make up this version.
-
                       Structure is documented below.
                     properties:
                       files:
-                        description: >-
+                        description: |-
                           Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-
                           All files must be readable using the credentials supplied with this call.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1094,9 +950,8 @@ spec:
                           type: object
                         type: array
                       zip:
-                        description: >-
+                        description: |-
                           Zip File
-
                           Structure is documented below.
                         properties:
                           filesCount:
@@ -1108,9 +963,8 @@ spec:
                         type: object
                     type: object
                   entrypoint:
-                    description: >-
+                    description: |-
                       The entrypoint for the application.
-
                       Structure is documented below.
                     properties:
                       shell:
@@ -1124,38 +978,31 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   handlers:
-                    description: >-
+                    description: |-
                       An ordered list of URL-matching patterns that should be applied to incoming requests.
-
                       The first matching URL handles the request and other request handlers are not attempted.
-
                       Structure is documented below.
                     items:
                       properties:
                         authFailAction:
-                          description: >-
+                          description: |-
                             Actions to take when the user is not logged in.
-
                             Possible values are: AUTH_FAIL_ACTION_REDIRECT, AUTH_FAIL_ACTION_UNAUTHORIZED.
                           type: string
                         login:
-                          description: >-
+                          description: |-
                             Methods to restrict access to a URL based on login status.
-
                             Possible values are: LOGIN_OPTIONAL, LOGIN_ADMIN, LOGIN_REQUIRED.
                           type: string
                         redirectHttpResponseCode:
-                          description: >-
+                          description: |-
                             30x code to use when performing redirects for the secure field.
-
                             Possible values are: REDIRECT_HTTP_RESPONSE_CODE_301, REDIRECT_HTTP_RESPONSE_CODE_302, REDIRECT_HTTP_RESPONSE_CODE_303, REDIRECT_HTTP_RESPONSE_CODE_307.
                           type: string
                         script:
-                          description: >-
+                          description: |-
                             Executes a script to handle the requests that match this URL pattern.
-
                             Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
-
                             Structure is documented below.
                           properties:
                             scriptPath:
@@ -1163,44 +1010,37 @@ spec:
                               type: string
                           type: object
                         securityLevel:
-                          description: >-
+                          description: |-
                             Security (HTTPS) enforcement for this URL.
-
                             Possible values are: SECURE_DEFAULT, SECURE_NEVER, SECURE_OPTIONAL, SECURE_ALWAYS.
                           type: string
                         staticFiles:
-                          description: >-
+                          description: |-
                             Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files. Static file handlers describe which files in the application directory are static files, and which URLs serve them.
-
                             Structure is documented below.
                           properties:
                             applicationReadable:
-                              description: >-
+                              description: |-
                                 Whether files should also be uploaded as code data. By default, files declared in static file handlers are uploaded as
-
                                 static data and are only served to end users; they cannot be read by the application. If enabled, uploads are charged
-
                                 against both your code and static data storage resource quotas.
                               type: boolean
                             expiration:
-                              description: >-
+                              description: |-
                                 Time a static file served by this handler should be cached by web proxies and browsers.
-
                                 A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
                               type: string
                             httpHeaders:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 HTTP headers to use for all responses from these URLs.
-
                                 An object containing a list of "key:value" value pairs.".
                               type: object
                               x-kubernetes-map-type: granular
                             mimeType:
-                              description: >-
+                              description: |-
                                 MIME type used to serve all files served by this handler.
-
                                 Defaults to file-specific MIME types, which are derived from each file's filename extension.
                               type: string
                             path:
@@ -1214,9 +1054,8 @@ spec:
                               type: string
                           type: object
                         urlRegex:
-                          description: >-
+                          description: |-
                             URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
-
                             All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
                           type: string
                       type: object
@@ -1225,28 +1064,23 @@ spec:
                     description: an identifier for the resource with format apps/{{project}}/services/{{service}}/versions/{{version_id}}
                     type: string
                   inboundServices:
-                    description: >-
+                    description: |-
                       A list of the types of messages that this application is able to receive.
-
                       Each value may be one of: INBOUND_SERVICE_MAIL, INBOUND_SERVICE_MAIL_BOUNCE, INBOUND_SERVICE_XMPP_ERROR, INBOUND_SERVICE_XMPP_MESSAGE, INBOUND_SERVICE_XMPP_SUBSCRIBE, INBOUND_SERVICE_XMPP_PRESENCE, INBOUND_SERVICE_CHANNEL_PRESENCE, INBOUND_SERVICE_WARMUP.
                     items:
                       type: string
                     type: array
                     x-kubernetes-list-type: set
                   instanceClass:
-                    description: >-
+                    description: |-
                       Instance class that is used to run this version. Valid values are
-
                       AutomaticScaling: F1, F2, F4, F4_1G
-
                       BasicScaling or ManualScaling: B1, B2, B4, B4_1G, B8
-
                       Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
                     type: string
                   libraries:
-                    description: >-
+                    description: |-
                       Configuration for third-party Python runtime libraries that are required by the application.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1259,17 +1093,14 @@ spec:
                       type: object
                     type: array
                   manualScaling:
-                    description: >-
+                    description: |-
                       A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
-
                       Structure is documented below.
                     properties:
                       instances:
-                        description: >-
+                        description: |-
                           Number of instances to assign to the service at the start.
-
                           Note: When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
-
                           Modules API set_num_instances() you must use lifecycle.ignore_changes = ["manual_scaling"[0].instances] to prevent drift detection.
                         type: number
                     type: object
@@ -1280,20 +1111,17 @@ spec:
                     description: If set to true, the application version will not be deleted.
                     type: boolean
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   runtime:
                     description: Desired runtime. Example python27.
                     type: string
                   runtimeApiVersion:
-                    description: >-
+                    description: |-
                       The version of the API in the given runtime environment.
-
                       Please see the app.yaml reference for valid values at https://cloud.google.com/appengine/docs/standard/<language>/config/appref
-
                       Substitute <language> with python, java, php, ruby, go or nodejs.
                     type: string
                   service:
@@ -1306,9 +1134,8 @@ spec:
                     description: Whether multiple requests can be dispatched to this version at once.
                     type: boolean
                   vpcAccessConnector:
-                    description: >-
+                    description: |-
                       Enables VPC connectivity for standard apps.
-
                       Structure is documented below.
                     properties:
                       egressSetting:
@@ -1325,24 +1152,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1353,9 +1176,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1369,11 +1191,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

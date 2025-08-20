@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: pubsubschemas.pubsub.cnrm.cloud.google.com
 spec:
   group: pubsub.cnrm.cloud.google.com
@@ -54,11 +53,9 @@ spec:
           spec:
             properties:
               definition:
-                description: >-
+                description: |-
                   The definition of the schema.
-
                   This should contain a string representing the full definition of the schema
-
                   that is a valid schema definition of the type specified in type.
                 type: string
               projectRef:
@@ -133,7 +130,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

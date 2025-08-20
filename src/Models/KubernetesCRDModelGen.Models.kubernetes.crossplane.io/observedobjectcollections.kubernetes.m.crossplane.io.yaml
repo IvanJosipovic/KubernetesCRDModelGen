@@ -43,25 +43,18 @@ spec:
         description: A ObservedObjectCollection is a provider Kubernetes API type
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -88,9 +81,8 @@ spec:
                     type: object
                 type: object
               observeObjects:
-                description: >-
+                description: |-
                   ObserveObjects declares what criteria object need to fulfil
-
                   to become a member of this collection
                 properties:
                   apiVersion:
@@ -102,11 +94,9 @@ spec:
                     minLength: 1
                     type: string
                   namespace:
-                    description: >-
+                    description: |-
                       Namespace where to look for objects.
-
                       If omitted, search is performed across all namespaces.
-
                       For cluster-scoped objects, omit it.
                     type: string
                   selector:
@@ -115,28 +105,23 @@ spec:
                       matchExpressions:
                         description: matchExpressions is a list of label selector requirements. The requirements are ANDed.
                         items:
-                          description: >-
+                          description: |-
                             A label selector requirement is a selector that contains values, a key, and an operator that
-
                             relates the key and values.
                           properties:
                             key:
                               description: key is the label key that the selector applies to.
                               type: string
                             operator:
-                              description: >-
+                              description: |-
                                 operator represents a key's relationship to a set of values.
-
                                 Valid operators are In, NotIn, Exists and DoesNotExist.
                               type: string
                             values:
-                              description: >-
+                              description: |-
                                 values is an array of string values. If the operator is In or NotIn,
-
                                 the values array must be non-empty. If the operator is Exists or DoesNotExist,
-
                                 the values array must be empty. This array is replaced during a strategic
-
                                 merge patch.
                               items:
                                 type: string
@@ -151,11 +136,9 @@ spec:
                       matchLabels:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                           map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                           operator is "In", and the values array contains only "value". The requirements are ANDed.
                         type: object
                     type: object
@@ -169,11 +152,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -198,24 +179,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -226,9 +203,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -244,17 +220,14 @@ spec:
               membershipLabel:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   MembershipLabel is the label set on each member of this collection
-
                   and can be used for fetching them.
                 type: object
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

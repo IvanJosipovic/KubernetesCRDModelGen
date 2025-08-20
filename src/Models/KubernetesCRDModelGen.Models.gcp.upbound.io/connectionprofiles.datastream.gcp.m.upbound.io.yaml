@@ -36,25 +36,18 @@ spec:
         description: ConnectionProfile is the Schema for the ConnectionProfiles API. A set of reusable connection configurations to be used as a source or destination for a stream.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -74,18 +67,16 @@ spec:
                     description: Display name.
                     type: string
                   forwardSshConnectivity:
-                    description: >-
+                    description: |-
                       Forward SSH tunnel connectivity.
-
                       Structure is documented below.
                     properties:
                       hostname:
                         description: Hostname for the SSH tunnel.
                         type: string
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           SSH password.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -101,9 +92,8 @@ spec:
                         description: Port for the SSH tunnel.
                         type: number
                       privateKeySecretRef:
-                        description: >-
+                        description: |-
                           SSH private key.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -120,9 +110,8 @@ spec:
                         type: string
                     type: object
                   gcsProfile:
-                    description: >-
+                    description: |-
                       Cloud Storage bucket profile.
-
                       Structure is documented below.
                     properties:
                       bucket:
@@ -135,11 +124,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Labels.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -147,18 +134,16 @@ spec:
                     description: The name of the location this connection profile is located in.
                     type: string
                   mysqlProfile:
-                    description: >-
+                    description: |-
                       MySQL database profile.
-
                       Structure is documented below.
                     properties:
                       hostname:
                         description: Hostname for the MySQL connection.
                         type: string
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the MySQL connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -177,17 +162,14 @@ spec:
                         description: A reference to a Secret Manager resource name storing the user's password.
                         type: string
                       sslConfig:
-                        description: >-
+                        description: |-
                           SSL configuration for the MySQL connection.
-
                           Structure is documented below.
                         properties:
                           caCertificateSecretRef:
-                            description: >-
+                            description: |-
                               PEM-encoded certificate of the CA that signed the source database
-
                               server's certificate.
-
                               Note: This property is sensitive and will not be displayed in the plan.
                             properties:
                               key:
@@ -200,15 +182,11 @@ spec:
                             - name
                             type: object
                           clientCertificateSecretRef:
-                            description: >-
+                            description: |-
                               PEM-encoded certificate that will be used by the replica to
-
                               authenticate against the source database server. If this field
-
                               is used then the 'clientKey' and the 'caCertificate' fields are
-
                               mandatory.
-
                               Note: This property is sensitive and will not be displayed in the plan.
                             properties:
                               key:
@@ -221,13 +199,10 @@ spec:
                             - name
                             type: object
                           clientKeySecretRef:
-                            description: >-
+                            description: |-
                               PEM-encoded private key associated with the Client Certificate.
-
                               If this field is used then the 'client_certificate' and the
-
                               'ca_certificate' fields are mandatory.
-
                               Note: This property is sensitive and will not be displayed in the plan.
                             properties:
                               key:
@@ -245,9 +220,8 @@ spec:
                         type: string
                     type: object
                   oracleProfile:
-                    description: >-
+                    description: |-
                       Oracle database profile.
-
                       Structure is documented below.
                     properties:
                       connectionAttributes:
@@ -263,9 +237,8 @@ spec:
                         description: Hostname for the Oracle connection.
                         type: string
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the Oracle connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -288,9 +261,8 @@ spec:
                         type: string
                     type: object
                   postgresqlProfile:
-                    description: >-
+                    description: |-
                       PostgreSQL database profile.
-
                       Structure is documented below.
                     properties:
                       database:
@@ -310,26 +282,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -343,9 +309,8 @@ spec:
                         description: Selector for a Database in sql to populate database.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -361,26 +326,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -405,26 +364,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -438,9 +391,8 @@ spec:
                         description: Selector for a DatabaseInstance in sql to populate hostname.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -456,26 +408,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -484,9 +430,8 @@ spec:
                             type: object
                         type: object
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the PostgreSQL connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -521,26 +466,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -554,9 +493,8 @@ spec:
                         description: Selector for a User in sql to populate username.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -572,26 +510,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -601,9 +533,8 @@ spec:
                         type: object
                     type: object
                   privateConnectivity:
-                    description: >-
+                    description: |-
                       Private connectivity.
-
                       Structure is documented below.
                     properties:
                       privateConnection:
@@ -623,26 +554,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -656,9 +581,8 @@ spec:
                         description: Selector for a PrivateConnection in datastream to populate privateConnection.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -674,26 +598,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -703,15 +621,13 @@ spec:
                         type: object
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   sqlServerProfile:
-                    description: >-
+                    description: |-
                       SQL Server database profile.
-
                       Structure is documented below.
                     properties:
                       database:
@@ -731,26 +647,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -764,9 +674,8 @@ spec:
                         description: Selector for a Database in sql to populate database.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -782,26 +691,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -826,26 +729,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -859,9 +756,8 @@ spec:
                         description: Selector for a DatabaseInstance in sql to populate hostname.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -877,26 +773,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -905,9 +795,8 @@ spec:
                             type: object
                         type: object
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the SQL Server connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -942,26 +831,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -975,9 +858,8 @@ spec:
                         description: Selector for a User in sql to populate username.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -993,26 +875,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1025,25 +901,16 @@ spec:
                 - location
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   bigqueryProfile:
@@ -1056,18 +923,16 @@ spec:
                     description: Display name.
                     type: string
                   forwardSshConnectivity:
-                    description: >-
+                    description: |-
                       Forward SSH tunnel connectivity.
-
                       Structure is documented below.
                     properties:
                       hostname:
                         description: Hostname for the SSH tunnel.
                         type: string
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           SSH password.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -1083,9 +948,8 @@ spec:
                         description: Port for the SSH tunnel.
                         type: number
                       privateKeySecretRef:
-                        description: >-
+                        description: |-
                           SSH private key.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -1102,9 +966,8 @@ spec:
                         type: string
                     type: object
                   gcsProfile:
-                    description: >-
+                    description: |-
                       Cloud Storage bucket profile.
-
                       Structure is documented below.
                     properties:
                       bucket:
@@ -1117,27 +980,23 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Labels.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   mysqlProfile:
-                    description: >-
+                    description: |-
                       MySQL database profile.
-
                       Structure is documented below.
                     properties:
                       hostname:
                         description: Hostname for the MySQL connection.
                         type: string
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the MySQL connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -1156,17 +1015,14 @@ spec:
                         description: A reference to a Secret Manager resource name storing the user's password.
                         type: string
                       sslConfig:
-                        description: >-
+                        description: |-
                           SSL configuration for the MySQL connection.
-
                           Structure is documented below.
                         properties:
                           caCertificateSecretRef:
-                            description: >-
+                            description: |-
                               PEM-encoded certificate of the CA that signed the source database
-
                               server's certificate.
-
                               Note: This property is sensitive and will not be displayed in the plan.
                             properties:
                               key:
@@ -1179,15 +1035,11 @@ spec:
                             - name
                             type: object
                           clientCertificateSecretRef:
-                            description: >-
+                            description: |-
                               PEM-encoded certificate that will be used by the replica to
-
                               authenticate against the source database server. If this field
-
                               is used then the 'clientKey' and the 'caCertificate' fields are
-
                               mandatory.
-
                               Note: This property is sensitive and will not be displayed in the plan.
                             properties:
                               key:
@@ -1200,13 +1052,10 @@ spec:
                             - name
                             type: object
                           clientKeySecretRef:
-                            description: >-
+                            description: |-
                               PEM-encoded private key associated with the Client Certificate.
-
                               If this field is used then the 'client_certificate' and the
-
                               'ca_certificate' fields are mandatory.
-
                               Note: This property is sensitive and will not be displayed in the plan.
                             properties:
                               key:
@@ -1224,9 +1073,8 @@ spec:
                         type: string
                     type: object
                   oracleProfile:
-                    description: >-
+                    description: |-
                       Oracle database profile.
-
                       Structure is documented below.
                     properties:
                       connectionAttributes:
@@ -1242,9 +1090,8 @@ spec:
                         description: Hostname for the Oracle connection.
                         type: string
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the Oracle connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -1267,9 +1114,8 @@ spec:
                         type: string
                     type: object
                   postgresqlProfile:
-                    description: >-
+                    description: |-
                       PostgreSQL database profile.
-
                       Structure is documented below.
                     properties:
                       database:
@@ -1289,26 +1135,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1322,9 +1162,8 @@ spec:
                         description: Selector for a Database in sql to populate database.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1340,26 +1179,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1384,26 +1217,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1417,9 +1244,8 @@ spec:
                         description: Selector for a DatabaseInstance in sql to populate hostname.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1435,26 +1261,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1463,9 +1283,8 @@ spec:
                             type: object
                         type: object
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the PostgreSQL connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -1500,26 +1319,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1533,9 +1346,8 @@ spec:
                         description: Selector for a User in sql to populate username.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1551,26 +1363,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1580,9 +1386,8 @@ spec:
                         type: object
                     type: object
                   privateConnectivity:
-                    description: >-
+                    description: |-
                       Private connectivity.
-
                       Structure is documented below.
                     properties:
                       privateConnection:
@@ -1602,26 +1407,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1635,9 +1434,8 @@ spec:
                         description: Selector for a PrivateConnection in datastream to populate privateConnection.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1653,26 +1451,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1682,15 +1474,13 @@ spec:
                         type: object
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   sqlServerProfile:
-                    description: >-
+                    description: |-
                       SQL Server database profile.
-
                       Structure is documented below.
                     properties:
                       database:
@@ -1710,26 +1500,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1743,9 +1527,8 @@ spec:
                         description: Selector for a Database in sql to populate database.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1761,26 +1544,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1805,26 +1582,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1838,9 +1609,8 @@ spec:
                         description: Selector for a DatabaseInstance in sql to populate hostname.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1856,26 +1626,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1884,9 +1648,8 @@ spec:
                             type: object
                         type: object
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           Password for the SQL Server connection.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -1921,26 +1684,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1954,9 +1711,8 @@ spec:
                         description: Selector for a User in sql to populate username.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1972,26 +1728,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2004,22 +1754,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -2034,11 +1778,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -2052,13 +1794,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -2093,9 +1832,8 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   forwardSshConnectivity:
-                    description: >-
+                    description: |-
                       Forward SSH tunnel connectivity.
-
                       Structure is documented below.
                     properties:
                       hostname:
@@ -2109,9 +1847,8 @@ spec:
                         type: string
                     type: object
                   gcsProfile:
-                    description: >-
+                    description: |-
                       Cloud Storage bucket profile.
-
                       Structure is documented below.
                     properties:
                       bucket:
@@ -2127,11 +1864,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Labels.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -2139,9 +1874,8 @@ spec:
                     description: The name of the location this connection profile is located in.
                     type: string
                   mysqlProfile:
-                    description: >-
+                    description: |-
                       MySQL database profile.
-
                       Structure is documented below.
                     properties:
                       hostname:
@@ -2154,27 +1888,23 @@ spec:
                         description: A reference to a Secret Manager resource name storing the user's password.
                         type: string
                       sslConfig:
-                        description: >-
+                        description: |-
                           SSL configuration for the MySQL connection.
-
                           Structure is documented below.
                         properties:
                           caCertificateSet:
-                            description: >-
+                            description: |-
                               (Output)
-
                               Indicates whether the clientKey field is set.
                             type: boolean
                           clientCertificateSet:
-                            description: >-
+                            description: |-
                               (Output)
-
                               Indicates whether the clientCertificate field is set.
                             type: boolean
                           clientKeySet:
-                            description: >-
+                            description: |-
                               (Output)
-
                               Indicates whether the clientKey field is set.
                             type: boolean
                         type: object
@@ -2186,9 +1916,8 @@ spec:
                     description: The resource's name.
                     type: string
                   oracleProfile:
-                    description: >-
+                    description: |-
                       Oracle database profile.
-
                       Structure is documented below.
                     properties:
                       connectionAttributes:
@@ -2214,9 +1943,8 @@ spec:
                         type: string
                     type: object
                   postgresqlProfile:
-                    description: >-
+                    description: |-
                       PostgreSQL database profile.
-
                       Structure is documented below.
                     properties:
                       database:
@@ -2236,9 +1964,8 @@ spec:
                         type: string
                     type: object
                   privateConnectivity:
-                    description: >-
+                    description: |-
                       Private connectivity.
-
                       Structure is documented below.
                     properties:
                       privateConnection:
@@ -2246,15 +1973,13 @@ spec:
                         type: string
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   sqlServerProfile:
-                    description: >-
+                    description: |-
                       SQL Server database profile.
-
                       Structure is documented below.
                     properties:
                       database:
@@ -2276,9 +2001,8 @@ spec:
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -2289,24 +2013,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -2317,9 +2037,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -2333,11 +2052,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

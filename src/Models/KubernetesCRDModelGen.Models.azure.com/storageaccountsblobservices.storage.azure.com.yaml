@@ -45,33 +45,24 @@ spec:
     name: v1api20210401
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -88,35 +79,31 @@ spec:
                     description: 'Enabled: Indicates whether change feed event logging is enabled for the Blob service.'
                     type: boolean
                   retentionInDays:
-                    description: >-
+                    description: |-
                       RetentionInDays: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is
-
                       146000 days (400 years). A null value indicates an infinite retention of the change feed.
-                    maximum: 146000
-                    minimum: 1
+                    maximum: 146000.0
+                    minimum: 1.0
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
                 description: 'ContainerDeleteRetentionPolicy: The blob service properties for container soft delete.'
                 properties:
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Indicates whether DeleteRetentionPolicy is enabled.'
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Cors: Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no
-
                   CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the
-
                   Blob service.
                 properties:
                   corsRules:
@@ -125,17 +112,15 @@ spec:
                       description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
-                          description: >-
+                          description: |-
                             AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin
-
                             request.
                           items:
                             type: string
                           type: array
                         allowedMethods:
-                          description: >-
+                          description: |-
                             AllowedMethods: Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the
-
                             origin.
                           items:
                             enum:
@@ -149,9 +134,8 @@ spec:
                             type: string
                           type: array
                         allowedOrigins:
-                          description: >-
+                          description: |-
                             AllowedOrigins: Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*"
-
                             to allow all domains
                           items:
                             type: string
@@ -162,9 +146,8 @@ spec:
                             type: string
                           type: array
                         maxAgeInSeconds:
-                          description: >-
+                          description: |-
                             MaxAgeInSeconds: Required if CorsRule element is present. The number of seconds that the client/browser should cache a
-
                             preflight response.
                           type: integer
                       required:
@@ -177,21 +160,19 @@ spec:
                     type: array
                 type: object
               defaultServiceVersion:
-                description: >-
+                description: |-
                   DefaultServiceVersion: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an
-
                   incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
                 type: string
               deleteRetentionPolicy:
                 description: 'DeleteRetentionPolicy: The blob service properties for blob soft delete.'
                 properties:
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Indicates whether DeleteRetentionPolicy is enabled.'
@@ -204,9 +185,8 @@ spec:
                 description: 'LastAccessTimeTrackingPolicy: The blob service property to configure last access time based tracking policy.'
                 properties:
                   blobType:
-                    description: >-
+                    description: |-
                       BlobType: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently
-
                       read only
                     items:
                       type: string
@@ -220,50 +200,41 @@ spec:
                     - AccessTimeTracking
                     type: string
                   trackingGranularityInDays:
-                    description: >-
+                    description: |-
                       TrackingGranularityInDays: The field specifies blob object tracking granularity in days, typically how often the blob
-
                       object should be tracked.This field is currently read only with value as 1
                     type: integer
                 required:
                 - enable
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -274,33 +245,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -310,11 +274,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a storage.azure.com/StorageAccount resource
                 properties:
                   armId:
@@ -329,8 +291,8 @@ spec:
                 properties:
                   days:
                     description: 'Days: how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.'
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Blob restore is enabled if set to true.'
@@ -353,9 +315,8 @@ spec:
                     description: 'Enabled: Indicates whether change feed event logging is enabled for the Blob service.'
                     type: boolean
                   retentionInDays:
-                    description: >-
+                    description: |-
                       RetentionInDays: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is
-
                       146000 days (400 years). A null value indicates an infinite retention of the change feed.
                     type: integer
                 type: object
@@ -372,28 +333,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -413,9 +368,8 @@ spec:
                 description: 'ContainerDeleteRetentionPolicy: The blob service properties for container soft delete.'
                 properties:
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
                     type: integer
                   enabled:
@@ -423,11 +377,9 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Cors: Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no
-
                   CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the
-
                   Blob service.
                 properties:
                   corsRules:
@@ -436,25 +388,22 @@ spec:
                       description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
-                          description: >-
+                          description: |-
                             AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin
-
                             request.
                           items:
                             type: string
                           type: array
                         allowedMethods:
-                          description: >-
+                          description: |-
                             AllowedMethods: Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the
-
                             origin.
                           items:
                             type: string
                           type: array
                         allowedOrigins:
-                          description: >-
+                          description: |-
                             AllowedOrigins: Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*"
-
                             to allow all domains
                           items:
                             type: string
@@ -465,27 +414,24 @@ spec:
                             type: string
                           type: array
                         maxAgeInSeconds:
-                          description: >-
+                          description: |-
                             MaxAgeInSeconds: Required if CorsRule element is present. The number of seconds that the client/browser should cache a
-
                             preflight response.
                           type: integer
                       type: object
                     type: array
                 type: object
               defaultServiceVersion:
-                description: >-
+                description: |-
                   DefaultServiceVersion: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an
-
                   incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
                 type: string
               deleteRetentionPolicy:
                 description: 'DeleteRetentionPolicy: The blob service properties for blob soft delete.'
                 properties:
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
                     type: integer
                   enabled:
@@ -493,9 +439,8 @@ spec:
                     type: boolean
                 type: object
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               isVersioningEnabled:
@@ -505,9 +450,8 @@ spec:
                 description: 'LastAccessTimeTrackingPolicy: The blob service property to configure last access time based tracking policy.'
                 properties:
                   blobType:
-                    description: >-
+                    description: |-
                       BlobType: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently
-
                       read only
                     items:
                       type: string
@@ -519,9 +463,8 @@ spec:
                     description: 'Name: Name of the policy. The valid value is AccessTimeTracking. This field is currently read only'
                     type: string
                   trackingGranularityInDays:
-                    description: >-
+                    description: |-
                       TrackingGranularityInDays: The field specifies blob object tracking granularity in days, typically how often the blob
-
                       object should be tracked.This field is currently read only with value as 1
                     type: integer
                 type: object
@@ -548,7 +491,7 @@ spec:
                 description: 'Sku: Sku name and tier.'
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name: The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called
                        accountType.
                     type: string
@@ -581,35 +524,25 @@ spec:
     name: v1api20210401storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20210401.StorageAccountsBlobService
-
           Generator information:
-
           - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2021-04-01/blob.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -620,25 +553,22 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.ChangeFeed
-
                   The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
@@ -647,17 +577,15 @@ spec:
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.DeleteRetentionPolicy
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -666,32 +594,28 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.CorsRules
-
                   Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   corsRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20210401.CorsRule
-
                         Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allowedHeaders:
@@ -718,17 +642,15 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.DeleteRetentionPolicy
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -739,17 +661,15 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.LastAccessTimeTrackingPolicy
-
                   The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   blobType:
@@ -764,48 +684,39 @@ spec:
                     type: integer
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.StorageAccountsBlobServiceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -815,33 +726,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -853,11 +757,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a storage.azure.com/StorageAccount resource
                 properties:
                   armId:
@@ -868,17 +770,15 @@ spec:
                     type: string
                 type: object
               restorePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.RestorePolicyProperties
-
                   The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -895,25 +795,22 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.ChangeFeed_STATUS
-
                   The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
@@ -933,28 +830,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -971,17 +862,15 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.DeleteRetentionPolicy_STATUS
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -990,32 +879,28 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.CorsRules_STATUS
-
                   Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   corsRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20210401.CorsRule_STATUS
-
                         Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allowedHeaders:
@@ -1042,17 +927,15 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.DeleteRetentionPolicy_STATUS
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -1065,17 +948,15 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.LastAccessTimeTrackingPolicy_STATUS
-
                   The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   blobType:
@@ -1092,17 +973,15 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.RestorePolicyProperties_STATUS
-
                   The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -1115,17 +994,15 @@ spec:
                     type: string
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20210401.Sku_STATUS
-
                   The SKU of the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -1157,33 +1034,24 @@ spec:
     name: v1api20220901
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2022-09-01/blob.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1200,43 +1068,37 @@ spec:
                     description: 'Enabled: Indicates whether change feed event logging is enabled for the Blob service.'
                     type: boolean
                   retentionInDays:
-                    description: >-
+                    description: |-
                       RetentionInDays: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is
-
                       146000 days (400 years). A null value indicates an infinite retention of the change feed.
-                    maximum: 146000
-                    minimum: 1
+                    maximum: 146000.0
+                    minimum: 1.0
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
                 description: 'ContainerDeleteRetentionPolicy: The blob service properties for container soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Indicates whether DeleteRetentionPolicy is enabled.'
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Cors: Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no
-
                   CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the
-
                   Blob service.
                 properties:
                   corsRules:
@@ -1245,17 +1107,15 @@ spec:
                       description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
-                          description: >-
+                          description: |-
                             AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin
-
                             request.
                           items:
                             type: string
                           type: array
                         allowedMethods:
-                          description: >-
+                          description: |-
                             AllowedMethods: Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the
-
                             origin.
                           items:
                             enum:
@@ -1270,9 +1130,8 @@ spec:
                             type: string
                           type: array
                         allowedOrigins:
-                          description: >-
+                          description: |-
                             AllowedOrigins: Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*"
-
                             to allow all domains
                           items:
                             type: string
@@ -1283,9 +1142,8 @@ spec:
                             type: string
                           type: array
                         maxAgeInSeconds:
-                          description: >-
+                          description: |-
                             MaxAgeInSeconds: Required if CorsRule element is present. The number of seconds that the client/browser should cache a
-
                             preflight response.
                           type: integer
                       required:
@@ -1298,29 +1156,25 @@ spec:
                     type: array
                 type: object
               defaultServiceVersion:
-                description: >-
+                description: |-
                   DefaultServiceVersion: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an
-
                   incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
                 type: string
               deleteRetentionPolicy:
                 description: 'DeleteRetentionPolicy: The blob service properties for blob soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Indicates whether DeleteRetentionPolicy is enabled.'
@@ -1333,9 +1187,8 @@ spec:
                 description: 'LastAccessTimeTrackingPolicy: The blob service property to configure last access time based tracking policy.'
                 properties:
                   blobType:
-                    description: >-
+                    description: |-
                       BlobType: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently
-
                       read only
                     items:
                       type: string
@@ -1349,50 +1202,41 @@ spec:
                     - AccessTimeTracking
                     type: string
                   trackingGranularityInDays:
-                    description: >-
+                    description: |-
                       TrackingGranularityInDays: The field specifies blob object tracking granularity in days, typically how often the blob
-
                       object should be tracked.This field is currently read only with value as 1
                     type: integer
                 required:
                 - enable
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1403,33 +1247,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1439,11 +1276,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a storage.azure.com/StorageAccount resource
                 properties:
                   armId:
@@ -1458,8 +1293,8 @@ spec:
                 properties:
                   days:
                     description: 'Days: how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.'
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Blob restore is enabled if set to true.'
@@ -1482,9 +1317,8 @@ spec:
                     description: 'Enabled: Indicates whether change feed event logging is enabled for the Blob service.'
                     type: boolean
                   retentionInDays:
-                    description: >-
+                    description: |-
                       RetentionInDays: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is
-
                       146000 days (400 years). A null value indicates an infinite retention of the change feed.
                     type: integer
                 type: object
@@ -1501,28 +1335,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1542,17 +1370,14 @@ spec:
                 description: 'ContainerDeleteRetentionPolicy: The blob service properties for container soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
                     type: integer
                   enabled:
@@ -1560,11 +1385,9 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Cors: Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no
-
                   CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the
-
                   Blob service.
                 properties:
                   corsRules:
@@ -1573,25 +1396,22 @@ spec:
                       description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
-                          description: >-
+                          description: |-
                             AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin
-
                             request.
                           items:
                             type: string
                           type: array
                         allowedMethods:
-                          description: >-
+                          description: |-
                             AllowedMethods: Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the
-
                             origin.
                           items:
                             type: string
                           type: array
                         allowedOrigins:
-                          description: >-
+                          description: |-
                             AllowedOrigins: Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*"
-
                             to allow all domains
                           items:
                             type: string
@@ -1602,35 +1422,30 @@ spec:
                             type: string
                           type: array
                         maxAgeInSeconds:
-                          description: >-
+                          description: |-
                             MaxAgeInSeconds: Required if CorsRule element is present. The number of seconds that the client/browser should cache a
-
                             preflight response.
                           type: integer
                       type: object
                     type: array
                 type: object
               defaultServiceVersion:
-                description: >-
+                description: |-
                   DefaultServiceVersion: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an
-
                   incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
                 type: string
               deleteRetentionPolicy:
                 description: 'DeleteRetentionPolicy: The blob service properties for blob soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
                     type: integer
                   enabled:
@@ -1638,9 +1453,8 @@ spec:
                     type: boolean
                 type: object
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               isVersioningEnabled:
@@ -1650,9 +1464,8 @@ spec:
                 description: 'LastAccessTimeTrackingPolicy: The blob service property to configure last access time based tracking policy.'
                 properties:
                   blobType:
-                    description: >-
+                    description: |-
                       BlobType: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently
-
                       read only
                     items:
                       type: string
@@ -1664,9 +1477,8 @@ spec:
                     description: 'Name: Name of the policy. The valid value is AccessTimeTracking. This field is currently read only'
                     type: string
                   trackingGranularityInDays:
-                    description: >-
+                    description: |-
                       TrackingGranularityInDays: The field specifies blob object tracking granularity in days, typically how often the blob
-
                       object should be tracked.This field is currently read only with value as 1
                     type: integer
                 type: object
@@ -1693,7 +1505,7 @@ spec:
                 description: 'Sku: Sku name and tier.'
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name: The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called
                        accountType.
                     type: string
@@ -1726,35 +1538,25 @@ spec:
     name: v1api20220901storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20220901.StorageAccountsBlobService
-
           Generator information:
-
           - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2022-09-01/blob.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1765,25 +1567,22 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.ChangeFeed
-
                   The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
@@ -1792,17 +1591,15 @@ spec:
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.DeleteRetentionPolicy
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -1813,32 +1610,28 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.CorsRules
-
                   Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   corsRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220901.CorsRule
-
                         Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allowedHeaders:
@@ -1865,17 +1658,15 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.DeleteRetentionPolicy
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -1888,17 +1679,15 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.LastAccessTimeTrackingPolicy
-
                   The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   blobType:
@@ -1913,48 +1702,39 @@ spec:
                     type: integer
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.StorageAccountsBlobServiceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1964,33 +1744,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2002,11 +1775,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a storage.azure.com/StorageAccount resource
                 properties:
                   armId:
@@ -2017,17 +1788,15 @@ spec:
                     type: string
                 type: object
               restorePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.RestorePolicyProperties
-
                   The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -2044,25 +1813,22 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.ChangeFeed_STATUS
-
                   The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
@@ -2082,28 +1848,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2120,17 +1880,15 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.DeleteRetentionPolicy_STATUS
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -2141,32 +1899,28 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.CorsRules_STATUS
-
                   Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   corsRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220901.CorsRule_STATUS
-
                         Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allowedHeaders:
@@ -2193,17 +1947,15 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.DeleteRetentionPolicy_STATUS
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -2218,17 +1970,15 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.LastAccessTimeTrackingPolicy_STATUS
-
                   The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   blobType:
@@ -2245,17 +1995,15 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.RestorePolicyProperties_STATUS
-
                   The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -2268,17 +2016,15 @@ spec:
                     type: string
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.Sku_STATUS
-
                   The SKU of the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -2310,33 +2056,24 @@ spec:
     name: v1api20230101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2353,43 +2090,37 @@ spec:
                     description: 'Enabled: Indicates whether change feed event logging is enabled for the Blob service.'
                     type: boolean
                   retentionInDays:
-                    description: >-
+                    description: |-
                       RetentionInDays: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is
-
                       146000 days (400 years). A null value indicates an infinite retention of the change feed.
-                    maximum: 146000
-                    minimum: 1
+                    maximum: 146000.0
+                    minimum: 1.0
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
                 description: 'ContainerDeleteRetentionPolicy: The blob service properties for container soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Indicates whether DeleteRetentionPolicy is enabled.'
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Cors: Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no
-
                   CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the
-
                   Blob service.
                 properties:
                   corsRules:
@@ -2398,17 +2129,15 @@ spec:
                       description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
-                          description: >-
+                          description: |-
                             AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin
-
                             request.
                           items:
                             type: string
                           type: array
                         allowedMethods:
-                          description: >-
+                          description: |-
                             AllowedMethods: Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the
-
                             origin.
                           items:
                             enum:
@@ -2425,9 +2154,8 @@ spec:
                             type: string
                           type: array
                         allowedOrigins:
-                          description: >-
+                          description: |-
                             AllowedOrigins: Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*"
-
                             to allow all domains
                           items:
                             type: string
@@ -2438,9 +2166,8 @@ spec:
                             type: string
                           type: array
                         maxAgeInSeconds:
-                          description: >-
+                          description: |-
                             MaxAgeInSeconds: Required if CorsRule element is present. The number of seconds that the client/browser should cache a
-
                             preflight response.
                           type: integer
                       required:
@@ -2453,29 +2180,25 @@ spec:
                     type: array
                 type: object
               defaultServiceVersion:
-                description: >-
+                description: |-
                   DefaultServiceVersion: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an
-
                   incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
                 type: string
               deleteRetentionPolicy:
                 description: 'DeleteRetentionPolicy: The blob service properties for blob soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Indicates whether DeleteRetentionPolicy is enabled.'
@@ -2488,9 +2211,8 @@ spec:
                 description: 'LastAccessTimeTrackingPolicy: The blob service property to configure last access time based tracking policy.'
                 properties:
                   blobType:
-                    description: >-
+                    description: |-
                       BlobType: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently
-
                       read only
                     items:
                       type: string
@@ -2504,50 +2226,41 @@ spec:
                     - AccessTimeTracking
                     type: string
                   trackingGranularityInDays:
-                    description: >-
+                    description: |-
                       TrackingGranularityInDays: The field specifies blob object tracking granularity in days, typically how often the blob
-
                       object should be tracked.This field is currently read only with value as 1
                     type: integer
                 required:
                 - enable
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2558,33 +2271,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2594,11 +2300,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a storage.azure.com/StorageAccount resource
                 properties:
                   armId:
@@ -2613,8 +2317,8 @@ spec:
                 properties:
                   days:
                     description: 'Days: how long this blob can be restored. It should be great than zero and less than DeleteRetentionPolicy.days.'
-                    maximum: 365
-                    minimum: 1
+                    maximum: 365.0
+                    minimum: 1.0
                     type: integer
                   enabled:
                     description: 'Enabled: Blob restore is enabled if set to true.'
@@ -2637,9 +2341,8 @@ spec:
                     description: 'Enabled: Indicates whether change feed event logging is enabled for the Blob service.'
                     type: boolean
                   retentionInDays:
-                    description: >-
+                    description: |-
                       RetentionInDays: Indicates the duration of changeFeed retention in days. Minimum value is 1 day and maximum value is
-
                       146000 days (400 years). A null value indicates an infinite retention of the change feed.
                     type: integer
                 type: object
@@ -2656,28 +2359,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2697,17 +2394,14 @@ spec:
                 description: 'ContainerDeleteRetentionPolicy: The blob service properties for container soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
                     type: integer
                   enabled:
@@ -2715,11 +2409,9 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Cors: Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no
-
                   CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the
-
                   Blob service.
                 properties:
                   corsRules:
@@ -2728,25 +2420,22 @@ spec:
                       description: Specifies a CORS rule for the Blob service.
                       properties:
                         allowedHeaders:
-                          description: >-
+                          description: |-
                             AllowedHeaders: Required if CorsRule element is present. A list of headers allowed to be part of the cross-origin
-
                             request.
                           items:
                             type: string
                           type: array
                         allowedMethods:
-                          description: >-
+                          description: |-
                             AllowedMethods: Required if CorsRule element is present. A list of HTTP methods that are allowed to be executed by the
-
                             origin.
                           items:
                             type: string
                           type: array
                         allowedOrigins:
-                          description: >-
+                          description: |-
                             AllowedOrigins: Required if CorsRule element is present. A list of origin domains that will be allowed via CORS, or "*"
-
                             to allow all domains
                           items:
                             type: string
@@ -2757,35 +2446,30 @@ spec:
                             type: string
                           type: array
                         maxAgeInSeconds:
-                          description: >-
+                          description: |-
                             MaxAgeInSeconds: Required if CorsRule element is present. The number of seconds that the client/browser should cache a
-
                             preflight response.
                           type: integer
                       type: object
                     type: array
                 type: object
               defaultServiceVersion:
-                description: >-
+                description: |-
                   DefaultServiceVersion: DefaultServiceVersion indicates the default version to use for requests to the Blob service if an
-
                   incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
                 type: string
               deleteRetentionPolicy:
                 description: 'DeleteRetentionPolicy: The blob service properties for blob soft delete.'
                 properties:
                   allowPermanentDelete:
-                    description: >-
+                    description: |-
                       AllowPermanentDelete: This property when set to true allows deletion of the soft deleted blob versions and snapshots.
-
                       This property cannot be used blob restore policy. This property only applies to blob service and does not apply to
-
                       containers or file share.
                     type: boolean
                   days:
-                    description: >-
+                    description: |-
                       Days: Indicates the number of days that the deleted item should be retained. The minimum specified value can be 1 and
-
                       the maximum value can be 365.
                     type: integer
                   enabled:
@@ -2793,9 +2477,8 @@ spec:
                     type: boolean
                 type: object
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               isVersioningEnabled:
@@ -2805,9 +2488,8 @@ spec:
                 description: 'LastAccessTimeTrackingPolicy: The blob service property to configure last access time based tracking policy.'
                 properties:
                   blobType:
-                    description: >-
+                    description: |-
                       BlobType: An array of predefined supported blob types. Only blockBlob is the supported value. This field is currently
-
                       read only
                     items:
                       type: string
@@ -2819,9 +2501,8 @@ spec:
                     description: 'Name: Name of the policy. The valid value is AccessTimeTracking. This field is currently read only'
                     type: string
                   trackingGranularityInDays:
-                    description: >-
+                    description: |-
                       TrackingGranularityInDays: The field specifies blob object tracking granularity in days, typically how often the blob
-
                       object should be tracked.This field is currently read only with value as 1
                     type: integer
                 type: object
@@ -2848,7 +2529,7 @@ spec:
                 description: 'Sku: Sku name and tier.'
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name: The SKU name. Required for account creation; optional for update. Note that in older versions, SKU name was called
                        accountType.
                     type: string
@@ -2881,35 +2562,25 @@ spec:
     name: v1api20230101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230101.StorageAccountsBlobService
-
           Generator information:
-
           - Generated from: /storage/resource-manager/Microsoft.Storage/stable/2023-01-01/blob.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Storage/storageAccounts/{accountName}/blobServices/default
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2920,25 +2591,22 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.ChangeFeed
-
                   The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
@@ -2947,17 +2615,15 @@ spec:
                     type: integer
                 type: object
               containerDeleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.DeleteRetentionPolicy
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -2968,32 +2634,28 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.CorsRules
-
                   Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   corsRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230101.CorsRule
-
                         Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allowedHeaders:
@@ -3020,17 +2682,15 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.DeleteRetentionPolicy
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -3043,17 +2703,15 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.LastAccessTimeTrackingPolicy
-
                   The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   blobType:
@@ -3068,48 +2726,39 @@ spec:
                     type: integer
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.StorageAccountsBlobServiceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3119,33 +2768,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3157,11 +2799,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a storage.azure.com/StorageAccount resource
                 properties:
                   armId:
@@ -3172,17 +2812,15 @@ spec:
                     type: string
                 type: object
               restorePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.RestorePolicyProperties
-
                   The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -3199,25 +2837,22 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               automaticSnapshotPolicyEnabled:
                 type: boolean
               changeFeed:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.ChangeFeed_STATUS
-
                   The blob service properties for change feed events.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:
@@ -3237,28 +2872,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -3275,17 +2904,15 @@ spec:
                   type: object
                 type: array
               containerDeleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.DeleteRetentionPolicy_STATUS
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -3296,32 +2923,28 @@ spec:
                     type: boolean
                 type: object
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.CorsRules_STATUS
-
                   Sets the CORS rules. You can include up to five CorsRule elements in the request.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   corsRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230101.CorsRule_STATUS
-
                         Specifies a CORS rule for the Blob service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allowedHeaders:
@@ -3348,17 +2971,15 @@ spec:
               defaultServiceVersion:
                 type: string
               deleteRetentionPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.DeleteRetentionPolicy_STATUS
-
                   The service properties for soft delete.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowPermanentDelete:
@@ -3373,17 +2994,15 @@ spec:
               isVersioningEnabled:
                 type: boolean
               lastAccessTimeTrackingPolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.LastAccessTimeTrackingPolicy_STATUS
-
                   The blob service properties for Last access time based tracking policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   blobType:
@@ -3400,17 +3019,15 @@ spec:
               name:
                 type: string
               restorePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.RestorePolicyProperties_STATUS
-
                   The blob service properties for blob restore policy
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   days:
@@ -3423,17 +3040,15 @@ spec:
                     type: string
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.Sku_STATUS
-
                   The SKU of the storage account.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:

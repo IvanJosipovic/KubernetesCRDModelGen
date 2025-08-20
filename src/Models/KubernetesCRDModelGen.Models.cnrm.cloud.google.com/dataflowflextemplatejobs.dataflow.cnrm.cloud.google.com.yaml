@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: dataflowflextemplatejobs.dataflow.cnrm.cloud.google.com
 spec:
   group: dataflow.cnrm.cloud.google.com
@@ -249,7 +248,7 @@ spec:
                 format: int64
                 type: integer
               state:
-                description: >-
+                description: |-
                   The current state of the job.
 
                    Jobs are created in the `JOB_STATE_STOPPED` state unless otherwise
@@ -275,7 +274,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

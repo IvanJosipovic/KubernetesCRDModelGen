@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: assetsavedqueries.asset.cnrm.cloud.google.com
 spec:
   group: asset.cnrm.cloud.google.com
@@ -85,7 +84,7 @@ spec:
                         description: Optional. Specifies an identity for analysis.
                         properties:
                           identity:
-                            description: >-
+                            description: |-
                               Required. The identity appear in the form of principals in
                                [IAM policy
                                binding](https://cloud.google.com/iam/reference/rest/v1/Binding).
@@ -106,7 +105,7 @@ spec:
                         description: Optional. The query options.
                         properties:
                           analyzeServiceAccountImpersonation:
-                            description: >-
+                            description: |-
                               Optional. If true, the response will include access analysis from
                                identities to resources via service account impersonation. This is a very
                                expensive operation, because many derived queries will be executed. We
@@ -144,7 +143,7 @@ spec:
                                Default is false.
                             type: boolean
                           expandGroups:
-                            description: >-
+                            description: |-
                               Optional. If true, the identities section of the result will expand any
                                Google groups appearing in an IAM policy binding.
 
@@ -159,7 +158,7 @@ spec:
                                Default is false.
                             type: boolean
                           expandResources:
-                            description: >-
+                            description: |-
                               Optional. If true and
                                [IamPolicyAnalysisQuery.resource_selector][google.cloud.asset.v1.IamPolicyAnalysisQuery.resource_selector]
                                is not specified, the resource section of the result will expand any
@@ -189,7 +188,7 @@ spec:
                                Default is false.
                             type: boolean
                           expandRoles:
-                            description: >-
+                            description: |-
                               Optional. If true, the access section of result will expand any roles
                                appearing in IAM policy bindings to include their permissions.
 
@@ -217,7 +216,7 @@ spec:
                         - fullResourceName
                         type: object
                       scope:
-                        description: >-
+                        description: |-
                           Required. The relative name of the root asset. Only resources and IAM
                            policies within the scope will be analyzed.
 
@@ -370,7 +369,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computemanagedsslcertificates.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -57,15 +56,13 @@ spec:
                 description: Immutable. An optional description of this resource.
                 type: string
               managed:
-                description: >-
+                description: |-
                   Immutable. Properties relevant to a managed certificate.  These will be used if the
-
                   certificate is managed (as indicated by a value of 'MANAGED' in 'type').
                 properties:
                   domains:
-                    description: >-
+                    description: |-
                       Immutable. Domains for which a managed SSL certificate will be valid.  Currently,
-
                       there can be up to 100 domains in this list.
                     items:
                       type: string
@@ -104,9 +101,8 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               type:
-                description: >-
+                description: |-
                   Immutable. Enum field whose value is always 'MANAGED' - used to signal to the API
-
                   which type this is. Default value: "MANAGED" Possible values: ["MANAGED"].
                 type: string
             required:
@@ -200,15 +196,13 @@ spec:
                 description: Immutable. An optional description of this resource.
                 type: string
               managed:
-                description: >-
+                description: |-
                   Immutable. Properties relevant to a managed certificate.  These will be used if the
-
                   certificate is managed (as indicated by a value of 'MANAGED' in 'type').
                 properties:
                   domains:
-                    description: >-
+                    description: |-
                       Immutable. Domains for which a managed SSL certificate will be valid.  Currently,
-
                       there can be up to 100 domains in this list.
                     items:
                       type: string
@@ -247,9 +241,8 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               type:
-                description: >-
+                description: |-
                   Immutable. Enum field whose value is always 'MANAGED' - used to signal to the API
-
                   which type this is. Default value: "MANAGED" Possible values: ["MANAGED"].
                 type: string
             required:
@@ -311,7 +304,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

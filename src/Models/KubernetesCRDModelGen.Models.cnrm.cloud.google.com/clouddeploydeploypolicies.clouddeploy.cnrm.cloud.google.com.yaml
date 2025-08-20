@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: clouddeploydeploypolicies.clouddeploy.cnrm.cloud.google.com
 spec:
   group: clouddeploy.cnrm.cloud.google.com
@@ -263,7 +262,7 @@ spec:
                       description: Optional. Contains attributes about a delivery pipeline.
                       properties:
                         id:
-                          description: >-
+                          description: |-
                             ID of the `DeliveryPipeline`. The value of this field could be one of the
                              following:
 
@@ -280,7 +279,7 @@ spec:
                       description: Optional. Contains attributes about a target.
                       properties:
                         id:
-                          description: >-
+                          description: |-
                             ID of the `Target`. The value of this field could be one of the
                              following:
 
@@ -359,7 +358,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

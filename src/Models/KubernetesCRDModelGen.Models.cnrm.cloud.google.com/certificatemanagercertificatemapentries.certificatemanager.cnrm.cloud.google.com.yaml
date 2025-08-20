@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: certificatemanagercertificatemapentries.certificatemanager.cnrm.cloud.google.com
 spec:
   group: certificatemanager.cnrm.cloud.google.com
@@ -55,11 +54,9 @@ spec:
             properties:
               certificatesRefs:
                 items:
-                  description: >-
+                  description: |-
                     A set of Certificates defines for the given hostname.
-
                     There can be defined up to fifteen certificates in each Certificate Map Entry.
-
                     Each certificate must match pattern projects/*/locations/*/certificates/*.
                   oneOf:
                   - not:
@@ -91,11 +88,9 @@ spec:
                 description: A human-readable description of the resource.
                 type: string
               hostname:
-                description: >-
+                description: |-
                   Immutable. A Hostname (FQDN, e.g. example.com) or a wildcard hostname expression (*.example.com)
-
                   for a set of hostnames with common suffix. Used as Server Name Indication (SNI) for
-
                   selecting a proper certificate.
                 type: string
               mapRef:
@@ -187,11 +182,9 @@ spec:
                   type: object
                 type: array
               createTime:
-                description: >-
+                description: |-
                   Creation timestamp of a Certificate Map Entry. Timestamp in RFC3339 UTC "Zulu" format,
-
                   with nanosecond resolution and up to nine fractional digits.
-
                   Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                 type: string
               observedGeneration:
@@ -201,11 +194,9 @@ spec:
                 description: A serving state of this Certificate Map Entry.
                 type: string
               updateTime:
-                description: >-
+                description: |-
                   Update timestamp of a Certificate Map Entry. Timestamp in RFC3339 UTC "Zulu" format,
-
                   with nanosecond resolution and up to nine fractional digits.
-
                   Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                 type: string
             type: object
@@ -248,11 +239,9 @@ spec:
             properties:
               certificatesRefs:
                 items:
-                  description: >-
+                  description: |-
                     A set of Certificates defines for the given hostname.
-
                     There can be defined up to fifteen certificates in each Certificate Map Entry.
-
                     Each certificate must match pattern projects/*/locations/*/certificates/*.
                   oneOf:
                   - not:
@@ -284,11 +273,9 @@ spec:
                 description: A human-readable description of the resource.
                 type: string
               hostname:
-                description: >-
+                description: |-
                   Immutable. A Hostname (FQDN, e.g. example.com) or a wildcard hostname expression (*.example.com)
-
                   for a set of hostnames with common suffix. Used as Server Name Indication (SNI) for
-
                   selecting a proper certificate.
                 type: string
               mapRef:
@@ -380,11 +367,9 @@ spec:
                   type: object
                 type: array
               createTime:
-                description: >-
+                description: |-
                   Creation timestamp of a Certificate Map Entry. Timestamp in RFC3339 UTC "Zulu" format,
-
                   with nanosecond resolution and up to nine fractional digits.
-
                   Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                 type: string
               observedGeneration:
@@ -394,11 +379,9 @@ spec:
                 description: A serving state of this Certificate Map Entry.
                 type: string
               updateTime:
-                description: >-
+                description: |-
                   Update timestamp of a Certificate Map Entry. Timestamp in RFC3339 UTC "Zulu" format,
-
                   with nanosecond resolution and up to nine fractional digits.
-
                   Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                 type: string
             type: object
@@ -411,7 +394,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -69,9 +69,8 @@ spec:
                               description: HTTP connection pool settings.
                               properties:
                                 h2UpgradePolicy:
-                                  description: >-
+                                  description: |-
                                     Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                     Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                   enum:
@@ -287,7 +286,7 @@ spec:
                                   type: array
                               type: object
                             simple:
-                              description: >2-
+                              description: |2-
 
 
                                 Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -386,9 +385,8 @@ spec:
                                     description: HTTP connection pool settings.
                                     properties:
                                       h2UpgradePolicy:
-                                        description: >-
+                                        description: |-
                                           Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                           Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                         enum:
@@ -604,7 +602,7 @@ spec:
                                         type: array
                                     type: object
                                   simple:
-                                    description: >2-
+                                    description: |2-
 
 
                                       Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -721,9 +719,8 @@ spec:
                                     nullable: true
                                     type: boolean
                                   mode:
-                                    description: >-
+                                    description: |-
                                       Indicates whether connections to this port should be secured using TLS.
-
 
                                       Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                                     enum:
@@ -751,9 +748,8 @@ spec:
                           description: The upstream PROXY protocol settings.
                           properties:
                             version:
-                              description: >-
+                              description: |-
                                 The PROXY protocol version to use.
-
 
                                 Valid Options: V1, V2
                               enum:
@@ -797,9 +793,8 @@ spec:
                               nullable: true
                               type: boolean
                             mode:
-                              description: >-
+                              description: |-
                                 Indicates whether connections to this port should be secured using TLS.
-
 
                                 Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                               enum:
@@ -852,9 +847,8 @@ spec:
                         description: HTTP connection pool settings.
                         properties:
                           h2UpgradePolicy:
-                            description: >-
+                            description: |-
                               Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                               Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                             enum:
@@ -925,8 +919,8 @@ spec:
                                   rule: duration(self) >= duration('1ms')
                               probes:
                                 description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
-                                maximum: 4294967295
-                                minimum: 0
+                                maximum: 4294967295.0
+                                minimum: 0.0
                                 type: integer
                               time:
                                 description: The time duration a connection needs to be idle before keep-alive probes start being sent.
@@ -1010,19 +1004,19 @@ spec:
                             properties:
                               tableSize:
                                 description: The table size for Maglev hashing.
-                                minimum: 0
+                                minimum: 0.0
                                 type: integer
                             type: object
                           minimumRingSize:
                             description: Deprecated.
-                            minimum: 0
+                            minimum: 0.0
                             type: integer
                           ringHash:
                             description: The ring/modulo hash load balancer implements consistent hashing to backend hosts.
                             properties:
                               minimumRingSize:
                                 description: The minimum number of virtual nodes to use for the hash ring.
-                                minimum: 0
+                                minimum: 0.0
                                 type: integer
                             type: object
                           useSourceIp:
@@ -1070,7 +1064,7 @@ spec:
                             type: array
                         type: object
                       simple:
-                        description: >2-
+                        description: |2-
 
 
                           Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -1088,7 +1082,7 @@ spec:
                           aggression:
                             description: This parameter controls the speed of traffic increase over the warmup duration.
                             format: double
-                            minimum: 1
+                            minimum: 1.0
                             nullable: true
                             type: number
                           duration:
@@ -1098,8 +1092,8 @@ spec:
                               rule: duration(self) >= duration('1ms')
                           minimumPercent:
                             format: double
-                            maximum: 100
-                            minimum: 0
+                            maximum: 100.0
+                            minimum: 0.0
                             nullable: true
                             type: number
                         required:
@@ -1122,8 +1116,8 @@ spec:
                           rule: duration(self) >= duration('1ms')
                       consecutive5xxErrors:
                         description: Number of 5xx errors before a host is ejected from the connection pool.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       consecutiveErrors:
@@ -1131,14 +1125,14 @@ spec:
                         type: integer
                       consecutiveGatewayErrors:
                         description: Number of gateway errors before a host is ejected from the connection pool.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       consecutiveLocalOriginFailures:
                         description: The number of consecutive locally originated failures before ejection occurs.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       interval:
@@ -1169,9 +1163,8 @@ spec:
                               description: HTTP connection pool settings.
                               properties:
                                 h2UpgradePolicy:
-                                  description: >-
+                                  description: |-
                                     Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                     Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                   enum:
@@ -1387,7 +1380,7 @@ spec:
                                   type: array
                               type: object
                             simple:
-                              description: >2-
+                              description: |2-
 
 
                                 Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -1504,9 +1497,8 @@ spec:
                               nullable: true
                               type: boolean
                             mode:
-                              description: >-
+                              description: |-
                                 Indicates whether connections to this port should be secured using TLS.
-
 
                                 Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                               enum:
@@ -1534,9 +1526,8 @@ spec:
                     description: The upstream PROXY protocol settings.
                     properties:
                       version:
-                        description: >-
+                        description: |-
                           The PROXY protocol version to use.
-
 
                           Valid Options: V1, V2
                         enum:
@@ -1549,14 +1540,14 @@ spec:
                     properties:
                       minRetryConcurrency:
                         description: Specifies the minimum retry concurrency allowed for the retry budget.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                       percent:
                         description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
                         format: double
-                        maximum: 100
-                        minimum: 0
+                        maximum: 100.0
+                        minimum: 0.0
                         nullable: true
                         type: number
                     type: object
@@ -1580,9 +1571,8 @@ spec:
                         nullable: true
                         type: boolean
                       mode:
-                        description: >-
+                        description: |-
                           Indicates whether connections to this port should be secured using TLS.
-
 
                           Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                         enum:
@@ -1614,8 +1604,8 @@ spec:
                         type: string
                       targetPort:
                         description: Specifies a port to which the downstream connection is tunneled.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                     required:
                     - targetHost
@@ -1691,9 +1681,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -1765,9 +1754,8 @@ spec:
                               description: HTTP connection pool settings.
                               properties:
                                 h2UpgradePolicy:
-                                  description: >-
+                                  description: |-
                                     Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                     Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                   enum:
@@ -1983,7 +1971,7 @@ spec:
                                   type: array
                               type: object
                             simple:
-                              description: >2-
+                              description: |2-
 
 
                                 Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -2082,9 +2070,8 @@ spec:
                                     description: HTTP connection pool settings.
                                     properties:
                                       h2UpgradePolicy:
-                                        description: >-
+                                        description: |-
                                           Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                           Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                         enum:
@@ -2300,7 +2287,7 @@ spec:
                                         type: array
                                     type: object
                                   simple:
-                                    description: >2-
+                                    description: |2-
 
 
                                       Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -2417,9 +2404,8 @@ spec:
                                     nullable: true
                                     type: boolean
                                   mode:
-                                    description: >-
+                                    description: |-
                                       Indicates whether connections to this port should be secured using TLS.
-
 
                                       Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                                     enum:
@@ -2447,9 +2433,8 @@ spec:
                           description: The upstream PROXY protocol settings.
                           properties:
                             version:
-                              description: >-
+                              description: |-
                                 The PROXY protocol version to use.
-
 
                                 Valid Options: V1, V2
                               enum:
@@ -2493,9 +2478,8 @@ spec:
                               nullable: true
                               type: boolean
                             mode:
-                              description: >-
+                              description: |-
                                 Indicates whether connections to this port should be secured using TLS.
-
 
                                 Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                               enum:
@@ -2548,9 +2532,8 @@ spec:
                         description: HTTP connection pool settings.
                         properties:
                           h2UpgradePolicy:
-                            description: >-
+                            description: |-
                               Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                               Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                             enum:
@@ -2621,8 +2604,8 @@ spec:
                                   rule: duration(self) >= duration('1ms')
                               probes:
                                 description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
-                                maximum: 4294967295
-                                minimum: 0
+                                maximum: 4294967295.0
+                                minimum: 0.0
                                 type: integer
                               time:
                                 description: The time duration a connection needs to be idle before keep-alive probes start being sent.
@@ -2706,19 +2689,19 @@ spec:
                             properties:
                               tableSize:
                                 description: The table size for Maglev hashing.
-                                minimum: 0
+                                minimum: 0.0
                                 type: integer
                             type: object
                           minimumRingSize:
                             description: Deprecated.
-                            minimum: 0
+                            minimum: 0.0
                             type: integer
                           ringHash:
                             description: The ring/modulo hash load balancer implements consistent hashing to backend hosts.
                             properties:
                               minimumRingSize:
                                 description: The minimum number of virtual nodes to use for the hash ring.
-                                minimum: 0
+                                minimum: 0.0
                                 type: integer
                             type: object
                           useSourceIp:
@@ -2766,7 +2749,7 @@ spec:
                             type: array
                         type: object
                       simple:
-                        description: >2-
+                        description: |2-
 
 
                           Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -2784,7 +2767,7 @@ spec:
                           aggression:
                             description: This parameter controls the speed of traffic increase over the warmup duration.
                             format: double
-                            minimum: 1
+                            minimum: 1.0
                             nullable: true
                             type: number
                           duration:
@@ -2794,8 +2777,8 @@ spec:
                               rule: duration(self) >= duration('1ms')
                           minimumPercent:
                             format: double
-                            maximum: 100
-                            minimum: 0
+                            maximum: 100.0
+                            minimum: 0.0
                             nullable: true
                             type: number
                         required:
@@ -2818,8 +2801,8 @@ spec:
                           rule: duration(self) >= duration('1ms')
                       consecutive5xxErrors:
                         description: Number of 5xx errors before a host is ejected from the connection pool.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       consecutiveErrors:
@@ -2827,14 +2810,14 @@ spec:
                         type: integer
                       consecutiveGatewayErrors:
                         description: Number of gateway errors before a host is ejected from the connection pool.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       consecutiveLocalOriginFailures:
                         description: The number of consecutive locally originated failures before ejection occurs.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       interval:
@@ -2865,9 +2848,8 @@ spec:
                               description: HTTP connection pool settings.
                               properties:
                                 h2UpgradePolicy:
-                                  description: >-
+                                  description: |-
                                     Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                     Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                   enum:
@@ -3083,7 +3065,7 @@ spec:
                                   type: array
                               type: object
                             simple:
-                              description: >2-
+                              description: |2-
 
 
                                 Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -3200,9 +3182,8 @@ spec:
                               nullable: true
                               type: boolean
                             mode:
-                              description: >-
+                              description: |-
                                 Indicates whether connections to this port should be secured using TLS.
-
 
                                 Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                               enum:
@@ -3230,9 +3211,8 @@ spec:
                     description: The upstream PROXY protocol settings.
                     properties:
                       version:
-                        description: >-
+                        description: |-
                           The PROXY protocol version to use.
-
 
                           Valid Options: V1, V2
                         enum:
@@ -3245,14 +3225,14 @@ spec:
                     properties:
                       minRetryConcurrency:
                         description: Specifies the minimum retry concurrency allowed for the retry budget.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                       percent:
                         description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
                         format: double
-                        maximum: 100
-                        minimum: 0
+                        maximum: 100.0
+                        minimum: 0.0
                         nullable: true
                         type: number
                     type: object
@@ -3276,9 +3256,8 @@ spec:
                         nullable: true
                         type: boolean
                       mode:
-                        description: >-
+                        description: |-
                           Indicates whether connections to this port should be secured using TLS.
-
 
                           Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                         enum:
@@ -3310,8 +3289,8 @@ spec:
                         type: string
                       targetPort:
                         description: Specifies a port to which the downstream connection is tunneled.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                     required:
                     - targetHost
@@ -3387,9 +3366,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -3461,9 +3439,8 @@ spec:
                               description: HTTP connection pool settings.
                               properties:
                                 h2UpgradePolicy:
-                                  description: >-
+                                  description: |-
                                     Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                     Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                   enum:
@@ -3679,7 +3656,7 @@ spec:
                                   type: array
                               type: object
                             simple:
-                              description: >2-
+                              description: |2-
 
 
                                 Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -3778,9 +3755,8 @@ spec:
                                     description: HTTP connection pool settings.
                                     properties:
                                       h2UpgradePolicy:
-                                        description: >-
+                                        description: |-
                                           Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                           Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                         enum:
@@ -3996,7 +3972,7 @@ spec:
                                         type: array
                                     type: object
                                   simple:
-                                    description: >2-
+                                    description: |2-
 
 
                                       Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -4113,9 +4089,8 @@ spec:
                                     nullable: true
                                     type: boolean
                                   mode:
-                                    description: >-
+                                    description: |-
                                       Indicates whether connections to this port should be secured using TLS.
-
 
                                       Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                                     enum:
@@ -4143,9 +4118,8 @@ spec:
                           description: The upstream PROXY protocol settings.
                           properties:
                             version:
-                              description: >-
+                              description: |-
                                 The PROXY protocol version to use.
-
 
                                 Valid Options: V1, V2
                               enum:
@@ -4189,9 +4163,8 @@ spec:
                               nullable: true
                               type: boolean
                             mode:
-                              description: >-
+                              description: |-
                                 Indicates whether connections to this port should be secured using TLS.
-
 
                                 Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                               enum:
@@ -4244,9 +4217,8 @@ spec:
                         description: HTTP connection pool settings.
                         properties:
                           h2UpgradePolicy:
-                            description: >-
+                            description: |-
                               Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                               Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                             enum:
@@ -4317,8 +4289,8 @@ spec:
                                   rule: duration(self) >= duration('1ms')
                               probes:
                                 description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
-                                maximum: 4294967295
-                                minimum: 0
+                                maximum: 4294967295.0
+                                minimum: 0.0
                                 type: integer
                               time:
                                 description: The time duration a connection needs to be idle before keep-alive probes start being sent.
@@ -4402,19 +4374,19 @@ spec:
                             properties:
                               tableSize:
                                 description: The table size for Maglev hashing.
-                                minimum: 0
+                                minimum: 0.0
                                 type: integer
                             type: object
                           minimumRingSize:
                             description: Deprecated.
-                            minimum: 0
+                            minimum: 0.0
                             type: integer
                           ringHash:
                             description: The ring/modulo hash load balancer implements consistent hashing to backend hosts.
                             properties:
                               minimumRingSize:
                                 description: The minimum number of virtual nodes to use for the hash ring.
-                                minimum: 0
+                                minimum: 0.0
                                 type: integer
                             type: object
                           useSourceIp:
@@ -4462,7 +4434,7 @@ spec:
                             type: array
                         type: object
                       simple:
-                        description: >2-
+                        description: |2-
 
 
                           Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -4480,7 +4452,7 @@ spec:
                           aggression:
                             description: This parameter controls the speed of traffic increase over the warmup duration.
                             format: double
-                            minimum: 1
+                            minimum: 1.0
                             nullable: true
                             type: number
                           duration:
@@ -4490,8 +4462,8 @@ spec:
                               rule: duration(self) >= duration('1ms')
                           minimumPercent:
                             format: double
-                            maximum: 100
-                            minimum: 0
+                            maximum: 100.0
+                            minimum: 0.0
                             nullable: true
                             type: number
                         required:
@@ -4514,8 +4486,8 @@ spec:
                           rule: duration(self) >= duration('1ms')
                       consecutive5xxErrors:
                         description: Number of 5xx errors before a host is ejected from the connection pool.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       consecutiveErrors:
@@ -4523,14 +4495,14 @@ spec:
                         type: integer
                       consecutiveGatewayErrors:
                         description: Number of gateway errors before a host is ejected from the connection pool.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       consecutiveLocalOriginFailures:
                         description: The number of consecutive locally originated failures before ejection occurs.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         nullable: true
                         type: integer
                       interval:
@@ -4561,9 +4533,8 @@ spec:
                               description: HTTP connection pool settings.
                               properties:
                                 h2UpgradePolicy:
-                                  description: >-
+                                  description: |-
                                     Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                     Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                                   enum:
@@ -4779,7 +4750,7 @@ spec:
                                   type: array
                               type: object
                             simple:
-                              description: >2-
+                              description: |2-
 
 
                                 Valid Options: LEAST_CONN, RANDOM, PASSTHROUGH, ROUND_ROBIN, LEAST_REQUEST
@@ -4896,9 +4867,8 @@ spec:
                               nullable: true
                               type: boolean
                             mode:
-                              description: >-
+                              description: |-
                                 Indicates whether connections to this port should be secured using TLS.
-
 
                                 Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                               enum:
@@ -4926,9 +4896,8 @@ spec:
                     description: The upstream PROXY protocol settings.
                     properties:
                       version:
-                        description: >-
+                        description: |-
                           The PROXY protocol version to use.
-
 
                           Valid Options: V1, V2
                         enum:
@@ -4941,14 +4910,14 @@ spec:
                     properties:
                       minRetryConcurrency:
                         description: Specifies the minimum retry concurrency allowed for the retry budget.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                       percent:
                         description: Specifies the limit on concurrent retries as a percentage of the sum of active requests and active pending requests.
                         format: double
-                        maximum: 100
-                        minimum: 0
+                        maximum: 100.0
+                        minimum: 0.0
                         nullable: true
                         type: number
                     type: object
@@ -4972,9 +4941,8 @@ spec:
                         nullable: true
                         type: boolean
                       mode:
-                        description: >-
+                        description: |-
                           Indicates whether connections to this port should be secured using TLS.
-
 
                           Valid Options: DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
                         enum:
@@ -5006,8 +4974,8 @@ spec:
                         type: string
                       targetPort:
                         description: Specifies a port to which the downstream connection is tunneled.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                     required:
                     - targetHost
@@ -5083,9 +5051,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

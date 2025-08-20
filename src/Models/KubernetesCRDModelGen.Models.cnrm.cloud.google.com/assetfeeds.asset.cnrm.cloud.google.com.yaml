@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: assetfeeds.asset.cnrm.cloud.google.com
 spec:
   group: asset.cnrm.cloud.google.com
@@ -60,7 +59,7 @@ spec:
                   type: string
                 type: array
               assetTypes:
-                description: >-
+                description: |-
                   A list of types of the assets to receive updates. You must specify either
                    or both of asset_names and asset_types. Only asset updates matching
                    specified asset_names or asset_types are exported to the feed.
@@ -72,7 +71,7 @@ spec:
                   type: string
                 type: array
               condition:
-                description: >-
+                description: |-
                   A condition which determines whether an asset update should be published.
                    If specified, an asset will be returned only when the expression evaluates
                    to true.
@@ -255,7 +254,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

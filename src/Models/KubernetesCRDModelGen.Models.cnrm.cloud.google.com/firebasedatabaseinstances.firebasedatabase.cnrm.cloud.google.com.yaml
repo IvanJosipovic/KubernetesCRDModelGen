@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: firebasedatabaseinstances.firebasedatabase.cnrm.cloud.google.com
 spec:
   group: firebasedatabase.cnrm.cloud.google.com
@@ -84,22 +83,18 @@ spec:
                     type: string
                 type: object
               region:
-                description: >-
+                description: |-
                   Immutable. A reference to the region where the Firebase Realtime database resides.
-
                   Check all [available regions](https://firebase.google.com/docs/projects/locations#rtdb-locations).
                 type: string
               resourceID:
                 description: Immutable. Optional. The instanceId of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               type:
-                description: >-
+                description: |-
                   Immutable. The database type.
-
                   Each project can create one default Firebase Realtime Database, which cannot be deleted once created.
-
                   Creating user Databases is only available for projects on the Blaze plan.
-
                   Projects can be upgraded using the Cloud Billing API https://cloud.google.com/billing/reference/rest/v1/projects/updateBillingInfo. Default value: "USER_DATABASE" Possible values: ["DEFAULT_DATABASE", "USER_DATABASE"].
                 type: string
             required:
@@ -130,19 +125,15 @@ spec:
                   type: object
                 type: array
               databaseUrl:
-                description: >-
+                description: |-
                   The database URL in the form of https://{instance-id}.firebaseio.com for us-central1 instances
-
                   or https://{instance-id}.{region}.firebasedatabase.app in other regions.
                 type: string
               name:
-                description: >-
+                description: |-
                   The fully-qualified resource name of the Firebase Realtime Database, in the
-
                   format: projects/PROJECT_NUMBER/locations/REGION_IDENTIFIER/instances/INSTANCE_ID
-
                   PROJECT_NUMBER: The Firebase project's ['ProjectNumber'](https://firebase.google.com/docs/reference/firebase-management/rest/v1beta1/projects#FirebaseProject.FIELDS.project_number)
-
                   Learn more about using project identifiers in Google's [AIP 2510 standard](https://google.aip.dev/cloud/2510).
                 type: string
               observedGeneration:
@@ -161,7 +152,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: metastoreservices.metastore.cnrm.cloud.google.com
 spec:
   group: metastore.cnrm.cloud.google.com
@@ -374,7 +373,7 @@ spec:
                         items:
                           properties:
                             backup:
-                              description: >-
+                              description: |-
                                 Output only. The relative resource name of the metastore service backup to
                                  restore from, in the following form:
 
@@ -437,7 +436,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

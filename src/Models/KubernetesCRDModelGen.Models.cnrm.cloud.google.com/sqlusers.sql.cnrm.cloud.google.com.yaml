@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: sqlusers.sql.cnrm.cloud.google.com
 spec:
   group: sql.cnrm.cloud.google.com
@@ -83,7 +82,7 @@ spec:
                     type: string
                 type: object
               password:
-                description: >-
+                description: |-
                   The password for the user. Can be updated. For Postgres instances this is a Required field, unless type is set to
                                   either CLOUD_IAM_USER or CLOUD_IAM_SERVICE_ACCOUNT.
                 oneOf:
@@ -149,7 +148,7 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               type:
-                description: >-
+                description: |-
                   Immutable. The user type. It determines the method to authenticate the user during login.
                                   The default is the database's built-in user type. Flags include "BUILT_IN", "CLOUD_IAM_USER", or "CLOUD_IAM_SERVICE_ACCOUNT".
                 type: string
@@ -205,7 +204,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

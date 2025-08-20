@@ -45,33 +45,24 @@ spec:
     name: v1api20201101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,65 +70,54 @@ spec:
           spec:
             properties:
               allowForwardedTraffic:
-                description: >-
+                description: |-
                   AllowForwardedTraffic: Whether the forwarded traffic from the VMs in the local virtual network will be
-
                   allowed/disallowed in remote virtual network.
                 type: boolean
               allowGatewayTransit:
                 description: 'AllowGatewayTransit: If gateway links can be used in remote virtual networking to link to this virtual network.'
                 type: boolean
               allowVirtualNetworkAccess:
-                description: >-
+                description: |-
                   AllowVirtualNetworkAccess: Whether the VMs in the local virtual network space would be able to access the VMs in remote
-
                   virtual network space.
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               doNotVerifyRemoteGateways:
                 description: 'DoNotVerifyRemoteGateways: If we need to verify the provisioning state of the remote gateway.'
                 type: boolean
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -148,33 +128,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -184,11 +157,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a network.azure.com/VirtualNetwork resource
                 properties:
                   armId:
@@ -224,22 +195,18 @@ spec:
                 - virtualNetworkCommunity
                 type: object
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   RemoteVirtualNetwork: The reference to the remote virtual network. The remote virtual network can be in the same or
-
                   different region (preview). See here to register for the preview and learn more
-
                   (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
                 properties:
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -255,13 +222,10 @@ spec:
                     type: object
                 type: object
               useRemoteGateways:
-                description: >-
+                description: |-
                   UseRemoteGateways: If remote gateways can be used on this virtual network. If the flag is set to true, and
-
                   allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for
-
                   transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a
-
                   gateway.
                 type: boolean
             required:
@@ -270,18 +234,16 @@ spec:
           status:
             properties:
               allowForwardedTraffic:
-                description: >-
+                description: |-
                   AllowForwardedTraffic: Whether the forwarded traffic from the VMs in the local virtual network will be
-
                   allowed/disallowed in remote virtual network.
                 type: boolean
               allowGatewayTransit:
                 description: 'AllowGatewayTransit: If gateway links can be used in remote virtual networking to link to this virtual network.'
                 type: boolean
               allowVirtualNetworkAccess:
-                description: >-
+                description: |-
                   AllowVirtualNetworkAccess: Whether the VMs in the local virtual network space would be able to access the VMs in remote
-
                   virtual network space.
                 type: boolean
               conditions:
@@ -297,28 +259,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -372,11 +328,9 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   RemoteVirtualNetwork: The reference to the remote virtual network. The remote virtual network can be in the same or
-
                   different region (preview). See here to register for the preview and learn more
-
                   (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
                 properties:
                   id:
@@ -390,13 +344,10 @@ spec:
                 description: 'Type: Resource type.'
                 type: string
               useRemoteGateways:
-                description: >-
+                description: |-
                   UseRemoteGateways: If remote gateways can be used on this virtual network. If the flag is set to true, and
-
                   allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for
-
                   transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a
-
                   gateway.
                 type: boolean
             type: object
@@ -421,35 +372,25 @@ spec:
     name: v1api20201101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeering
-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2020-11-01/virtualNetwork.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -460,9 +401,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               allowForwardedTraffic:
@@ -472,56 +412,46 @@ spec:
               allowVirtualNetworkAccess:
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               doNotVerifyRemoteGateways:
                 type: boolean
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.VirtualNetworksVirtualNetworkPeeringOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -531,33 +461,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -569,11 +492,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a network.azure.com/VirtualNetwork resource
                 properties:
                   armId:
@@ -586,17 +507,15 @@ spec:
               peeringState:
                 type: string
               remoteAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.AddressSpace
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -605,45 +524,39 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.VirtualNetworkBgpCommunities
-
                   Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   virtualNetworkCommunity:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.SubResource
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -669,9 +582,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               allowForwardedTraffic:
@@ -692,28 +604,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -742,17 +648,15 @@ spec:
               provisioningState:
                 type: string
               remoteAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.AddressSpace_STATUS
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -761,17 +665,15 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.VirtualNetworkBgpCommunities_STATUS
-
                   Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   regionalCommunity:
@@ -780,17 +682,15 @@ spec:
                     type: string
                 type: object
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   Storage version of v1api20201101.SubResource_STATUS
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -824,33 +724,24 @@ spec:
     name: v1api20240301
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetwork.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -858,24 +749,21 @@ spec:
           spec:
             properties:
               allowForwardedTraffic:
-                description: >-
+                description: |-
                   AllowForwardedTraffic: Whether the forwarded traffic from the VMs in the local virtual network will be
-
                   allowed/disallowed in remote virtual network.
                 type: boolean
               allowGatewayTransit:
                 description: 'AllowGatewayTransit: If gateway links can be used in remote virtual networking to link to this virtual network.'
                 type: boolean
               allowVirtualNetworkAccess:
-                description: >-
+                description: |-
                   AllowVirtualNetworkAccess: Whether the VMs in the local virtual network space would be able to access the VMs in remote
-
                   virtual network space.
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               doNotVerifyRemoteGateways:
@@ -908,41 +796,33 @@ spec:
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -953,33 +833,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -989,11 +862,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a network.azure.com/VirtualNetwork resource
                 properties:
                   armId:
@@ -1045,22 +916,18 @@ spec:
                   type: string
                 type: array
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   RemoteVirtualNetwork: The reference to the remote virtual network. The remote virtual network can be in the same or
-
                   different region (preview). See here to register for the preview and learn more
-
                   (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
                 properties:
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -1085,13 +952,10 @@ spec:
                     type: array
                 type: object
               useRemoteGateways:
-                description: >-
+                description: |-
                   UseRemoteGateways: If remote gateways can be used on this virtual network. If the flag is set to true, and
-
                   allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for
-
                   transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a
-
                   gateway.
                 type: boolean
             required:
@@ -1100,18 +964,16 @@ spec:
           status:
             properties:
               allowForwardedTraffic:
-                description: >-
+                description: |-
                   AllowForwardedTraffic: Whether the forwarded traffic from the VMs in the local virtual network will be
-
                   allowed/disallowed in remote virtual network.
                 type: boolean
               allowGatewayTransit:
                 description: 'AllowGatewayTransit: If gateway links can be used in remote virtual networking to link to this virtual network.'
                 type: boolean
               allowVirtualNetworkAccess:
-                description: >-
+                description: |-
                   AllowVirtualNetworkAccess: Whether the VMs in the local virtual network space would be able to access the VMs in remote
-
                   virtual network space.
                 type: boolean
               conditions:
@@ -1127,28 +989,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1239,11 +1095,9 @@ spec:
                   type: string
                 type: array
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   RemoteVirtualNetwork: The reference to the remote virtual network. The remote virtual network can be in the same or
-
                   different region (preview). See here to register for the preview and learn more
-
                   (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
                 properties:
                   id:
@@ -1266,9 +1120,8 @@ spec:
                     description: 'Enabled: Indicates if encryption is enabled on the virtual network.'
                     type: boolean
                   enforcement:
-                    description: >-
+                    description: |-
                       Enforcement: If the encrypted VNet allows VM that does not support encryption. This field is for future support,
-
                       AllowUnencrypted is the only supported value at general availability.
                     type: string
                 type: object
@@ -1279,13 +1132,10 @@ spec:
                 description: 'Type: Resource type.'
                 type: string
               useRemoteGateways:
-                description: >-
+                description: |-
                   UseRemoteGateways: If remote gateways can be used on this virtual network. If the flag is set to true, and
-
                   allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for
-
                   transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a
-
                   gateway.
                 type: boolean
             type: object
@@ -1310,35 +1160,25 @@ spec:
     name: v1api20240301storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20240301.VirtualNetworksVirtualNetworkPeering
-
           Generator information:
-
           - Generated from: /network/resource-manager/Microsoft.Network/stable/2024-03-01/virtualNetwork.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkName}/virtualNetworkPeerings/{virtualNetworkPeeringName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1349,9 +1189,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               allowForwardedTraffic:
@@ -1361,9 +1200,8 @@ spec:
               allowVirtualNetworkAccess:
                 type: boolean
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               doNotVerifyRemoteGateways:
@@ -1371,17 +1209,15 @@ spec:
               enableOnlyIPv6Peering:
                 type: boolean
               localAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1394,17 +1230,15 @@ spec:
                   type: string
                 type: array
               localVirtualNetworkAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1413,48 +1247,39 @@ spec:
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.VirtualNetworksVirtualNetworkPeeringOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1464,33 +1289,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1502,11 +1320,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a network.azure.com/VirtualNetwork resource
                 properties:
                   armId:
@@ -1523,17 +1339,15 @@ spec:
               peeringSyncLevel:
                 type: string
               remoteAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1542,17 +1356,15 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.VirtualNetworkBgpCommunities
-
                   Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   virtualNetworkCommunity:
@@ -1563,28 +1375,24 @@ spec:
                   type: string
                 type: array
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SubResource
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -1600,17 +1408,15 @@ spec:
                     type: object
                 type: object
               remoteVirtualNetworkAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1629,9 +1435,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               allowForwardedTraffic:
@@ -1652,28 +1457,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1698,17 +1497,15 @@ spec:
               id:
                 type: string
               localAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace_STATUS
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1721,17 +1518,15 @@ spec:
                   type: string
                 type: array
               localVirtualNetworkAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace_STATUS
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1750,17 +1545,15 @@ spec:
               provisioningState:
                 type: string
               remoteAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace_STATUS
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1769,17 +1562,15 @@ spec:
                     type: array
                 type: object
               remoteBgpCommunities:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.VirtualNetworkBgpCommunities_STATUS
-
                   Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   regionalCommunity:
@@ -1792,34 +1583,30 @@ spec:
                   type: string
                 type: array
               remoteVirtualNetwork:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SubResource_STATUS
-
                   Reference to another subresource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
                     type: string
                 type: object
               remoteVirtualNetworkAddressSpace:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.AddressSpace_STATUS
-
                   AddressSpace contains an array of IP address ranges that can be used by subnets of the virtual network.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   addressPrefixes:
@@ -1828,17 +1615,15 @@ spec:
                     type: array
                 type: object
               remoteVirtualNetworkEncryption:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.VirtualNetworkEncryption_STATUS
-
                   Indicates if encryption is enabled on virtual network and if VM without encryption is allowed in encrypted VNet.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enabled:

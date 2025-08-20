@@ -1,30 +1,44 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: subscriptions.messaging.knative.dev
   labels:
-    knative.dev/crd-install: true
+    knative.dev/crd-install: "true"
     app.kubernetes.io/version: 1.19.1
     app.kubernetes.io/name: knative-eventing
+  name: subscriptions.messaging.knative.dev
 spec:
   group: messaging.knative.dev
+  names:
+    categories:
+    - all
+    - knative
+    - messaging
+    kind: Subscription
+    plural: subscriptions
+    shortNames:
+    - sub
+    singular: subscription
+  scope: Namespaced
   versions:
-  - name: v1
-    served: true
-    storage: true
-    subresources:
-      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=="Ready")].reason
+      name: Reason
+      type: string
+    name: v1
     schema:
       openAPIV3Schema:
         description: Subscription routes events received on a Channel to a DNS name and corresponds to the subscriptions.channels.knative.dev CRD.
-        type: object
         properties:
           spec:
-            type: object
             properties:
               channel:
                 description: "Reference to a channel that will be used to create the subscription. You can specify only the following fields of the KReference: kind, apiVersion, name and namespace. The resource pointed by this KReference must meet the contract to the ChannelableSpec duck type. If the resource does not meet this contract it will be reflected in the Subscription's status.  This field is immutable. We have no good answer on what happens to the events that are currently in the channel being consumed from and what the semantics there should be. For now, you can always delete the Subscription and recreate it to point to a different channel, giving the user more control over what semantics should be used (drain the channel first, possibly have events dropped, etc.)"
-                type: object
                 properties:
                   apiVersion:
                     description: API version of the referent.
@@ -38,10 +52,10 @@ spec:
                   namespace:
                     description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is optional field, it gets defaulted to the object holding it if left out.'
                     type: string
+                type: object
                 x-kubernetes-preserve-unknown-fields: true
               delivery:
                 description: Delivery configuration
-                type: object
                 properties:
                   backoffDelay:
                     description: 'BackoffDelay is the delay before retrying. More information on Duration format: - https://www.iso.org/iso-8601-date-and-time-format.html - https://en.wikipedia.org/wiki/ISO_8601  For linear policy, backoff delay is backoffDelay*<numberOfRetries>. For exponential policy, backoff delay is backoffDelay*2^<numberOfRetries>.'
@@ -51,11 +65,9 @@ spec:
                     type: string
                   deadLetterSink:
                     description: DeadLetterSink is the sink receiving event that could not be sent to a destination.
-                    type: object
                     properties:
                       ref:
                         description: Ref points to an Addressable.
-                        type: object
                         properties:
                           apiVersion:
                             description: API version of the referent.
@@ -69,6 +81,7 @@ spec:
                           namespace:
                             description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is optional field, it gets defaulted to the object holding it if left out.'
                             type: string
+                        type: object
                       uri:
                         description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                         type: string
@@ -78,18 +91,18 @@ spec:
                       audience:
                         description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                         type: string
+                    type: object
                   retry:
                     description: Retry is the minimum number of retries the sender should attempt when sending an event before moving it to the dead letter sink.
-                    type: integer
                     format: int32
+                    type: integer
+                type: object
                 x-kubernetes-preserve-unknown-fields: true
               reply:
                 description: Reply specifies (optionally) how to handle events returned from the Subscriber target.
-                type: object
                 properties:
                   ref:
                     description: Ref points to an Addressable.
-                    type: object
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -103,6 +116,7 @@ spec:
                       namespace:
                         description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is optional field, it gets defaulted to the object holding it if left out.'
                         type: string
+                    type: object
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                     type: string
@@ -112,13 +126,12 @@ spec:
                   audience:
                     description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
+                type: object
               subscriber:
                 description: Subscriber is reference to (optional) function for processing events. Events from the Channel will be delivered here and replies are sent to a Destination as specified by the Reply.
-                type: object
                 properties:
                   ref:
                     description: Ref points to an Addressable.
-                    type: object
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -132,6 +145,7 @@ spec:
                       namespace:
                         description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is optional field, it gets defaulted to the object holding it if left out.'
                         type: string
+                    type: object
                     x-kubernetes-preserve-unknown-fields: true
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
@@ -142,8 +156,9 @@ spec:
                   audience:
                     description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
-          status:
+                type: object
             type: object
+          status:
             properties:
               annotations:
                 description: Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.
@@ -151,19 +166,18 @@ spec:
                 x-kubernetes-preserve-unknown-fields: true
               auth:
                 description: Auth provides the relevant information for OIDC authentication.
-                type: object
                 properties:
                   serviceAccountName:
                     description: ServiceAccountName is the name of the generated service account used for this components OIDC authentication.
                     type: string
                   serviceAccountNames:
                     description: ServiceAccountNames is the list of names of the generated service accounts used for this components OIDC authentication.
-                    type: array
                     items:
                       type: string
+                    type: array
+                type: object
               conditions:
                 description: Conditions the latest available observations of a resource's current state.
-                type: array
                 items:
                   type: object
                   required:
@@ -188,13 +202,13 @@ spec:
                     type:
                       description: Type of condition.
                       type: string
+                type: array
               observedGeneration:
                 description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
-                type: integer
                 format: int64
+                type: integer
               physicalSubscription:
                 description: PhysicalSubscription is the fully resolved values that this Subscription represents.
-                type: object
                 properties:
                   deadLetterSinkUri:
                     description: ReplyURI is the fully resolved URI for the spec.delivery.deadLetterSink.
@@ -223,24 +237,10 @@ spec:
                   subscriberAudience:
                     description: SubscriberAudience is the OIDC audience for the subscriberUri.
                     type: string
-    additionalPrinterColumns:
-    - name: Age
-      type: date
-      jsonPath: .metadata.creationTimestamp
-    - name: Ready
-      type: string
-      jsonPath: .status.conditions[?(@.type=="Ready")].status
-    - name: Reason
-      type: string
-      jsonPath: .status.conditions[?(@.type=="Ready")].reason
-  names:
-    kind: Subscription
-    plural: subscriptions
-    singular: subscription
-    categories:
-    - all
-    - knative
-    - messaging
-    shortNames:
-    - sub
-  scope: Namespaced
+                type: object
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

@@ -45,33 +45,24 @@ spec:
     name: v1api20211001
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2021-10-01/signalr.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,73 +70,54 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               cors:
                 description: 'Cors: Cross-Origin Resource Sharing (CORS) settings.'
                 properties:
                   allowedOrigins:
-                    description: >-
+                    description: |-
                       AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example:
-
                       http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
                     items:
                       type: string
                     type: array
                 type: object
               disableAadAuth:
-                description: >-
+                description: |-
                   DisableAadAuth: DisableLocalAuth
-
                   Enable or disable aad auth
-
                   When set as true, connection with AuthType=aad won't work.
                 type: boolean
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: DisableLocalAuth
-
                   Enable or disable local auth with AccessKey
-
                   When set as true, connection with AccessKey=xxx won't work.
                 type: boolean
               features:
-                description: >-
+                description: |-
                   Features: List of the featureFlags.
-
                   FeatureFlags that are not included in the parameters for the update operation will not be modified.
-
                   And the response will only include featureFlags that are explicitly set.
-
                   When a featureFlag is not explicitly set, its globally default value will be used
-
                   But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
                 items:
                   description: Feature of a resource, which controls the runtime behavior.
                   properties:
                     flag:
-                      description: >-
+                      description: |-
                         Flag: FeatureFlags is the supported features of Azure SignalR service.
-
                         - ServiceMode: Flag for backend server for SignalR  service. Values allowed: "Default": have your own backend server;
-
                         "Serverless": your application doesn't have a backend  server; "Classic": for backward compatibility. Support both
-
                         Default and Serverless mode but not recommended;  "PredefinedOnly": for future use.
-
                         - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log  category respectively.
-
                         - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category  respectively.
-
                         - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will  give you live
-
                         traces in real time, it will be helpful when you developing your own Azure SignalR based web application  or
-
                         self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged.
-
                         Values allowed: "true"/"false", to enable/disable live trace feature.
                       enum:
                       - EnableConnectivityLogs
@@ -159,9 +131,8 @@ spec:
                       description: 'Properties: Optional properties related to this feature.'
                       type: object
                     value:
-                      description: >-
+                      description: |-
                         Value: Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for
-
                         allowed values.
                       maxLength: 128
                       minLength: 1
@@ -190,11 +161,9 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -291,41 +260,33 @@ spec:
                     type: object
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -336,33 +297,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -374,18 +328,16 @@ spec:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       primaryConnectionString:
-                        description: >-
+                        description: |-
                           PrimaryConnectionString: indicates where the PrimaryConnectionString secret should be placed. If omitted, the secret
-
                           will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -393,18 +345,16 @@ spec:
                         - name
                         type: object
                       primaryKey:
-                        description: >-
+                        description: |-
                           PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from
-
                           Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -412,18 +362,16 @@ spec:
                         - name
                         type: object
                       secondaryConnectionString:
-                        description: >-
+                        description: |-
                           SecondaryConnectionString: indicates where the SecondaryConnectionString secret should be placed. If omitted, the secret
-
                           will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -431,18 +379,16 @@ spec:
                         - name
                         type: object
                       secondaryKey:
-                        description: >-
+                        description: |-
                           SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved
-
                           from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -452,11 +398,9 @@ spec:
                     type: object
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -467,11 +411,9 @@ spec:
                     type: string
                 type: object
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Enable or disable public network access. Default to "Enabled".
-
                   When it's Enabled, network ACLs still apply.
-
                   When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
                 type: string
               resourceLogConfiguration:
@@ -483,19 +425,15 @@ spec:
                       description: Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         enabled:
-                          description: >-
+                          description: |-
                             Enabled: Indicates whether or the resource log category is enabled.
-
                             Available values: true, false.
-
                             Case insensitive.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name: Gets or sets the resource log category's name.
-
                             Available values: ConnectivityLogs, MessagingLogs.
-
                             Case insensitive.
                           type: string
                       type: object
@@ -505,25 +443,20 @@ spec:
                 description: 'Sku: The billing information of the resource.'
                 properties:
                   capacity:
-                    description: >-
+                    description: |-
                       Capacity: Optional, integer. The unit count of the resource. 1 by default.
-
                       If present, following values are allowed:
-
                       Free: 1
-
                       Standard: 1,2,5,10,20,50,100
                     type: integer
                   name:
-                    description: >-
+                    description: |-
                       Name: The name of the SKU. Required.
-
                       Allowed values: Standard_S1, Free_F1
                     type: string
                   tier:
-                    description: >-
+                    description: |-
                       Tier: Optional tier of this particular SKU. 'Standard' or 'Free'.
-
                       `Basic` is deprecated, use `Standard` instead.
                     enum:
                     - Basic
@@ -552,11 +485,9 @@ spec:
                   templates:
                     description: 'Templates: Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.'
                     items:
-                      description: >-
+                      description: |-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         auth:
@@ -566,9 +497,8 @@ spec:
                               description: 'ManagedIdentity: Managed identity settings for upstream.'
                               properties:
                                 resource:
-                                  description: >-
+                                  description: |-
                                     Resource: The Resource indicating the App ID URI of the target resource.
-
                                     It also appears in the aud (audience) claim of the issued token.
                                   type: string
                               type: object
@@ -580,51 +510,35 @@ spec:
                               type: string
                           type: object
                         categoryPattern:
-                          description: >-
+                          description: |-
                             CategoryPattern: Gets or sets the matching pattern for category names. If not set, it matches any category.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any category name
-
                             2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and
-
                             "messages"
-
                             3. The single category name, for example, "connections", it matches the category "connections"
                           type: string
                         eventPattern:
-                          description: >-
+                          description: |-
                             EventPattern: Gets or sets the matching pattern for event names. If not set, it matches any event.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any event name
-
                             2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
-
                             3. The single event name, for example, "connect", it matches "connect"
                           type: string
                         hubPattern:
-                          description: >-
+                          description: |-
                             HubPattern: Gets or sets the matching pattern for hub names. If not set, it matches any hub.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any hub name
-
                             2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
-
                             3. The single hub name, for example, "hub1", it matches "hub1"
                           type: string
                         urlTemplate:
-                          description: >-
+                          description: |-
                             UrlTemplate: Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event}
-
                             inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
-
                             For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat`
-
                             connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
                           type: string
                       required:
@@ -650,28 +564,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -691,67 +599,49 @@ spec:
                 description: 'Cors: Cross-Origin Resource Sharing (CORS) settings.'
                 properties:
                   allowedOrigins:
-                    description: >-
+                    description: |-
                       AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example:
-
                       http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
                     items:
                       type: string
                     type: array
                 type: object
               disableAadAuth:
-                description: >-
+                description: |-
                   DisableAadAuth: DisableLocalAuth
-
                   Enable or disable aad auth
-
                   When set as true, connection with AuthType=aad won't work.
                 type: boolean
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: DisableLocalAuth
-
                   Enable or disable local auth with AccessKey
-
                   When set as true, connection with AccessKey=xxx won't work.
                 type: boolean
               externalIP:
                 description: 'ExternalIP: The publicly accessible IP of the resource.'
                 type: string
               features:
-                description: >-
+                description: |-
                   Features: List of the featureFlags.
-
                   FeatureFlags that are not included in the parameters for the update operation will not be modified.
-
                   And the response will only include featureFlags that are explicitly set.
-
                   When a featureFlag is not explicitly set, its globally default value will be used
-
                   But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
                 items:
                   description: Feature of a resource, which controls the runtime behavior.
                   properties:
                     flag:
-                      description: >-
+                      description: |-
                         Flag: FeatureFlags is the supported features of Azure SignalR service.
-
                         - ServiceMode: Flag for backend server for SignalR  service. Values allowed: "Default": have your own backend server;
-
                         "Serverless": your application doesn't have a backend  server; "Classic": for backward compatibility. Support both
-
                         Default and Serverless mode but not recommended;  "PredefinedOnly": for future use.
-
                         - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log  category respectively.
-
                         - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category  respectively.
-
                         - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will  give you live
-
                         traces in real time, it will be helpful when you developing your own Azure SignalR based web application  or
-
                         self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged.
-
                         Values allowed: "true"/"false", to enable/disable live trace feature.
                       type: string
                     properties:
@@ -760,9 +650,8 @@ spec:
                       description: 'Properties: Optional properties related to this feature.'
                       type: object
                     value:
-                      description: >-
+                      description: |-
                         Value: Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for
-
                         allowed values.
                       type: string
                   type: object
@@ -780,15 +669,13 @@ spec:
                 description: 'Identity: A class represent managed identities used for request and response'
                 properties:
                   principalId:
-                    description: >-
+                    description: |-
                       PrincipalId: Get the principal id for the system assigned identity.
-
                       Only be used in response.
                     type: string
                   tenantId:
-                    description: >-
+                    description: |-
                       TenantId: Get the tenant id for the system assigned identity.
-
                       Only be used in response
                     type: string
                   type:
@@ -876,11 +763,9 @@ spec:
                 description: 'ProvisioningState: Provisioning state of the resource.'
                 type: string
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Enable or disable public network access. Default to "Enabled".
-
                   When it's Enabled, network ACLs still apply.
-
                   When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
                 type: string
               publicPort:
@@ -895,19 +780,15 @@ spec:
                       description: Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         enabled:
-                          description: >-
+                          description: |-
                             Enabled: Indicates whether or the resource log category is enabled.
-
                             Available values: true, false.
-
                             Case insensitive.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name: Gets or sets the resource log category's name.
-
                             Available values: ConnectivityLogs, MessagingLogs.
-
                             Case insensitive.
                           type: string
                       type: object
@@ -930,31 +811,26 @@ spec:
                 description: 'Sku: The billing information of the resource.'
                 properties:
                   capacity:
-                    description: >-
+                    description: |-
                       Capacity: Optional, integer. The unit count of the resource. 1 by default.
-
                       If present, following values are allowed:
-
                       Free: 1
-
                       Standard: 1,2,5,10,20,50,100
                     type: integer
                   family:
                     description: 'Family: Not used. Retained for future use.'
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       Name: The name of the SKU. Required.
-
                       Allowed values: Standard_S1, Free_F1
                     type: string
                   size:
                     description: 'Size: Not used. Retained for future use.'
                     type: string
                   tier:
-                    description: >-
+                    description: |-
                       Tier: Optional tier of this particular SKU. 'Standard' or 'Free'.
-
                       `Basic` is deprecated, use `Standard` instead.
                     type: string
                 type: object
@@ -1001,11 +877,9 @@ spec:
                   templates:
                     description: 'Templates: Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.'
                     items:
-                      description: >-
+                      description: |-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         auth:
@@ -1015,9 +889,8 @@ spec:
                               description: 'ManagedIdentity: Managed identity settings for upstream.'
                               properties:
                                 resource:
-                                  description: >-
+                                  description: |-
                                     Resource: The Resource indicating the App ID URI of the target resource.
-
                                     It also appears in the aud (audience) claim of the issued token.
                                   type: string
                               type: object
@@ -1026,51 +899,35 @@ spec:
                               type: string
                           type: object
                         categoryPattern:
-                          description: >-
+                          description: |-
                             CategoryPattern: Gets or sets the matching pattern for category names. If not set, it matches any category.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any category name
-
                             2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and
-
                             "messages"
-
                             3. The single category name, for example, "connections", it matches the category "connections"
                           type: string
                         eventPattern:
-                          description: >-
+                          description: |-
                             EventPattern: Gets or sets the matching pattern for event names. If not set, it matches any event.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any event name
-
                             2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect"
-
                             3. The single event name, for example, "connect", it matches "connect"
                           type: string
                         hubPattern:
-                          description: >-
+                          description: |-
                             HubPattern: Gets or sets the matching pattern for hub names. If not set, it matches any hub.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any hub name
-
                             2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2"
-
                             3. The single hub name, for example, "hub1", it matches "hub1"
                           type: string
                         urlTemplate:
-                          description: >-
+                          description: |-
                             UrlTemplate: Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event}
-
                             inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
-
                             For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat`
-
                             connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
                           type: string
                       type: object
@@ -1101,35 +958,25 @@ spec:
     name: v1api20211001storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20211001.SignalR
-
           Generator information:
-
           - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2021-10-01/signalr.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1140,29 +987,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SignalRCorsSettings
-
                   Cross-Origin Resource Sharing (CORS) settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowedOrigins:
@@ -1176,17 +1019,15 @@ spec:
                 type: boolean
               features:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20211001.SignalRFeature
-
                     Feature of a resource, which controls the runtime behavior.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     flag:
@@ -1200,45 +1041,39 @@ spec:
                   type: object
                 type: array
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ManagedIdentity
-
                   A class represent managed identities used for request and response
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.UserAssignedIdentityDetails
-
                         Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1260,34 +1095,30 @@ spec:
               location:
                 type: string
               networkACLs:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SignalRNetworkACLs
-
                   Network ACLs for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   defaultAction:
                     type: string
                   privateEndpoints:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.PrivateEndpointACL
-
                         ACL for a private endpoint
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allow:
@@ -1303,17 +1134,15 @@ spec:
                       type: object
                     type: array
                   publicNetwork:
-                    description: >-
+                    description: |-
                       Storage version of v1api20211001.NetworkACL
-
                       Network ACL
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       allow:
@@ -1327,48 +1156,39 @@ spec:
                     type: object
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SignalROperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1378,33 +1198,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1418,26 +1231,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       primaryConnectionString:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1445,20 +1254,17 @@ spec:
                         - name
                         type: object
                       primaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1466,20 +1272,17 @@ spec:
                         - name
                         type: object
                       secondaryConnectionString:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1487,20 +1290,17 @@ spec:
                         - name
                         type: object
                       secondaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1512,11 +1312,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1529,32 +1327,28 @@ spec:
               publicNetworkAccess:
                 type: string
               resourceLogConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ResourceLogConfiguration
-
                   Resource log configuration of a Microsoft.SignalRService resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   categories:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.ResourceLogCategory
-
                         Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         enabled:
@@ -1565,17 +1359,15 @@ spec:
                     type: array
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ResourceSku
-
                   The billing information of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -1590,81 +1382,69 @@ spec:
                   type: string
                 type: object
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SignalRTlsSettings
-
                   TLS settings for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   clientCertEnabled:
                     type: boolean
                 type: object
               upstream:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ServerlessUpstreamSettings
-
                   The settings for the Upstream when the service is in server-less mode.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   templates:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.UpstreamTemplate
-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         auth:
-                          description: >-
+                          description: |-
                             Storage version of v1api20211001.UpstreamAuthSettings
-
                             Upstream auth settings. If not set, no auth is used for upstream messages.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             managedIdentity:
-                              description: >-
+                              description: |-
                                 Storage version of v1api20211001.ManagedIdentitySettings
-
                                 Managed identity settings for upstream.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 resource:
@@ -1693,9 +1473,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -1710,28 +1489,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1748,17 +1521,15 @@ spec:
                   type: object
                 type: array
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SignalRCorsSettings_STATUS
-
                   Cross-Origin Resource Sharing (CORS) settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowedOrigins:
@@ -1774,17 +1545,15 @@ spec:
                 type: string
               features:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20211001.SignalRFeature_STATUS
-
                     Feature of a resource, which controls the runtime behavior.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     flag:
@@ -1804,17 +1573,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ManagedIdentity_STATUS
-
                   A class represent managed identities used for request and response
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -1825,17 +1592,15 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.UserAssignedIdentityProperty_STATUS
-
                         Properties of user assigned identity.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
@@ -1852,34 +1617,30 @@ spec:
               name:
                 type: string
               networkACLs:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SignalRNetworkACLs_STATUS
-
                   Network ACLs for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   defaultAction:
                     type: string
                   privateEndpoints:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.PrivateEndpointACL_STATUS
-
                         ACL for a private endpoint
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allow:
@@ -1895,17 +1656,15 @@ spec:
                       type: object
                     type: array
                   publicNetwork:
-                    description: >-
+                    description: |-
                       Storage version of v1api20211001.NetworkACL_STATUS
-
                       Network ACL
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       allow:
@@ -1920,17 +1679,15 @@ spec:
                 type: object
               privateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20211001.PrivateEndpointConnection_STATUS_SignalR_SubResourceEmbedded
-
                     A private endpoint connection to an azure resource
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1944,32 +1701,28 @@ spec:
               publicPort:
                 type: integer
               resourceLogConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ResourceLogConfiguration_STATUS
-
                   Resource log configuration of a Microsoft.SignalRService resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   categories:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.ResourceLogCategory_STATUS
-
                         Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         enabled:
@@ -1983,17 +1736,15 @@ spec:
                 type: integer
               sharedPrivateLinkResources:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20211001.SharedPrivateLinkResource_STATUS_SignalR_SubResourceEmbedded
-
                     Describes a Shared Private Link Resource
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -2001,17 +1752,15 @@ spec:
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ResourceSku_STATUS
-
                   The billing information of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -2026,17 +1775,15 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -2057,17 +1804,15 @@ spec:
                   type: string
                 type: object
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.SignalRTlsSettings_STATUS
-
                   TLS settings for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   clientCertEnabled:
@@ -2076,64 +1821,54 @@ spec:
               type:
                 type: string
               upstream:
-                description: >-
+                description: |-
                   Storage version of v1api20211001.ServerlessUpstreamSettings_STATUS
-
                   The settings for the Upstream when the service is in server-less mode.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   templates:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20211001.UpstreamTemplate_STATUS
-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         auth:
-                          description: >-
+                          description: |-
                             Storage version of v1api20211001.UpstreamAuthSettings_STATUS
-
                             Upstream auth settings. If not set, no auth is used for upstream messages.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             managedIdentity:
-                              description: >-
+                              description: |-
                                 Storage version of v1api20211001.ManagedIdentitySettings_STATUS
-
                                 Managed identity settings for upstream.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 resource:
@@ -2177,33 +1912,24 @@ spec:
     name: v1api20240301
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2024-03-01/signalr.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2211,9 +1937,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 63
                 minLength: 3
@@ -2223,64 +1948,46 @@ spec:
                 description: 'Cors: Cross-Origin Resource Sharing (CORS) settings.'
                 properties:
                   allowedOrigins:
-                    description: >-
+                    description: |-
                       AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example:
-
                       http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
                     items:
                       type: string
                     type: array
                 type: object
               disableAadAuth:
-                description: >-
+                description: |-
                   DisableAadAuth: DisableLocalAuth
-
                   Enable or disable aad auth
-
                   When set as true, connection with AuthType=aad won't work.
                 type: boolean
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: DisableLocalAuth
-
                   Enable or disable local auth with AccessKey
-
                   When set as true, connection with AccessKey=xxx won't work.
                 type: boolean
               features:
-                description: >-
+                description: |-
                   Features: List of the featureFlags.
-
                   FeatureFlags that are not included in the parameters for the update operation will not be modified.
-
                   And the response will only include featureFlags that are explicitly set.
-
                   When a featureFlag is not explicitly set, its globally default value will be used
-
                   But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
                 items:
                   description: Feature of a resource, which controls the runtime behavior.
                   properties:
                     flag:
-                      description: >-
+                      description: |-
                         Flag: FeatureFlags is the supported features of Azure SignalR service.
-
                         - ServiceMode: Flag for backend server for SignalR  service. Values allowed: "Default": have your own backend server;
-
                         "Serverless": your application doesn't have a backend  server; "Classic": for backward compatibility. Support both
-
                         Default and Serverless mode but not recommended;  "PredefinedOnly": for future use.
-
                         - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log  category respectively.
-
                         - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category  respectively.
-
                         - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will  give you live
-
                         traces in real time, it will be helpful when you developing your own Azure SignalR based web application  or
-
                         self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged.
-
                         Values allowed: "true"/"false", to enable/disable live trace feature.
                       enum:
                       - EnableConnectivityLogs
@@ -2294,9 +2001,8 @@ spec:
                       description: 'Properties: Optional properties related to this feature.'
                       type: object
                     value:
-                      description: >-
+                      description: |-
                         Value: Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for
-
                         allowed values.
                       maxLength: 128
                       minLength: 1
@@ -2325,11 +2031,9 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2361,35 +2065,26 @@ spec:
                       description: Live trace category configuration of a Microsoft.SignalRService resource.
                       properties:
                         enabled:
-                          description: >-
+                          description: |-
                             Enabled: Indicates whether or the live trace category is enabled.
-
                             Available values: true, false.
-
                             Case insensitive.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name: Gets or sets the live trace category's name.
-
                             Available values: ConnectivityLogs, MessagingLogs.
-
                             Case insensitive.
                           type: string
                       type: object
                     type: array
                   enabled:
-                    description: >-
+                    description: |-
                       Enabled: Indicates whether or not enable live trace.
-
                       When it's set to true, live trace client can connect to the service.
-
                       Otherwise, live trace client can't connect to the service, so that you are unable to receive any log, no matter what you
-
                       configure in "categories".
-
                       Available values: true, false.
-
                       Case insensitive.
                     type: string
                 type: object
@@ -2484,41 +2179,33 @@ spec:
                     type: object
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2529,33 +2216,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2567,18 +2247,16 @@ spec:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       primaryConnectionString:
-                        description: >-
+                        description: |-
                           PrimaryConnectionString: indicates where the PrimaryConnectionString secret should be placed. If omitted, the secret
-
                           will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2586,18 +2264,16 @@ spec:
                         - name
                         type: object
                       primaryKey:
-                        description: >-
+                        description: |-
                           PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from
-
                           Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2605,18 +2281,16 @@ spec:
                         - name
                         type: object
                       secondaryConnectionString:
-                        description: >-
+                        description: |-
                           SecondaryConnectionString: indicates where the SecondaryConnectionString secret should be placed. If omitted, the secret
-
                           will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2624,18 +2298,16 @@ spec:
                         - name
                         type: object
                       secondaryKey:
-                        description: >-
+                        description: |-
                           SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved
-
                           from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2645,11 +2317,9 @@ spec:
                     type: object
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -2660,21 +2330,16 @@ spec:
                     type: string
                 type: object
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Enable or disable public network access. Default to "Enabled".
-
                   When it's Enabled, network ACLs still apply.
-
                   When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
                 type: string
               regionEndpointEnabled:
-                description: >-
+                description: |-
                   RegionEndpointEnabled: Enable or disable the regional endpoint. Default to "Enabled".
-
                   When it's Disabled, new connections will not be routed to this endpoint, however existing connections will not be
-
                   affected.
-
                   This property is replica specific. Disable the regional endpoint without replica is not allowed.
                 type: string
               resourceLogConfiguration:
@@ -2686,85 +2351,64 @@ spec:
                       description: Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         enabled:
-                          description: >-
+                          description: |-
                             Enabled: Indicates whether or the resource log category is enabled.
-
                             Available values: true, false.
-
                             Case insensitive.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name: Gets or sets the resource log category's name.
-
                             Available values: ConnectivityLogs, MessagingLogs.
-
                             Case insensitive.
                           type: string
                       type: object
                     type: array
                 type: object
               resourceStopped:
-                description: >-
+                description: |-
                   ResourceStopped: Stop or start the resource.  Default to "False".
-
                   When it's true, the data plane of the resource is shutdown.
-
                   When it's false, the data plane of the resource is started.
                 type: string
               serverless:
                 description: 'Serverless: Serverless settings.'
                 properties:
                   connectionTimeoutInSeconds:
-                    description: >-
+                    description: |-
                       ConnectionTimeoutInSeconds: Gets or sets Client Connection Timeout. Optional to be set.
-
                       Value in seconds.
-
                       Default value is 30 seconds.
-
                       Customer should set the timeout to a shorter period if messages are expected to be sent in shorter intervals,
-
                       and want the client to disconnect more quickly after the last message is sent.
-
                       You can set the timeout to a longer period if messages are expected to be sent in longer intervals,
-
                       and they want to keep the same client connection alive during this session.
-
                       The service considers the client disconnected if it hasn't received a message (including keep-alive) in this interval.
-                    maximum: 120
-                    minimum: 1
+                    maximum: 120.0
+                    minimum: 1.0
                     type: integer
                 type: object
               sku:
                 description: 'Sku: The billing information of the resource.'
                 properties:
                   capacity:
-                    description: >-
+                    description: |-
                       Capacity: Optional, integer. The unit count of the resource.
-
                       1 for Free_F1/Standard_S1/Premium_P1, 100 for Premium_P2 by default.
-
                       If present, following values are allowed:
-
                       Free_F1: 1;
-
                       Standard_S1: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-
                       Premium_P1:  1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-
                       Premium_P2:  100,200,300,400,500,600,700,800,900,1000;
                     type: integer
                   name:
-                    description: >-
+                    description: |-
                       Name: The name of the SKU. Required.
-
                       Allowed values: Standard_S1, Free_F1, Premium_P1, Premium_P2
                     type: string
                   tier:
-                    description: >-
+                    description: |-
                       Tier: Optional tier of this particular SKU. 'Standard' or 'Free'.
-
                       `Basic` is deprecated, use `Standard` instead.
                     enum:
                     - Basic
@@ -2784,9 +2428,8 @@ spec:
                 description: 'Tls: TLS settings for the resource'
                 properties:
                   clientCertEnabled:
-                    description: >-
+                    description: |-
                       ClientCertEnabled: Request client certificate during TLS handshake if enabled. Not supported for free tier. Any input
-
                       will be ignored for free tier.
                     type: boolean
                 type: object
@@ -2796,11 +2439,9 @@ spec:
                   templates:
                     description: 'Templates: Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.'
                     items:
-                      description: >-
+                      description: |-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         auth:
@@ -2810,9 +2451,8 @@ spec:
                               description: 'ManagedIdentity: Managed identity settings for upstream.'
                               properties:
                                 resource:
-                                  description: >-
+                                  description: |-
                                     Resource: The Resource indicating the App ID URI of the target resource.
-
                                     It also appears in the aud (audience) claim of the issued token.
                                   type: string
                               type: object
@@ -2824,51 +2464,35 @@ spec:
                               type: string
                           type: object
                         categoryPattern:
-                          description: >-
+                          description: |-
                             CategoryPattern: Gets or sets the matching pattern for category names. If not set, it matches any category.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any category name.
-
                             2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and
-
                             "messages".
-
                             3. The single category name, for example, "connections", it matches the category "connections".
                           type: string
                         eventPattern:
-                          description: >-
+                          description: |-
                             EventPattern: Gets or sets the matching pattern for event names. If not set, it matches any event.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any event name.
-
                             2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect".
-
                             3. The single event name, for example, "connect", it matches "connect".
                           type: string
                         hubPattern:
-                          description: >-
+                          description: |-
                             HubPattern: Gets or sets the matching pattern for hub names. If not set, it matches any hub.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any hub name.
-
                             2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2".
-
                             3. The single hub name, for example, "hub1", it matches "hub1".
                           type: string
                         urlTemplate:
-                          description: >-
+                          description: |-
                             UrlTemplate: Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event}
-
                             inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
-
                             For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat`
-
                             connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
                           type: string
                       required:
@@ -2895,28 +2519,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2936,67 +2554,49 @@ spec:
                 description: 'Cors: Cross-Origin Resource Sharing (CORS) settings.'
                 properties:
                   allowedOrigins:
-                    description: >-
+                    description: |-
                       AllowedOrigins: Gets or sets the list of origins that should be allowed to make cross-origin calls (for example:
-
                       http://example.com:12345). Use "*" to allow all. If omitted, allow all by default.
                     items:
                       type: string
                     type: array
                 type: object
               disableAadAuth:
-                description: >-
+                description: |-
                   DisableAadAuth: DisableLocalAuth
-
                   Enable or disable aad auth
-
                   When set as true, connection with AuthType=aad won't work.
                 type: boolean
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: DisableLocalAuth
-
                   Enable or disable local auth with AccessKey
-
                   When set as true, connection with AccessKey=xxx won't work.
                 type: boolean
               externalIP:
                 description: 'ExternalIP: The publicly accessible IP of the resource.'
                 type: string
               features:
-                description: >-
+                description: |-
                   Features: List of the featureFlags.
-
                   FeatureFlags that are not included in the parameters for the update operation will not be modified.
-
                   And the response will only include featureFlags that are explicitly set.
-
                   When a featureFlag is not explicitly set, its globally default value will be used
-
                   But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.
                 items:
                   description: Feature of a resource, which controls the runtime behavior.
                   properties:
                     flag:
-                      description: >-
+                      description: |-
                         Flag: FeatureFlags is the supported features of Azure SignalR service.
-
                         - ServiceMode: Flag for backend server for SignalR  service. Values allowed: "Default": have your own backend server;
-
                         "Serverless": your application doesn't have a backend  server; "Classic": for backward compatibility. Support both
-
                         Default and Serverless mode but not recommended;  "PredefinedOnly": for future use.
-
                         - EnableConnectivityLogs: "true"/"false", to enable/disable the connectivity log  category respectively.
-
                         - EnableMessagingLogs: "true"/"false", to enable/disable the connectivity log category  respectively.
-
                         - EnableLiveTrace: Live Trace allows you to know what's happening inside Azure SignalR service, it will  give you live
-
                         traces in real time, it will be helpful when you developing your own Azure SignalR based web application  or
-
                         self-troubleshooting some issues. Please note that live traces are counted as outbound messages that will be charged.
-
                         Values allowed: "true"/"false", to enable/disable live trace feature.
                       type: string
                     properties:
@@ -3005,9 +2605,8 @@ spec:
                       description: 'Properties: Optional properties related to this feature.'
                       type: object
                     value:
-                      description: >-
+                      description: |-
                         Value: Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for
-
                         allowed values.
                       type: string
                   type: object
@@ -3019,24 +2618,21 @@ spec:
                 description: 'HostNamePrefix: Deprecated.'
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. E.g.
-
                   "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                 type: string
               identity:
                 description: 'Identity: A class represent managed identities used for request and response'
                 properties:
                   principalId:
-                    description: >-
+                    description: |-
                       PrincipalId: Get the principal id for the system assigned identity.
-
                       Only be used in response.
                     type: string
                   tenantId:
-                    description: >-
+                    description: |-
                       TenantId: Get the tenant id for the system assigned identity.
-
                       Only be used in response
                     type: string
                   type:
@@ -3068,35 +2664,26 @@ spec:
                       description: Live trace category configuration of a Microsoft.SignalRService resource.
                       properties:
                         enabled:
-                          description: >-
+                          description: |-
                             Enabled: Indicates whether or the live trace category is enabled.
-
                             Available values: true, false.
-
                             Case insensitive.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name: Gets or sets the live trace category's name.
-
                             Available values: ConnectivityLogs, MessagingLogs.
-
                             Case insensitive.
                           type: string
                       type: object
                     type: array
                   enabled:
-                    description: >-
+                    description: |-
                       Enabled: Indicates whether or not enable live trace.
-
                       When it's set to true, live trace client can connect to the service.
-
                       Otherwise, live trace client can't connect to the service, so that you are unable to receive any log, no matter what you
-
                       configure in "categories".
-
                       Available values: true, false.
-
                       Case insensitive.
                     type: string
                 type: object
@@ -3170,9 +2757,8 @@ spec:
                   description: A private endpoint connection to an azure resource
                   properties:
                     id:
-                      description: >-
+                      description: |-
                         Id: Fully qualified resource ID for the resource. E.g.
-
                         "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                       type: string
                   type: object
@@ -3181,24 +2767,19 @@ spec:
                 description: 'ProvisioningState: Provisioning state of the resource.'
                 type: string
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Enable or disable public network access. Default to "Enabled".
-
                   When it's Enabled, network ACLs still apply.
-
                   When it's Disabled, public network access is always disabled no matter what you set in network ACLs.
                 type: string
               publicPort:
                 description: 'PublicPort: The publicly accessible port of the resource which is designed for browser/client side usage.'
                 type: integer
               regionEndpointEnabled:
-                description: >-
+                description: |-
                   RegionEndpointEnabled: Enable or disable the regional endpoint. Default to "Enabled".
-
                   When it's Disabled, new connections will not be routed to this endpoint, however existing connections will not be
-
                   affected.
-
                   This property is replica specific. Disable the regional endpoint without replica is not allowed.
                 type: string
               resourceLogConfiguration:
@@ -3210,30 +2791,24 @@ spec:
                       description: Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         enabled:
-                          description: >-
+                          description: |-
                             Enabled: Indicates whether or the resource log category is enabled.
-
                             Available values: true, false.
-
                             Case insensitive.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name: Gets or sets the resource log category's name.
-
                             Available values: ConnectivityLogs, MessagingLogs.
-
                             Case insensitive.
                           type: string
                       type: object
                     type: array
                 type: object
               resourceStopped:
-                description: >-
+                description: |-
                   ResourceStopped: Stop or start the resource.  Default to "False".
-
                   When it's true, the data plane of the resource is shutdown.
-
                   When it's false, the data plane of the resource is started.
                 type: string
               serverPort:
@@ -3243,21 +2818,14 @@ spec:
                 description: 'Serverless: Serverless settings.'
                 properties:
                   connectionTimeoutInSeconds:
-                    description: >-
+                    description: |-
                       ConnectionTimeoutInSeconds: Gets or sets Client Connection Timeout. Optional to be set.
-
                       Value in seconds.
-
                       Default value is 30 seconds.
-
                       Customer should set the timeout to a shorter period if messages are expected to be sent in shorter intervals,
-
                       and want the client to disconnect more quickly after the last message is sent.
-
                       You can set the timeout to a longer period if messages are expected to be sent in longer intervals,
-
                       and they want to keep the same client connection alive during this session.
-
                       The service considers the client disconnected if it hasn't received a message (including keep-alive) in this interval.
                     type: integer
                 type: object
@@ -3267,9 +2835,8 @@ spec:
                   description: Describes a Shared Private Link Resource
                   properties:
                     id:
-                      description: >-
+                      description: |-
                         Id: Fully qualified resource ID for the resource. E.g.
-
                         "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                       type: string
                   type: object
@@ -3278,37 +2845,29 @@ spec:
                 description: 'Sku: The billing information of the resource.'
                 properties:
                   capacity:
-                    description: >-
+                    description: |-
                       Capacity: Optional, integer. The unit count of the resource.
-
                       1 for Free_F1/Standard_S1/Premium_P1, 100 for Premium_P2 by default.
-
                       If present, following values are allowed:
-
                       Free_F1: 1;
-
                       Standard_S1: 1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-
                       Premium_P1:  1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100;
-
                       Premium_P2:  100,200,300,400,500,600,700,800,900,1000;
                     type: integer
                   family:
                     description: 'Family: Not used. Retained for future use.'
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       Name: The name of the SKU. Required.
-
                       Allowed values: Standard_S1, Free_F1, Premium_P1, Premium_P2
                     type: string
                   size:
                     description: 'Size: Not used. Retained for future use.'
                     type: string
                   tier:
-                    description: >-
+                    description: |-
                       Tier: Optional tier of this particular SKU. 'Standard' or 'Free'.
-
                       `Basic` is deprecated, use `Standard` instead.
                     type: string
                 type: object
@@ -3343,9 +2902,8 @@ spec:
                 description: 'Tls: TLS settings for the resource'
                 properties:
                   clientCertEnabled:
-                    description: >-
+                    description: |-
                       ClientCertEnabled: Request client certificate during TLS handshake if enabled. Not supported for free tier. Any input
-
                       will be ignored for free tier.
                     type: boolean
                 type: object
@@ -3358,11 +2916,9 @@ spec:
                   templates:
                     description: 'Templates: Gets or sets the list of Upstream URL templates. Order matters, and the first matching template takes effects.'
                     items:
-                      description: >-
+                      description: |-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         auth:
@@ -3372,9 +2928,8 @@ spec:
                               description: 'ManagedIdentity: Managed identity settings for upstream.'
                               properties:
                                 resource:
-                                  description: >-
+                                  description: |-
                                     Resource: The Resource indicating the App ID URI of the target resource.
-
                                     It also appears in the aud (audience) claim of the issued token.
                                   type: string
                               type: object
@@ -3383,51 +2938,35 @@ spec:
                               type: string
                           type: object
                         categoryPattern:
-                          description: >-
+                          description: |-
                             CategoryPattern: Gets or sets the matching pattern for category names. If not set, it matches any category.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any category name.
-
                             2. Combine multiple categories with ",", for example "connections,messages", it matches category "connections" and
-
                             "messages".
-
                             3. The single category name, for example, "connections", it matches the category "connections".
                           type: string
                         eventPattern:
-                          description: >-
+                          description: |-
                             EventPattern: Gets or sets the matching pattern for event names. If not set, it matches any event.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any event name.
-
                             2. Combine multiple events with ",", for example "connect,disconnect", it matches event "connect" and "disconnect".
-
                             3. The single event name, for example, "connect", it matches "connect".
                           type: string
                         hubPattern:
-                          description: >-
+                          description: |-
                             HubPattern: Gets or sets the matching pattern for hub names. If not set, it matches any hub.
-
                             There are 3 kind of patterns supported:
-
                             1. "*", it to matches any hub name.
-
                             2. Combine multiple hubs with ",", for example "hub1,hub2", it matches "hub1" and "hub2".
-
                             3. The single hub name, for example, "hub1", it matches "hub1".
                           type: string
                         urlTemplate:
-                          description: >-
+                          description: |-
                             UrlTemplate: Gets or sets the Upstream URL template. You can use 3 predefined parameters {hub}, {category} {event}
-
                             inside the template, the value of the Upstream URL is dynamically calculated when the client request comes in.
-
                             For example, if the urlTemplate is `http://example.com/{hub}/api/{event}`, with a client request from hub `chat`
-
                             connects, it will first POST to this URL: `http://example.com/chat/api/connect`.
                           type: string
                       type: object
@@ -3458,35 +2997,25 @@ spec:
     name: v1api20240301storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20240301.SignalR
-
           Generator information:
-
           - Generated from: /signalr/resource-manager/Microsoft.SignalRService/stable/2024-03-01/signalr.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.SignalRService/signalR/{resourceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -3497,29 +3026,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SignalRCorsSettings
-
                   Cross-Origin Resource Sharing (CORS) settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowedOrigins:
@@ -3533,17 +3058,15 @@ spec:
                 type: boolean
               features:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240301.SignalRFeature
-
                     Feature of a resource, which controls the runtime behavior.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     flag:
@@ -3557,45 +3080,39 @@ spec:
                   type: object
                 type: array
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ManagedIdentity
-
                   A class represent managed identities used for request and response
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.UserAssignedIdentityDetails
-
                         Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -3615,32 +3132,28 @@ spec:
               kind:
                 type: string
               liveTraceConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.LiveTraceConfiguration
-
                   Live trace configuration of a Microsoft.SignalRService resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   categories:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.LiveTraceCategory
-
                         Live trace category configuration of a Microsoft.SignalRService resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         enabled:
@@ -3655,34 +3168,30 @@ spec:
               location:
                 type: string
               networkACLs:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SignalRNetworkACLs
-
                   Network ACLs for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   defaultAction:
                     type: string
                   ipRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.IPRule
-
                         An IP rule
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
@@ -3693,17 +3202,15 @@ spec:
                     type: array
                   privateEndpoints:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.PrivateEndpointACL
-
                         ACL for a private endpoint
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allow:
@@ -3719,17 +3226,15 @@ spec:
                       type: object
                     type: array
                   publicNetwork:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240301.NetworkACL
-
                       Network ACL
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       allow:
@@ -3743,48 +3248,39 @@ spec:
                     type: object
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SignalROperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3794,33 +3290,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3834,26 +3323,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       primaryConnectionString:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -3861,20 +3346,17 @@ spec:
                         - name
                         type: object
                       primaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -3882,20 +3364,17 @@ spec:
                         - name
                         type: object
                       secondaryConnectionString:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -3903,20 +3382,17 @@ spec:
                         - name
                         type: object
                       secondaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -3928,11 +3404,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -3947,32 +3421,28 @@ spec:
               regionEndpointEnabled:
                 type: string
               resourceLogConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ResourceLogConfiguration
-
                   Resource log configuration of a Microsoft.SignalRService resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   categories:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.ResourceLogCategory
-
                         Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         enabled:
@@ -3985,34 +3455,30 @@ spec:
               resourceStopped:
                 type: string
               serverless:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ServerlessSettings
-
                   Serverless settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   connectionTimeoutInSeconds:
                     type: integer
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ResourceSku
-
                   The billing information of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -4027,81 +3493,69 @@ spec:
                   type: string
                 type: object
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SignalRTlsSettings
-
                   TLS settings for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   clientCertEnabled:
                     type: boolean
                 type: object
               upstream:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ServerlessUpstreamSettings
-
                   The settings for the Upstream when the service is in server-less mode.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   templates:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.UpstreamTemplate
-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         auth:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240301.UpstreamAuthSettings
-
                             Upstream auth settings. If not set, no auth is used for upstream messages.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             managedIdentity:
-                              description: >-
+                              description: |-
                                 Storage version of v1api20240301.ManagedIdentitySettings
-
                                 Managed identity settings for upstream.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 resource:
@@ -4130,9 +3584,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -4147,28 +3600,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -4185,17 +3632,15 @@ spec:
                   type: object
                 type: array
               cors:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SignalRCorsSettings_STATUS
-
                   Cross-Origin Resource Sharing (CORS) settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   allowedOrigins:
@@ -4211,17 +3656,15 @@ spec:
                 type: string
               features:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240301.SignalRFeature_STATUS
-
                     Feature of a resource, which controls the runtime behavior.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     flag:
@@ -4241,17 +3684,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ManagedIdentity_STATUS
-
                   A class represent managed identities used for request and response
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -4262,17 +3703,15 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.UserAssignedIdentityProperty_STATUS
-
                         Properties of user assigned identity.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
@@ -4285,32 +3724,28 @@ spec:
               kind:
                 type: string
               liveTraceConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.LiveTraceConfiguration_STATUS
-
                   Live trace configuration of a Microsoft.SignalRService resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   categories:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.LiveTraceCategory_STATUS
-
                         Live trace category configuration of a Microsoft.SignalRService resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         enabled:
@@ -4327,34 +3762,30 @@ spec:
               name:
                 type: string
               networkACLs:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SignalRNetworkACLs_STATUS
-
                   Network ACLs for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   defaultAction:
                     type: string
                   ipRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.IPRule_STATUS
-
                         An IP rule
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
@@ -4365,17 +3796,15 @@ spec:
                     type: array
                   privateEndpoints:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.PrivateEndpointACL_STATUS
-
                         ACL for a private endpoint
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         allow:
@@ -4391,17 +3820,15 @@ spec:
                       type: object
                     type: array
                   publicNetwork:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240301.NetworkACL_STATUS
-
                       Network ACL
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       allow:
@@ -4416,17 +3843,15 @@ spec:
                 type: object
               privateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240301.PrivateEndpointConnection_STATUS_SignalR_SubResourceEmbedded
-
                     A private endpoint connection to an azure resource
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -4442,32 +3867,28 @@ spec:
               regionEndpointEnabled:
                 type: string
               resourceLogConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ResourceLogConfiguration_STATUS
-
                   Resource log configuration of a Microsoft.SignalRService resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   categories:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.ResourceLogCategory_STATUS
-
                         Resource log category configuration of a Microsoft.SignalRService resource.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         enabled:
@@ -4482,17 +3903,15 @@ spec:
               serverPort:
                 type: integer
               serverless:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ServerlessSettings_STATUS
-
                   Serverless settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   connectionTimeoutInSeconds:
@@ -4500,17 +3919,15 @@ spec:
                 type: object
               sharedPrivateLinkResources:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20240301.SharedPrivateLinkResource_STATUS_SignalR_SubResourceEmbedded
-
                     Describes a Shared Private Link Resource
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -4518,17 +3935,15 @@ spec:
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ResourceSku_STATUS
-
                   The billing information of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -4543,17 +3958,15 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -4574,17 +3987,15 @@ spec:
                   type: string
                 type: object
               tls:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.SignalRTlsSettings_STATUS
-
                   TLS settings for the resource
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   clientCertEnabled:
@@ -4593,64 +4004,54 @@ spec:
               type:
                 type: string
               upstream:
-                description: >-
+                description: |-
                   Storage version of v1api20240301.ServerlessUpstreamSettings_STATUS
-
                   The settings for the Upstream when the service is in server-less mode.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   templates:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240301.UpstreamTemplate_STATUS
-
                         Upstream template item settings. It defines the Upstream URL of the incoming requests.
-
                         The template defines the pattern
-
                         of the event, the hub or the category of the incoming request that matches current URL template.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         auth:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240301.UpstreamAuthSettings_STATUS
-
                             Upstream auth settings. If not set, no auth is used for upstream messages.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             managedIdentity:
-                              description: >-
+                              description: |-
                                 Storage version of v1api20240301.ManagedIdentitySettings_STATUS
-
                                 Managed identity settings for upstream.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 resource:

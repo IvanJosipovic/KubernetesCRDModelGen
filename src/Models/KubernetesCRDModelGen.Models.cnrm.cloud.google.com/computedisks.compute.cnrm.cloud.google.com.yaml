@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computedisks.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -87,46 +86,32 @@ spec:
                 - diskRef
                 type: object
               description:
-                description: >-
+                description: |-
                   Immutable. An optional description of this resource. Provide this property when
-
                   you create the resource.
                 type: string
               diskEncryptionKey:
-                description: >-
+                description: |-
                   Immutable. Encrypts the disk using a customer-supplied encryption key.
 
-
                   After you encrypt a disk with a customer-supplied key, you must
-
                   provide the same key if you use the disk later (e.g. to create a disk
-
                   snapshot or an image, or to attach the disk to a virtual machine).
 
-
                   Customer-supplied encryption keys do not protect access to metadata of
-
                   the disk.
 
-
                   If you do not provide an encryption key when creating the disk, then
-
                   the disk will be encrypted using an automatically generated key and
-
                   you do not need to provide a key to use the disk later.
                 properties:
                   kmsKeyRef:
-                    description: >-
+                    description: |-
                       The encryption key used to encrypt the disk. Your project's Compute
-
                       Engine System service account
-
                       ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com')
-
                       must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this
-
                       feature. See
-
                       https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
                     oneOf:
                     - not:
@@ -154,9 +139,8 @@ spec:
                         type: string
                     type: object
                   kmsKeyServiceAccountRef:
-                    description: >-
+                    description: |-
                       The service account used for the encryption request for the given KMS key.
-
                       If absent, the Compute Engine Service Agent service account is used.
                     oneOf:
                     - not:
@@ -184,9 +168,8 @@ spec:
                         type: string
                     type: object
                   rawKey:
-                    description: >-
+                    description: |-
                       Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in
-
                       RFC 4648 base64 to either encrypt or decrypt this resource.
                     oneOf:
                     - not:
@@ -222,11 +205,9 @@ spec:
                         type: object
                     type: object
                   rsaEncryptedKey:
-                    description: >-
+                    description: |-
                       Immutable. Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
-
                       customer-supplied encryption key to either encrypt or decrypt
-
                       this resource. You can provide either the rawKey or the rsaEncryptedKey.
                     oneOf:
                     - not:
@@ -262,22 +243,19 @@ spec:
                         type: object
                     type: object
                   sha256:
-                    description: >-
+                    description: |-
                       The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
-
                       encryption key that protects this resource.
                     type: string
                 type: object
               enableConfidentialCompute:
-                description: >-
+                description: |-
                   Immutable. Whether this disk is using confidential compute mode.
-
                   Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.
                 type: boolean
               guestOsFeatures:
-                description: >-
+                description: |-
                   Immutable. A list of features to enable on the guest operating system.
-
                   Applicable only for bootable disks.
                 items:
                   properties:
@@ -330,15 +308,11 @@ spec:
                 description: Immutable. Indicates whether or not the disk can be read/write attached to more than one instance.
                 type: boolean
               physicalBlockSizeBytes:
-                description: >-
+                description: |-
                   Immutable. Physical block size of the persistent disk, in bytes. If not present
-
                   in a request, a default value is used. Currently supported sizes
-
                   are 4096 and 16384, other sizes may be added in the future.
-
                   If an unsupported value is requested, the error message will list
-
                   the supported values for the caller's project.
                 type: integer
               projectRef:
@@ -369,19 +343,15 @@ spec:
                     type: string
                 type: object
               provisionedIops:
-                description: >-
+                description: |-
                   Indicates how many IOPS must be provisioned for the disk.
-
                   Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
-
                   allows for an update of IOPS every 4 hours. To update your hyperdisk more frequently, you'll need to manually delete and recreate it.
                 type: integer
               provisionedThroughput:
-                description: >-
+                description: |-
                   Indicates how much Throughput must be provisioned for the disk.
-
                   Note: Updating currently is only supported by hyperdisk skus without the need to delete and recreate the disk, hyperdisk
-
                   allows for an update of Throughput every 4 hours. To update your hyperdisk more frequently, you'll need to manually delete and recreate it.
                 type: integer
               replicaZones:
@@ -394,9 +364,8 @@ spec:
                 type: string
               resourcePolicies:
                 items:
-                  description: >-
+                  description: |-
                     Resource policies applied to this disk for automatic snapshot creations.
-
                     This field only applies for zonal compute disk resources.
                   oneOf:
                   - not:
@@ -425,25 +394,17 @@ spec:
                   type: object
                 type: array
               size:
-                description: >-
+                description: |-
                   Size of the persistent disk, specified in GB. You can specify this
-
                   field when creating a persistent disk using the 'image' or
-
                   'snapshot' parameter, or specify it alone to create an empty
-
                   persistent disk.
 
-
                   If you specify this field along with 'image' or 'snapshot',
-
                   the value must not be less than the size of the image
-
                   or the size of the snapshot.
 
-
                   Upsizing the disk is mutable, but downsizing the disk
-
                   requires re-creating the resource.
                 type: integer
               snapshotRef:
@@ -501,23 +462,17 @@ spec:
                     type: string
                 type: object
               sourceImageEncryptionKey:
-                description: >-
+                description: |-
                   Immutable. The customer-supplied encryption key of the source image. Required if
-
                   the source image is protected by a customer-supplied encryption key.
                 properties:
                   kmsKeyRef:
-                    description: >-
+                    description: |-
                       The encryption key used to encrypt the disk. Your project's Compute
-
                       Engine System service account
-
                       ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com')
-
                       must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this
-
                       feature. See
-
                       https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
                     oneOf:
                     - not:
@@ -545,9 +500,8 @@ spec:
                         type: string
                     type: object
                   kmsKeyServiceAccountRef:
-                    description: >-
+                    description: |-
                       The service account used for the encryption request for the given KMS key.
-
                       If absent, the Compute Engine Service Agent service account is used.
                     oneOf:
                     - not:
@@ -575,38 +529,29 @@ spec:
                         type: string
                     type: object
                   rawKey:
-                    description: >-
+                    description: |-
                       Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in
-
                       RFC 4648 base64 to either encrypt or decrypt this resource.
                     type: string
                   sha256:
-                    description: >-
+                    description: |-
                       The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
-
                       encryption key that protects this resource.
                     type: string
                 type: object
               sourceSnapshotEncryptionKey:
-                description: >-
+                description: |-
                   Immutable. The customer-supplied encryption key of the source snapshot. Required
-
                   if the source snapshot is protected by a customer-supplied encryption
-
                   key.
                 properties:
                   kmsKeyRef:
-                    description: >-
+                    description: |-
                       The encryption key used to encrypt the disk. Your project's Compute
-
                       Engine System service account
-
                       ('service-{{PROJECT_NUMBER}}@compute-system.iam.gserviceaccount.com')
-
                       must have 'roles/cloudkms.cryptoKeyEncrypterDecrypter' to use this
-
                       feature. See
-
                       https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
                     oneOf:
                     - not:
@@ -634,9 +579,8 @@ spec:
                         type: string
                     type: object
                   kmsKeyServiceAccountRef:
-                    description: >-
+                    description: |-
                       The service account used for the encryption request for the given KMS key.
-
                       If absent, the Compute Engine Service Agent service account is used.
                     oneOf:
                     - not:
@@ -664,22 +608,19 @@ spec:
                         type: string
                     type: object
                   rawKey:
-                    description: >-
+                    description: |-
                       Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in
-
                       RFC 4648 base64 to either encrypt or decrypt this resource.
                     type: string
                   sha256:
-                    description: >-
+                    description: |-
                       The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
-
                       encryption key that protects this resource.
                     type: string
                 type: object
               type:
-                description: >-
+                description: |-
                   Immutable. URL of the disk type resource describing which disk type to use to
-
                   create the disk. Provide this when creating the disk.
                 type: string
             required:
@@ -712,9 +653,8 @@ spec:
                 description: Creation timestamp in RFC3339 text format.
                 type: string
               labelFingerprint:
-                description: >-
+                description: |-
                   The fingerprint used for optimistic locking of this resource.  Used
-
                   internally during updates.
                 type: string
               lastAttachTimestamp:
@@ -729,43 +669,31 @@ spec:
               selfLink:
                 type: string
               sourceDiskId:
-                description: >-
+                description: |-
                   The ID value of the disk used to create this image. This value may
-
                   be used to determine whether the image was taken from the current
-
                   or a previous instance of a given disk name.
                 type: string
               sourceImageId:
-                description: >-
+                description: |-
                   The ID value of the image used to create this disk. This value
-
                   identifies the exact image that was used to create this persistent
-
                   disk. For example, if you created the persistent disk from an image
-
                   that was later deleted and recreated under the same name, the source
-
                   image ID would identify the exact version of the image that was used.
                 type: string
               sourceSnapshotId:
-                description: >-
+                description: |-
                   The unique ID of the snapshot used to create this disk. This value
-
                   identifies the exact snapshot that was used to create this persistent
-
                   disk. For example, if you created the persistent disk from a snapshot
-
                   that was later deleted and recreated under the same name, the source
-
                   snapshot ID would identify the exact version of the snapshot that was
-
                   used.
                 type: string
               users:
-                description: >-
+                description: |-
                   Links to the users of the disk (attached instances) in form:
-
                   project/zones/zone/instances/instance.
                 items:
                   type: string
@@ -780,7 +708,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

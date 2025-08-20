@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: eventarcchannels.eventarc.cnrm.cloud.google.com
 spec:
   group: eventarc.cnrm.cloud.google.com
@@ -55,14 +54,11 @@ spec:
             description: EventarcChannelSpec defines the desired state of EventarcChannel
             properties:
               kmsKeyRef:
-                description: >-
+                description: |-
                   Resource name of a KMS crypto key (managed by the user) used to
-
                   encrypt/decrypt their event data.
 
-
                   It must match the pattern
-
                   `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
                 oneOf:
                 - not:
@@ -221,7 +217,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: identityplatformconfigs.identityplatform.cnrm.cloud.google.com
 spec:
   group: identityplatform.cnrm.cloud.google.com
@@ -81,9 +80,8 @@ spec:
                             - external
                           properties:
                             external:
-                              description: >-
+                              description: |-
                                 HTTP URI trigger for the Cloud Function.
-
 
                                 Allowed value: The `httpsTrigger.url` field of a `CloudFunctionsFunction` resource.
                               type: string
@@ -160,23 +158,19 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           The default cloud parent org or folder that the tenant project should be created under. The parent resource name should be in the format of "<type>/<number>", such as "folders/123" or "organizations/456". If the value is not set, the tenant will be created under the same organization or folder as the agent project.
 
-
                           Allowed values:
-
                           * The Google Cloud resource name of a `Folder` resource (format: `folders/{{name}}`).
-
                           * The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).
                         type: string
                       kind:
                         description: 'Kind of the referent. Allowed values: Folder'
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           [WARNING] Organization not yet supported in Config Connector, use 'external' field to reference existing resources.
-
                           Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                         type: string
                       namespace:
@@ -376,9 +370,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The project of the resource
-
 
                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                     type: string
@@ -599,7 +592,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -36,25 +36,18 @@ spec:
         description: Instance is the Schema for the Instances API. Manages a VM instance resource within GCE.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -94,21 +87,16 @@ spec:
                     items:
                       properties:
                         deviceName:
-                          description: >-
+                          description: |-
                             Name with which the attached disk will be accessible
-
                             under /dev/disk/by-id/google-*
                           type: string
                         diskEncryptionKeyRawSecretRef:
-                          description: >-
+                          description: |-
                             A 256-bit [customer-supplied encryption key]
-
                             (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                             encoded in RFC 4648 base64
-
                             to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                             may be set.
                           properties:
                             key:
@@ -121,11 +109,9 @@ spec:
                           - name
                           type: object
                         diskEncryptionKeyRsaSecretRef:
-                          description: >-
+                          description: |-
                             Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                             (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                             may be set.
                           properties:
                             key:
@@ -141,29 +127,22 @@ spec:
                           description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                           type: string
                         forceAttach:
-                          description: >-
+                          description: |-
                             boolean field that determines whether to force attach the regional
-
                             disk even if it's currently attached to another instance. If you try to force attach a zonal
-
                             disk to an instance, you will receive an error. Setting this parameter cause VM recreation.
                           type: boolean
                         kmsKeySelfLink:
-                          description: >-
+                          description: |-
                             The self_link of the encryption key that is
-
                             stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                             may be set.
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Either "READ_ONLY" or "READ_WRITE", defaults to "READ_WRITE"
-
                             If you have a persistent disk with data that you want to share
-
                             between multiple instances, detach it from any read-write instances and
-
                             attach it to one or more instances in read-only mode.
                           type: string
                         source:
@@ -172,33 +151,26 @@ spec:
                       type: object
                     type: array
                   bootDisk:
-                    description: >-
+                    description: |-
                       The boot disk for the instance.
-
                       Structure is documented below.
                     properties:
                       autoDelete:
-                        description: >-
+                        description: |-
                           Whether the disk will be auto-deleted when the instance
-
                           is deleted. Defaults to true.
                         type: boolean
                       deviceName:
-                        description: >-
+                        description: |-
                           Name with which attached disk will be accessible.
-
                           On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.
                         type: string
                       diskEncryptionKeyRawSecretRef:
-                        description: >-
+                        description: |-
                           A 256-bit [customer-supplied encryption key]
-
                           (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                           encoded in RFC 4648 base64
-
                           to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                           may be set.
                         properties:
                           key:
@@ -211,9 +183,8 @@ spec:
                         - name
                         type: object
                       diskEncryptionKeyRsaSecretRef:
-                        description: >-
+                        description: |-
                           Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                           (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
                         properties:
                           key:
@@ -229,11 +200,9 @@ spec:
                         description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                         type: string
                       forceAttach:
-                        description: >-
+                        description: |-
                           boolean field that determines whether to force attach the regional
-
                           disk even if it's currently attached to another instance. If you try to force attach a zonal
-
                           disk to an instance, you will receive an error. Setting this parameter cause VM recreation.
                         type: boolean
                       guestOsFeatures:
@@ -242,40 +211,29 @@ spec:
                           type: string
                         type: array
                       initializeParams:
-                        description: >-
+                        description: |-
                           Parameters for a new disk that will be created
-
                           alongside the new instance. Either initialize_params or source must be set.
-
                           Structure is documented below.
                         properties:
                           architecture:
                             description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
                             type: string
                           enableConfidentialCompute:
-                            description: >-
+                            description: |-
                               Whether this disk is using confidential compute mode.
-
                               Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.
                             type: boolean
                           image:
-                            description: >-
+                            description: |-
                               The image from which to initialize this disk. This can be
-
                               one of: the image's self_link, projects/{project}/global/images/{image},
-
                               projects/{project}/global/images/family/{family}, global/images/{image},
-
                               global/images/family/{family}, family/{family}, {project}/{family},
-
                               {project}/{image}, {family}, or {image}. If referred by family, the
-
                               images names must include the family name. If they don't, use the
-
                               google_compute_image data source.
-
                               For instance, the image centos-6-v20180104 includes its family name centos-6.
-
                               These images can be referred by family name here.
                             type: string
                           imageRef:
@@ -292,26 +250,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -325,9 +277,8 @@ spec:
                             description: Selector for a Image in compute to populate image.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -343,26 +294,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -373,43 +318,29 @@ spec:
                           labels:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               A map of key/value label pairs to assign to the instance.
-
                               Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                               Please refer to the field 'effective_labels' for all of the labels present on the resource.
                             type: object
                           provisionedIops:
-                            description: >-
+                            description: |-
                               Indicates how many IOPS to provision for the disk.
-
                               This sets the number of I/O operations per second that the disk can handle.
-
                               For more details,see the Hyperdisk documentation.
-
                               Note: Updating currently is only supported for hyperdisk skus via disk update
-
                               api/gcloud without the need to delete and recreate the disk, hyperdisk allows
-
                               for an update of IOPS every 4 hours. To update your hyperdisk more frequently,
-
                               you'll need to manually delete and recreate it.
                             type: number
                           provisionedThroughput:
-                            description: >-
+                            description: |-
                               Indicates how much throughput to provision for the disk.
-
                               This sets the number of throughput mb per second that the disk can handle.
-
                               For more details,see the Hyperdisk documentation.
-
                               Note: Updating currently is only supported for hyperdisk skus via disk update
-
                               api/gcloud without the need to delete and recreate the disk, hyperdisk allows
-
                               for an update of throughput every 4 hours. To update your hyperdisk more
-
                               frequently, you'll need to manually delete and recreate it.
                             type: number
                           resourceManagerTags:
@@ -424,9 +355,8 @@ spec:
                               type: string
                             type: array
                           size:
-                            description: >-
+                            description: |-
                               The size of the image in gigabytes. If not specified, it
-
                               will inherit the size of its base image.
                             type: number
                           snapshot:
@@ -436,26 +366,20 @@ spec:
                             description: Encryption key used to decrypt the given image. Structure is documented below.
                             properties:
                               kmsKeySelfLink:
-                                description: >-
+                                description: |-
                                   The self_link of the encryption key that is
-
                                   stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                                 type: string
                               rawKeySecretRef:
-                                description: >-
+                                description: |-
                                   A 256-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                                   encoded in RFC 4648 base64
-
                                   to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -468,11 +392,9 @@ spec:
                                 - name
                                 type: object
                               rsaEncryptedKeySecretRef:
-                                description: >-
+                                description: |-
                                   Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -489,26 +411,20 @@ spec:
                             description: Encryption key used to decrypt the given snapshot. Structure is documented below.
                             properties:
                               kmsKeySelfLink:
-                                description: >-
+                                description: |-
                                   The self_link of the encryption key that is
-
                                   stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                                 type: string
                               rawKeySecretRef:
-                                description: >-
+                                description: |-
                                   A 256-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                                   encoded in RFC 4648 base64
-
                                   to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -521,11 +437,9 @@ spec:
                                 - name
                                 type: object
                               rsaEncryptedKeySecretRef:
-                                description: >-
+                                description: |-
                                   Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -539,9 +453,8 @@ spec:
                                 type: object
                             type: object
                           storagePool:
-                            description: >-
+                            description: |-
                               The URL or the name of the storage pool in which the new disk is created.
-
                               For example:
                             type: string
                           type:
@@ -552,36 +465,28 @@ spec:
                         description: The disk interface to use for attaching this disk; either SCSI or NVME.
                         type: string
                       kmsKeySelfLink:
-                        description: >-
+                        description: |-
                           The self_link of the encryption key that is
-
                           stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link,
-
                           disk_encryption_key_rsa and disk_encryption_key_raw
-
                           may be set.
                         type: string
                       mode:
-                        description: >-
+                        description: |-
                           The mode in which to attach this disk, either READ_WRITE
-
                           or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
                         type: string
                       source:
-                        description: >-
+                        description: |-
                           The name or self_link of the existing disk (such as those managed by
-
                           google_compute_disk) or disk image. To create an instance from a snapshot, first create a
-
                           google_compute_disk from a snapshot and reference it here.
                         type: string
                     type: object
                   canIpForward:
-                    description: >-
+                    description: |-
                       Whether to allow sending and receiving of
-
                       packets with non-matching source or destination IPs.
-
                       This defaults to false.
                     type: boolean
                   confidentialInstanceConfig:
@@ -595,38 +500,30 @@ spec:
                         type: boolean
                     type: object
                   deletionProtection:
-                    description: >-
+                    description: |-
                       Enable deletion protection on this instance. Defaults to false.
-
                       Note: you must disable deletion protection before removing the resource (e.g.
                     type: boolean
                   description:
                     description: A brief description of this resource.
                     type: string
                   desiredStatus:
-                    description: >-
+                    description: |-
                       Desired status of the instance. Either
-
                       "RUNNING", "SUSPENDED" or "TERMINATED".
                     type: string
                   enableDisplay:
-                    description: >-
+                    description: |-
                       Enable Virtual Displays on this instance.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     type: boolean
                   guestAccelerator:
-                    description: >-
+                    description: |-
                       List of the type and count of accelerator cards attached to the instance. Structure documented below.
-
                       Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE.
-
                       Note: As of 6.0.0, argument syntax
-
                       is no longer supported for this field in favor of block syntax.
-
                       To dynamically set a list of guest accelerators, use dynamic blocks.
-
                       To set an empty list, use a single guest_accelerator block with count = 0.
                     items:
                       properties:
@@ -639,20 +536,17 @@ spec:
                       type: object
                     type: array
                   hostname:
-                    description: >-
+                    description: |-
                       A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
-
                       Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods.
-
                       The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
                     type: string
                   instanceEncryptionKey:
                     description: Configuration for data encryption on the instance with encryption keys. Structure is documented below.
                     properties:
                       kmsKeySelfLink:
-                        description: >-
+                        description: |-
                           The self_link of the encryption key that is
-
                           stored in Google Cloud KMS to encrypt the data on this instance.
                         type: string
                       kmsKeyServiceAccount:
@@ -665,11 +559,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       A map of key/value label pairs to assign to the instance.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field 'effective_labels' for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -679,61 +571,43 @@ spec:
                   metadata:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Metadata key/value pairs to make available from
-
                       within the instance. Ssh keys attached in the Cloud Console will be removed.
-
                       Add them to your config in order to keep them attached to your instance.
-
                       A list of predefined metadata keys (e.g. ssh-keys) can be found here
                     type: object
                     x-kubernetes-map-type: granular
                   metadataStartupScript:
-                    description: >-
+                    description: |-
                       An alternative to using the
-
                       startup-script metadata key, except this one forces the instance to be recreated
-
                       (thus re-running the script) if it is changed. This replaces the startup-script
-
                       metadata key on the created instance and thus the two mechanisms are not
-
                       allowed to be used simultaneously.  Users are free to use either mechanism - the
-
                       only distinction is that this separate attribute will cause a recreate on
-
                       modification.  On import, metadata_startup_script will not be set - if you
-
                       choose to specify it you will see a diff immediately after import causing a
-
                       destroy/recreate operation.
                     type: string
                   minCpuPlatform:
-                    description: >-
+                    description: |-
                       Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
-
                       Intel Haswell or Intel Skylake. See the complete list here.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     type: string
                   networkInterface:
-                    description: >-
+                    description: |-
                       Networks to attach to the instance. This can
-
                       be specified multiple times. Structure is documented below.
                     items:
                       properties:
                         accessConfig:
-                          description: >-
+                          description: |-
                             Access configurations, i.e. IPs via which this
-
                             instance can be accessed via the Internet. Omit to ensure that the instance
-
                             is not accessible from the Internet.g. via
-
                             tunnel or because it is running on another cloud instance on that network).
-
                             This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
@@ -741,44 +615,35 @@ spec:
                                 description: If the instance has an access config, either the given external ip (in the nat_ip field) or the ephemeral (generated) ip (if you didn't provide one).
                                 type: string
                               networkTier:
-                                description: >-
+                                description: |-
                                   The service-level to be provided for IPv6 traffic when the
-
                                   subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
                                 type: string
                               publicPtrDomainName:
-                                description: >-
+                                description: |-
                                   The domain name to be used when creating DNSv6
-
                                   records for the external IPv6 ranges..
                                 type: string
                             type: object
                           type: array
                         aliasIpRange:
-                          description: >-
+                          description: |-
                             An
-
                             array of alias IP ranges for this network interface. Can only be specified for network
-
                             interfaces on subnet-mode networks. Structure documented below.
                           items:
                             properties:
                               ipCidrRange:
-                                description: >-
+                                description: |-
                                   The IP CIDR range represented by this alias IP range. This IP CIDR range
-
                                   must belong to the specified subnetwork and cannot contain IP addresses reserved by
-
                                   system or used by other network interfaces. This range may be a single IP address
-
                                   (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
                                 type: string
                               subnetworkRangeName:
-                                description: >-
+                                description: |-
                                   The subnetwork secondary range name specifying
-
                                   the secondary range from which to allocate the IP CIDR range for this alias IP
-
                                   range. If left unspecified, the primary range of the subnetwork will be used.
                                 type: string
                             type: object
@@ -786,43 +651,35 @@ spec:
                         internalIpv6PrefixLength:
                           type: number
                         ipv6AccessConfig:
-                          description: >-
+                          description: |-
                             An array of IPv6 access configurations for this interface.
-
                             Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
-
                             specified, then this instance will have no external IPv6 Internet access. Structure documented below.
                           items:
                             properties:
                               externalIpv6:
-                                description: >-
+                                description: |-
                                   The first IPv6 address of the external IPv6 range associated
-
                                   with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig.
-
                                   To use a static external IP address, it must be unused and in the same region as the instance's zone.
-
                                   If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
                                 type: string
                               externalIpv6PrefixLength:
                                 description: The prefix length of the external IPv6 range.
                                 type: string
                               name:
-                                description: >-
+                                description: |-
                                   A unique name for the resource, required by GCE.
-
                                   Changing this forces a new resource to be created.
                                 type: string
                               networkTier:
-                                description: >-
+                                description: |-
                                   The service-level to be provided for IPv6 traffic when the
-
                                   subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
                                 type: string
                               publicPtrDomainName:
-                                description: >-
+                                description: |-
                                   The domain name to be used when creating DNSv6
-
                                   records for the external IPv6 ranges..
                                 type: string
                             type: object
@@ -830,20 +687,17 @@ spec:
                         ipv6Address:
                           type: string
                         network:
-                          description: >-
+                          description: |-
                             The name or self_link of the network to attach this interface to.
-
                             Either network or subnetwork must be provided. If network isn't provided it will
-
                             be inferred from the subnetwork.
                           type: string
                         networkAttachment:
                           description: 'The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.'
                           type: string
                         networkIp:
-                          description: >-
+                          description: |-
                             The private IP address to assign to the instance. If
-
                             empty, the address will be automatically assigned.
                           type: string
                         networkRef:
@@ -860,26 +714,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -893,9 +741,8 @@ spec:
                           description: Selector for a Network in compute to populate network.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -911,26 +758,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -948,29 +789,20 @@ spec:
                           description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
-                          description: >-
+                          description: |-
                             The name or self_link of the subnetwork to attach this
-
                             interface to. Either network or subnetwork must be provided. If network isn't provided
-
                             it will be inferred from the subnetwork. The subnetwork must exist in the same region this
-
                             instance will be created in. If the network resource is in
-
                             legacy mode, do not specify this field. If the
-
                             network is in auto subnet mode, specifying the subnetwork is optional. If the network is
-
                             in custom subnet mode, specifying the subnetwork is required.
                           type: string
                         subnetworkProject:
-                          description: >-
+                          description: |-
                             The project in which the subnetwork belongs.
-
                             If the subnetwork is a self_link, this field is set to the project
-
                             defined in the subnetwork self_link. If the subnetwork is a name and this
-
                             field is not provided, the provider project is used.
                           type: string
                         subnetworkRef:
@@ -987,26 +819,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1020,9 +846,8 @@ spec:
                           description: Selector for a Subnetwork in compute to populate subnetwork.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -1038,26 +863,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1068,22 +887,19 @@ spec:
                       type: object
                     type: array
                   networkPerformanceConfig:
-                    description: >-
+                    description: |-
                       os-features, and network_interface.0.nic-type must be GVNIC
-
                       in order for this setting to take effect.
                     properties:
                       totalEgressBandwidthTier:
-                        description: >-
+                        description: |-
                           The egress bandwidth tier to enable.
-
                           Possible values: TIER_1, DEFAULT
                         type: string
                     type: object
                   params:
-                    description: >-
+                    description: |-
                       Additional instance parameters.
-
                       .
                     properties:
                       resourceManagerTags:
@@ -1094,21 +910,18 @@ spec:
                         x-kubernetes-map-type: granular
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs. If it
-
                       is not provided, the provider project is used.
                     type: string
                   reservationAffinity:
-                    description: >-
+                    description: |-
                       Specifies the reservations that this instance can consume from.
-
                       Structure is documented below.
                     properties:
                       specificReservation:
-                        description: >-
+                        description: |-
                           Specifies the label selector for the reservation to use..
-
                           Structure is documented below.
                         properties:
                           key:
@@ -1130,17 +943,14 @@ spec:
                       type: string
                     type: array
                   scheduling:
-                    description: >-
+                    description: |-
                       The scheduling strategy to use. More details about
-
                       this configuration option are detailed below.
                     properties:
                       automaticRestart:
-                        description: >-
+                        description: |-
                           Specifies if the instance should be
-
                           restarted if it was terminated by Compute Engine (not a user).
-
                           Defaults to true.
                         type: boolean
                       availabilityDomain:
@@ -1153,19 +963,15 @@ spec:
                         description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                         properties:
                           nanos:
-                            description: >-
+                            description: |-
                               Span of time that's a fraction of a second at nanosecond
-
                               resolution. Durations less than one second are represented with a 0
-
                               seconds field and a positive nanos field. Must be from 0 to
-
                               999,999,999 inclusive.
                             type: number
                           seconds:
-                            description: >-
+                            description: |-
                               Span of time at a resolution of a second.
-
                               The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
@@ -1173,19 +979,15 @@ spec:
                         description: The duration of the instance. Instance will run and be terminated after then, the termination action could be defined in instance_termination_action. Structure is documented below.
                         properties:
                           nanos:
-                            description: >-
+                            description: |-
                               Span of time that's a fraction of a second at nanosecond
-
                               resolution. Durations less than one second are represented with a 0
-
                               seconds field and a positive nanos field. Must be from 0 to
-
                               999,999,999 inclusive.
                             type: number
                           seconds:
-                            description: >-
+                            description: |-
                               Span of time at a resolution of a second.
-
                               The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
@@ -1193,15 +995,11 @@ spec:
                         description: The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
                         type: number
                       nodeAffinities:
-                        description: >-
+                        description: |-
                           Specifies node affinities or anti-affinities
-
                           to determine which sole-tenant nodes your instances and managed instance
-
                           groups will use as host systems. Read more on sole-tenant node creation
-
                           here.
-
                           Structure documented below.
                         items:
                           properties:
@@ -1209,9 +1007,8 @@ spec:
                               description: Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
                               type: string
                             operator:
-                              description: >-
+                              description: |-
                                 The operator. Can be IN for node-affinities
-
                                 or NOT_IN for anti-affinities.
                               type: string
                             values:
@@ -1223,11 +1020,9 @@ spec:
                           type: object
                         type: array
                       onHostMaintenance:
-                        description: >-
+                        description: |-
                           Describes maintenance behavior for the
-
                           instance. Can be MIGRATE or TERMINATE, for more info, read
-
                           here.
                         type: string
                       onInstanceStopAction:
@@ -1238,21 +1033,16 @@ spec:
                             type: boolean
                         type: object
                       preemptible:
-                        description: >-
+                        description: |-
                           Specifies if the instance is preemptible.
-
                           If this field is set to true, then automatic_restart must be
-
                           set to false.  Defaults to false.
                         type: boolean
                       provisioningModel:
-                        description: >-
+                        description: |-
                           Describe the type of preemptible VM. This field accepts the value STANDARD or SPOT. If the value is STANDARD, there will be no discount. If this   is set to SPOT,
-
                           preemptible should be true and automatic_restart should be
-
                           false. For more info about
-
                           SPOT, read here
                         type: string
                       terminationTime:
@@ -1260,41 +1050,35 @@ spec:
                         type: string
                     type: object
                   scratchDisk:
-                    description: >-
+                    description: |-
                       Scratch disks to attach to the instance. This can be
-
                       specified multiple times for multiple scratch disks. Structure is documented below.
                     items:
                       properties:
                         deviceName:
-                          description: >-
+                          description: |-
                             Name with which attached disk will be accessible.
-
                             On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.
                           type: string
                         interface:
                           description: The disk interface to use for attaching this disk; either SCSI or NVME.
                           type: string
                         size:
-                          description: >-
+                          description: |-
                             The size of the image in gigabytes. If not specified, it
-
                             will inherit the size of its base image.
                           type: number
                       type: object
                     type: array
                   serviceAccount:
-                    description: >-
+                    description: |-
                       Service account to attach to the instance.
-
                       Structure is documented below.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     properties:
                       email:
-                        description: >-
+                        description: |-
                           The service account e-mail address.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: string
                       emailRef:
@@ -1311,26 +1095,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1344,9 +1122,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate email.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1362,26 +1139,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1390,13 +1161,10 @@ spec:
                             type: object
                         type: object
                       scopes:
-                        description: >-
+                        description: |-
                           A list of service scopes. Both OAuth2 URLs and gcloud
-
                           short names are supported. To allow full access to all Cloud APIs, use the
-
                           cloud-platform scope. See a complete list of scopes here.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         items:
                           type: string
@@ -1404,29 +1172,24 @@ spec:
                         x-kubernetes-list-type: set
                     type: object
                   shieldedInstanceConfig:
-                    description: >-
+                    description: |-
                       Enable Shielded VM on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
-
                       Note: shielded_instance_config can only be used with boot images with shielded vm support. See the complete list here.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     properties:
                       enableIntegrityMonitoring:
-                        description: >-
+                        description: |-
                           - Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                       enableSecureBoot:
-                        description: >-
+                        description: |-
                           - Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                       enableVtpm:
-                        description: >-
+                        description: |-
                           - Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                     type: object
@@ -1443,25 +1206,16 @@ spec:
                 - zone
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   advancedMachineFeatures:
@@ -1494,21 +1248,16 @@ spec:
                     items:
                       properties:
                         deviceName:
-                          description: >-
+                          description: |-
                             Name with which the attached disk will be accessible
-
                             under /dev/disk/by-id/google-*
                           type: string
                         diskEncryptionKeyRawSecretRef:
-                          description: >-
+                          description: |-
                             A 256-bit [customer-supplied encryption key]
-
                             (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                             encoded in RFC 4648 base64
-
                             to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                             may be set.
                           properties:
                             key:
@@ -1521,11 +1270,9 @@ spec:
                           - name
                           type: object
                         diskEncryptionKeyRsaSecretRef:
-                          description: >-
+                          description: |-
                             Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                             (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                             may be set.
                           properties:
                             key:
@@ -1541,29 +1288,22 @@ spec:
                           description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                           type: string
                         forceAttach:
-                          description: >-
+                          description: |-
                             boolean field that determines whether to force attach the regional
-
                             disk even if it's currently attached to another instance. If you try to force attach a zonal
-
                             disk to an instance, you will receive an error. Setting this parameter cause VM recreation.
                           type: boolean
                         kmsKeySelfLink:
-                          description: >-
+                          description: |-
                             The self_link of the encryption key that is
-
                             stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                             may be set.
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Either "READ_ONLY" or "READ_WRITE", defaults to "READ_WRITE"
-
                             If you have a persistent disk with data that you want to share
-
                             between multiple instances, detach it from any read-write instances and
-
                             attach it to one or more instances in read-only mode.
                           type: string
                         source:
@@ -1572,33 +1312,26 @@ spec:
                       type: object
                     type: array
                   bootDisk:
-                    description: >-
+                    description: |-
                       The boot disk for the instance.
-
                       Structure is documented below.
                     properties:
                       autoDelete:
-                        description: >-
+                        description: |-
                           Whether the disk will be auto-deleted when the instance
-
                           is deleted. Defaults to true.
                         type: boolean
                       deviceName:
-                        description: >-
+                        description: |-
                           Name with which attached disk will be accessible.
-
                           On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.
                         type: string
                       diskEncryptionKeyRawSecretRef:
-                        description: >-
+                        description: |-
                           A 256-bit [customer-supplied encryption key]
-
                           (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                           encoded in RFC 4648 base64
-
                           to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                           may be set.
                         properties:
                           key:
@@ -1611,9 +1344,8 @@ spec:
                         - name
                         type: object
                       diskEncryptionKeyRsaSecretRef:
-                        description: >-
+                        description: |-
                           Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                           (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
                         properties:
                           key:
@@ -1629,11 +1361,9 @@ spec:
                         description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                         type: string
                       forceAttach:
-                        description: >-
+                        description: |-
                           boolean field that determines whether to force attach the regional
-
                           disk even if it's currently attached to another instance. If you try to force attach a zonal
-
                           disk to an instance, you will receive an error. Setting this parameter cause VM recreation.
                         type: boolean
                       guestOsFeatures:
@@ -1642,40 +1372,29 @@ spec:
                           type: string
                         type: array
                       initializeParams:
-                        description: >-
+                        description: |-
                           Parameters for a new disk that will be created
-
                           alongside the new instance. Either initialize_params or source must be set.
-
                           Structure is documented below.
                         properties:
                           architecture:
                             description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
                             type: string
                           enableConfidentialCompute:
-                            description: >-
+                            description: |-
                               Whether this disk is using confidential compute mode.
-
                               Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.
                             type: boolean
                           image:
-                            description: >-
+                            description: |-
                               The image from which to initialize this disk. This can be
-
                               one of: the image's self_link, projects/{project}/global/images/{image},
-
                               projects/{project}/global/images/family/{family}, global/images/{image},
-
                               global/images/family/{family}, family/{family}, {project}/{family},
-
                               {project}/{image}, {family}, or {image}. If referred by family, the
-
                               images names must include the family name. If they don't, use the
-
                               google_compute_image data source.
-
                               For instance, the image centos-6-v20180104 includes its family name centos-6.
-
                               These images can be referred by family name here.
                             type: string
                           imageRef:
@@ -1692,26 +1411,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1725,9 +1438,8 @@ spec:
                             description: Selector for a Image in compute to populate image.
                             properties:
                               matchControllerRef:
-                                description: >-
+                                description: |-
                                   MatchControllerRef ensures an object with the same controller reference
-
                                   as the selecting object is selected.
                                 type: boolean
                               matchLabels:
@@ -1743,26 +1455,20 @@ spec:
                                 properties:
                                   resolution:
                                     default: Required
-                                    description: >-
+                                    description: |-
                                       Resolution specifies whether resolution of this reference is required.
-
                                       The default is 'Required', which means the reconcile will fail if the
-
                                       reference cannot be resolved. 'Optional' means this reference will be
-
                                       a no-op if it cannot be resolved.
                                     enum:
                                     - Required
                                     - Optional
                                     type: string
                                   resolve:
-                                    description: >-
+                                    description: |-
                                       Resolve specifies when this reference should be resolved. The default
-
                                       is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                       the corresponding field is not present. Use 'Always' to resolve the
-
                                       reference on every reconcile.
                                     enum:
                                     - Always
@@ -1773,43 +1479,29 @@ spec:
                           labels:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               A map of key/value label pairs to assign to the instance.
-
                               Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                               Please refer to the field 'effective_labels' for all of the labels present on the resource.
                             type: object
                           provisionedIops:
-                            description: >-
+                            description: |-
                               Indicates how many IOPS to provision for the disk.
-
                               This sets the number of I/O operations per second that the disk can handle.
-
                               For more details,see the Hyperdisk documentation.
-
                               Note: Updating currently is only supported for hyperdisk skus via disk update
-
                               api/gcloud without the need to delete and recreate the disk, hyperdisk allows
-
                               for an update of IOPS every 4 hours. To update your hyperdisk more frequently,
-
                               you'll need to manually delete and recreate it.
                             type: number
                           provisionedThroughput:
-                            description: >-
+                            description: |-
                               Indicates how much throughput to provision for the disk.
-
                               This sets the number of throughput mb per second that the disk can handle.
-
                               For more details,see the Hyperdisk documentation.
-
                               Note: Updating currently is only supported for hyperdisk skus via disk update
-
                               api/gcloud without the need to delete and recreate the disk, hyperdisk allows
-
                               for an update of throughput every 4 hours. To update your hyperdisk more
-
                               frequently, you'll need to manually delete and recreate it.
                             type: number
                           resourceManagerTags:
@@ -1824,9 +1516,8 @@ spec:
                               type: string
                             type: array
                           size:
-                            description: >-
+                            description: |-
                               The size of the image in gigabytes. If not specified, it
-
                               will inherit the size of its base image.
                             type: number
                           snapshot:
@@ -1836,26 +1527,20 @@ spec:
                             description: Encryption key used to decrypt the given image. Structure is documented below.
                             properties:
                               kmsKeySelfLink:
-                                description: >-
+                                description: |-
                                   The self_link of the encryption key that is
-
                                   stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                                 type: string
                               rawKeySecretRef:
-                                description: >-
+                                description: |-
                                   A 256-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                                   encoded in RFC 4648 base64
-
                                   to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -1868,11 +1553,9 @@ spec:
                                 - name
                                 type: object
                               rsaEncryptedKeySecretRef:
-                                description: >-
+                                description: |-
                                   Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -1889,26 +1572,20 @@ spec:
                             description: Encryption key used to decrypt the given snapshot. Structure is documented below.
                             properties:
                               kmsKeySelfLink:
-                                description: >-
+                                description: |-
                                   The self_link of the encryption key that is
-
                                   stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                                 type: string
                               rawKeySecretRef:
-                                description: >-
+                                description: |-
                                   A 256-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption),
-
                                   encoded in RFC 4648 base64
-
                                   to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -1921,11 +1598,9 @@ spec:
                                 - name
                                 type: object
                               rsaEncryptedKeySecretRef:
-                                description: >-
+                                description: |-
                                   Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 properties:
                                   key:
@@ -1939,9 +1614,8 @@ spec:
                                 type: object
                             type: object
                           storagePool:
-                            description: >-
+                            description: |-
                               The URL or the name of the storage pool in which the new disk is created.
-
                               For example:
                             type: string
                           type:
@@ -1952,36 +1626,28 @@ spec:
                         description: The disk interface to use for attaching this disk; either SCSI or NVME.
                         type: string
                       kmsKeySelfLink:
-                        description: >-
+                        description: |-
                           The self_link of the encryption key that is
-
                           stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link,
-
                           disk_encryption_key_rsa and disk_encryption_key_raw
-
                           may be set.
                         type: string
                       mode:
-                        description: >-
+                        description: |-
                           The mode in which to attach this disk, either READ_WRITE
-
                           or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
                         type: string
                       source:
-                        description: >-
+                        description: |-
                           The name or self_link of the existing disk (such as those managed by
-
                           google_compute_disk) or disk image. To create an instance from a snapshot, first create a
-
                           google_compute_disk from a snapshot and reference it here.
                         type: string
                     type: object
                   canIpForward:
-                    description: >-
+                    description: |-
                       Whether to allow sending and receiving of
-
                       packets with non-matching source or destination IPs.
-
                       This defaults to false.
                     type: boolean
                   confidentialInstanceConfig:
@@ -1995,38 +1661,30 @@ spec:
                         type: boolean
                     type: object
                   deletionProtection:
-                    description: >-
+                    description: |-
                       Enable deletion protection on this instance. Defaults to false.
-
                       Note: you must disable deletion protection before removing the resource (e.g.
                     type: boolean
                   description:
                     description: A brief description of this resource.
                     type: string
                   desiredStatus:
-                    description: >-
+                    description: |-
                       Desired status of the instance. Either
-
                       "RUNNING", "SUSPENDED" or "TERMINATED".
                     type: string
                   enableDisplay:
-                    description: >-
+                    description: |-
                       Enable Virtual Displays on this instance.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     type: boolean
                   guestAccelerator:
-                    description: >-
+                    description: |-
                       List of the type and count of accelerator cards attached to the instance. Structure documented below.
-
                       Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE.
-
                       Note: As of 6.0.0, argument syntax
-
                       is no longer supported for this field in favor of block syntax.
-
                       To dynamically set a list of guest accelerators, use dynamic blocks.
-
                       To set an empty list, use a single guest_accelerator block with count = 0.
                     items:
                       properties:
@@ -2039,20 +1697,17 @@ spec:
                       type: object
                     type: array
                   hostname:
-                    description: >-
+                    description: |-
                       A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
-
                       Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods.
-
                       The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
                     type: string
                   instanceEncryptionKey:
                     description: Configuration for data encryption on the instance with encryption keys. Structure is documented below.
                     properties:
                       kmsKeySelfLink:
-                        description: >-
+                        description: |-
                           The self_link of the encryption key that is
-
                           stored in Google Cloud KMS to encrypt the data on this instance.
                         type: string
                       kmsKeyServiceAccount:
@@ -2065,11 +1720,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       A map of key/value label pairs to assign to the instance.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field 'effective_labels' for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -2079,61 +1732,43 @@ spec:
                   metadata:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Metadata key/value pairs to make available from
-
                       within the instance. Ssh keys attached in the Cloud Console will be removed.
-
                       Add them to your config in order to keep them attached to your instance.
-
                       A list of predefined metadata keys (e.g. ssh-keys) can be found here
                     type: object
                     x-kubernetes-map-type: granular
                   metadataStartupScript:
-                    description: >-
+                    description: |-
                       An alternative to using the
-
                       startup-script metadata key, except this one forces the instance to be recreated
-
                       (thus re-running the script) if it is changed. This replaces the startup-script
-
                       metadata key on the created instance and thus the two mechanisms are not
-
                       allowed to be used simultaneously.  Users are free to use either mechanism - the
-
                       only distinction is that this separate attribute will cause a recreate on
-
                       modification.  On import, metadata_startup_script will not be set - if you
-
                       choose to specify it you will see a diff immediately after import causing a
-
                       destroy/recreate operation.
                     type: string
                   minCpuPlatform:
-                    description: >-
+                    description: |-
                       Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
-
                       Intel Haswell or Intel Skylake. See the complete list here.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     type: string
                   networkInterface:
-                    description: >-
+                    description: |-
                       Networks to attach to the instance. This can
-
                       be specified multiple times. Structure is documented below.
                     items:
                       properties:
                         accessConfig:
-                          description: >-
+                          description: |-
                             Access configurations, i.e. IPs via which this
-
                             instance can be accessed via the Internet. Omit to ensure that the instance
-
                             is not accessible from the Internet.g. via
-
                             tunnel or because it is running on another cloud instance on that network).
-
                             This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
@@ -2141,44 +1776,35 @@ spec:
                                 description: If the instance has an access config, either the given external ip (in the nat_ip field) or the ephemeral (generated) ip (if you didn't provide one).
                                 type: string
                               networkTier:
-                                description: >-
+                                description: |-
                                   The service-level to be provided for IPv6 traffic when the
-
                                   subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
                                 type: string
                               publicPtrDomainName:
-                                description: >-
+                                description: |-
                                   The domain name to be used when creating DNSv6
-
                                   records for the external IPv6 ranges..
                                 type: string
                             type: object
                           type: array
                         aliasIpRange:
-                          description: >-
+                          description: |-
                             An
-
                             array of alias IP ranges for this network interface. Can only be specified for network
-
                             interfaces on subnet-mode networks. Structure documented below.
                           items:
                             properties:
                               ipCidrRange:
-                                description: >-
+                                description: |-
                                   The IP CIDR range represented by this alias IP range. This IP CIDR range
-
                                   must belong to the specified subnetwork and cannot contain IP addresses reserved by
-
                                   system or used by other network interfaces. This range may be a single IP address
-
                                   (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
                                 type: string
                               subnetworkRangeName:
-                                description: >-
+                                description: |-
                                   The subnetwork secondary range name specifying
-
                                   the secondary range from which to allocate the IP CIDR range for this alias IP
-
                                   range. If left unspecified, the primary range of the subnetwork will be used.
                                 type: string
                             type: object
@@ -2186,43 +1812,35 @@ spec:
                         internalIpv6PrefixLength:
                           type: number
                         ipv6AccessConfig:
-                          description: >-
+                          description: |-
                             An array of IPv6 access configurations for this interface.
-
                             Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
-
                             specified, then this instance will have no external IPv6 Internet access. Structure documented below.
                           items:
                             properties:
                               externalIpv6:
-                                description: >-
+                                description: |-
                                   The first IPv6 address of the external IPv6 range associated
-
                                   with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig.
-
                                   To use a static external IP address, it must be unused and in the same region as the instance's zone.
-
                                   If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
                                 type: string
                               externalIpv6PrefixLength:
                                 description: The prefix length of the external IPv6 range.
                                 type: string
                               name:
-                                description: >-
+                                description: |-
                                   A unique name for the resource, required by GCE.
-
                                   Changing this forces a new resource to be created.
                                 type: string
                               networkTier:
-                                description: >-
+                                description: |-
                                   The service-level to be provided for IPv6 traffic when the
-
                                   subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
                                 type: string
                               publicPtrDomainName:
-                                description: >-
+                                description: |-
                                   The domain name to be used when creating DNSv6
-
                                   records for the external IPv6 ranges..
                                 type: string
                             type: object
@@ -2230,20 +1848,17 @@ spec:
                         ipv6Address:
                           type: string
                         network:
-                          description: >-
+                          description: |-
                             The name or self_link of the network to attach this interface to.
-
                             Either network or subnetwork must be provided. If network isn't provided it will
-
                             be inferred from the subnetwork.
                           type: string
                         networkAttachment:
                           description: 'The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.'
                           type: string
                         networkIp:
-                          description: >-
+                          description: |-
                             The private IP address to assign to the instance. If
-
                             empty, the address will be automatically assigned.
                           type: string
                         networkRef:
@@ -2260,26 +1875,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -2293,9 +1902,8 @@ spec:
                           description: Selector for a Network in compute to populate network.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -2311,26 +1919,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -2348,29 +1950,20 @@ spec:
                           description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
-                          description: >-
+                          description: |-
                             The name or self_link of the subnetwork to attach this
-
                             interface to. Either network or subnetwork must be provided. If network isn't provided
-
                             it will be inferred from the subnetwork. The subnetwork must exist in the same region this
-
                             instance will be created in. If the network resource is in
-
                             legacy mode, do not specify this field. If the
-
                             network is in auto subnet mode, specifying the subnetwork is optional. If the network is
-
                             in custom subnet mode, specifying the subnetwork is required.
                           type: string
                         subnetworkProject:
-                          description: >-
+                          description: |-
                             The project in which the subnetwork belongs.
-
                             If the subnetwork is a self_link, this field is set to the project
-
                             defined in the subnetwork self_link. If the subnetwork is a name and this
-
                             field is not provided, the provider project is used.
                           type: string
                         subnetworkRef:
@@ -2387,26 +1980,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -2420,9 +2007,8 @@ spec:
                           description: Selector for a Subnetwork in compute to populate subnetwork.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -2438,26 +2024,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -2468,22 +2048,19 @@ spec:
                       type: object
                     type: array
                   networkPerformanceConfig:
-                    description: >-
+                    description: |-
                       os-features, and network_interface.0.nic-type must be GVNIC
-
                       in order for this setting to take effect.
                     properties:
                       totalEgressBandwidthTier:
-                        description: >-
+                        description: |-
                           The egress bandwidth tier to enable.
-
                           Possible values: TIER_1, DEFAULT
                         type: string
                     type: object
                   params:
-                    description: >-
+                    description: |-
                       Additional instance parameters.
-
                       .
                     properties:
                       resourceManagerTags:
@@ -2494,21 +2071,18 @@ spec:
                         x-kubernetes-map-type: granular
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs. If it
-
                       is not provided, the provider project is used.
                     type: string
                   reservationAffinity:
-                    description: >-
+                    description: |-
                       Specifies the reservations that this instance can consume from.
-
                       Structure is documented below.
                     properties:
                       specificReservation:
-                        description: >-
+                        description: |-
                           Specifies the label selector for the reservation to use..
-
                           Structure is documented below.
                         properties:
                           key:
@@ -2530,17 +2104,14 @@ spec:
                       type: string
                     type: array
                   scheduling:
-                    description: >-
+                    description: |-
                       The scheduling strategy to use. More details about
-
                       this configuration option are detailed below.
                     properties:
                       automaticRestart:
-                        description: >-
+                        description: |-
                           Specifies if the instance should be
-
                           restarted if it was terminated by Compute Engine (not a user).
-
                           Defaults to true.
                         type: boolean
                       availabilityDomain:
@@ -2553,19 +2124,15 @@ spec:
                         description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                         properties:
                           nanos:
-                            description: >-
+                            description: |-
                               Span of time that's a fraction of a second at nanosecond
-
                               resolution. Durations less than one second are represented with a 0
-
                               seconds field and a positive nanos field. Must be from 0 to
-
                               999,999,999 inclusive.
                             type: number
                           seconds:
-                            description: >-
+                            description: |-
                               Span of time at a resolution of a second.
-
                               The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
@@ -2573,19 +2140,15 @@ spec:
                         description: The duration of the instance. Instance will run and be terminated after then, the termination action could be defined in instance_termination_action. Structure is documented below.
                         properties:
                           nanos:
-                            description: >-
+                            description: |-
                               Span of time that's a fraction of a second at nanosecond
-
                               resolution. Durations less than one second are represented with a 0
-
                               seconds field and a positive nanos field. Must be from 0 to
-
                               999,999,999 inclusive.
                             type: number
                           seconds:
-                            description: >-
+                            description: |-
                               Span of time at a resolution of a second.
-
                               The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
@@ -2593,15 +2156,11 @@ spec:
                         description: The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
                         type: number
                       nodeAffinities:
-                        description: >-
+                        description: |-
                           Specifies node affinities or anti-affinities
-
                           to determine which sole-tenant nodes your instances and managed instance
-
                           groups will use as host systems. Read more on sole-tenant node creation
-
                           here.
-
                           Structure documented below.
                         items:
                           properties:
@@ -2609,9 +2168,8 @@ spec:
                               description: Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
                               type: string
                             operator:
-                              description: >-
+                              description: |-
                                 The operator. Can be IN for node-affinities
-
                                 or NOT_IN for anti-affinities.
                               type: string
                             values:
@@ -2623,11 +2181,9 @@ spec:
                           type: object
                         type: array
                       onHostMaintenance:
-                        description: >-
+                        description: |-
                           Describes maintenance behavior for the
-
                           instance. Can be MIGRATE or TERMINATE, for more info, read
-
                           here.
                         type: string
                       onInstanceStopAction:
@@ -2638,21 +2194,16 @@ spec:
                             type: boolean
                         type: object
                       preemptible:
-                        description: >-
+                        description: |-
                           Specifies if the instance is preemptible.
-
                           If this field is set to true, then automatic_restart must be
-
                           set to false.  Defaults to false.
                         type: boolean
                       provisioningModel:
-                        description: >-
+                        description: |-
                           Describe the type of preemptible VM. This field accepts the value STANDARD or SPOT. If the value is STANDARD, there will be no discount. If this   is set to SPOT,
-
                           preemptible should be true and automatic_restart should be
-
                           false. For more info about
-
                           SPOT, read here
                         type: string
                       terminationTime:
@@ -2660,41 +2211,35 @@ spec:
                         type: string
                     type: object
                   scratchDisk:
-                    description: >-
+                    description: |-
                       Scratch disks to attach to the instance. This can be
-
                       specified multiple times for multiple scratch disks. Structure is documented below.
                     items:
                       properties:
                         deviceName:
-                          description: >-
+                          description: |-
                             Name with which attached disk will be accessible.
-
                             On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.
                           type: string
                         interface:
                           description: The disk interface to use for attaching this disk; either SCSI or NVME.
                           type: string
                         size:
-                          description: >-
+                          description: |-
                             The size of the image in gigabytes. If not specified, it
-
                             will inherit the size of its base image.
                           type: number
                       type: object
                     type: array
                   serviceAccount:
-                    description: >-
+                    description: |-
                       Service account to attach to the instance.
-
                       Structure is documented below.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     properties:
                       email:
-                        description: >-
+                        description: |-
                           The service account e-mail address.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: string
                       emailRef:
@@ -2711,26 +2256,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2744,9 +2283,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate email.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2762,26 +2300,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2790,13 +2322,10 @@ spec:
                             type: object
                         type: object
                       scopes:
-                        description: >-
+                        description: |-
                           A list of service scopes. Both OAuth2 URLs and gcloud
-
                           short names are supported. To allow full access to all Cloud APIs, use the
-
                           cloud-platform scope. See a complete list of scopes here.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         items:
                           type: string
@@ -2804,29 +2333,24 @@ spec:
                         x-kubernetes-list-type: set
                     type: object
                   shieldedInstanceConfig:
-                    description: >-
+                    description: |-
                       Enable Shielded VM on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
-
                       Note: shielded_instance_config can only be used with boot images with shielded vm support. See the complete list here.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     properties:
                       enableIntegrityMonitoring:
-                        description: >-
+                        description: |-
                           - Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                       enableSecureBoot:
-                        description: >-
+                        description: |-
                           - Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                       enableVtpm:
-                        description: >-
+                        description: |-
                           - Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                     type: object
@@ -2840,22 +2364,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -2870,11 +2388,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -2888,13 +2404,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -2948,46 +2461,36 @@ spec:
                     items:
                       properties:
                         deviceName:
-                          description: >-
+                          description: |-
                             Name with which the attached disk will be accessible
-
                             under /dev/disk/by-id/google-*
                           type: string
                         diskEncryptionKeySha256:
-                          description: >-
+                          description: |-
                             The RFC 4648 base64
-
                             encoded SHA-256 hash of the [customer-supplied encryption key]
-
                             (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.
                           type: string
                         diskEncryptionServiceAccount:
                           description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                           type: string
                         forceAttach:
-                          description: >-
+                          description: |-
                             boolean field that determines whether to force attach the regional
-
                             disk even if it's currently attached to another instance. If you try to force attach a zonal
-
                             disk to an instance, you will receive an error. Setting this parameter cause VM recreation.
                           type: boolean
                         kmsKeySelfLink:
-                          description: >-
+                          description: |-
                             The self_link of the encryption key that is
-
                             stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link, disk_encryption_key_rsa and disk_encryption_key_raw
-
                             may be set.
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Either "READ_ONLY" or "READ_WRITE", defaults to "READ_WRITE"
-
                             If you have a persistent disk with data that you want to share
-
                             between multiple instances, detach it from any read-write instances and
-
                             attach it to one or more instances in read-only mode.
                           type: string
                         source:
@@ -2996,40 +2499,33 @@ spec:
                       type: object
                     type: array
                   bootDisk:
-                    description: >-
+                    description: |-
                       The boot disk for the instance.
-
                       Structure is documented below.
                     properties:
                       autoDelete:
-                        description: >-
+                        description: |-
                           Whether the disk will be auto-deleted when the instance
-
                           is deleted. Defaults to true.
                         type: boolean
                       deviceName:
-                        description: >-
+                        description: |-
                           Name with which attached disk will be accessible.
-
                           On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.
                         type: string
                       diskEncryptionKeySha256:
-                        description: >-
+                        description: |-
                           The RFC 4648 base64
-
                           encoded SHA-256 hash of the [customer-supplied encryption key]
-
                           (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.
                         type: string
                       diskEncryptionServiceAccount:
                         description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                         type: string
                       forceAttach:
-                        description: >-
+                        description: |-
                           boolean field that determines whether to force attach the regional
-
                           disk even if it's currently attached to another instance. If you try to force attach a zonal
-
                           disk to an instance, you will receive an error. Setting this parameter cause VM recreation.
                         type: boolean
                       guestOsFeatures:
@@ -3038,82 +2534,57 @@ spec:
                           type: string
                         type: array
                       initializeParams:
-                        description: >-
+                        description: |-
                           Parameters for a new disk that will be created
-
                           alongside the new instance. Either initialize_params or source must be set.
-
                           Structure is documented below.
                         properties:
                           architecture:
                             description: The architecture of the attached disk. Valid values are ARM64 or x86_64.
                             type: string
                           enableConfidentialCompute:
-                            description: >-
+                            description: |-
                               Whether this disk is using confidential compute mode.
-
                               Note: Only supported on hyperdisk skus, disk_encryption_key is required when setting to true.
                             type: boolean
                           image:
-                            description: >-
+                            description: |-
                               The image from which to initialize this disk. This can be
-
                               one of: the image's self_link, projects/{project}/global/images/{image},
-
                               projects/{project}/global/images/family/{family}, global/images/{image},
-
                               global/images/family/{family}, family/{family}, {project}/{family},
-
                               {project}/{image}, {family}, or {image}. If referred by family, the
-
                               images names must include the family name. If they don't, use the
-
                               google_compute_image data source.
-
                               For instance, the image centos-6-v20180104 includes its family name centos-6.
-
                               These images can be referred by family name here.
                             type: string
                           labels:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               A map of key/value label pairs to assign to the instance.
-
                               Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                               Please refer to the field 'effective_labels' for all of the labels present on the resource.
                             type: object
                           provisionedIops:
-                            description: >-
+                            description: |-
                               Indicates how many IOPS to provision for the disk.
-
                               This sets the number of I/O operations per second that the disk can handle.
-
                               For more details,see the Hyperdisk documentation.
-
                               Note: Updating currently is only supported for hyperdisk skus via disk update
-
                               api/gcloud without the need to delete and recreate the disk, hyperdisk allows
-
                               for an update of IOPS every 4 hours. To update your hyperdisk more frequently,
-
                               you'll need to manually delete and recreate it.
                             type: number
                           provisionedThroughput:
-                            description: >-
+                            description: |-
                               Indicates how much throughput to provision for the disk.
-
                               This sets the number of throughput mb per second that the disk can handle.
-
                               For more details,see the Hyperdisk documentation.
-
                               Note: Updating currently is only supported for hyperdisk skus via disk update
-
                               api/gcloud without the need to delete and recreate the disk, hyperdisk allows
-
                               for an update of throughput every 4 hours. To update your hyperdisk more
-
                               frequently, you'll need to manually delete and recreate it.
                             type: number
                           resourceManagerTags:
@@ -3128,9 +2599,8 @@ spec:
                               type: string
                             type: array
                           size:
-                            description: >-
+                            description: |-
                               The size of the image in gigabytes. If not specified, it
-
                               will inherit the size of its base image.
                             type: number
                           snapshot:
@@ -3140,22 +2610,18 @@ spec:
                             description: Encryption key used to decrypt the given image. Structure is documented below.
                             properties:
                               kmsKeySelfLink:
-                                description: >-
+                                description: |-
                                   The self_link of the encryption key that is
-
                                   stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                                 type: string
                               sha256:
-                                description: >-
+                                description: |-
                                   The RFC 4648 base64
-
                                   encoded SHA-256 hash of the [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.
                                 type: string
                             type: object
@@ -3163,29 +2629,24 @@ spec:
                             description: Encryption key used to decrypt the given snapshot. Structure is documented below.
                             properties:
                               kmsKeySelfLink:
-                                description: >-
+                                description: |-
                                   The self_link of the encryption key that is
-
                                   stored in Google Cloud KMS to decrypt the given image. Only one of kms_key_self_link, rsa_encrypted_key and raw_key
-
                                   may be set.
                                 type: string
                               kmsKeyServiceAccount:
                                 description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                                 type: string
                               sha256:
-                                description: >-
+                                description: |-
                                   The RFC 4648 base64
-
                                   encoded SHA-256 hash of the [customer-supplied encryption key]
-
                                   (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.
                                 type: string
                             type: object
                           storagePool:
-                            description: >-
+                            description: |-
                               The URL or the name of the storage pool in which the new disk is created.
-
                               For example:
                             type: string
                           type:
@@ -3196,36 +2657,28 @@ spec:
                         description: The disk interface to use for attaching this disk; either SCSI or NVME.
                         type: string
                       kmsKeySelfLink:
-                        description: >-
+                        description: |-
                           The self_link of the encryption key that is
-
                           stored in Google Cloud KMS to encrypt this disk. Only one of kms_key_self_link,
-
                           disk_encryption_key_rsa and disk_encryption_key_raw
-
                           may be set.
                         type: string
                       mode:
-                        description: >-
+                        description: |-
                           The mode in which to attach this disk, either READ_WRITE
-
                           or READ_ONLY. If not specified, the default is to attach the disk in READ_WRITE mode.
                         type: string
                       source:
-                        description: >-
+                        description: |-
                           The name or self_link of the existing disk (such as those managed by
-
                           google_compute_disk) or disk image. To create an instance from a snapshot, first create a
-
                           google_compute_disk from a snapshot and reference it here.
                         type: string
                     type: object
                   canIpForward:
-                    description: >-
+                    description: |-
                       Whether to allow sending and receiving of
-
                       packets with non-matching source or destination IPs.
-
                       This defaults to false.
                     type: boolean
                   confidentialInstanceConfig:
@@ -3248,18 +2701,16 @@ spec:
                     description: 'The current status of the instance. This could be one of the following values: PROVISIONING, STAGING, RUNNING, STOPPING, SUSPENDING, SUSPENDED, REPAIRING, and TERMINATED. For more information about the status of the instance, see Instance life cycle.'
                     type: string
                   deletionProtection:
-                    description: >-
+                    description: |-
                       Enable deletion protection on this instance. Defaults to false.
-
                       Note: you must disable deletion protection before removing the resource (e.g.
                     type: boolean
                   description:
                     description: A brief description of this resource.
                     type: string
                   desiredStatus:
-                    description: >-
+                    description: |-
                       Desired status of the instance. Either
-
                       "RUNNING", "SUSPENDED" or "TERMINATED".
                     type: string
                   effectiveLabels:
@@ -3268,23 +2719,17 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   enableDisplay:
-                    description: >-
+                    description: |-
                       Enable Virtual Displays on this instance.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     type: boolean
                   guestAccelerator:
-                    description: >-
+                    description: |-
                       List of the type and count of accelerator cards attached to the instance. Structure documented below.
-
                       Note: GPU accelerators can only be used with on_host_maintenance option set to TERMINATE.
-
                       Note: As of 6.0.0, argument syntax
-
                       is no longer supported for this field in favor of block syntax.
-
                       To dynamically set a list of guest accelerators, use dynamic blocks.
-
                       To set an empty list, use a single guest_accelerator block with count = 0.
                     items:
                       properties:
@@ -3297,11 +2742,9 @@ spec:
                       type: object
                     type: array
                   hostname:
-                    description: >-
+                    description: |-
                       A custom hostname for the instance. Must be a fully qualified DNS name and RFC-1035-valid.
-
                       Valid format is a series of labels 1-63 characters long matching the regular expression [a-z]([-a-z0-9]*[a-z0-9]), concatenated with periods.
-
                       The entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
                     type: string
                   id:
@@ -3311,20 +2754,17 @@ spec:
                     description: Configuration for data encryption on the instance with encryption keys. Structure is documented below.
                     properties:
                       kmsKeySelfLink:
-                        description: >-
+                        description: |-
                           The self_link of the encryption key that is
-
                           stored in Google Cloud KMS to encrypt the data on this instance.
                         type: string
                       kmsKeyServiceAccount:
                         description: The service account being used for the encryption request for the given KMS key. If absent, the Compute Engine default service account is used.
                         type: string
                       sha256:
-                        description: >-
+                        description: |-
                           The RFC 4648 base64
-
                           encoded SHA-256 hash of the [customer-supplied encryption key]
-
                           (https://cloud.google.com/compute/docs/disks/customer-supplied-encryption) that protects this resource.
                         type: string
                     type: object
@@ -3340,11 +2780,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       A map of key/value label pairs to assign to the instance.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field 'effective_labels' for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -3354,13 +2792,10 @@ spec:
                   metadata:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Metadata key/value pairs to make available from
-
                       within the instance. Ssh keys attached in the Cloud Console will be removed.
-
                       Add them to your config in order to keep them attached to your instance.
-
                       A list of predefined metadata keys (e.g. ssh-keys) can be found here
                     type: object
                     x-kubernetes-map-type: granular
@@ -3368,50 +2803,35 @@ spec:
                     description: The unique fingerprint of the metadata.
                     type: string
                   metadataStartupScript:
-                    description: >-
+                    description: |-
                       An alternative to using the
-
                       startup-script metadata key, except this one forces the instance to be recreated
-
                       (thus re-running the script) if it is changed. This replaces the startup-script
-
                       metadata key on the created instance and thus the two mechanisms are not
-
                       allowed to be used simultaneously.  Users are free to use either mechanism - the
-
                       only distinction is that this separate attribute will cause a recreate on
-
                       modification.  On import, metadata_startup_script will not be set - if you
-
                       choose to specify it you will see a diff immediately after import causing a
-
                       destroy/recreate operation.
                     type: string
                   minCpuPlatform:
-                    description: >-
+                    description: |-
                       Specifies a minimum CPU platform for the VM instance. Applicable values are the friendly names of CPU platforms, such as
-
                       Intel Haswell or Intel Skylake. See the complete list here.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     type: string
                   networkInterface:
-                    description: >-
+                    description: |-
                       Networks to attach to the instance. This can
-
                       be specified multiple times. Structure is documented below.
                     items:
                       properties:
                         accessConfig:
-                          description: >-
+                          description: |-
                             Access configurations, i.e. IPs via which this
-
                             instance can be accessed via the Internet. Omit to ensure that the instance
-
                             is not accessible from the Internet.g. via
-
                             tunnel or because it is running on another cloud instance on that network).
-
                             This block can be specified once per network_interface. Structure documented below.
                           items:
                             properties:
@@ -3419,44 +2839,35 @@ spec:
                                 description: If the instance has an access config, either the given external ip (in the nat_ip field) or the ephemeral (generated) ip (if you didn't provide one).
                                 type: string
                               networkTier:
-                                description: >-
+                                description: |-
                                   The service-level to be provided for IPv6 traffic when the
-
                                   subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
                                 type: string
                               publicPtrDomainName:
-                                description: >-
+                                description: |-
                                   The domain name to be used when creating DNSv6
-
                                   records for the external IPv6 ranges..
                                 type: string
                             type: object
                           type: array
                         aliasIpRange:
-                          description: >-
+                          description: |-
                             An
-
                             array of alias IP ranges for this network interface. Can only be specified for network
-
                             interfaces on subnet-mode networks. Structure documented below.
                           items:
                             properties:
                               ipCidrRange:
-                                description: >-
+                                description: |-
                                   The IP CIDR range represented by this alias IP range. This IP CIDR range
-
                                   must belong to the specified subnetwork and cannot contain IP addresses reserved by
-
                                   system or used by other network interfaces. This range may be a single IP address
-
                                   (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
                                 type: string
                               subnetworkRangeName:
-                                description: >-
+                                description: |-
                                   The subnetwork secondary range name specifying
-
                                   the secondary range from which to allocate the IP CIDR range for this alias IP
-
                                   range. If left unspecified, the primary range of the subnetwork will be used.
                                 type: string
                             type: object
@@ -3464,76 +2875,63 @@ spec:
                         internalIpv6PrefixLength:
                           type: number
                         ipv6AccessConfig:
-                          description: >-
+                          description: |-
                             An array of IPv6 access configurations for this interface.
-
                             Currently, only one IPv6 access config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig
-
                             specified, then this instance will have no external IPv6 Internet access. Structure documented below.
                           items:
                             properties:
                               externalIpv6:
-                                description: >-
+                                description: |-
                                   The first IPv6 address of the external IPv6 range associated
-
                                   with this instance, prefix length is stored in externalIpv6PrefixLength in ipv6AccessConfig.
-
                                   To use a static external IP address, it must be unused and in the same region as the instance's zone.
-
                                   If not specified, Google Cloud will automatically assign an external IPv6 address from the instance's subnetwork.
                                 type: string
                               externalIpv6PrefixLength:
                                 description: The prefix length of the external IPv6 range.
                                 type: string
                               name:
-                                description: >-
+                                description: |-
                                   A unique name for the resource, required by GCE.
-
                                   Changing this forces a new resource to be created.
                                 type: string
                               networkTier:
-                                description: >-
+                                description: |-
                                   The service-level to be provided for IPv6 traffic when the
-
                                   subnet has an external subnet. Only PREMIUM or STANDARD tier is valid for IPv6.
                                 type: string
                               publicPtrDomainName:
-                                description: >-
+                                description: |-
                                   The domain name to be used when creating DNSv6
-
                                   records for the external IPv6 ranges..
                                 type: string
                             type: object
                           type: array
                         ipv6AccessType:
-                          description: >-
+                          description: |-
                             One of EXTERNAL, INTERNAL to indicate whether the IP can be accessed from the Internet.
-
                             This field is always inherited from its subnetwork.
                           type: string
                         ipv6Address:
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             A unique name for the resource, required by GCE.
-
                             Changing this forces a new resource to be created.
                           type: string
                         network:
-                          description: >-
+                          description: |-
                             The name or self_link of the network to attach this interface to.
-
                             Either network or subnetwork must be provided. If network isn't provided it will
-
                             be inferred from the subnetwork.
                           type: string
                         networkAttachment:
                           description: 'The URL of the network attachment that this interface should connect to in the following format: projects/{projectNumber}/regions/{region_name}/networkAttachments/{network_attachment_name}.'
                           type: string
                         networkIp:
-                          description: >-
+                          description: |-
                             The private IP address to assign to the instance. If
-
                             empty, the address will be automatically assigned.
                           type: string
                         nicType:
@@ -3546,50 +2944,38 @@ spec:
                           description: The stack type for this network interface to identify whether the IPv6 feature is enabled or not. Values are IPV4_IPV6, IPV6_ONLY or IPV4_ONLY. If not specified, IPV4_ONLY will be used.
                           type: string
                         subnetwork:
-                          description: >-
+                          description: |-
                             The name or self_link of the subnetwork to attach this
-
                             interface to. Either network or subnetwork must be provided. If network isn't provided
-
                             it will be inferred from the subnetwork. The subnetwork must exist in the same region this
-
                             instance will be created in. If the network resource is in
-
                             legacy mode, do not specify this field. If the
-
                             network is in auto subnet mode, specifying the subnetwork is optional. If the network is
-
                             in custom subnet mode, specifying the subnetwork is required.
                           type: string
                         subnetworkProject:
-                          description: >-
+                          description: |-
                             The project in which the subnetwork belongs.
-
                             If the subnetwork is a self_link, this field is set to the project
-
                             defined in the subnetwork self_link. If the subnetwork is a name and this
-
                             field is not provided, the provider project is used.
                           type: string
                       type: object
                     type: array
                   networkPerformanceConfig:
-                    description: >-
+                    description: |-
                       os-features, and network_interface.0.nic-type must be GVNIC
-
                       in order for this setting to take effect.
                     properties:
                       totalEgressBandwidthTier:
-                        description: >-
+                        description: |-
                           The egress bandwidth tier to enable.
-
                           Possible values: TIER_1, DEFAULT
                         type: string
                     type: object
                   params:
-                    description: >-
+                    description: |-
                       Additional instance parameters.
-
                       .
                     properties:
                       resourceManagerTags:
@@ -3600,21 +2986,18 @@ spec:
                         x-kubernetes-map-type: granular
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs. If it
-
                       is not provided, the provider project is used.
                     type: string
                   reservationAffinity:
-                    description: >-
+                    description: |-
                       Specifies the reservations that this instance can consume from.
-
                       Structure is documented below.
                     properties:
                       specificReservation:
-                        description: >-
+                        description: |-
                           Specifies the label selector for the reservation to use..
-
                           Structure is documented below.
                         properties:
                           key:
@@ -3636,17 +3019,14 @@ spec:
                       type: string
                     type: array
                   scheduling:
-                    description: >-
+                    description: |-
                       The scheduling strategy to use. More details about
-
                       this configuration option are detailed below.
                     properties:
                       automaticRestart:
-                        description: >-
+                        description: |-
                           Specifies if the instance should be
-
                           restarted if it was terminated by Compute Engine (not a user).
-
                           Defaults to true.
                         type: boolean
                       availabilityDomain:
@@ -3659,19 +3039,15 @@ spec:
                         description: io/docs/providers/google/guides/provider_versions.html) Specifies the maximum amount of time a Local Ssd Vm should wait while recovery of the Local Ssd state is attempted. Its value should be in between 0 and 168 hours with hour granularity and the default value being 1 hour. Structure is documented below.
                         properties:
                           nanos:
-                            description: >-
+                            description: |-
                               Span of time that's a fraction of a second at nanosecond
-
                               resolution. Durations less than one second are represented with a 0
-
                               seconds field and a positive nanos field. Must be from 0 to
-
                               999,999,999 inclusive.
                             type: number
                           seconds:
-                            description: >-
+                            description: |-
                               Span of time at a resolution of a second.
-
                               The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
@@ -3679,19 +3055,15 @@ spec:
                         description: The duration of the instance. Instance will run and be terminated after then, the termination action could be defined in instance_termination_action. Structure is documented below.
                         properties:
                           nanos:
-                            description: >-
+                            description: |-
                               Span of time that's a fraction of a second at nanosecond
-
                               resolution. Durations less than one second are represented with a 0
-
                               seconds field and a positive nanos field. Must be from 0 to
-
                               999,999,999 inclusive.
                             type: number
                           seconds:
-                            description: >-
+                            description: |-
                               Span of time at a resolution of a second.
-
                               The value must be between 1 and 3600, which is 3,600 seconds (one hour).`
                             type: number
                         type: object
@@ -3699,15 +3071,11 @@ spec:
                         description: The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
                         type: number
                       nodeAffinities:
-                        description: >-
+                        description: |-
                           Specifies node affinities or anti-affinities
-
                           to determine which sole-tenant nodes your instances and managed instance
-
                           groups will use as host systems. Read more on sole-tenant node creation
-
                           here.
-
                           Structure documented below.
                         items:
                           properties:
@@ -3715,9 +3083,8 @@ spec:
                               description: Corresponds to the label key of a reservation resource. To target a SPECIFIC_RESERVATION by name, specify compute.googleapis.com/reservation-name as the key and specify the name of your reservation as the only value.
                               type: string
                             operator:
-                              description: >-
+                              description: |-
                                 The operator. Can be IN for node-affinities
-
                                 or NOT_IN for anti-affinities.
                               type: string
                             values:
@@ -3729,11 +3096,9 @@ spec:
                           type: object
                         type: array
                       onHostMaintenance:
-                        description: >-
+                        description: |-
                           Describes maintenance behavior for the
-
                           instance. Can be MIGRATE or TERMINATE, for more info, read
-
                           here.
                         type: string
                       onInstanceStopAction:
@@ -3744,21 +3109,16 @@ spec:
                             type: boolean
                         type: object
                       preemptible:
-                        description: >-
+                        description: |-
                           Specifies if the instance is preemptible.
-
                           If this field is set to true, then automatic_restart must be
-
                           set to false.  Defaults to false.
                         type: boolean
                       provisioningModel:
-                        description: >-
+                        description: |-
                           Describe the type of preemptible VM. This field accepts the value STANDARD or SPOT. If the value is STANDARD, there will be no discount. If this   is set to SPOT,
-
                           preemptible should be true and automatic_restart should be
-
                           false. For more info about
-
                           SPOT, read here
                         type: string
                       terminationTime:
@@ -3766,25 +3126,22 @@ spec:
                         type: string
                     type: object
                   scratchDisk:
-                    description: >-
+                    description: |-
                       Scratch disks to attach to the instance. This can be
-
                       specified multiple times for multiple scratch disks. Structure is documented below.
                     items:
                       properties:
                         deviceName:
-                          description: >-
+                          description: |-
                             Name with which attached disk will be accessible.
-
                             On the instance, this device will be /dev/disk/by-id/google-{{device_name}}.
                           type: string
                         interface:
                           description: The disk interface to use for attaching this disk; either SCSI or NVME.
                           type: string
                         size:
-                          description: >-
+                          description: |-
                             The size of the image in gigabytes. If not specified, it
-
                             will inherit the size of its base image.
                           type: number
                       type: object
@@ -3793,27 +3150,21 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   serviceAccount:
-                    description: >-
+                    description: |-
                       Service account to attach to the instance.
-
                       Structure is documented below.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     properties:
                       email:
-                        description: >-
+                        description: |-
                           The service account e-mail address.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: string
                       scopes:
-                        description: >-
+                        description: |-
                           A list of service scopes. Both OAuth2 URLs and gcloud
-
                           short names are supported. To allow full access to all Cloud APIs, use the
-
                           cloud-platform scope. See a complete list of scopes here.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         items:
                           type: string
@@ -3821,29 +3172,24 @@ spec:
                         x-kubernetes-list-type: set
                     type: object
                   shieldedInstanceConfig:
-                    description: >-
+                    description: |-
                       Enable Shielded VM on this instance. Shielded VM provides verifiable integrity to prevent against malware and rootkits. Defaults to disabled. Structure is documented below.
-
                       Note: shielded_instance_config can only be used with boot images with shielded vm support. See the complete list here.
-
                       Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                     properties:
                       enableIntegrityMonitoring:
-                        description: >-
+                        description: |-
                           - Compare the most recent boot measurements to the integrity policy baseline and return a pair of pass/fail results depending on whether they match or not. Defaults to true.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                       enableSecureBoot:
-                        description: >-
+                        description: |-
                           - Verify the digital signature of all boot components, and halt the boot process if signature verification fails. Defaults to false.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                       enableVtpm:
-                        description: >-
+                        description: |-
                           - Use a virtualized trusted platform module, which is a specialized computer chip you can use to encrypt objects like keys and certificates. Defaults to true.
-
                           Note: allow_stopping_for_update must be set to true or your instance must have a desired_status of TERMINATED in order to update this field.
                         type: boolean
                     type: object
@@ -3872,24 +3218,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -3900,9 +3242,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -3916,11 +3257,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

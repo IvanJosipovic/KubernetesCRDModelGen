@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: bigquerydatatransferconfigs.bigquerydatatransfer.cnrm.cloud.google.com
 spec:
   group: bigquerydatatransfer.cnrm.cloud.google.com
@@ -207,7 +206,7 @@ spec:
                 description: The BigQueryDataTransferConfig name. If not given, the metadata.name will be used.
                 type: string
               schedule:
-                description: >-
+                description: |-
                   Data transfer schedule.
                    If the data source does not support a custom schedule, this should be
                    empty. If it is empty, the default value for the data source will be used.
@@ -522,7 +521,7 @@ spec:
                 description: The BigQueryDataTransferConfig name. If not given, the metadata.name will be used.
                 type: string
               schedule:
-                description: >-
+                description: |-
                   Data transfer schedule.
                    If the data source does not support a custom schedule, this should be
                    empty. If it is empty, the default value for the data source will be used.
@@ -594,7 +593,7 @@ spec:
                         description: Defines time to stop scheduling transfer runs. A transfer run cannot be scheduled at or after the end time. The end time can be changed at any moment.
                         type: string
                       schedule:
-                        description: >-
+                        description: |-
                           Data transfer schedule.
                            If the data source does not support a custom schedule, this should be
                            empty. If it is empty, the default value for the data source will be used.
@@ -729,7 +728,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

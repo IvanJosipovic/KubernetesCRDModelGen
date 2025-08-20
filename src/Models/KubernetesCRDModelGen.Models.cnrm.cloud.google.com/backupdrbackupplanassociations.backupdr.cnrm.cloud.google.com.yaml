@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: backupdrbackupplanassociations.backupdr.cnrm.cloud.google.com
 spec:
   group: backupdr.cnrm.cloud.google.com
@@ -217,7 +216,7 @@ spec:
                               items:
                                 properties:
                                   typeURL:
-                                    description: >-
+                                    description: |-
                                       A URL/resource name that uniquely identifies the type of the serialized
                                        protocol buffer message. This string must contain at least
                                        one "/" character. The last segment of the URL's path must represent
@@ -284,7 +283,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

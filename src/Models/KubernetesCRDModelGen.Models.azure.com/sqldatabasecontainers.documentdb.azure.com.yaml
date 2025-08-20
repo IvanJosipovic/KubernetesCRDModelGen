@@ -45,33 +45,24 @@ spec:
     name: v1api20210515
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,50 +70,41 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 description: 'Location: The location of the resource group to which the resource belongs.'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -133,33 +115,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -169,9 +144,8 @@ spec:
                     type: array
                 type: object
               options:
-                description: >-
+                description: |-
                   Options: A key-value pair of options to be applied for the request. This corresponds to the headers sent with the
-
                   request.
                 properties:
                   autoscaleSettings:
@@ -186,11 +160,9 @@ spec:
                     type: integer
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a documentdb.azure.com/SqlDatabase resource
                 properties:
                   armId:
@@ -229,9 +201,8 @@ spec:
                     description: 'Id: Name of the Cosmos DB SQL container'
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       IndexingPolicy: The configuration of the indexing policy. By default, the indexing is automatic for all document paths
-
                       within the container
                     properties:
                       automatic:
@@ -249,9 +220,8 @@ spec:
                                 - descending
                                 type: string
                               path:
-                                description: >-
+                                description: |-
                                   Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                   (/path/*)
                                 type: string
                             type: object
@@ -262,9 +232,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -302,9 +271,8 @@ spec:
                                 type: object
                               type: array
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -321,9 +289,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                             types:
@@ -344,9 +311,8 @@ spec:
                     description: 'PartitionKey: The configuration of the partition key to be used for partitioning data into multiple partitions'
                     properties:
                       kind:
-                        description: >-
+                        description: |-
                           Kind: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum)
-
                           are supported for container create
                         enum:
                         - Hash
@@ -360,20 +326,18 @@ spec:
                         type: array
                       version:
                         description: 'Version: Indicates the version of the partition key definition'
-                        maximum: 2
-                        minimum: 1
+                        maximum: 2.0
+                        minimum: 1.0
                         type: integer
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       UniqueKeyPolicy: The unique key policy configuration for specifying uniqueness constraints on documents in the
-
                       collection in the Azure Cosmos DB service.
                     properties:
                       uniqueKeys:
-                        description: >-
+                        description: |-
                           UniqueKeys: List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure
-
                           Cosmos DB service.
                         items:
                           description: The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
@@ -412,28 +376,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -469,9 +427,8 @@ spec:
                         type: integer
                     type: object
                   throughput:
-                    description: >-
+                    description: |-
                       Throughput: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when
-
                       retrieving offer details.
                     type: integer
                 type: object
@@ -509,9 +466,8 @@ spec:
                     description: 'Id: Name of the Cosmos DB SQL container'
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       IndexingPolicy: The configuration of the indexing policy. By default, the indexing is automatic for all document paths
-
                       within the container
                     properties:
                       automatic:
@@ -526,9 +482,8 @@ spec:
                                 description: 'Order: Sort order for composite paths.'
                                 type: string
                               path:
-                                description: >-
+                                description: |-
                                   Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                   (/path/*)
                                 type: string
                             type: object
@@ -539,9 +494,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -568,9 +522,8 @@ spec:
                                 type: object
                               type: array
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -583,9 +536,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                             types:
@@ -601,9 +553,8 @@ spec:
                     description: 'PartitionKey: The configuration of the partition key to be used for partitioning data into multiple partitions'
                     properties:
                       kind:
-                        description: >-
+                        description: |-
                           Kind: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum)
-
                           are supported for container create
                         type: string
                       paths:
@@ -619,15 +570,13 @@ spec:
                         type: integer
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       UniqueKeyPolicy: The unique key policy configuration for specifying uniqueness constraints on documents in the
-
                       collection in the Azure Cosmos DB service.
                     properties:
                       uniqueKeys:
-                        description: >-
+                        description: |-
                           UniqueKeys: List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure
-
                           Cosmos DB service.
                         items:
                           description: The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
@@ -670,35 +619,25 @@ spec:
     name: v1api20210515storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20210515.SqlDatabaseContainer
-
           Generator information:
-
           - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2021-05-15/cosmos-db.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -709,62 +648,51 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20210515.SqlDatabaseContainerOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -774,33 +702,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -810,19 +731,16 @@ spec:
                     type: array
                 type: object
               options:
-                description: >-
+                description: |-
                   Storage version of v1api20210515.CreateUpdateOptions
-
                   CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match",
-
                   "If-None-Match", "Session-Token" and "Throughput"
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
@@ -831,9 +749,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       maxThroughput:
@@ -845,11 +762,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a documentdb.azure.com/SqlDatabase resource
                 properties:
                   armId:
@@ -860,33 +775,29 @@ spec:
                     type: string
                 type: object
               resource:
-                description: >-
+                description: |-
                   Storage version of v1api20210515.SqlContainerResource
-
                   Cosmos DB SQL container resource object
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   analyticalStorageTtl:
                     type: integer
                   conflictResolutionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.ConflictResolutionPolicy
-
                       The conflict resolution policy for the container.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       conflictResolutionPath:
@@ -901,17 +812,15 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.IndexingPolicy
-
                       Cosmos DB indexing policy
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       automatic:
@@ -924,9 +833,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               order:
@@ -943,9 +851,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -954,32 +861,28 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20210515.IncludedPath
-
                             The paths that are included in indexing
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             indexes:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20210515.Indexes
-
                                   The indexes for the path.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   dataType:
@@ -1003,9 +906,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -1018,17 +920,15 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.ContainerPartitionKey
-
                       The configuration of the partition key to be used for partitioning data into multiple partitions
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kind:
@@ -1041,34 +941,29 @@ spec:
                         type: integer
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.UniqueKeyPolicy
-
                       The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure
-
                       Cosmos DB service.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       uniqueKeys:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20210515.UniqueKey
-
                             The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             paths:
@@ -1092,9 +987,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -1109,28 +1003,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1153,17 +1041,15 @@ spec:
               name:
                 type: string
               options:
-                description: >-
+                description: |-
                   Storage version of v1api20210515.OptionsResource_STATUS
-
                   Cosmos DB options resource object
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
@@ -1172,9 +1058,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       maxThroughput:
@@ -1189,9 +1074,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   _etag:
@@ -1203,17 +1087,15 @@ spec:
                   analyticalStorageTtl:
                     type: integer
                   conflictResolutionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.ConflictResolutionPolicy_STATUS
-
                       The conflict resolution policy for the container.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       conflictResolutionPath:
@@ -1228,17 +1110,15 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.IndexingPolicy_STATUS
-
                       Cosmos DB indexing policy
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       automatic:
@@ -1251,9 +1131,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               order:
@@ -1270,9 +1149,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -1281,32 +1159,28 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20210515.IncludedPath_STATUS
-
                             The paths that are included in indexing
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             indexes:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20210515.Indexes_STATUS
-
                                   The indexes for the path.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   dataType:
@@ -1330,9 +1204,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -1345,17 +1218,15 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.ContainerPartitionKey_STATUS
-
                       The configuration of the partition key to be used for partitioning data into multiple partitions
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kind:
@@ -1370,34 +1241,29 @@ spec:
                         type: integer
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20210515.UniqueKeyPolicy_STATUS
-
                       The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure
-
                       Cosmos DB service.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       uniqueKeys:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20210515.UniqueKey_STATUS
-
                             The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             paths:
@@ -1436,33 +1302,24 @@ spec:
     name: v1api20231115
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1470,50 +1327,41 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 description: 'Location: The location of the resource group to which the resource belongs.'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1524,33 +1372,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1560,15 +1401,13 @@ spec:
                     type: array
                 type: object
               options:
-                description: >-
+                description: |-
                   Options: A key-value pair of options to be applied for the request. This corresponds to the headers sent with the
-
                   request.
                 properties:
                   autoscaleSettings:
-                    description: >-
+                    description: |-
                       AutoscaleSettings: Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not
-
                       both.
                     properties:
                       maxThroughput:
@@ -1580,11 +1419,9 @@ spec:
                     type: integer
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a documentdb.azure.com/SqlDatabase resource
                 properties:
                   armId:
@@ -1606,7 +1443,7 @@ spec:
                       includedPaths:
                         description: 'IncludedPaths: Paths of the item that need encryption along with path-specific settings.'
                         items:
-                          description: .
+                          description: "."
                           properties:
                             clientEncryptionKeyId:
                               description: 'ClientEncryptionKeyId: The identifier of the Client Encryption Key to be used to encrypt the path.'
@@ -1628,12 +1465,11 @@ spec:
                           type: object
                         type: array
                       policyFormatVersion:
-                        description: >-
+                        description: |-
                           PolicyFormatVersion: Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2
-
                           supports id and partition key path encryption.
-                        maximum: 2
-                        minimum: 1
+                        maximum: 2.0
+                        minimum: 1.0
                         type: integer
                     required:
                     - includedPaths
@@ -1681,9 +1517,8 @@ spec:
                     description: 'Id: Name of the Cosmos DB SQL container'
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       IndexingPolicy: The configuration of the indexing policy. By default, the indexing is automatic for all document paths
-
                       within the container
                     properties:
                       automatic:
@@ -1701,9 +1536,8 @@ spec:
                                 - descending
                                 type: string
                               path:
-                                description: >-
+                                description: |-
                                   Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                   (/path/*)
                                 type: string
                             type: object
@@ -1714,9 +1548,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -1754,9 +1587,8 @@ spec:
                                 type: object
                               type: array
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -1773,9 +1605,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                             types:
@@ -1796,9 +1627,8 @@ spec:
                     description: 'PartitionKey: The configuration of the partition key to be used for partitioning data into multiple partitions'
                     properties:
                       kind:
-                        description: >-
+                        description: |-
                           Kind: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum)
-
                           are supported for container create
                         enum:
                         - Hash
@@ -1812,17 +1642,16 @@ spec:
                         type: array
                       version:
                         description: 'Version: Indicates the version of the partition key definition'
-                        maximum: 2
-                        minimum: 1
+                        maximum: 2.0
+                        minimum: 1.0
                         type: integer
                     type: object
                   restoreParameters:
                     description: 'RestoreParameters: Parameters to indicate the information about the restore'
                     properties:
                       restoreSource:
-                        description: >-
+                        description: |-
                           RestoreSource: The id of the restorable database account from which the restore has to be initiated. For example:
-
                           /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName}
                         type: string
                       restoreTimestampInUtc:
@@ -1830,15 +1659,13 @@ spec:
                         type: string
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       UniqueKeyPolicy: The unique key policy configuration for specifying uniqueness constraints on documents in the
-
                       collection in the Azure Cosmos DB service.
                     properties:
                       uniqueKeys:
-                        description: >-
+                        description: |-
                           UniqueKeys: List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure
-
                           Cosmos DB service.
                         items:
                           description: The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
@@ -1877,28 +1704,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1934,9 +1755,8 @@ spec:
                         type: integer
                     type: object
                   throughput:
-                    description: >-
+                    description: |-
                       Throughput: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when
-
                       retrieving offer details.
                     type: integer
                 type: object
@@ -1960,7 +1780,7 @@ spec:
                       includedPaths:
                         description: 'IncludedPaths: Paths of the item that need encryption along with path-specific settings.'
                         items:
-                          description: .
+                          description: "."
                           properties:
                             clientEncryptionKeyId:
                               description: 'ClientEncryptionKeyId: The identifier of the Client Encryption Key to be used to encrypt the path.'
@@ -1977,9 +1797,8 @@ spec:
                           type: object
                         type: array
                       policyFormatVersion:
-                        description: >-
+                        description: |-
                           PolicyFormatVersion: Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2
-
                           supports id and partition key path encryption.
                         type: integer
                     type: object
@@ -2019,9 +1838,8 @@ spec:
                     description: 'Id: Name of the Cosmos DB SQL container'
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       IndexingPolicy: The configuration of the indexing policy. By default, the indexing is automatic for all document paths
-
                       within the container
                     properties:
                       automatic:
@@ -2036,9 +1854,8 @@ spec:
                                 description: 'Order: Sort order for composite paths.'
                                 type: string
                               path:
-                                description: >-
+                                description: |-
                                   Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                   (/path/*)
                                 type: string
                             type: object
@@ -2049,9 +1866,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -2078,9 +1894,8 @@ spec:
                                 type: object
                               type: array
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -2093,9 +1908,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                             types:
@@ -2111,9 +1925,8 @@ spec:
                     description: 'PartitionKey: The configuration of the partition key to be used for partitioning data into multiple partitions'
                     properties:
                       kind:
-                        description: >-
+                        description: |-
                           Kind: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum)
-
                           are supported for container create
                         type: string
                       paths:
@@ -2132,9 +1945,8 @@ spec:
                     description: 'RestoreParameters: Parameters to indicate the information about the restore'
                     properties:
                       restoreSource:
-                        description: >-
+                        description: |-
                           RestoreSource: The id of the restorable database account from which the restore has to be initiated. For example:
-
                           /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName}
                         type: string
                       restoreTimestampInUtc:
@@ -2142,15 +1954,13 @@ spec:
                         type: string
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       UniqueKeyPolicy: The unique key policy configuration for specifying uniqueness constraints on documents in the
-
                       collection in the Azure Cosmos DB service.
                     properties:
                       uniqueKeys:
-                        description: >-
+                        description: |-
                           UniqueKeys: List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure
-
                           Cosmos DB service.
                         items:
                           description: The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
@@ -2193,35 +2003,25 @@ spec:
     name: v1api20231115storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20231115.SqlDatabaseContainer
-
           Generator information:
-
           - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2023-11-15/cosmos-db.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2232,62 +2032,51 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20231115.SqlDatabaseContainerOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2297,33 +2086,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2333,19 +2115,16 @@ spec:
                     type: array
                 type: object
               options:
-                description: >-
+                description: |-
                   Storage version of v1api20231115.CreateUpdateOptions
-
                   CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match",
-
                   "If-None-Match", "Session-Token" and "Throughput"
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
@@ -2354,9 +2133,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       maxThroughput:
@@ -2368,11 +2146,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a documentdb.azure.com/SqlDatabase resource
                 properties:
                   armId:
@@ -2383,48 +2159,42 @@ spec:
                     type: string
                 type: object
               resource:
-                description: >-
+                description: |-
                   Storage version of v1api20231115.SqlContainerResource
-
                   Cosmos DB SQL container resource object
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   analyticalStorageTtl:
                     type: integer
                   clientEncryptionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.ClientEncryptionPolicy
-
                       Cosmos DB client encryption policy.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20231115.ClientEncryptionIncludedPath
-
                             .
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             clientEncryptionKeyId:
@@ -2442,17 +2212,15 @@ spec:
                     type: object
                   computedProperties:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231115.ComputedProperty
-
                         The definition of a computed property
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
@@ -2462,17 +2230,15 @@ spec:
                       type: object
                     type: array
                   conflictResolutionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.ConflictResolutionPolicy
-
                       The conflict resolution policy for the container.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       conflictResolutionPath:
@@ -2489,17 +2255,15 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.IndexingPolicy
-
                       Cosmos DB indexing policy
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       automatic:
@@ -2512,9 +2276,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               order:
@@ -2531,9 +2294,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -2542,32 +2304,28 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20231115.IncludedPath
-
                             The paths that are included in indexing
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             indexes:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20231115.Indexes
-
                                   The indexes for the path.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   dataType:
@@ -2591,9 +2349,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -2606,17 +2363,15 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.ContainerPartitionKey
-
                       The configuration of the partition key to be used for partitioning data into multiple partitions
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kind:
@@ -2629,17 +2384,15 @@ spec:
                         type: integer
                     type: object
                   restoreParameters:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.RestoreParametersBase
-
                       Parameters to indicate the information about the restore.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       restoreSource:
@@ -2648,34 +2401,29 @@ spec:
                         type: string
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.UniqueKeyPolicy
-
                       The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure
-
                       Cosmos DB service.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       uniqueKeys:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20231115.UniqueKey
-
                             The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             paths:
@@ -2699,9 +2447,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -2716,28 +2463,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2760,17 +2501,15 @@ spec:
               name:
                 type: string
               options:
-                description: >-
+                description: |-
                   Storage version of v1api20231115.OptionsResource_STATUS
-
                   Cosmos DB options resource object
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
@@ -2779,9 +2518,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       maxThroughput:
@@ -2796,9 +2534,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   _etag:
@@ -2810,32 +2547,28 @@ spec:
                   analyticalStorageTtl:
                     type: integer
                   clientEncryptionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.ClientEncryptionPolicy_STATUS
-
                       Cosmos DB client encryption policy.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20231115.ClientEncryptionIncludedPath_STATUS
-
                             .
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             clientEncryptionKeyId:
@@ -2853,17 +2586,15 @@ spec:
                     type: object
                   computedProperties:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231115.ComputedProperty_STATUS
-
                         The definition of a computed property
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
@@ -2873,17 +2604,15 @@ spec:
                       type: object
                     type: array
                   conflictResolutionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.ConflictResolutionPolicy_STATUS
-
                       The conflict resolution policy for the container.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       conflictResolutionPath:
@@ -2900,17 +2629,15 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.IndexingPolicy_STATUS
-
                       Cosmos DB indexing policy
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       automatic:
@@ -2923,9 +2650,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               order:
@@ -2942,9 +2668,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -2953,32 +2678,28 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20231115.IncludedPath_STATUS
-
                             The paths that are included in indexing
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             indexes:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20231115.Indexes_STATUS
-
                                   The indexes for the path.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   dataType:
@@ -3002,9 +2723,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -3017,17 +2737,15 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.ContainerPartitionKey_STATUS
-
                       The configuration of the partition key to be used for partitioning data into multiple partitions
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kind:
@@ -3042,17 +2760,15 @@ spec:
                         type: integer
                     type: object
                   restoreParameters:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.RestoreParametersBase_STATUS
-
                       Parameters to indicate the information about the restore.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       restoreSource:
@@ -3061,34 +2777,29 @@ spec:
                         type: string
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231115.UniqueKeyPolicy_STATUS
-
                       The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure
-
                       Cosmos DB service.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       uniqueKeys:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20231115.UniqueKey_STATUS
-
                             The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             paths:
@@ -3127,33 +2838,24 @@ spec:
     name: v1api20240815
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -3161,50 +2863,41 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 description: 'Location: The location of the resource group to which the resource belongs.'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3215,33 +2908,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3251,15 +2937,13 @@ spec:
                     type: array
                 type: object
               options:
-                description: >-
+                description: |-
                   Options: A key-value pair of options to be applied for the request. This corresponds to the headers sent with the
-
                   request.
                 properties:
                   autoscaleSettings:
-                    description: >-
+                    description: |-
                       AutoscaleSettings: Specifies the Autoscale settings. Note: Either throughput or autoscaleSettings is required, but not
-
                       both.
                     properties:
                       maxThroughput:
@@ -3271,11 +2955,9 @@ spec:
                     type: integer
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a documentdb.azure.com/SqlDatabase resource
                 properties:
                   armId:
@@ -3297,7 +2979,7 @@ spec:
                       includedPaths:
                         description: 'IncludedPaths: Paths of the item that need encryption along with path-specific settings.'
                         items:
-                          description: .
+                          description: "."
                           properties:
                             clientEncryptionKeyId:
                               description: 'ClientEncryptionKeyId: The identifier of the Client Encryption Key to be used to encrypt the path.'
@@ -3319,12 +3001,11 @@ spec:
                           type: object
                         type: array
                       policyFormatVersion:
-                        description: >-
+                        description: |-
                           PolicyFormatVersion: Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2
-
                           supports id and partition key path encryption.
-                        maximum: 2
-                        minimum: 1
+                        maximum: 2.0
+                        minimum: 1.0
                         type: integer
                     required:
                     - includedPaths
@@ -3372,9 +3053,8 @@ spec:
                     description: 'Id: Name of the Cosmos DB SQL container'
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       IndexingPolicy: The configuration of the indexing policy. By default, the indexing is automatic for all document paths
-
                       within the container
                     properties:
                       automatic:
@@ -3392,9 +3072,8 @@ spec:
                                 - descending
                                 type: string
                               path:
-                                description: >-
+                                description: |-
                                   Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                   (/path/*)
                                 type: string
                             type: object
@@ -3405,9 +3084,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -3445,9 +3123,8 @@ spec:
                                 type: object
                               type: array
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -3464,9 +3141,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                             types:
@@ -3487,9 +3163,8 @@ spec:
                     description: 'PartitionKey: The configuration of the partition key to be used for partitioning data into multiple partitions'
                     properties:
                       kind:
-                        description: >-
+                        description: |-
                           Kind: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum)
-
                           are supported for container create
                         enum:
                         - Hash
@@ -3503,39 +3178,35 @@ spec:
                         type: array
                       version:
                         description: 'Version: Indicates the version of the partition key definition'
-                        maximum: 2
-                        minimum: 1
+                        maximum: 2.0
+                        minimum: 1.0
                         type: integer
                     type: object
                   restoreParameters:
                     description: 'RestoreParameters: Parameters to indicate the information about the restore'
                     properties:
                       restoreSource:
-                        description: >-
+                        description: |-
                           RestoreSource: The id of the restorable database account from which the restore has to be initiated. For example:
-
                           /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName}
                         type: string
                       restoreTimestampInUtc:
                         description: 'RestoreTimestampInUtc: Time to which the account has to be restored (ISO-8601 format).'
                         type: string
                       restoreWithTtlDisabled:
-                        description: >-
+                        description: |-
                           RestoreWithTtlDisabled: Specifies whether the restored account will have Time-To-Live disabled upon the successful
-
                           restore.
                         type: boolean
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       UniqueKeyPolicy: The unique key policy configuration for specifying uniqueness constraints on documents in the
-
                       collection in the Azure Cosmos DB service.
                     properties:
                       uniqueKeys:
-                        description: >-
+                        description: |-
                           UniqueKeys: List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure
-
                           Cosmos DB service.
                         items:
                           description: The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
@@ -3574,28 +3245,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -3631,9 +3296,8 @@ spec:
                         type: integer
                     type: object
                   throughput:
-                    description: >-
+                    description: |-
                       Throughput: Value of the Cosmos DB resource throughput or autoscaleSettings. Use the ThroughputSetting resource when
-
                       retrieving offer details.
                     type: integer
                 type: object
@@ -3657,7 +3321,7 @@ spec:
                       includedPaths:
                         description: 'IncludedPaths: Paths of the item that need encryption along with path-specific settings.'
                         items:
-                          description: .
+                          description: "."
                           properties:
                             clientEncryptionKeyId:
                               description: 'ClientEncryptionKeyId: The identifier of the Client Encryption Key to be used to encrypt the path.'
@@ -3674,9 +3338,8 @@ spec:
                           type: object
                         type: array
                       policyFormatVersion:
-                        description: >-
+                        description: |-
                           PolicyFormatVersion: Version of the client encryption policy definition. Supported versions are 1 and 2. Version 2
-
                           supports id and partition key path encryption.
                         type: integer
                     type: object
@@ -3716,9 +3379,8 @@ spec:
                     description: 'Id: Name of the Cosmos DB SQL container'
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       IndexingPolicy: The configuration of the indexing policy. By default, the indexing is automatic for all document paths
-
                       within the container
                     properties:
                       automatic:
@@ -3733,9 +3395,8 @@ spec:
                                 description: 'Order: Sort order for composite paths.'
                                 type: string
                               path:
-                                description: >-
+                                description: |-
                                   Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                   (/path/*)
                                 type: string
                             type: object
@@ -3746,9 +3407,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -3775,9 +3435,8 @@ spec:
                                 type: object
                               type: array
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                           type: object
@@ -3790,9 +3449,8 @@ spec:
                         items:
                           properties:
                             path:
-                              description: >-
+                              description: |-
                                 Path: The path for which the indexing behavior applies to. Index paths typically start with root and end with wildcard
-
                                 (/path/*)
                               type: string
                             types:
@@ -3808,9 +3466,8 @@ spec:
                     description: 'PartitionKey: The configuration of the partition key to be used for partitioning data into multiple partitions'
                     properties:
                       kind:
-                        description: >-
+                        description: |-
                           Kind: Indicates the kind of algorithm used for partitioning. For MultiHash, multiple partition keys (upto three maximum)
-
                           are supported for container create
                         type: string
                       paths:
@@ -3829,31 +3486,27 @@ spec:
                     description: 'RestoreParameters: Parameters to indicate the information about the restore'
                     properties:
                       restoreSource:
-                        description: >-
+                        description: |-
                           RestoreSource: The id of the restorable database account from which the restore has to be initiated. For example:
-
                           /subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/locations/{location}/restorableDatabaseAccounts/{restorableDatabaseAccountName}
                         type: string
                       restoreTimestampInUtc:
                         description: 'RestoreTimestampInUtc: Time to which the account has to be restored (ISO-8601 format).'
                         type: string
                       restoreWithTtlDisabled:
-                        description: >-
+                        description: |-
                           RestoreWithTtlDisabled: Specifies whether the restored account will have Time-To-Live disabled upon the successful
-
                           restore.
                         type: boolean
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       UniqueKeyPolicy: The unique key policy configuration for specifying uniqueness constraints on documents in the
-
                       collection in the Azure Cosmos DB service.
                     properties:
                       uniqueKeys:
-                        description: >-
+                        description: |-
                           UniqueKeys: List of unique keys on that enforces uniqueness constraint on documents in the collection in the Azure
-
                           Cosmos DB service.
                         items:
                           description: The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
@@ -3896,35 +3549,25 @@ spec:
     name: v1api20240815storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20240815.SqlDatabaseContainer
-
           Generator information:
-
           - Generated from: /cosmos-db/resource-manager/Microsoft.DocumentDB/stable/2024-08-15/cosmos-db.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/databaseAccounts/{accountName}/sqlDatabases/{databaseName}/containers/{containerName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -3935,62 +3578,51 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20240815.SqlDatabaseContainerOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -4000,33 +3632,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -4036,19 +3661,16 @@ spec:
                     type: array
                 type: object
               options:
-                description: >-
+                description: |-
                   Storage version of v1api20240815.CreateUpdateOptions
-
                   CreateUpdateOptions are a list of key-value pairs that describe the resource. Supported keys are "If-Match",
-
                   "If-None-Match", "Session-Token" and "Throughput"
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
@@ -4057,9 +3679,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       maxThroughput:
@@ -4071,11 +3692,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a documentdb.azure.com/SqlDatabase resource
                 properties:
                   armId:
@@ -4086,48 +3705,42 @@ spec:
                     type: string
                 type: object
               resource:
-                description: >-
+                description: |-
                   Storage version of v1api20240815.SqlContainerResource
-
                   Cosmos DB SQL container resource object
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   analyticalStorageTtl:
                     type: integer
                   clientEncryptionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.ClientEncryptionPolicy
-
                       Cosmos DB client encryption policy.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240815.ClientEncryptionIncludedPath
-
                             .
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             clientEncryptionKeyId:
@@ -4145,17 +3758,15 @@ spec:
                     type: object
                   computedProperties:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240815.ComputedProperty
-
                         The definition of a computed property
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
@@ -4165,17 +3776,15 @@ spec:
                       type: object
                     type: array
                   conflictResolutionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.ConflictResolutionPolicy
-
                       The conflict resolution policy for the container.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       conflictResolutionPath:
@@ -4192,17 +3801,15 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.IndexingPolicy
-
                       Cosmos DB indexing policy
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       automatic:
@@ -4215,9 +3822,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               order:
@@ -4234,9 +3840,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -4245,32 +3850,28 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240815.IncludedPath
-
                             The paths that are included in indexing
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             indexes:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20240815.Indexes
-
                                   The indexes for the path.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   dataType:
@@ -4294,9 +3895,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -4309,17 +3909,15 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.ContainerPartitionKey
-
                       The configuration of the partition key to be used for partitioning data into multiple partitions
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kind:
@@ -4332,17 +3930,15 @@ spec:
                         type: integer
                     type: object
                   restoreParameters:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.RestoreParametersBase
-
                       Parameters to indicate the information about the restore.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       restoreSource:
@@ -4353,34 +3949,29 @@ spec:
                         type: boolean
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.UniqueKeyPolicy
-
                       The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure
-
                       Cosmos DB service.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       uniqueKeys:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240815.UniqueKey
-
                             The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             paths:
@@ -4404,9 +3995,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -4421,28 +4011,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -4465,17 +4049,15 @@ spec:
               name:
                 type: string
               options:
-                description: >-
+                description: |-
                   Storage version of v1api20240815.OptionsResource_STATUS
-
                   Cosmos DB options resource object
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   autoscaleSettings:
@@ -4484,9 +4066,8 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       maxThroughput:
@@ -4501,9 +4082,8 @@ spec:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   _etag:
@@ -4515,32 +4095,28 @@ spec:
                   analyticalStorageTtl:
                     type: integer
                   clientEncryptionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.ClientEncryptionPolicy_STATUS
-
                       Cosmos DB client encryption policy.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240815.ClientEncryptionIncludedPath_STATUS
-
                             .
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             clientEncryptionKeyId:
@@ -4558,17 +4134,15 @@ spec:
                     type: object
                   computedProperties:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20240815.ComputedProperty_STATUS
-
                         The definition of a computed property
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         name:
@@ -4578,17 +4152,15 @@ spec:
                       type: object
                     type: array
                   conflictResolutionPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.ConflictResolutionPolicy_STATUS
-
                       The conflict resolution policy for the container.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       conflictResolutionPath:
@@ -4605,17 +4177,15 @@ spec:
                   id:
                     type: string
                   indexingPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.IndexingPolicy_STATUS
-
                       Cosmos DB indexing policy
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       automatic:
@@ -4628,9 +4198,8 @@ spec:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               order:
@@ -4647,9 +4216,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -4658,32 +4226,28 @@ spec:
                         type: array
                       includedPaths:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240815.IncludedPath_STATUS
-
                             The paths that are included in indexing
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             indexes:
                               items:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20240815.Indexes_STATUS
-
                                   The indexes for the path.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   dataType:
@@ -4707,9 +4271,8 @@ spec:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             path:
@@ -4722,17 +4285,15 @@ spec:
                         type: array
                     type: object
                   partitionKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.ContainerPartitionKey_STATUS
-
                       The configuration of the partition key to be used for partitioning data into multiple partitions
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kind:
@@ -4747,17 +4308,15 @@ spec:
                         type: integer
                     type: object
                   restoreParameters:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.RestoreParametersBase_STATUS
-
                       Parameters to indicate the information about the restore.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       restoreSource:
@@ -4768,34 +4327,29 @@ spec:
                         type: boolean
                     type: object
                   uniqueKeyPolicy:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240815.UniqueKeyPolicy_STATUS
-
                       The unique key policy configuration for specifying uniqueness constraints on documents in the collection in the Azure
-
                       Cosmos DB service.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       uniqueKeys:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20240815.UniqueKey_STATUS
-
                             The unique key on that enforces uniqueness constraint on documents in the collection in the Azure Cosmos DB service.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             paths:

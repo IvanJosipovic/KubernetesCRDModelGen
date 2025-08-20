@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computeorganizationsecuritypolicyrules.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -54,9 +53,8 @@ spec:
           spec:
             properties:
               action:
-                description: >-
+                description: |-
                   The Action to perform when the client connection triggers the rule. Can currently be either
-
                   "allow", "deny" or "goto_next".
                 type: string
               description:
@@ -66,11 +64,9 @@ spec:
                 description: 'The direction in which this rule applies. If unspecified an INGRESS rule is created. Possible values: ["INGRESS", "EGRESS"].'
                 type: string
               enableLogging:
-                description: >-
+                description: |-
                   Denotes whether to enable logging for a particular rule.
-
                   If logging is enabled, logs will be exported to the
-
                   configured export destination in Stackdriver.
                 type: boolean
               match:
@@ -80,9 +76,8 @@ spec:
                     description: The configuration options for matching the rule.
                     properties:
                       destIpRanges:
-                        description: >-
+                        description: |-
                           Destination IP address range in CIDR format. Required for
-
                           EGRESS rules.
                         items:
                           type: string
@@ -92,30 +87,21 @@ spec:
                         items:
                           properties:
                             ipProtocol:
-                              description: >-
+                              description: |-
                                 The IP protocol to which this rule applies. The protocol
-
                                 type is required when creating a firewall rule.
-
                                 This value can either be one of the following well
-
                                 known protocol strings (tcp, udp, icmp, esp, ah, ipip, sctp),
-
                                 or the IP protocol number.
                               type: string
                             ports:
-                              description: >-
+                              description: |-
                                 An optional list of ports to which this rule applies. This field
-
                                 is only applicable for UDP or TCP protocol. Each entry must be
-
                                 either an integer or a range. If not specified, this rule
-
                                 applies to connections through any port.
 
-
                                 Example inputs include: ["22"], ["80","443"], and
-
                                 ["12345-12349"].
                               items:
                                 type: string
@@ -125,9 +111,8 @@ spec:
                           type: object
                         type: array
                       srcIpRanges:
-                        description: >-
+                        description: |-
                           Source IP address range in CIDR format. Required for
-
                           INGRESS rules.
                         items:
                           type: string
@@ -139,9 +124,8 @@ spec:
                     description: A description of the rule.
                     type: string
                   versionedExpr:
-                    description: >-
+                    description: |-
                       Preconfigured versioned expression. For organization security policy rules,
-
                       the only supported type is "FIREWALL". Default value: "FIREWALL" Possible values: ["FIREWALL"].
                     type: string
                 required:
@@ -157,21 +141,17 @@ spec:
                 description: Immutable. Optional. The priority of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               targetResources:
-                description: >-
+                description: |-
                   A list of network resource URLs to which this rule applies.
-
                   This field allows you to control which network's VMs get
-
                   this rule. If this field is left blank, all VMs
-
                   within the organization will receive the rule.
                 items:
                   type: string
                 type: array
               targetServiceAccounts:
-                description: >-
+                description: |-
                   A list of service accounts indicating the sets of
-
                   instances that are applied with this rule.
                 items:
                   type: string
@@ -217,7 +197,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

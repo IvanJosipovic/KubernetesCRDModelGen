@@ -29,60 +29,47 @@ spec:
         description: ImageRepository is the Schema for the imagerepositories API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
-            description: >-
+            description: |-
               ImageRepositorySpec defines the parameters for scanning an image
-
               repository, e.g., `fluxcd/flux`.
             properties:
               accessFrom:
-                description: >-
+                description: |-
                   AccessFrom defines an ACL for allowing cross-namespace references
-
                   to the ImageRepository object based on the caller's namespace labels.
                 properties:
                   namespaceSelectors:
-                    description: >-
+                    description: |-
                       NamespaceSelectors is the list of namespace selectors to which this ACL applies.
-
                       Items in this list are evaluated using a logical OR operation.
                     items:
-                      description: >-
+                      description: |-
                         NamespaceSelector selects the namespaces to which this ACL applies.
-
                         An empty map of MatchLabels matches all namespaces in a cluster.
                       properties:
                         matchLabels:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                             map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                             operator is "In", and the values array contains only "value". The requirements are ANDed.
                           type: object
                       type: object
@@ -91,9 +78,8 @@ spec:
                 - namespaceSelectors
                 type: object
               certSecretRef:
-                description: >-
+                description: |-
                   CertSecretRef can be given the name of a secret containing
-
                   either or both of
 
                    - a PEM-encoded client certificate (`certFile`) and private
@@ -112,9 +98,8 @@ spec:
                 - name
                 type: object
               exclusionList:
-                description: >-
+                description: |-
                   ExclusionList is a list of regex strings used to exclude certain tags
-
                   from being stored in the database.
                 items:
                   type: string
@@ -123,20 +108,16 @@ spec:
                 description: Image is the name of the image repository
                 type: string
               interval:
-                description: >-
+                description: |-
                   Interval is the length of time to wait between
-
                   scans of the image repository.
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m|h))+$
                 type: string
               secretRef:
-                description: >-
+                description: |-
                   SecretRef can be given the name of a secret containing
-
                   credentials to use for the image registry. The secret should be
-
                   created with `kubectl create secret docker-registry`, or the
-
                   equivalent.
                 properties:
                   name:
@@ -146,22 +127,19 @@ spec:
                 - name
                 type: object
               serviceAccountName:
-                description: >-
+                description: |-
                   ServiceAccountName is the name of the Kubernetes ServiceAccount used to authenticate
-
                   the image pull if the service account has attached pull secrets.
                 maxLength: 253
                 type: string
               suspend:
-                description: >-
+                description: |-
                   This flag tells the controller to suspend subsequent image scans.
-
                   It does not apply to already started scans. Defaults to false.
                 type: boolean
               timeout:
-                description: >-
+                description: |-
                   Timeout for image scanning.
-
                   Defaults to 'Interval' duration.
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m))+$
                 type: string
@@ -175,11 +153,9 @@ spec:
             description: ImageRepositoryStatus defines the observed state of ImageRepository
             properties:
               canonicalImageName:
-                description: >-
+                description: |-
                   CanonicalName is the name of the image repository with all the
-
                   implied bits made explicit; e.g., `docker.io/library/alpine`
-
                   rather than `alpine`.
                 type: string
               conditions:
@@ -187,39 +163,31 @@ spec:
                   description: Condition contains details for one aspect of the current state of this API Resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         lastTransitionTime is the last time the condition transitioned from one status to another.
-
                         This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         message is a human readable message indicating details about the transition.
-
                         This may be an empty string.
                       maxLength: 32768
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         observedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       minimum: 0
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         reason contains a programmatic identifier indicating the reason for the condition's last transition.
-
                         Producers of specific condition types may define expected values and meanings for this field,
-
                         and whether the values are considered a guaranteed API.
-
                         The value should be a CamelCase string.
-
                         This field may not be empty.
                       maxLength: 1024
                       minLength: 1
@@ -228,8 +196,8 @@ spec:
                     status:
                       description: status of the condition, one of True, False, Unknown.
                       enum:
-                      - True
-                      - False
+                      - "True"
+                      - "False"
                       - Unknown
                       type: string
                     type:
@@ -246,11 +214,9 @@ spec:
                   type: object
                 type: array
               lastHandledReconcileAt:
-                description: >-
+                description: |-
                   LastHandledReconcileAt holds the value of the most recent
-
                   reconcile request value, so a change of the annotation value
-
                   can be detected.
                 type: string
               lastScanResult:
@@ -287,60 +253,47 @@ spec:
         description: ImageRepository is the Schema for the imagerepositories API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
             type: object
           spec:
-            description: >-
+            description: |-
               ImageRepositorySpec defines the parameters for scanning an image
-
               repository, e.g., `fluxcd/flux`.
             properties:
               accessFrom:
-                description: >-
+                description: |-
                   AccessFrom defines an ACL for allowing cross-namespace references
-
                   to the ImageRepository object based on the caller's namespace labels.
                 properties:
                   namespaceSelectors:
-                    description: >-
+                    description: |-
                       NamespaceSelectors is the list of namespace selectors to which this ACL applies.
-
                       Items in this list are evaluated using a logical OR operation.
                     items:
-                      description: >-
+                      description: |-
                         NamespaceSelector selects the namespaces to which this ACL applies.
-
                         An empty map of MatchLabels matches all namespaces in a cluster.
                       properties:
                         matchLabels:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                             map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                             operator is "In", and the values array contains only "value". The requirements are ANDed.
                           type: object
                       type: object
@@ -349,32 +302,21 @@ spec:
                 - namespaceSelectors
                 type: object
               certSecretRef:
-                description: >-
+                description: |-
                   CertSecretRef can be given the name of a Secret containing
-
                   either or both of
 
-
                   - a PEM-encoded client certificate (`tls.crt`) and private
-
                   key (`tls.key`);
-
                   - a PEM-encoded CA certificate (`ca.crt`)
 
-
                   and whichever are supplied, will be used for connecting to the
-
                   registry. The client cert and key are useful if you are
-
                   authenticating with a certificate; the CA cert is useful if
-
                   you are using a self-signed server certificate. The Secret must
-
                   be of type `Opaque` or `kubernetes.io/tls`.
 
-
                   Note: Support for the `caFile`, `certFile` and `keyFile` keys has
-
                   been deprecated.
                 properties:
                   name:
@@ -386,9 +328,8 @@ spec:
               exclusionList:
                 default:
                 - ^.*\.sig$
-                description: >-
+                description: |-
                   ExclusionList is a list of regex strings used to exclude certain tags
-
                   from being stored in the database.
                 items:
                   type: string
@@ -401,17 +342,15 @@ spec:
                 description: Insecure allows connecting to a non-TLS HTTP container registry.
                 type: boolean
               interval:
-                description: >-
+                description: |-
                   Interval is the length of time to wait between
-
                   scans of the image repository.
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m|h))+$
                 type: string
               provider:
                 default: generic
-                description: >-
+                description: |-
                   The provider used for authentication, can be 'aws', 'azure', 'gcp' or 'generic'.
-
                   When not specified, defaults to 'generic'.
                 enum:
                 - generic
@@ -420,9 +359,8 @@ spec:
                 - gcp
                 type: string
               proxySecretRef:
-                description: >-
+                description: |-
                   ProxySecretRef specifies the Secret containing the proxy configuration
-
                   to use while communicating with the container registry.
                 properties:
                   name:
@@ -432,13 +370,10 @@ spec:
                 - name
                 type: object
               secretRef:
-                description: >-
+                description: |-
                   SecretRef can be given the name of a secret containing
-
                   credentials to use for the image registry. The secret should be
-
                   created with `kubectl create secret docker-registry`, or the
-
                   equivalent.
                 properties:
                   name:
@@ -448,22 +383,19 @@ spec:
                 - name
                 type: object
               serviceAccountName:
-                description: >-
+                description: |-
                   ServiceAccountName is the name of the Kubernetes ServiceAccount used to authenticate
-
                   the image pull if the service account has attached pull secrets.
                 maxLength: 253
                 type: string
               suspend:
-                description: >-
+                description: |-
                   This flag tells the controller to suspend subsequent image scans.
-
                   It does not apply to already started scans. Defaults to false.
                 type: boolean
               timeout:
-                description: >-
+                description: |-
                   Timeout for image scanning.
-
                   Defaults to 'Interval' duration.
                 pattern: ^([0-9]+(\.[0-9]+)?(ms|s|m))+$
                 type: string
@@ -477,11 +409,9 @@ spec:
             description: ImageRepositoryStatus defines the observed state of ImageRepository
             properties:
               canonicalImageName:
-                description: >-
+                description: |-
                   CanonicalName is the name of the image repository with all the
-
                   implied bits made explicit; e.g., `docker.io/library/alpine`
-
                   rather than `alpine`.
                 type: string
               conditions:
@@ -489,39 +419,31 @@ spec:
                   description: Condition contains details for one aspect of the current state of this API Resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         lastTransitionTime is the last time the condition transitioned from one status to another.
-
                         This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         message is a human readable message indicating details about the transition.
-
                         This may be an empty string.
                       maxLength: 32768
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         observedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       minimum: 0
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         reason contains a programmatic identifier indicating the reason for the condition's last transition.
-
                         Producers of specific condition types may define expected values and meanings for this field,
-
                         and whether the values are considered a guaranteed API.
-
                         The value should be a CamelCase string.
-
                         This field may not be empty.
                       maxLength: 1024
                       minLength: 1
@@ -530,8 +452,8 @@ spec:
                     status:
                       description: status of the condition, one of True, False, Unknown.
                       enum:
-                      - True
-                      - False
+                      - "True"
+                      - "False"
                       - Unknown
                       type: string
                     type:
@@ -548,11 +470,9 @@ spec:
                   type: object
                 type: array
               lastHandledReconcileAt:
-                description: >-
+                description: |-
                   LastHandledReconcileAt holds the value of the most recent
-
                   reconcile request value, so a change of the annotation value
-
                   can be detected.
                 type: string
               lastScanResult:
@@ -571,11 +491,9 @@ spec:
                 - tagCount
                 type: object
               observedExclusionList:
-                description: >-
+                description: |-
                   ObservedExclusionList is a list of observed exclusion list. It reflects
-
                   the exclusion rules used for the observed scan result in
-
                   spec.lastScanResult.
                 items:
                   type: string

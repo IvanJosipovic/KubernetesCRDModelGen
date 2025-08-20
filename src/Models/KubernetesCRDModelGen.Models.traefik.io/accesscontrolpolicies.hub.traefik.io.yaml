@@ -19,25 +19,18 @@ spec:
         description: AccessControlPolicy defines an access control policy.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -63,9 +56,8 @@ spec:
                         description: Header is the name of a header.
                         type: string
                       headerAuthScheme:
-                        description: >-
+                        description: |-
                           HeaderAuthScheme sets an optional auth scheme when Header is set to "Authorization".
-
                           If set, this scheme is removed from the token, and all requests not including it are dropped.
                         type: string
                       query:
@@ -162,16 +154,14 @@ spec:
                             description: CA sets the CA bundle used to sign the Authorization Server certificate.
                             type: string
                           insecureSkipVerify:
-                            description: >-
+                            description: |-
                               InsecureSkipVerify skips the Authorization Server certificate validation.
-
                               For testing purposes only, do not use in production.
                             type: boolean
                         type: object
                       tokenTypeHint:
-                        description: >-
+                        description: |-
                           TokenTypeHint is a hint to pass to the Authorization Server.
-
                           See https://tools.ietf.org/html/rfc7662#section-2.1 for more information.
                         type: string
                       url:
@@ -185,9 +175,8 @@ spec:
                       type: string
                     type: object
                   tokenSource:
-                    description: >-
+                    description: |-
                       TokenSource describes how to extract tokens from HTTP requests.
-
                       If multiple sources are set, the order is the following: header > query > cookie.
                     properties:
                       cookie:
@@ -197,9 +186,8 @@ spec:
                         description: Header is the name of a header.
                         type: string
                       headerAuthScheme:
-                        description: >-
+                        description: |-
                           HeaderAuthScheme sets an optional auth scheme when Header is set to "Authorization".
-
                           If set, this scheme is removed from the token, and all requests not including it are dropped.
                         type: string
                       query:
@@ -240,9 +228,8 @@ spec:
                       type: string
                     type: array
                   secret:
-                    description: >-
+                    description: |-
                       SecretReference represents a Secret Reference. It has enough information to retrieve secret
-
                       in any namespace
                     properties:
                       name:
@@ -304,9 +291,8 @@ spec:
                   redirectUrl:
                     type: string
                   secret:
-                    description: >-
+                    description: |-
                       SecretReference represents a Secret Reference. It has enough information to retrieve secret
-
                       in any namespace
                     properties:
                       name:

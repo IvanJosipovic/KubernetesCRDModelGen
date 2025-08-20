@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: dataprocnodegroups.dataproc.cnrm.cloud.google.com
 spec:
   group: dataproc.cnrm.cloud.google.com
@@ -57,7 +56,7 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Optional. Node group labels.
 
                    * Label **keys** must consist of from 1 to 63 characters and conform to
@@ -82,7 +81,7 @@ spec:
                           format: int32
                           type: integer
                         acceleratorTypeURI:
-                          description: >-
+                          description: |-
                             Full URL, partial URI, or short name of the accelerator type resource to
                              expose to this instance. See
                              [Compute Engine
@@ -124,7 +123,7 @@ spec:
                         description: 'Optional. Interface type of local SSDs (default is "scsi"). Valid values: "scsi" (Small Computer System Interface), "nvme" (Non-Volatile Memory Express). See [local SSD performance](https://cloud.google.com/compute/docs/disks/local-ssd#performance).'
                         type: string
                       numLocalSSDs:
-                        description: >-
+                        description: |-
                           Optional. Number of attached SSDs, from 0 to 8 (default is 0).
                            If SSDs are not attached, the boot disk is used to store runtime logs and
                            [HDFS](https://hadoop.apache.org/docs/r1.2.1/hdfs_user_guide.html) data.
@@ -138,7 +137,7 @@ spec:
                         type: integer
                     type: object
                   imageURI:
-                    description: >-
+                    description: |-
                       Optional. The Compute Engine image resource used for cluster instances.
 
                        The URI can represent an image or image family.
@@ -190,7 +189,7 @@ spec:
                         type: object
                     type: object
                   machineTypeURI:
-                    description: >-
+                    description: |-
                       Optional. The Compute Engine machine type used for cluster instances.
 
                        A full URL, partial URI, or short name are valid. Examples:
@@ -209,7 +208,7 @@ spec:
                     description: Optional. Specifies the minimum cpu platform for the Instance Group. See [Dataproc -> Minimum CPU Platform](https://cloud.google.com/dataproc/docs/concepts/compute/dataproc-min-cpu).
                     type: string
                   minNumInstances:
-                    description: >-
+                    description: |-
                       Optional. The minimum number of primary worker instances to create.
                        If `min_num_instances` is set, cluster creation will succeed if
                        the number of primary workers created is at least equal to the
@@ -231,7 +230,7 @@ spec:
                     format: int32
                     type: integer
                   preemptibility:
-                    description: >-
+                    description: |-
                       Optional. Specifies the preemptibility of the instance group.
 
                        The default value for master and worker groups is
@@ -374,7 +373,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

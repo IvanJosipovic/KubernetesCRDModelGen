@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computeroutes.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -54,15 +53,13 @@ spec:
           spec:
             properties:
               description:
-                description: >-
+                description: |-
                   Immutable. An optional description of this resource. Provide this property
-
                   when you create the resource.
                 type: string
               destRange:
-                description: >-
+                description: |-
                   Immutable. The destination range of outgoing packets that this route applies to.
-
                   Only IPv4 is supported.
                 type: string
               networkRef:
@@ -93,27 +90,19 @@ spec:
                     type: string
                 type: object
               nextHopGateway:
-                description: >-
+                description: |-
                   Immutable. URL to a gateway that should handle matching packets.
-
                   Currently, you can only specify the internet gateway, using a full or
-
                   partial valid URL:
-
                   * 'https://www.googleapis.com/compute/v1/projects/project/global/gateways/default-internet-gateway'
-
                   * 'projects/project/global/gateways/default-internet-gateway'
-
                   * 'global/gateways/default-internet-gateway'
-
                   * The string 'default-internet-gateway'.
                 type: string
               nextHopILBRef:
-                description: >-
+                description: |-
                   A forwarding rule of type loadBalancingScheme=INTERNAL that should
-
                   handle matching packets.  Note that this can only be used when the
-
                   destinationRange is a public (non-RFC 1918) IP CIDR range.
                 oneOf:
                 - not:
@@ -198,16 +187,12 @@ spec:
                     type: string
                 type: object
               priority:
-                description: >-
+                description: |-
                   Immutable. The priority of this route. Priority is used to break ties in cases
-
                   where there is more than one matching route of equal prefix length.
 
-
                   In the case of two routes with equal prefix length, the one with the
-
                   lowest-numbered priority value wins.
-
 
                   Default value is 1000. Valid range is 0 through 65535.
                 type: integer
@@ -264,7 +249,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

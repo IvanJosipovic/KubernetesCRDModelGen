@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: colabruntimetemplates.colab.cnrm.cloud.google.com
 spec:
   group: colab.cnrm.cloud.google.com
@@ -122,7 +121,7 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   The labels with user-defined metadata to organize the
                    NotebookRuntimeTemplates.
 
@@ -149,7 +148,7 @@ spec:
                     description: Immutable. The type of accelerator(s) that may be attached to the machine as per [accelerator_count][google.cloud.aiplatform.v1beta1.MachineSpec.accelerator_count].
                     type: string
                   machineType:
-                    description: >-
+                    description: |-
                       Immutable. The type of the machine.
 
                        See the [list of machine types supported for
@@ -288,7 +287,7 @@ spec:
                 description: The ColabRuntimeTemplate name. If not given, the metadata.name will be used.
                 type: string
               serviceAccountRef:
-                description: >-
+                description: |-
                   The service account that the runtime workload runs as.
                    You can use any service account within the same project, but you
                    must have the service account user permission to use the instance.
@@ -325,7 +324,7 @@ spec:
                 description: Optional. Immutable. Runtime Shielded VM spec.
                 properties:
                   enableSecureBoot:
-                    description: >-
+                    description: |-
                       Defines whether the instance has [Secure
                        Boot](https://cloud.google.com/compute/shielded-vm/docs/shielded-vm#secure-boot)
                        enabled.
@@ -400,7 +399,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

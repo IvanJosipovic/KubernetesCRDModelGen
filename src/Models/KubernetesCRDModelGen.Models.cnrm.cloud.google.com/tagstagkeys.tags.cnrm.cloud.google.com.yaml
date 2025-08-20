@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: tagstagkeys.tags.cnrm.cloud.google.com
 spec:
   group: tags.cnrm.cloud.google.com
@@ -60,18 +59,16 @@ spec:
                 description: Immutable. Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id} or projects/{project_id_or_number}.
                 type: string
               purpose:
-                description: >-
+                description: |-
                   Immutable. Optional. A purpose cannot be changed once set.
-
 
                   A purpose denotes that this Tag is intended for use in policies of a specific policy engine, and will involve that policy engine in management operations involving this Tag. Possible values: ["GCE_FIREWALL"].
                 type: string
               purposeData:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Immutable. Optional. Purpose data cannot be changed once set.
-
 
                   Purpose data corresponds to the policy system that the tag is intended for. For example, the GCE_FIREWALL purpose expects data in the following format: 'network = "<project-name>/<vpc-name>"'.
                 type: object
@@ -79,9 +76,8 @@ spec:
                 description: Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.
                 type: string
               shortName:
-                description: >-
+                description: |-
                   Immutable. Input only. The user friendly name for a TagKey. The short name should be unique for TagKeys within the same tag namespace.
-
 
                   The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
                 type: string
@@ -113,9 +109,8 @@ spec:
                   type: object
                 type: array
               createTime:
-                description: >-
+                description: |-
                   Output only. Creation time.
-
 
                   A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                 type: string
@@ -129,9 +124,8 @@ spec:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
               updateTime:
-                description: >-
+                description: |-
                   Output only. Update time.
-
 
                   A timestamp in RFC3339 UTC "Zulu" format, with nanosecond resolution and up to nine fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
                 type: string
@@ -145,7 +139,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

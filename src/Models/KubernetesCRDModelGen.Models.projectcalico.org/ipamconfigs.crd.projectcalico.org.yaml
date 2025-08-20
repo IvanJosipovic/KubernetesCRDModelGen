@@ -29,8 +29,8 @@ spec:
               autoAllocateBlocks:
                 type: boolean
               maxBlocksPerHost:
-                maximum: 2147483647
-                minimum: 0
+                maximum: 2147483647.0
+                minimum: 0.0
                 type: integer
               strictAffinity:
                 type: boolean

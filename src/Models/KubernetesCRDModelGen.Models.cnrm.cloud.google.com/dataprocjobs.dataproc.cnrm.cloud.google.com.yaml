@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: dataprocjobs.dataproc.cnrm.cloud.google.com
 spec:
   group: dataproc.cnrm.cloud.google.com
@@ -158,7 +157,7 @@ spec:
                     description: A list of queries.
                     properties:
                       queries:
-                        description: >-
+                        description: |-
                           Required. The queries to execute. You do not need to end a query expression
                            with a semicolon. Multiple queries can be specified in one
                            string by separating each with a semicolon. Here is an example of a
@@ -254,7 +253,7 @@ spec:
                     description: A list of queries.
                     properties:
                       queries:
-                        description: >-
+                        description: |-
                           Required. The queries to execute. You do not need to end a query expression
                            with a semicolon. Multiple queries can be specified in one
                            string by separating each with a semicolon. Here is an example of a
@@ -320,7 +319,7 @@ spec:
                     description: A list of queries.
                     properties:
                       queries:
-                        description: >-
+                        description: |-
                           Required. The queries to execute. You do not need to end a query expression
                            with a semicolon. Multiple queries can be specified in one
                            string by separating each with a semicolon. Here is an example of a
@@ -384,7 +383,7 @@ spec:
                 description: Optional. The fully qualified reference to the job, which can be used to obtain the equivalent REST path of the job resource. If this property is not specified when a job is created, the server generates a <code>job_id</code>.
                 properties:
                   jobID:
-                    description: >-
+                    description: |-
                       Optional. The job ID, which must be unique within the project.
 
                        The ID must contain only letters (a-z, A-Z), numbers (0-9),
@@ -403,7 +402,7 @@ spec:
                 description: Optional. Job scheduling configuration.
                 properties:
                   maxFailuresPerHour:
-                    description: >-
+                    description: |-
                       Optional. Maximum number of times per hour a driver can be restarted as
                        a result of driver exiting with non-zero code before job is
                        reported failed.
@@ -419,7 +418,7 @@ spec:
                     format: int32
                     type: integer
                   maxFailuresTotal:
-                    description: >-
+                    description: |-
                       Optional. Maximum total number of times a driver can be restarted as a
                        result of the driver exiting with a non-zero code. After the maximum number
                        is reached, the job will be reported as failed.
@@ -524,7 +523,7 @@ spec:
                     description: A list of queries.
                     properties:
                       queries:
-                        description: >-
+                        description: |-
                           Required. The queries to execute. You do not need to end a query expression
                            with a semicolon. Multiple queries can be specified in one
                            string by separating each with a semicolon. Here is an example of a
@@ -578,7 +577,7 @@ spec:
                     description: A list of queries.
                     properties:
                       queries:
-                        description: >-
+                        description: |-
                           Required. The queries to execute. You do not need to end a query expression
                            with a semicolon. Multiple queries can be specified in one
                            string by separating each with a semicolon. Here is an example of a
@@ -687,7 +686,7 @@ spec:
                       type: object
                     type: array
                   yarnApplications:
-                    description: >-
+                    description: |-
                       Output only. The collection of YARN applications spun up by this job.
 
                        **Beta** Feature: This report is available for testing purposes only. It
@@ -719,7 +718,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

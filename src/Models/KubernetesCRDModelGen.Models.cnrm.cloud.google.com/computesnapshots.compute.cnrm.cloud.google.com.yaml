@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computesnapshots.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -54,17 +53,12 @@ spec:
           spec:
             properties:
               chainName:
-                description: >-
+                description: |-
                   Immutable. Creates the new snapshot in the snapshot chain labeled with the
-
                   specified name. The chain name must be 1-63 characters long and
-
                   comply with RFC1035. This is an uncommon option only for advanced
-
                   service owners who needs to create separate snapshot chains, for
-
                   example, for chargeback tracking.  When you describe your snapshot
-
                   resource, this field is visible only if it has a non-empty value.
                 type: string
               description:
@@ -74,28 +68,19 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               snapshotEncryptionKey:
-                description: >-
+                description: |-
                   Immutable. Encrypts the snapshot using a customer-supplied encryption key.
 
-
                   After you encrypt a snapshot using a customer-supplied key, you must
-
                   provide the same key if you use the snapshot later. For example, you
-
                   must provide the encryption key when you create a disk from the
-
                   encrypted snapshot in a future request.
 
-
                   Customer-supplied encryption keys do not protect access to metadata of
-
                   the snapshot.
 
-
                   If you do not provide an encryption key when creating the snapshot,
-
                   then the snapshot will be encrypted using an automatically generated
-
                   key and you do not need to provide a key to use the snapshot later.
                 properties:
                   kmsKeyRef:
@@ -126,9 +111,8 @@ spec:
                         type: string
                     type: object
                   kmsKeyServiceAccountRef:
-                    description: >-
+                    description: |-
                       The service account used for the encryption request for the given KMS key.
-
                       If absent, the Compute Engine Service Agent service account is used.
                     oneOf:
                     - not:
@@ -156,9 +140,8 @@ spec:
                         type: string
                     type: object
                   rawKey:
-                    description: >-
+                    description: |-
                       Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in
-
                       RFC 4648 base64 to either encrypt or decrypt this resource.
                     oneOf:
                     - not:
@@ -194,24 +177,20 @@ spec:
                         type: object
                     type: object
                   sha256:
-                    description: >-
+                    description: |-
                       The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
-
                       encryption key that protects this resource.
                     type: string
                 type: object
               sourceDiskEncryptionKey:
-                description: >-
+                description: |-
                   Immutable. The customer-supplied encryption key of the source snapshot. Required
-
                   if the source snapshot is protected by a customer-supplied encryption
-
                   key.
                 properties:
                   kmsKeyServiceAccountRef:
-                    description: >-
+                    description: |-
                       The service account used for the encryption request for the given KMS key.
-
                       If absent, the Compute Engine Service Agent service account is used.
                     oneOf:
                     - not:
@@ -239,9 +218,8 @@ spec:
                         type: string
                     type: object
                   rawKey:
-                    description: >-
+                    description: |-
                       Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in
-
                       RFC 4648 base64 to either encrypt or decrypt this resource.
                     oneOf:
                     - not:
@@ -345,19 +323,15 @@ spec:
                 description: Size of the snapshot, specified in GB.
                 type: integer
               labelFingerprint:
-                description: >-
+                description: |-
                   The fingerprint used for optimistic locking of this resource. Used
-
                   internally during updates.
                 type: string
               licenses:
-                description: >-
+                description: |-
                   A list of public visible licenses that apply to this snapshot. This
-
                   can be because the original image had licenses attached (such as a
-
                   Windows image).  snapshotEncryptionKey nested object Encrypts the
-
                   snapshot using a customer-supplied encryption key.
                 items:
                   type: string
@@ -371,11 +345,9 @@ spec:
                 description: The unique identifier for the resource.
                 type: integer
               storageBytes:
-                description: >-
+                description: |-
                   A size of the storage used by the snapshot. As snapshots share
-
                   storage, this number is expected to change with snapshot
-
                   creation/deletion.
                 type: integer
             type: object
@@ -388,7 +360,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -16,31 +16,23 @@ spec:
   - name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           TLSOption is the CRD implementation of a Traefik TLS Option, allowing to configure some parameters of the TLS connection.
-
           More info: https://doc.traefik.io/traefik/v3.5/https/tls/#tls-options
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -49,17 +41,15 @@ spec:
             description: TLSOptionSpec defines the desired state of a TLSOption.
             properties:
               alpnProtocols:
-                description: >-
+                description: |-
                   ALPNProtocols defines the list of supported application level protocols for the TLS handshake, in order of preference.
-
                   More info: https://doc.traefik.io/traefik/v3.5/https/tls/#alpn-protocols
                 items:
                   type: string
                 type: array
               cipherSuites:
-                description: >-
+                description: |-
                   CipherSuites defines the list of supported cipher suites for TLS versions up to TLS 1.2.
-
                   More info: https://doc.traefik.io/traefik/v3.5/https/tls/#cipher-suites
                 items:
                   type: string
@@ -83,9 +73,8 @@ spec:
                     type: array
                 type: object
               curvePreferences:
-                description: >-
+                description: |-
                   CurvePreferences defines the preferred elliptic curves.
-
                   More info: https://doc.traefik.io/traefik/v3.5/https/tls/#curve-preferences
                 items:
                   type: string
@@ -94,27 +83,21 @@ spec:
                 description: DisableSessionTickets disables TLS session resumption via session tickets.
                 type: boolean
               maxVersion:
-                description: >-
+                description: |-
                   MaxVersion defines the maximum TLS version that Traefik will accept.
-
                   Possible values: VersionTLS10, VersionTLS11, VersionTLS12, VersionTLS13.
-
                   Default: None.
                 type: string
               minVersion:
-                description: >-
+                description: |-
                   MinVersion defines the minimum TLS version that Traefik will accept.
-
                   Possible values: VersionTLS10, VersionTLS11, VersionTLS12, VersionTLS13.
-
                   Default: VersionTLS10.
                 type: string
               preferServerCipherSuites:
-                description: >-
+                description: |-
                   PreferServerCipherSuites defines whether the server chooses a cipher suite among his own instead of among the client's.
-
                   It is enabled automatically when minVersion or maxVersion is set.
-
                   Deprecated: https://github.com/golang/go/issues/45430
                 type: boolean
               sniStrict:

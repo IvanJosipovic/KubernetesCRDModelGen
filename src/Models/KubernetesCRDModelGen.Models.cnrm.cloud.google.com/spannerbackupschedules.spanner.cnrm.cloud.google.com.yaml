@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: spannerbackupschedules.spanner.cnrm.cloud.google.com
 spec:
   group: spanner.cnrm.cloud.google.com
@@ -88,7 +87,7 @@ spec:
                         type: string
                     type: object
                   kmsKeyRefs:
-                    description: >-
+                    description: |-
                       Optional. Specifies the KMS configuration for the one or more keys used to
                        protect the backup. Values are of the form
                        `projects/<project>/locations/<location>/keyRings/<key_ring>/cryptoKeys/<kms_key_name>`.
@@ -178,7 +177,7 @@ spec:
                     description: Cron style schedule specification.
                     properties:
                       text:
-                        description: >-
+                        description: |-
                           Required. Textual representation of the crontab. User can customize the
                            backup frequency and the backup version time using the cron
                            expression. The version time must be in UTC timzeone.
@@ -253,7 +252,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

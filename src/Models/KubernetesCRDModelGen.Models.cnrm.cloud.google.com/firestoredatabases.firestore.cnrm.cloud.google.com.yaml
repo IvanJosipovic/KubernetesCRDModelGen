@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: firestoredatabases.firestore.cnrm.cloud.google.com
 spec:
   group: firestore.cnrm.cloud.google.com
@@ -137,7 +136,7 @@ spec:
                     description: Output only. The timestamp at which this database was created. Databases created before 2016 do not populate create_time.
                     type: string
                   earliestVersionTime:
-                    description: >-
+                    description: |-
                       Output only. The earliest timestamp at which older versions of the data can
                        be read from the database. See [version_retention_period] above; this field
                        is populated with `now - version_retention_period`.
@@ -151,7 +150,7 @@ spec:
                     description: This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
                     type: string
                   keyPrefix:
-                    description: >-
+                    description: |-
                       Output only. The key_prefix for this database. This key_prefix is used, in
                        combination with the project id ("<key prefix>~<project id>") to construct
                        the application id that is returned from the Cloud Datastore APIs in Google
@@ -167,7 +166,7 @@ spec:
                     description: Output only. The timestamp at which this database was most recently updated. Note this only includes updates to the database resource and not data contained by the database.
                     type: string
                   versionRetentionPeriod:
-                    description: >-
+                    description: |-
                       Output only. The period during which past versions of data are retained in
                        the database.
 
@@ -301,7 +300,7 @@ spec:
                     description: Output only. The timestamp at which this database was created. Databases created before 2016 do not populate create_time.
                     type: string
                   earliestVersionTime:
-                    description: >-
+                    description: |-
                       Output only. The earliest timestamp at which older versions of the data can
                        be read from the database. See [version_retention_period] above; this field
                        is populated with `now - version_retention_period`.
@@ -315,7 +314,7 @@ spec:
                     description: This checksum is computed by the server based on the value of other fields, and may be sent on update and delete requests to ensure the client has an up-to-date value before proceeding.
                     type: string
                   keyPrefix:
-                    description: >-
+                    description: |-
                       Output only. The key_prefix for this database. This key_prefix is used, in
                        combination with the project id ("<key prefix>~<project id>") to construct
                        the application id that is returned from the Cloud Datastore APIs in Google
@@ -331,7 +330,7 @@ spec:
                     description: Output only. The timestamp at which this database was most recently updated. Note this only includes updates to the database resource and not data contained by the database.
                     type: string
                   versionRetentionPeriod:
-                    description: >-
+                    description: |-
                       Output only. The period during which past versions of data are retained in
                        the database.
 
@@ -352,7 +351,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

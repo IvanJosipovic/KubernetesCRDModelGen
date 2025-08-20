@@ -3,11 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: spannerinstances.spanner.cnrm.cloud.google.com
 spec:
   group: spanner.cnrm.cloud.google.com
@@ -98,23 +97,16 @@ spec:
                 - message: Config field is immutable
                   rule: self == oldSelf
               defaultBackupScheduleType:
-                description: >-
+                description: |-
                   Optional. Controls the default backup schedule behavior for new databases
-
                   within the instance. By default, a backup schedule is created automatically
-
                   when a new database is created in a new instance.
 
-
                   Note that the `AUTOMATIC` value isn't permitted for free instances,
-
                   as backups and backup schedules aren't supported for free instances.
 
-
                   In the `GetInstance` or `ListInstances` response, if the value of
-
                   `default_backup_schedule_type` isn't set, or set to `NONE`, Spanner doesn't
-
                   create a default backup schedule for new databases in the instance.
                 type: string
               displayName:
@@ -126,17 +118,12 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Cloud Labels are a flexible and lightweight mechanism for organizing cloud
-
                   resources into groups that reflect a customer's organizational needs and
-
                   deployment strategies. Cloud Labels can be used to filter collections of
-
                   resources. They can be used to control how resource metrics are aggregated.
-
                   And they can be used as arguments to policy management rules (e.g. route,
-
                   firewall, load balancing, etc.).
 
                     - Label keys must be between 1 and 63 characters long and must conform to
@@ -147,17 +134,11 @@ spec:
 
                   See https://goo.gl/xmQnxf for more information on and examples of labels.
 
-
                   If you plan to use labels in your own code, please note that additional
-
                   characters may be allowed in the future. And so you are advised to use an
-
                   internal label representation, such as JSON, which doesn't rely upon
-
                   specific characters being disallowed.  For example, representing labels
-
                   as the string:  name + "_" + value  would prove problematic if we were to
-
                   allow "_" in a future release.
                 type: object
               numNodes:
@@ -228,7 +209,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

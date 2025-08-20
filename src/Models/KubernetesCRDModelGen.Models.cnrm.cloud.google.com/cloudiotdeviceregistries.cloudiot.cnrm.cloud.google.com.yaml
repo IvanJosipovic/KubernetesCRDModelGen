@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: cloudiotdeviceregistries.cloudiot.cnrm.cloud.google.com
 spec:
   group: cloudiot.cnrm.cloud.google.com
@@ -66,9 +65,8 @@ spec:
                   type: object
                 type: array
               eventNotificationConfigs:
-                description: >-
+                description: |-
                   List of configurations for event notifications, such as PubSub topics
-
                   to publish device events to.
                 items:
                   properties:
@@ -76,15 +74,11 @@ spec:
                       description: PubSub topic name to publish device events.
                       type: string
                     subfolderMatches:
-                      description: >-
+                      description: |-
                         If the subfolder name matches this string exactly, this
-
                         configuration will be used. The string must not include the
-
                         leading '/' character. If empty, all strings are matched. Empty
-
                         value can only be used for the last 'event_notification_configs'
-
                         item.
                       type: string
                   required:
@@ -96,15 +90,11 @@ spec:
                 type: object
                 x-kubernetes-preserve-unknown-fields: true
               logLevel:
-                description: >-
+                description: |-
                   The default logging verbosity for activity from devices in this
-
                   registry. Specifies which events should be written to logs. For
-
                   example, if the LogLevel is ERROR, only events that terminate in
-
                   errors will be logged. LogLevel is inclusive; enabling INFO logging
-
                   will also enable ERROR logging. Default value: "NONE" Possible values: ["NONE", "ERROR", "INFO", "DEBUG"].
                 type: string
               mqttConfig:
@@ -115,9 +105,8 @@ spec:
                 description: Immutable.
                 type: string
               region:
-                description: >-
+                description: |-
                   Immutable. The region in which the created registry should reside.
-
                   If it is not provided, the provider region is used.
                 type: string
               resourceID:
@@ -166,7 +155,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: healthcaredatasets.healthcare.cnrm.cloud.google.com
 spec:
   group: healthcare.cnrm.cloud.google.com
@@ -87,11 +86,9 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               timeZone:
-                description: >-
+                description: |-
                   The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
-
                   "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
-
                   (e.g., HL7 messages) where no explicit timezone is specified.
                 type: string
             required:
@@ -137,7 +134,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []
