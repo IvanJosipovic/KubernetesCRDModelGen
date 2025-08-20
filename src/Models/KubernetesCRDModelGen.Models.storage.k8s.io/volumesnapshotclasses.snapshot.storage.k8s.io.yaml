@@ -31,58 +31,42 @@ spec:
     name: v1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           VolumeSnapshotClass specifies parameters that a underlying storage system uses when
-
           creating a volume snapshot. A specific VolumeSnapshotClass is used by specifying its
-
           name in a VolumeSnapshot object.
-
           VolumeSnapshotClasses are non-namespaced
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           deletionPolicy:
-            description: >-
+            description: |-
               deletionPolicy determines whether a VolumeSnapshotContent created through
-
               the VolumeSnapshotClass should be deleted when its bound VolumeSnapshot is deleted.
-
               Supported values are "Retain" and "Delete".
-
               "Retain" means that the VolumeSnapshotContent and its physical snapshot on underlying storage system are kept.
-
               "Delete" means that the VolumeSnapshotContent and its physical snapshot on underlying storage system are deleted.
-
               Required.
             enum:
             - Delete
             - Retain
             type: string
           driver:
-            description: >-
+            description: |-
               driver is the name of the storage driver that handles this VolumeSnapshotClass.
-
               Required.
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -90,9 +74,8 @@ spec:
           parameters:
             additionalProperties:
               type: string
-            description: >-
+            description: |-
               parameters is a key-value map with storage driver specific parameters for creating snapshots.
-
               These values are opaque to Kubernetes.
             type: object
         required:
@@ -113,9 +96,9 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    name: v1beta1
     deprecated: true
     deprecationWarning: snapshot.storage.k8s.io/v1beta1 VolumeSnapshotClass is deprecated; use snapshot.storage.k8s.io/v1 VolumeSnapshotClass
+    name: v1beta1
     schema:
       openAPIV3Schema:
         description: VolumeSnapshotClass specifies parameters that a underlying storage system uses when creating a volume snapshot. A specific VolumeSnapshotClass is used by specifying its name in a VolumeSnapshot object. VolumeSnapshotClasses are non-namespaced
@@ -149,7 +132,7 @@ spec:
     subresources: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

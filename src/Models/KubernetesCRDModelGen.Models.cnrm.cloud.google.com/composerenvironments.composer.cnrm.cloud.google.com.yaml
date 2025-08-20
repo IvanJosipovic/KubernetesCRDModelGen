@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: composerenvironments.composer.cnrm.cloud.google.com
 spec:
   group: composer.cnrm.cloud.google.com
@@ -121,14 +120,14 @@ spec:
                         type: object
                     type: object
                   environmentSize:
-                    description: >-
+                    description: |-
                       Optional. The size of the Cloud Composer environment.
 
                        This field is supported for Cloud Composer environments in versions
                        composer-2.*.*-airflow-*.*.* and newer.
                     type: string
                   maintenanceWindow:
-                    description: >-
+                    description: |-
                       Optional. The maintenance window is the period when Cloud Composer
                        components may undergo maintenance. It is defined so that maintenance is
                        not executed during peak hours or critical time periods.
@@ -178,7 +177,7 @@ spec:
                     description: Optional. The configuration used for the Kubernetes Engine cluster.
                     properties:
                       composerInternalIPv4CIDRBlock:
-                        description: >-
+                        description: |-
                           Optional. The IP range in CIDR notation to use internally by Cloud
                            Composer. IP addresses are not reserved - and the same range can be used by
                            multiple Cloud Composer environments. In case of overlap, IPs from this
@@ -189,7 +188,7 @@ spec:
                            composer-3.*.*-airflow-*.*.* and newer.
                         type: string
                       composerNetworkAttachmentRef:
-                        description: >-
+                        description: |-
                           Optional. Network Attachment that Cloud Composer environment is connected
                            to, which provides connectivity with a user's VPC network. Takes precedence
                            over network and subnetwork settings. If not provided, but network and
@@ -227,7 +226,7 @@ spec:
                             type: string
                         type: object
                       diskSizeGB:
-                        description: >-
+                        description: |-
                           Optional. The disk size in GB used for node VMs. Minimum size is 30GB.
                            If unspecified, defaults to 100GB. Cannot be updated.
 
@@ -236,7 +235,7 @@ spec:
                         format: int32
                         type: integer
                       enableIPMasqAgent:
-                        description: >-
+                        description: |-
                           Optional. Deploys 'ip-masq-agent' daemon set in the GKE cluster and defines
                            nonMasqueradeCIDRs equals to pod IP range so IP masquerading is used for
                            all destination addresses, except between pods traffic.
@@ -248,7 +247,7 @@ spec:
                         description: Optional. The configuration for controlling how IPs are allocated in the GKE cluster.
                         properties:
                           clusterIPV4CIDRBlock:
-                            description: >-
+                            description: |-
                               Optional. The IP address range used to allocate IP addresses to pods in
                                the GKE cluster.
 
@@ -267,7 +266,7 @@ spec:
                                to use.
                             type: string
                           clusterSecondaryRangeName:
-                            description: >-
+                            description: |-
                               Optional. The name of the GKE cluster's secondary range used to allocate
                                IP addresses to pods.
 
@@ -275,7 +274,7 @@ spec:
                                this field is applicable only when `use_ip_aliases` is true.
                             type: string
                           servicesIPV4CIDRBlock:
-                            description: >-
+                            description: |-
                               Optional. The IP address range of the services IP addresses in this
                                GKE cluster.
 
@@ -294,7 +293,7 @@ spec:
                                to use.
                             type: string
                           servicesSecondaryRangeName:
-                            description: >-
+                            description: |-
                               Optional. The name of the services' secondary range used to allocate
                                IP addresses to the GKE cluster.
 
@@ -302,7 +301,7 @@ spec:
                                this field is applicable only when `use_ip_aliases` is true.
                             type: string
                           useIPAliases:
-                            description: >-
+                            description: |-
                               Optional. Whether or not to enable Alias IPs in the GKE cluster.
                                If `true`, a VPC-native cluster is created.
 
@@ -312,7 +311,7 @@ spec:
                             type: boolean
                         type: object
                       location:
-                        description: >-
+                        description: |-
                           Optional. The Compute Engine [zone](/compute/docs/regions-zones) in which
                            to deploy the VMs used to run the Apache Airflow software, specified as a
                            [relative resource
@@ -332,7 +331,7 @@ spec:
                            composer-1.*.*-airflow-*.*.*.
                         type: string
                       machineType:
-                        description: >-
+                        description: |-
                           Optional. The Compute Engine
                            [machine type](/compute/docs/machine-types) used for cluster instances,
                            specified as a
@@ -359,7 +358,7 @@ spec:
                            composer-1.*.*-airflow-*.*.*.
                         type: string
                       networkRef:
-                        description: >-
+                        description: |-
                           Optional. The Compute Engine network to be used for machine
                            communications, specified as a
                            [relative resource
@@ -397,7 +396,7 @@ spec:
                             type: string
                         type: object
                       oauthScopes:
-                        description: >-
+                        description: |-
                           Optional. The set of Google API scopes to be made available on all
                            node VMs. If `oauth_scopes` is empty, defaults to
                            ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
@@ -435,7 +434,7 @@ spec:
                             type: string
                         type: object
                       subnetworkRef:
-                        description: >-
+                        description: |-
                           Optional. The Compute Engine subnetwork to be used for machine
                            communications, specified as a
                            [relative resource
@@ -477,7 +476,7 @@ spec:
                         type: array
                     type: object
                   nodeCount:
-                    description: >-
+                    description: |-
                       The number of nodes in the Kubernetes Engine cluster that will be
                        used to run this environment.
 
@@ -516,7 +515,7 @@ spec:
                             type: string
                         type: object
                       cloudComposerNetworkIPv4CIDRBlock:
-                        description: >-
+                        description: |-
                           Optional. The CIDR block from which IP range for Cloud Composer Network in
                            tenant project will be reserved. Needs to be disjoint from
                            private_cluster_config.master_ipv4_cidr_block and
@@ -529,7 +528,7 @@ spec:
                         description: Optional. The CIDR block from which IP range in tenant project will be reserved for Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
                         type: string
                       enablePrivateBuildsOnly:
-                        description: >-
+                        description: |-
                           Optional. If `true`, builds performed during operations that install Python
                            packages have only private connectivity to Google services (including
                            Artifact Registry) and VPC network (if either `NodeConfig.network` and
@@ -564,7 +563,7 @@ spec:
                             type: string
                         type: object
                       webServerIPv4CIDRBlock:
-                        description: >-
+                        description: |-
                           Optional. The CIDR block from which IP range for web server will be
                            reserved. Needs to be disjoint from
                            `private_cluster_config.master_ipv4_cidr_block` and
@@ -575,7 +574,7 @@ spec:
                         type: string
                     type: object
                   recoveryConfig:
-                    description: >-
+                    description: |-
                       Optional. The Recovery settings configuration of an environment.
 
                        This field is supported for Cloud Composer environments in versions
@@ -599,7 +598,7 @@ spec:
                         type: object
                     type: object
                   resilienceMode:
-                    description: >-
+                    description: |-
                       Optional. Resilience mode of the Cloud Composer Environment.
 
                        This field is supported for Cloud Composer environments in versions
@@ -611,7 +610,7 @@ spec:
                       airflowConfigOverrides:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           Optional. Apache Airflow configuration properties to override.
 
                            Property keys contain the section and property names, separated by a
@@ -638,7 +637,7 @@ spec:
                       envVariables:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           Optional. Additional environment variables to provide to the Apache Airflow
                            scheduler, worker, and webserver processes.
 
@@ -663,7 +662,7 @@ spec:
                            * `SQL_USER`
                         type: object
                       imageVersion:
-                        description: >-
+                        description: |-
                           Optional. The version of the software running in the environment.
                            This encapsulates both the version of Cloud Composer functionality and the
                            version of Apache Airflow. It must match the regular expression
@@ -692,7 +691,7 @@ spec:
                       pypiPackages:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           Optional. Custom Python Package Index (PyPI) packages to be installed in
                            the environment.
 
@@ -703,7 +702,7 @@ spec:
                            the value.
                         type: object
                       pythonVersion:
-                        description: >-
+                        description: |-
                           Optional. The major version of Python used to run the Apache Airflow
                            scheduler, worker, and webserver processes.
 
@@ -715,7 +714,7 @@ spec:
                            Python major version 3.
                         type: string
                       schedulerCount:
-                        description: >-
+                        description: |-
                           Optional. The number of schedulers for Airflow.
 
                            This field is supported for Cloud Composer environments in versions
@@ -723,7 +722,7 @@ spec:
                         format: int32
                         type: integer
                       webServerPluginsMode:
-                        description: >-
+                        description: |-
                           Optional. Whether or not the web server uses custom plugins.
                            If unspecified, the field defaults to `PLUGINS_ENABLED`.
 
@@ -749,7 +748,7 @@ spec:
                               description: Optional. User-provided description. It must contain at most 300 characters.
                               type: string
                             value:
-                              description: >-
+                              description: |-
                                 IP address or range, defined using CIDR notation, of requests that this
                                  rule applies to.
                                  Examples: `192.168.1.1` or `192.168.0.0/16` or `2001:db8::/32`
@@ -763,7 +762,7 @@ spec:
                         type: array
                     type: object
                   workloadsConfig:
-                    description: >-
+                    description: |-
                       Optional. The workloads configuration settings for the GKE cluster
                        associated with the Cloud Composer environment. The GKE cluster runs
                        Airflow scheduler, web server and workers workloads.
@@ -772,7 +771,7 @@ spec:
                        composer-2.*.*-airflow-*.*.* and newer.
                     properties:
                       dagProcessor:
-                        description: >-
+                        description: |-
                           Optional. Resources used by Airflow DAG processors.
 
                            This field is supported for Cloud Composer environments in versions
@@ -862,7 +861,7 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Optional. User-defined labels for this environment.
                    The labels map can contain no more than 64 entries. Entries of the labels
                    map are UTF8 strings that comply with the following restrictions:
@@ -999,7 +998,7 @@ spec:
                         description: Optional. The configuration used for the Private IP Cloud Composer environment.
                         properties:
                           cloudComposerNetworkIPv4ReservedRange:
-                            description: >-
+                            description: |-
                               Output only. The IP range reserved for the tenant project's Cloud Composer
                                network.
 
@@ -1014,7 +1013,7 @@ spec:
                                 type: string
                             type: object
                           webServerIPv4ReservedRange:
-                            description: >-
+                            description: |-
                               Output only. The IP range reserved for the tenant project's App Engine VMs.
 
                                This field is supported for Cloud Composer environments in versions
@@ -1045,7 +1044,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

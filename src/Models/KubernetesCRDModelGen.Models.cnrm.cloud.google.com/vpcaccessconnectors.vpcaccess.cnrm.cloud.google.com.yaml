@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: vpcaccessconnectors.vpcaccess.cnrm.cloud.google.com
 spec:
   group: vpcaccess.cnrm.cloud.google.com
@@ -135,9 +134,8 @@ spec:
                 description: Immutable. The subnet in which to house the connector.
                 properties:
                   nameRef:
-                    description: >-
+                    description: |-
                       Immutable. Subnet name (relative, not fully qualified). E.g. if the full subnet selfLink is
-
                       https://compute.googleapis.com/compute/v1/projects/{project}/regions/{region}/subnetworks/{subnetName} the correct input for this field would be {subnetName}"
                     oneOf:
                     - not:
@@ -243,7 +241,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

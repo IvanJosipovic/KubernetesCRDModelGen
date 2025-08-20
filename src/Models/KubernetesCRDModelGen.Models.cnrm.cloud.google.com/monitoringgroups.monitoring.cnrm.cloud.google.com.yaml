@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: monitoringgroups.monitoring.cnrm.cloud.google.com
 spec:
   group: monitoring.cnrm.cloud.google.com
@@ -79,9 +78,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The name of the group's parent, if it has one. The format is: projects/ For groups with no parent, `parent_name` is the empty string, ``.
-
 
                       Allowed value: The Google Cloud resource name of a `MonitoringGroup` resource (format: `projects/{{project}}/groups/{{name}}`).
                     type: string
@@ -110,9 +108,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The project of the group
-
 
                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                     type: string
@@ -166,7 +163,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

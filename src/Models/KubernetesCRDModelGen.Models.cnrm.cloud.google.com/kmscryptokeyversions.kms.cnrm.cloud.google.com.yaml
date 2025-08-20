@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: kmscryptokeyversions.kms.cnrm.cloud.google.com
 spec:
   group: kms.cnrm.cloud.google.com
@@ -54,9 +53,8 @@ spec:
           spec:
             properties:
               cryptoKey:
-                description: >-
+                description: |-
                   Immutable. The name of the cryptoKey associated with the CryptoKeyVersions.
-
                   Format: ''projects/{{project}}/locations/{{location}}/keyRings/{{keyring}}/cryptoKeys/{{cryptoKey}}''.
                 type: string
               resourceID:
@@ -74,9 +72,8 @@ spec:
                 description: The CryptoKeyVersionAlgorithm that this CryptoKeyVersion supports.
                 type: string
               attestation:
-                description: >-
+                description: |-
                   Statement that was generated and signed by the HSM at key creation time. Use this statement to verify attributes of the key as stored on the HSM, independently of Google.
-
                   Only provided for key versions with protectionLevel HSM.
                 items:
                   properties:
@@ -154,7 +151,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

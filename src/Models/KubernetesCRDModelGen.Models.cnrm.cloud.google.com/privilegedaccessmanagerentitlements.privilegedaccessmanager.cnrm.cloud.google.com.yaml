@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: privilegedaccessmanagerentitlements.privilegedaccessmanager.cnrm.cloud.google.com
 spec:
   group: privilegedaccessmanager.cnrm.cloud.google.com
@@ -181,20 +180,14 @@ spec:
                           description: RoleBinding represents IAM role bindings that are created after a successful grant.
                           properties:
                             conditionExpression:
-                              description: >-
+                              description: |-
                                 Optional. The expression field of the IAM condition to be associated
-
                                 with the role. If specified, a user with an active grant for this
-
                                 entitlement is able to access the resource only if this condition
-
                                 evaluates to true for their request.
 
-
                                 This field uses the same CEL format as IAM and supports all attributes
-
                                 that IAM supports, except tags. More details can be found at
-
                                 https://cloud.google.com/iam/docs/conditions-overview#attributes.
                               type: string
                             role:
@@ -474,20 +467,14 @@ spec:
                           description: RoleBinding represents IAM role bindings that are created after a successful grant.
                           properties:
                             conditionExpression:
-                              description: >-
+                              description: |-
                                 Optional. The expression field of the IAM condition to be associated
-
                                 with the role. If specified, a user with an active grant for this
-
                                 entitlement is able to access the resource only if this condition
-
                                 evaluates to true for their request.
 
-
                                 This field uses the same CEL format as IAM and supports all attributes
-
                                 that IAM supports, except tags. More details can be found at
-
                                 https://cloud.google.com/iam/docs/conditions-overview#attributes.
                               type: string
                             role:
@@ -610,7 +597,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

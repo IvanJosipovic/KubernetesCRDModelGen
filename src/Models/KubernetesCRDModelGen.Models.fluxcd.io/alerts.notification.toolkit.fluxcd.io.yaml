@@ -34,25 +34,18 @@ spec:
         description: Alert is the Schema for the alerts API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -62,9 +55,8 @@ spec:
             properties:
               eventSeverity:
                 default: info
-                description: >-
+                description: |-
                   Filter events based on severity, defaults to ('info').
-
                   If set to 'info' no events will be filtered.
                 enum:
                 - info
@@ -73,9 +65,8 @@ spec:
               eventSources:
                 description: Filter events based on the involved objects.
                 items:
-                  description: >-
+                  description: |-
                     CrossNamespaceObjectReference contains enough information to let you locate the
-
                     typed referenced object at cluster level
                   properties:
                     apiVersion:
@@ -98,11 +89,9 @@ spec:
                     matchLabels:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                         map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                         operator is "In", and the values array contains only "value". The requirements are ANDed.
                       type: object
                     name:
@@ -138,9 +127,8 @@ spec:
                 description: Short description of the impact and affected cluster.
                 type: string
               suspend:
-                description: >-
+                description: |-
                   This flag tells the controller to suspend subsequent events dispatching.
-
                   Defaults to false.
                 type: boolean
             required:
@@ -157,39 +145,31 @@ spec:
                   description: Condition contains details for one aspect of the current state of this API Resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         lastTransitionTime is the last time the condition transitioned from one status to another.
-
                         This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         message is a human readable message indicating details about the transition.
-
                         This may be an empty string.
                       maxLength: 32768
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         observedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       minimum: 0
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         reason contains a programmatic identifier indicating the reason for the condition's last transition.
-
                         Producers of specific condition types may define expected values and meanings for this field,
-
                         and whether the values are considered a guaranteed API.
-
                         The value should be a CamelCase string.
-
                         This field may not be empty.
                       maxLength: 1024
                       minLength: 1
@@ -198,8 +178,8 @@ spec:
                     status:
                       description: status of the condition, one of True, False, Unknown.
                       enum:
-                      - True
-                      - False
+                      - "True"
+                      - "False"
                       - Unknown
                       type: string
                     type:
@@ -243,25 +223,18 @@ spec:
         description: Alert is the Schema for the alerts API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -272,36 +245,29 @@ spec:
               eventMetadata:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   EventMetadata is an optional field for adding metadata to events dispatched by the
-
                   controller. This can be used for enhancing the context of the event. If a field
-
                   would override one already present on the original event as generated by the emitter,
-
                   then the override doesn't happen, i.e. the original value is preserved, and an info
-
                   log is printed.
                 type: object
               eventSeverity:
                 default: info
-                description: >-
+                description: |-
                   EventSeverity specifies how to filter events based on severity.
-
                   If set to 'info' no events will be filtered.
                 enum:
                 - info
                 - error
                 type: string
               eventSources:
-                description: >-
+                description: |-
                   EventSources specifies how to filter events based
-
                   on the involved object kind, name and namespace.
                 items:
-                  description: >-
+                  description: |-
                     CrossNamespaceObjectReference contains enough information to let you locate the
-
                     typed referenced object at cluster level
                   properties:
                     apiVersion:
@@ -324,19 +290,15 @@ spec:
                     matchLabels:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                         map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                         operator is "In", and the values array contains only "value". The requirements are ANDed.
-
                         MatchLabels requires the name to be set to `*`.
                       type: object
                     name:
-                      description: >-
+                      description: |-
                         Name of the referent
-
                         If multiple resources are targeted `*` may be set.
                       maxLength: 253
                       minLength: 1
@@ -352,17 +314,15 @@ spec:
                   type: object
                 type: array
               exclusionList:
-                description: >-
+                description: |-
                   ExclusionList specifies a list of Golang regular expressions
-
                   to be used for excluding messages.
                 items:
                   type: string
                 type: array
               inclusionList:
-                description: >-
+                description: |-
                   InclusionList specifies a list of Golang regular expressions
-
                   to be used for including messages.
                 items:
                   type: string
@@ -381,9 +341,8 @@ spec:
                 maxLength: 255
                 type: string
               suspend:
-                description: >-
+                description: |-
                   Suspend tells the controller to suspend subsequent
-
                   events handling for this Alert.
                 type: boolean
             required:
@@ -401,39 +360,31 @@ spec:
                   description: Condition contains details for one aspect of the current state of this API Resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         lastTransitionTime is the last time the condition transitioned from one status to another.
-
                         This should be when the underlying condition changed.  If that is not known, then using the time when the API field changed is acceptable.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         message is a human readable message indicating details about the transition.
-
                         This may be an empty string.
                       maxLength: 32768
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         observedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       minimum: 0
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         reason contains a programmatic identifier indicating the reason for the condition's last transition.
-
                         Producers of specific condition types may define expected values and meanings for this field,
-
                         and whether the values are considered a guaranteed API.
-
                         The value should be a CamelCase string.
-
                         This field may not be empty.
                       maxLength: 1024
                       minLength: 1
@@ -442,8 +393,8 @@ spec:
                     status:
                       description: status of the condition, one of True, False, Unknown.
                       enum:
-                      - True
-                      - False
+                      - "True"
+                      - "False"
                       - Unknown
                       type: string
                     type:
@@ -460,11 +411,9 @@ spec:
                   type: object
                 type: array
               lastHandledReconcileAt:
-                description: >-
+                description: |-
                   LastHandledReconcileAt holds the value of the most recent
-
                   reconcile request value, so a change of the annotation value
-
                   can be detected.
                 type: string
               observedGeneration:
@@ -487,25 +436,18 @@ spec:
         description: Alert is the Schema for the alerts API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -516,36 +458,29 @@ spec:
               eventMetadata:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   EventMetadata is an optional field for adding metadata to events dispatched by the
-
                   controller. This can be used for enhancing the context of the event. If a field
-
                   would override one already present on the original event as generated by the emitter,
-
                   then the override doesn't happen, i.e. the original value is preserved, and an info
-
                   log is printed.
                 type: object
               eventSeverity:
                 default: info
-                description: >-
+                description: |-
                   EventSeverity specifies how to filter events based on severity.
-
                   If set to 'info' no events will be filtered.
                 enum:
                 - info
                 - error
                 type: string
               eventSources:
-                description: >-
+                description: |-
                   EventSources specifies how to filter events based
-
                   on the involved object kind, name and namespace.
                 items:
-                  description: >-
+                  description: |-
                     CrossNamespaceObjectReference contains enough information to let you locate the
-
                     typed referenced object at cluster level
                   properties:
                     apiVersion:
@@ -568,19 +503,15 @@ spec:
                     matchLabels:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         MatchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                         map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                         operator is "In", and the values array contains only "value". The requirements are ANDed.
-
                         MatchLabels requires the name to be set to `*`.
                       type: object
                     name:
-                      description: >-
+                      description: |-
                         Name of the referent
-
                         If multiple resources are targeted `*` may be set.
                       maxLength: 253
                       minLength: 1
@@ -596,17 +527,15 @@ spec:
                   type: object
                 type: array
               exclusionList:
-                description: >-
+                description: |-
                   ExclusionList specifies a list of Golang regular expressions
-
                   to be used for excluding messages.
                 items:
                   type: string
                 type: array
               inclusionList:
-                description: >-
+                description: |-
                   InclusionList specifies a list of Golang regular expressions
-
                   to be used for including messages.
                 items:
                   type: string
@@ -621,16 +550,14 @@ spec:
                 - name
                 type: object
               summary:
-                description: >-
+                description: |-
                   Summary holds a short description of the impact and affected cluster.
-
                   Deprecated: Use EventMetadata instead.
                 maxLength: 255
                 type: string
               suspend:
-                description: >-
+                description: |-
                   Suspend tells the controller to suspend subsequent
-
                   events handling for this Alert.
                 type: boolean
             required:

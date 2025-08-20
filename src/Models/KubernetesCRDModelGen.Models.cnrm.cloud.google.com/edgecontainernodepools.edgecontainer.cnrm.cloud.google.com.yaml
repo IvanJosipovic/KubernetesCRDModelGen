@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: edgecontainernodepools.edgecontainer.cnrm.cloud.google.com
 spec:
   group: edgecontainer.cnrm.cloud.google.com
@@ -112,9 +111,8 @@ spec:
                         type: string
                     type: object
                   kmsKeyState:
-                    description: >-
+                    description: |-
                       Availability of the Cloud KMS CryptoKey. If not KEY_AVAILABLE, then nodes may go offline as they cannot access their local data.
-
                       This can be caused by a lack of permissions to use the key, or if the key is disabled or deleted.
                     type: string
                 type: object
@@ -122,11 +120,9 @@ spec:
                 description: Immutable. The location of the resource.
                 type: string
               machineFilter:
-                description: >-
+                description: |-
                   Only machines matching this filter will be allowed to join the node pool.
-
                   The filtering language accepts strings like "name=<name>", and is
-
                   documented in more detail in [AIP-160](https://google.aip.dev/160).
                 type: string
               nodeConfig:
@@ -226,7 +222,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

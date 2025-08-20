@@ -1,30 +1,39 @@
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
-  name: eventpolicies.eventing.knative.dev
   labels:
-    knative.dev/crd-install: true
+    knative.dev/crd-install: "true"
     app.kubernetes.io/version: 1.19.1
     app.kubernetes.io/name: knative-eventing
+  name: eventpolicies.eventing.knative.dev
 spec:
   group: eventing.knative.dev
+  names:
+    categories:
+    - all
+    - knative
+    - eventing
+    kind: EventPolicy
+    plural: eventpolicies
+    singular: eventpolicy
+  scope: Namespaced
   versions:
-  - name: v1alpha1
-    served: true
-    storage: true
-    subresources:
-      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=="Ready")].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=="Ready")].reason
+      name: Reason
+      type: string
+    name: v1alpha1
     schema:
       openAPIV3Schema:
-        type: object
         properties:
           spec:
             description: Spec defines the desired state of the EventPolicy.
-            type: object
             properties:
               from:
                 description: From is the list of sources or oidc identities, which are allowed to send events to the targets (.spec.to).
-                type: array
                 items:
                   type: object
                   properties:
@@ -47,9 +56,9 @@ spec:
                     sub:
                       description: Sub sets the OIDC identity name to be allowed to send events to the target. It is also possible to set a glob-like pattern to match any suffix.
                       type: string
+                type: array
               to:
                 description: To lists all resources for which this policy applies. Resources in this list must act like an ingress and have an audience. The resources are part of the same namespace as the EventPolicy. An empty list means it applies to all resources in the EventPolicies namespace
-                type: array
                 items:
                   type: object
                   properties:
@@ -97,9 +106,9 @@ spec:
                           description: matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.
                           type: object
                           x-kubernetes-preserve-unknown-fields: true
+                type: array
               filters:
                 description: Filters is an array of SubscriptionsAPIFilters that evaluate to true or false. If any filter expression in the array evaluates to false, the event will not continue pass the ingress of the target resources of the policy
-                type: array
                 items:
                   type: object
                   properties:
@@ -134,9 +143,10 @@ spec:
                       description: Exact evaluates to true if the values of the matching CloudEvents attributes all end with the associated value string specified (case sensitive)
                       type: object
                       x-kubernetes-preserve-unknown-fields: true
+                type: array
+            type: object
           status:
             description: Status represents the current state of the EventPolicy. This data may be out of date.
-            type: object
             properties:
               annotations:
                 description: Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.
@@ -144,7 +154,6 @@ spec:
                 x-kubernetes-preserve-unknown-fields: true
               conditions:
                 description: Conditions the latest available observations of a resource's current state.
-                type: array
                 items:
                   type: object
                   required:
@@ -169,28 +178,19 @@ spec:
                     type:
                       description: Type of condition.
                       type: string
+                type: array
               from:
                 description: From is the list of resolved oidc identities from .spec.from
-                type: array
                 items:
                   type: string
+                type: array
               observedGeneration:
                 description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
-                type: integer
                 format: int64
-    additionalPrinterColumns:
-    - name: Ready
-      type: string
-      jsonPath: .status.conditions[?(@.type=="Ready")].status
-    - name: Reason
-      type: string
-      jsonPath: .status.conditions[?(@.type=="Ready")].reason
-  names:
-    kind: EventPolicy
-    plural: eventpolicies
-    singular: eventpolicy
-    categories:
-    - all
-    - knative
-    - eventing
-  scope: Namespaced
+                type: integer
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

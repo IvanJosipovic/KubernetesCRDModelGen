@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: artifactregistryrepositories.artifactregistry.cnrm.cloud.google.com
 spec:
   group: artifactregistry.cnrm.cloud.google.com
@@ -54,13 +53,10 @@ spec:
           spec:
             properties:
               cleanupPolicies:
-                description: >-
+                description: |-
                   Cleanup policies for this repository. Cleanup policies indicate when
-
                   certain package versions can be automatically deleted.
-
                   Map keys are policy IDs supplied by users during policy creation. They must
-
                   unique within a repository and be under 128 characters in length.
                 items:
                   properties:
@@ -98,9 +94,8 @@ spec:
                     id:
                       type: string
                     mostRecentVersions:
-                      description: >-
+                      description: |-
                         Policy condition for retaining a minimum number of versions. May only be
-
                         specified with a Keep action.
                       properties:
                         keepCount:
@@ -117,9 +112,8 @@ spec:
                   type: object
                 type: array
               cleanupPolicyDryRun:
-                description: >-
+                description: |-
                   If true, the cleanup pipeline is prevented from deleting versions in this
-
                   repository.
                 type: boolean
               description:
@@ -133,19 +127,15 @@ spec:
                     type: boolean
                 type: object
               format:
-                description: >-
+                description: |-
                   Immutable. The format of packages that are stored in the repository. Supported formats
-
                   can be found [here](https://cloud.google.com/artifact-registry/docs/supported-formats).
-
                   You can only create alpha formats if you are a member of the
-
                   [alpha user group](https://cloud.google.com/artifact-registry/docs/supported-formats#alpha-access).
                 type: string
               kmsKeyRef:
-                description: >-
+                description: |-
                   The customer managed encryption key that’s used to encrypt the
-
                   contents of the Repository.
                 oneOf:
                 - not:
@@ -176,17 +166,14 @@ spec:
                 description: Immutable. The name of the location this repository is located in.
                 type: string
               mavenConfig:
-                description: >-
+                description: |-
                   MavenRepositoryConfig is maven related repository details.
-
                   Provides additional configuration details for repositories of the maven
-
                   format type.
                 properties:
                   allowSnapshotOverwrites:
-                    description: >-
+                    description: |-
                       Immutable. The repository with this flag will allow publishing the same
-
                       snapshot versions.
                     type: boolean
                   versionPolicy:
@@ -238,9 +225,8 @@ spec:
                 description: Configuration specific for a Virtual Repository.
                 properties:
                   upstreamPolicies:
-                    description: >-
+                    description: |-
                       Policies that configure the upstream artifacts distributed by the Virtual
-
                       Repository. Upstream policies cannot be set on a standard repository.
                     items:
                       properties:
@@ -251,9 +237,8 @@ spec:
                           description: Entries with a greater priority value take precedence in the pull order.
                           type: integer
                         repositoryRef:
-                          description: >-
+                          description: |-
                             A reference to the repository resource, for example:
-
                             "projects/p1/locations/us-central1/repositories/repo1".
                           oneOf:
                           - not:
@@ -314,9 +299,8 @@ spec:
                 description: The time when the repository was created.
                 type: string
               name:
-                description: >-
+                description: |-
                   The name of the repository, for example:
-
                   "repo1".
                 type: string
               observedGeneration:
@@ -335,7 +319,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

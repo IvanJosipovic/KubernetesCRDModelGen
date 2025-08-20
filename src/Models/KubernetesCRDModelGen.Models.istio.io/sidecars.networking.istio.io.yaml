@@ -37,9 +37,8 @@ spec:
                       description: The IP(IPv4 or IPv6) or the Unix domain socket to which the listener should be bound to.
                       type: string
                     captureMode:
-                      description: >-
+                      description: |-
                         When the bind address is an IP, the captureMode option dictates how traffic to the listener is expected to be captured (or not).
-
 
                         Valid Options: DEFAULT, IPTABLES, NONE
                       enum:
@@ -82,9 +81,8 @@ spec:
                     description: HTTP connection pool settings.
                     properties:
                       h2UpgradePolicy:
-                        description: >-
+                        description: |-
                           Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                           Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                         enum:
@@ -155,8 +153,8 @@ spec:
                               rule: duration(self) >= duration('1ms')
                           probes:
                             description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
-                            maximum: 4294967295
-                            minimum: 0
+                            maximum: 4294967295.0
+                            minimum: 0.0
                             type: integer
                           time:
                             description: The time duration a connection needs to be idle before keep-alive probes start being sent.
@@ -175,9 +173,8 @@ spec:
                       description: The IP(IPv4 or IPv6) to which the listener should be bound.
                       type: string
                     captureMode:
-                      description: >-
+                      description: |-
                         The captureMode option dictates how traffic to the listener is expected to be captured (or not).
-
 
                         Valid Options: DEFAULT, IPTABLES, NONE
                       enum:
@@ -192,9 +189,8 @@ spec:
                           description: HTTP connection pool settings.
                           properties:
                             h2UpgradePolicy:
-                              description: >-
+                              description: |-
                                 Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                 Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                               enum:
@@ -327,9 +323,8 @@ spec:
                           description: If set to true, the load balancer will send a 301 redirect for all http connections, asking the clients to use HTTPS.
                           type: boolean
                         maxProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Maximum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -340,9 +335,8 @@ spec:
                           - TLSV1_3
                           type: string
                         minProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Minimum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -353,9 +347,8 @@ spec:
                           - TLSV1_3
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Optional: Indicates whether connections to this port should be secured using TLS.
-
 
                             Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL
                           enum:
@@ -427,8 +420,8 @@ spec:
                         description: Specifies the port on the host that is being addressed.
                         properties:
                           number:
-                            maximum: 4294967295
-                            minimum: 0
+                            maximum: 4294967295.0
+                            minimum: 0.0
                             type: integer
                         type: object
                       subset:
@@ -438,7 +431,7 @@ spec:
                     - host
                     type: object
                   mode:
-                    description: >2-
+                    description: |2-
 
 
                       Valid Options: REGISTRY_ONLY, ALLOW_ANY
@@ -509,9 +502,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -553,9 +545,8 @@ spec:
                       description: The IP(IPv4 or IPv6) or the Unix domain socket to which the listener should be bound to.
                       type: string
                     captureMode:
-                      description: >-
+                      description: |-
                         When the bind address is an IP, the captureMode option dictates how traffic to the listener is expected to be captured (or not).
-
 
                         Valid Options: DEFAULT, IPTABLES, NONE
                       enum:
@@ -598,9 +589,8 @@ spec:
                     description: HTTP connection pool settings.
                     properties:
                       h2UpgradePolicy:
-                        description: >-
+                        description: |-
                           Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                           Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                         enum:
@@ -671,8 +661,8 @@ spec:
                               rule: duration(self) >= duration('1ms')
                           probes:
                             description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
-                            maximum: 4294967295
-                            minimum: 0
+                            maximum: 4294967295.0
+                            minimum: 0.0
                             type: integer
                           time:
                             description: The time duration a connection needs to be idle before keep-alive probes start being sent.
@@ -691,9 +681,8 @@ spec:
                       description: The IP(IPv4 or IPv6) to which the listener should be bound.
                       type: string
                     captureMode:
-                      description: >-
+                      description: |-
                         The captureMode option dictates how traffic to the listener is expected to be captured (or not).
-
 
                         Valid Options: DEFAULT, IPTABLES, NONE
                       enum:
@@ -708,9 +697,8 @@ spec:
                           description: HTTP connection pool settings.
                           properties:
                             h2UpgradePolicy:
-                              description: >-
+                              description: |-
                                 Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                 Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                               enum:
@@ -843,9 +831,8 @@ spec:
                           description: If set to true, the load balancer will send a 301 redirect for all http connections, asking the clients to use HTTPS.
                           type: boolean
                         maxProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Maximum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -856,9 +843,8 @@ spec:
                           - TLSV1_3
                           type: string
                         minProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Minimum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -869,9 +855,8 @@ spec:
                           - TLSV1_3
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Optional: Indicates whether connections to this port should be secured using TLS.
-
 
                             Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL
                           enum:
@@ -943,8 +928,8 @@ spec:
                         description: Specifies the port on the host that is being addressed.
                         properties:
                           number:
-                            maximum: 4294967295
-                            minimum: 0
+                            maximum: 4294967295.0
+                            minimum: 0.0
                             type: integer
                         type: object
                       subset:
@@ -954,7 +939,7 @@ spec:
                     - host
                     type: object
                   mode:
-                    description: >2-
+                    description: |2-
 
 
                       Valid Options: REGISTRY_ONLY, ALLOW_ANY
@@ -1025,9 +1010,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -1069,9 +1053,8 @@ spec:
                       description: The IP(IPv4 or IPv6) or the Unix domain socket to which the listener should be bound to.
                       type: string
                     captureMode:
-                      description: >-
+                      description: |-
                         When the bind address is an IP, the captureMode option dictates how traffic to the listener is expected to be captured (or not).
-
 
                         Valid Options: DEFAULT, IPTABLES, NONE
                       enum:
@@ -1114,9 +1097,8 @@ spec:
                     description: HTTP connection pool settings.
                     properties:
                       h2UpgradePolicy:
-                        description: >-
+                        description: |-
                           Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                           Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                         enum:
@@ -1187,8 +1169,8 @@ spec:
                               rule: duration(self) >= duration('1ms')
                           probes:
                             description: Maximum number of keepalive probes to send without response before deciding the connection is dead.
-                            maximum: 4294967295
-                            minimum: 0
+                            maximum: 4294967295.0
+                            minimum: 0.0
                             type: integer
                           time:
                             description: The time duration a connection needs to be idle before keep-alive probes start being sent.
@@ -1207,9 +1189,8 @@ spec:
                       description: The IP(IPv4 or IPv6) to which the listener should be bound.
                       type: string
                     captureMode:
-                      description: >-
+                      description: |-
                         The captureMode option dictates how traffic to the listener is expected to be captured (or not).
-
 
                         Valid Options: DEFAULT, IPTABLES, NONE
                       enum:
@@ -1224,9 +1205,8 @@ spec:
                           description: HTTP connection pool settings.
                           properties:
                             h2UpgradePolicy:
-                              description: >-
+                              description: |-
                                 Specify if http1.1 connection should be upgraded to http2 for the associated destination.
-
 
                                 Valid Options: DEFAULT, DO_NOT_UPGRADE, UPGRADE
                               enum:
@@ -1359,9 +1339,8 @@ spec:
                           description: If set to true, the load balancer will send a 301 redirect for all http connections, asking the clients to use HTTPS.
                           type: boolean
                         maxProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Maximum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -1372,9 +1351,8 @@ spec:
                           - TLSV1_3
                           type: string
                         minProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Minimum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -1385,9 +1363,8 @@ spec:
                           - TLSV1_3
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Optional: Indicates whether connections to this port should be secured using TLS.
-
 
                             Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL
                           enum:
@@ -1459,8 +1436,8 @@ spec:
                         description: Specifies the port on the host that is being addressed.
                         properties:
                           number:
-                            maximum: 4294967295
-                            minimum: 0
+                            maximum: 4294967295.0
+                            minimum: 0.0
                             type: integer
                         type: object
                       subset:
@@ -1470,7 +1447,7 @@ spec:
                     - host
                     type: object
                   mode:
-                    description: >2-
+                    description: |2-
 
 
                       Valid Options: REGISTRY_ONLY, ALLOW_ANY
@@ -1541,9 +1518,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

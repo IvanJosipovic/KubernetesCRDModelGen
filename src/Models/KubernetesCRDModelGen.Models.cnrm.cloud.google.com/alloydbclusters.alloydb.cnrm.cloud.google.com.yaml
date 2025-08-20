@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: alloydbclusters.alloydb.cnrm.cloud.google.com
 spec:
   group: alloydb.cnrm.cloud.google.com
@@ -57,7 +56,7 @@ spec:
             description: AlloyDBClusterSpec defines the desired state of AlloyDBCluster
             properties:
               automatedBackupPolicy:
-                description: >-
+                description: |-
                   The automated backup policy for this cluster.
 
                    If no policy is provided then the default policy will be used. If backups
@@ -67,7 +66,7 @@ spec:
                    documentation for the message type.
                 properties:
                   backupWindow:
-                    description: >-
+                    description: |-
                       The length of the time window during which a backup can be
                        taken. If a backup does not succeed within this time window, it will be
                        canceled and considered failed.
@@ -115,7 +114,7 @@ spec:
                     description: Labels to apply to backups created using this configuration.
                     type: object
                   location:
-                    description: >-
+                    description: |-
                       The location where the backup will be stored. Currently, the only supported
                        option is to store the backup in the same region as the cluster.
 
@@ -140,7 +139,7 @@ spec:
                     description: Weekly schedule for the Backup.
                     properties:
                       daysOfWeek:
-                        description: >-
+                        description: |-
                           The days of the week to perform a backup.
 
                            If this field is left empty, the default of every day of the week is
@@ -149,7 +148,7 @@ spec:
                           type: string
                         type: array
                       startTimes:
-                        description: >-
+                        description: |-
                           The times during the day to start a backup. The start times are assumed
                            to be in UTC and to be an exact hour (e.g., 04:00:00).
 
@@ -689,7 +688,7 @@ spec:
             description: AlloyDBClusterSpec defines the desired state of AlloyDBCluster
             properties:
               automatedBackupPolicy:
-                description: >-
+                description: |-
                   The automated backup policy for this cluster.
 
                    If no policy is provided then the default policy will be used. If backups
@@ -699,7 +698,7 @@ spec:
                    documentation for the message type.
                 properties:
                   backupWindow:
-                    description: >-
+                    description: |-
                       The length of the time window during which a backup can be
                        taken. If a backup does not succeed within this time window, it will be
                        canceled and considered failed.
@@ -747,7 +746,7 @@ spec:
                     description: Labels to apply to backups created using this configuration.
                     type: object
                   location:
-                    description: >-
+                    description: |-
                       The location where the backup will be stored. Currently, the only supported
                        option is to store the backup in the same region as the cluster.
 
@@ -772,7 +771,7 @@ spec:
                     description: Weekly schedule for the Backup.
                     properties:
                       daysOfWeek:
-                        description: >-
+                        description: |-
                           The days of the week to perform a backup.
 
                            If this field is left empty, the default of every day of the week is
@@ -781,7 +780,7 @@ spec:
                           type: string
                         type: array
                       startTimes:
-                        description: >-
+                        description: |-
                           The times during the day to start a backup. The start times are assumed
                            to be in UTC and to be an exact hour (e.g., 04:00:00).
 
@@ -1291,7 +1290,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

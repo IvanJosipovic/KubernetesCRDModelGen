@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: iampolicymembers.iam.cnrm.cloud.google.com
 spec:
   group: iam.cnrm.cloud.google.com
@@ -42,25 +41,18 @@ spec:
         description: IAMPolicyMember is the Schema for the iampolicies API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -87,17 +79,14 @@ spec:
                 - title
                 type: object
               member:
-                description: >-
+                description: |-
                   Immutable. The IAM identity to be bound to the role. Exactly one of
-
                   'member' or 'memberFrom' must be used.
                 type: string
               memberFrom:
-                description: >-
+                description: |-
                   Immutable. The IAM identity to be bound to the role. Exactly one of
-
                   'member' or 'memberFrom' must be used, and only one subfield within
-
                   'memberFrom' can be used.
                 oneOf:
                 - required:
@@ -112,15 +101,11 @@ spec:
                   - sqlInstanceRef
                 properties:
                   bigQueryConnectionConnectionRef:
-                    description: >-
+                    description: |-
                       BigQueryConnectionConnection whose service account is to be bound to the role.
-
                       Use the Type field to specifie the connection type.
-
                       For "spark" connetion, the service account is in `status.observedState.spark.serviceAccountID`.
-
                       For "cloudSQL" connection, the service account is in `status.observedState.cloudSQL.serviceAccountID`.
-
                       For "cloudResource" connection, the service account is in `status.observedState.cloudResource.serviceAccountID`.
                     properties:
                       name:
@@ -139,9 +124,8 @@ spec:
                     - type
                     type: object
                   logSinkRef:
-                    description: >-
+                    description: |-
                       The LoggingLogSink whose writer identity (i.e. its
-
                       'status.writerIdentity') is to be bound to the role.
                     properties:
                       name:
@@ -162,9 +146,8 @@ spec:
                     - name
                     type: object
                   serviceIdentityRef:
-                    description: >-
+                    description: |-
                       The ServiceIdentity whose service account (i.e., its
-
                       'status.email') is to be bound to the role.
                     properties:
                       name:
@@ -175,9 +158,8 @@ spec:
                     - name
                     type: object
                   sqlInstanceRef:
-                    description: >-
+                    description: |-
                       The SQLInstance whose service account (i.e. its
-
                       'status.serviceAccountEmailAddress') is to be bound to the role.
                     properties:
                       name:
@@ -240,9 +222,8 @@ spec:
             description: IAMPolicyMemberStatus defines the observed state of IAMPolicyMember
             properties:
               conditions:
-                description: >-
+                description: |-
                   Conditions represent the latest available observations of the IAM
-
                   policy's current state.
                 items:
                   properties:
@@ -253,9 +234,8 @@ spec:
                       description: Human-readable message indicating details about last transition.
                       type: string
                     reason:
-                      description: >-
+                      description: |-
                         Unique, one-word, CamelCase reason for the condition's last
-
                         transition.
                       type: string
                     status:
@@ -267,9 +247,8 @@ spec:
                   type: object
                 type: array
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller.
-
                   If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 format: int64
                 type: integer
@@ -281,7 +260,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

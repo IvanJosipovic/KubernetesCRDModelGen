@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: metastorefederations.metastore.cnrm.cloud.google.com
 spec:
   group: metastore.cnrm.cloud.google.com
@@ -64,7 +63,7 @@ spec:
                       - DATAPROC_METASTORE
                       type: string
                     serviceRef:
-                      description: >-
+                      description: |-
                         The relative resource name of the metastore that is being federated.
                          The formats of the relative resource names for the currently supported
                          metastores are listed below:
@@ -196,7 +195,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

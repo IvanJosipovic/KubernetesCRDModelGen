@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computemachineimages.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -57,41 +56,34 @@ spec:
                 description: Immutable. A text description of the resource.
                 type: string
               guestFlush:
-                description: >-
+                description: |-
                   Immutable. Specify this to create an application consistent machine image by informing the OS to prepare for the snapshot process.
-
                   Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
                 type: boolean
               machineImageEncryptionKey:
-                description: >-
+                description: |-
                   Immutable. Encrypts the machine image using a customer-supplied encryption key.
 
-
                   After you encrypt a machine image with a customer-supplied key, you must
-
                   provide the same key if you use the machine image later (e.g. to create a
-
                   instance from the image).
                 properties:
                   kmsKeyName:
                     description: Immutable. The name of the encryption key that is stored in Google Cloud KMS.
                     type: string
                   kmsKeyServiceAccount:
-                    description: >-
+                    description: |-
                       Immutable. The service account used for the encryption request for the given KMS key.
-
                       If absent, the Compute Engine Service Agent service account is used.
                     type: string
                   rawKey:
-                    description: >-
+                    description: |-
                       Immutable. Specifies a 256-bit customer-supplied encryption key, encoded in
-
                       RFC 4648 base64 to either encrypt or decrypt this resource.
                     type: string
                   sha256:
-                    description: >-
+                    description: |-
                       The RFC 4648 base64 encoded SHA-256 hash of the
-
                       customer-supplied encryption key that protects this resource.
                     type: string
                 type: object
@@ -198,7 +190,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

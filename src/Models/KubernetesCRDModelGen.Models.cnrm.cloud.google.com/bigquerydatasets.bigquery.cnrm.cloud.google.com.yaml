@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: bigquerydatasets.bigquery.cnrm.cloud.google.com
 spec:
   group: bigquery.cnrm.cloud.google.com
@@ -95,7 +94,7 @@ spec:
                       description: "[Pick one] Some other type of member that appears in the IAM Policy but isn't a user, group, domain, or special group."
                       type: string
                     role:
-                      description: >-
+                      description: |-
                         An IAM role ID that should be granted to the user, group,
                          or domain specified in this access entry.
                          The following legacy mappings will be applied:
@@ -126,7 +125,7 @@ spec:
                       - routineId
                       type: object
                     specialGroup:
-                      description: >-
+                      description: |-
                         [Pick one] A special group to grant access to. Possible values include:
 
                            * projectOwners: Owners of the enclosing project.
@@ -159,7 +158,7 @@ spec:
                   type: object
                 type: array
               defaultCollation:
-                description: >-
+                description: |-
                   Optional. Defines the default collation specification of future tables
                    created in the dataset. If a table is created in this dataset without
                    table-level default collation, then the table inherits the dataset default
@@ -203,7 +202,7 @@ spec:
                     type: object
                 type: object
               defaultPartitionExpirationMs:
-                description: >-
+                description: |-
                   This default partition expiration, expressed in milliseconds.
 
                    When new time-partitioned tables are created in a dataset where this
@@ -333,7 +332,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

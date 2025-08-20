@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: workstationconfigs.workstations.cnrm.cloud.google.com
 spec:
   group: workstations.cnrm.cloud.google.com
@@ -92,7 +91,7 @@ spec:
                       type: object
                     type: array
                   image:
-                    description: >-
+                    description: |-
                       Optional. A Docker container image that defines a custom environment.
 
                        Cloud Workstations provides a number of
@@ -118,7 +117,7 @@ spec:
                 description: Optional. Human-readable name for this workstation configuration.
                 type: string
               encryptionKey:
-                description: >-
+                description: |-
                   Immutable. Encrypts resources of this workstation configuration using a
                    customer-managed encryption key (CMEK).
 
@@ -214,7 +213,7 @@ spec:
                         description: Optional. When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you must set up Private Google Access or Cloud NAT on your network. If you use Private Google Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io` and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
                         type: boolean
                       enableNestedVirtualization:
-                        description: >-
+                        description: |-
                           Optional. Whether to enable nested virtualization on Cloud Workstations
                            VMs created under this workstation configuration.
 
@@ -258,7 +257,7 @@ spec:
                         format: int32
                         type: integer
                       serviceAccountRef:
-                        description: >-
+                        description: |-
                           Optional. A reference to the service account for Cloud
                            Workstations VMs created with this configuration. When specified, be
                            sure that the service account has `logginglogEntries.create` permission
@@ -327,7 +326,7 @@ spec:
                     type: object
                 type: object
               idleTimeout:
-                description: >-
+                description: |-
                   Optional. Number of seconds to wait before automatically stopping a
                    workstation after it last received user traffic.
 
@@ -394,7 +393,7 @@ spec:
                           description: Optional. Whether the persistent disk should be deleted when the workstation is deleted. Valid values are `DELETE` and `RETAIN`. Defaults to `DELETE`.
                           type: string
                         sizeGB:
-                          description: >-
+                          description: |-
                             Optional. The GB capacity of a persistent home directory for each
                              workstation created with this configuration. Must be empty if
                              [source_snapshot][google.cloud.workstations.v1.WorkstationConfig.PersistentDirectory.GceRegionalPersistentDisk.source_snapshot]
@@ -430,7 +429,7 @@ spec:
                   type: object
                 type: array
               replicaZones:
-                description: >-
+                description: |-
                   Optional. Immutable. Specifies the zones used to replicate the VM and disk
                    resources within the region. If set, exactly two zones within the
                    workstation cluster's region must be specified—for example,
@@ -445,7 +444,7 @@ spec:
                 description: The WorkstationConfig name. If not given, the metadata.name will be used.
                 type: string
               runningTimeout:
-                description: >-
+                description: |-
                   Optional. Number of seconds that a workstation can run until it is
                    automatically shut down. We recommend that workstations be shut down daily
                    to reduce costs and so that security updates can be applied upon restart.
@@ -626,7 +625,7 @@ spec:
                       type: object
                     type: array
                   image:
-                    description: >-
+                    description: |-
                       Optional. A Docker container image that defines a custom environment.
 
                        Cloud Workstations provides a number of
@@ -652,7 +651,7 @@ spec:
                 description: Optional. Human-readable name for this workstation configuration.
                 type: string
               encryptionKey:
-                description: >-
+                description: |-
                   Immutable. Encrypts resources of this workstation configuration using a
                    customer-managed encryption key (CMEK).
 
@@ -748,7 +747,7 @@ spec:
                         description: Optional. When set to true, disables public IP addresses for VMs. If you disable public IP addresses, you must set up Private Google Access or Cloud NAT on your network. If you use Private Google Access and you use `private.googleapis.com` or `restricted.googleapis.com` for Container Registry and Artifact Registry, make sure that you set up DNS records for domains `*.gcr.io` and `*.pkg.dev`. Defaults to false (VMs have public IP addresses).
                         type: boolean
                       enableNestedVirtualization:
-                        description: >-
+                        description: |-
                           Optional. Whether to enable nested virtualization on Cloud Workstations
                            VMs created under this workstation configuration.
 
@@ -792,7 +791,7 @@ spec:
                         format: int32
                         type: integer
                       serviceAccountRef:
-                        description: >-
+                        description: |-
                           Optional. A reference to the service account for Cloud
                            Workstations VMs created with this configuration. When specified, be
                            sure that the service account has `logginglogEntries.create` permission
@@ -861,7 +860,7 @@ spec:
                     type: object
                 type: object
               idleTimeout:
-                description: >-
+                description: |-
                   Optional. Number of seconds to wait before automatically stopping a
                    workstation after it last received user traffic.
 
@@ -928,7 +927,7 @@ spec:
                           description: Optional. Whether the persistent disk should be deleted when the workstation is deleted. Valid values are `DELETE` and `RETAIN`. Defaults to `DELETE`.
                           type: string
                         sizeGB:
-                          description: >-
+                          description: |-
                             Optional. The GB capacity of a persistent home directory for each
                              workstation created with this configuration. Must be empty if
                              [source_snapshot][google.cloud.workstations.v1.WorkstationConfig.PersistentDirectory.GceRegionalPersistentDisk.source_snapshot]
@@ -964,7 +963,7 @@ spec:
                   type: object
                 type: array
               replicaZones:
-                description: >-
+                description: |-
                   Optional. Immutable. Specifies the zones used to replicate the VM and disk
                    resources within the region. If set, exactly two zones within the
                    workstation cluster's region must be specified—for example,
@@ -979,7 +978,7 @@ spec:
                 description: The WorkstationConfig name. If not given, the metadata.name will be used.
                 type: string
               runningTimeout:
-                description: >-
+                description: |-
                   Optional. Number of seconds that a workstation can run until it is
                    automatically shut down. We recommend that workstations be shut down daily
                    to reduce costs and so that security updates can be applied upon restart.
@@ -1092,7 +1091,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

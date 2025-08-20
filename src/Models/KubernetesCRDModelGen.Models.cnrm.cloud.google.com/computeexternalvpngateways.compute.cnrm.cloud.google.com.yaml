@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computeexternalvpngateways.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -61,25 +60,18 @@ spec:
                 items:
                   properties:
                     id:
-                      description: >-
+                      description: |-
                         Immutable. The numeric ID for this interface. Allowed values are based on the redundancy type
-
                         of this external VPN gateway
-
                         * '0 - SINGLE_IP_INTERNALLY_REDUNDANT'
-
                         * '0, 1 - TWO_IPS_REDUNDANCY'
-
                         * '0, 1, 2, 3 - FOUR_IPS_REDUNDANCY'.
                       type: integer
                     ipAddress:
-                      description: >-
+                      description: |-
                         Immutable. IP address of the interface in the external VPN gateway.
-
                         Only IPv4 is supported. This IP address can be either from
-
                         your on-premise gateway or another Cloud provider's VPN gateway,
-
                         it cannot be an IP address from Google Compute Engine.
                       type: string
                   type: object
@@ -115,9 +107,8 @@ spec:
                   type: object
                 type: array
               labelFingerprint:
-                description: >-
+                description: |-
                   The fingerprint used for optimistic locking of this resource.  Used
-
                   internally during updates.
                 type: string
               observedGeneration:
@@ -133,7 +124,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: runservices.run.cnrm.cloud.google.com
 spec:
   group: run.cnrm.cloud.google.com
@@ -56,14 +55,11 @@ spec:
               annotations:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
 
-
                   Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected in new resources.
-
                   All system annotations in v1 now have a corresponding field in v2 Service.
-
 
                   This field follows Kubernetes annotations' namespacing, limits, and rules.
                 type: object
@@ -84,9 +80,8 @@ spec:
                 description: Arbitrary version identifier for the API client.
                 type: string
               customAudiences:
-                description: >-
+                description: |-
                   One or more custom audiences that you want this service to support. Specify each custom audience as the full URL in a string. The custom audiences are encoded in the token and used to authenticate requests.
-
                   For more information, see https://cloud.google.com/run/docs/configuring/custom-audiences.
                 items:
                   type: string
@@ -98,11 +93,9 @@ spec:
                 description: 'Provides the ingress settings for this Service. On output, returns the currently observed ingress settings, or INGRESS_TRAFFIC_UNSPECIFIED if no revision is active. Possible values: ["INGRESS_TRAFFIC_ALL", "INGRESS_TRAFFIC_INTERNAL_ONLY", "INGRESS_TRAFFIC_INTERNAL_LOAD_BALANCER"].'
                 type: string
               launchStage:
-                description: >-
+                description: |-
                   The launch stage as defined by [Google Cloud Platform Launch Stages](https://cloud.google.com/products#product-launch-stages). Cloud Run supports ALPHA, BETA, and GA.
-
                   If no value is specified, GA is assumed. Set the launch stage to a preview stage on input to allow use of preview features in that stage. On read (or output), describes whether the resource uses preview features.
-
 
                   For example, if ALPHA is provided as input, but only BETA and GA-level features are used, this field will be BETA on output. Possible values: ["UNIMPLEMENTED", "PRELAUNCH", "EARLY_ACCESS", "ALPHA", "BETA", "GA", "DEPRECATED"].
                 type: string
@@ -145,14 +138,11 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects.
 
-
                       Cloud Run API v2 does not support annotations with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
-
                       All system annotations in v1 now have a corresponding field in v2 RevisionTemplate.
-
 
                       This field follows Kubernetes annotations' namespacing, limits, and rules.
                     type: object
@@ -266,17 +256,14 @@ spec:
                               description: GRPC specifies an action involving a GRPC port.
                               properties:
                                 port:
-                                  description: >-
+                                  description: |-
                                     Port number to access on the container. Number must be in the range 1 to 65535.
-
                                     If not specified, defaults to the same value as container.ports[0].containerPort.
                                   type: integer
                                 service:
-                                  description: >-
+                                  description: |-
                                     The name of the service to place in the gRPC HealthCheckRequest
-
                                     (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
-
                                     If this is not specified, the default behavior is defined by gRPC.
                                   type: string
                               type: object
@@ -301,9 +288,8 @@ spec:
                                   description: Path to access on the HTTP server. Defaults to '/'.
                                   type: string
                                 port:
-                                  description: >-
+                                  description: |-
                                     Port number to access on the container. Number must be in the range 1 to 65535.
-
                                     If not specified, defaults to the same value as container.ports[0].containerPort.
                                   type: integer
                               type: object
@@ -321,9 +307,8 @@ spec:
                           description: Name of the container specified as a DNS_LABEL.
                           type: string
                         ports:
-                          description: >-
+                          description: |-
                             List of ports to expose from the container. Only a single port can be specified. The specified ports must be listening on all interfaces (0.0.0.0) within the container to be accessible.
-
 
                             If omitted, a port number will be chosen and passed to the container through the PORT environment variable for the container to listen on.
                           items:
@@ -361,17 +346,14 @@ spec:
                               description: GRPC specifies an action involving a GRPC port.
                               properties:
                                 port:
-                                  description: >-
+                                  description: |-
                                     Port number to access on the container. Number must be in the range 1 to 65535.
-
                                     If not specified, defaults to the same value as container.ports[0].containerPort.
                                   type: integer
                                 service:
-                                  description: >-
+                                  description: |-
                                     The name of the service to place in the gRPC HealthCheckRequest
-
                                     (see https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
-
                                     If this is not specified, the default behavior is defined by gRPC.
                                   type: string
                               type: object
@@ -396,9 +378,8 @@ spec:
                                   description: Path to access on the HTTP server. Defaults to '/'.
                                   type: string
                                 port:
-                                  description: >-
+                                  description: |-
                                     Port number to access on the container. Must be in the range 1 to 65535.
-
                                     If not specified, defaults to the same value as container.ports[0].containerPort.
                                   type: integer
                               type: object
@@ -412,9 +393,8 @@ spec:
                               description: TCPSocket specifies an action involving a TCP port. Exactly one of HTTPGet or TCPSocket must be specified.
                               properties:
                                 port:
-                                  description: >-
+                                  description: |-
                                     Port number to access on the container. Must be in the range 1 to 65535.
-
                                     If not specified, defaults to the same value as container.ports[0].containerPort.
                                   type: integer
                               type: object
@@ -477,14 +457,11 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc.
-
                       For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels.
 
-
                       Cloud Run API v2 does not support labels with 'run.googleapis.com', 'cloud.googleapis.com', 'serving.knative.dev', or 'autoscaling.knative.dev' namespaces, and they will be rejected.
-
                       All system labels in v1 now have a corresponding field in v2 RevisionTemplate.
                     type: object
                   maxInstanceRequestConcurrency:
@@ -534,9 +511,8 @@ spec:
                     description: Enables session affinity. For more information, go to https://cloud.google.com/run/docs/configuring/session-affinity.
                     type: boolean
                   timeout:
-                    description: >-
+                    description: |-
                       Max allowed time for an instance to respond to a request.
-
 
                       A duration in seconds with up to nine fractional digits, ending with 's'. Example: "3.5s".
                     type: string
@@ -709,11 +685,9 @@ spec:
                         items:
                           properties:
                             networkRef:
-                              description: >-
+                              description: |-
                                 The VPC network that the Cloud Run resource will be able to send traffic to. At least one of network or subnetwork must be specified. If both
-
                                 network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If network is not specified, it will be
-
                                 looked up from the subnetwork.
                               oneOf:
                               - not:
@@ -741,11 +715,9 @@ spec:
                                   type: string
                               type: object
                             subnetworkRef:
-                              description: >-
+                              description: |-
                                 The VPC subnetwork that the Cloud Run resource will get IPs from. At least one of network or subnetwork must be specified. If both
-
                                 network and subnetwork are specified, the given VPC subnetwork must belong to the given VPC network. If subnetwork is not specified, the
-
                                 subnetwork with the same name with the network will be used.
                               oneOf:
                               - not:
@@ -855,15 +827,12 @@ spec:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 type: integer
               reconciling:
-                description: >-
+                description: |-
                   Returns true if the Service is currently being acted upon by the system to bring it into the desired state.
-
 
                   When a new Service is created, or an existing one is updated, Cloud Run will asynchronously perform all necessary steps to bring the Service to the desired serving state. This process is called reconciliation. While reconciliation is in process, observedGeneration, latest_ready_revison, trafficStatuses, and uri will have transient values that might mismatch the intended state: Once reconciliation is over (and this field is false), there are two possible outcomes: reconciliation succeeded and the serving state matches the Service, or there was an error, and reconciliation failed. This state can be found in terminalCondition.state.
 
-
                   If reconciliation succeeded, the following fields will match: traffic and trafficStatuses, observedGeneration and generation, latestReadyRevision and latestCreatedRevision.
-
 
                   If reconciliation failed, trafficStatuses, observedGeneration, and latestReadyRevision will have the state of the last serving revision, or empty for newly created Services. Additional information on the failure can be found in terminalCondition and conditions.
                 type: boolean
@@ -932,7 +901,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -45,33 +45,24 @@ spec:
     name: v1api20230101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-01-01/dataprotection.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               identity:
@@ -95,41 +85,33 @@ spec:
                 description: 'Location: Resource location.'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -147,9 +129,8 @@ spec:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -160,33 +141,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -196,11 +170,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -265,8 +237,8 @@ spec:
                             description: 'State: State of soft delete'
                             enum:
                             - AlwaysOn
-                            - Off
-                            - On
+                            - "Off"
+                            - "On"
                             type: string
                         type: object
                     type: object
@@ -319,28 +291,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -366,9 +332,8 @@ spec:
                 description: 'Identity: Input Managed Identity Details'
                 properties:
                   principalId:
-                    description: >-
+                    description: |-
                       PrincipalId: The object ID of the service principal object for the managed identity that is used to grant role-based
-
                       access to an Azure resource.
                     type: string
                   tenantId:
@@ -523,35 +488,25 @@ spec:
     name: v1api20230101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230101.BackupVault
-
           Generator information:
-
           - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-01-01/dataprotection.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -562,29 +517,25 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.DppIdentityDetails
-
                   Identity details
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
@@ -593,48 +544,39 @@ spec:
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.BackupVaultOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -648,26 +590,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       principalId:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -677,33 +615,26 @@ spec:
                     type: object
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -715,11 +646,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -730,45 +659,39 @@ spec:
                     type: string
                 type: object
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.BackupVaultSpec
-
                   Backup Vault
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   featureSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230101.FeatureSettings
-
                       Class containing feature settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       crossSubscriptionRestoreSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.CrossSubscriptionRestoreSettings
-
                           CrossSubscriptionRestore Settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
@@ -776,31 +699,27 @@ spec:
                         type: object
                     type: object
                   monitoringSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230101.MonitoringSettings
-
                       Monitoring Settings
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       azureMonitorAlertSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.AzureMonitorAlertSettings
-
                           Settings for Azure Monitor based alerts
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           alertsForAllJobFailures:
@@ -808,48 +727,42 @@ spec:
                         type: object
                     type: object
                   securitySettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230101.SecuritySettings
-
                       Class containing security settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       immutabilitySettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.ImmutabilitySettings
-
                           Immutability Settings at vault level
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
                             type: string
                         type: object
                       softDeleteSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.SoftDeleteSettings
-
                           Soft delete related settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           retentionDurationInDays:
@@ -860,17 +773,15 @@ spec:
                     type: object
                   storageSettings:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230101.StorageSetting
-
                         Storage setting
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         datastoreType:
@@ -888,17 +799,15 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20230101.BackupVaultResource_STATUS
-
               Backup Vault Resource
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -913,28 +822,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -955,17 +858,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.DppIdentityDetails_STATUS
-
                   Identity details
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -980,45 +881,39 @@ spec:
               name:
                 type: string
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.BackupVault_STATUS
-
                   Backup Vault
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   featureSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230101.FeatureSettings_STATUS
-
                       Class containing feature settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       crossSubscriptionRestoreSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.CrossSubscriptionRestoreSettings_STATUS
-
                           CrossSubscriptionRestore Settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
@@ -1028,31 +923,27 @@ spec:
                   isVaultProtectedByResourceGuard:
                     type: boolean
                   monitoringSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230101.MonitoringSettings_STATUS
-
                       Monitoring Settings
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       azureMonitorAlertSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.AzureMonitorAlertSettings_STATUS
-
                           Settings for Azure Monitor based alerts
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           alertsForAllJobFailures:
@@ -1062,17 +953,15 @@ spec:
                   provisioningState:
                     type: string
                   resourceMoveDetails:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230101.ResourceMoveDetails_STATUS
-
                       ResourceMoveDetails will be returned in response to GetResource call from ARM
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       completionTimeUtc:
@@ -1089,48 +978,42 @@ spec:
                   resourceMoveState:
                     type: string
                   securitySettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230101.SecuritySettings_STATUS
-
                       Class containing security settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       immutabilitySettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.ImmutabilitySettings_STATUS
-
                           Immutability Settings at vault level
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
                             type: string
                         type: object
                       softDeleteSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230101.SoftDeleteSettings_STATUS
-
                           Soft delete related settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           retentionDurationInDays:
@@ -1141,17 +1024,15 @@ spec:
                     type: object
                   storageSettings:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230101.StorageSetting_STATUS
-
                         Storage setting
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         datastoreType:
@@ -1162,17 +1043,15 @@ spec:
                     type: array
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20230101.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -1216,33 +1095,24 @@ spec:
     name: v1api20231101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-11-01/dataprotection.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1250,9 +1120,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               identity:
@@ -1270,11 +1139,9 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1295,41 +1162,33 @@ spec:
                 description: 'Location: Resource location.'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1347,9 +1206,8 @@ spec:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1360,33 +1218,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1396,11 +1247,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1479,8 +1328,8 @@ spec:
                             description: 'State: State of soft delete'
                             enum:
                             - AlwaysOn
-                            - Off
-                            - On
+                            - "Off"
+                            - "On"
                             type: string
                         type: object
                     type: object
@@ -1533,28 +1382,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1580,9 +1423,8 @@ spec:
                 description: 'Identity: Input Managed Identity Details'
                 properties:
                   principalId:
-                    description: >-
+                    description: |-
                       PrincipalId: The object ID of the service principal object for the managed identity that is used to grant role-based
-
                       access to an Azure resource.
                     type: string
                   tenantId:
@@ -1764,35 +1606,25 @@ spec:
     name: v1api20231101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20231101.BackupVault
-
           Generator information:
-
           - Generated from: /dataprotection/resource-manager/Microsoft.DataProtection/stable/2023-11-01/dataprotection.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataProtection/backupVaults/{vaultName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1803,57 +1635,49 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.DppIdentityDetails
-
                   Identity details
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231101.UserAssignedIdentityDetails
-
                         Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1873,48 +1697,39 @@ spec:
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.BackupVaultOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1928,26 +1743,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       principalId:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1957,33 +1768,26 @@ spec:
                     type: object
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1995,11 +1799,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -2010,31 +1812,27 @@ spec:
                     type: string
                 type: object
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.BackupVaultSpec
-
                   Backup Vault
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   featureSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.FeatureSettings
-
                       Class containing feature settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       crossRegionRestoreSettings:
@@ -2043,26 +1841,23 @@ spec:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
                             type: string
                         type: object
                       crossSubscriptionRestoreSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.CrossSubscriptionRestoreSettings
-
                           CrossSubscriptionRestore Settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
@@ -2070,31 +1865,27 @@ spec:
                         type: object
                     type: object
                   monitoringSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.MonitoringSettings
-
                       Monitoring Settings
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       azureMonitorAlertSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.AzureMonitorAlertSettings
-
                           Settings for Azure Monitor based alerts
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           alertsForAllJobFailures:
@@ -2106,48 +1897,42 @@ spec:
                       type: string
                     type: array
                   securitySettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.SecuritySettings
-
                       Class containing security settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       immutabilitySettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.ImmutabilitySettings
-
                           Immutability Settings at vault level
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
                             type: string
                         type: object
                       softDeleteSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.SoftDeleteSettings
-
                           Soft delete related settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           retentionDurationInDays:
@@ -2158,17 +1943,15 @@ spec:
                     type: object
                   storageSettings:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231101.StorageSetting
-
                         Storage setting
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         datastoreType:
@@ -2186,17 +1969,15 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20231101.BackupVaultResource_STATUS
-
               Backup Vault Resource
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -2211,28 +1992,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2253,17 +2028,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.DppIdentityDetails_STATUS
-
                   Identity details
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -2274,17 +2047,15 @@ spec:
                     type: string
                   userAssignedIdentities:
                     additionalProperties:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231101.UserAssignedIdentity_STATUS
-
                         User assigned identity properties
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
@@ -2299,31 +2070,27 @@ spec:
               name:
                 type: string
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.BackupVault_STATUS
-
                   Backup Vault
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   featureSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.FeatureSettings_STATUS
-
                       Class containing feature settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       crossRegionRestoreSettings:
@@ -2332,26 +2099,23 @@ spec:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
                             type: string
                         type: object
                       crossSubscriptionRestoreSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.CrossSubscriptionRestoreSettings_STATUS
-
                           CrossSubscriptionRestore Settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
@@ -2361,31 +2125,27 @@ spec:
                   isVaultProtectedByResourceGuard:
                     type: boolean
                   monitoringSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.MonitoringSettings_STATUS
-
                       Monitoring Settings
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       azureMonitorAlertSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.AzureMonitorAlertSettings_STATUS
-
                           Settings for Azure Monitor based alerts
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           alertsForAllJobFailures:
@@ -2399,17 +2159,15 @@ spec:
                       type: string
                     type: array
                   resourceMoveDetails:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.ResourceMoveDetails_STATUS
-
                       ResourceMoveDetails will be returned in response to GetResource call from ARM
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       completionTimeUtc:
@@ -2428,48 +2186,42 @@ spec:
                   secureScore:
                     type: string
                   securitySettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.SecuritySettings_STATUS
-
                       Class containing security settings of vault
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       immutabilitySettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.ImmutabilitySettings_STATUS
-
                           Immutability Settings at vault level
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           state:
                             type: string
                         type: object
                       softDeleteSettings:
-                        description: >-
+                        description: |-
                           Storage version of v1api20231101.SoftDeleteSettings_STATUS
-
                           Soft delete related settings
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           retentionDurationInDays:
@@ -2480,17 +2232,15 @@ spec:
                     type: object
                   storageSettings:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231101.StorageSetting_STATUS
-
                         Storage setting
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         datastoreType:
@@ -2501,17 +2251,15 @@ spec:
                     type: array
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:

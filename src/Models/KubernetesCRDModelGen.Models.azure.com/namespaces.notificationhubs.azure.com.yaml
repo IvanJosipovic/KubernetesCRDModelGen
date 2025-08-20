@@ -45,33 +45,24 @@ spec:
     name: v1api20230901
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /notificationhubs/resource-manager/Microsoft.NotificationHubs/stable/2023-09-01/notificationhubs.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 50
                 minLength: 1
@@ -91,41 +81,33 @@ spec:
                 description: 'Location: The geo-location where the resource lives'
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -137,18 +119,16 @@ spec:
                     description: 'ConfigMaps: configures where to place operator written ConfigMaps.'
                     properties:
                       serviceBusEndpoint:
-                        description: >-
+                        description: |-
                           ServiceBusEndpoint: indicates where the ServiceBusEndpoint config map should be placed. If omitted, no config map will
-
                           be created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -159,33 +139,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -197,18 +170,16 @@ spec:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       primaryConnectionString:
-                        description: >-
+                        description: |-
                           PrimaryConnectionString: indicates where the PrimaryConnectionString secret should be placed. If omitted, the secret
-
                           will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -216,18 +187,16 @@ spec:
                         - name
                         type: object
                       primaryKey:
-                        description: >-
+                        description: |-
                           PrimaryKey: indicates where the PrimaryKey secret should be placed. If omitted, the secret will not be retrieved from
-
                           Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -235,18 +204,16 @@ spec:
                         - name
                         type: object
                       secondaryConnectionString:
-                        description: >-
+                        description: |-
                           SecondaryConnectionString: indicates where the SecondaryConnectionString secret should be placed. If omitted, the secret
-
                           will not be retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -254,18 +221,16 @@ spec:
                         - name
                         type: object
                       secondaryKey:
-                        description: >-
+                        description: |-
                           SecondaryKey: indicates where the SecondaryKey secret should be placed. If omitted, the secret will not be retrieved
-
                           from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -275,11 +240,9 @@ spec:
                     type: object
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -329,9 +292,8 @@ spec:
                           type: object
                         type: array
                       publicNetworkRule:
-                        description: >-
+                        description: |-
                           PublicNetworkRule: A default (public Internet) network authorization rule, which contains rights if no other network
-
                           rule matches.
                         properties:
                           rights:
@@ -364,9 +326,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -380,9 +341,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -396,9 +356,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -426,9 +385,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -436,18 +394,16 @@ spec:
                                 - name
                                 type: object
                               appId:
-                                description: >-
+                                description: |-
                                   AppId: Gets or sets the issuer (iss) registered claim key, whose value is
-
                                   your 10-character Team ID, obtained from your developer account
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -461,9 +417,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -477,9 +432,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -493,9 +447,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -503,18 +456,16 @@ spec:
                                 - name
                                 type: object
                               keyId:
-                                description: >-
+                                description: |-
                                   KeyId: Gets or sets a 10-character key identifier (kid) key, obtained from
-
                                   your developer account
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -528,9 +479,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -538,18 +488,16 @@ spec:
                                 - name
                                 type: object
                               token:
-                                description: >-
+                                description: |-
                                   Token: Gets or sets provider Authentication Token, obtained through your
-
                                   developer account
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -575,9 +523,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -591,9 +538,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -607,9 +553,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -637,9 +582,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -653,9 +597,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -669,9 +612,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -699,9 +641,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -715,9 +656,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -743,9 +683,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -759,9 +698,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -775,9 +713,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -805,9 +742,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -821,9 +757,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -837,9 +772,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -853,9 +787,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -869,9 +802,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -895,9 +827,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -911,9 +842,8 @@ spec:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1003,28 +933,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1041,9 +965,8 @@ spec:
                   type: object
                 type: array
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. E.g.
-
                   "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                 type: string
               location:
@@ -1071,9 +994,8 @@ spec:
                     description: 'MetricId: Azure Insights Metrics id.'
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       Name: Name of the Notification Hubs namespace. This is immutable property, set automatically
-
                       by the service when the namespace is created.
                     type: string
                   namespaceType:
@@ -1099,9 +1021,8 @@ spec:
                           type: object
                         type: array
                       publicNetworkRule:
-                        description: >-
+                        description: |-
                           PublicNetworkRule: A default (public Internet) network authorization rule, which contains rights if no other network
-
                           rule matches.
                         properties:
                           rights:
@@ -1178,9 +1099,8 @@ spec:
                       description: Represents a Private Endpoint Connection ARM resource - a sub-resource of Notification Hubs namespace.
                       properties:
                         id:
-                          description: >-
+                          description: |-
                             Id: Fully qualified resource ID for the resource. E.g.
-
                             "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}"
                           type: string
                       type: object
@@ -1192,9 +1112,8 @@ spec:
                     description: 'PublicNetworkAccess: Type of public network access.'
                     type: string
                   region:
-                    description: >-
+                    description: |-
                       Region: Region. The value is always set to the same value as Namespace.Location, so we are deprecating
-
                       this property.
                     type: string
                   replicationRegion:
@@ -1204,9 +1123,8 @@ spec:
                     description: 'ScaleUnit: Gets or sets scaleUnit where the namespace gets created'
                     type: string
                   serviceBusEndpoint:
-                    description: >-
+                    description: |-
                       ServiceBusEndpoint: Gets or sets endpoint you can use to perform NotificationHub
-
                       operations.
                     type: string
                   status:
@@ -1293,35 +1211,25 @@ spec:
     name: v1api20230901storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230901.Namespace
-
           Generator information:
-
           - Generated from: /notificationhubs/resource-manager/Microsoft.NotificationHubs/stable/2023-09-01/notificationhubs.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.NotificationHubs/namespaces/{namespaceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1332,62 +1240,51 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               location:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230901.NamespaceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1401,26 +1298,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       serviceBusEndpoint:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1430,33 +1323,26 @@ spec:
                     type: object
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1470,26 +1356,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       primaryConnectionString:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1497,20 +1379,17 @@ spec:
                         - name
                         type: object
                       primaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1518,20 +1397,17 @@ spec:
                         - name
                         type: object
                       secondaryConnectionString:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1539,20 +1415,17 @@ spec:
                         - name
                         type: object
                       secondaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1564,11 +1437,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1579,17 +1450,15 @@ spec:
                     type: string
                 type: object
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20230901.NamespaceProperties
-
                   Represents namespace properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   dataCenter:
@@ -1597,32 +1466,28 @@ spec:
                   namespaceType:
                     type: string
                   networkAcls:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230901.NetworkAcls
-
                       A collection of network authorization rules.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       ipRules:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230901.IpRule
-
                             A network authorization rule that filters traffic based on IP address.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             ipMask:
@@ -1634,17 +1499,15 @@ spec:
                           type: object
                         type: array
                       publicNetworkRule:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.PublicInternetAuthorizationRule
-
                           A default (public Internet) network authorization rule, which contains rights if no other network rule matches.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           rights:
@@ -1654,60 +1517,52 @@ spec:
                         type: object
                     type: object
                   pnsCredentials:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230901.PnsCredentials
-
                       Collection of Notification Hub or Notification Hub Namespace PNS credentials.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       admCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.AdmCredential
-
                           Description of a NotificationHub AdmCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.AdmCredentialProperties
-
                               Description of a NotificationHub AdmCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               authTokenUrl:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1715,18 +1570,16 @@ spec:
                                 - name
                                 type: object
                               clientId:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1734,18 +1587,16 @@ spec:
                                 - name
                                 type: object
                               clientSecret:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1755,46 +1606,40 @@ spec:
                             type: object
                         type: object
                       apnsCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.ApnsCredential
-
                           Description of a NotificationHub ApnsCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.ApnsCredentialProperties
-
                               Description of a NotificationHub ApnsCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               apnsCertificate:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1802,18 +1647,16 @@ spec:
                                 - name
                                 type: object
                               appId:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1821,18 +1664,16 @@ spec:
                                 - name
                                 type: object
                               appName:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1840,18 +1681,16 @@ spec:
                                 - name
                                 type: object
                               certificateKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1859,18 +1698,16 @@ spec:
                                 - name
                                 type: object
                               endpoint:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1878,18 +1715,16 @@ spec:
                                 - name
                                 type: object
                               keyId:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1897,18 +1732,16 @@ spec:
                                 - name
                                 type: object
                               thumbprint:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1916,18 +1749,16 @@ spec:
                                 - name
                                 type: object
                               token:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1937,46 +1768,40 @@ spec:
                             type: object
                         type: object
                       baiduCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.BaiduCredential
-
                           Description of a NotificationHub BaiduCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.BaiduCredentialProperties
-
                               Description of a NotificationHub BaiduCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               baiduApiKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -1984,18 +1809,16 @@ spec:
                                 - name
                                 type: object
                               baiduEndPoint:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2003,18 +1826,16 @@ spec:
                                 - name
                                 type: object
                               baiduSecretKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2024,46 +1845,40 @@ spec:
                             type: object
                         type: object
                       browserCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.BrowserCredential
-
                           Description of a NotificationHub BrowserCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.BrowserCredentialProperties
-
                               Description of a NotificationHub BrowserCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               subject:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2071,18 +1886,16 @@ spec:
                                 - name
                                 type: object
                               vapidPrivateKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2090,18 +1903,16 @@ spec:
                                 - name
                                 type: object
                               vapidPublicKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2111,46 +1922,40 @@ spec:
                             type: object
                         type: object
                       gcmCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.GcmCredential
-
                           Description of a NotificationHub GcmCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.GcmCredentialProperties
-
                               Description of a NotificationHub GcmCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               gcmEndpoint:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2158,18 +1963,16 @@ spec:
                                 - name
                                 type: object
                               googleApiKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2179,46 +1982,40 @@ spec:
                             type: object
                         type: object
                       mpnsCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.MpnsCredential
-
                           Description of a NotificationHub MpnsCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.MpnsCredentialProperties
-
                               Description of a NotificationHub MpnsCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               certificateKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2226,18 +2023,16 @@ spec:
                                 - name
                                 type: object
                               mpnsCertificate:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2245,18 +2040,16 @@ spec:
                                 - name
                                 type: object
                               thumbprint:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2266,46 +2059,40 @@ spec:
                             type: object
                         type: object
                       wnsCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.WnsCredential
-
                           Description of a NotificationHub WnsCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.WnsCredentialProperties
-
                               Description of a NotificationHub WnsCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               certificateKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2313,18 +2100,16 @@ spec:
                                 - name
                                 type: object
                               packageSid:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2332,18 +2117,16 @@ spec:
                                 - name
                                 type: object
                               secretKey:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2351,18 +2134,16 @@ spec:
                                 - name
                                 type: object
                               windowsLiveEndpoint:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2370,18 +2151,16 @@ spec:
                                 - name
                                 type: object
                               wnsCertificate:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2391,46 +2170,40 @@ spec:
                             type: object
                         type: object
                       xiaomiCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.XiaomiCredential
-
                           Description of a NotificationHub XiaomiCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.XiaomiCredentialProperties
-
                               Description of a NotificationHub XiaomiCredentialProperties.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               appSecret:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2438,18 +2211,16 @@ spec:
                                 - name
                                 type: object
                               endpoint:
-                                description: >-
+                                description: |-
                                   SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                                   the resource it is on.
                                 properties:
                                   key:
                                     description: Key is the key in the Kubernetes secret being referenced
                                     type: string
                                   name:
-                                    description: >-
+                                    description: |-
                                       Name is the name of the Kubernetes secret being referenced.
-
                                       The secret must be in the same namespace as the resource
                                     type: string
                                 required:
@@ -2469,17 +2240,15 @@ spec:
                     type: string
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20230901.Sku
-
                   The Sku description for a namespace
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -2506,9 +2275,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -2523,28 +2291,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2567,17 +2329,15 @@ spec:
               name:
                 type: string
               properties:
-                description: >-
+                description: |-
                   Storage version of v1api20230901.NamespaceProperties_STATUS
-
                   Represents namespace properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -2595,32 +2355,28 @@ spec:
                   namespaceType:
                     type: string
                   networkAcls:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230901.NetworkAcls_STATUS
-
                       A collection of network authorization rules.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       ipRules:
                         items:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230901.IpRule_STATUS
-
                             A network authorization rule that filters traffic based on IP address.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             ipMask:
@@ -2632,17 +2388,15 @@ spec:
                           type: object
                         type: array
                       publicNetworkRule:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.PublicInternetAuthorizationRule_STATUS
-
                           A default (public Internet) network authorization rule, which contains rights if no other network rule matches.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           rights:
@@ -2652,255 +2406,221 @@ spec:
                         type: object
                     type: object
                   pnsCredentials:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230901.PnsCredentials_STATUS
-
                       Collection of Notification Hub or Notification Hub Namespace PNS credentials.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       admCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.AdmCredential_STATUS
-
                           Description of a NotificationHub AdmCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.AdmCredentialProperties_STATUS
-
                               Description of a NotificationHub AdmCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
                         type: object
                       apnsCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.ApnsCredential_STATUS
-
                           Description of a NotificationHub ApnsCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.ApnsCredentialProperties_STATUS
-
                               Description of a NotificationHub ApnsCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
                         type: object
                       baiduCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.BaiduCredential_STATUS
-
                           Description of a NotificationHub BaiduCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.BaiduCredentialProperties_STATUS
-
                               Description of a NotificationHub BaiduCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
                         type: object
                       browserCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.BrowserCredential_STATUS
-
                           Description of a NotificationHub BrowserCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.BrowserCredentialProperties_STATUS
-
                               Description of a NotificationHub BrowserCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
                         type: object
                       gcmCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.GcmCredential_STATUS
-
                           Description of a NotificationHub GcmCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.GcmCredentialProperties_STATUS
-
                               Description of a NotificationHub GcmCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
                         type: object
                       mpnsCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.MpnsCredential_STATUS
-
                           Description of a NotificationHub MpnsCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.MpnsCredentialProperties_STATUS
-
                               Description of a NotificationHub MpnsCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
                         type: object
                       wnsCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.WnsCredential_STATUS
-
                           Description of a NotificationHub WnsCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.WnsCredentialProperties_STATUS
-
                               Description of a NotificationHub WnsCredential.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
                         type: object
                       xiaomiCredential:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230901.XiaomiCredential_STATUS
-
                           Description of a NotificationHub XiaomiCredential.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230901.XiaomiCredentialProperties_STATUS
-
                               Description of a NotificationHub XiaomiCredentialProperties.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                             type: object
@@ -2908,17 +2628,15 @@ spec:
                     type: object
                   privateEndpointConnections:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230901.PrivateEndpointConnectionResource_STATUS
-
                         Represents a Private Endpoint Connection ARM resource - a sub-resource of Notification Hubs namespace.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
@@ -2947,17 +2665,15 @@ spec:
                     type: string
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20230901.Sku_STATUS
-
                   The Sku description for a namespace
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -2972,17 +2688,15 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20230901.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:

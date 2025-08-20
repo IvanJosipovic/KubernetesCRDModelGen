@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: bigqueryconnectionconnections.bigqueryconnection.cnrm.cloud.google.com
 spec:
   group: bigqueryconnection.cnrm.cloud.google.com
@@ -197,7 +196,7 @@ spec:
                         type: string
                     type: object
                   databaseRole:
-                    description: >-
+                    description: |-
                       Optional. Cloud Spanner database role for fine-grained access control.
                        The Cloud Spanner admin should have provisioned the database role with
                        appropriate permissions, such as `SELECT` and `INSERT`. Other users should
@@ -210,7 +209,7 @@ spec:
                        contain letters, numbers, and underscores.
                     type: string
                   maxParallelism:
-                    description: >-
+                    description: |-
                       Allows setting max parallelism per query when executing on Spanner
                        independent compute resources. If unspecified, default values of
                        parallelism are chosen that are dependent on the Cloud Spanner instance
@@ -222,7 +221,7 @@ spec:
                     format: int32
                     type: integer
                   useDataBoost:
-                    description: >-
+                    description: |-
                       If set, the request will be executed via Spanner independent compute
                        resources.
                        REQUIRES: `use_parallelism` must be set.
@@ -291,7 +290,7 @@ spec:
                     description: Optional. Dataproc Metastore Service configuration for the connection.
                     properties:
                       metastoreServiceRef:
-                        description: >-
+                        description: |-
                           Optional. Resource name of an existing Dataproc Metastore service.
 
                            Example:
@@ -327,7 +326,7 @@ spec:
                     description: Optional. Spark History Server configuration for the connection.
                     properties:
                       dataprocClusterRef:
-                        description: >-
+                        description: |-
                           Optional. Resource name of an existing Dataproc Cluster to act as a Spark
                            History Server for the connection.
 
@@ -429,7 +428,7 @@ spec:
                   cloudResource:
                     properties:
                       serviceAccountID:
-                        description: >2-
+                        description: |2-
                            The account ID of the service created for the purpose of this
                            connection.
 
@@ -446,7 +445,7 @@ spec:
                   cloudSQL:
                     properties:
                       serviceAccountID:
-                        description: >-
+                        description: |-
                           The account ID of the service used for the purpose of this connection.
 
                            When the connection is used in the context of an operation in
@@ -466,7 +465,7 @@ spec:
                   spark:
                     properties:
                       serviceAccountID:
-                        description: >2-
+                        description: |2-
                            The account ID of the service created for the purpose of this
                            connection.
 
@@ -662,7 +661,7 @@ spec:
                         type: string
                     type: object
                   databaseRole:
-                    description: >-
+                    description: |-
                       Optional. Cloud Spanner database role for fine-grained access control.
                        The Cloud Spanner admin should have provisioned the database role with
                        appropriate permissions, such as `SELECT` and `INSERT`. Other users should
@@ -675,7 +674,7 @@ spec:
                        contain letters, numbers, and underscores.
                     type: string
                   maxParallelism:
-                    description: >-
+                    description: |-
                       Allows setting max parallelism per query when executing on Spanner
                        independent compute resources. If unspecified, default values of
                        parallelism are chosen that are dependent on the Cloud Spanner instance
@@ -687,7 +686,7 @@ spec:
                     format: int32
                     type: integer
                   useDataBoost:
-                    description: >-
+                    description: |-
                       If set, the request will be executed via Spanner independent compute
                        resources.
                        REQUIRES: `use_parallelism` must be set.
@@ -756,7 +755,7 @@ spec:
                     description: Optional. Dataproc Metastore Service configuration for the connection.
                     properties:
                       metastoreServiceRef:
-                        description: >-
+                        description: |-
                           Optional. Resource name of an existing Dataproc Metastore service.
 
                            Example:
@@ -792,7 +791,7 @@ spec:
                     description: Optional. Spark History Server configuration for the connection.
                     properties:
                       dataprocClusterRef:
-                        description: >-
+                        description: |-
                           Optional. Resource name of an existing Dataproc Cluster to act as a Spark
                            History Server for the connection.
 
@@ -894,7 +893,7 @@ spec:
                   cloudResource:
                     properties:
                       serviceAccountID:
-                        description: >2-
+                        description: |2-
                            The account ID of the service created for the purpose of this
                            connection.
 
@@ -911,7 +910,7 @@ spec:
                   cloudSQL:
                     properties:
                       serviceAccountID:
-                        description: >-
+                        description: |-
                           The account ID of the service used for the purpose of this connection.
 
                            When the connection is used in the context of an operation in
@@ -931,7 +930,7 @@ spec:
                   spark:
                     properties:
                       serviceAccountID:
-                        description: >2-
+                        description: |2-
                            The account ID of the service created for the purpose of this
                            connection.
 
@@ -954,7 +953,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

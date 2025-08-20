@@ -19,25 +19,18 @@ spec:
         description: APIAuth defines the authentication configuration for APIs.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -49,18 +42,16 @@ spec:
                 description: APIKey configures API key authentication.
                 type: object
               isDefault:
-                description: >-
+                description: |-
                   IsDefault specifies if this APIAuth should be used as the default API authentication method for the namespace.
-
                   Only one APIAuth per namespace should have isDefault set to true.
                 type: boolean
               jwt:
                 description: JWT configures JWT authentication.
                 properties:
                   appIdClaim:
-                    description: >-
+                    description: |-
                       AppIDClaim is the name of the claim holding the identifier of the application.
-
                       This field is sometimes named `client_id`.
                     type: string
                   forwardHeaders:
@@ -81,9 +72,8 @@ spec:
                     description: PublicKey is the PEM-encoded public key for JWT verification.
                     type: string
                   signingSecretName:
-                    description: >-
+                    description: |-
                       SigningSecretName is the name of the Kubernetes Secret containing the signing secret.
-
                       The secret must be of type Opaque and contain a key named 'value'.
                     maxLength: 253
                     type: string
@@ -91,9 +81,8 @@ spec:
                     description: StripAuthorizationHeader determines whether to strip the Authorization header before forwarding the request.
                     type: boolean
                   tokenNameClaim:
-                    description: >-
+                    description: |-
                       TokenNameClaim is the name of the claim holding the name of the token.
-
                       This name, if provided, will be used in the metrics.
                     type: string
                   tokenQueryKey:

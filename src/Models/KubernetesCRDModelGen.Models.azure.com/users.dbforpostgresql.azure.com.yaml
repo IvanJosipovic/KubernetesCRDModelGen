@@ -48,25 +48,18 @@ spec:
         description: User is a postgresql user.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -74,9 +67,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               localUser:
@@ -89,9 +81,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -105,9 +96,8 @@ spec:
                         description: Key is the key in the Kubernetes secret being referenced
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           Name is the name of the Kubernetes secret being referenced.
-
                           The secret must be in the same namespace as the resource
                         type: string
                     required:
@@ -123,11 +113,9 @@ spec:
                 - serverAdminUsername
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a dbforpostgresql.azure.com/FlexibleServer resource
                 properties:
                   name:
@@ -139,9 +127,8 @@ spec:
               roleOptions:
                 default:
                   login: true
-                description: >-
+                description: |-
                   RoleOptions defines additional attributes of the user role. You can read more about these attributes
-
                   at https://www.postgresql.org/docs/current/role-attributes.html.
                 properties:
                   createDb:
@@ -162,11 +149,9 @@ spec:
                     type: boolean
                 type: object
               roles:
-                description: >-
+                description: |-
                   Roles is the set of roles granted to the user upon creation.
-
                   The Azure Database for PostgreSQL server is created with 3 default roles defined: azure_pg_admin, azure_superuser,
-
                   and your server admin user (this last is a role w/ login permission, commonly called a User).
                 items:
                   type: string
@@ -190,28 +175,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:

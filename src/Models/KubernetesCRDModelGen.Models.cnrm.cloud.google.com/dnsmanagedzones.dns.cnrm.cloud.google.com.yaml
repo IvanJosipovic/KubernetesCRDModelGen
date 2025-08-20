@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: dnsmanagedzones.dns.cnrm.cloud.google.com
 spec:
   group: dns.cnrm.cloud.google.com
@@ -72,13 +71,10 @@ spec:
                 description: DNSSEC configuration.
                 properties:
                   defaultKeySpecs:
-                    description: >-
+                    description: |-
                       Specifies parameters that will be used for generating initial DnsKeys
-
                       for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
-
                       you must also provide one for the other.
-
                       default_key_specs can only be updated when the state is 'off'.
                     items:
                       properties:
@@ -89,17 +85,12 @@ spec:
                           description: Length of the keys in bits.
                           type: integer
                         keyType:
-                          description: >-
+                          description: |-
                             Specifies whether this is a key signing key (KSK) or a zone
-
                             signing key (ZSK). Key signing keys have the Secure Entry
-
                             Point flag set and, when active, will only be used to sign
-
                             resource record sets of type DNSKEY. Zone signing keys do
-
                             not have the Secure Entry Point flag set and will be used
-
                             to sign all other types of resource record sets. Possible values: ["keySigning", "zoneSigning"].
                           type: string
                         kind:
@@ -111,9 +102,8 @@ spec:
                     description: Identifies what kind of resource this is.
                     type: string
                   nonExistence:
-                    description: >-
+                    description: |-
                       Specifies the mechanism used to provide authenticated denial-of-existence responses.
-
                       non_existence can only be updated when the state is 'off'. Possible values: ["nsec", "nsec3"].
                     type: string
                   state:
@@ -121,28 +111,22 @@ spec:
                     type: string
                 type: object
               forwardingConfig:
-                description: >-
+                description: |-
                   The presence for this field indicates that outbound forwarding is enabled
-
                   for this zone. The value of this field contains the set of destinations
-
                   to forward to.
                 properties:
                   targetNameServers:
-                    description: >-
+                    description: |-
                       List of target name servers to forward to. Cloud DNS will
-
                       select the best available name server if more than
-
                       one target is given.
                     items:
                       properties:
                         forwardingPath:
-                          description: >-
+                          description: |-
                             Forwarding path for this TargetNameServer. If unset or 'default' Cloud DNS will make forwarding
-
                             decision based on address ranges, i.e. RFC1918 addresses go to the VPC, Non-RFC1918 addresses go
-
                             to the Internet. When set to 'private', Cloud DNS will always send queries through VPC for this target Possible values: ["default", "private"].
                           type: string
                         ipv4Address:
@@ -156,9 +140,8 @@ spec:
                 - targetNameServers
                 type: object
               peeringConfig:
-                description: >-
+                description: |-
                   The presence of this field indicates that DNS Peering is enabled for this
-
                   zone. The value of this field contains the network to peer with.
                 properties:
                   targetNetwork:
@@ -198,9 +181,8 @@ spec:
                 - targetNetwork
                 type: object
               privateVisibilityConfig:
-                description: >-
+                description: |-
                   For privately visible zones, the set of Virtual Private Cloud
-
                   resources that the zone is visible from. At least one of 'gke_clusters' or 'networks' must be specified.
                 properties:
                   gkeClusters:
@@ -208,11 +190,9 @@ spec:
                     items:
                       properties:
                         gkeClusterNameRef:
-                          description: >-
+                          description: |-
                             The resource name of the cluster to bind this ManagedZone to.
-
                             This should be specified in the format like
-
                             'projects/*/locations/*/clusters/*'.
                           oneOf:
                           - not:
@@ -282,11 +262,9 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               reverseLookup:
-                description: >-
+                description: |-
                   Immutable. Specifies if this is a managed reverse lookup zone. If true, Cloud DNS will resolve reverse
-
                   lookup queries using automatically configured records for VPC resources. This only applies
-
                   to networks listed under 'private_visibility_config'.
                 type: boolean
               serviceDirectoryConfig:
@@ -296,15 +274,11 @@ spec:
                     description: The namespace associated with the zone.
                     properties:
                       namespaceUrl:
-                        description: >-
+                        description: |-
                           The fully qualified or partial URL of the service directory namespace that should be
-
                           associated with the zone. This should be formatted like
-
                           'https://servicedirectory.googleapis.com/v1/projects/{project}/locations/{location}/namespaces/{namespace_id}'
-
                           or simply 'projects/{project}/locations/{location}/namespaces/{namespace_id}'
-
                           Ignored for 'public' visibility zones.
                         type: string
                     required:
@@ -314,9 +288,8 @@ spec:
                 - namespace
                 type: object
               visibility:
-                description: >-
+                description: |-
                   Immutable. The zone's visibility: public zones are exposed to the Internet,
-
                   while private zones are visible only to Virtual Private Cloud resources. Default value: "public" Possible values: ["private", "public"].
                 type: string
             required:
@@ -346,18 +319,16 @@ spec:
                   type: object
                 type: array
               creationTime:
-                description: >-
+                description: |-
                   The time that this resource was created on the server.
-
                   This is in RFC3339 text format.
                 type: string
               managedZoneId:
                 description: Unique identifier for the resource; defined by the server.
                 type: integer
               nameServers:
-                description: >-
+                description: |-
                   Delegate your managed_zone to these virtual name servers;
-
                   defined by the server.
                 items:
                   type: string
@@ -375,7 +346,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

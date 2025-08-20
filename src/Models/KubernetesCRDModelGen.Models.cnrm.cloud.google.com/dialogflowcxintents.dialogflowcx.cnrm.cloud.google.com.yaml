@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: dialogflowcxintents.dialogflowcx.cnrm.cloud.google.com
 spec:
   group: dialogflowcx.cnrm.cloud.google.com
@@ -60,17 +59,14 @@ spec:
                 description: The human-readable name of the intent, unique within the agent.
                 type: string
               isFallback:
-                description: >-
+                description: |-
                   Indicates whether this is a fallback intent. Currently only default fallback intent is allowed in the agent, which is added upon agent creation.
-
                   Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
                 type: boolean
               languageCode:
-                description: >-
+                description: |-
                   Immutable. The language of the following fields in intent:
-
                   Intent.training_phrases.parts.text
-
                   If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
                 type: string
               parameters:
@@ -78,9 +74,8 @@ spec:
                 items:
                   properties:
                     entityType:
-                      description: >-
+                      description: |-
                         The entity type of the parameter.
-
                         Format: projects/-/locations/-/agents/-/entityTypes/<System Entity Type ID> for system entity types (for example, projects/-/locations/-/agents/-/entityTypes/sys.date), or projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/entityTypes/<Entity Type ID> for developer entity types.
                       type: string
                     id:
@@ -90,9 +85,8 @@ spec:
                       description: Indicates whether the parameter represents a list of values.
                       type: boolean
                     redact:
-                      description: >-
+                      description: |-
                         Indicates whether the parameter content should be redacted in log. If redaction is enabled, the parameter content will be replaced by parameter name during logging.
-
                         Note: the parameter content is subject to redaction if either parameter level redaction or entity type level redaction is enabled.
                       type: boolean
                   required:
@@ -101,17 +95,14 @@ spec:
                   type: object
                 type: array
               parent:
-                description: >-
+                description: |-
                   Immutable. The agent to create an intent for.
-
                   Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
                 type: string
               priority:
-                description: >-
+                description: |-
                   The priority of this intent. Higher numbers represent higher priorities.
-
                   If the supplied value is unspecified or 0, the service translates the value to 500,000, which corresponds to the Normal priority in the console.
-
                   If the supplied value is negative, the intent is ignored in runtime detect intent requests.
                 type: integer
               resourceID:
@@ -125,19 +116,13 @@ spec:
                       description: The unique identifier of the training phrase.
                       type: string
                     parts:
-                      description: >-
+                      description: |-
                         The ordered list of training phrase parts. The parts are concatenated in order to form the training phrase.
-
                         Note: The API does not automatically annotate training phrases like the Dialogflow Console does.
-
                         Note: Do not forget to include whitespace at part boundaries, so the training phrase is well formatted when the parts are concatenated.
-
                         If the training phrase does not need to be annotated with parameters, you just need a single part with only the Part.text field set.
-
                         If you want to annotate the training phrase, you must create multiple parts, where the fields of each part are populated in one of two ways:
-
                         Part.text is set to a part of the phrase that has no parameters.
-
                         Part.text is set to a part of the phrase that you want to annotate, and the parameterId field is set.
                       items:
                         properties:
@@ -185,9 +170,8 @@ spec:
                   type: object
                 type: array
               name:
-                description: >-
+                description: |-
                   The unique identifier of the intent.
-
                   Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/intents/<Intent ID>.
                 type: string
               observedGeneration:
@@ -203,7 +187,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

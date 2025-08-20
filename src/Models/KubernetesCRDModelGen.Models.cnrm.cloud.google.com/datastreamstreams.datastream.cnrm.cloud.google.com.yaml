@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: datastreamstreams.datastream.cnrm.cloud.google.com
 spec:
   group: datastream.cnrm.cloud.google.com
@@ -81,9 +80,8 @@ spec:
                                           description: Column name.
                                           type: string
                                         dataType:
-                                          description: >-
+                                          description: |-
                                             The MySQL data type. Full data types list can be found here:
-
                                             https://dev.mysql.com/doc/refman/8.0/en/data-types.html.
                                           type: string
                                         length:
@@ -133,9 +131,8 @@ spec:
                                           description: Column name.
                                           type: string
                                         dataType:
-                                          description: >-
+                                          description: |-
                                             The Oracle data type. Full data types list can be found here:
-
                                             https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html.
                                           type: string
                                         encoding:
@@ -197,9 +194,8 @@ spec:
                                           description: Column name.
                                           type: string
                                         dataType:
-                                          description: >-
+                                          description: |-
                                             The PostgreSQL data type. Full data types list can be found here:
-
                                             https://www.postgresql.org/docs/current/datatype.html.
                                           type: string
                                         length:
@@ -245,9 +241,8 @@ spec:
                 type: object
                 x-kubernetes-preserve-unknown-fields: true
               customerManagedEncryptionKey:
-                description: >-
+                description: |-
                   Immutable. A reference to a KMS encryption key. If provided, it will be used to encrypt the data. If left blank, data
-
                   will be encrypted using an internal Stream-specific encryption key provisioned through KMS.
                 type: string
               desiredState:
@@ -260,22 +255,18 @@ spec:
                     description: A configuration for how data should be loaded to Cloud Storage.
                     properties:
                       dataFreshness:
-                        description: >-
+                        description: |-
                           The guaranteed data freshness (in seconds) when querying tables created by the stream.
-
                           Editing this field will only affect new tables created in the future, but existing tables
-
                           will not be impacted. Lower values mean that queries will return fresher data, but may result in higher cost.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
                         type: string
                       singleTargetDataset:
                         description: A single target dataset to which all data will be streamed.
                         properties:
                           datasetId:
-                            description: >-
+                            description: |-
                               Dataset ID in the format projects/{project}/datasets/{dataset_id} or
-
                               {project}:{dataset_id}.
                             type: string
                         required:
@@ -288,25 +279,20 @@ spec:
                             description: Dataset template used for dynamic dataset creation.
                             properties:
                               datasetIdPrefix:
-                                description: >-
+                                description: |-
                                   If supplied, every created dataset will have its name prefixed by the provided value.
-
                                   The prefix and name will be separated by an underscore. i.e. _.
                                 type: string
                               kmsKeyName:
-                                description: >-
+                                description: |-
                                   Immutable. Describes the Cloud KMS encryption key that will be used to protect destination BigQuery
-
                                   table. The BigQuery Service Account associated with your project requires access to this
-
                                   encryption key. i.e. projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryptoKey}.
-
                                   See https://cloud.google.com/bigquery/docs/customer-managed-encryption for more information.
                                 type: string
                               location:
-                                description: >-
+                                description: |-
                                   The geographic location where the dataset should reside.
-
                                   See https://cloud.google.com/bigquery/docs/locations for supported locations.
                                 type: string
                             required:
@@ -327,9 +313,8 @@ spec:
                         type: object
                         x-kubernetes-preserve-unknown-fields: true
                       fileRotationInterval:
-                        description: >-
+                        description: |-
                           The maximum duration for which new events are added before a file is closed and a new file is created.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s". Defaults to 900s.
                         type: string
                       fileRotationMb:
@@ -419,9 +404,8 @@ spec:
                                               description: Column name.
                                               type: string
                                             dataType:
-                                              description: >-
+                                              description: |-
                                                 The MySQL data type. Full data types list can be found here:
-
                                                 https://dev.mysql.com/doc/refman/8.0/en/data-types.html.
                                               type: string
                                             length:
@@ -477,9 +461,8 @@ spec:
                                               description: Column name.
                                               type: string
                                             dataType:
-                                              description: >-
+                                              description: |-
                                                 The MySQL data type. Full data types list can be found here:
-
                                                 https://dev.mysql.com/doc/refman/8.0/en/data-types.html.
                                               type: string
                                             length:
@@ -511,15 +494,13 @@ spec:
                         - mysqlDatabases
                         type: object
                       maxConcurrentBackfillTasks:
-                        description: >-
+                        description: |-
                           Maximum number of concurrent backfill tasks. The number should be non negative.
-
                           If not set (or set to 0), the system's default value will be used.
                         type: integer
                       maxConcurrentCdcTasks:
-                        description: >-
+                        description: |-
                           Maximum number of concurrent CDC tasks. The number should be non negative.
-
                           If not set (or set to 0), the system's default value will be used.
                         type: integer
                     type: object
@@ -549,9 +530,8 @@ spec:
                                               description: Column name.
                                               type: string
                                             dataType:
-                                              description: >-
+                                              description: |-
                                                 The Oracle data type. Full data types list can be found here:
-
                                                 https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html.
                                               type: string
                                             encoding:
@@ -613,9 +593,8 @@ spec:
                                               description: Column name.
                                               type: string
                                             dataType:
-                                              description: >-
+                                              description: |-
                                                 The Oracle data type. Full data types list can be found here:
-
                                                 https://docs.oracle.com/en/database/oracle/oracle-database/21/sqlrf/Data-Types.html.
                                               type: string
                                             encoding:
@@ -659,15 +638,13 @@ spec:
                         - oracleSchemas
                         type: object
                       maxConcurrentBackfillTasks:
-                        description: >-
+                        description: |-
                           Maximum number of concurrent backfill tasks. The number should be non negative.
-
                           If not set (or set to 0), the system's default value will be used.
                         type: integer
                       maxConcurrentCdcTasks:
-                        description: >-
+                        description: |-
                           Maximum number of concurrent CDC tasks. The number should be non negative.
-
                           If not set (or set to 0), the system's default value will be used.
                         type: integer
                       streamLargeObjects:
@@ -697,9 +674,8 @@ spec:
                                               description: Column name.
                                               type: string
                                             dataType:
-                                              description: >-
+                                              description: |-
                                                 The PostgreSQL data type. Full data types list can be found here:
-
                                                 https://www.postgresql.org/docs/current/datatype.html.
                                               type: string
                                             length:
@@ -758,9 +734,8 @@ spec:
                                               description: Column name.
                                               type: string
                                             dataType:
-                                              description: >-
+                                              description: |-
                                                 The PostgreSQL data type. Full data types list can be found here:
-
                                                 https://www.postgresql.org/docs/current/datatype.html.
                                               type: string
                                             length:
@@ -801,21 +776,18 @@ spec:
                         - postgresqlSchemas
                         type: object
                       maxConcurrentBackfillTasks:
-                        description: >-
+                        description: |-
                           Maximum number of concurrent backfill tasks. The number should be non
-
                           negative. If not set (or set to 0), the system's default value will be used.
                         type: integer
                       publication:
-                        description: >-
+                        description: |-
                           The name of the publication that includes the set of all tables
-
                           that are defined in the stream's include_objects.
                         type: string
                       replicationSlot:
-                        description: >-
+                        description: |-
                           The name of the logical replication slot that's configured with
-
                           the pgoutput plugin.
                         type: string
                     required:
@@ -877,7 +849,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

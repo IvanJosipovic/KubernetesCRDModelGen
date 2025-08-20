@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: tagslocationtagbindings.tags.cnrm.cloud.google.com
 spec:
   group: tags.cnrm.cloud.google.com
@@ -54,9 +53,8 @@ spec:
           spec:
             properties:
               location:
-                description: >-
+                description: |-
                   Immutable. The geographic location where the transfer config should reside.
-
                   Examples: US, EU, asia-northeast1. The default value is US.
                 type: string
               parentRef:
@@ -158,7 +156,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

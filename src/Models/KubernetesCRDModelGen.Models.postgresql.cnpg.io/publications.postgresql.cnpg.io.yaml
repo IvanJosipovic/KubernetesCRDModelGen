@@ -37,25 +37,18 @@ spec:
         description: Publication is the Schema for the publications API
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -67,24 +60,19 @@ spec:
                 description: The name of the PostgreSQL cluster that identifies the "publisher"
                 properties:
                   name:
-                    default: ''
-                    description: >-
+                    default: ""
+                    description: |-
                       Name of the referent.
-
                       This field is effectively required, but due to backwards compatibility is
-
                       allowed to be empty. Instances of this type with an empty value here are
-
                       almost certainly wrong.
-
                       More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                     type: string
                 type: object
                 x-kubernetes-map-type: atomic
               dbname:
-                description: >-
+                description: |-
                   The name of the database where the publication will be installed in
-
                   the "publisher" cluster
                 type: string
                 x-kubernetes-validations:
@@ -99,9 +87,8 @@ spec:
               parameters:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Publication parameters part of the `WITH` clause as expected by
-
                   PostgreSQL `CREATE PUBLICATION` command
                 type: object
               publicationReclaimPolicy:
@@ -115,11 +102,9 @@ spec:
                 description: Target of the publication as expected by PostgreSQL `CREATE PUBLICATION` command
                 properties:
                   allTables:
-                    description: >-
+                    description: |-
                       Marks the publication as one that replicates changes for all tables
-
                       in the database, including tables created in the future.
-
                       Corresponding to `FOR ALL TABLES` in PostgreSQL.
                     type: boolean
                     x-kubernetes-validations:
@@ -131,9 +116,8 @@ spec:
                       description: PublicationTargetObject is an object to publish
                       properties:
                         table:
-                          description: >-
+                          description: |-
                             Specifies a list of tables to add to the publication. Corresponding
-
                             to `FOR TABLE` in PostgreSQL.
                           properties:
                             columns:
@@ -154,11 +138,9 @@ spec:
                           - name
                           type: object
                         tablesInSchema:
-                          description: >-
+                          description: |-
                             Marks the publication as one that replicates changes for all tables
-
                             in the specified list of schemas, including tables created in the
-
                             future. Corresponding to `FOR TABLES IN SCHEMA` in PostgreSQL.
                           type: string
                       type: object
@@ -190,9 +172,8 @@ spec:
                 description: Message is the reconciliation output message
                 type: string
               observedGeneration:
-                description: >-
+                description: |-
                   A sequence number representing the latest
-
                   desired state that was synchronized
                 format: int64
                 type: integer

@@ -36,25 +36,18 @@ spec:
         description: AuthBackend is the Schema for the AuthBackends API. Managing JWT/OIDC auth backends in Vault
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -85,93 +72,76 @@ spec:
               forProvider:
                 properties:
                   boundIssuer:
-                    description: >-
+                    description: |-
                       The value against which to match the iss claim in a JWT
-
                       The value against which to match the iss claim in a JWT
                     type: string
                   defaultRole:
-                    description: >-
+                    description: |-
                       The default role to use if none is provided during login
-
                       The default role to use if none is provided during login
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       The description of the auth backend
-
                       The description of the auth backend
                     type: string
                   disableRemount:
-                    description: >-
+                    description: |-
                       If set, opts out of mount migration on path updates.
-
                       See here for more info on Mount Migration
-
                       If set, opts out of mount migration on path updates.
                     type: boolean
                   jwksCaPem:
-                    description: >-
+                    description: |-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
                     type: string
                   jwksUrl:
-                    description: >-
+                    description: |-
                       JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-
                       JWKS URL to use to authenticate signatures. Cannot be used with 'oidc_discovery_url' or 'jwt_validation_pubkeys'.
                     type: string
                   jwtSupportedAlgs:
-                    description: >-
+                    description: |-
                       A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-
                       A list of supported signing algorithms. Defaults to [RS256]
                     items:
                       type: string
                     type: array
                   jwtValidationPubkeys:
-                    description: >-
+                    description: |-
                       A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with oidc_discovery_url
-
                       A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used with 'jwks_url' or 'oidc_discovery_url'.
                     items:
                       type: string
                     type: array
                   local:
-                    description: >-
+                    description: |-
                       Specifies if the auth method is local only.
-
                       Specifies if the auth method is local only
                     type: boolean
                   namespace:
-                    description: >-
+                    description: |-
                       The namespace to provision the resource in.
-
                       The value should not contain leading or trailing forward slashes.
-
                       The namespace is always relative to the provider's configured namespace.
-
                       Available only for Vault Enterprise.
-
                       Target namespace. (requires Enterprise)
                     type: string
                   namespaceInState:
-                    description: >-
+                    description: |-
                       Pass namespace in the OIDC state parameter instead of as a separate query parameter. With this setting, the allowed redirect URL(s) in Vault and on the provider side should not contain a namespace query parameter. This means only one redirect URL entry needs to be maintained on the OIDC provider side for all vault namespaces that will be authenticating against it. Defaults to true for new configs
-
                       Pass namespace in the OIDC state parameter instead of as a separate query parameter. With this setting, the allowed redirect URL(s) in Vault and on the provider side should not contain a namespace query parameter. This means only one redirect URL entry needs to be maintained on the OIDC provider side for all vault namespaces that will be authenticating against it. Defaults to true for new configs.
                     type: boolean
                   oidcClientId:
-                    description: >-
+                    description: |-
                       Client ID used for OIDC backends
-
                       Client ID used for OIDC
                     type: string
                   oidcClientSecretSecretRef:
-                    description: >-
+                    description: |-
                       Client Secret used for OIDC backends
-
                       Client Secret used for OIDC
                     properties:
                       key:
@@ -189,43 +159,37 @@ spec:
                     - namespace
                     type: object
                   oidcDiscoveryCaPem:
-                    description: >-
+                    description: |-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
                     type: string
                   oidcDiscoveryUrl:
-                    description: >-
+                    description: |-
                       The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with jwt_validation_pubkeys
-
                       The OIDC Discovery URL, without any .well-known component (base path). Cannot be used with 'jwks_url' or 'jwt_validation_pubkeys'.
                     type: string
                   oidcResponseMode:
-                    description: >-
+                    description: |-
                       The response mode to be used in the OAuth2 request. Allowed values are query and form_post. Defaults to query. If using Vault namespaces, and oidc_response_mode is form_post, then namespace_in_state should be set to false.
-
                       The response mode to be used in the OAuth2 request. Allowed values are 'query' and 'form_post'. Defaults to 'query'. If using Vault namespaces, and oidc_response_mode is 'form_post', then 'namespace_in_state' should be set to false.
                     type: string
                   oidcResponseTypes:
-                    description: >-
+                    description: |-
                       List of response types to request. Allowed values are 'code' and 'id_token'. Defaults to ["code"]. Note: id_token may only be used if oidc_response_mode is set to form_post.
-
                       The response types to request. Allowed values are 'code' and 'id_token'. Defaults to 'code'. Note: 'id_token' may only be used if 'oidc_response_mode' is set to 'form_post'.
                     items:
                       type: string
                     type: array
                   path:
-                    description: >-
+                    description: |-
                       Path to mount the JWT/OIDC auth backend
-
                       path to mount the backend
                     type: string
                   providerConfig:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
-
                       Provider specific handling configuration
                     type: object
                     x-kubernetes-map-type: granular
@@ -233,184 +197,147 @@ spec:
                     items:
                       properties:
                         allowedResponseHeaders:
-                          description: >-
+                          description: |-
                             List of headers to whitelist and allowing
-
                             a plugin to include them in the response.
                           items:
                             type: string
                           type: array
                         auditNonHmacRequestKeys:
-                          description: >-
+                          description: |-
                             Specifies the list of keys that will
-
                             not be HMAC'd by audit devices in the request data object.
                           items:
                             type: string
                           type: array
                         auditNonHmacResponseKeys:
-                          description: >-
+                          description: |-
                             Specifies the list of keys that will
-
                             not be HMAC'd by audit devices in the response data object.
                           items:
                             type: string
                           type: array
                         defaultLeaseTtl:
-                          description: >-
+                          description: |-
                             Specifies the default time-to-live.
-
                             If set, this overrides the global default.
-
                             Must be a valid duration string
                           type: string
                         listingVisibility:
-                          description: >-
+                          description: |-
                             Specifies whether to show this mount in
-
                             the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
                           type: string
                         maxLeaseTtl:
-                          description: >-
+                          description: |-
                             Specifies the maximum time-to-live.
-
                             If set, this overrides the global default.
-
                             Must be a valid duration string
                           type: string
                         passthroughRequestHeaders:
-                          description: >-
+                          description: |-
                             List of headers to whitelist and
-
                             pass from the request to the backend.
                           items:
                             type: string
                           type: array
                         tokenType:
-                          description: >-
+                          description: |-
                             Specifies the type of tokens that should be returned by
-
                             the mount. Valid values are "default-service", "default-batch", "service", "batch".
                           type: string
                       type: object
                     type: array
                   type:
-                    description: >-
+                    description: |-
                       Type of auth backend. Should be one of jwt or oidc. Default - jwt
-
                       Type of backend. Can be either 'jwt' or 'oidc'
                     type: string
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   boundIssuer:
-                    description: >-
+                    description: |-
                       The value against which to match the iss claim in a JWT
-
                       The value against which to match the iss claim in a JWT
                     type: string
                   defaultRole:
-                    description: >-
+                    description: |-
                       The default role to use if none is provided during login
-
                       The default role to use if none is provided during login
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       The description of the auth backend
-
                       The description of the auth backend
                     type: string
                   disableRemount:
-                    description: >-
+                    description: |-
                       If set, opts out of mount migration on path updates.
-
                       See here for more info on Mount Migration
-
                       If set, opts out of mount migration on path updates.
                     type: boolean
                   jwksCaPem:
-                    description: >-
+                    description: |-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
                     type: string
                   jwksUrl:
-                    description: >-
+                    description: |-
                       JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-
                       JWKS URL to use to authenticate signatures. Cannot be used with 'oidc_discovery_url' or 'jwt_validation_pubkeys'.
                     type: string
                   jwtSupportedAlgs:
-                    description: >-
+                    description: |-
                       A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-
                       A list of supported signing algorithms. Defaults to [RS256]
                     items:
                       type: string
                     type: array
                   jwtValidationPubkeys:
-                    description: >-
+                    description: |-
                       A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with oidc_discovery_url
-
                       A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used with 'jwks_url' or 'oidc_discovery_url'.
                     items:
                       type: string
                     type: array
                   local:
-                    description: >-
+                    description: |-
                       Specifies if the auth method is local only.
-
                       Specifies if the auth method is local only
                     type: boolean
                   namespace:
-                    description: >-
+                    description: |-
                       The namespace to provision the resource in.
-
                       The value should not contain leading or trailing forward slashes.
-
                       The namespace is always relative to the provider's configured namespace.
-
                       Available only for Vault Enterprise.
-
                       Target namespace. (requires Enterprise)
                     type: string
                   namespaceInState:
-                    description: >-
+                    description: |-
                       Pass namespace in the OIDC state parameter instead of as a separate query parameter. With this setting, the allowed redirect URL(s) in Vault and on the provider side should not contain a namespace query parameter. This means only one redirect URL entry needs to be maintained on the OIDC provider side for all vault namespaces that will be authenticating against it. Defaults to true for new configs
-
                       Pass namespace in the OIDC state parameter instead of as a separate query parameter. With this setting, the allowed redirect URL(s) in Vault and on the provider side should not contain a namespace query parameter. This means only one redirect URL entry needs to be maintained on the OIDC provider side for all vault namespaces that will be authenticating against it. Defaults to true for new configs.
                     type: boolean
                   oidcClientId:
-                    description: >-
+                    description: |-
                       Client ID used for OIDC backends
-
                       Client ID used for OIDC
                     type: string
                   oidcClientSecretSecretRef:
-                    description: >-
+                    description: |-
                       Client Secret used for OIDC backends
-
                       Client Secret used for OIDC
                     properties:
                       key:
@@ -428,43 +355,37 @@ spec:
                     - namespace
                     type: object
                   oidcDiscoveryCaPem:
-                    description: >-
+                    description: |-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
                     type: string
                   oidcDiscoveryUrl:
-                    description: >-
+                    description: |-
                       The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with jwt_validation_pubkeys
-
                       The OIDC Discovery URL, without any .well-known component (base path). Cannot be used with 'jwks_url' or 'jwt_validation_pubkeys'.
                     type: string
                   oidcResponseMode:
-                    description: >-
+                    description: |-
                       The response mode to be used in the OAuth2 request. Allowed values are query and form_post. Defaults to query. If using Vault namespaces, and oidc_response_mode is form_post, then namespace_in_state should be set to false.
-
                       The response mode to be used in the OAuth2 request. Allowed values are 'query' and 'form_post'. Defaults to 'query'. If using Vault namespaces, and oidc_response_mode is 'form_post', then 'namespace_in_state' should be set to false.
                     type: string
                   oidcResponseTypes:
-                    description: >-
+                    description: |-
                       List of response types to request. Allowed values are 'code' and 'id_token'. Defaults to ["code"]. Note: id_token may only be used if oidc_response_mode is set to form_post.
-
                       The response types to request. Allowed values are 'code' and 'id_token'. Defaults to 'code'. Note: 'id_token' may only be used if 'oidc_response_mode' is set to 'form_post'.
                     items:
                       type: string
                     type: array
                   path:
-                    description: >-
+                    description: |-
                       Path to mount the JWT/OIDC auth backend
-
                       path to mount the backend
                     type: string
                   providerConfig:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
-
                       Provider specific handling configuration
                     type: object
                     x-kubernetes-map-type: granular
@@ -472,101 +393,80 @@ spec:
                     items:
                       properties:
                         allowedResponseHeaders:
-                          description: >-
+                          description: |-
                             List of headers to whitelist and allowing
-
                             a plugin to include them in the response.
                           items:
                             type: string
                           type: array
                         auditNonHmacRequestKeys:
-                          description: >-
+                          description: |-
                             Specifies the list of keys that will
-
                             not be HMAC'd by audit devices in the request data object.
                           items:
                             type: string
                           type: array
                         auditNonHmacResponseKeys:
-                          description: >-
+                          description: |-
                             Specifies the list of keys that will
-
                             not be HMAC'd by audit devices in the response data object.
                           items:
                             type: string
                           type: array
                         defaultLeaseTtl:
-                          description: >-
+                          description: |-
                             Specifies the default time-to-live.
-
                             If set, this overrides the global default.
-
                             Must be a valid duration string
                           type: string
                         listingVisibility:
-                          description: >-
+                          description: |-
                             Specifies whether to show this mount in
-
                             the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
                           type: string
                         maxLeaseTtl:
-                          description: >-
+                          description: |-
                             Specifies the maximum time-to-live.
-
                             If set, this overrides the global default.
-
                             Must be a valid duration string
                           type: string
                         passthroughRequestHeaders:
-                          description: >-
+                          description: |-
                             List of headers to whitelist and
-
                             pass from the request to the backend.
                           items:
                             type: string
                           type: array
                         tokenType:
-                          description: >-
+                          description: |-
                             Specifies the type of tokens that should be returned by
-
                             the mount. Valid values are "default-service", "default-batch", "service", "batch".
                           type: string
                       type: object
                     type: array
                   type:
-                    description: >-
+                    description: |-
                       Type of auth backend. Should be one of jwt or oidc. Default - jwt
-
                       Type of backend. Can be either 'jwt' or 'oidc'
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -580,11 +480,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -595,26 +493,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -625,23 +517,18 @@ spec:
                 - name
                 type: object
               publishConnectionDetailsTo:
-                description: >-
+                description: |-
                   PublishConnectionDetailsTo specifies the connection secret config which
-
                   contains a name, metadata and a reference to secret store config to
-
                   which any connection details for this managed resource should be written.
-
                   Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   configRef:
                     default:
                       name: default
-                    description: >-
+                    description: |-
                       SecretStoreConfigRef specifies which secret store config should be used
-
                       for this ConnectionSecret.
                     properties:
                       name:
@@ -652,26 +539,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -687,27 +568,22 @@ spec:
                       annotations:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           Annotations are the annotations to be added to connection secret.
-
                           - For Kubernetes secrets, this will be used as "metadata.annotations".
-
                           - It is up to Secret Store implementation for others store types.
                         type: object
                       labels:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           Labels are the labels/tags to be added to connection secret.
-
                           - For Kubernetes secrets, this will be used as "metadata.labels".
-
                           - It is up to Secret Store implementation for others store types.
                         type: object
                       type:
-                        description: >-
+                        description: |-
                           Type is the SecretType for the connection secret.
-
                           - Only valid for Kubernetes Secret Stores.
                         type: string
                     type: object
@@ -718,21 +594,14 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
-
                   This field is planned to be replaced in a future release in favor of
-
                   PublishConnectionDetailsTo. Currently, both could be set independently
-
                   and connection details would be published to both without affecting
-
                   each other.
                 properties:
                   name:
@@ -754,135 +623,112 @@ spec:
               atProvider:
                 properties:
                   accessor:
-                    description: >-
+                    description: |-
                       The accessor for this auth method
-
                       The accessor of the JWT auth backend
                     type: string
                   boundIssuer:
-                    description: >-
+                    description: |-
                       The value against which to match the iss claim in a JWT
-
                       The value against which to match the iss claim in a JWT
                     type: string
                   defaultRole:
-                    description: >-
+                    description: |-
                       The default role to use if none is provided during login
-
                       The default role to use if none is provided during login
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       The description of the auth backend
-
                       The description of the auth backend
                     type: string
                   disableRemount:
-                    description: >-
+                    description: |-
                       If set, opts out of mount migration on path updates.
-
                       See here for more info on Mount Migration
-
                       If set, opts out of mount migration on path updates.
                     type: boolean
                   id:
                     type: string
                   jwksCaPem:
-                    description: >-
+                    description: |-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the JWKS URL. If not set, system certificates are used.
                     type: string
                   jwksUrl:
-                    description: >-
+                    description: |-
                       JWKS URL to use to authenticate signatures. Cannot be used with "oidc_discovery_url" or "jwt_validation_pubkeys".
-
                       JWKS URL to use to authenticate signatures. Cannot be used with 'oidc_discovery_url' or 'jwt_validation_pubkeys'.
                     type: string
                   jwtSupportedAlgs:
-                    description: >-
+                    description: |-
                       A list of supported signing algorithms. Vault 1.1.0 defaults to [RS256] but future or past versions of Vault may differ
-
                       A list of supported signing algorithms. Defaults to [RS256]
                     items:
                       type: string
                     type: array
                   jwtValidationPubkeys:
-                    description: >-
+                    description: |-
                       A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used in combination with oidc_discovery_url
-
                       A list of PEM-encoded public keys to use to authenticate signatures locally. Cannot be used with 'jwks_url' or 'oidc_discovery_url'.
                     items:
                       type: string
                     type: array
                   local:
-                    description: >-
+                    description: |-
                       Specifies if the auth method is local only.
-
                       Specifies if the auth method is local only
                     type: boolean
                   namespace:
-                    description: >-
+                    description: |-
                       The namespace to provision the resource in.
-
                       The value should not contain leading or trailing forward slashes.
-
                       The namespace is always relative to the provider's configured namespace.
-
                       Available only for Vault Enterprise.
-
                       Target namespace. (requires Enterprise)
                     type: string
                   namespaceInState:
-                    description: >-
+                    description: |-
                       Pass namespace in the OIDC state parameter instead of as a separate query parameter. With this setting, the allowed redirect URL(s) in Vault and on the provider side should not contain a namespace query parameter. This means only one redirect URL entry needs to be maintained on the OIDC provider side for all vault namespaces that will be authenticating against it. Defaults to true for new configs
-
                       Pass namespace in the OIDC state parameter instead of as a separate query parameter. With this setting, the allowed redirect URL(s) in Vault and on the provider side should not contain a namespace query parameter. This means only one redirect URL entry needs to be maintained on the OIDC provider side for all vault namespaces that will be authenticating against it. Defaults to true for new configs.
                     type: boolean
                   oidcClientId:
-                    description: >-
+                    description: |-
                       Client ID used for OIDC backends
-
                       Client ID used for OIDC
                     type: string
                   oidcDiscoveryCaPem:
-                    description: >-
+                    description: |-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
-
                       The CA certificate or chain of certificates, in PEM format, to use to validate connections to the OIDC Discovery URL. If not set, system certificates are used
                     type: string
                   oidcDiscoveryUrl:
-                    description: >-
+                    description: |-
                       The OIDC Discovery URL, without any .well-known component (base path). Cannot be used in combination with jwt_validation_pubkeys
-
                       The OIDC Discovery URL, without any .well-known component (base path). Cannot be used with 'jwks_url' or 'jwt_validation_pubkeys'.
                     type: string
                   oidcResponseMode:
-                    description: >-
+                    description: |-
                       The response mode to be used in the OAuth2 request. Allowed values are query and form_post. Defaults to query. If using Vault namespaces, and oidc_response_mode is form_post, then namespace_in_state should be set to false.
-
                       The response mode to be used in the OAuth2 request. Allowed values are 'query' and 'form_post'. Defaults to 'query'. If using Vault namespaces, and oidc_response_mode is 'form_post', then 'namespace_in_state' should be set to false.
                     type: string
                   oidcResponseTypes:
-                    description: >-
+                    description: |-
                       List of response types to request. Allowed values are 'code' and 'id_token'. Defaults to ["code"]. Note: id_token may only be used if oidc_response_mode is set to form_post.
-
                       The response types to request. Allowed values are 'code' and 'id_token'. Defaults to 'code'. Note: 'id_token' may only be used if 'oidc_response_mode' is set to 'form_post'.
                     items:
                       type: string
                     type: array
                   path:
-                    description: >-
+                    description: |-
                       Path to mount the JWT/OIDC auth backend
-
                       path to mount the backend
                     type: string
                   providerConfig:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Provider specific handling configuration. All values may be strings, and the provider will convert to the appropriate type when configuring Vault.
-
                       Provider specific handling configuration
                     type: object
                     x-kubernetes-map-type: granular
@@ -890,71 +736,60 @@ spec:
                     items:
                       properties:
                         allowedResponseHeaders:
-                          description: >-
+                          description: |-
                             List of headers to whitelist and allowing
-
                             a plugin to include them in the response.
                           items:
                             type: string
                           type: array
                         auditNonHmacRequestKeys:
-                          description: >-
+                          description: |-
                             Specifies the list of keys that will
-
                             not be HMAC'd by audit devices in the request data object.
                           items:
                             type: string
                           type: array
                         auditNonHmacResponseKeys:
-                          description: >-
+                          description: |-
                             Specifies the list of keys that will
-
                             not be HMAC'd by audit devices in the response data object.
                           items:
                             type: string
                           type: array
                         defaultLeaseTtl:
-                          description: >-
+                          description: |-
                             Specifies the default time-to-live.
-
                             If set, this overrides the global default.
-
                             Must be a valid duration string
                           type: string
                         listingVisibility:
-                          description: >-
+                          description: |-
                             Specifies whether to show this mount in
-
                             the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
                           type: string
                         maxLeaseTtl:
-                          description: >-
+                          description: |-
                             Specifies the maximum time-to-live.
-
                             If set, this overrides the global default.
-
                             Must be a valid duration string
                           type: string
                         passthroughRequestHeaders:
-                          description: >-
+                          description: |-
                             List of headers to whitelist and
-
                             pass from the request to the backend.
                           items:
                             type: string
                           type: array
                         tokenType:
-                          description: >-
+                          description: |-
                             Specifies the type of tokens that should be returned by
-
                             the mount. Valid values are "default-service", "default-batch", "service", "batch".
                           type: string
                       type: object
                     type: array
                   type:
-                    description: >-
+                    description: |-
                       Type of auth backend. Should be one of jwt or oidc. Default - jwt
-
                       Type of backend. Can be either 'jwt' or 'oidc'
                     type: string
                 type: object
@@ -964,24 +799,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -992,9 +823,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1008,11 +838,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

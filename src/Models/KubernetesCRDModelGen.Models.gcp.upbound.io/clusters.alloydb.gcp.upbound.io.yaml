@@ -36,25 +36,18 @@ spec:
         description: Cluster is the Schema for the Clusters API. A managed alloydb cluster.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -87,34 +74,29 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
-
                       An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
                     type: object
                     x-kubernetes-map-type: granular
                   automatedBackupPolicy:
-                    description: >-
+                    description: |-
                       The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default.
-
                       Structure is documented below.
                     items:
                       properties:
                         backupWindow:
-                          description: >-
+                          description: |-
                             The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed.
-
                             The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
-
                             A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                           type: string
                         enabled:
                           description: Whether automated backups are enabled.
                           type: boolean
                         encryptionConfig:
-                          description: >-
+                          description: |-
                             EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                             Structure is documented below.
                           items:
                             properties:
@@ -133,9 +115,8 @@ spec:
                           description: The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster.
                           type: string
                         quantityBasedRetention:
-                          description: >-
+                          description: |-
                             Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -145,39 +126,34 @@ spec:
                             type: object
                           type: array
                         timeBasedRetention:
-                          description: >-
+                          description: |-
                             Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together.
-
                             Structure is documented below.
                           items:
                             properties:
                               retentionPeriod:
-                                description: >-
+                                description: |-
                                   The retention period.
-
                                   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                                 type: string
                             type: object
                           type: array
                         weeklySchedule:
-                          description: >-
+                          description: |-
                             Weekly schedule for the Backup.
-
                             Structure is documented below.
                           items:
                             properties:
                               daysOfWeek:
-                                description: >-
+                                description: |-
                                   The days of the week to perform a backup. At least one day of the week must be provided.
-
                                   Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                                 items:
                                   type: string
                                 type: array
                               startTimes:
-                                description: >-
+                                description: |-
                                   The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00).
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -200,19 +176,15 @@ spec:
                       type: object
                     type: array
                   clusterType:
-                    description: >-
+                    description: |-
                       The type of cluster. If not set, defaults to PRIMARY.
-
                       Default value is PRIMARY.
-
                       Possible values are: PRIMARY, SECONDARY.
                     type: string
                   continuousBackupConfig:
-                    description: >-
+                    description: |-
                       The continuous backup config for this cluster.
-
                       If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -220,9 +192,8 @@ spec:
                           description: Whether continuous backup recovery is enabled. If not set, defaults to true.
                           type: boolean
                         encryptionConfig:
-                          description: >-
+                          description: |-
                             EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                             Structure is documented below.
                           items:
                             properties:
@@ -232,9 +203,8 @@ spec:
                             type: object
                           type: array
                         recoveryWindowDays:
-                          description: >-
+                          description: |-
                             The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
-
                             If not set, defaults to 14 days.
                           type: number
                       type: object
@@ -243,20 +213,17 @@ spec:
                     description: The database engine major version. This is an optional field and it's populated at the Cluster creation time. This field cannot be changed after cluster creation.
                     type: string
                   deletionPolicy:
-                    description: >-
+                    description: |-
                       Policy to determine if the cluster should be deleted forcefully.
-
                       Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
-
                       Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.
                     type: string
                   displayName:
                     description: User-settable and human-readable display name for the Cluster.
                     type: string
                   encryptionConfig:
-                    description: >-
+                    description: |-
                       EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                       Structure is documented below.
                     items:
                       properties:
@@ -269,16 +236,14 @@ spec:
                     description: For Resource freshness validation (https://google.aip.dev/154)
                     type: string
                   initialUser:
-                    description: >-
+                    description: |-
                       Initial user to setup during cluster creation.
-
                       Structure is documented below.
                     items:
                       properties:
                         passwordSecretRef:
-                          description: >-
+                          description: |-
                             The initial password for the user.
-
                             Note: This property is sensitive and will not be displayed in the plan.
                           properties:
                             key:
@@ -305,11 +270,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       User-defined labels for the alloydb cluster.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -317,29 +280,25 @@ spec:
                     description: The location where the alloydb cluster should reside.
                     type: string
                   maintenanceUpdatePolicy:
-                    description: >-
+                    description: |-
                       MaintenanceUpdatePolicy defines the policy for system updates.
-
                       Structure is documented below.
                     items:
                       properties:
                         maintenanceWindows:
-                          description: >-
+                          description: |-
                             Preferred windows to perform maintenance. Currently limited to 1.
-
                             Structure is documented below.
                           items:
                             properties:
                               day:
-                                description: >-
+                                description: |-
                                   Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
-
                                   Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                                 type: string
                               startTime:
-                                description: >-
+                                description: |-
                                   Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time.
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -362,22 +321,19 @@ spec:
                       type: object
                     type: array
                   networkConfig:
-                    description: >-
+                    description: |-
                       Metadata related to network configuration.
-
                       Structure is documented below.
                     items:
                       properties:
                         allocatedIpRange:
-                          description: >-
+                          description: |-
                             The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
-
                             If set, the instance IPs for this cluster will be created in the allocated range.
                           type: string
                         network:
-                          description: >-
+                          description: |-
                             The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
-
                             It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
                           type: string
                         networkRef:
@@ -391,26 +347,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -424,9 +374,8 @@ spec:
                           description: Selector for a Network in compute to populate network.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -439,26 +388,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -469,15 +412,13 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConfig:
-                    description: >-
+                    description: |-
                       Configuration for Private Service Connect (PSC) for the cluster.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -487,9 +428,8 @@ spec:
                       type: object
                     type: array
                   restoreBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -507,26 +447,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -540,9 +474,8 @@ spec:
                           description: Selector for a Backup in alloydb to populate backupName.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -555,26 +488,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -585,9 +512,8 @@ spec:
                       type: object
                     type: array
                   restoreContinuousBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -605,26 +531,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -638,9 +558,8 @@ spec:
                           description: Selector for a Cluster in alloydb to populate cluster.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -653,26 +572,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -686,16 +599,14 @@ spec:
                       type: object
                     type: array
                   secondaryConfig:
-                    description: >-
+                    description: |-
                       Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY.
-
                       Structure is documented below.
                     items:
                       properties:
                         primaryClusterName:
-                          description: >-
+                          description: |-
                             Name of the primary cluster must be in the format
-
                             'projects/{project}/locations/{location}/clusters/{cluster_id}'
                           type: string
                         primaryClusterNameRef:
@@ -709,26 +620,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -742,9 +647,8 @@ spec:
                           description: Selector for a Cluster in alloydb to populate primaryClusterName.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -757,26 +661,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -787,75 +685,58 @@ spec:
                       type: object
                     type: array
                   skipAwaitMajorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Set to true to skip awaiting on the major version upgrade of the cluster.
-
                       Possible values: true, false
-
                       Default value: "true"
                     type: boolean
                   subscriptionType:
-                    description: >-
+                    description: |-
                       The subscrition type of cluster.
-
                       Possible values are: TRIAL, STANDARD.
                     type: string
                 required:
                 - location
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
-
                       An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
                     type: object
                     x-kubernetes-map-type: granular
                   automatedBackupPolicy:
-                    description: >-
+                    description: |-
                       The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default.
-
                       Structure is documented below.
                     items:
                       properties:
                         backupWindow:
-                          description: >-
+                          description: |-
                             The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed.
-
                             The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
-
                             A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                           type: string
                         enabled:
                           description: Whether automated backups are enabled.
                           type: boolean
                         encryptionConfig:
-                          description: >-
+                          description: |-
                             EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                             Structure is documented below.
                           items:
                             properties:
@@ -871,9 +752,8 @@ spec:
                           type: object
                           x-kubernetes-map-type: granular
                         quantityBasedRetention:
-                          description: >-
+                          description: |-
                             Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -883,39 +763,34 @@ spec:
                             type: object
                           type: array
                         timeBasedRetention:
-                          description: >-
+                          description: |-
                             Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together.
-
                             Structure is documented below.
                           items:
                             properties:
                               retentionPeriod:
-                                description: >-
+                                description: |-
                                   The retention period.
-
                                   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                                 type: string
                             type: object
                           type: array
                         weeklySchedule:
-                          description: >-
+                          description: |-
                             Weekly schedule for the Backup.
-
                             Structure is documented below.
                           items:
                             properties:
                               daysOfWeek:
-                                description: >-
+                                description: |-
                                   The days of the week to perform a backup. At least one day of the week must be provided.
-
                                   Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                                 items:
                                   type: string
                                 type: array
                               startTimes:
-                                description: >-
+                                description: |-
                                   The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00).
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -938,19 +813,15 @@ spec:
                       type: object
                     type: array
                   clusterType:
-                    description: >-
+                    description: |-
                       The type of cluster. If not set, defaults to PRIMARY.
-
                       Default value is PRIMARY.
-
                       Possible values are: PRIMARY, SECONDARY.
                     type: string
                   continuousBackupConfig:
-                    description: >-
+                    description: |-
                       The continuous backup config for this cluster.
-
                       If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -958,9 +829,8 @@ spec:
                           description: Whether continuous backup recovery is enabled. If not set, defaults to true.
                           type: boolean
                         encryptionConfig:
-                          description: >-
+                          description: |-
                             EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                             Structure is documented below.
                           items:
                             properties:
@@ -970,9 +840,8 @@ spec:
                             type: object
                           type: array
                         recoveryWindowDays:
-                          description: >-
+                          description: |-
                             The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
-
                             If not set, defaults to 14 days.
                           type: number
                       type: object
@@ -981,20 +850,17 @@ spec:
                     description: The database engine major version. This is an optional field and it's populated at the Cluster creation time. This field cannot be changed after cluster creation.
                     type: string
                   deletionPolicy:
-                    description: >-
+                    description: |-
                       Policy to determine if the cluster should be deleted forcefully.
-
                       Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
-
                       Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.
                     type: string
                   displayName:
                     description: User-settable and human-readable display name for the Cluster.
                     type: string
                   encryptionConfig:
-                    description: >-
+                    description: |-
                       EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1007,9 +873,8 @@ spec:
                     description: For Resource freshness validation (https://google.aip.dev/154)
                     type: string
                   initialUser:
-                    description: >-
+                    description: |-
                       Initial user to setup during cluster creation.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1021,38 +886,32 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       User-defined labels for the alloydb cluster.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   maintenanceUpdatePolicy:
-                    description: >-
+                    description: |-
                       MaintenanceUpdatePolicy defines the policy for system updates.
-
                       Structure is documented below.
                     items:
                       properties:
                         maintenanceWindows:
-                          description: >-
+                          description: |-
                             Preferred windows to perform maintenance. Currently limited to 1.
-
                             Structure is documented below.
                           items:
                             properties:
                               day:
-                                description: >-
+                                description: |-
                                   Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
-
                                   Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                                 type: string
                               startTime:
-                                description: >-
+                                description: |-
                                   Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time.
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -1075,22 +934,19 @@ spec:
                       type: object
                     type: array
                   networkConfig:
-                    description: >-
+                    description: |-
                       Metadata related to network configuration.
-
                       Structure is documented below.
                     items:
                       properties:
                         allocatedIpRange:
-                          description: >-
+                          description: |-
                             The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
-
                             If set, the instance IPs for this cluster will be created in the allocated range.
                           type: string
                         network:
-                          description: >-
+                          description: |-
                             The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
-
                             It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
                           type: string
                         networkRef:
@@ -1104,26 +960,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1137,9 +987,8 @@ spec:
                           description: Selector for a Network in compute to populate network.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -1152,26 +1001,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1182,15 +1025,13 @@ spec:
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConfig:
-                    description: >-
+                    description: |-
                       Configuration for Private Service Connect (PSC) for the cluster.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1200,9 +1041,8 @@ spec:
                       type: object
                     type: array
                   restoreBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1220,26 +1060,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1253,9 +1087,8 @@ spec:
                           description: Selector for a Backup in alloydb to populate backupName.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -1268,26 +1101,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1298,9 +1125,8 @@ spec:
                       type: object
                     type: array
                   restoreContinuousBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1318,26 +1144,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1351,9 +1171,8 @@ spec:
                           description: Selector for a Cluster in alloydb to populate cluster.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -1366,26 +1185,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1399,16 +1212,14 @@ spec:
                       type: object
                     type: array
                   secondaryConfig:
-                    description: >-
+                    description: |-
                       Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY.
-
                       Structure is documented below.
                     items:
                       properties:
                         primaryClusterName:
-                          description: >-
+                          description: |-
                             Name of the primary cluster must be in the format
-
                             'projects/{project}/locations/{location}/clusters/{cluster_id}'
                           type: string
                         primaryClusterNameRef:
@@ -1422,26 +1233,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1455,9 +1260,8 @@ spec:
                           description: Selector for a Cluster in alloydb to populate primaryClusterName.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -1470,26 +1274,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -1500,47 +1298,34 @@ spec:
                       type: object
                     type: array
                   skipAwaitMajorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Set to true to skip awaiting on the major version upgrade of the cluster.
-
                       Possible values: true, false
-
                       Default value: "true"
                     type: boolean
                   subscriptionType:
-                    description: >-
+                    description: |-
                       The subscrition type of cluster.
-
                       Possible values are: TRIAL, STANDARD.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1554,11 +1339,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -1569,26 +1352,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -1599,13 +1376,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1629,34 +1403,29 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
-
                       An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
                     type: object
                     x-kubernetes-map-type: granular
                   automatedBackupPolicy:
-                    description: >-
+                    description: |-
                       The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default.
-
                       Structure is documented below.
                     items:
                       properties:
                         backupWindow:
-                          description: >-
+                          description: |-
                             The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed.
-
                             The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
-
                             A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                           type: string
                         enabled:
                           description: Whether automated backups are enabled.
                           type: boolean
                         encryptionConfig:
-                          description: >-
+                          description: |-
                             EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                             Structure is documented below.
                           items:
                             properties:
@@ -1675,9 +1444,8 @@ spec:
                           description: The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster.
                           type: string
                         quantityBasedRetention:
-                          description: >-
+                          description: |-
                             Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -1687,39 +1455,34 @@ spec:
                             type: object
                           type: array
                         timeBasedRetention:
-                          description: >-
+                          description: |-
                             Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together.
-
                             Structure is documented below.
                           items:
                             properties:
                               retentionPeriod:
-                                description: >-
+                                description: |-
                                   The retention period.
-
                                   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                                 type: string
                             type: object
                           type: array
                         weeklySchedule:
-                          description: >-
+                          description: |-
                             Weekly schedule for the Backup.
-
                             Structure is documented below.
                           items:
                             properties:
                               daysOfWeek:
-                                description: >-
+                                description: |-
                                   The days of the week to perform a backup. At least one day of the week must be provided.
-
                                   Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                                 items:
                                   type: string
                                 type: array
                               startTimes:
-                                description: >-
+                                description: |-
                                   The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00).
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -1742,9 +1505,8 @@ spec:
                       type: object
                     type: array
                   backupSource:
-                    description: >-
+                    description: |-
                       Cluster created from backup.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1754,19 +1516,15 @@ spec:
                       type: object
                     type: array
                   clusterType:
-                    description: >-
+                    description: |-
                       The type of cluster. If not set, defaults to PRIMARY.
-
                       Default value is PRIMARY.
-
                       Possible values are: PRIMARY, SECONDARY.
                     type: string
                   continuousBackupConfig:
-                    description: >-
+                    description: |-
                       The continuous backup config for this cluster.
-
                       If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1774,9 +1532,8 @@ spec:
                           description: Whether continuous backup recovery is enabled. If not set, defaults to true.
                           type: boolean
                         encryptionConfig:
-                          description: >-
+                          description: |-
                             EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                             Structure is documented below.
                           items:
                             properties:
@@ -1786,51 +1543,43 @@ spec:
                             type: object
                           type: array
                         recoveryWindowDays:
-                          description: >-
+                          description: |-
                             The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
-
                             If not set, defaults to 14 days.
                           type: number
                       type: object
                     type: array
                   continuousBackupInfo:
-                    description: >-
+                    description: |-
                       ContinuousBackupInfo describes the continuous backup properties of a cluster.
-
                       Structure is documented below.
                     items:
                       properties:
                         earliestRestorableTime:
-                          description: >-
+                          description: |-
                             (Output)
-
                             The earliest restorable time that can be restored to. Output only field.
                           type: string
                         enabledTime:
-                          description: >-
+                          description: |-
                             (Output)
-
                             When ContinuousBackup was most recently enabled. Set to null if ContinuousBackup is not enabled.
                           type: string
                         encryptionInfo:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. The encryption information for the WALs and backups required for ContinuousBackup.
-
                             Structure is documented below.
                           items:
                             properties:
                               encryptionType:
-                                description: >-
+                                description: |-
                                   (Output)
-
                                   Output only. Type of encryption.
                                 type: string
                               kmsKeyVersions:
-                                description: >-
+                                description: |-
                                   (Output)
-
                                   Output only. Cloud KMS key versions that are being used to protect the database or the backup.
                                 items:
                                   type: string
@@ -1838,9 +1587,8 @@ spec:
                             type: object
                           type: array
                         schedule:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Days of the week on which a continuous backup is taken. Output only field. Ignored if passed into the request.
                           items:
                             type: string
@@ -1851,11 +1599,9 @@ spec:
                     description: The database engine major version. This is an optional field and it's populated at the Cluster creation time. This field cannot be changed after cluster creation.
                     type: string
                   deletionPolicy:
-                    description: >-
+                    description: |-
                       Policy to determine if the cluster should be deleted forcefully.
-
                       Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
-
                       Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.
                     type: string
                   displayName:
@@ -1873,9 +1619,8 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   encryptionConfig:
-                    description: >-
+                    description: |-
                       EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1885,22 +1630,19 @@ spec:
                       type: object
                     type: array
                   encryptionInfo:
-                    description: >-
+                    description: |-
                       EncryptionInfo describes the encryption information of a cluster or a backup.
-
                       Structure is documented below.
                     items:
                       properties:
                         encryptionType:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. Type of encryption.
                           type: string
                         kmsKeyVersions:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. Cloud KMS key versions that are being used to protect the database or the backup.
                           items:
                             type: string
@@ -1914,9 +1656,8 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/clusters/{{cluster_id}}
                     type: string
                   initialUser:
-                    description: >-
+                    description: |-
                       Initial user to setup during cluster creation.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1928,11 +1669,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       User-defined labels for the alloydb cluster.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -1940,29 +1679,25 @@ spec:
                     description: The location where the alloydb cluster should reside.
                     type: string
                   maintenanceUpdatePolicy:
-                    description: >-
+                    description: |-
                       MaintenanceUpdatePolicy defines the policy for system updates.
-
                       Structure is documented below.
                     items:
                       properties:
                         maintenanceWindows:
-                          description: >-
+                          description: |-
                             Preferred windows to perform maintenance. Currently limited to 1.
-
                             Structure is documented below.
                           items:
                             properties:
                               day:
-                                description: >-
+                                description: |-
                                   Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
-
                                   Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                                 type: string
                               startTime:
-                                description: >-
+                                description: |-
                                   Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time.
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -1985,9 +1720,8 @@ spec:
                       type: object
                     type: array
                   migrationSource:
-                    description: >-
+                    description: |-
                       Cluster created via DMS migration.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -2006,36 +1740,31 @@ spec:
                     description: The name of the cluster resource.
                     type: string
                   networkConfig:
-                    description: >-
+                    description: |-
                       Metadata related to network configuration.
-
                       Structure is documented below.
                     items:
                       properties:
                         allocatedIpRange:
-                          description: >-
+                          description: |-
                             The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
-
                             If set, the instance IPs for this cluster will be created in the allocated range.
                           type: string
                         network:
-                          description: >-
+                          description: |-
                             The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
-
                             It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
                           type: string
                       type: object
                     type: array
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConfig:
-                    description: >-
+                    description: |-
                       Configuration for Private Service Connect (PSC) for the cluster.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -2043,27 +1772,22 @@ spec:
                           description: Create an instance that allows connections from Private Service Connect endpoints to the instance.
                           type: boolean
                         serviceOwnedProjectNumber:
-                          description: >-
+                          description: |-
                             (Output)
-
                             The project number that needs to be allowlisted on the network attachment to enable outbound connectivity, if the network attachment is configured to ACCEPT_MANUAL connections.
-
                             In case the network attachment is configured to ACCEPT_AUTOMATIC, this project number does not need to be allowlisted explicitly.
                           type: number
                       type: object
                     type: array
                   reconciling:
-                    description: >-
+                    description: |-
                       Output only. Reconciling (https://google.aip.dev/128#reconciliation).
-
                       Set to true if the current state of Cluster does not match the user's intended state, and the service is actively updating the resource to reconcile them.
-
                       This can happen due to user-triggered updates or system actions like failover or maintenance.
                     type: boolean
                   restoreBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -2073,9 +1797,8 @@ spec:
                       type: object
                     type: array
                   restoreContinuousBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -2088,50 +1811,43 @@ spec:
                       type: object
                     type: array
                   secondaryConfig:
-                    description: >-
+                    description: |-
                       Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY.
-
                       Structure is documented below.
                     items:
                       properties:
                         primaryClusterName:
-                          description: >-
+                          description: |-
                             Name of the primary cluster must be in the format
-
                             'projects/{project}/locations/{location}/clusters/{cluster_id}'
                           type: string
                       type: object
                     type: array
                   skipAwaitMajorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Set to true to skip awaiting on the major version upgrade of the cluster.
-
                       Possible values: true, false
-
                       Default value: "true"
                     type: boolean
                   state:
                     description: Output only. The current serving state of the cluster.
                     type: string
                   subscriptionType:
-                    description: >-
+                    description: |-
                       The subscrition type of cluster.
-
                       Possible values are: TRIAL, STANDARD.
                     type: string
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
                   trialMetadata:
-                    description: >-
+                    description: |-
                       Contains information and all metadata related to TRIAL clusters.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -2159,24 +1875,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -2187,9 +1899,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -2203,11 +1914,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -2238,25 +1947,18 @@ spec:
         description: Cluster is the Schema for the Clusters API. A managed alloydb cluster.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2266,19 +1968,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -2289,33 +1985,28 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
-
                       An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
                     type: object
                     x-kubernetes-map-type: granular
                   automatedBackupPolicy:
-                    description: >-
+                    description: |-
                       The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default.
-
                       Structure is documented below.
                     properties:
                       backupWindow:
-                        description: >-
+                        description: |-
                           The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed.
-
                           The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       enabled:
                         description: Whether automated backups are enabled.
                         type: boolean
                       encryptionConfig:
-                        description: >-
+                        description: |-
                           EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                           Structure is documented below.
                         properties:
                           kmsKeyName:
@@ -2332,9 +2023,8 @@ spec:
                         description: The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster.
                         type: string
                       quantityBasedRetention:
-                        description: >-
+                        description: |-
                           Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together.
-
                           Structure is documented below.
                         properties:
                           count:
@@ -2342,36 +2032,31 @@ spec:
                             type: number
                         type: object
                       timeBasedRetention:
-                        description: >-
+                        description: |-
                           Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together.
-
                           Structure is documented below.
                         properties:
                           retentionPeriod:
-                            description: >-
+                            description: |-
                               The retention period.
-
                               A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                             type: string
                         type: object
                       weeklySchedule:
-                        description: >-
+                        description: |-
                           Weekly schedule for the Backup.
-
                           Structure is documented below.
                         properties:
                           daysOfWeek:
-                            description: >-
+                            description: |-
                               The days of the week to perform a backup. At least one day of the week must be provided.
-
                               Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                             items:
                               type: string
                             type: array
                           startTimes:
-                            description: >-
+                            description: |-
                               The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00).
-
                               Structure is documented below.
                             items:
                               properties:
@@ -2392,28 +2077,23 @@ spec:
                         type: object
                     type: object
                   clusterType:
-                    description: >-
+                    description: |-
                       The type of cluster. If not set, defaults to PRIMARY.
-
                       Default value is PRIMARY.
-
                       Possible values are: PRIMARY, SECONDARY.
                     type: string
                   continuousBackupConfig:
-                    description: >-
+                    description: |-
                       The continuous backup config for this cluster.
-
                       If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days.
-
                       Structure is documented below.
                     properties:
                       enabled:
                         description: Whether continuous backup recovery is enabled. If not set, defaults to true.
                         type: boolean
                       encryptionConfig:
-                        description: >-
+                        description: |-
                           EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                           Structure is documented below.
                         properties:
                           kmsKeyName:
@@ -2421,35 +2101,29 @@ spec:
                             type: string
                         type: object
                       recoveryWindowDays:
-                        description: >-
+                        description: |-
                           The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
-
                           If not set, defaults to 14 days.
                         type: number
                     type: object
                   databaseVersion:
-                    description: >-
+                    description: |-
                       The database engine major version. This is an optional field and it's populated at the Cluster creation time.
-
                       Note: Changing this field to a higer version results in upgrading the AlloyDB cluster which is an irreversible change.
                     type: string
                   deletionPolicy:
-                    description: >-
+                    description: |-
                       Policy to determine if the cluster should be deleted forcefully.
-
                       Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
-
                       Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.
-
                       Possible values: DEFAULT, FORCE
                     type: string
                   displayName:
                     description: User-settable and human-readable display name for the Cluster.
                     type: string
                   encryptionConfig:
-                    description: >-
+                    description: |-
                       EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
@@ -2460,15 +2134,13 @@ spec:
                     description: For Resource freshness validation (https://google.aip.dev/154)
                     type: string
                   initialUser:
-                    description: >-
+                    description: |-
                       Initial user to setup during cluster creation.
-
                       Structure is documented below.
                     properties:
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           The initial password for the user.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -2492,11 +2164,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       User-defined labels for the alloydb cluster.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -2504,28 +2174,24 @@ spec:
                     description: The location where the alloydb cluster should reside.
                     type: string
                   maintenanceUpdatePolicy:
-                    description: >-
+                    description: |-
                       MaintenanceUpdatePolicy defines the policy for system updates.
-
                       Structure is documented below.
                     properties:
                       maintenanceWindows:
-                        description: >-
+                        description: |-
                           Preferred windows to perform maintenance. Currently limited to 1.
-
                           Structure is documented below.
                         items:
                           properties:
                             day:
-                              description: >-
+                              description: |-
                                 Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
-
                                 Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                               type: string
                             startTime:
-                              description: >-
+                              description: |-
                                 Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time.
-
                                 Structure is documented below.
                               properties:
                                 hours:
@@ -2545,21 +2211,18 @@ spec:
                         type: array
                     type: object
                   networkConfig:
-                    description: >-
+                    description: |-
                       Metadata related to network configuration.
-
                       Structure is documented below.
                     properties:
                       allocatedIpRange:
-                        description: >-
+                        description: |-
                           The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
-
                           If set, the instance IPs for this cluster will be created in the allocated range.
                         type: string
                       network:
-                        description: >-
+                        description: |-
                           The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
-
                           It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
                         type: string
                       networkRef:
@@ -2573,26 +2236,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2606,9 +2263,8 @@ spec:
                         description: Selector for a Network in compute to populate network.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2621,26 +2277,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2650,15 +2300,13 @@ spec:
                         type: object
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConfig:
-                    description: >-
+                    description: |-
                       Configuration for Private Service Connect (PSC) for the cluster.
-
                       Structure is documented below.
                     properties:
                       pscEnabled:
@@ -2666,9 +2314,8 @@ spec:
                         type: boolean
                     type: object
                   restoreBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together.
-
                       Structure is documented below.
                     properties:
                       backupName:
@@ -2685,26 +2332,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2718,9 +2359,8 @@ spec:
                         description: Selector for a Backup in alloydb to populate backupName.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2733,26 +2373,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2762,9 +2396,8 @@ spec:
                         type: object
                     type: object
                   restoreContinuousBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together.
-
                       Structure is documented below.
                     properties:
                       cluster:
@@ -2781,26 +2414,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2814,9 +2441,8 @@ spec:
                         description: Selector for a Cluster in alloydb to populate cluster.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2829,26 +2455,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2861,15 +2481,13 @@ spec:
                         type: string
                     type: object
                   secondaryConfig:
-                    description: >-
+                    description: |-
                       Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY.
-
                       Structure is documented below.
                     properties:
                       primaryClusterName:
-                        description: >-
+                        description: |-
                           Name of the primary cluster must be in the format
-
                           'projects/{project}/locations/{location}/clusters/{cluster_id}'
                         type: string
                       primaryClusterNameRef:
@@ -2883,26 +2501,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2916,9 +2528,8 @@ spec:
                         description: Selector for a Cluster in alloydb to populate primaryClusterName.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2931,26 +2542,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2960,74 +2565,57 @@ spec:
                         type: object
                     type: object
                   skipAwaitMajorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Set to true to skip awaiting on the major version upgrade of the cluster.
-
                       Possible values: true, false
-
                       Default value: "true"
                     type: boolean
                   subscriptionType:
-                    description: >-
+                    description: |-
                       The subscrition type of cluster.
-
                       Possible values are: TRIAL, STANDARD.
                     type: string
                 required:
                 - location
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
-
                       An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
                     type: object
                     x-kubernetes-map-type: granular
                   automatedBackupPolicy:
-                    description: >-
+                    description: |-
                       The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default.
-
                       Structure is documented below.
                     properties:
                       backupWindow:
-                        description: >-
+                        description: |-
                           The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed.
-
                           The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       enabled:
                         description: Whether automated backups are enabled.
                         type: boolean
                       encryptionConfig:
-                        description: >-
+                        description: |-
                           EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                           Structure is documented below.
                         properties:
                           kmsKeyName:
@@ -3041,9 +2629,8 @@ spec:
                         type: object
                         x-kubernetes-map-type: granular
                       quantityBasedRetention:
-                        description: >-
+                        description: |-
                           Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together.
-
                           Structure is documented below.
                         properties:
                           count:
@@ -3051,36 +2638,31 @@ spec:
                             type: number
                         type: object
                       timeBasedRetention:
-                        description: >-
+                        description: |-
                           Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together.
-
                           Structure is documented below.
                         properties:
                           retentionPeriod:
-                            description: >-
+                            description: |-
                               The retention period.
-
                               A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                             type: string
                         type: object
                       weeklySchedule:
-                        description: >-
+                        description: |-
                           Weekly schedule for the Backup.
-
                           Structure is documented below.
                         properties:
                           daysOfWeek:
-                            description: >-
+                            description: |-
                               The days of the week to perform a backup. At least one day of the week must be provided.
-
                               Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                             items:
                               type: string
                             type: array
                           startTimes:
-                            description: >-
+                            description: |-
                               The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00).
-
                               Structure is documented below.
                             items:
                               properties:
@@ -3101,28 +2683,23 @@ spec:
                         type: object
                     type: object
                   clusterType:
-                    description: >-
+                    description: |-
                       The type of cluster. If not set, defaults to PRIMARY.
-
                       Default value is PRIMARY.
-
                       Possible values are: PRIMARY, SECONDARY.
                     type: string
                   continuousBackupConfig:
-                    description: >-
+                    description: |-
                       The continuous backup config for this cluster.
-
                       If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days.
-
                       Structure is documented below.
                     properties:
                       enabled:
                         description: Whether continuous backup recovery is enabled. If not set, defaults to true.
                         type: boolean
                       encryptionConfig:
-                        description: >-
+                        description: |-
                           EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                           Structure is documented below.
                         properties:
                           kmsKeyName:
@@ -3130,35 +2707,29 @@ spec:
                             type: string
                         type: object
                       recoveryWindowDays:
-                        description: >-
+                        description: |-
                           The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
-
                           If not set, defaults to 14 days.
                         type: number
                     type: object
                   databaseVersion:
-                    description: >-
+                    description: |-
                       The database engine major version. This is an optional field and it's populated at the Cluster creation time.
-
                       Note: Changing this field to a higer version results in upgrading the AlloyDB cluster which is an irreversible change.
                     type: string
                   deletionPolicy:
-                    description: >-
+                    description: |-
                       Policy to determine if the cluster should be deleted forcefully.
-
                       Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
-
                       Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.
-
                       Possible values: DEFAULT, FORCE
                     type: string
                   displayName:
                     description: User-settable and human-readable display name for the Cluster.
                     type: string
                   encryptionConfig:
-                    description: >-
+                    description: |-
                       EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
@@ -3169,15 +2740,13 @@ spec:
                     description: For Resource freshness validation (https://google.aip.dev/154)
                     type: string
                   initialUser:
-                    description: >-
+                    description: |-
                       Initial user to setup during cluster creation.
-
                       Structure is documented below.
                     properties:
                       passwordSecretRef:
-                        description: >-
+                        description: |-
                           The initial password for the user.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -3203,37 +2772,31 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       User-defined labels for the alloydb cluster.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   maintenanceUpdatePolicy:
-                    description: >-
+                    description: |-
                       MaintenanceUpdatePolicy defines the policy for system updates.
-
                       Structure is documented below.
                     properties:
                       maintenanceWindows:
-                        description: >-
+                        description: |-
                           Preferred windows to perform maintenance. Currently limited to 1.
-
                           Structure is documented below.
                         items:
                           properties:
                             day:
-                              description: >-
+                              description: |-
                                 Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
-
                                 Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                               type: string
                             startTime:
-                              description: >-
+                              description: |-
                                 Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time.
-
                                 Structure is documented below.
                               properties:
                                 hours:
@@ -3253,21 +2816,18 @@ spec:
                         type: array
                     type: object
                   networkConfig:
-                    description: >-
+                    description: |-
                       Metadata related to network configuration.
-
                       Structure is documented below.
                     properties:
                       allocatedIpRange:
-                        description: >-
+                        description: |-
                           The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
-
                           If set, the instance IPs for this cluster will be created in the allocated range.
                         type: string
                       network:
-                        description: >-
+                        description: |-
                           The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
-
                           It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
                         type: string
                       networkRef:
@@ -3281,26 +2841,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3314,9 +2868,8 @@ spec:
                         description: Selector for a Network in compute to populate network.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -3329,26 +2882,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3358,15 +2905,13 @@ spec:
                         type: object
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConfig:
-                    description: >-
+                    description: |-
                       Configuration for Private Service Connect (PSC) for the cluster.
-
                       Structure is documented below.
                     properties:
                       pscEnabled:
@@ -3374,9 +2919,8 @@ spec:
                         type: boolean
                     type: object
                   restoreBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together.
-
                       Structure is documented below.
                     properties:
                       backupName:
@@ -3393,26 +2937,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3426,9 +2964,8 @@ spec:
                         description: Selector for a Backup in alloydb to populate backupName.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -3441,26 +2978,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3470,9 +3001,8 @@ spec:
                         type: object
                     type: object
                   restoreContinuousBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together.
-
                       Structure is documented below.
                     properties:
                       cluster:
@@ -3489,26 +3019,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3522,9 +3046,8 @@ spec:
                         description: Selector for a Cluster in alloydb to populate cluster.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -3537,26 +3060,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3569,15 +3086,13 @@ spec:
                         type: string
                     type: object
                   secondaryConfig:
-                    description: >-
+                    description: |-
                       Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY.
-
                       Structure is documented below.
                     properties:
                       primaryClusterName:
-                        description: >-
+                        description: |-
                           Name of the primary cluster must be in the format
-
                           'projects/{project}/locations/{location}/clusters/{cluster_id}'
                         type: string
                       primaryClusterNameRef:
@@ -3591,26 +3106,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3624,9 +3133,8 @@ spec:
                         description: Selector for a Cluster in alloydb to populate primaryClusterName.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -3639,26 +3147,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -3668,47 +3170,34 @@ spec:
                         type: object
                     type: object
                   skipAwaitMajorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Set to true to skip awaiting on the major version upgrade of the cluster.
-
                       Possible values: true, false
-
                       Default value: "true"
                     type: boolean
                   subscriptionType:
-                    description: >-
+                    description: |-
                       The subscrition type of cluster.
-
                       Possible values are: TRIAL, STANDARD.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -3722,11 +3211,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -3737,26 +3224,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -3767,13 +3248,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -3797,33 +3275,28 @@ spec:
                   annotations:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Annotations to allow client tools to store small amount of arbitrary data. This is distinct from labels. https://google.aip.dev/128
-
                       An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
                     type: object
                     x-kubernetes-map-type: granular
                   automatedBackupPolicy:
-                    description: >-
+                    description: |-
                       The automated backup policy for this cluster. AutomatedBackupPolicy is disabled by default.
-
                       Structure is documented below.
                     properties:
                       backupWindow:
-                        description: >-
+                        description: |-
                           The length of the time window during which a backup can be taken. If a backup does not succeed within this time window, it will be canceled and considered failed.
-
                           The backup window must be at least 5 minutes long. There is no upper bound on the window. If not set, it will default to 1 hour.
-
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
                       enabled:
                         description: Whether automated backups are enabled.
                         type: boolean
                       encryptionConfig:
-                        description: >-
+                        description: |-
                           EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                           Structure is documented below.
                         properties:
                           kmsKeyName:
@@ -3840,9 +3313,8 @@ spec:
                         description: The location where the backup will be stored. Currently, the only supported option is to store the backup in the same region as the cluster.
                         type: string
                       quantityBasedRetention:
-                        description: >-
+                        description: |-
                           Quantity-based Backup retention policy to retain recent backups. Conflicts with 'time_based_retention', both can't be set together.
-
                           Structure is documented below.
                         properties:
                           count:
@@ -3850,36 +3322,31 @@ spec:
                             type: number
                         type: object
                       timeBasedRetention:
-                        description: >-
+                        description: |-
                           Time-based Backup retention policy. Conflicts with 'quantity_based_retention', both can't be set together.
-
                           Structure is documented below.
                         properties:
                           retentionPeriod:
-                            description: >-
+                            description: |-
                               The retention period.
-
                               A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                             type: string
                         type: object
                       weeklySchedule:
-                        description: >-
+                        description: |-
                           Weekly schedule for the Backup.
-
                           Structure is documented below.
                         properties:
                           daysOfWeek:
-                            description: >-
+                            description: |-
                               The days of the week to perform a backup. At least one day of the week must be provided.
-
                               Each value may be one of: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                             items:
                               type: string
                             type: array
                           startTimes:
-                            description: >-
+                            description: |-
                               The times during the day to start a backup. At least one start time must be provided. The start times are assumed to be in UTC and to be an exact hour (e.g., 04:00:00).
-
                               Structure is documented below.
                             items:
                               properties:
@@ -3900,9 +3367,8 @@ spec:
                         type: object
                     type: object
                   backupSource:
-                    description: >-
+                    description: |-
                       Cluster created from backup.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -3912,28 +3378,23 @@ spec:
                       type: object
                     type: array
                   clusterType:
-                    description: >-
+                    description: |-
                       The type of cluster. If not set, defaults to PRIMARY.
-
                       Default value is PRIMARY.
-
                       Possible values are: PRIMARY, SECONDARY.
                     type: string
                   continuousBackupConfig:
-                    description: >-
+                    description: |-
                       The continuous backup config for this cluster.
-
                       If no policy is provided then the default policy will be used. The default policy takes one backup a day and retains backups for 14 days.
-
                       Structure is documented below.
                     properties:
                       enabled:
                         description: Whether continuous backup recovery is enabled. If not set, defaults to true.
                         type: boolean
                       encryptionConfig:
-                        description: >-
+                        description: |-
                           EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                           Structure is documented below.
                         properties:
                           kmsKeyName:
@@ -3941,50 +3402,42 @@ spec:
                             type: string
                         type: object
                       recoveryWindowDays:
-                        description: >-
+                        description: |-
                           The numbers of days that are eligible to restore from using PITR. To support the entire recovery window, backups and logs are retained for one day more than the recovery window.
-
                           If not set, defaults to 14 days.
                         type: number
                     type: object
                   continuousBackupInfo:
-                    description: >-
+                    description: |-
                       ContinuousBackupInfo describes the continuous backup properties of a cluster.
-
                       Structure is documented below.
                     items:
                       properties:
                         earliestRestorableTime:
-                          description: >-
+                          description: |-
                             (Output)
-
                             The earliest restorable time that can be restored to. Output only field.
                           type: string
                         enabledTime:
-                          description: >-
+                          description: |-
                             (Output)
-
                             When ContinuousBackup was most recently enabled. Set to null if ContinuousBackup is not enabled.
                           type: string
                         encryptionInfo:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. The encryption information for the WALs and backups required for ContinuousBackup.
-
                             Structure is documented below.
                           items:
                             properties:
                               encryptionType:
-                                description: >-
+                                description: |-
                                   (Output)
-
                                   Output only. Type of encryption.
                                 type: string
                               kmsKeyVersions:
-                                description: >-
+                                description: |-
                                   (Output)
-
                                   Output only. Cloud KMS key versions that are being used to protect the database or the backup.
                                 items:
                                   type: string
@@ -3992,9 +3445,8 @@ spec:
                             type: object
                           type: array
                         schedule:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Days of the week on which a continuous backup is taken. Output only field. Ignored if passed into the request.
                           items:
                             type: string
@@ -4002,19 +3454,15 @@ spec:
                       type: object
                     type: array
                   databaseVersion:
-                    description: >-
+                    description: |-
                       The database engine major version. This is an optional field and it's populated at the Cluster creation time.
-
                       Note: Changing this field to a higer version results in upgrading the AlloyDB cluster which is an irreversible change.
                     type: string
                   deletionPolicy:
-                    description: >-
+                    description: |-
                       Policy to determine if the cluster should be deleted forcefully.
-
                       Deleting a cluster forcefully, deletes the cluster and all its associated instances within the cluster.
-
                       Deleting a Secondary cluster with a secondary instance REQUIRES setting deletion_policy = "FORCE" otherwise an error is returned. This is needed as there is no support to delete just the secondary instance, and the only way to delete secondary instance is to delete the associated secondary cluster forcefully which also deletes the secondary instance.
-
                       Possible values: DEFAULT, FORCE
                     type: string
                   displayName:
@@ -4032,9 +3480,8 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   encryptionConfig:
-                    description: >-
+                    description: |-
                       EncryptionConfig describes the encryption config of a cluster or a backup that is encrypted with a CMEK (customer-managed encryption key).
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
@@ -4042,22 +3489,19 @@ spec:
                         type: string
                     type: object
                   encryptionInfo:
-                    description: >-
+                    description: |-
                       EncryptionInfo describes the encryption information of a cluster or a backup.
-
                       Structure is documented below.
                     items:
                       properties:
                         encryptionType:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. Type of encryption.
                           type: string
                         kmsKeyVersions:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. Cloud KMS key versions that are being used to protect the database or the backup.
                           items:
                             type: string
@@ -4071,9 +3515,8 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/clusters/{{cluster_id}}
                     type: string
                   initialUser:
-                    description: >-
+                    description: |-
                       Initial user to setup during cluster creation.
-
                       Structure is documented below.
                     properties:
                       user:
@@ -4083,11 +3526,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       User-defined labels for the alloydb cluster.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -4095,28 +3536,24 @@ spec:
                     description: The location where the alloydb cluster should reside.
                     type: string
                   maintenanceUpdatePolicy:
-                    description: >-
+                    description: |-
                       MaintenanceUpdatePolicy defines the policy for system updates.
-
                       Structure is documented below.
                     properties:
                       maintenanceWindows:
-                        description: >-
+                        description: |-
                           Preferred windows to perform maintenance. Currently limited to 1.
-
                           Structure is documented below.
                         items:
                           properties:
                             day:
-                              description: >-
+                              description: |-
                                 Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
-
                                 Possible values are: MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY.
                               type: string
                             startTime:
-                              description: >-
+                              description: |-
                                 Preferred time to start the maintenance operation on the specified day. Maintenance will start within 1 hour of this time.
-
                                 Structure is documented below.
                               properties:
                                 hours:
@@ -4136,9 +3573,8 @@ spec:
                         type: array
                     type: object
                   migrationSource:
-                    description: >-
+                    description: |-
                       Cluster created via DMS migration.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -4157,60 +3593,50 @@ spec:
                     description: The name of the cluster resource.
                     type: string
                   networkConfig:
-                    description: >-
+                    description: |-
                       Metadata related to network configuration.
-
                       Structure is documented below.
                     properties:
                       allocatedIpRange:
-                        description: >-
+                        description: |-
                           The name of the allocated IP range for the private IP AlloyDB cluster. For example: "google-managed-services-default".
-
                           If set, the instance IPs for this cluster will be created in the allocated range.
                         type: string
                       network:
-                        description: >-
+                        description: |-
                           The resource link for the VPC network in which cluster resources are created and from which they are accessible via Private IP. The network must belong to the same project as the cluster.
-
                           It is specified in the form: "projects/{projectNumber}/global/networks/{network_id}".
                         type: string
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   pscConfig:
-                    description: >-
+                    description: |-
                       Configuration for Private Service Connect (PSC) for the cluster.
-
                       Structure is documented below.
                     properties:
                       pscEnabled:
                         description: Create an instance that allows connections from Private Service Connect endpoints to the instance.
                         type: boolean
                       serviceOwnedProjectNumber:
-                        description: >-
+                        description: |-
                           (Output)
-
                           The project number that needs to be allowlisted on the network attachment to enable outbound connectivity, if the network attachment is configured to ACCEPT_MANUAL connections.
-
                           In case the network attachment is configured to ACCEPT_AUTOMATIC, this project number does not need to be allowlisted explicitly.
                         type: number
                     type: object
                   reconciling:
-                    description: >-
+                    description: |-
                       Output only. Reconciling (https://google.aip.dev/128#reconciliation).
-
                       Set to true if the current state of Cluster does not match the user's intended state, and the service is actively updating the resource to reconcile them.
-
                       This can happen due to user-triggered updates or system actions like failover or maintenance.
                     type: boolean
                   restoreBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring from a backup. Conflicts with 'restore_continuous_backup_source', both can't be set together.
-
                       Structure is documented below.
                     properties:
                       backupName:
@@ -4218,9 +3644,8 @@ spec:
                         type: string
                     type: object
                   restoreContinuousBackupSource:
-                    description: >-
+                    description: |-
                       The source when restoring via point in time recovery (PITR). Conflicts with 'restore_backup_source', both can't be set together.
-
                       Structure is documented below.
                     properties:
                       cluster:
@@ -4231,48 +3656,41 @@ spec:
                         type: string
                     type: object
                   secondaryConfig:
-                    description: >-
+                    description: |-
                       Configuration of the secondary cluster for Cross Region Replication. This should be set if and only if the cluster is of type SECONDARY.
-
                       Structure is documented below.
                     properties:
                       primaryClusterName:
-                        description: >-
+                        description: |-
                           Name of the primary cluster must be in the format
-
                           'projects/{project}/locations/{location}/clusters/{cluster_id}'
                         type: string
                     type: object
                   skipAwaitMajorVersionUpgrade:
-                    description: >-
+                    description: |-
                       Set to true to skip awaiting on the major version upgrade of the cluster.
-
                       Possible values: true, false
-
                       Default value: "true"
                     type: boolean
                   state:
                     description: Output only. The current serving state of the cluster.
                     type: string
                   subscriptionType:
-                    description: >-
+                    description: |-
                       The subscrition type of cluster.
-
                       Possible values are: TRIAL, STANDARD.
                     type: string
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
                   trialMetadata:
-                    description: >-
+                    description: |-
                       Contains information and all metadata related to TRIAL clusters.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -4300,24 +3718,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -4328,9 +3742,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -4344,11 +3757,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

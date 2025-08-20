@@ -36,25 +36,18 @@ spec:
         description: RegionDisk is the Schema for the RegionDisks API. Persistent disks are durable storage devices that function similarly to the physical disks in a desktop or a server.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -65,15 +58,13 @@ spec:
               forProvider:
                 properties:
                   accessMode:
-                    description: >-
+                    description: |-
                       The access mode of the disk.
-
                       For example:
                     type: string
                   asyncPrimaryDisk:
-                    description: >-
+                    description: |-
                       A nested object resource.
-
                       Structure is documented below.
                     properties:
                       disk:
@@ -93,26 +84,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -126,9 +111,8 @@ spec:
                         description: Selector for a RegionDisk in compute to populate disk.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -144,26 +128,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -173,53 +151,39 @@ spec:
                         type: object
                     type: object
                   createSnapshotBeforeDestroy:
-                    description: >-
+                    description: |-
                       If set to true, a snapshot of the disk will be created before it is destroyed.
-
                       If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation.
-
                       The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm
                     type: boolean
                   createSnapshotBeforeDestroyPrefix:
                     description: This will set a custom name prefix for the snapshot that's created when the disk is deleted.
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   diskEncryptionKey:
-                    description: >-
+                    description: |-
                       Encrypts the disk using a customer-supplied encryption key.
-
                       After you encrypt a disk with a customer-supplied key, you must
-
                       provide the same key if you use the disk later (e.g. to create a disk
-
                       snapshot or an image, or to attach the disk to a virtual machine).
-
                       Customer-supplied encryption keys do not protect access to metadata of
-
                       the disk.
-
                       If you do not provide an encryption key when creating the disk, then
-
                       the disk will be encrypted using an automatically generated key and
-
                       you do not need to provide a key to use the disk later.
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
                         description: The name of the encryption key that is stored in Google Cloud KMS.
                         type: string
                       rawKeySecretRef:
-                        description: >-
+                        description: |-
                           Specifies a 256-bit customer-supplied encryption key, encoded in
-
                           RFC 4648 base64 to either encrypt or decrypt this resource.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -232,13 +196,10 @@ spec:
                         - name
                         type: object
                       rsaEncryptedKeySecretRef:
-                        description: >-
+                        description: |-
                           Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
-
                           customer-supplied encryption key to either encrypt or decrypt
-
                           this resource. You can provide either the rawKey or the rsaEncryptedKey.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -252,18 +213,15 @@ spec:
                         type: object
                     type: object
                   guestOsFeatures:
-                    description: >-
+                    description: |-
                       A list of features to enable on the guest operating system.
-
                       Applicable only for bootable disks.
-
                       Structure is documented below.
                     items:
                       properties:
                         type:
-                          description: >-
+                          description: |-
                             The type of supported feature. Read Enabling guest operating system features to see a list of available options.
-
                             Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE.
                           type: string
                       type: object
@@ -280,21 +238,16 @@ spec:
                       type: string
                     type: array
                   physicalBlockSizeBytes:
-                    description: >-
+                    description: |-
                       Physical block size of the persistent disk, in bytes. If not present
-
                       in a request, a default value is used. Currently supported sizes
-
                       are 4096 and 16384, other sizes may be added in the future.
-
                       If an unsupported value is requested, the error message will list
-
                       the supported values for the caller's project.
                     type: number
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   region:
@@ -306,27 +259,19 @@ spec:
                       type: string
                     type: array
                   size:
-                    description: >-
+                    description: |-
                       Size of the persistent disk, specified in GB. You can specify this
-
                       field when creating a persistent disk using the sourceImage or
-
                       sourceSnapshot parameter, or specify it alone to create an empty
-
                       persistent disk.
-
                       If you specify this field along with sourceImage or sourceSnapshot,
-
                       the value of sizeGb must not be less than the size of the sourceImage
-
                       or the size of the snapshot.
                     type: number
                   snapshot:
-                    description: >-
+                    description: |-
                       The source snapshot used to create this disk. You can provide this as
-
                       a partial or full URL to the resource. For example, the following are
-
                       valid values:
                     type: string
                   snapshotRef:
@@ -343,26 +288,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -376,9 +315,8 @@ spec:
                     description: Selector for a Snapshot in compute to populate snapshot.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -394,26 +332,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -422,69 +354,52 @@ spec:
                         type: object
                     type: object
                   sourceDisk:
-                    description: >-
+                    description: |-
                       The source disk used to create this disk. You can provide this as a partial or full URL to the resource.
-
                       For example, the following are valid values:
                     type: string
                   sourceSnapshotEncryptionKey:
-                    description: >-
+                    description: |-
                       The customer-supplied encryption key of the source snapshot. Required
-
                       if the source snapshot is protected by a customer-supplied encryption
-
                       key.
-
                       Structure is documented below.
                     properties:
                       rawKey:
-                        description: >-
+                        description: |-
                           Specifies a 256-bit customer-supplied encryption key, encoded in
-
                           RFC 4648 base64 to either encrypt or decrypt this resource.
                         type: string
                     type: object
                   type:
-                    description: >-
+                    description: |-
                       URL of the disk type resource describing which disk type to use to
-
                       create the disk. Provide this when creating the disk.
                     type: string
                 required:
                 - region
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   accessMode:
-                    description: >-
+                    description: |-
                       The access mode of the disk.
-
                       For example:
                     type: string
                   asyncPrimaryDisk:
-                    description: >-
+                    description: |-
                       A nested object resource.
-
                       Structure is documented below.
                     properties:
                       disk:
@@ -504,26 +419,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -537,9 +446,8 @@ spec:
                         description: Selector for a RegionDisk in compute to populate disk.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -555,26 +463,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -584,53 +486,39 @@ spec:
                         type: object
                     type: object
                   createSnapshotBeforeDestroy:
-                    description: >-
+                    description: |-
                       If set to true, a snapshot of the disk will be created before it is destroyed.
-
                       If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation.
-
                       The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm
                     type: boolean
                   createSnapshotBeforeDestroyPrefix:
                     description: This will set a custom name prefix for the snapshot that's created when the disk is deleted.
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   diskEncryptionKey:
-                    description: >-
+                    description: |-
                       Encrypts the disk using a customer-supplied encryption key.
-
                       After you encrypt a disk with a customer-supplied key, you must
-
                       provide the same key if you use the disk later (e.g. to create a disk
-
                       snapshot or an image, or to attach the disk to a virtual machine).
-
                       Customer-supplied encryption keys do not protect access to metadata of
-
                       the disk.
-
                       If you do not provide an encryption key when creating the disk, then
-
                       the disk will be encrypted using an automatically generated key and
-
                       you do not need to provide a key to use the disk later.
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
                         description: The name of the encryption key that is stored in Google Cloud KMS.
                         type: string
                       rawKeySecretRef:
-                        description: >-
+                        description: |-
                           Specifies a 256-bit customer-supplied encryption key, encoded in
-
                           RFC 4648 base64 to either encrypt or decrypt this resource.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -643,13 +531,10 @@ spec:
                         - name
                         type: object
                       rsaEncryptedKeySecretRef:
-                        description: >-
+                        description: |-
                           Specifies an RFC 4648 base64 encoded, RSA-wrapped 2048-bit
-
                           customer-supplied encryption key to either encrypt or decrypt
-
                           this resource. You can provide either the rawKey or the rsaEncryptedKey.
-
                           Note: This property is sensitive and will not be displayed in the plan.
                         properties:
                           key:
@@ -663,18 +548,15 @@ spec:
                         type: object
                     type: object
                   guestOsFeatures:
-                    description: >-
+                    description: |-
                       A list of features to enable on the guest operating system.
-
                       Applicable only for bootable disks.
-
                       Structure is documented below.
                     items:
                       properties:
                         type:
-                          description: >-
+                          description: |-
                             The type of supported feature. Read Enabling guest operating system features to see a list of available options.
-
                             Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE.
                           type: string
                       type: object
@@ -691,21 +573,16 @@ spec:
                       type: string
                     type: array
                   physicalBlockSizeBytes:
-                    description: >-
+                    description: |-
                       Physical block size of the persistent disk, in bytes. If not present
-
                       in a request, a default value is used. Currently supported sizes
-
                       are 4096 and 16384, other sizes may be added in the future.
-
                       If an unsupported value is requested, the error message will list
-
                       the supported values for the caller's project.
                     type: number
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   replicaZones:
@@ -714,27 +591,19 @@ spec:
                       type: string
                     type: array
                   size:
-                    description: >-
+                    description: |-
                       Size of the persistent disk, specified in GB. You can specify this
-
                       field when creating a persistent disk using the sourceImage or
-
                       sourceSnapshot parameter, or specify it alone to create an empty
-
                       persistent disk.
-
                       If you specify this field along with sourceImage or sourceSnapshot,
-
                       the value of sizeGb must not be less than the size of the sourceImage
-
                       or the size of the snapshot.
                     type: number
                   snapshot:
-                    description: >-
+                    description: |-
                       The source snapshot used to create this disk. You can provide this as
-
                       a partial or full URL to the resource. For example, the following are
-
                       valid values:
                     type: string
                   snapshotRef:
@@ -751,26 +620,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -784,9 +647,8 @@ spec:
                     description: Selector for a Snapshot in compute to populate snapshot.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -802,26 +664,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -830,54 +686,42 @@ spec:
                         type: object
                     type: object
                   sourceDisk:
-                    description: >-
+                    description: |-
                       The source disk used to create this disk. You can provide this as a partial or full URL to the resource.
-
                       For example, the following are valid values:
                     type: string
                   sourceSnapshotEncryptionKey:
-                    description: >-
+                    description: |-
                       The customer-supplied encryption key of the source snapshot. Required
-
                       if the source snapshot is protected by a customer-supplied encryption
-
                       key.
-
                       Structure is documented below.
                     properties:
                       rawKey:
-                        description: >-
+                        description: |-
                           Specifies a 256-bit customer-supplied encryption key, encoded in
-
                           RFC 4648 base64 to either encrypt or decrypt this resource.
                         type: string
                     type: object
                   type:
-                    description: >-
+                    description: |-
                       URL of the disk type resource describing which disk type to use to
-
                       create the disk. Provide this when creating the disk.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -892,11 +736,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -910,13 +752,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -937,15 +776,13 @@ spec:
               atProvider:
                 properties:
                   accessMode:
-                    description: >-
+                    description: |-
                       The access mode of the disk.
-
                       For example:
                     type: string
                   asyncPrimaryDisk:
-                    description: >-
+                    description: |-
                       A nested object resource.
-
                       Structure is documented below.
                     properties:
                       disk:
@@ -953,11 +790,9 @@ spec:
                         type: string
                     type: object
                   createSnapshotBeforeDestroy:
-                    description: >-
+                    description: |-
                       If set to true, a snapshot of the disk will be created before it is destroyed.
-
                       If your disk is encrypted with customer managed encryption keys these will be reused for the snapshot creation.
-
                       The name of the snapshot by default will be {{disk-name}}-YYYYMMDD-HHmm
                     type: boolean
                   createSnapshotBeforeDestroyPrefix:
@@ -967,42 +802,30 @@ spec:
                     description: Creation timestamp in RFC3339 text format.
                     type: string
                   description:
-                    description: >-
+                    description: |-
                       An optional description of this resource. Provide this property when
-
                       you create the resource.
                     type: string
                   diskEncryptionKey:
-                    description: >-
+                    description: |-
                       Encrypts the disk using a customer-supplied encryption key.
-
                       After you encrypt a disk with a customer-supplied key, you must
-
                       provide the same key if you use the disk later (e.g. to create a disk
-
                       snapshot or an image, or to attach the disk to a virtual machine).
-
                       Customer-supplied encryption keys do not protect access to metadata of
-
                       the disk.
-
                       If you do not provide an encryption key when creating the disk, then
-
                       the disk will be encrypted using an automatically generated key and
-
                       you do not need to provide a key to use the disk later.
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
                         description: The name of the encryption key that is stored in Google Cloud KMS.
                         type: string
                       sha256:
-                        description: >-
+                        description: |-
                           (Output)
-
                           The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
-
                           encryption key that protects this resource.
                         type: string
                     type: object
@@ -1016,18 +839,15 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   guestOsFeatures:
-                    description: >-
+                    description: |-
                       A list of features to enable on the guest operating system.
-
                       Applicable only for bootable disks.
-
                       Structure is documented below.
                     items:
                       properties:
                         type:
-                          description: >-
+                          description: |-
                             The type of supported feature. Read Enabling guest operating system features to see a list of available options.
-
                             Possible values are: MULTI_IP_SUBNET, SECURE_BOOT, SEV_CAPABLE, UEFI_COMPATIBLE, VIRTIO_SCSI_MULTIQUEUE, WINDOWS, GVNIC, SEV_LIVE_MIGRATABLE, SEV_SNP_CAPABLE, SUSPEND_RESUME_COMPATIBLE, TDX_CAPABLE.
                           type: string
                       type: object
@@ -1036,9 +856,8 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/regions/{{region}}/disks/{{name}}
                     type: string
                   labelFingerprint:
-                    description: >-
+                    description: |-
                       The fingerprint used for optimistic locking of this resource.  Used
-
                       internally during updates.
                     type: string
                   labels:
@@ -1059,21 +878,16 @@ spec:
                       type: string
                     type: array
                   physicalBlockSizeBytes:
-                    description: >-
+                    description: |-
                       Physical block size of the persistent disk, in bytes. If not present
-
                       in a request, a default value is used. Currently supported sizes
-
                       are 4096 and 16384, other sizes may be added in the future.
-
                       If an unsupported value is requested, the error message will list
-
                       the supported values for the caller's project.
                     type: number
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   region:
@@ -1088,101 +902,76 @@ spec:
                     description: The URI of the created resource.
                     type: string
                   size:
-                    description: >-
+                    description: |-
                       Size of the persistent disk, specified in GB. You can specify this
-
                       field when creating a persistent disk using the sourceImage or
-
                       sourceSnapshot parameter, or specify it alone to create an empty
-
                       persistent disk.
-
                       If you specify this field along with sourceImage or sourceSnapshot,
-
                       the value of sizeGb must not be less than the size of the sourceImage
-
                       or the size of the snapshot.
                     type: number
                   snapshot:
-                    description: >-
+                    description: |-
                       The source snapshot used to create this disk. You can provide this as
-
                       a partial or full URL to the resource. For example, the following are
-
                       valid values:
                     type: string
                   sourceDisk:
-                    description: >-
+                    description: |-
                       The source disk used to create this disk. You can provide this as a partial or full URL to the resource.
-
                       For example, the following are valid values:
                     type: string
                   sourceDiskId:
-                    description: >-
+                    description: |-
                       The ID value of the disk used to create this image. This value may
-
                       be used to determine whether the image was taken from the current
-
                       or a previous instance of a given disk name.
                     type: string
                   sourceSnapshotEncryptionKey:
-                    description: >-
+                    description: |-
                       The customer-supplied encryption key of the source snapshot. Required
-
                       if the source snapshot is protected by a customer-supplied encryption
-
                       key.
-
                       Structure is documented below.
                     properties:
                       rawKey:
-                        description: >-
+                        description: |-
                           Specifies a 256-bit customer-supplied encryption key, encoded in
-
                           RFC 4648 base64 to either encrypt or decrypt this resource.
                         type: string
                       sha256:
-                        description: >-
+                        description: |-
                           (Output)
-
                           The RFC 4648 base64 encoded SHA-256 hash of the customer-supplied
-
                           encryption key that protects this resource.
                         type: string
                     type: object
                   sourceSnapshotId:
-                    description: >-
+                    description: |-
                       The unique ID of the snapshot used to create this disk. This value
-
                       identifies the exact snapshot that was used to create this persistent
-
                       disk. For example, if you created the persistent disk from a snapshot
-
                       that was later deleted and recreated under the same name, the source
-
                       snapshot ID would identify the exact version of the snapshot that was
-
                       used.
                     type: string
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
                   type:
-                    description: >-
+                    description: |-
                       URL of the disk type resource describing which disk type to use to
-
                       create the disk. Provide this when creating the disk.
                     type: string
                   users:
-                    description: >-
+                    description: |-
                       Links to the users of the disk (attached instances) in form:
-
                       project/zones/zone/instances/instance
                     items:
                       type: string
@@ -1194,24 +983,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1222,9 +1007,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1238,11 +1022,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

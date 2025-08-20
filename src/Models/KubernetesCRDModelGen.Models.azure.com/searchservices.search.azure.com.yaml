@@ -45,33 +45,24 @@ spec:
     name: v1api20220901
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /search/resource-manager/Microsoft.Search/stable/2022-09-01/search.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,21 +70,18 @@ spec:
           spec:
             properties:
               authOptions:
-                description: >-
+                description: |-
                   AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be
-
                   set if 'disableLocalAuth' is set to true.
                 properties:
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       AadOrApiKey: Indicates that either the API key or an access token from Azure Active Directory can be used for
-
                       authentication.
                     properties:
                       aadAuthFailureMode:
-                        description: >-
+                        description: |-
                           AadAuthFailureMode: Describes what response the data plane API of a Search service would send for requests that failed
-
                           authentication.
                         enum:
                         - http401WithBearerChallenge
@@ -102,21 +90,18 @@ spec:
                     type: object
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for
-
                   authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys
-
                   within a search service.
                 properties:
                   enforcement:
@@ -128,11 +113,9 @@ spec:
                     type: string
                 type: object
               hostingMode:
-                description: >-
+                description: |-
                   HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions
-
                   that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the
-
                   standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
                 enum:
                 - default
@@ -157,62 +140,50 @@ spec:
                 description: 'NetworkRuleSet: Network specific rules that determine how the Azure Cognitive Search service may be reached.'
                 properties:
                   ipRules:
-                    description: >-
+                    description: |-
                       IpRules: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service
-
                       endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied
-
                       only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not
-
                       allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
                     items:
                       description: The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         value:
-                          description: >-
+                          description: |-
                             Value: Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24)
-
                             to be allowed.
                           type: string
                       type: object
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -224,18 +195,16 @@ spec:
                     description: 'ConfigMaps: configures where to place operator written ConfigMaps.'
                     properties:
                       identityPrincipalId:
-                        description: >-
+                        description: |-
                           IdentityPrincipalId: indicates where the IdentityPrincipalId config map should be placed. If omitted, no config map will
-
                           be created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -243,18 +212,16 @@ spec:
                         - name
                         type: object
                       identityTenantId:
-                        description: >-
+                        description: |-
                           IdentityTenantId: indicates where the IdentityTenantId config map should be placed. If omitted, no config map will be
-
                           created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -265,33 +232,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -303,18 +263,16 @@ spec:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       adminPrimaryKey:
-                        description: >-
+                        description: |-
                           AdminPrimaryKey: indicates where the AdminPrimaryKey secret should be placed. If omitted, the secret will not be
-
                           retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -322,18 +280,16 @@ spec:
                         - name
                         type: object
                       adminSecondaryKey:
-                        description: >-
+                        description: |-
                           AdminSecondaryKey: indicates where the AdminSecondaryKey secret should be placed. If omitted, the secret will not be
-
                           retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -347,9 +303,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -359,11 +314,9 @@ spec:
                     type: object
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -374,52 +327,41 @@ spec:
                     type: string
                 type: object
               partitionCount:
-                description: >-
+                description: |-
                   PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values
-
                   greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the
-
                   allowed values are between 1 and 3.
-                maximum: 12
-                minimum: 1
+                maximum: 12.0
+                minimum: 1.0
                 type: integer
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and
-
                   templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be
-
                   the exclusive access method.
                 enum:
                 - disabled
                 - enabled
                 type: string
               replicaCount:
-                description: >-
+                description: |-
                   ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive
-
                   for standard SKUs or between 1 and 3 inclusive for basic SKU.
-                maximum: 12
-                minimum: 1
+                maximum: 12.0
+                minimum: 1.0
                 type: integer
               sku:
-                description: >-
+                description: |-
                   Sku: The SKU of the Search Service, which determines price tier and capacity limits. This property is required when
-
                   creating a new Search Service.
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to
-
                       3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard,
-
                       but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12
-
                       replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity').
-
                       'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per
-
                       partition, up to 12 partitions.'
                     enum:
                     - basic
@@ -444,21 +386,18 @@ spec:
             description: Describes an Azure Cognitive Search service and its current state.
             properties:
               authOptions:
-                description: >-
+                description: |-
                   AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be
-
                   set if 'disableLocalAuth' is set to true.
                 properties:
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       AadOrApiKey: Indicates that either the API key or an access token from Azure Active Directory can be used for
-
                       authentication.
                     properties:
                       aadAuthFailureMode:
-                        description: >-
+                        description: |-
                           AadAuthFailureMode: Describes what response the data plane API of a Search service would send for requests that failed
-
                           authentication.
                         type: string
                     type: object
@@ -481,28 +420,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -519,23 +452,19 @@ spec:
                   type: object
                 type: array
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for
-
                   authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys
-
                   within a search service.
                 properties:
                   encryptionComplianceStatus:
-                    description: >-
+                    description: |-
                       EncryptionComplianceStatus: Describes whether the search service is compliant or not with respect to having non customer
-
                       encrypted resources. If a service has more than one non customer encrypted resource and 'Enforcement' is 'enabled' then
-
                       the service will be marked as 'nonCompliant'.
                     type: string
                   enforcement:
@@ -543,17 +472,14 @@ spec:
                     type: string
                 type: object
               hostingMode:
-                description: >-
+                description: |-
                   HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions
-
                   that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the
-
                   standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               identity:
@@ -579,32 +505,26 @@ spec:
                 description: 'NetworkRuleSet: Network specific rules that determine how the Azure Cognitive Search service may be reached.'
                 properties:
                   ipRules:
-                    description: >-
+                    description: |-
                       IpRules: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service
-
                       endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied
-
                       only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not
-
                       allowed even with any public IP rules, and private endpoint connections would be the exclusive access method.
                     items:
                       description: The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         value:
-                          description: >-
+                          description: |-
                             Value: Value corresponding to a single IPv4 address (eg., 123.1.2.3) or an IP range in CIDR format (eg., 123.1.2.3/24)
-
                             to be allowed.
                           type: string
                       type: object
                     type: array
                 type: object
               partitionCount:
-                description: >-
+                description: |-
                   PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values
-
                   greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the
-
                   allowed values are between 1 and 3.
                 type: integer
               privateEndpointConnections:
@@ -613,39 +533,30 @@ spec:
                   description: Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
                   properties:
                     id:
-                      description: >-
+                      description: |-
                         Id: Fully qualified resource ID for the resource. Ex -
-
                         /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
               provisioningState:
-                description: >-
+                description: |-
                   ProvisioningState: The state of the last provisioning operation performed on the search service. Provisioning is an
-
                   intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState
-
                   changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling
-
                   interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is
-
                   completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to
-
                   Create search service. This is because the free service uses capacity that is already set up.
                 type: string
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and
-
                   templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be
-
                   the exclusive access method.
                 type: string
               replicaCount:
-                description: >-
+                description: |-
                   ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive
-
                   for standard SKUs or between 1 and 3 inclusive for basic SKU.
                 type: integer
               sharedPrivateLinkResources:
@@ -654,50 +565,36 @@ spec:
                   description: Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
                   properties:
                     id:
-                      description: >-
+                      description: |-
                         Id: Fully qualified resource ID for the resource. Ex -
-
                         /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Sku: The SKU of the Search Service, which determines price tier and capacity limits. This property is required when
-
                   creating a new Search Service.
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to
-
                       3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard,
-
                       but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12
-
                       replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity').
-
                       'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per
-
                       partition, up to 12 partitions.'
                     type: string
                 type: object
               status:
-                description: >-
+                description: |-
                   Status: The status of the search service. Possible values include: 'running': The search service is running and no
-
                   provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down.
-
                   'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the
-
                   underlying search units are not healthy. The search service is most likely operational, but performance might be slow
-
                   and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject
-
                   all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or
-
                   error states, it means the Azure Cognitive Search team is actively investigating the underlying issue. Dedicated
-
                   services in these states are still chargeable based on the number of search units provisioned.
                 type: string
               statusDetails:
@@ -733,35 +630,25 @@ spec:
     name: v1api20220901storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20220901.SearchService
-
           Generator information:
-
           - Generated from: /search/resource-manager/Microsoft.Search/stable/2022-09-01/search.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -772,39 +659,33 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               authOptions:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.DataPlaneAuthOptions
-
                   Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if
-
                   'disableLocalAuth' is set to true.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption
-
                       Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       aadAuthFailureMode:
@@ -812,27 +693,23 @@ spec:
                     type: object
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               disableLocalAuth:
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.EncryptionWithCmk
-
                   Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed
-
                   Keys.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enforcement:
@@ -841,17 +718,15 @@ spec:
               hostingMode:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.Identity
-
                   Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
@@ -860,32 +735,28 @@ spec:
               location:
                 type: string
               networkRuleSet:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.NetworkRuleSet
-
                   Network specific rules that determine how the Azure Cognitive Search service may be reached.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ipRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220901.IpRule
-
                         The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         value:
@@ -894,48 +765,39 @@ spec:
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.SearchServiceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -949,26 +811,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       identityPrincipalId:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -976,20 +834,17 @@ spec:
                         - name
                         type: object
                       identityTenantId:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -999,33 +854,26 @@ spec:
                     type: object
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1039,26 +887,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       adminPrimaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1066,20 +910,17 @@ spec:
                         - name
                         type: object
                       adminSecondaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1087,20 +928,17 @@ spec:
                         - name
                         type: object
                       queryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1112,11 +950,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1133,17 +969,15 @@ spec:
               replicaCount:
                 type: integer
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.Sku
-
                   Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -1157,47 +991,40 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20220901.SearchService_STATUS
-
               Describes an Azure Cognitive Search service and its current state.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               authOptions:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.DataPlaneAuthOptions_STATUS
-
                   Defines the options for how the data plane API of a Search service authenticates requests. This cannot be set if
-
                   'disableLocalAuth' is set to true.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20220901.DataPlaneAadOrApiKeyAuthOption_STATUS
-
                       Indicates that either the API key or an access token from Azure Active Directory can be used for authentication.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       aadAuthFailureMode:
@@ -1220,28 +1047,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1260,19 +1081,16 @@ spec:
               disableLocalAuth:
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.EncryptionWithCmk_STATUS
-
                   Describes a policy that determines how resources within the search service are to be encrypted with Customer Managed
-
                   Keys.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   encryptionComplianceStatus:
@@ -1285,17 +1103,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.Identity_STATUS
-
                   Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -1310,32 +1126,28 @@ spec:
               name:
                 type: string
               networkRuleSet:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.NetworkRuleSet_STATUS
-
                   Network specific rules that determine how the Azure Cognitive Search service may be reached.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ipRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220901.IpRule_STATUS
-
                         The IP restriction rule of the Azure Cognitive Search service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         value:
@@ -1347,17 +1159,15 @@ spec:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220901.PrivateEndpointConnection_STATUS
-
                     Describes an existing Private Endpoint connection to the Azure Cognitive Search service.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1372,17 +1182,15 @@ spec:
                 type: integer
               sharedPrivateLinkResources:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220901.SharedPrivateLinkResource_STATUS
-
                     Describes a Shared Private Link Resource managed by the Azure Cognitive Search service.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1390,17 +1198,15 @@ spec:
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20220901.Sku_STATUS
-
                   Defines the SKU of an Azure Cognitive Search Service, which determines price tier and capacity limits.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -1438,33 +1244,24 @@ spec:
     name: v1api20231101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /search/resource-manager/Microsoft.Search/stable/2023-11-01/search.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1472,21 +1269,18 @@ spec:
           spec:
             properties:
               authOptions:
-                description: >-
+                description: |-
                   AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be
-
                   set if 'disableLocalAuth' is set to true.
                 properties:
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       AadOrApiKey: Indicates that either the API key or an access token from a Microsoft Entra ID tenant can be used for
-
                       authentication.
                     properties:
                       aadAuthFailureMode:
-                        description: >-
+                        description: |-
                           AadAuthFailureMode: Describes what response the data plane API of a search service would send for requests that failed
-
                           authentication.
                         enum:
                         - http401WithBearerChallenge
@@ -1495,21 +1289,18 @@ spec:
                     type: object
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for
-
                   authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys
-
                   within a search service.
                 properties:
                   enforcement:
@@ -1521,11 +1312,9 @@ spec:
                     type: string
                 type: object
               hostingMode:
-                description: >-
+                description: |-
                   HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions
-
                   that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the
-
                   standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
                 enum:
                 - default
@@ -1550,58 +1339,48 @@ spec:
                 description: 'NetworkRuleSet: Network-specific rules that determine how the search service may be reached.'
                 properties:
                   ipRules:
-                    description: >-
+                    description: |-
                       IpRules: A list of IP restriction rules used for an IP firewall. Any IPs that do not match the rules are blocked by the
-
                       firewall. These rules are only applied when the 'publicNetworkAccess' of the search service is 'enabled'.
                     items:
                       description: The IP restriction rule of the search service.
                       properties:
                         value:
-                          description: >-
+                          description: |-
                             Value: Value corresponding to a single IPv4 address (for example, 123.1.2.3) or an IP range in CIDR format (for example,
-
                             123.1.2.3/24) to be allowed.
                           type: string
                       type: object
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1613,18 +1392,16 @@ spec:
                     description: 'ConfigMaps: configures where to place operator written ConfigMaps.'
                     properties:
                       identityPrincipalId:
-                        description: >-
+                        description: |-
                           IdentityPrincipalId: indicates where the IdentityPrincipalId config map should be placed. If omitted, no config map will
-
                           be created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1632,18 +1409,16 @@ spec:
                         - name
                         type: object
                       identityTenantId:
-                        description: >-
+                        description: |-
                           IdentityTenantId: indicates where the IdentityTenantId config map should be placed. If omitted, no config map will be
-
                           created.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1654,33 +1429,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1692,18 +1460,16 @@ spec:
                     description: 'Secrets: configures where to place Azure generated secrets.'
                     properties:
                       adminPrimaryKey:
-                        description: >-
+                        description: |-
                           AdminPrimaryKey: indicates where the AdminPrimaryKey secret should be placed. If omitted, the secret will not be
-
                           retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1711,18 +1477,16 @@ spec:
                         - name
                         type: object
                       adminSecondaryKey:
-                        description: >-
+                        description: |-
                           AdminSecondaryKey: indicates where the AdminSecondaryKey secret should be placed. If omitted, the secret will not be
-
                           retrieved from Azure.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1736,9 +1500,8 @@ spec:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -1748,11 +1511,9 @@ spec:
                     type: object
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1763,38 +1524,32 @@ spec:
                     type: string
                 type: object
               partitionCount:
-                description: >-
+                description: |-
                   PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values
-
                   greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the
-
                   allowed values are between 1 and 3.
-                maximum: 12
-                minimum: 1
+                maximum: 12.0
+                minimum: 1.0
                 type: integer
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and
-
                   templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be
-
                   the exclusive access method.
                 enum:
                 - disabled
                 - enabled
                 type: string
               replicaCount:
-                description: >-
+                description: |-
                   ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive
-
                   for standard SKUs or between 1 and 3 inclusive for basic SKU.
-                maximum: 12
-                minimum: 1
+                maximum: 12.0
+                minimum: 1.0
                 type: integer
               semanticSearch:
-                description: >-
+                description: |-
                   SemanticSearch: Sets options that control the availability of semantic search. This configuration is only possible for
-
                   certain search SKUs in certain locations.
                 enum:
                 - disabled
@@ -1802,23 +1557,17 @@ spec:
                 - standard
                 type: string
               sku:
-                description: >-
+                description: |-
                   Sku: The SKU of the search service, which determines billing rate and capacity limits. This property is required when
-
                   creating a new search service.
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to
-
                       3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard,
-
                       but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12
-
                       replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity').
-
                       'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per
-
                       partition, up to 12 partitions.'
                     enum:
                     - basic
@@ -1843,21 +1592,18 @@ spec:
             description: Describes a search service and its current state.
             properties:
               authOptions:
-                description: >-
+                description: |-
                   AuthOptions: Defines the options for how the data plane API of a search service authenticates requests. This cannot be
-
                   set if 'disableLocalAuth' is set to true.
                 properties:
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       AadOrApiKey: Indicates that either the API key or an access token from a Microsoft Entra ID tenant can be used for
-
                       authentication.
                     properties:
                       aadAuthFailureMode:
-                        description: >-
+                        description: |-
                           AadAuthFailureMode: Describes what response the data plane API of a search service would send for requests that failed
-
                           authentication.
                         type: string
                     type: object
@@ -1880,28 +1626,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1918,23 +1658,19 @@ spec:
                   type: object
                 type: array
               disableLocalAuth:
-                description: >-
+                description: |-
                   DisableLocalAuth: When set to true, calls to the search service will not be permitted to utilize API keys for
-
                   authentication. This cannot be set to true if 'dataPlaneAuthOptions' are defined.
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   EncryptionWithCmk: Specifies any policy regarding encryption of resources (such as indexes) using customer manager keys
-
                   within a search service.
                 properties:
                   encryptionComplianceStatus:
-                    description: >-
+                    description: |-
                       EncryptionComplianceStatus: Describes whether the search service is compliant or not with respect to having
-
                       non-customer-encrypted resources. If a service has more than one non-customer-encrypted resource and 'Enforcement' is
-
                       'enabled' then the service will be marked as 'nonCompliant'.
                     type: string
                   enforcement:
@@ -1942,17 +1678,14 @@ spec:
                     type: string
                 type: object
               hostingMode:
-                description: >-
+                description: |-
                   HostingMode: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions
-
                   that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the
-
                   standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'.
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               identity:
@@ -1978,28 +1711,24 @@ spec:
                 description: 'NetworkRuleSet: Network-specific rules that determine how the search service may be reached.'
                 properties:
                   ipRules:
-                    description: >-
+                    description: |-
                       IpRules: A list of IP restriction rules used for an IP firewall. Any IPs that do not match the rules are blocked by the
-
                       firewall. These rules are only applied when the 'publicNetworkAccess' of the search service is 'enabled'.
                     items:
                       description: The IP restriction rule of the search service.
                       properties:
                         value:
-                          description: >-
+                          description: |-
                             Value: Value corresponding to a single IPv4 address (for example, 123.1.2.3) or an IP range in CIDR format (for example,
-
                             123.1.2.3/24) to be allowed.
                           type: string
                       type: object
                     type: array
                 type: object
               partitionCount:
-                description: >-
+                description: |-
                   PartitionCount: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values
-
                   greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the
-
                   allowed values are between 1 and 3.
                 type: integer
               privateEndpointConnections:
@@ -2008,45 +1737,35 @@ spec:
                   description: Describes an existing private endpoint connection to the search service.
                   properties:
                     id:
-                      description: >-
+                      description: |-
                         Id: Fully qualified resource ID for the resource. Ex -
-
                         /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
               provisioningState:
-                description: >-
+                description: |-
                   ProvisioningState: The state of the last provisioning operation performed on the search service. Provisioning is an
-
                   intermediate state that occurs while service capacity is being established. After capacity is set up, provisioningState
-
                   changes to either 'succeeded' or 'failed'. Client applications can poll provisioning status (the recommended polling
-
                   interval is from 30 seconds to one minute) by using the Get Search Service operation to see when an operation is
-
                   completed. If you are using the free service, this value tends to come back as 'succeeded' directly in the call to
-
                   Create search service. This is because the free service uses capacity that is already set up.
                 type: string
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and
-
                   templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be
-
                   the exclusive access method.
                 type: string
               replicaCount:
-                description: >-
+                description: |-
                   ReplicaCount: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive
-
                   for standard SKUs or between 1 and 3 inclusive for basic SKU.
                 type: integer
               semanticSearch:
-                description: >-
+                description: |-
                   SemanticSearch: Sets options that control the availability of semantic search. This configuration is only possible for
-
                   certain search SKUs in certain locations.
                 type: string
               sharedPrivateLinkResources:
@@ -2055,50 +1774,36 @@ spec:
                   description: Describes a Shared Private Link Resource managed by the search service.
                   properties:
                     id:
-                      description: >-
+                      description: |-
                         Id: Fully qualified resource ID for the resource. Ex -
-
                         /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                       type: string
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Sku: The SKU of the search service, which determines billing rate and capacity limits. This property is required when
-
                   creating a new search service.
                 properties:
                   name:
-                    description: >-
+                    description: |-
                       Name: The SKU of the search service. Valid values include: 'free': Shared service. 'basic': Dedicated service with up to
-
                       3 replicas. 'standard': Dedicated service with up to 12 partitions and 12 replicas. 'standard2': Similar to standard,
-
                       but with more capacity per search unit. 'standard3': The largest Standard offering with up to 12 partitions and 12
-
                       replicas (or up to 3 partitions with more indexes if you also set the hostingMode property to 'highDensity').
-
                       'storage_optimized_l1': Supports 1TB per partition, up to 12 partitions. 'storage_optimized_l2': Supports 2TB per
-
                       partition, up to 12 partitions.'
                     type: string
                 type: object
               status:
-                description: >-
+                description: |-
                   Status: The status of the search service. Possible values include: 'running': The search service is running and no
-
                   provisioning operations are underway. 'provisioning': The search service is being provisioned or scaled up or down.
-
                   'deleting': The search service is being deleted. 'degraded': The search service is degraded. This can occur when the
-
                   underlying search units are not healthy. The search service is most likely operational, but performance might be slow
-
                   and some requests might be dropped. 'disabled': The search service is disabled. In this state, the service will reject
-
                   all API requests. 'error': The search service is in an error state. If your service is in the degraded, disabled, or
-
                   error states, Microsoft is actively investigating the underlying issue. Dedicated services in these states are still
-
                   chargeable based on the number of search units provisioned.
                 type: string
               statusDetails:
@@ -2134,35 +1839,25 @@ spec:
     name: v1api20231101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20231101.SearchService
-
           Generator information:
-
           - Generated from: /search/resource-manager/Microsoft.Search/stable/2023-11-01/search.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Search/searchServices/{searchServiceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2173,39 +1868,33 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               authOptions:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.DataPlaneAuthOptions
-
                   Defines the options for how the search service authenticates a data plane request. This cannot be set if
-
                   'disableLocalAuth' is set to true.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.DataPlaneAadOrApiKeyAuthOption
-
                       Indicates that either the API key or an access token from a Microsoft Entra ID tenant can be used for authentication.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       aadAuthFailureMode:
@@ -2213,27 +1902,23 @@ spec:
                     type: object
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               disableLocalAuth:
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.EncryptionWithCmk
-
                   Describes a policy that determines how resources within the search service are to be encrypted with customer=managed
-
                   keys.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   enforcement:
@@ -2242,17 +1927,15 @@ spec:
               hostingMode:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.Identity
-
                   Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
@@ -2261,32 +1944,28 @@ spec:
               location:
                 type: string
               networkRuleSet:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.NetworkRuleSet
-
                   Network-specific rules that determine how the search service can be reached.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ipRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231101.IpRule
-
                         The IP restriction rule of the search service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         value:
@@ -2295,48 +1974,39 @@ spec:
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.SearchServiceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2350,26 +2020,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       identityPrincipalId:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2377,20 +2043,17 @@ spec:
                         - name
                         type: object
                       identityTenantId:
-                        description: >-
+                        description: |-
                           ConfigMapDestination describes the location to store a single configmap value
-
                           Note: This is similar to: SecretDestination in secrets.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the ConfigMap being referenced
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes ConfigMap to write to.
-
                               The ConfigMap will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2400,33 +2063,26 @@ spec:
                     type: object
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2440,26 +2096,22 @@ spec:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       adminPrimaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2467,20 +2119,17 @@ spec:
                         - name
                         type: object
                       adminSecondaryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2488,20 +2137,17 @@ spec:
                         - name
                         type: object
                       queryKey:
-                        description: >-
+                        description: |-
                           SecretDestination describes the location to store a single secret value.
-
                           Note: This is similar to: ConfigMapDestination in configmaps.go.
-
                           Changes to one may need to be made to the others as well.
                         properties:
                           key:
                             description: Key is the key in the Kubernetes secret being referenced.
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               Name is the name of the Kubernetes secret to write to.
-
                               The secret will be created in the same namespace as the resource.
                             type: string
                         required:
@@ -2513,11 +2159,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -2536,17 +2180,15 @@ spec:
               semanticSearch:
                 type: string
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.Sku
-
                   Defines the SKU of a search service, which determines billing rate and capacity limits.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -2560,47 +2202,40 @@ spec:
             - owner
             type: object
           status:
-            description: >-
+            description: |-
               Storage version of v1api20231101.SearchService_STATUS
-
               Describes a search service and its current state.
             properties:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               authOptions:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.DataPlaneAuthOptions_STATUS
-
                   Defines the options for how the search service authenticates a data plane request. This cannot be set if
-
                   'disableLocalAuth' is set to true.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   aadOrApiKey:
-                    description: >-
+                    description: |-
                       Storage version of v1api20231101.DataPlaneAadOrApiKeyAuthOption_STATUS
-
                       Indicates that either the API key or an access token from a Microsoft Entra ID tenant can be used for authentication.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       aadAuthFailureMode:
@@ -2623,28 +2258,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2663,19 +2292,16 @@ spec:
               disableLocalAuth:
                 type: boolean
               encryptionWithCmk:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.EncryptionWithCmk_STATUS
-
                   Describes a policy that determines how resources within the search service are to be encrypted with customer=managed
-
                   keys.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   encryptionComplianceStatus:
@@ -2688,17 +2314,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.Identity_STATUS
-
                   Identity for the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -2713,32 +2337,28 @@ spec:
               name:
                 type: string
               networkRuleSet:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.NetworkRuleSet_STATUS
-
                   Network-specific rules that determine how the search service can be reached.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   ipRules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20231101.IpRule_STATUS
-
                         The IP restriction rule of the search service.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         value:
@@ -2750,17 +2370,15 @@ spec:
                 type: integer
               privateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20231101.PrivateEndpointConnection_STATUS
-
                     Describes an existing private endpoint connection to the search service.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -2777,17 +2395,15 @@ spec:
                 type: string
               sharedPrivateLinkResources:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20231101.SharedPrivateLinkResource_STATUS
-
                     Describes a Shared Private Link Resource managed by the search service.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -2795,17 +2411,15 @@ spec:
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20231101.Sku_STATUS
-
                   Defines the SKU of a search service, which determines billing rate and capacity limits.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:

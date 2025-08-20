@@ -85,15 +85,15 @@ spec:
                   failureThreshold:
                     description: Minimum consecutive failures for the probe to be considered failed after having succeeded.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   grpc:
                     description: GRPC call is made and response/error is used to determine health.
                     properties:
                       port:
                         description: Port on which the endpoint lives.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -123,8 +123,8 @@ spec:
                         type: string
                       port:
                         description: Port on which the endpoint lives.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -140,17 +140,17 @@ spec:
                   initialDelaySeconds:
                     description: Number of seconds after the container has started before readiness probes are initiated.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   periodSeconds:
                     description: How often (in seconds) to perform the probe.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   successThreshold:
                     description: Minimum consecutive successes for the probe to be considered successful after having failed.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   tcpSocket:
                     description: Health is determined by if the proxy is able to connect.
@@ -158,8 +158,8 @@ spec:
                       host:
                         type: string
                       port:
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -170,7 +170,7 @@ spec:
                   timeoutSeconds:
                     description: Number of seconds after which the probe times out.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                 type: object
               template:
@@ -219,8 +219,8 @@ spec:
                     type: string
                   weight:
                     description: The load balancing weight associated with the endpoint.
-                    maximum: 4294967295
-                    minimum: 0
+                    maximum: 4294967295.0
+                    minimum: 0.0
                     type: integer
                 type: object
                 x-kubernetes-validations:
@@ -276,9 +276,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -370,15 +369,15 @@ spec:
                   failureThreshold:
                     description: Minimum consecutive failures for the probe to be considered failed after having succeeded.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   grpc:
                     description: GRPC call is made and response/error is used to determine health.
                     properties:
                       port:
                         description: Port on which the endpoint lives.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -408,8 +407,8 @@ spec:
                         type: string
                       port:
                         description: Port on which the endpoint lives.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -425,17 +424,17 @@ spec:
                   initialDelaySeconds:
                     description: Number of seconds after the container has started before readiness probes are initiated.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   periodSeconds:
                     description: How often (in seconds) to perform the probe.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   successThreshold:
                     description: Minimum consecutive successes for the probe to be considered successful after having failed.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   tcpSocket:
                     description: Health is determined by if the proxy is able to connect.
@@ -443,8 +442,8 @@ spec:
                       host:
                         type: string
                       port:
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -455,7 +454,7 @@ spec:
                   timeoutSeconds:
                     description: Number of seconds after which the probe times out.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                 type: object
               template:
@@ -504,8 +503,8 @@ spec:
                     type: string
                   weight:
                     description: The load balancing weight associated with the endpoint.
-                    maximum: 4294967295
-                    minimum: 0
+                    maximum: 4294967295.0
+                    minimum: 0.0
                     type: integer
                 type: object
                 x-kubernetes-validations:
@@ -561,9 +560,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -655,15 +653,15 @@ spec:
                   failureThreshold:
                     description: Minimum consecutive failures for the probe to be considered failed after having succeeded.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   grpc:
                     description: GRPC call is made and response/error is used to determine health.
                     properties:
                       port:
                         description: Port on which the endpoint lives.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -693,8 +691,8 @@ spec:
                         type: string
                       port:
                         description: Port on which the endpoint lives.
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -710,17 +708,17 @@ spec:
                   initialDelaySeconds:
                     description: Number of seconds after the container has started before readiness probes are initiated.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   periodSeconds:
                     description: How often (in seconds) to perform the probe.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   successThreshold:
                     description: Minimum consecutive successes for the probe to be considered successful after having failed.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                   tcpSocket:
                     description: Health is determined by if the proxy is able to connect.
@@ -728,8 +726,8 @@ spec:
                       host:
                         type: string
                       port:
-                        maximum: 4294967295
-                        minimum: 0
+                        maximum: 4294967295.0
+                        minimum: 0.0
                         type: integer
                         x-kubernetes-validations:
                         - message: port must be between 1-65535
@@ -740,7 +738,7 @@ spec:
                   timeoutSeconds:
                     description: Number of seconds after which the probe times out.
                     format: int32
-                    minimum: 0
+                    minimum: 0.0
                     type: integer
                 type: object
               template:
@@ -789,8 +787,8 @@ spec:
                     type: string
                   weight:
                     description: The load balancing weight associated with the endpoint.
-                    maximum: 4294967295
-                    minimum: 0
+                    maximum: 4294967295.0
+                    minimum: 0.0
                     type: integer
                 type: object
                 x-kubernetes-validations:
@@ -846,9 +844,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

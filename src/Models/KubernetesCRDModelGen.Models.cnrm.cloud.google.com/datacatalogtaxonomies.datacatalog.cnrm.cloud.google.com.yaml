@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: datacatalogtaxonomies.datacatalog.cnrm.cloud.google.com
 spec:
   group: datacatalog.cnrm.cloud.google.com
@@ -163,14 +162,13 @@ spec:
                         description: Creation timestamp of the resource within the given system.
                         type: string
                       expiredTime:
-                        description: >-
+                        description: |-
                           Output only. Expiration timestamp of the resource within the given system.
-
 
                           Currently only applicable to BigQuery resources.
                         type: string
                       updateTime:
-                        description: >-
+                        description: |-
                           Timestamp of the last modification of the resource or its metadata within
                            a given system.
 
@@ -191,7 +189,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

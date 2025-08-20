@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computevpngateways.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -90,9 +89,8 @@ spec:
                 description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
                 type: string
               stackType:
-                description: >-
+                description: |-
                   Immutable. The stack type for this VPN gateway to identify the IP protocols that are enabled.
-
                   If not specified, IPV4_ONLY will be used. Default value: "IPV4_ONLY" Possible values: ["IPV4_ONLY", "IPV4_IPV6"].
                 type: string
               vpnInterfaces:
@@ -103,13 +101,10 @@ spec:
                       description: Immutable. The numeric ID of this VPN gateway interface.
                       type: integer
                     interconnectAttachmentRef:
-                      description: >-
+                      description: |-
                         Immutable. When this value is present, the VPN Gateway will be used
-
                         for IPsec-encrypted Cloud Interconnect; all Egress or Ingress
-
                         traffic for this VPN Gateway interface will go through the specified
-
                         interconnect attachment resource. Not currently available publicly.
                       oneOf:
                       - not:
@@ -183,7 +178,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

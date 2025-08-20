@@ -36,25 +36,18 @@ spec:
         description: Function is the Schema for the Functions API. A Cloud Function that contains user computation executed in response to an event.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -65,17 +58,14 @@ spec:
               forProvider:
                 properties:
                   buildConfig:
-                    description: >-
+                    description: |-
                       Describes the Build step of the function that builds a container
-
                       from the given source.
-
                       Structure is documented below.
                     properties:
                       automaticUpdatePolicy:
-                        description: >-
+                        description: |-
                           Security patches are applied automatically to the runtime without requiring
-
                           the function to be redeployed.
                         type: object
                       dockerRepository:
@@ -95,26 +85,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -128,9 +112,8 @@ spec:
                         description: Selector for a RegistryRepository in artifact to populate dockerRepository.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -146,26 +129,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -174,15 +151,11 @@ spec:
                             type: object
                         type: object
                       entryPoint:
-                        description: >-
+                        description: |-
                           The name of the function (as defined in source code) that will be executed.
-
                           Defaults to the resource name suffix, if not specified. For backward
-
                           compatibility, if function with given name is not found, then the system
-
                           will try to use function named "function". For Node.js this is name of a
-
                           function exported by the module specified in source_location.
                         type: string
                       environmentVariables:
@@ -192,15 +165,13 @@ spec:
                         type: object
                         x-kubernetes-map-type: granular
                       onDeployUpdatePolicy:
-                        description: >-
+                        description: |-
                           Security patches are only applied when a function is redeployed.
-
                           Structure is documented below.
                         type: object
                       runtime:
-                        description: >-
+                        description: |-
                           The runtime in which to run the function. Required when deploying a new
-
                           function, optional when updating an existing function.
                         type: string
                       serviceAccount:
@@ -220,26 +191,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -253,9 +218,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate serviceAccount.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -271,26 +235,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -299,15 +257,13 @@ spec:
                             type: object
                         type: object
                       source:
-                        description: >-
+                        description: |-
                           The location of the function source code.
-
                           Structure is documented below.
                         properties:
                           repoSource:
-                            description: >-
+                            description: |-
                               If provided, get the source from this location in a Cloud Source Repository.
-
                               Structure is documented below.
                             properties:
                               branchName:
@@ -320,9 +276,8 @@ spec:
                                 description: Directory, relative to the source root, in which to run the build.
                                 type: string
                               invertRegex:
-                                description: >-
+                                description: |-
                                   Only trigger a build if the revision regex does
-
                                   NOT match the revision regex.
                                 type: boolean
                               projectId:
@@ -336,9 +291,8 @@ spec:
                                 type: string
                             type: object
                           storageSource:
-                            description: >-
+                            description: |-
                               If provided, get the source from this location in Google Cloud Storage.
-
                               Structure is documented below.
                             properties:
                               bucket:
@@ -358,26 +312,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -391,9 +339,8 @@ spec:
                                 description: Selector for a Bucket in storage to populate bucket.
                                 properties:
                                   matchControllerRef:
-                                    description: >-
+                                    description: |-
                                       MatchControllerRef ensures an object with the same controller reference
-
                                       as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
@@ -409,26 +356,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -437,9 +378,8 @@ spec:
                                     type: object
                                 type: object
                               generation:
-                                description: >-
+                                description: |-
                                   Google Cloud Storage generation for the object. If the generation
-
                                   is omitted, the latest generation will be used.
                                 type: number
                               object:
@@ -459,26 +399,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -492,9 +426,8 @@ spec:
                                 description: Selector for a BucketObject in storage to populate object.
                                 properties:
                                   matchControllerRef:
-                                    description: >-
+                                    description: |-
                                       MatchControllerRef ensures an object with the same controller reference
-
                                       as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
@@ -510,26 +443,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -556,26 +483,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -589,9 +510,8 @@ spec:
                         description: Selector for a WorkerPool in cloudbuild to populate workerPool.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -607,26 +527,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -639,44 +553,34 @@ spec:
                     description: User-provided description of a function.
                     type: string
                   eventTrigger:
-                    description: >-
+                    description: |-
                       An Eventarc trigger managed by Google Cloud Functions that fires events in
-
                       response to a condition in another service.
-
                       Structure is documented below.
                     properties:
                       eventFilters:
-                        description: >-
+                        description: |-
                           Criteria used to filter events.
-
                           Structure is documented below.
                         items:
                           properties:
                             attribute:
-                              description: >-
+                              description: |-
                                 'Required. The name of a CloudEvents attribute.
-
                                 Currently, only a subset of attributes are supported for filtering. Use the gcloud eventarc providers describe command to learn more about events and their attributes.
-
                                 Do not filter for the 'type' attribute here, as this is already achieved by the resource's event_type attribute.
                               type: string
                             operator:
-                              description: >-
+                              description: |-
                                 Optional. The operator used for matching the events with the value of
-
                                 the filter. If not specified, only events that have an exact key-value
-
                                 pair specified in the filter are matched.
-
                                 The only allowed value is match-path-pattern.
-
                                 See documentation on path patterns here'
                               type: string
                             value:
-                              description: >-
+                              description: |-
                                 Required. The value for the attribute.
-
                                 If the operator field is set as match-path-pattern, this value can be a path pattern instead of an exact value.
                               type: string
                             valueRef:
@@ -693,26 +597,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -726,9 +624,8 @@ spec:
                               description: Selector for a Bucket in storage to populate value.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -744,26 +641,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -777,9 +668,8 @@ spec:
                         description: Required. The type of event to observe.
                         type: string
                       pubsubTopic:
-                        description: >-
+                        description: |-
                           The name of a Pub/Sub topic in the same project that will be used
-
                           as the transport topic for the event delivery.
                         type: string
                       pubsubTopicRef:
@@ -796,26 +686,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -829,9 +713,8 @@ spec:
                         description: Selector for a Topic in pubsub to populate pubsubTopic.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -847,26 +730,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -875,19 +752,15 @@ spec:
                             type: object
                         type: object
                       retryPolicy:
-                        description: >-
+                        description: |-
                           Describes the retry policy in case of function's execution failure.
-
                           Retried execution is charged as any other execution.
-
                           Possible values are: RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY, RETRY_POLICY_RETRY.
                         type: string
                       serviceAccountEmail:
-                        description: >-
+                        description: |-
                           Optional. The email of the trigger's service account. The service account
-
                           must have permission to invoke Cloud Run services. If empty, defaults to the
-
                           Compute Engine default service account: {project_number}-compute@developer.gserviceaccount.com.
                         type: string
                       serviceAccountEmailRef:
@@ -904,26 +777,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -937,9 +804,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -955,26 +821,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -983,20 +843,16 @@ spec:
                             type: object
                         type: object
                       triggerRegion:
-                        description: >-
+                        description: |-
                           The region that the trigger will be in. The trigger will only receive
-
                           events originating in this region. It can be the same
-
                           region as the function, a different region or multi-region, or the global
-
                           region. If not provided, defaults to the same region as the function.
                         type: string
                     type: object
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
-
                       It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
                     type: string
                   labels:
@@ -1009,15 +865,13 @@ spec:
                     description: The location of this cloud function.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   serviceConfig:
-                    description: >-
+                    description: |-
                       Describes the Service being deployed.
-
                       Structure is documented below.
                     properties:
                       allTrafficOnLatestRevision:
@@ -1027,11 +881,9 @@ spec:
                         description: The number of CPUs used in a single container instance. Default value is calculated from available memory.
                         type: string
                       availableMemory:
-                        description: >-
+                        description: |-
                           The amount of memory available for a function.
-
                           Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
-
                           supplied the value is interpreted as bytes.
                         type: string
                       binaryAuthorizationPolicy:
@@ -1044,32 +896,27 @@ spec:
                         type: object
                         x-kubernetes-map-type: granular
                       ingressSettings:
-                        description: >-
+                        description: |-
                           Available ingress settings. Defaults to "ALLOW_ALL" if unspecified.
-
                           Default value is ALLOW_ALL.
-
                           Possible values are: ALLOW_ALL, ALLOW_INTERNAL_ONLY, ALLOW_INTERNAL_AND_GCLB.
                         type: string
                       maxInstanceCount:
-                        description: >-
+                        description: |-
                           The limit on the maximum number of function instances that may coexist at a
-
                           given time.
                         type: number
                       maxInstanceRequestConcurrency:
                         description: Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
                         type: number
                       minInstanceCount:
-                        description: >-
+                        description: |-
                           The limit on the minimum number of function instances that may coexist at a
-
                           given time.
                         type: number
                       secretEnvironmentVariables:
-                        description: >-
+                        description: |-
                           Secret environment variables configuration.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1096,26 +943,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1129,9 +970,8 @@ spec:
                               description: Selector for a Secret in secretmanager to populate secret.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -1147,26 +987,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1180,9 +1014,8 @@ spec:
                           type: object
                         type: array
                       secretVolumes:
-                        description: >-
+                        description: |-
                           Secret volumes configuration.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1209,26 +1042,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1242,9 +1069,8 @@ spec:
                               description: Selector for a Secret in secretmanager to populate secret.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -1260,26 +1086,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -1288,9 +1108,8 @@ spec:
                                   type: object
                               type: object
                             versions:
-                              description: >-
+                              description: |-
                                 List of secret versions to mount for this secret. If empty, the latest version of the secret will be made available in a file named after the secret under the mount point.'
-
                                 Structure is documented below.
                               items:
                                 properties:
@@ -1324,26 +1143,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1357,9 +1170,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1375,26 +1187,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1403,20 +1209,17 @@ spec:
                             type: object
                         type: object
                       timeoutSeconds:
-                        description: >-
+                        description: |-
                           The function execution timeout. Execution is considered failed and
-
                           can be terminated if the function is not completed at the end of the
-
                           timeout period. Defaults to 60 seconds.
                         type: number
                       vpcConnector:
                         description: The Serverless VPC Access connector that this cloud function can connect to.
                         type: string
                       vpcConnectorEgressSettings:
-                        description: >-
+                        description: |-
                           Available egress settings.
-
                           Possible values are: VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, ALL_TRAFFIC.
                         type: string
                     type: object
@@ -1424,39 +1227,27 @@ spec:
                 - location
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   buildConfig:
-                    description: >-
+                    description: |-
                       Describes the Build step of the function that builds a container
-
                       from the given source.
-
                       Structure is documented below.
                     properties:
                       automaticUpdatePolicy:
-                        description: >-
+                        description: |-
                           Security patches are applied automatically to the runtime without requiring
-
                           the function to be redeployed.
                         type: object
                       dockerRepository:
@@ -1476,26 +1267,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1509,9 +1294,8 @@ spec:
                         description: Selector for a RegistryRepository in artifact to populate dockerRepository.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1527,26 +1311,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1555,15 +1333,11 @@ spec:
                             type: object
                         type: object
                       entryPoint:
-                        description: >-
+                        description: |-
                           The name of the function (as defined in source code) that will be executed.
-
                           Defaults to the resource name suffix, if not specified. For backward
-
                           compatibility, if function with given name is not found, then the system
-
                           will try to use function named "function". For Node.js this is name of a
-
                           function exported by the module specified in source_location.
                         type: string
                       environmentVariables:
@@ -1573,15 +1347,13 @@ spec:
                         type: object
                         x-kubernetes-map-type: granular
                       onDeployUpdatePolicy:
-                        description: >-
+                        description: |-
                           Security patches are only applied when a function is redeployed.
-
                           Structure is documented below.
                         type: object
                       runtime:
-                        description: >-
+                        description: |-
                           The runtime in which to run the function. Required when deploying a new
-
                           function, optional when updating an existing function.
                         type: string
                       serviceAccount:
@@ -1601,26 +1373,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1634,9 +1400,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate serviceAccount.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1652,26 +1417,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1680,15 +1439,13 @@ spec:
                             type: object
                         type: object
                       source:
-                        description: >-
+                        description: |-
                           The location of the function source code.
-
                           Structure is documented below.
                         properties:
                           repoSource:
-                            description: >-
+                            description: |-
                               If provided, get the source from this location in a Cloud Source Repository.
-
                               Structure is documented below.
                             properties:
                               branchName:
@@ -1701,9 +1458,8 @@ spec:
                                 description: Directory, relative to the source root, in which to run the build.
                                 type: string
                               invertRegex:
-                                description: >-
+                                description: |-
                                   Only trigger a build if the revision regex does
-
                                   NOT match the revision regex.
                                 type: boolean
                               projectId:
@@ -1717,9 +1473,8 @@ spec:
                                 type: string
                             type: object
                           storageSource:
-                            description: >-
+                            description: |-
                               If provided, get the source from this location in Google Cloud Storage.
-
                               Structure is documented below.
                             properties:
                               bucket:
@@ -1739,26 +1494,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -1772,9 +1521,8 @@ spec:
                                 description: Selector for a Bucket in storage to populate bucket.
                                 properties:
                                   matchControllerRef:
-                                    description: >-
+                                    description: |-
                                       MatchControllerRef ensures an object with the same controller reference
-
                                       as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
@@ -1790,26 +1538,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -1818,9 +1560,8 @@ spec:
                                     type: object
                                 type: object
                               generation:
-                                description: >-
+                                description: |-
                                   Google Cloud Storage generation for the object. If the generation
-
                                   is omitted, the latest generation will be used.
                                 type: number
                               object:
@@ -1840,26 +1581,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -1873,9 +1608,8 @@ spec:
                                 description: Selector for a BucketObject in storage to populate object.
                                 properties:
                                   matchControllerRef:
-                                    description: >-
+                                    description: |-
                                       MatchControllerRef ensures an object with the same controller reference
-
                                       as the selecting object is selected.
                                     type: boolean
                                   matchLabels:
@@ -1891,26 +1625,20 @@ spec:
                                     properties:
                                       resolution:
                                         default: Required
-                                        description: >-
+                                        description: |-
                                           Resolution specifies whether resolution of this reference is required.
-
                                           The default is 'Required', which means the reconcile will fail if the
-
                                           reference cannot be resolved. 'Optional' means this reference will be
-
                                           a no-op if it cannot be resolved.
                                         enum:
                                         - Required
                                         - Optional
                                         type: string
                                       resolve:
-                                        description: >-
+                                        description: |-
                                           Resolve specifies when this reference should be resolved. The default
-
                                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                           the corresponding field is not present. Use 'Always' to resolve the
-
                                           reference on every reconcile.
                                         enum:
                                         - Always
@@ -1937,26 +1665,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1970,9 +1692,8 @@ spec:
                         description: Selector for a WorkerPool in cloudbuild to populate workerPool.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1988,26 +1709,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2020,44 +1735,34 @@ spec:
                     description: User-provided description of a function.
                     type: string
                   eventTrigger:
-                    description: >-
+                    description: |-
                       An Eventarc trigger managed by Google Cloud Functions that fires events in
-
                       response to a condition in another service.
-
                       Structure is documented below.
                     properties:
                       eventFilters:
-                        description: >-
+                        description: |-
                           Criteria used to filter events.
-
                           Structure is documented below.
                         items:
                           properties:
                             attribute:
-                              description: >-
+                              description: |-
                                 'Required. The name of a CloudEvents attribute.
-
                                 Currently, only a subset of attributes are supported for filtering. Use the gcloud eventarc providers describe command to learn more about events and their attributes.
-
                                 Do not filter for the 'type' attribute here, as this is already achieved by the resource's event_type attribute.
                               type: string
                             operator:
-                              description: >-
+                              description: |-
                                 Optional. The operator used for matching the events with the value of
-
                                 the filter. If not specified, only events that have an exact key-value
-
                                 pair specified in the filter are matched.
-
                                 The only allowed value is match-path-pattern.
-
                                 See documentation on path patterns here'
                               type: string
                             value:
-                              description: >-
+                              description: |-
                                 Required. The value for the attribute.
-
                                 If the operator field is set as match-path-pattern, this value can be a path pattern instead of an exact value.
                               type: string
                             valueRef:
@@ -2074,26 +1779,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -2107,9 +1806,8 @@ spec:
                               description: Selector for a Bucket in storage to populate value.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -2125,26 +1823,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -2158,9 +1850,8 @@ spec:
                         description: Required. The type of event to observe.
                         type: string
                       pubsubTopic:
-                        description: >-
+                        description: |-
                           The name of a Pub/Sub topic in the same project that will be used
-
                           as the transport topic for the event delivery.
                         type: string
                       pubsubTopicRef:
@@ -2177,26 +1868,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2210,9 +1895,8 @@ spec:
                         description: Selector for a Topic in pubsub to populate pubsubTopic.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2228,26 +1912,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2256,19 +1934,15 @@ spec:
                             type: object
                         type: object
                       retryPolicy:
-                        description: >-
+                        description: |-
                           Describes the retry policy in case of function's execution failure.
-
                           Retried execution is charged as any other execution.
-
                           Possible values are: RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY, RETRY_POLICY_RETRY.
                         type: string
                       serviceAccountEmail:
-                        description: >-
+                        description: |-
                           Optional. The email of the trigger's service account. The service account
-
                           must have permission to invoke Cloud Run services. If empty, defaults to the
-
                           Compute Engine default service account: {project_number}-compute@developer.gserviceaccount.com.
                         type: string
                       serviceAccountEmailRef:
@@ -2285,26 +1959,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2318,9 +1986,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2336,26 +2003,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2364,20 +2025,16 @@ spec:
                             type: object
                         type: object
                       triggerRegion:
-                        description: >-
+                        description: |-
                           The region that the trigger will be in. The trigger will only receive
-
                           events originating in this region. It can be the same
-
                           region as the function, a different region or multi-region, or the global
-
                           region. If not provided, defaults to the same region as the function.
                         type: string
                     type: object
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
-
                       It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
                     type: string
                   labels:
@@ -2387,15 +2044,13 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   serviceConfig:
-                    description: >-
+                    description: |-
                       Describes the Service being deployed.
-
                       Structure is documented below.
                     properties:
                       allTrafficOnLatestRevision:
@@ -2405,11 +2060,9 @@ spec:
                         description: The number of CPUs used in a single container instance. Default value is calculated from available memory.
                         type: string
                       availableMemory:
-                        description: >-
+                        description: |-
                           The amount of memory available for a function.
-
                           Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
-
                           supplied the value is interpreted as bytes.
                         type: string
                       binaryAuthorizationPolicy:
@@ -2422,32 +2075,27 @@ spec:
                         type: object
                         x-kubernetes-map-type: granular
                       ingressSettings:
-                        description: >-
+                        description: |-
                           Available ingress settings. Defaults to "ALLOW_ALL" if unspecified.
-
                           Default value is ALLOW_ALL.
-
                           Possible values are: ALLOW_ALL, ALLOW_INTERNAL_ONLY, ALLOW_INTERNAL_AND_GCLB.
                         type: string
                       maxInstanceCount:
-                        description: >-
+                        description: |-
                           The limit on the maximum number of function instances that may coexist at a
-
                           given time.
                         type: number
                       maxInstanceRequestConcurrency:
                         description: Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
                         type: number
                       minInstanceCount:
-                        description: >-
+                        description: |-
                           The limit on the minimum number of function instances that may coexist at a
-
                           given time.
                         type: number
                       secretEnvironmentVariables:
-                        description: >-
+                        description: |-
                           Secret environment variables configuration.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -2474,26 +2122,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -2507,9 +2149,8 @@ spec:
                               description: Selector for a Secret in secretmanager to populate secret.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -2525,26 +2166,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -2558,9 +2193,8 @@ spec:
                           type: object
                         type: array
                       secretVolumes:
-                        description: >-
+                        description: |-
                           Secret volumes configuration.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -2587,26 +2221,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -2620,9 +2248,8 @@ spec:
                               description: Selector for a Secret in secretmanager to populate secret.
                               properties:
                                 matchControllerRef:
-                                  description: >-
+                                  description: |-
                                     MatchControllerRef ensures an object with the same controller reference
-
                                     as the selecting object is selected.
                                   type: boolean
                                 matchLabels:
@@ -2638,26 +2265,20 @@ spec:
                                   properties:
                                     resolution:
                                       default: Required
-                                      description: >-
+                                      description: |-
                                         Resolution specifies whether resolution of this reference is required.
-
                                         The default is 'Required', which means the reconcile will fail if the
-
                                         reference cannot be resolved. 'Optional' means this reference will be
-
                                         a no-op if it cannot be resolved.
                                       enum:
                                       - Required
                                       - Optional
                                       type: string
                                     resolve:
-                                      description: >-
+                                      description: |-
                                         Resolve specifies when this reference should be resolved. The default
-
                                         is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                         the corresponding field is not present. Use 'Always' to resolve the
-
                                         reference on every reconcile.
                                       enum:
                                       - Always
@@ -2666,9 +2287,8 @@ spec:
                                   type: object
                               type: object
                             versions:
-                              description: >-
+                              description: |-
                                 List of secret versions to mount for this secret. If empty, the latest version of the secret will be made available in a file named after the secret under the mount point.'
-
                                 Structure is documented below.
                               items:
                                 properties:
@@ -2702,26 +2322,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2735,9 +2349,8 @@ spec:
                         description: Selector for a ServiceAccount in cloudplatform to populate serviceAccountEmail.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -2753,26 +2366,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -2781,20 +2388,17 @@ spec:
                             type: object
                         type: object
                       timeoutSeconds:
-                        description: >-
+                        description: |-
                           The function execution timeout. Execution is considered failed and
-
                           can be terminated if the function is not completed at the end of the
-
                           timeout period. Defaults to 60 seconds.
                         type: number
                       vpcConnector:
                         description: The Serverless VPC Access connector that this cloud function can connect to.
                         type: string
                       vpcConnectorEgressSettings:
-                        description: >-
+                        description: |-
                           Available egress settings.
-
                           Possible values are: VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, ALL_TRAFFIC.
                         type: string
                     type: object
@@ -2802,22 +2406,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -2832,11 +2430,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -2850,13 +2446,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -2874,40 +2467,31 @@ spec:
               atProvider:
                 properties:
                   buildConfig:
-                    description: >-
+                    description: |-
                       Describes the Build step of the function that builds a container
-
                       from the given source.
-
                       Structure is documented below.
                     properties:
                       automaticUpdatePolicy:
-                        description: >-
+                        description: |-
                           Security patches are applied automatically to the runtime without requiring
-
                           the function to be redeployed.
                         type: object
                       build:
-                        description: >-
+                        description: |-
                           (Output)
-
                           The Cloud Build name of the latest successful
-
                           deployment of the function.
                         type: string
                       dockerRepository:
                         description: User managed repository created in Artifact Registry optionally with a customer managed encryption key.
                         type: string
                       entryPoint:
-                        description: >-
+                        description: |-
                           The name of the function (as defined in source code) that will be executed.
-
                           Defaults to the resource name suffix, if not specified. For backward
-
                           compatibility, if function with given name is not found, then the system
-
                           will try to use function named "function". For Node.js this is name of a
-
                           function exported by the module specified in source_location.
                         type: string
                       environmentVariables:
@@ -2917,37 +2501,32 @@ spec:
                         type: object
                         x-kubernetes-map-type: granular
                       onDeployUpdatePolicy:
-                        description: >-
+                        description: |-
                           Security patches are only applied when a function is redeployed.
-
                           Structure is documented below.
                         properties:
                           runtimeVersion:
-                            description: >-
+                            description: |-
                               (Output)
-
                               The runtime version which was used during latest function deployment.
                             type: string
                         type: object
                       runtime:
-                        description: >-
+                        description: |-
                           The runtime in which to run the function. Required when deploying a new
-
                           function, optional when updating an existing function.
                         type: string
                       serviceAccount:
                         description: The fully-qualified name of the service account to be used for building the container.
                         type: string
                       source:
-                        description: >-
+                        description: |-
                           The location of the function source code.
-
                           Structure is documented below.
                         properties:
                           repoSource:
-                            description: >-
+                            description: |-
                               If provided, get the source from this location in a Cloud Source Repository.
-
                               Structure is documented below.
                             properties:
                               branchName:
@@ -2960,9 +2539,8 @@ spec:
                                 description: Directory, relative to the source root, in which to run the build.
                                 type: string
                               invertRegex:
-                                description: >-
+                                description: |-
                                   Only trigger a build if the revision regex does
-
                                   NOT match the revision regex.
                                 type: boolean
                               projectId:
@@ -2976,18 +2554,16 @@ spec:
                                 type: string
                             type: object
                           storageSource:
-                            description: >-
+                            description: |-
                               If provided, get the source from this location in Google Cloud Storage.
-
                               Structure is documented below.
                             properties:
                               bucket:
                                 description: Google Cloud Storage bucket containing the source
                                 type: string
                               generation:
-                                description: >-
+                                description: |-
                                   Google Cloud Storage generation for the object. If the generation
-
                                   is omitted, the latest generation will be used.
                                 type: number
                               object:
@@ -3012,44 +2588,34 @@ spec:
                     description: The environment the function is hosted on.
                     type: string
                   eventTrigger:
-                    description: >-
+                    description: |-
                       An Eventarc trigger managed by Google Cloud Functions that fires events in
-
                       response to a condition in another service.
-
                       Structure is documented below.
                     properties:
                       eventFilters:
-                        description: >-
+                        description: |-
                           Criteria used to filter events.
-
                           Structure is documented below.
                         items:
                           properties:
                             attribute:
-                              description: >-
+                              description: |-
                                 'Required. The name of a CloudEvents attribute.
-
                                 Currently, only a subset of attributes are supported for filtering. Use the gcloud eventarc providers describe command to learn more about events and their attributes.
-
                                 Do not filter for the 'type' attribute here, as this is already achieved by the resource's event_type attribute.
                               type: string
                             operator:
-                              description: >-
+                              description: |-
                                 Optional. The operator used for matching the events with the value of
-
                                 the filter. If not specified, only events that have an exact key-value
-
                                 pair specified in the filter are matched.
-
                                 The only allowed value is match-path-pattern.
-
                                 See documentation on path patterns here'
                               type: string
                             value:
-                              description: >-
+                              description: |-
                                 Required. The value for the attribute.
-
                                 If the operator field is set as match-path-pattern, this value can be a path pattern instead of an exact value.
                               type: string
                           type: object
@@ -3058,41 +2624,32 @@ spec:
                         description: Required. The type of event to observe.
                         type: string
                       pubsubTopic:
-                        description: >-
+                        description: |-
                           The name of a Pub/Sub topic in the same project that will be used
-
                           as the transport topic for the event delivery.
                         type: string
                       retryPolicy:
-                        description: >-
+                        description: |-
                           Describes the retry policy in case of function's execution failure.
-
                           Retried execution is charged as any other execution.
-
                           Possible values are: RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY, RETRY_POLICY_RETRY.
                         type: string
                       serviceAccountEmail:
-                        description: >-
+                        description: |-
                           Optional. The email of the trigger's service account. The service account
-
                           must have permission to invoke Cloud Run services. If empty, defaults to the
-
                           Compute Engine default service account: {project_number}-compute@developer.gserviceaccount.com.
                         type: string
                       trigger:
-                        description: >-
+                        description: |-
                           (Output)
-
                           Output only. The resource name of the Eventarc trigger.
                         type: string
                       triggerRegion:
-                        description: >-
+                        description: |-
                           The region that the trigger will be in. The trigger will only receive
-
                           events originating in this region. It can be the same
-
                           region as the function, a different region or multi-region, or the global
-
                           region. If not provided, defaults to the same region as the function.
                         type: string
                     type: object
@@ -3100,9 +2657,8 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/functions/{{name}}
                     type: string
                   kmsKeyName:
-                    description: >-
+                    description: |-
                       Resource name of a KMS crypto key (managed by the user) used to encrypt/decrypt function resources.
-
                       It must match the pattern projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}.
                     type: string
                   labels:
@@ -3115,15 +2671,13 @@ spec:
                     description: The location of this cloud function.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   serviceConfig:
-                    description: >-
+                    description: |-
                       Describes the Service being deployed.
-
                       Structure is documented below.
                     properties:
                       allTrafficOnLatestRevision:
@@ -3133,11 +2687,9 @@ spec:
                         description: The number of CPUs used in a single container instance. Default value is calculated from available memory.
                         type: string
                       availableMemory:
-                        description: >-
+                        description: |-
                           The amount of memory available for a function.
-
                           Defaults to 256M. Supported units are k, M, G, Mi, Gi. If no unit is
-
                           supplied the value is interpreted as bytes.
                         type: string
                       binaryAuthorizationPolicy:
@@ -3150,38 +2702,32 @@ spec:
                         type: object
                         x-kubernetes-map-type: granular
                       gcfUri:
-                        description: >-
+                        description: |-
                           (Output)
-
                           URIs of the Service deployed
                         type: string
                       ingressSettings:
-                        description: >-
+                        description: |-
                           Available ingress settings. Defaults to "ALLOW_ALL" if unspecified.
-
                           Default value is ALLOW_ALL.
-
                           Possible values are: ALLOW_ALL, ALLOW_INTERNAL_ONLY, ALLOW_INTERNAL_AND_GCLB.
                         type: string
                       maxInstanceCount:
-                        description: >-
+                        description: |-
                           The limit on the maximum number of function instances that may coexist at a
-
                           given time.
                         type: number
                       maxInstanceRequestConcurrency:
                         description: Sets the maximum number of concurrent requests that each instance can receive. Defaults to 1.
                         type: number
                       minInstanceCount:
-                        description: >-
+                        description: |-
                           The limit on the minimum number of function instances that may coexist at a
-
                           given time.
                         type: number
                       secretEnvironmentVariables:
-                        description: >-
+                        description: |-
                           Secret environment variables configuration.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -3200,9 +2746,8 @@ spec:
                           type: object
                         type: array
                       secretVolumes:
-                        description: >-
+                        description: |-
                           Secret volumes configuration.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -3216,9 +2761,8 @@ spec:
                               description: Name of the secret in secret manager (not the full resource name).
                               type: string
                             versions:
-                              description: >-
+                              description: |-
                                 List of secret versions to mount for this secret. If empty, the latest version of the secret will be made available in a file named after the secret under the mount point.'
-
                                 Structure is documented below.
                               items:
                                 properties:
@@ -3239,26 +2783,22 @@ spec:
                         description: The email of the service account for this function.
                         type: string
                       timeoutSeconds:
-                        description: >-
+                        description: |-
                           The function execution timeout. Execution is considered failed and
-
                           can be terminated if the function is not completed at the end of the
-
                           timeout period. Defaults to 60 seconds.
                         type: number
                       uri:
-                        description: >-
+                        description: |-
                           (Output)
-
                           URI of the Service deployed.
                         type: string
                       vpcConnector:
                         description: The Serverless VPC Access connector that this cloud function can connect to.
                         type: string
                       vpcConnectorEgressSettings:
-                        description: >-
+                        description: |-
                           Available egress settings.
-
                           Possible values are: VPC_CONNECTOR_EGRESS_SETTINGS_UNSPECIFIED, PRIVATE_RANGES_ONLY, ALL_TRAFFIC.
                         type: string
                     type: object
@@ -3268,9 +2808,8 @@ spec:
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -3287,24 +2826,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -3315,9 +2850,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -3331,11 +2865,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

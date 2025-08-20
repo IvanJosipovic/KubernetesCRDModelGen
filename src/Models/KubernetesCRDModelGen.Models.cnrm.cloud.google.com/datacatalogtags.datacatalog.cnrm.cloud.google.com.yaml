@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: datacatalogtags.datacatalog.cnrm.cloud.google.com
 spec:
   group: datacatalog.cnrm.cloud.google.com
@@ -55,7 +54,7 @@ spec:
             description: DataCatalogTagSpec defines the desired state of DataCatalogTag
             properties:
               column:
-                description: >-
+                description: |-
                   Resources like entry can have schemas associated with them. This scope
                    allows you to attach tags to an individual column based on that schema.
 
@@ -99,7 +98,7 @@ spec:
                       description: The value of a tag field with a double type.
                       type: number
                     enumValue:
-                      description: >-
+                      description: |-
                         The value of a tag field with an enum type.
 
                          This value must be one of the allowed values listed in this enum.
@@ -109,7 +108,7 @@ spec:
                           type: string
                       type: object
                     richtextValue:
-                      description: >-
+                      description: |-
                         The value of a tag field with a rich text type.
 
                          The maximum length is 10 MiB as this value holds HTML descriptions
@@ -117,7 +116,7 @@ spec:
                          is 100 KiB.
                       type: string
                     stringValue:
-                      description: >-
+                      description: |-
                         The value of a tag field with a string type.
 
                          The maximum length is 2000 UTF-8 characters.
@@ -131,7 +130,7 @@ spec:
                 description: The DataCatalogTag name. If not given, the metadata.name will be used.
                 type: string
               templateRef:
-                description: >-
+                description: |-
                   Required. The resource name of the tag template this tag uses.
 
                    This field cannot be modified after creation.
@@ -215,7 +214,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

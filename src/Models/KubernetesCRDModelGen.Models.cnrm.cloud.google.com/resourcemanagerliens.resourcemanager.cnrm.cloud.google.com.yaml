@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: resourcemanagerliens.resourcemanager.cnrm.cloud.google.com
 spec:
   group: resourcemanager.cnrm.cloud.google.com
@@ -54,11 +53,9 @@ spec:
           spec:
             properties:
               origin:
-                description: >-
+                description: |-
                   Immutable. A stable, user-visible/meaningful string identifying the origin
-
                   of the Lien, intended to be inspected programmatically. Maximum length of
-
                   200 characters.
                 type: string
               parent:
@@ -91,24 +88,19 @@ spec:
                     type: object
                 type: object
               reason:
-                description: >-
+                description: |-
                   Immutable. Concise user-visible strings indicating why an action cannot be performed
-
                   on a resource. Maximum length of 200 characters.
                 type: string
               resourceID:
                 description: Immutable. Optional. The service-generated name of the resource. Used for acquisition only. Leave unset to create a new resource.
                 type: string
               restrictions:
-                description: >-
+                description: |-
                   Immutable. The types of operations which should be blocked as a result of this Lien.
-
                   Each value should correspond to an IAM permission. The server will validate
-
                   the permissions against those for which Liens are supported.  An empty
-
                   list is meaningless and will be rejected.
-
                   e.g. ['resourcemanager.projects.delete'].
                 items:
                   type: string
@@ -161,7 +153,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

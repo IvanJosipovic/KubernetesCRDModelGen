@@ -36,25 +36,18 @@ spec:
         description: TagTemplate is the Schema for the TagTemplates API. A tag template defines a tag, which can have one or more typed fields.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -68,9 +61,8 @@ spec:
                     description: The display name for this template.
                     type: string
                   fields:
-                    description: >-
+                    description: |-
                       Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. The change of field_id will be resulting in re-creating of field. The change of primitive_type will be resulting in re-creating of field, however if the field is a required, you cannot update it.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -87,39 +79,29 @@ spec:
                           description: Whether this is a required field. Defaults to false.
                           type: boolean
                         order:
-                          description: >-
+                          description: |-
                             The order of this field with respect to other fields in this tag template.
-
                             A higher value indicates a more important field. The value can be negative.
-
                             Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
                           type: number
                         type:
-                          description: >-
+                          description: |-
                             The type of value this tag field can contain.
-
                             Structure is documented below.
                           properties:
                             enumType:
-                              description: >-
+                              description: |-
                                 Represents an enum type.
-
                                 Exactly one of primitive_type or enum_type must be set
-
                                 Structure is documented below.
                               properties:
                                 allowedValues:
-                                  description: >-
+                                  description: |-
                                     The set of allowed values for this enum. The display names of the
-
                                     values must be case-insensitively unique within this set. Currently,
-
                                     enum values can only be added to the list of allowed values. Deletion
-
                                     and renaming of enum values are not supported.
-
                                     Can have up to 500 allowed values.
-
                                     Structure is documented below.
                                   items:
                                     properties:
@@ -130,11 +112,9 @@ spec:
                                   type: array
                               type: object
                             primitiveType:
-                              description: >-
+                              description: |-
                                 Represents primitive types - string, bool etc.
-
                                 Exactly one of primitive_type or enum_type must be set
-
                                 Possible values are: DOUBLE, STRING, BOOL, TIMESTAMP.
                               type: string
                           type: object
@@ -144,9 +124,8 @@ spec:
                     description: This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
                     type: boolean
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   region:
@@ -154,34 +133,24 @@ spec:
                     type: string
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   displayName:
                     description: The display name for this template.
                     type: string
                   fields:
-                    description: >-
+                    description: |-
                       Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. The change of field_id will be resulting in re-creating of field. The change of primitive_type will be resulting in re-creating of field, however if the field is a required, you cannot update it.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -198,39 +167,29 @@ spec:
                           description: Whether this is a required field. Defaults to false.
                           type: boolean
                         order:
-                          description: >-
+                          description: |-
                             The order of this field with respect to other fields in this tag template.
-
                             A higher value indicates a more important field. The value can be negative.
-
                             Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
                           type: number
                         type:
-                          description: >-
+                          description: |-
                             The type of value this tag field can contain.
-
                             Structure is documented below.
                           properties:
                             enumType:
-                              description: >-
+                              description: |-
                                 Represents an enum type.
-
                                 Exactly one of primitive_type or enum_type must be set
-
                                 Structure is documented below.
                               properties:
                                 allowedValues:
-                                  description: >-
+                                  description: |-
                                     The set of allowed values for this enum. The display names of the
-
                                     values must be case-insensitively unique within this set. Currently,
-
                                     enum values can only be added to the list of allowed values. Deletion
-
                                     and renaming of enum values are not supported.
-
                                     Can have up to 500 allowed values.
-
                                     Structure is documented below.
                                   items:
                                     properties:
@@ -241,11 +200,9 @@ spec:
                                   type: array
                               type: object
                             primitiveType:
-                              description: >-
+                              description: |-
                                 Represents primitive types - string, bool etc.
-
                                 Exactly one of primitive_type or enum_type must be set
-
                                 Possible values are: DOUBLE, STRING, BOOL, TIMESTAMP.
                               type: string
                           type: object
@@ -255,31 +212,24 @@ spec:
                     description: This confirms the deletion of any possible tags using this template. Must be set to true in order to delete the tag template.
                     type: boolean
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -294,11 +244,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -312,13 +260,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -342,9 +287,8 @@ spec:
                     description: The display name for this template.
                     type: string
                   fields:
-                    description: >-
+                    description: |-
                       Set of tag template field IDs and the settings for the field. This set is an exhaustive list of the allowed fields. This set must contain at least one field and at most 500 fields. The change of field_id will be resulting in re-creating of field. The change of primitive_type will be resulting in re-creating of field, however if the field is a required, you cannot update it.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -361,45 +305,34 @@ spec:
                           description: Whether this is a required field. Defaults to false.
                           type: boolean
                         name:
-                          description: >-
+                          description: |-
                             (Output)
-
                             The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
                           type: string
                         order:
-                          description: >-
+                          description: |-
                             The order of this field with respect to other fields in this tag template.
-
                             A higher value indicates a more important field. The value can be negative.
-
                             Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
                           type: number
                         type:
-                          description: >-
+                          description: |-
                             The type of value this tag field can contain.
-
                             Structure is documented below.
                           properties:
                             enumType:
-                              description: >-
+                              description: |-
                                 Represents an enum type.
-
                                 Exactly one of primitive_type or enum_type must be set
-
                                 Structure is documented below.
                               properties:
                                 allowedValues:
-                                  description: >-
+                                  description: |-
                                     The set of allowed values for this enum. The display names of the
-
                                     values must be case-insensitively unique within this set. Currently,
-
                                     enum values can only be added to the list of allowed values. Deletion
-
                                     and renaming of enum values are not supported.
-
                                     Can have up to 500 allowed values.
-
                                     Structure is documented below.
                                   items:
                                     properties:
@@ -410,11 +343,9 @@ spec:
                                   type: array
                               type: object
                             primitiveType:
-                              description: >-
+                              description: |-
                                 Represents primitive types - string, bool etc.
-
                                 Exactly one of primitive_type or enum_type must be set
-
                                 Possible values are: DOUBLE, STRING, BOOL, TIMESTAMP.
                               type: string
                           type: object
@@ -430,9 +361,8 @@ spec:
                     description: 'The resource name of the tag template in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}'
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   region:
@@ -445,24 +375,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -473,9 +399,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -489,11 +414,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

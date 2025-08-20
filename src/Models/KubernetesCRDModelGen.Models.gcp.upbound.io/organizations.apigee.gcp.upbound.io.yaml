@@ -36,25 +36,18 @@ spec:
         description: Organization is the Schema for the Organizations API. An
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -91,19 +78,15 @@ spec:
                     description: Cloud KMS key name used for encrypting API consumer data.
                     type: string
                   apiConsumerDataLocation:
-                    description: >-
+                    description: |-
                       This field is needed only for customers using non-default data residency regions.
-
                       Apigee stores some control plane data only in single region.
-
                       This field determines which single region Apigee should use.
                     type: string
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-
                       See Getting started with the Service Networking API.
-
                       Valid only when RuntimeType is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
                     type: string
                   authorizedNetworkRef:
@@ -117,26 +100,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -150,9 +127,8 @@ spec:
                     description: Selector for a Network in compute to populate authorizedNetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -165,26 +141,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -196,24 +166,19 @@ spec:
                     description: Billing type of the Apigee organization. See Apigee pricing.
                     type: string
                   controlPlaneEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-
                       Only used for the data residency region "US" or "EU".
                     type: string
                   description:
                     description: Description of the Apigee organization.
                     type: string
                   disableVpcPeering:
-                    description: >-
+                    description: |-
                       Flag that specifies whether the VPC Peering through Private Google Access should be
-
                       disabled between the consumer network and Apigee. Required if an authorizedNetwork
-
                       on the consumer project is not provided, in which case the flag should be set to true.
-
                       Valid only when RuntimeType is set to CLOUD. The value must be set before the creation
-
                       of any Apigee runtime instance and can be updated only when there are no runtime instances.
                     type: boolean
                   displayName:
@@ -223,16 +188,14 @@ spec:
                     description: The project ID associated with the Apigee organization.
                     type: string
                   properties:
-                    description: >-
+                    description: |-
                       Properties defined in the Apigee organization profile.
-
                       Structure is documented below.
                     items:
                       properties:
                         property:
-                          description: >-
+                          description: |-
                             List of all properties in the object.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -247,27 +210,19 @@ spec:
                       type: object
                     type: array
                   retention:
-                    description: >-
+                    description: |-
                       Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
-
                       is not EVALUATION). It controls how long Organization data will be retained after the initial delete
-
                       operation completes. During this period, the Organization may be restored to its last known state.
-
                       After this period, the Organization will no longer be able to be restored.
-
                       Default value is DELETION_RETENTION_UNSPECIFIED.
-
                       Possible values are: DELETION_RETENTION_UNSPECIFIED, MINIMUM.
                     type: string
                   runtimeDatabaseEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
-
                       Update is not allowed after the organization is created.
-
                       If not specified, a Google-Managed encryption key will be used.
-
                       Valid only when RuntimeType is CLOUD. For example: projects/foo/locations/us/keyRings/bar/cryptoKeys/baz.
                     type: string
                   runtimeDatabaseEncryptionKeyNameRef:
@@ -281,26 +236,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -314,9 +263,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -329,26 +277,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -357,34 +299,23 @@ spec:
                         type: object
                     type: object
                   runtimeType:
-                    description: >-
+                    description: |-
                       Runtime type of the Apigee organization based on the Apigee subscription purchased.
-
                       Default value is CLOUD.
-
                       Possible values are: CLOUD, HYBRID.
                     type: string
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   analyticsRegion:
@@ -394,19 +325,15 @@ spec:
                     description: Cloud KMS key name used for encrypting API consumer data.
                     type: string
                   apiConsumerDataLocation:
-                    description: >-
+                    description: |-
                       This field is needed only for customers using non-default data residency regions.
-
                       Apigee stores some control plane data only in single region.
-
                       This field determines which single region Apigee should use.
                     type: string
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-
                       See Getting started with the Service Networking API.
-
                       Valid only when RuntimeType is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
                     type: string
                   authorizedNetworkRef:
@@ -420,26 +347,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -453,9 +374,8 @@ spec:
                     description: Selector for a Network in compute to populate authorizedNetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -468,26 +388,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -499,24 +413,19 @@ spec:
                     description: Billing type of the Apigee organization. See Apigee pricing.
                     type: string
                   controlPlaneEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-
                       Only used for the data residency region "US" or "EU".
                     type: string
                   description:
                     description: Description of the Apigee organization.
                     type: string
                   disableVpcPeering:
-                    description: >-
+                    description: |-
                       Flag that specifies whether the VPC Peering through Private Google Access should be
-
                       disabled between the consumer network and Apigee. Required if an authorizedNetwork
-
                       on the consumer project is not provided, in which case the flag should be set to true.
-
                       Valid only when RuntimeType is set to CLOUD. The value must be set before the creation
-
                       of any Apigee runtime instance and can be updated only when there are no runtime instances.
                     type: boolean
                   displayName:
@@ -526,16 +435,14 @@ spec:
                     description: The project ID associated with the Apigee organization.
                     type: string
                   properties:
-                    description: >-
+                    description: |-
                       Properties defined in the Apigee organization profile.
-
                       Structure is documented below.
                     items:
                       properties:
                         property:
-                          description: >-
+                          description: |-
                             List of all properties in the object.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -550,27 +457,19 @@ spec:
                       type: object
                     type: array
                   retention:
-                    description: >-
+                    description: |-
                       Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
-
                       is not EVALUATION). It controls how long Organization data will be retained after the initial delete
-
                       operation completes. During this period, the Organization may be restored to its last known state.
-
                       After this period, the Organization will no longer be able to be restored.
-
                       Default value is DELETION_RETENTION_UNSPECIFIED.
-
                       Possible values are: DELETION_RETENTION_UNSPECIFIED, MINIMUM.
                     type: string
                   runtimeDatabaseEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
-
                       Update is not allowed after the organization is created.
-
                       If not specified, a Google-Managed encryption key will be used.
-
                       Valid only when RuntimeType is CLOUD. For example: projects/foo/locations/us/keyRings/bar/cryptoKeys/baz.
                     type: string
                   runtimeDatabaseEncryptionKeyNameRef:
@@ -584,26 +483,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -617,9 +510,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -632,26 +524,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -660,41 +546,29 @@ spec:
                         type: object
                     type: object
                   runtimeType:
-                    description: >-
+                    description: |-
                       Runtime type of the Apigee organization based on the Apigee subscription purchased.
-
                       Default value is CLOUD.
-
                       Possible values are: CLOUD, HYBRID.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -708,11 +582,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -723,26 +595,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -753,13 +619,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -790,52 +653,42 @@ spec:
                     description: Cloud KMS key name used for encrypting API consumer data.
                     type: string
                   apiConsumerDataLocation:
-                    description: >-
+                    description: |-
                       This field is needed only for customers using non-default data residency regions.
-
                       Apigee stores some control plane data only in single region.
-
                       This field determines which single region Apigee should use.
                     type: string
                   apigeeProjectId:
                     description: Output only. Project ID of the Apigee Tenant Project.
                     type: string
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-
                       See Getting started with the Service Networking API.
-
                       Valid only when RuntimeType is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
                     type: string
                   billingType:
                     description: Billing type of the Apigee organization. See Apigee pricing.
                     type: string
                   caCertificate:
-                    description: >-
+                    description: |-
                       Output only. Base64-encoded public certificate for the root CA of the Apigee organization.
-
                       Valid only when RuntimeType is CLOUD. A base64-encoded string.
                     type: string
                   controlPlaneEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-
                       Only used for the data residency region "US" or "EU".
                     type: string
                   description:
                     description: Description of the Apigee organization.
                     type: string
                   disableVpcPeering:
-                    description: >-
+                    description: |-
                       Flag that specifies whether the VPC Peering through Private Google Access should be
-
                       disabled between the consumer network and Apigee. Required if an authorizedNetwork
-
                       on the consumer project is not provided, in which case the flag should be set to true.
-
                       Valid only when RuntimeType is set to CLOUD. The value must be set before the creation
-
                       of any Apigee runtime instance and can be updated only when there are no runtime instances.
                     type: boolean
                   displayName:
@@ -851,16 +704,14 @@ spec:
                     description: The project ID associated with the Apigee organization.
                     type: string
                   properties:
-                    description: >-
+                    description: |-
                       Properties defined in the Apigee organization profile.
-
                       Structure is documented below.
                     items:
                       properties:
                         property:
-                          description: >-
+                          description: |-
                             List of all properties in the object.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -875,41 +726,30 @@ spec:
                       type: object
                     type: array
                   retention:
-                    description: >-
+                    description: |-
                       Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
-
                       is not EVALUATION). It controls how long Organization data will be retained after the initial delete
-
                       operation completes. During this period, the Organization may be restored to its last known state.
-
                       After this period, the Organization will no longer be able to be restored.
-
                       Default value is DELETION_RETENTION_UNSPECIFIED.
-
                       Possible values are: DELETION_RETENTION_UNSPECIFIED, MINIMUM.
                     type: string
                   runtimeDatabaseEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
-
                       Update is not allowed after the organization is created.
-
                       If not specified, a Google-Managed encryption key will be used.
-
                       Valid only when RuntimeType is CLOUD. For example: projects/foo/locations/us/keyRings/bar/cryptoKeys/baz.
                     type: string
                   runtimeType:
-                    description: >-
+                    description: |-
                       Runtime type of the Apigee organization based on the Apigee subscription purchased.
-
                       Default value is CLOUD.
-
                       Possible values are: CLOUD, HYBRID.
                     type: string
                   subscriptionType:
-                    description: >-
+                    description: |-
                       Output only. Subscription type of the Apigee organization.
-
                       Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased).
                     type: string
                 type: object
@@ -919,24 +759,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -947,9 +783,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -963,11 +798,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -998,25 +831,18 @@ spec:
         description: Organization is the Schema for the Organizations API. An
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1026,19 +852,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -1053,19 +873,15 @@ spec:
                     description: Cloud KMS key name used for encrypting API consumer data.
                     type: string
                   apiConsumerDataLocation:
-                    description: >-
+                    description: |-
                       This field is needed only for customers using non-default data residency regions.
-
                       Apigee stores some control plane data only in single region.
-
                       This field determines which single region Apigee should use.
                     type: string
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-
                       See Getting started with the Service Networking API.
-
                       Valid only when RuntimeType is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
                     type: string
                   authorizedNetworkRef:
@@ -1079,26 +895,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1112,9 +922,8 @@ spec:
                     description: Selector for a Network in compute to populate authorizedNetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1127,26 +936,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1158,24 +961,19 @@ spec:
                     description: Billing type of the Apigee organization. See Apigee pricing.
                     type: string
                   controlPlaneEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-
                       Only used for the data residency region "US" or "EU".
                     type: string
                   description:
                     description: Description of the Apigee organization.
                     type: string
                   disableVpcPeering:
-                    description: >-
+                    description: |-
                       Flag that specifies whether the VPC Peering through Private Google Access should be
-
                       disabled between the consumer network and Apigee. Required if an authorizedNetwork
-
                       on the consumer project is not provided, in which case the flag should be set to true.
-
                       Valid only when RuntimeType is set to CLOUD. The value must be set before the creation
-
                       of any Apigee runtime instance and can be updated only when there are no runtime instances.
                     type: boolean
                   displayName:
@@ -1185,15 +983,13 @@ spec:
                     description: The project ID associated with the Apigee organization.
                     type: string
                   properties:
-                    description: >-
+                    description: |-
                       Properties defined in the Apigee organization profile.
-
                       Structure is documented below.
                     properties:
                       property:
-                        description: >-
+                        description: |-
                           List of all properties in the object.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1207,27 +1003,19 @@ spec:
                         type: array
                     type: object
                   retention:
-                    description: >-
+                    description: |-
                       Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
-
                       is not EVALUATION). It controls how long Organization data will be retained after the initial delete
-
                       operation completes. During this period, the Organization may be restored to its last known state.
-
                       After this period, the Organization will no longer be able to be restored.
-
                       Default value is DELETION_RETENTION_UNSPECIFIED.
-
                       Possible values are: DELETION_RETENTION_UNSPECIFIED, MINIMUM.
                     type: string
                   runtimeDatabaseEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
-
                       Update is not allowed after the organization is created.
-
                       If not specified, a Google-Managed encryption key will be used.
-
                       Valid only when RuntimeType is CLOUD. For example: projects/foo/locations/us/keyRings/bar/cryptoKeys/baz.
                     type: string
                   runtimeDatabaseEncryptionKeyNameRef:
@@ -1241,26 +1029,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1274,9 +1056,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1289,26 +1070,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1317,34 +1092,23 @@ spec:
                         type: object
                     type: object
                   runtimeType:
-                    description: >-
+                    description: |-
                       Runtime type of the Apigee organization based on the Apigee subscription purchased.
-
                       Default value is CLOUD.
-
                       Possible values are: CLOUD, HYBRID.
                     type: string
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   analyticsRegion:
@@ -1354,19 +1118,15 @@ spec:
                     description: Cloud KMS key name used for encrypting API consumer data.
                     type: string
                   apiConsumerDataLocation:
-                    description: >-
+                    description: |-
                       This field is needed only for customers using non-default data residency regions.
-
                       Apigee stores some control plane data only in single region.
-
                       This field determines which single region Apigee should use.
                     type: string
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-
                       See Getting started with the Service Networking API.
-
                       Valid only when RuntimeType is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
                     type: string
                   authorizedNetworkRef:
@@ -1380,26 +1140,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1413,9 +1167,8 @@ spec:
                     description: Selector for a Network in compute to populate authorizedNetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1428,26 +1181,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1459,24 +1206,19 @@ spec:
                     description: Billing type of the Apigee organization. See Apigee pricing.
                     type: string
                   controlPlaneEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-
                       Only used for the data residency region "US" or "EU".
                     type: string
                   description:
                     description: Description of the Apigee organization.
                     type: string
                   disableVpcPeering:
-                    description: >-
+                    description: |-
                       Flag that specifies whether the VPC Peering through Private Google Access should be
-
                       disabled between the consumer network and Apigee. Required if an authorizedNetwork
-
                       on the consumer project is not provided, in which case the flag should be set to true.
-
                       Valid only when RuntimeType is set to CLOUD. The value must be set before the creation
-
                       of any Apigee runtime instance and can be updated only when there are no runtime instances.
                     type: boolean
                   displayName:
@@ -1486,15 +1228,13 @@ spec:
                     description: The project ID associated with the Apigee organization.
                     type: string
                   properties:
-                    description: >-
+                    description: |-
                       Properties defined in the Apigee organization profile.
-
                       Structure is documented below.
                     properties:
                       property:
-                        description: >-
+                        description: |-
                           List of all properties in the object.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1508,27 +1248,19 @@ spec:
                         type: array
                     type: object
                   retention:
-                    description: >-
+                    description: |-
                       Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
-
                       is not EVALUATION). It controls how long Organization data will be retained after the initial delete
-
                       operation completes. During this period, the Organization may be restored to its last known state.
-
                       After this period, the Organization will no longer be able to be restored.
-
                       Default value is DELETION_RETENTION_UNSPECIFIED.
-
                       Possible values are: DELETION_RETENTION_UNSPECIFIED, MINIMUM.
                     type: string
                   runtimeDatabaseEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
-
                       Update is not allowed after the organization is created.
-
                       If not specified, a Google-Managed encryption key will be used.
-
                       Valid only when RuntimeType is CLOUD. For example: projects/foo/locations/us/keyRings/bar/cryptoKeys/baz.
                     type: string
                   runtimeDatabaseEncryptionKeyNameRef:
@@ -1542,26 +1274,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1575,9 +1301,8 @@ spec:
                     description: Selector for a CryptoKey in kms to populate runtimeDatabaseEncryptionKeyName.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1590,26 +1315,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1618,41 +1337,29 @@ spec:
                         type: object
                     type: object
                   runtimeType:
-                    description: >-
+                    description: |-
                       Runtime type of the Apigee organization based on the Apigee subscription purchased.
-
                       Default value is CLOUD.
-
                       Possible values are: CLOUD, HYBRID.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1666,11 +1373,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -1681,26 +1386,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -1711,13 +1410,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1748,52 +1444,42 @@ spec:
                     description: Cloud KMS key name used for encrypting API consumer data.
                     type: string
                   apiConsumerDataLocation:
-                    description: >-
+                    description: |-
                       This field is needed only for customers using non-default data residency regions.
-
                       Apigee stores some control plane data only in single region.
-
                       This field determines which single region Apigee should use.
                     type: string
                   apigeeProjectId:
                     description: Output only. Project ID of the Apigee Tenant Project.
                     type: string
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       Compute Engine network used for Service Networking to be peered with Apigee runtime instances.
-
                       See Getting started with the Service Networking API.
-
                       Valid only when RuntimeType is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
                     type: string
                   billingType:
                     description: Billing type of the Apigee organization. See Apigee pricing.
                     type: string
                   caCertificate:
-                    description: >-
+                    description: |-
                       Output only. Base64-encoded public certificate for the root CA of the Apigee organization.
-
                       Valid only when RuntimeType is CLOUD. A base64-encoded string.
                     type: string
                   controlPlaneEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting control plane data that is stored in a multi region.
-
                       Only used for the data residency region "US" or "EU".
                     type: string
                   description:
                     description: Description of the Apigee organization.
                     type: string
                   disableVpcPeering:
-                    description: >-
+                    description: |-
                       Flag that specifies whether the VPC Peering through Private Google Access should be
-
                       disabled between the consumer network and Apigee. Required if an authorizedNetwork
-
                       on the consumer project is not provided, in which case the flag should be set to true.
-
                       Valid only when RuntimeType is set to CLOUD. The value must be set before the creation
-
                       of any Apigee runtime instance and can be updated only when there are no runtime instances.
                     type: boolean
                   displayName:
@@ -1809,15 +1495,13 @@ spec:
                     description: The project ID associated with the Apigee organization.
                     type: string
                   properties:
-                    description: >-
+                    description: |-
                       Properties defined in the Apigee organization profile.
-
                       Structure is documented below.
                     properties:
                       property:
-                        description: >-
+                        description: |-
                           List of all properties in the object.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1831,41 +1515,30 @@ spec:
                         type: array
                     type: object
                   retention:
-                    description: >-
+                    description: |-
                       Optional. This setting is applicable only for organizations that are soft-deleted (i.e., BillingType
-
                       is not EVALUATION). It controls how long Organization data will be retained after the initial delete
-
                       operation completes. During this period, the Organization may be restored to its last known state.
-
                       After this period, the Organization will no longer be able to be restored.
-
                       Default value is DELETION_RETENTION_UNSPECIFIED.
-
                       Possible values are: DELETION_RETENTION_UNSPECIFIED, MINIMUM.
                     type: string
                   runtimeDatabaseEncryptionKeyName:
-                    description: >-
+                    description: |-
                       Cloud KMS key name used for encrypting the data that is stored and replicated across runtime instances.
-
                       Update is not allowed after the organization is created.
-
                       If not specified, a Google-Managed encryption key will be used.
-
                       Valid only when RuntimeType is CLOUD. For example: projects/foo/locations/us/keyRings/bar/cryptoKeys/baz.
                     type: string
                   runtimeType:
-                    description: >-
+                    description: |-
                       Runtime type of the Apigee organization based on the Apigee subscription purchased.
-
                       Default value is CLOUD.
-
                       Possible values are: CLOUD, HYBRID.
                     type: string
                   subscriptionType:
-                    description: >-
+                    description: |-
                       Output only. Subscription type of the Apigee organization.
-
                       Valid values include trial (free, limited, and for evaluation purposes only) or paid (full subscription has been purchased).
                     type: string
                 type: object
@@ -1875,24 +1548,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1903,9 +1572,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1919,11 +1587,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: serviceusageconsumerquotaoverrides.serviceusage.cnrm.cloud.google.com
 spec:
   group: serviceusage.cnrm.cloud.google.com
@@ -59,18 +58,15 @@ spec:
                 description: Immutable. If this map is nonempty, then this override applies only to specific values for dimensions defined in the limit unit.
                 type: object
               force:
-                description: >-
+                description: |-
                   If the new quota would decrease the existing quota by more than 10%, the request is rejected.
-
                   If 'force' is 'true', that safety check is ignored.
                 type: boolean
               limit:
-                description: >-
+                description: |-
                   Immutable. The limit on the metric, e.g. '/project/region'.
 
-
                   ~> Make sure that 'limit' is in a format that doesn't start with '1/' or contain curly braces.
-
                   E.g. use '/project/user' instead of '1/{project}/{user}'.
                 type: string
               metric:
@@ -158,7 +154,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

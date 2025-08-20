@@ -36,25 +36,18 @@ spec:
         description: Reservation is the Schema for the Reservations API. Represents a reservation resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -88,22 +75,19 @@ spec:
                     description: An optional description of this resource.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   shareSettings:
-                    description: >-
+                    description: |-
                       The share setting for reservations.
-
                       Structure is documented below.
                     items:
                       properties:
                         projectMap:
-                          description: >-
+                          description: |-
                             A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -116,17 +100,15 @@ spec:
                             type: object
                           type: array
                         shareType:
-                          description: >-
+                          description: |-
                             Type of sharing for this shared-reservation
-
                             Possible values are: LOCAL, SPECIFIC_PROJECTS.
                           type: string
                       type: object
                     type: array
                   specificReservation:
-                    description: >-
+                    description: |-
                       Reservation for instances with specific machine shapes.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -134,43 +116,35 @@ spec:
                           description: The number of resources that are allocated.
                           type: number
                         instanceProperties:
-                          description: >-
+                          description: |-
                             The instance properties for the reservation.
-
                             Structure is documented below.
                           items:
                             properties:
                               guestAccelerators:
-                                description: >-
+                                description: |-
                                   Guest accelerator type and count.
-
                                   Structure is documented below.
                                 items:
                                   properties:
                                     acceleratorCount:
-                                      description: >-
+                                      description: |-
                                         The number of the guest accelerator cards exposed to
-
                                         this instance.
                                       type: number
                                     acceleratorType:
-                                      description: >-
+                                      description: |-
                                         The full or partial URL of the accelerator type to
-
                                         attach to this instance. For example:
-
                                         projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100
-
                                         If you are creating an instance template, specify only the accelerator name.
                                       type: string
                                   type: object
                                 type: array
                               localSsds:
-                                description: >-
+                                description: |-
                                   The amount of local ssd to reserve with each instance. This
-
                                   reserves disks of type local-ssd.
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -178,11 +152,9 @@ spec:
                                       description: The size of the disk in base-2 GB.
                                       type: number
                                     interface:
-                                      description: >-
+                                      description: |-
                                         The disk interface to use for attaching this disk.
-
                                         Default value is SCSI.
-
                                         Possible values are: SCSI, NVME.
                                       type: string
                                   type: object
@@ -191,13 +163,10 @@ spec:
                                 description: The name of the machine type to reserve.
                                 type: string
                               minCpuPlatform:
-                                description: >-
+                                description: |-
                                   The minimum CPU platform for the reservation. For example,
-
                                   "Intel Skylake". See
-
                                   the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-
                                   for information on available CPU platforms.
                                 type: string
                             type: object
@@ -205,11 +174,9 @@ spec:
                       type: object
                     type: array
                   specificReservationRequired:
-                    description: >-
+                    description: |-
                       When set to true, only VMs that target this reservation by name can
-
                       consume this reservation. Otherwise, it can be consumed by VMs with
-
                       affinity for any reservation. Defaults to false.
                     type: boolean
                   zone:
@@ -219,47 +186,35 @@ spec:
                 - zone
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   description:
                     description: An optional description of this resource.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   shareSettings:
-                    description: >-
+                    description: |-
                       The share setting for reservations.
-
                       Structure is documented below.
                     items:
                       properties:
                         projectMap:
-                          description: >-
+                          description: |-
                             A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -272,17 +227,15 @@ spec:
                             type: object
                           type: array
                         shareType:
-                          description: >-
+                          description: |-
                             Type of sharing for this shared-reservation
-
                             Possible values are: LOCAL, SPECIFIC_PROJECTS.
                           type: string
                       type: object
                     type: array
                   specificReservation:
-                    description: >-
+                    description: |-
                       Reservation for instances with specific machine shapes.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -290,43 +243,35 @@ spec:
                           description: The number of resources that are allocated.
                           type: number
                         instanceProperties:
-                          description: >-
+                          description: |-
                             The instance properties for the reservation.
-
                             Structure is documented below.
                           items:
                             properties:
                               guestAccelerators:
-                                description: >-
+                                description: |-
                                   Guest accelerator type and count.
-
                                   Structure is documented below.
                                 items:
                                   properties:
                                     acceleratorCount:
-                                      description: >-
+                                      description: |-
                                         The number of the guest accelerator cards exposed to
-
                                         this instance.
                                       type: number
                                     acceleratorType:
-                                      description: >-
+                                      description: |-
                                         The full or partial URL of the accelerator type to
-
                                         attach to this instance. For example:
-
                                         projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100
-
                                         If you are creating an instance template, specify only the accelerator name.
                                       type: string
                                   type: object
                                 type: array
                               localSsds:
-                                description: >-
+                                description: |-
                                   The amount of local ssd to reserve with each instance. This
-
                                   reserves disks of type local-ssd.
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -334,11 +279,9 @@ spec:
                                       description: The size of the disk in base-2 GB.
                                       type: number
                                     interface:
-                                      description: >-
+                                      description: |-
                                         The disk interface to use for attaching this disk.
-
                                         Default value is SCSI.
-
                                         Possible values are: SCSI, NVME.
                                       type: string
                                   type: object
@@ -347,13 +290,10 @@ spec:
                                 description: The name of the machine type to reserve.
                                 type: string
                               minCpuPlatform:
-                                description: >-
+                                description: |-
                                   The minimum CPU platform for the reservation. For example,
-
                                   "Intel Skylake". See
-
                                   the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-
                                   for information on available CPU platforms.
                                 type: string
                             type: object
@@ -361,41 +301,29 @@ spec:
                       type: object
                     type: array
                   specificReservationRequired:
-                    description: >-
+                    description: |-
                       When set to true, only VMs that target this reservation by name can
-
                       consume this reservation. Otherwise, it can be consumed by VMs with
-
                       affinity for any reservation. Defaults to false.
                     type: boolean
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -409,11 +337,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -424,26 +350,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -454,13 +374,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -485,9 +402,8 @@ spec:
               atProvider:
                 properties:
                   commitment:
-                    description: >-
+                    description: |-
                       Full or partial URL to a parent commitment. This field displays for
-
                       reservations that are tied to a commitment.
                     type: string
                   creationTimestamp:
@@ -500,25 +416,22 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/zones/{{zone}}/reservations/{{name}}
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   selfLink:
                     description: The URI of the created resource.
                     type: string
                   shareSettings:
-                    description: >-
+                    description: |-
                       The share setting for reservations.
-
                       Structure is documented below.
                     items:
                       properties:
                         projectMap:
-                          description: >-
+                          description: |-
                             A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
-
                             Structure is documented below.
                           items:
                             properties:
@@ -531,17 +444,15 @@ spec:
                             type: object
                           type: array
                         shareType:
-                          description: >-
+                          description: |-
                             Type of sharing for this shared-reservation
-
                             Possible values are: LOCAL, SPECIFIC_PROJECTS.
                           type: string
                       type: object
                     type: array
                   specificReservation:
-                    description: >-
+                    description: |-
                       Reservation for instances with specific machine shapes.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -549,49 +460,40 @@ spec:
                           description: The number of resources that are allocated.
                           type: number
                         inUseCount:
-                          description: >-
+                          description: |-
                             (Output)
-
                             How many instances are in use.
                           type: number
                         instanceProperties:
-                          description: >-
+                          description: |-
                             The instance properties for the reservation.
-
                             Structure is documented below.
                           items:
                             properties:
                               guestAccelerators:
-                                description: >-
+                                description: |-
                                   Guest accelerator type and count.
-
                                   Structure is documented below.
                                 items:
                                   properties:
                                     acceleratorCount:
-                                      description: >-
+                                      description: |-
                                         The number of the guest accelerator cards exposed to
-
                                         this instance.
                                       type: number
                                     acceleratorType:
-                                      description: >-
+                                      description: |-
                                         The full or partial URL of the accelerator type to
-
                                         attach to this instance. For example:
-
                                         projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100
-
                                         If you are creating an instance template, specify only the accelerator name.
                                       type: string
                                   type: object
                                 type: array
                               localSsds:
-                                description: >-
+                                description: |-
                                   The amount of local ssd to reserve with each instance. This
-
                                   reserves disks of type local-ssd.
-
                                   Structure is documented below.
                                 items:
                                   properties:
@@ -599,11 +501,9 @@ spec:
                                       description: The size of the disk in base-2 GB.
                                       type: number
                                     interface:
-                                      description: >-
+                                      description: |-
                                         The disk interface to use for attaching this disk.
-
                                         Default value is SCSI.
-
                                         Possible values are: SCSI, NVME.
                                       type: string
                                   type: object
@@ -612,13 +512,10 @@ spec:
                                 description: The name of the machine type to reserve.
                                 type: string
                               minCpuPlatform:
-                                description: >-
+                                description: |-
                                   The minimum CPU platform for the reservation. For example,
-
                                   "Intel Skylake". See
-
                                   the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-
                                   for information on available CPU platforms.
                                 type: string
                             type: object
@@ -626,11 +523,9 @@ spec:
                       type: object
                     type: array
                   specificReservationRequired:
-                    description: >-
+                    description: |-
                       When set to true, only VMs that target this reservation by name can
-
                       consume this reservation. Otherwise, it can be consumed by VMs with
-
                       affinity for any reservation. Defaults to false.
                     type: boolean
                   status:
@@ -646,24 +541,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -674,9 +565,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -690,11 +580,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -725,25 +613,18 @@ spec:
         description: Reservation is the Schema for the Reservations API. Represents a reservation resource.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -753,19 +634,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -777,21 +652,18 @@ spec:
                     description: An optional description of this resource.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   shareSettings:
-                    description: >-
+                    description: |-
                       The share setting for reservations.
-
                       Structure is documented below.
                     properties:
                       projectMap:
-                        description: >-
+                        description: |-
                           A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -804,58 +676,48 @@ spec:
                           type: object
                         type: array
                       shareType:
-                        description: >-
+                        description: |-
                           Type of sharing for this shared-reservation
-
                           Possible values are: LOCAL, SPECIFIC_PROJECTS.
                         type: string
                     type: object
                   specificReservation:
-                    description: >-
+                    description: |-
                       Reservation for instances with specific machine shapes.
-
                       Structure is documented below.
                     properties:
                       count:
                         description: The number of resources that are allocated.
                         type: number
                       instanceProperties:
-                        description: >-
+                        description: |-
                           The instance properties for the reservation.
-
                           Structure is documented below.
                         properties:
                           guestAccelerators:
-                            description: >-
+                            description: |-
                               Guest accelerator type and count.
-
                               Structure is documented below.
                             items:
                               properties:
                                 acceleratorCount:
-                                  description: >-
+                                  description: |-
                                     The number of the guest accelerator cards exposed to
-
                                     this instance.
                                   type: number
                                 acceleratorType:
-                                  description: >-
+                                  description: |-
                                     The full or partial URL of the accelerator type to
-
                                     attach to this instance. For example:
-
                                     projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100
-
                                     If you are creating an instance template, specify only the accelerator name.
                                   type: string
                               type: object
                             type: array
                           localSsds:
-                            description: >-
+                            description: |-
                               The amount of local ssd to reserve with each instance. This
-
                               reserves disks of type local-ssd.
-
                               Structure is documented below.
                             items:
                               properties:
@@ -863,11 +725,9 @@ spec:
                                   description: The size of the disk in base-2 GB.
                                   type: number
                                 interface:
-                                  description: >-
+                                  description: |-
                                     The disk interface to use for attaching this disk.
-
                                     Default value is SCSI.
-
                                     Possible values are: SCSI, NVME.
                                   type: string
                               type: object
@@ -876,23 +736,18 @@ spec:
                             description: The name of the machine type to reserve.
                             type: string
                           minCpuPlatform:
-                            description: >-
+                            description: |-
                               The minimum CPU platform for the reservation. For example,
-
                               "Intel Skylake". See
-
                               the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-
                               for information on available CPU platforms.
                             type: string
                         type: object
                     type: object
                   specificReservationRequired:
-                    description: >-
+                    description: |-
                       When set to true, only VMs that target this reservation by name can
-
                       consume this reservation. Otherwise, it can be consumed by VMs with
-
                       affinity for any reservation. Defaults to false.
                     type: boolean
                   zone:
@@ -902,46 +757,34 @@ spec:
                 - zone
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   description:
                     description: An optional description of this resource.
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   shareSettings:
-                    description: >-
+                    description: |-
                       The share setting for reservations.
-
                       Structure is documented below.
                     properties:
                       projectMap:
-                        description: >-
+                        description: |-
                           A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -954,58 +797,48 @@ spec:
                           type: object
                         type: array
                       shareType:
-                        description: >-
+                        description: |-
                           Type of sharing for this shared-reservation
-
                           Possible values are: LOCAL, SPECIFIC_PROJECTS.
                         type: string
                     type: object
                   specificReservation:
-                    description: >-
+                    description: |-
                       Reservation for instances with specific machine shapes.
-
                       Structure is documented below.
                     properties:
                       count:
                         description: The number of resources that are allocated.
                         type: number
                       instanceProperties:
-                        description: >-
+                        description: |-
                           The instance properties for the reservation.
-
                           Structure is documented below.
                         properties:
                           guestAccelerators:
-                            description: >-
+                            description: |-
                               Guest accelerator type and count.
-
                               Structure is documented below.
                             items:
                               properties:
                                 acceleratorCount:
-                                  description: >-
+                                  description: |-
                                     The number of the guest accelerator cards exposed to
-
                                     this instance.
                                   type: number
                                 acceleratorType:
-                                  description: >-
+                                  description: |-
                                     The full or partial URL of the accelerator type to
-
                                     attach to this instance. For example:
-
                                     projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100
-
                                     If you are creating an instance template, specify only the accelerator name.
                                   type: string
                               type: object
                             type: array
                           localSsds:
-                            description: >-
+                            description: |-
                               The amount of local ssd to reserve with each instance. This
-
                               reserves disks of type local-ssd.
-
                               Structure is documented below.
                             items:
                               properties:
@@ -1013,11 +846,9 @@ spec:
                                   description: The size of the disk in base-2 GB.
                                   type: number
                                 interface:
-                                  description: >-
+                                  description: |-
                                     The disk interface to use for attaching this disk.
-
                                     Default value is SCSI.
-
                                     Possible values are: SCSI, NVME.
                                   type: string
                               type: object
@@ -1026,53 +857,38 @@ spec:
                             description: The name of the machine type to reserve.
                             type: string
                           minCpuPlatform:
-                            description: >-
+                            description: |-
                               The minimum CPU platform for the reservation. For example,
-
                               "Intel Skylake". See
-
                               the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-
                               for information on available CPU platforms.
                             type: string
                         type: object
                     type: object
                   specificReservationRequired:
-                    description: >-
+                    description: |-
                       When set to true, only VMs that target this reservation by name can
-
                       consume this reservation. Otherwise, it can be consumed by VMs with
-
                       affinity for any reservation. Defaults to false.
                     type: boolean
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -1086,11 +902,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -1101,26 +915,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -1131,13 +939,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -1162,9 +967,8 @@ spec:
               atProvider:
                 properties:
                   commitment:
-                    description: >-
+                    description: |-
                       Full or partial URL to a parent commitment. This field displays for
-
                       reservations that are tied to a commitment.
                     type: string
                   creationTimestamp:
@@ -1177,24 +981,21 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/zones/{{zone}}/reservations/{{name}}
                     type: string
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   selfLink:
                     description: The URI of the created resource.
                     type: string
                   shareSettings:
-                    description: >-
+                    description: |-
                       The share setting for reservations.
-
                       Structure is documented below.
                     properties:
                       projectMap:
-                        description: >-
+                        description: |-
                           A map of project number and project config. This is only valid when shareType's value is SPECIFIC_PROJECTS.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1207,64 +1008,53 @@ spec:
                           type: object
                         type: array
                       shareType:
-                        description: >-
+                        description: |-
                           Type of sharing for this shared-reservation
-
                           Possible values are: LOCAL, SPECIFIC_PROJECTS.
                         type: string
                     type: object
                   specificReservation:
-                    description: >-
+                    description: |-
                       Reservation for instances with specific machine shapes.
-
                       Structure is documented below.
                     properties:
                       count:
                         description: The number of resources that are allocated.
                         type: number
                       inUseCount:
-                        description: >-
+                        description: |-
                           (Output)
-
                           How many instances are in use.
                         type: number
                       instanceProperties:
-                        description: >-
+                        description: |-
                           The instance properties for the reservation.
-
                           Structure is documented below.
                         properties:
                           guestAccelerators:
-                            description: >-
+                            description: |-
                               Guest accelerator type and count.
-
                               Structure is documented below.
                             items:
                               properties:
                                 acceleratorCount:
-                                  description: >-
+                                  description: |-
                                     The number of the guest accelerator cards exposed to
-
                                     this instance.
                                   type: number
                                 acceleratorType:
-                                  description: >-
+                                  description: |-
                                     The full or partial URL of the accelerator type to
-
                                     attach to this instance. For example:
-
                                     projects/my-project/zones/us-central1-c/acceleratorTypes/nvidia-tesla-p100
-
                                     If you are creating an instance template, specify only the accelerator name.
                                   type: string
                               type: object
                             type: array
                           localSsds:
-                            description: >-
+                            description: |-
                               The amount of local ssd to reserve with each instance. This
-
                               reserves disks of type local-ssd.
-
                               Structure is documented below.
                             items:
                               properties:
@@ -1272,11 +1062,9 @@ spec:
                                   description: The size of the disk in base-2 GB.
                                   type: number
                                 interface:
-                                  description: >-
+                                  description: |-
                                     The disk interface to use for attaching this disk.
-
                                     Default value is SCSI.
-
                                     Possible values are: SCSI, NVME.
                                   type: string
                               type: object
@@ -1285,23 +1073,18 @@ spec:
                             description: The name of the machine type to reserve.
                             type: string
                           minCpuPlatform:
-                            description: >-
+                            description: |-
                               The minimum CPU platform for the reservation. For example,
-
                               "Intel Skylake". See
-
                               the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
-
                               for information on available CPU platforms.
                             type: string
                         type: object
                     type: object
                   specificReservationRequired:
-                    description: >-
+                    description: |-
                       When set to true, only VMs that target this reservation by name can
-
                       consume this reservation. Otherwise, it can be consumed by VMs with
-
                       affinity for any reservation. Defaults to false.
                     type: boolean
                   status:
@@ -1317,24 +1100,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1345,9 +1124,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1361,11 +1139,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

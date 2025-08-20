@@ -45,33 +45,24 @@ spec:
     name: v1api20220501
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /frontdoor/resource-manager/Microsoft.Network/stable/2022-05-01/webapplicationfirewall.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 128
                 type: string
@@ -151,9 +141,8 @@ spec:
                                 - RegEx
                                 type: string
                               selector:
-                                description: >-
+                                description: |-
                                   Selector: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is
-
                                   null.
                                 type: string
                               transforms:
@@ -237,9 +226,8 @@ spec:
                                 description: 'Selector: Selector value for which elements in the collection this exclusion applies to.'
                                 type: string
                               selectorMatchOperator:
-                                description: >-
+                                description: |-
                                   SelectorMatchOperator: Comparison operator to apply to the selector when specifying which elements in the collection
-
                                   this exclusion applies to.
                                 enum:
                                 - Contains
@@ -277,9 +265,8 @@ spec:
                                       description: 'Selector: Selector value for which elements in the collection this exclusion applies to.'
                                       type: string
                                     selectorMatchOperator:
-                                      description: >-
+                                      description: |-
                                         SelectorMatchOperator: Comparison operator to apply to the selector when specifying which elements in the collection
-
                                         this exclusion applies to.
                                       enum:
                                       - Contains
@@ -335,9 +322,8 @@ spec:
                                             description: 'Selector: Selector value for which elements in the collection this exclusion applies to.'
                                             type: string
                                           selectorMatchOperator:
-                                            description: >-
+                                            description: |-
                                               SelectorMatchOperator: Comparison operator to apply to the selector when specifying which elements in the collection
-
                                               this exclusion applies to.
                                             enum:
                                             - Contains
@@ -383,41 +369,33 @@ spec:
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -428,33 +406,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -464,11 +435,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -482,9 +451,8 @@ spec:
                 description: 'PolicySettings: Describes settings for the policy.'
                 properties:
                   customBlockResponseBody:
-                    description: >-
+                    description: |-
                       CustomBlockResponseBody: If the action type is block, customer can override the response body. The body must be
-
                       specified in base64 encoding.
                     pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$
                     type: string
@@ -547,28 +515,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -618,9 +580,8 @@ spec:
                                 description: 'Operator: Comparison type to use for matching with the variable value.'
                                 type: string
                               selector:
-                                description: >-
+                                description: |-
                                   Selector: Match against a specific key from the QueryString, PostArgs, RequestHeader or Cookies variables. Default is
-
                                   null.
                                 type: string
                               transforms:
@@ -688,9 +649,8 @@ spec:
                                 description: 'Selector: Selector value for which elements in the collection this exclusion applies to.'
                                 type: string
                               selectorMatchOperator:
-                                description: >-
+                                description: |-
                                   SelectorMatchOperator: Comparison operator to apply to the selector when specifying which elements in the collection
-
                                   this exclusion applies to.
                                 type: string
                             type: object
@@ -712,9 +672,8 @@ spec:
                                       description: 'Selector: Selector value for which elements in the collection this exclusion applies to.'
                                       type: string
                                     selectorMatchOperator:
-                                      description: >-
+                                      description: |-
                                         SelectorMatchOperator: Comparison operator to apply to the selector when specifying which elements in the collection
-
                                         this exclusion applies to.
                                       type: string
                                   type: object
@@ -745,9 +704,8 @@ spec:
                                             description: 'Selector: Selector value for which elements in the collection this exclusion applies to.'
                                             type: string
                                           selectorMatchOperator:
-                                            description: >-
+                                            description: |-
                                               SelectorMatchOperator: Comparison operator to apply to the selector when specifying which elements in the collection
-
                                               this exclusion applies to.
                                             type: string
                                         type: object
@@ -778,9 +736,8 @@ spec:
                 description: 'PolicySettings: Describes settings for the policy.'
                 properties:
                   customBlockResponseBody:
-                    description: >-
+                    description: |-
                       CustomBlockResponseBody: If the action type is block, customer can override the response body. The body must be
-
                       specified in base64 encoding.
                     type: string
                   customBlockResponseStatusCode:
@@ -861,35 +818,25 @@ spec:
     name: v1api20220501storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20220501.WebApplicationFirewallPolicy
-
           Generator information:
-
           - Generated from: /frontdoor/resource-manager/Microsoft.Network/stable/2022-05-01/webapplicationfirewall.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/FrontDoorWebApplicationFirewallPolicies/{policyName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -900,44 +847,38 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               customRules:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.CustomRuleList
-
                   Defines contents of custom rules
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   rules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220501.CustomRule
-
                         Defines contents of a web application rule
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
@@ -946,17 +887,15 @@ spec:
                           type: string
                         matchConditions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220501.MatchCondition
-
                               Define a match condition.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               matchValue:
@@ -995,47 +934,41 @@ spec:
               location:
                 type: string
               managedRules:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.ManagedRuleSetList
-
                   Defines the list of managed rule sets for the policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   managedRuleSets:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220501.ManagedRuleSet
-
                         Defines a managed rule set.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         exclusions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220501.ManagedRuleExclusion
-
                               Exclude variables from managed rule evaluation.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               matchVariable:
@@ -1048,32 +981,28 @@ spec:
                           type: array
                         ruleGroupOverrides:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220501.ManagedRuleGroupOverride
-
                               Defines a managed rule group override setting.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               exclusions:
                                 items:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20220501.ManagedRuleExclusion
-
                                     Exclude variables from managed rule evaluation.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     matchVariable:
@@ -1088,17 +1017,15 @@ spec:
                                 type: string
                               rules:
                                 items:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20220501.ManagedRuleOverride
-
                                     Defines a managed rule group override setting.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     action:
@@ -1107,17 +1034,15 @@ spec:
                                       type: string
                                     exclusions:
                                       items:
-                                        description: >-
+                                        description: |-
                                           Storage version of v1api20220501.ManagedRuleExclusion
-
                                           Exclude variables from managed rule evaluation.
                                         properties:
                                           $propertyBag:
                                             additionalProperties:
                                               type: string
-                                            description: >-
+                                            description: |-
                                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                               resources, allowing for full fidelity round trip conversions
                                             type: object
                                           matchVariable:
@@ -1144,48 +1069,39 @@ spec:
                     type: array
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.WebApplicationFirewallPolicyOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1195,33 +1111,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1233,11 +1142,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1248,17 +1155,15 @@ spec:
                     type: string
                 type: object
               policySettings:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.PolicySettings
-
                   Defines top-level WebApplicationFirewallPolicy configuration settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   customBlockResponseBody:
@@ -1275,17 +1180,15 @@ spec:
                     type: string
                 type: object
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.Sku
-
                   The pricing tier of the web application firewall policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:
@@ -1304,9 +1207,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -1321,28 +1223,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1359,32 +1255,28 @@ spec:
                   type: object
                 type: array
               customRules:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.CustomRuleList_STATUS
-
                   Defines contents of custom rules
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   rules:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220501.CustomRule_STATUS
-
                         Defines contents of a web application rule
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         action:
@@ -1393,17 +1285,15 @@ spec:
                           type: string
                         matchConditions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220501.MatchCondition_STATUS
-
                               Define a match condition.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               matchValue:
@@ -1441,17 +1331,15 @@ spec:
                 type: string
               frontendEndpointLinks:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220501.FrontendEndpointLink_STATUS
-
                     Defines the Resource ID for a Frontend Endpoint.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1463,47 +1351,41 @@ spec:
               location:
                 type: string
               managedRules:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.ManagedRuleSetList_STATUS
-
                   Defines the list of managed rule sets for the policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   managedRuleSets:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220501.ManagedRuleSet_STATUS
-
                         Defines a managed rule set.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         exclusions:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220501.ManagedRuleExclusion_STATUS
-
                               Exclude variables from managed rule evaluation.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               matchVariable:
@@ -1516,32 +1398,28 @@ spec:
                           type: array
                         ruleGroupOverrides:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20220501.ManagedRuleGroupOverride_STATUS
-
                               Defines a managed rule group override setting.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               exclusions:
                                 items:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20220501.ManagedRuleExclusion_STATUS
-
                                     Exclude variables from managed rule evaluation.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     matchVariable:
@@ -1556,17 +1434,15 @@ spec:
                                 type: string
                               rules:
                                 items:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20220501.ManagedRuleOverride_STATUS
-
                                     Defines a managed rule group override setting.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     action:
@@ -1575,17 +1451,15 @@ spec:
                                       type: string
                                     exclusions:
                                       items:
-                                        description: >-
+                                        description: |-
                                           Storage version of v1api20220501.ManagedRuleExclusion_STATUS
-
                                           Exclude variables from managed rule evaluation.
                                         properties:
                                           $propertyBag:
                                             additionalProperties:
                                               type: string
-                                            description: >-
+                                            description: |-
                                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                               resources, allowing for full fidelity round trip conversions
                                             type: object
                                           matchVariable:
@@ -1614,17 +1488,15 @@ spec:
               name:
                 type: string
               policySettings:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.PolicySettings_STATUS
-
                   Defines top-level WebApplicationFirewallPolicy configuration settings.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   customBlockResponseBody:
@@ -1646,17 +1518,15 @@ spec:
                 type: string
               routingRuleLinks:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220501.RoutingRuleLink_STATUS
-
                     Defines the Resource ID for a Routing Rule.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1665,17 +1535,15 @@ spec:
                 type: array
               securityPolicyLinks:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220501.SecurityPolicyLink_STATUS
-
                     Defines the Resource ID for a Security Policy.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1683,17 +1551,15 @@ spec:
                   type: object
                 type: array
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20220501.Sku_STATUS
-
                   The pricing tier of the web application firewall policy.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   name:

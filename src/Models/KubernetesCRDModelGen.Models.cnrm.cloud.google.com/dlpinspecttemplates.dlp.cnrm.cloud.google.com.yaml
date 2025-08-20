@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: dlpinspecttemplates.dlp.cnrm.cloud.google.com
 spec:
   group: dlp.cnrm.cloud.google.com
@@ -146,9 +145,8 @@ spec:
                                 - external
                               properties:
                                 external:
-                                  description: >-
+                                  description: |-
                                     Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
-
 
                                     Allowed value: The Google Cloud resource name of a `DLPStoredInfoType` resource (format: `{{parent}}/storedInfoTypes/{{name}}`).
                                   type: string
@@ -351,9 +349,8 @@ spec:
                     description: 'Allowed value: The Google Cloud resource name of a Google Cloud Organization (format: `organizations/{{name}}`).'
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       [WARNING] Organization not yet supported in Config Connector, use 'external' field to reference existing resources.
-
                       Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                     type: string
                   namespace:
@@ -436,7 +433,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

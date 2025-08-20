@@ -36,25 +36,18 @@ spec:
         description: CertificateTemplate is the Schema for the CertificateTemplates API. Certificate Authority Service provides reusable and parameterized templates that you can use for common certificate issuance scenarios.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -68,9 +61,8 @@ spec:
                     description: Optional. A human-readable description of scenarios this template is intended for.
                     type: string
                   identityConstraints:
-                    description: >-
+                    description: |-
                       Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
-
                       Structure is documented below.
                     properties:
                       allowSubjectAltNamesPassthrough:
@@ -80,9 +72,8 @@ spec:
                         description: Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
                         type: boolean
                       celExpression:
-                        description: >-
+                        description: |-
                           Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
-
                           Structure is documented below.
                         properties:
                           description:
@@ -102,11 +93,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Optional. Labels with user-defined metadata.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -117,15 +106,13 @@ spec:
                     description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
                     type: string
                   passthroughExtensions:
-                    description: >-
+                    description: |-
                       Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
-
                       Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: >-
+                        description: |-
                           Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -143,15 +130,13 @@ spec:
                         type: array
                     type: object
                   predefinedValues:
-                    description: >-
+                    description: |-
                       Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
-
                       Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: >-
+                        description: |-
                           Optional. Describes custom X.509 extensions.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -159,9 +144,8 @@ spec:
                               description: Indicates whether or not the name constraints are marked critical.
                               type: boolean
                             objectId:
-                              description: >-
+                              description: |-
                                 Required. The OID for this X.509 extension.
-
                                 Structure is documented below.
                               properties:
                                 objectIdPath:
@@ -181,47 +165,39 @@ spec:
                           type: string
                         type: array
                       caOptions:
-                        description: >-
+                        description: |-
                           Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
-
                           Structure is documented below.
                         properties:
                           isCa:
                             description: Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is true, the "CA" in Basic Constraints extension will be set to true.
                             type: boolean
                           maxIssuerPathLength:
-                            description: >-
+                            description: |-
                               Optional. Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
-
                               subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
                             type: number
                           nullCa:
-                            description: >-
+                            description: |-
                               Optional. When true, the "CA" in Basic Constraints extension will be set to null and omitted from the CA certificate.
-
                               If both is_ca and null_ca are unset, the "CA" in Basic Constraints extension will be set to false.
-
                               Note that the behavior when is_ca = false for this resource is different from the behavior in the Certificate Authority, Certificate and CaPool resources.
                             type: boolean
                           zeroMaxIssuerPathLength:
-                            description: >-
+                            description: |-
                               Optional. When true, the "path length constraint" in Basic Constraints extension will be set to 0.
-
                               if both max_issuer_path_length and zero_max_issuer_path_length are unset,
-
                               the max path length will be omitted from the CA certificate.
                             type: boolean
                         type: object
                       keyUsage:
-                        description: >-
+                        description: |-
                           Optional. Indicates the intended use for keys that correspond to a certificate.
-
                           Structure is documented below.
                         properties:
                           baseKeyUsage:
-                            description: >-
+                            description: |-
                               Describes high-level ways in which a key may be used.
-
                               Structure is documented below.
                             properties:
                               certSign:
@@ -253,9 +229,8 @@ spec:
                                 type: boolean
                             type: object
                           extendedKeyUsage:
-                            description: >-
+                            description: |-
                               Detailed scenarios in which a key may be used.
-
                               Structure is documented below.
                             properties:
                               clientAuth:
@@ -278,9 +253,8 @@ spec:
                                 type: boolean
                             type: object
                           unknownExtendedKeyUsages:
-                            description: >-
+                            description: |-
                               Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
-
                               Structure is documented below.
                             items:
                               properties:
@@ -293,115 +267,89 @@ spec:
                             type: array
                         type: object
                       nameConstraints:
-                        description: >-
+                        description: |-
                           Describes the X.509 name constraints extension.
-
                           Structure is documented below.
                         properties:
                           critical:
                             description: Indicates whether or not the name constraints are marked critical.
                             type: boolean
                           excludedDnsNames:
-                            description: >-
+                            description: |-
                               Contains excluded DNS names. Any DNS name that can be
-
                               constructed by simply adding zero or more labels to
-
                               the left-hand side of the name satisfies the name constraint.
-
                               For example, example.com, www.example.com, www.sub.example.com
-
                               would satisfy example.com while example1.com does not.
                             items:
                               type: string
                             type: array
                           excludedEmailAddresses:
-                            description: >-
+                            description: |-
                               Contains the excluded email addresses. The value can be a particular
-
                               email address, a hostname to indicate all email addresses on that host or
-
                               a domain with a leading period (e.g. .example.com) to indicate
-
                               all email addresses in that domain.
                             items:
                               type: string
                             type: array
                           excludedIpRanges:
-                            description: >-
+                            description: |-
                               Contains the excluded IP ranges. For IPv4 addresses, the ranges
-
                               are expressed using CIDR notation as specified in RFC 4632.
-
                               For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
-
                               addresses.
                             items:
                               type: string
                             type: array
                           excludedUris:
-                            description: >-
+                            description: |-
                               Contains the excluded URIs that apply to the host part of the name.
-
                               The value can be a hostname or a domain with a
-
                               leading period (like .example.com)
                             items:
                               type: string
                             type: array
                           permittedDnsNames:
-                            description: >-
+                            description: |-
                               Contains permitted DNS names. Any DNS name that can be
-
                               constructed by simply adding zero or more labels to
-
                               the left-hand side of the name satisfies the name constraint.
-
                               For example, example.com, www.example.com, www.sub.example.com
-
                               would satisfy example.com while example1.com does not.
                             items:
                               type: string
                             type: array
                           permittedEmailAddresses:
-                            description: >-
+                            description: |-
                               Contains the permitted email addresses. The value can be a particular
-
                               email address, a hostname to indicate all email addresses on that host or
-
                               a domain with a leading period (e.g. .example.com) to indicate
-
                               all email addresses in that domain.
                             items:
                               type: string
                             type: array
                           permittedIpRanges:
-                            description: >-
+                            description: |-
                               Contains the permitted IP ranges. For IPv4 addresses, the ranges
-
                               are expressed using CIDR notation as specified in RFC 4632.
-
                               For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
-
                               addresses.
                             items:
                               type: string
                             type: array
                           permittedUris:
-                            description: >-
+                            description: |-
                               Contains the permitted URIs that apply to the host part of the name.
-
                               The value can be a hostname or a domain with a
-
                               leading period (like .example.com)
                             items:
                               type: string
                             type: array
                         type: object
                       policyIds:
-                        description: >-
+                        description: |-
                           Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -414,43 +362,32 @@ spec:
                         type: array
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                 required:
                 - location
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   description:
                     description: Optional. A human-readable description of scenarios this template is intended for.
                     type: string
                   identityConstraints:
-                    description: >-
+                    description: |-
                       Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
-
                       Structure is documented below.
                     properties:
                       allowSubjectAltNamesPassthrough:
@@ -460,9 +397,8 @@ spec:
                         description: Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
                         type: boolean
                       celExpression:
-                        description: >-
+                        description: |-
                           Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
-
                           Structure is documented below.
                         properties:
                           description:
@@ -479,11 +415,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Optional. Labels with user-defined metadata.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -491,15 +425,13 @@ spec:
                     description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
                     type: string
                   passthroughExtensions:
-                    description: >-
+                    description: |-
                       Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
-
                       Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: >-
+                        description: |-
                           Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -517,15 +449,13 @@ spec:
                         type: array
                     type: object
                   predefinedValues:
-                    description: >-
+                    description: |-
                       Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
-
                       Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: >-
+                        description: |-
                           Optional. Describes custom X.509 extensions.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -533,9 +463,8 @@ spec:
                               description: Indicates whether or not the name constraints are marked critical.
                               type: boolean
                             objectId:
-                              description: >-
+                              description: |-
                                 Required. The OID for this X.509 extension.
-
                                 Structure is documented below.
                               properties:
                                 objectIdPath:
@@ -555,47 +484,39 @@ spec:
                           type: string
                         type: array
                       caOptions:
-                        description: >-
+                        description: |-
                           Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
-
                           Structure is documented below.
                         properties:
                           isCa:
                             description: Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is true, the "CA" in Basic Constraints extension will be set to true.
                             type: boolean
                           maxIssuerPathLength:
-                            description: >-
+                            description: |-
                               Optional. Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
-
                               subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
                             type: number
                           nullCa:
-                            description: >-
+                            description: |-
                               Optional. When true, the "CA" in Basic Constraints extension will be set to null and omitted from the CA certificate.
-
                               If both is_ca and null_ca are unset, the "CA" in Basic Constraints extension will be set to false.
-
                               Note that the behavior when is_ca = false for this resource is different from the behavior in the Certificate Authority, Certificate and CaPool resources.
                             type: boolean
                           zeroMaxIssuerPathLength:
-                            description: >-
+                            description: |-
                               Optional. When true, the "path length constraint" in Basic Constraints extension will be set to 0.
-
                               if both max_issuer_path_length and zero_max_issuer_path_length are unset,
-
                               the max path length will be omitted from the CA certificate.
                             type: boolean
                         type: object
                       keyUsage:
-                        description: >-
+                        description: |-
                           Optional. Indicates the intended use for keys that correspond to a certificate.
-
                           Structure is documented below.
                         properties:
                           baseKeyUsage:
-                            description: >-
+                            description: |-
                               Describes high-level ways in which a key may be used.
-
                               Structure is documented below.
                             properties:
                               certSign:
@@ -627,9 +548,8 @@ spec:
                                 type: boolean
                             type: object
                           extendedKeyUsage:
-                            description: >-
+                            description: |-
                               Detailed scenarios in which a key may be used.
-
                               Structure is documented below.
                             properties:
                               clientAuth:
@@ -652,9 +572,8 @@ spec:
                                 type: boolean
                             type: object
                           unknownExtendedKeyUsages:
-                            description: >-
+                            description: |-
                               Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
-
                               Structure is documented below.
                             items:
                               properties:
@@ -667,115 +586,89 @@ spec:
                             type: array
                         type: object
                       nameConstraints:
-                        description: >-
+                        description: |-
                           Describes the X.509 name constraints extension.
-
                           Structure is documented below.
                         properties:
                           critical:
                             description: Indicates whether or not the name constraints are marked critical.
                             type: boolean
                           excludedDnsNames:
-                            description: >-
+                            description: |-
                               Contains excluded DNS names. Any DNS name that can be
-
                               constructed by simply adding zero or more labels to
-
                               the left-hand side of the name satisfies the name constraint.
-
                               For example, example.com, www.example.com, www.sub.example.com
-
                               would satisfy example.com while example1.com does not.
                             items:
                               type: string
                             type: array
                           excludedEmailAddresses:
-                            description: >-
+                            description: |-
                               Contains the excluded email addresses. The value can be a particular
-
                               email address, a hostname to indicate all email addresses on that host or
-
                               a domain with a leading period (e.g. .example.com) to indicate
-
                               all email addresses in that domain.
                             items:
                               type: string
                             type: array
                           excludedIpRanges:
-                            description: >-
+                            description: |-
                               Contains the excluded IP ranges. For IPv4 addresses, the ranges
-
                               are expressed using CIDR notation as specified in RFC 4632.
-
                               For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
-
                               addresses.
                             items:
                               type: string
                             type: array
                           excludedUris:
-                            description: >-
+                            description: |-
                               Contains the excluded URIs that apply to the host part of the name.
-
                               The value can be a hostname or a domain with a
-
                               leading period (like .example.com)
                             items:
                               type: string
                             type: array
                           permittedDnsNames:
-                            description: >-
+                            description: |-
                               Contains permitted DNS names. Any DNS name that can be
-
                               constructed by simply adding zero or more labels to
-
                               the left-hand side of the name satisfies the name constraint.
-
                               For example, example.com, www.example.com, www.sub.example.com
-
                               would satisfy example.com while example1.com does not.
                             items:
                               type: string
                             type: array
                           permittedEmailAddresses:
-                            description: >-
+                            description: |-
                               Contains the permitted email addresses. The value can be a particular
-
                               email address, a hostname to indicate all email addresses on that host or
-
                               a domain with a leading period (e.g. .example.com) to indicate
-
                               all email addresses in that domain.
                             items:
                               type: string
                             type: array
                           permittedIpRanges:
-                            description: >-
+                            description: |-
                               Contains the permitted IP ranges. For IPv4 addresses, the ranges
-
                               are expressed using CIDR notation as specified in RFC 4632.
-
                               For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
-
                               addresses.
                             items:
                               type: string
                             type: array
                           permittedUris:
-                            description: >-
+                            description: |-
                               Contains the permitted URIs that apply to the host part of the name.
-
                               The value can be a hostname or a domain with a
-
                               leading period (like .example.com)
                             items:
                               type: string
                             type: array
                         type: object
                       policyIds:
-                        description: >-
+                        description: |-
                           Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -788,31 +681,24 @@ spec:
                         type: array
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -827,11 +713,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -845,13 +729,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -883,9 +764,8 @@ spec:
                     description: an identifier for the resource with format projects/{{project}}/locations/{{location}}/certificateTemplates/{{name}}
                     type: string
                   identityConstraints:
-                    description: >-
+                    description: |-
                       Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
-
                       Structure is documented below.
                     properties:
                       allowSubjectAltNamesPassthrough:
@@ -895,9 +775,8 @@ spec:
                         description: Required. If this is true, the Subject field may be copied from a certificate request into the signed certificate. Otherwise, the requested Subject will be discarded.
                         type: boolean
                       celExpression:
-                        description: >-
+                        description: |-
                           Optional. A CEL expression that may be used to validate the resolved X.509 Subject and/or Subject Alternative Name before a certificate is signed. To see the full allowed syntax and some examples, see https://cloud.google.com/certificate-authority-service/docs/using-cel
-
                           Structure is documented below.
                         properties:
                           description:
@@ -917,11 +796,9 @@ spec:
                   labels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Optional. Labels with user-defined metadata.
-
                       Note: This field is non-authoritative, and will only manage the labels present in your configuration.
-
                       Please refer to the field effective_labels for all of the labels present on the resource.
                     type: object
                     x-kubernetes-map-type: granular
@@ -932,15 +809,13 @@ spec:
                     description: Optional. The maximum lifetime allowed for all issued certificates that use this template. If the issuing CaPool's IssuancePolicy specifies a maximum lifetime the minimum of the two durations will be the maximum lifetime for issued. Note that if the issuing CertificateAuthority expires before a Certificate's requested maximum_lifetime, the effective lifetime will be explicitly truncated to match it.
                     type: string
                   passthroughExtensions:
-                    description: >-
+                    description: |-
                       Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
-
                       Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: >-
+                        description: |-
                           Optional. A set of ObjectIds identifying custom X.509 extensions. Will be combined with known_extensions to determine the full set of X.509 extensions.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -958,15 +833,13 @@ spec:
                         type: array
                     type: object
                   predefinedValues:
-                    description: >-
+                    description: |-
                       Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
-
                       Structure is documented below.
                     properties:
                       additionalExtensions:
-                        description: >-
+                        description: |-
                           Optional. Describes custom X.509 extensions.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -974,9 +847,8 @@ spec:
                               description: Indicates whether or not the name constraints are marked critical.
                               type: boolean
                             objectId:
-                              description: >-
+                              description: |-
                                 Required. The OID for this X.509 extension.
-
                                 Structure is documented below.
                               properties:
                                 objectIdPath:
@@ -996,47 +868,39 @@ spec:
                           type: string
                         type: array
                       caOptions:
-                        description: >-
+                        description: |-
                           Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
-
                           Structure is documented below.
                         properties:
                           isCa:
                             description: Optional. Refers to the "CA" X.509 extension, which is a boolean value. When this value is true, the "CA" in Basic Constraints extension will be set to true.
                             type: boolean
                           maxIssuerPathLength:
-                            description: >-
+                            description: |-
                               Optional. Refers to the "path length constraint" in Basic Constraints extension. For a CA certificate, this value describes the depth of
-
                               subordinate CA certificates that are allowed. If this value is less than 0, the request will fail.
                             type: number
                           nullCa:
-                            description: >-
+                            description: |-
                               Optional. When true, the "CA" in Basic Constraints extension will be set to null and omitted from the CA certificate.
-
                               If both is_ca and null_ca are unset, the "CA" in Basic Constraints extension will be set to false.
-
                               Note that the behavior when is_ca = false for this resource is different from the behavior in the Certificate Authority, Certificate and CaPool resources.
                             type: boolean
                           zeroMaxIssuerPathLength:
-                            description: >-
+                            description: |-
                               Optional. When true, the "path length constraint" in Basic Constraints extension will be set to 0.
-
                               if both max_issuer_path_length and zero_max_issuer_path_length are unset,
-
                               the max path length will be omitted from the CA certificate.
                             type: boolean
                         type: object
                       keyUsage:
-                        description: >-
+                        description: |-
                           Optional. Indicates the intended use for keys that correspond to a certificate.
-
                           Structure is documented below.
                         properties:
                           baseKeyUsage:
-                            description: >-
+                            description: |-
                               Describes high-level ways in which a key may be used.
-
                               Structure is documented below.
                             properties:
                               certSign:
@@ -1068,9 +932,8 @@ spec:
                                 type: boolean
                             type: object
                           extendedKeyUsage:
-                            description: >-
+                            description: |-
                               Detailed scenarios in which a key may be used.
-
                               Structure is documented below.
                             properties:
                               clientAuth:
@@ -1093,9 +956,8 @@ spec:
                                 type: boolean
                             type: object
                           unknownExtendedKeyUsages:
-                            description: >-
+                            description: |-
                               Used to describe extended key usages that are not listed in the KeyUsage.ExtendedKeyUsageOptions message.
-
                               Structure is documented below.
                             items:
                               properties:
@@ -1108,115 +970,89 @@ spec:
                             type: array
                         type: object
                       nameConstraints:
-                        description: >-
+                        description: |-
                           Describes the X.509 name constraints extension.
-
                           Structure is documented below.
                         properties:
                           critical:
                             description: Indicates whether or not the name constraints are marked critical.
                             type: boolean
                           excludedDnsNames:
-                            description: >-
+                            description: |-
                               Contains excluded DNS names. Any DNS name that can be
-
                               constructed by simply adding zero or more labels to
-
                               the left-hand side of the name satisfies the name constraint.
-
                               For example, example.com, www.example.com, www.sub.example.com
-
                               would satisfy example.com while example1.com does not.
                             items:
                               type: string
                             type: array
                           excludedEmailAddresses:
-                            description: >-
+                            description: |-
                               Contains the excluded email addresses. The value can be a particular
-
                               email address, a hostname to indicate all email addresses on that host or
-
                               a domain with a leading period (e.g. .example.com) to indicate
-
                               all email addresses in that domain.
                             items:
                               type: string
                             type: array
                           excludedIpRanges:
-                            description: >-
+                            description: |-
                               Contains the excluded IP ranges. For IPv4 addresses, the ranges
-
                               are expressed using CIDR notation as specified in RFC 4632.
-
                               For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
-
                               addresses.
                             items:
                               type: string
                             type: array
                           excludedUris:
-                            description: >-
+                            description: |-
                               Contains the excluded URIs that apply to the host part of the name.
-
                               The value can be a hostname or a domain with a
-
                               leading period (like .example.com)
                             items:
                               type: string
                             type: array
                           permittedDnsNames:
-                            description: >-
+                            description: |-
                               Contains permitted DNS names. Any DNS name that can be
-
                               constructed by simply adding zero or more labels to
-
                               the left-hand side of the name satisfies the name constraint.
-
                               For example, example.com, www.example.com, www.sub.example.com
-
                               would satisfy example.com while example1.com does not.
                             items:
                               type: string
                             type: array
                           permittedEmailAddresses:
-                            description: >-
+                            description: |-
                               Contains the permitted email addresses. The value can be a particular
-
                               email address, a hostname to indicate all email addresses on that host or
-
                               a domain with a leading period (e.g. .example.com) to indicate
-
                               all email addresses in that domain.
                             items:
                               type: string
                             type: array
                           permittedIpRanges:
-                            description: >-
+                            description: |-
                               Contains the permitted IP ranges. For IPv4 addresses, the ranges
-
                               are expressed using CIDR notation as specified in RFC 4632.
-
                               For IPv6 addresses, the ranges are expressed in similar encoding as IPv4
-
                               addresses.
                             items:
                               type: string
                             type: array
                           permittedUris:
-                            description: >-
+                            description: |-
                               Contains the permitted URIs that apply to the host part of the name.
-
                               The value can be a hostname or a domain with a
-
                               leading period (like .example.com)
                             items:
                               type: string
                             type: array
                         type: object
                       policyIds:
-                        description: >-
+                        description: |-
                           Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -1229,17 +1065,15 @@ spec:
                         type: array
                     type: object
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -1253,24 +1087,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1281,9 +1111,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1297,11 +1126,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

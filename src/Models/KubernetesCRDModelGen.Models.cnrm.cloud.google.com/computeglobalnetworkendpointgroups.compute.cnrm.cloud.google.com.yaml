@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: computeglobalnetworkendpointgroups.compute.cnrm.cloud.google.com
 spec:
   group: compute.cnrm.cloud.google.com
@@ -54,15 +53,13 @@ spec:
           spec:
             properties:
               defaultPort:
-                description: >-
+                description: |-
                   Immutable. The default port used if the port number is not specified in the
-
                   network endpoint.
                 type: integer
               description:
-                description: >-
+                description: |-
                   Immutable. An optional description of this resource. Provide this property when
-
                   you create the resource.
                 type: string
               networkEndpointType:
@@ -140,7 +137,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

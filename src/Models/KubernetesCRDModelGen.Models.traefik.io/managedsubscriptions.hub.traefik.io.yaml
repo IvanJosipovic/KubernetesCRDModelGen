@@ -16,31 +16,23 @@ spec:
   - name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           ManagedSubscription defines a Subscription managed by the API manager as the result of a pre-negotiation with its
-
           API consumers. This subscription grant consuming access to a set of APIs to a set of Applications.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -49,9 +41,8 @@ spec:
             description: The desired behavior of this ManagedSubscription.
             properties:
               apiBundles:
-                description: >-
+                description: |-
                   APIBundles defines a set of APIBundle that will be accessible.
-
                   Multiple ManagedSubscriptions can select the same APIBundles.
                 items:
                   description: APIBundleReference references an APIBundle.
@@ -79,40 +70,32 @@ spec:
                 - name
                 type: object
               apiSelector:
-                description: >-
+                description: |-
                   APISelector selects the APIs that will be accessible.
-
                   Multiple ManagedSubscriptions can select the same set of APIs.
-
                   This field is optional and follows standard label selector semantics.
-
                   An empty APISelector matches any API.
                 properties:
                   matchExpressions:
                     description: matchExpressions is a list of label selector requirements. The requirements are ANDed.
                     items:
-                      description: >-
+                      description: |-
                         A label selector requirement is a selector that contains values, a key, and an operator that
-
                         relates the key and values.
                       properties:
                         key:
                           description: key is the label key that the selector applies to.
                           type: string
                         operator:
-                          description: >-
+                          description: |-
                             operator represents a key's relationship to a set of values.
-
                             Valid operators are In, NotIn, Exists and DoesNotExist.
                           type: string
                         values:
-                          description: >-
+                          description: |-
                             values is an array of string values. If the operator is In or NotIn,
-
                             the values array must be non-empty. If the operator is Exists or DoesNotExist,
-
                             the values array must be empty. This array is replaced during a strategic
-
                             merge patch.
                           items:
                             type: string
@@ -127,21 +110,17 @@ spec:
                   matchLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels
-
                       map is equivalent to an element of matchExpressions, whose key field is "key", the
-
                       operator is "In", and the values array contains only "value". The requirements are ANDed.
                     type: object
                 type: object
                 x-kubernetes-map-type: atomic
               apis:
-                description: >-
+                description: |-
                   APIs defines a set of APIs that will be accessible.
-
                   Multiple ManagedSubscriptions can select the same APIs.
-
                   When combined with APISelector, this set of APIs is appended to the matching APIs.
                 items:
                   description: APIReference references an API.
@@ -159,19 +138,16 @@ spec:
                 - message: duplicated apis
                   rule: self.all(x, self.exists_one(y, x.name == y.name))
               applications:
-                description: >-
+                description: |-
                   Applications references the Applications that will gain access to the specified APIs.
-
                   Multiple ManagedSubscriptions can select the same AppID.
-
                   Deprecated: Use ManagedApplications instead.
                 items:
                   description: ApplicationReference references an Application.
                   properties:
                     appId:
-                      description: >-
+                      description: |-
                         AppID is the public identifier of the application.
-
                         In the case of OIDC, it corresponds to the clientId.
                       maxLength: 253
                       type: string
@@ -184,9 +160,8 @@ spec:
                 description: Claims specifies an expression that validate claims in order to authorize the request.
                 type: string
               managedApplications:
-                description: >-
+                description: |-
                   ManagedApplications references the ManagedApplications that will gain access to the specified APIs.
-
                   Multiple ManagedSubscriptions can select the same ManagedApplication.
                 items:
                   description: ManagedApplicationReference references a ManagedApplication.
@@ -204,11 +179,9 @@ spec:
                 - message: duplicated managed applications
                   rule: self.all(x, self.exists_one(y, x.name == y.name))
               operationFilter:
-                description: >-
+                description: |-
                   OperationFilter specifies the allowed operations on APIs and APIVersions.
-
                   If not set, all operations are available.
-
                   An empty OperationFilter prohibits all operations.
                 properties:
                   include:
@@ -219,11 +192,9 @@ spec:
                     type: array
                 type: object
               weight:
-                description: >-
+                description: |-
                   Weight specifies the evaluation order of the APIPlan.
-
                   When multiple ManagedSubscriptions targets the same API and Application with different APIPlan,
-
                   the APIPlan with the highest weight will be enforced. If weights are equal, alphabetical order is used.
                 type: integer
                 x-kubernetes-validations:

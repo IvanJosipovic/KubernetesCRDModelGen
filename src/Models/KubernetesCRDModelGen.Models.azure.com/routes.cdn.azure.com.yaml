@@ -45,33 +45,24 @@ spec:
     name: v1api20230501
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/afdEndpoints/{endpointName}/routes/{routeName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,15 +70,13 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               cacheConfiguration:
-                description: >-
+                description: |-
                   CacheConfiguration: The caching configuration for this route. To disable caching, do not provide a cacheConfiguration
-
                   object.
                 properties:
                   compressionSettings:
@@ -99,11 +88,9 @@ spec:
                           type: string
                         type: array
                       isCompressionEnabled:
-                        description: >-
+                        description: |-
                           IsCompressionEnabled: Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If
-
                           compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be
-
                           compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
                         type: boolean
                     type: object
@@ -111,11 +98,9 @@ spec:
                     description: 'QueryParameters: query parameters to include or exclude (comma separated).'
                     type: string
                   queryStringCachingBehavior:
-                    description: >-
+                    description: |-
                       QueryStringCachingBehavior: Defines how Frontdoor caches requests that include query strings. You can ignore any query
-
                       strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query
-
                       strings.
                     enum:
                     - IgnoreQueryString
@@ -133,11 +118,9 @@ spec:
                       description: 'Reference: Resource ID.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -167,9 +150,8 @@ spec:
                 - MatchRequest
                 type: string
               httpsRedirect:
-                description: >-
+                description: |-
                   HttpsRedirect: Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up
-
                   this rule and it will be the first rule that gets executed.
                 enum:
                 - Disabled
@@ -182,41 +164,33 @@ spec:
                 - Enabled
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -227,33 +201,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -269,11 +236,9 @@ spec:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -289,17 +254,14 @@ spec:
                     type: object
                 type: object
               originPath:
-                description: >-
+                description: |-
                   OriginPath: A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g.
-
                   contoso.cloudapp.net/originpath.
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a cdn.azure.com/AfdEndpoint resource
                 properties:
                   armId:
@@ -323,11 +285,9 @@ spec:
                       description: 'Reference: Resource ID.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -358,9 +318,8 @@ spec:
           status:
             properties:
               cacheConfiguration:
-                description: >-
+                description: |-
                   CacheConfiguration: The caching configuration for this route. To disable caching, do not provide a cacheConfiguration
-
                   object.
                 properties:
                   compressionSettings:
@@ -372,11 +331,9 @@ spec:
                           type: string
                         type: array
                       isCompressionEnabled:
-                        description: >-
+                        description: |-
                           IsCompressionEnabled: Indicates whether content compression is enabled on AzureFrontDoor. Default value is false. If
-
                           compression is enabled, content will be served as compressed if user requests for a compressed version. Content won't be
-
                           compressed on AzureFrontDoor when requested content is smaller than 1 byte or larger than 1 MB.
                         type: boolean
                     type: object
@@ -384,11 +341,9 @@ spec:
                     description: 'QueryParameters: query parameters to include or exclude (comma separated).'
                     type: string
                   queryStringCachingBehavior:
-                    description: >-
+                    description: |-
                       QueryStringCachingBehavior: Defines how Frontdoor caches requests that include query strings. You can ignore any query
-
                       strings when caching, ignore specific query strings, cache every request with a unique URL, or cache specific query
-
                       strings.
                     type: string
                 type: object
@@ -405,28 +360,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -464,9 +413,8 @@ spec:
                 description: 'ForwardingProtocol: Protocol this rule will use when forwarding traffic to backends.'
                 type: string
               httpsRedirect:
-                description: >-
+                description: |-
                   HttpsRedirect: Whether to automatically redirect HTTP traffic to HTTPS traffic. Note that this is a easy way to set up
-
                   this rule and it will be the first rule that gets executed.
                 type: string
               id:
@@ -486,9 +434,8 @@ spec:
                     type: string
                 type: object
               originPath:
-                description: >-
+                description: |-
                   OriginPath: A directory path on the origin that AzureFrontDoor can use to retrieve content from, e.g.
-
                   contoso.cloudapp.net/originpath.
                 type: string
               patternsToMatch:
@@ -562,35 +509,25 @@ spec:
     name: v1api20230501storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230501.Route
-
           Generator information:
-
           - Generated from: /cdn/resource-manager/Microsoft.Cdn/stable/2023-05-01/afdx.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/afdEndpoints/{endpointName}/routes/{routeName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -601,43 +538,37 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               cacheConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.AfdRouteCacheConfiguration
-
                   Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   compressionSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.CompressionSettings
-
                       settings for compression.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       contentTypesToCompress:
@@ -654,28 +585,24 @@ spec:
                 type: object
               customDomains:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501.ActivatedResourceReference
-
                     Reference to another resource along with its state.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     reference:
                       description: 'Reference: Resource ID.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -700,48 +627,39 @@ spec:
               linkToDefaultDomain:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.RouteOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -751,33 +669,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -787,28 +698,24 @@ spec:
                     type: array
                 type: object
               originGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.ResourceReference
-
                   Reference to another resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   reference:
                     description: 'Reference: Resource ID.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -828,11 +735,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a cdn.azure.com/AfdEndpoint resource
                 properties:
                   armId:
@@ -848,28 +753,24 @@ spec:
                 type: array
               ruleSets:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501.ResourceReference
-
                     Reference to another resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     reference:
                       description: 'Reference: Resource ID.'
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -898,37 +799,32 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               cacheConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.AfdRouteCacheConfiguration_STATUS
-
                   Caching settings for a caching-type route. To disable caching, do not provide a cacheConfiguration object.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   compressionSettings:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230501.CompressionSettings_STATUS
-
                       settings for compression.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       contentTypesToCompress:
@@ -955,28 +851,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -994,17 +884,15 @@ spec:
                 type: array
               customDomains:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501.ActivatedResourceReference_STATUS_Profiles_AfdEndpoints_Route_SubResourceEmbedded
-
                     Reference to another resource along with its state.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1028,17 +916,15 @@ spec:
               name:
                 type: string
               originGroup:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.ResourceReference_STATUS
-
                   Reference to another resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   id:
@@ -1054,17 +940,15 @@ spec:
                 type: string
               ruleSets:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501.ResourceReference_STATUS
-
                     Reference to another resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     id:
@@ -1076,17 +960,15 @@ spec:
                   type: string
                 type: array
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20230501.SystemData_STATUS
-
                   Read only system data
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:

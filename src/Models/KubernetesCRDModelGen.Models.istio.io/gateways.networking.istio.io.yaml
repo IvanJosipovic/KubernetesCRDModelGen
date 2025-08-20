@@ -104,9 +104,8 @@ spec:
                           description: If set to true, the load balancer will send a 301 redirect for all http connections, asking the clients to use HTTPS.
                           type: boolean
                         maxProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Maximum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -117,9 +116,8 @@ spec:
                           - TLSV1_3
                           type: string
                         minProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Minimum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -130,9 +128,8 @@ spec:
                           - TLSV1_3
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Optional: Indicates whether connections to this port should be secured using TLS.
-
 
                             Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL
                           enum:
@@ -241,9 +238,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -350,9 +346,8 @@ spec:
                           description: If set to true, the load balancer will send a 301 redirect for all http connections, asking the clients to use HTTPS.
                           type: boolean
                         maxProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Maximum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -363,9 +358,8 @@ spec:
                           - TLSV1_3
                           type: string
                         minProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Minimum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -376,9 +370,8 @@ spec:
                           - TLSV1_3
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Optional: Indicates whether connections to this port should be secured using TLS.
-
 
                             Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL
                           enum:
@@ -487,9 +480,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -596,9 +588,8 @@ spec:
                           description: If set to true, the load balancer will send a 301 redirect for all http connections, asking the clients to use HTTPS.
                           type: boolean
                         maxProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Maximum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -609,9 +600,8 @@ spec:
                           - TLSV1_3
                           type: string
                         minProtocolVersion:
-                          description: >-
+                          description: |-
                             Optional: Minimum TLS protocol version.
-
 
                             Valid Options: TLS_AUTO, TLSV1_0, TLSV1_1, TLSV1_2, TLSV1_3
                           enum:
@@ -622,9 +612,8 @@ spec:
                           - TLSV1_3
                           type: string
                         mode:
-                          description: >-
+                          description: |-
                             Optional: Indicates whether connections to this port should be secured using TLS.
-
 
                             Valid Options: PASSTHROUGH, SIMPLE, MUTUAL, AUTO_PASSTHROUGH, ISTIO_MUTUAL, OPTIONAL_MUTUAL
                           enum:
@@ -733,9 +722,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

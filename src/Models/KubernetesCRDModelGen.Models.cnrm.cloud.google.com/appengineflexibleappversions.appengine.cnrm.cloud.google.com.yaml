@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: appengineflexibleappversions.appengine.cnrm.cloud.google.com
 spec:
   group: appengine.cnrm.cloud.google.com
@@ -78,11 +77,9 @@ spec:
                 description: Automatic scaling is based on request rate, response latencies, and other application metrics.
                 properties:
                   coolDownPeriod:
-                    description: >-
+                    description: |-
                       The time period that the Autoscaler should wait before it starts collecting information from a new instance.
-
                       This prevents the autoscaler from collecting information when the instance is initializing,
-
                       during which the collected usage would not be reliable. Default: 120s.
                     type: string
                   cpuUtilization:
@@ -114,9 +111,8 @@ spec:
                         type: integer
                     type: object
                   maxConcurrentRequests:
-                    description: >-
+                    description: |-
                       Number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance.
-
 
                       Defaults to a runtime-specific value.
                     type: integer
@@ -173,9 +169,8 @@ spec:
                 description: Metadata settings that are supplied to this version to enable beta runtime features.
                 type: object
               defaultExpiration:
-                description: >-
+                description: |-
                   Duration that static files should be cached by web proxies and browsers.
-
                   Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
                 type: string
               deleteServiceOnDestroy:
@@ -191,9 +186,8 @@ spec:
                         description: Path to the yaml file used in deployment, used to determine runtime configuration details.
                         type: string
                       cloudBuildTimeout:
-                        description: >-
+                        description: |-
                           The Cloud Build timeout used as part of any dependent builds performed by version creation. Defaults to 10 minutes.
-
 
                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                         type: string
@@ -204,18 +198,16 @@ spec:
                     description: The Docker image for the container that runs the version.
                     properties:
                       image:
-                        description: >-
+                        description: |-
                           URI to the hosted container image in Google Container Registry. The URI must be fully qualified and include a tag or digest.
-
                           Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest".
                         type: string
                     required:
                     - image
                     type: object
                   files:
-                    description: >-
+                    description: |-
                       Manifest of the files stored in Google Cloud Storage that are included as part of this version.
-
                       All files must be readable using the credentials supplied with this call.
                     items:
                       properties:
@@ -249,28 +241,22 @@ spec:
                 description: Code and application artifacts that make up this version.
                 properties:
                   configId:
-                    description: >-
+                    description: |-
                       Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
 
-
                       By default, the rollout strategy for Endpoints is "FIXED". This means that Endpoints starts up with a particular configuration ID.
-
                       When a new configuration is rolled out, Endpoints must be given the new configuration ID. The configId field is used to give the configuration ID
-
                       and is required in this case.
 
-
                       Endpoints also has a rollout strategy called "MANAGED". When using this, Endpoints fetches the latest configuration and does not need
-
                       the configuration ID. In this case, configId must be omitted.
                     type: string
                   disableTraceSampling:
                     description: Enable or disable trace sampling. By default, this is set to false for enabled.
                     type: boolean
                   name:
-                    description: >-
+                    description: |-
                       Endpoints service name which is the name of the "service" resource in the Service Management API.
-
                       For example "myapi.endpoints.myproject.cloud.goog".
                     type: string
                   rolloutStrategy:
@@ -293,9 +279,8 @@ spec:
                   type: string
                 type: object
               handlers:
-                description: >-
+                description: |-
                   An ordered list of URL-matching patterns that should be applied to incoming requests.
-
                   The first matching URL handles the request and other request handlers are not attempted.
                 items:
                   properties:
@@ -309,9 +294,8 @@ spec:
                       description: '30x code to use when performing redirects for the secure field. Possible values: ["REDIRECT_HTTP_RESPONSE_CODE_301", "REDIRECT_HTTP_RESPONSE_CODE_302", "REDIRECT_HTTP_RESPONSE_CODE_303", "REDIRECT_HTTP_RESPONSE_CODE_307"].'
                       type: string
                     script:
-                      description: >-
+                      description: |-
                         Executes a script to handle the requests that match this URL pattern.
-
                         Only the auto value is supported for Node.js in the App Engine standard environment, for example "script:" "auto".
                       properties:
                         scriptPath:
@@ -324,45 +308,37 @@ spec:
                       description: 'Security (HTTPS) enforcement for this URL. Possible values: ["SECURE_DEFAULT", "SECURE_NEVER", "SECURE_OPTIONAL", "SECURE_ALWAYS"].'
                       type: string
                     staticFiles:
-                      description: >-
+                      description: |-
                         Files served directly to the user for a given URL, such as images, CSS stylesheets, or JavaScript source files.
-
                         Static file handlers describe which files in the application directory are static files, and which URLs serve them.
                       properties:
                         applicationReadable:
-                          description: >-
+                          description: |-
                             Whether files should also be uploaded as code data. By default, files declared in static file handlers are
-
                             uploaded as static data and are only served to end users; they cannot be read by the application. If enabled,
-
                             uploads are charged against both your code and static data storage resource quotas.
                           type: boolean
                         expiration:
-                          description: >-
+                          description: |-
                             Time a static file served by this handler should be cached by web proxies and browsers.
-
                             A duration in seconds with up to nine fractional digits, terminated by 's'. Example "3.5s".
-
                             Default is '0s'.
                           type: string
                         httpHeaders:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             HTTP headers to use for all responses from these URLs.
-
                             An object containing a list of "key:value" value pairs.".
                           type: object
                         mimeType:
-                          description: >-
+                          description: |-
                             MIME type used to serve all files served by this handler.
-
                             Defaults to file-specific MIME types, which are derived from each file's filename extension.
                           type: string
                         path:
-                          description: >-
+                          description: |-
                             Path to the static files matched by the URL pattern, from the application root directory.
-
                             The path can refer to text matched in groupings in the URL pattern.
                           type: string
                         requireMatchingFile:
@@ -373,9 +349,8 @@ spec:
                           type: string
                       type: object
                     urlRegex:
-                      description: >-
+                      description: |-
                         URL prefix. Uses regular expression syntax, which means regexp special characters must be escaped, but should not contain groupings.
-
                         All URLs that begin with this prefix are handled by this handler, using the portion of the URL after the prefix as part of the file path.
                       type: string
                   type: object
@@ -386,13 +361,10 @@ spec:
                   type: string
                 type: array
               instanceClass:
-                description: >-
+                description: |-
                   Instance class that is used to run this version. Valid values are
-
                   AutomaticScaling: F1, F2, F4, F4_1G
-
                   ManualScaling: B1, B2, B4, B8, B4_1G
-
                   Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
                 type: string
               livenessCheck:
@@ -426,12 +398,10 @@ spec:
                 description: A service with manual scaling runs continuously, allowing you to perform complex initialization and rely on the state of its memory over time.
                 properties:
                   instances:
-                    description: >-
+                    description: |-
                       Number of instances to assign to the service at the start.
 
-
                       **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
-
                       Modules API set_num_instances() you must use 'lifecycle.ignore_changes = ["manual_scaling"[0].instances]' to prevent drift detection.
                     type: integer
                 required:
@@ -455,16 +425,12 @@ spec:
                     description: Enable session affinity.
                     type: boolean
                   subnetwork:
-                    description: >-
+                    description: |-
                       Google Cloud Platform sub-network where the virtual machines are created. Specify the short name, not the resource path.
 
-
                       If the network that the instance is being created in is a Legacy network, then the IP address is allocated from the IPv4Range.
-
                       If the network that the instance is being created in is an auto Subnet Mode Network, then only network name should be specified (not the subnetworkName) and the IP address is created from the IPCidrRange of the subnetwork that exists in that zone for that network.
-
                       If the network that the instance is being created in is a custom Subnet Mode Network, then the subnetworkName must be specified and the IP address is created from the IPCidrRange of the subnetwork.
-
                       If specified, the subnetwork must exist in the same region as the App Engine flexible environment application.
                     type: string
                 required:
@@ -483,9 +449,8 @@ spec:
                 description: Configures readiness health checking for instances. Unhealthy instances are not put into the backend traffic rotation.
                 properties:
                   appStartTimeout:
-                    description: >-
+                    description: |-
                       A maximum time limit on application initialization, measured from moment the application successfully
-
                       replies to a healthcheck until it is ready to serve traffic. Default: "300s".
                     type: string
                   checkInterval:
@@ -548,11 +513,9 @@ spec:
                 description: Desired runtime. Example python27.
                 type: string
               runtimeApiVersion:
-                description: >-
+                description: |-
                   The version of the API in the given runtime environment.
-
                   Please see the app.yaml reference for valid values at 'https://cloud.google.com/appengine/docs/standard/<language>/config/appref'\
-
                   Substitute '<language>' with 'python', 'java', 'php', 'ruby', 'go' or 'nodejs'.
                 type: string
               runtimeChannel:
@@ -562,9 +525,8 @@ spec:
                 description: The path or name of the app's main executable.
                 type: string
               serviceAccount:
-                description: >-
+                description: |-
                   The identity that the deployed version will run as. Admin API will use the App Engine Appspot service account as
-
                   default if this field is neither provided in app.yaml file nor through CLI flag.
                 type: string
               serviceRef:
@@ -650,7 +612,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

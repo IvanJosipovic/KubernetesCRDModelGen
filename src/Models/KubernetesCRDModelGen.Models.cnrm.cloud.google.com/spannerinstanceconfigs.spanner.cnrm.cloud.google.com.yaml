@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: spannerinstanceconfigs.spanner.cnrm.cloud.google.com
 spec:
   group: spanner.cnrm.cloud.google.com
@@ -90,7 +89,7 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Cloud Labels are a flexible and lightweight mechanism for organizing cloud
                    resources into groups that reflect a customer's organizational needs and
                    deployment strategies. Cloud Labels can be used to filter collections of
@@ -149,7 +148,7 @@ spec:
                     type: string
                 type: object
               replicas:
-                description: >-
+                description: |-
                   The geographic placement of nodes in this instance configuration and their
                    replication properties.
 
@@ -257,7 +256,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

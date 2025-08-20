@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: networkmanagementconnectivitytests.networkmanagement.cnrm.cloud.google.com
 spec:
   group: networkmanagement.cnrm.cloud.google.com
@@ -61,7 +60,7 @@ spec:
                 description: The user-supplied description of the Connectivity Test. Maximum of 512 characters.
                 type: string
               destination:
-                description: >-
+                description: |-
                   Required. Destination specification of the Connectivity Test.
 
                    You can use a combination of destination IP address, Compute Engine
@@ -359,7 +358,7 @@ spec:
                 description: Whether run analysis for the return path from destination to source. Default value is false.
                 type: boolean
               source:
-                description: >-
+                description: |-
                   Required. Source specification of the Connectivity Test.
 
                    You can use a combination of source IP address, virtual machine
@@ -618,7 +617,7 @@ spec:
                     description: Output only. The time the test was created.
                     type: string
                   destination:
-                    description: >-
+                    description: |-
                       Destination specification of the Connectivity Test.
 
                        You can use a combination of destination IP address, Compute Engine
@@ -706,7 +705,7 @@ spec:
                             items:
                               properties:
                                 typeURL:
-                                  description: >-
+                                  description: |-
                                     A URL/resource name that uniquely identifies the type of the serialized
                                      protocol buffer message. This string must contain at least
                                      one "/" character. The last segment of the URL's path must represent
@@ -792,7 +791,7 @@ spec:
                             items:
                               properties:
                                 typeURL:
-                                  description: >-
+                                  description: |-
                                     A URL/resource name that uniquely identifies the type of the serialized
                                      protocol buffer message. This string must contain at least
                                      one "/" character. The last segment of the URL's path must represent
@@ -872,7 +871,7 @@ spec:
                               format: int32
                               type: integer
                             steps:
-                              description: >-
+                              description: |-
                                 A trace of a test contains multiple steps from the initial state to the
                                  final state (delivered, dropped, forwarded, or aborted).
 
@@ -1603,7 +1602,7 @@ spec:
                             items:
                               properties:
                                 typeURL:
-                                  description: >-
+                                  description: |-
                                     A URL/resource name that uniquely identifies the type of the serialized
                                      protocol buffer message. This string must contain at least
                                      one "/" character. The last segment of the URL's path must represent
@@ -1683,7 +1682,7 @@ spec:
                               format: int32
                               type: integer
                             steps:
-                              description: >-
+                              description: |-
                                 A trace of a test contains multiple steps from the initial state to the
                                  final state (delivered, dropped, forwarded, or aborted).
 
@@ -2400,7 +2399,7 @@ spec:
                         type: string
                     type: object
                   source:
-                    description: >-
+                    description: |-
                       Source specification of the Connectivity Test.
 
                        You can use a combination of source IP address, virtual machine
@@ -2448,7 +2447,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

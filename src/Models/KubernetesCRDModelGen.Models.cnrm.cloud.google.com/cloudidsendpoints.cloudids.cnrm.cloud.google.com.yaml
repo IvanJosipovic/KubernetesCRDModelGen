@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: cloudidsendpoints.cloudids.cnrm.cloud.google.com
 spec:
   group: cloudids.cnrm.cloud.google.com
@@ -60,11 +59,9 @@ spec:
                 description: Immutable. The location for the endpoint.
                 type: string
               networkRef:
-                description: >-
+                description: |-
                   Immutable. Name of the VPC network that is connected
-
                   to the IDS endpoint. This can either contain the VPC network name
-
                   itself (like "src-net") or the full URL to the network (like "projects/{project_id}/global/networks/src-net").
                 oneOf:
                 - not:
@@ -222,11 +219,9 @@ spec:
                 description: Immutable. The location for the endpoint.
                 type: string
               networkRef:
-                description: >-
+                description: |-
                   Immutable. Name of the VPC network that is connected
-
                   to the IDS endpoint. This can either contain the VPC network name
-
                   itself (like "src-net") or the full URL to the network (like "projects/{project_id}/global/networks/src-net").
                 oneOf:
                 - not:
@@ -349,7 +344,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

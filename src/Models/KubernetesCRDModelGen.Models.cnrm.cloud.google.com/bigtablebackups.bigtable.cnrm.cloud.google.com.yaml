@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: bigtablebackups.bigtable.cnrm.cloud.google.com
 spec:
   group: bigtable.cnrm.cloud.google.com
@@ -85,7 +84,7 @@ spec:
                     type: string
                 type: object
               expireTime:
-                description: >-
+                description: |-
                   Required. The expiration time of the backup.
                    When creating a backup or updating its `expire_time`, the value must be
                    greater than the backup creation time by:
@@ -95,7 +94,7 @@ spec:
                    Once the `expire_time` has passed, Cloud Bigtable will delete the backup.
                 type: string
               hotToStandardTime:
-                description: >-
+                description: |-
                   The time at which the hot backup will be converted to a standard backup.
                    Once the `hot_to_standard_time` has passed, Cloud Bigtable will convert the
                    hot backup to a standard backup. This value must be greater than the backup
@@ -187,7 +186,7 @@ spec:
                             items:
                               properties:
                                 typeURL:
-                                  description: >-
+                                  description: |-
                                     A URL/resource name that uniquely identifies the type of the serialized
                                      protocol buffer message. This string must contain at least
                                      one "/" character. The last segment of the URL's path must represent
@@ -260,7 +259,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

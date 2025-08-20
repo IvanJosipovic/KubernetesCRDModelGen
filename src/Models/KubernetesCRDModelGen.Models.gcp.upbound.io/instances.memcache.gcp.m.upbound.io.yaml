@@ -36,25 +36,18 @@ spec:
         description: Instance is the Schema for the Instances API. A Google Cloud Memcache instance.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -65,9 +58,8 @@ spec:
               forProvider:
                 properties:
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       The full name of the GCE network to connect the instance to.  If not provided,
-
                       'default' will be used.
                     type: string
                   authorizedNetworkRef:
@@ -84,26 +76,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -117,9 +103,8 @@ spec:
                     description: Selector for a Connection in servicenetworking to populate authorizedNetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -135,26 +120,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -172,27 +151,21 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   maintenancePolicy:
-                    description: >-
+                    description: |-
                       Maintenance policy for an instance.
-
                       Structure is documented below.
                     properties:
                       description:
-                        description: >-
+                        description: |-
                           Optional. Description of what this policy is for.
-
                           Create/Update methods return INVALID_ARGUMENT if the
-
                           length is greater than 512.
                         type: string
                       weeklyMaintenanceWindow:
-                        description: >-
+                        description: |-
                           Required. Maintenance window that is applied to resources covered by this policy.
-
                           Minimum 1. For the current version, the maximum number of weekly_maintenance_windows
-
                           is expected to be one.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -200,23 +173,19 @@ spec:
                               description: Required. The day of week that maintenance updates occur.
                               type: string
                             duration:
-                              description: >-
+                              description: |-
                                 Required. The length of the maintenance window, ranging from 3 hours to 8 hours.
-
                                 A duration in seconds with up to nine fractional digits,
-
                                 terminated by 's'. Example: "3.5s".
                               type: string
                             startTime:
-                              description: >-
+                              description: |-
                                 Required. Start time of the window in UTC time.
-
                                 Structure is documented below.
                               properties:
                                 hours:
-                                  description: >-
+                                  description: |-
                                     Hours of day in 24 hour format. Should be from 0 to 23.
-
                                     An API may choose to allow the value "24:00:00" for scenarios like business closing time.
                                   type: number
                                 minutes:
@@ -226,9 +195,8 @@ spec:
                                   description: Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
                                   type: number
                                 seconds:
-                                  description: >-
+                                  description: |-
                                     Seconds of minutes of the time. Must normally be from 0 to 59.
-
                                     An API may allow the value 60 if it allows leap-seconds.
                                   type: number
                               type: object
@@ -236,9 +204,8 @@ spec:
                         type: array
                     type: object
                   memcacheParameters:
-                    description: >-
+                    description: |-
                       User-specified parameters for this memcache instance.
-
                       Structure is documented below.
                     properties:
                       params:
@@ -249,24 +216,19 @@ spec:
                         x-kubernetes-map-type: granular
                     type: object
                   memcacheVersion:
-                    description: >-
+                    description: |-
                       The major version of Memcached software. If not provided, latest supported version will be used.
-
                       Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
-
                       determined by our system based on the latest supported minor version.
-
                       Default value is MEMCACHE_1_5.
-
                       Possible values are: MEMCACHE_1_5, MEMCACHE_1_6_15.
                     type: string
                   name:
                     description: The resource name of the instance.
                     type: string
                   nodeConfig:
-                    description: >-
+                    description: |-
                       Configuration for memcache nodes.
-
                       Structure is documented below.
                     properties:
                       cpuCount:
@@ -280,28 +242,24 @@ spec:
                     description: Number of nodes in the memcache instance.
                     type: number
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   region:
                     description: The region of the Memcache instance. If it is not provided, the provider region is used.
                     type: string
                   reservedIpRangeId:
-                    description: >-
+                    description: |-
                       Contains the name of allocated IP address ranges associated with
-
                       the private service access connection for example, "test-default"
-
                       associated with IP range 10.0.0.0/29.
                     items:
                       type: string
                     type: array
                   zones:
-                    description: >-
+                    description: |-
                       Zones where memcache nodes should be provisioned.  If not
-
                       provided, all zones will be used.
                     items:
                       type: string
@@ -309,31 +267,21 @@ spec:
                     x-kubernetes-list-type: set
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       The full name of the GCE network to connect the instance to.  If not provided,
-
                       'default' will be used.
                     type: string
                   authorizedNetworkRef:
@@ -350,26 +298,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -383,9 +325,8 @@ spec:
                     description: Selector for a Connection in servicenetworking to populate authorizedNetwork.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -401,26 +342,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -438,27 +373,21 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   maintenancePolicy:
-                    description: >-
+                    description: |-
                       Maintenance policy for an instance.
-
                       Structure is documented below.
                     properties:
                       description:
-                        description: >-
+                        description: |-
                           Optional. Description of what this policy is for.
-
                           Create/Update methods return INVALID_ARGUMENT if the
-
                           length is greater than 512.
                         type: string
                       weeklyMaintenanceWindow:
-                        description: >-
+                        description: |-
                           Required. Maintenance window that is applied to resources covered by this policy.
-
                           Minimum 1. For the current version, the maximum number of weekly_maintenance_windows
-
                           is expected to be one.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -466,23 +395,19 @@ spec:
                               description: Required. The day of week that maintenance updates occur.
                               type: string
                             duration:
-                              description: >-
+                              description: |-
                                 Required. The length of the maintenance window, ranging from 3 hours to 8 hours.
-
                                 A duration in seconds with up to nine fractional digits,
-
                                 terminated by 's'. Example: "3.5s".
                               type: string
                             startTime:
-                              description: >-
+                              description: |-
                                 Required. Start time of the window in UTC time.
-
                                 Structure is documented below.
                               properties:
                                 hours:
-                                  description: >-
+                                  description: |-
                                     Hours of day in 24 hour format. Should be from 0 to 23.
-
                                     An API may choose to allow the value "24:00:00" for scenarios like business closing time.
                                   type: number
                                 minutes:
@@ -492,9 +417,8 @@ spec:
                                   description: Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
                                   type: number
                                 seconds:
-                                  description: >-
+                                  description: |-
                                     Seconds of minutes of the time. Must normally be from 0 to 59.
-
                                     An API may allow the value 60 if it allows leap-seconds.
                                   type: number
                               type: object
@@ -502,9 +426,8 @@ spec:
                         type: array
                     type: object
                   memcacheParameters:
-                    description: >-
+                    description: |-
                       User-specified parameters for this memcache instance.
-
                       Structure is documented below.
                     properties:
                       params:
@@ -515,24 +438,19 @@ spec:
                         x-kubernetes-map-type: granular
                     type: object
                   memcacheVersion:
-                    description: >-
+                    description: |-
                       The major version of Memcached software. If not provided, latest supported version will be used.
-
                       Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
-
                       determined by our system based on the latest supported minor version.
-
                       Default value is MEMCACHE_1_5.
-
                       Possible values are: MEMCACHE_1_5, MEMCACHE_1_6_15.
                     type: string
                   name:
                     description: The resource name of the instance.
                     type: string
                   nodeConfig:
-                    description: >-
+                    description: |-
                       Configuration for memcache nodes.
-
                       Structure is documented below.
                     properties:
                       cpuCount:
@@ -546,28 +464,24 @@ spec:
                     description: Number of nodes in the memcache instance.
                     type: number
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   region:
                     description: The region of the Memcache instance. If it is not provided, the provider region is used.
                     type: string
                   reservedIpRangeId:
-                    description: >-
+                    description: |-
                       Contains the name of allocated IP address ranges associated with
-
                       the private service access connection for example, "test-default"
-
                       associated with IP range 10.0.0.0/29.
                     items:
                       type: string
                     type: array
                   zones:
-                    description: >-
+                    description: |-
                       Zones where memcache nodes should be provisioned.  If not
-
                       provided, all zones will be used.
                     items:
                       type: string
@@ -577,22 +491,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -607,11 +515,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -625,13 +531,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -656,9 +559,8 @@ spec:
               atProvider:
                 properties:
                   authorizedNetwork:
-                    description: >-
+                    description: |-
                       The full name of the GCE network to connect the instance to.  If not provided,
-
                       'default' will be used.
                     type: string
                   createTime:
@@ -686,47 +588,35 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   maintenancePolicy:
-                    description: >-
+                    description: |-
                       Maintenance policy for an instance.
-
                       Structure is documented below.
                     properties:
                       createTime:
-                        description: >-
+                        description: |-
                           (Output)
-
                           Output only. The time when the policy was created.
-
                           A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
-
                           resolution and up to nine fractional digits
                         type: string
                       description:
-                        description: >-
+                        description: |-
                           Optional. Description of what this policy is for.
-
                           Create/Update methods return INVALID_ARGUMENT if the
-
                           length is greater than 512.
                         type: string
                       updateTime:
-                        description: >-
+                        description: |-
                           (Output)
-
                           Output only. The time when the policy was updated.
-
                           A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
-
                           resolution and up to nine fractional digits.
                         type: string
                       weeklyMaintenanceWindow:
-                        description: >-
+                        description: |-
                           Required. Maintenance window that is applied to resources covered by this policy.
-
                           Minimum 1. For the current version, the maximum number of weekly_maintenance_windows
-
                           is expected to be one.
-
                           Structure is documented below.
                         items:
                           properties:
@@ -734,23 +624,19 @@ spec:
                               description: Required. The day of week that maintenance updates occur.
                               type: string
                             duration:
-                              description: >-
+                              description: |-
                                 Required. The length of the maintenance window, ranging from 3 hours to 8 hours.
-
                                 A duration in seconds with up to nine fractional digits,
-
                                 terminated by 's'. Example: "3.5s".
                               type: string
                             startTime:
-                              description: >-
+                              description: |-
                                 Required. Start time of the window in UTC time.
-
                                 Structure is documented below.
                               properties:
                                 hours:
-                                  description: >-
+                                  description: |-
                                     Hours of day in 24 hour format. Should be from 0 to 23.
-
                                     An API may choose to allow the value "24:00:00" for scenarios like business closing time.
                                   type: number
                                 minutes:
@@ -760,9 +646,8 @@ spec:
                                   description: Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
                                   type: number
                                 seconds:
-                                  description: >-
+                                  description: |-
                                     Seconds of minutes of the time. Must normally be from 0 to 59.
-
                                     An API may allow the value 60 if it allows leap-seconds.
                                   type: number
                               type: object
@@ -770,42 +655,31 @@ spec:
                         type: array
                     type: object
                   maintenanceSchedule:
-                    description: >-
+                    description: |-
                       Output only. Published maintenance schedule.
-
                       Structure is documented below.
                     items:
                       properties:
                         endTime:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. The end time of any upcoming scheduled maintenance for this instance.
-
                             A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
-
                             resolution and up to nine fractional digits.
                           type: string
                         scheduleDeadlineTime:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. The deadline that the maintenance schedule start time
-
                             can not go beyond, including reschedule.
-
                             A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
-
                             resolution and up to nine fractional digits.
                           type: string
                         startTime:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Output only. The start time of any upcoming scheduled maintenance for this instance.
-
                             A timestamp in RFC3339 UTC "Zulu" format, with nanosecond
-
                             resolution and up to nine fractional digits.
                           type: string
                       type: object
@@ -814,54 +688,46 @@ spec:
                     description: The full version of memcached server running on this instance.
                     type: string
                   memcacheNodes:
-                    description: >-
+                    description: |-
                       Additional information about the instance state, if available.
-
                       Structure is documented below.
                     items:
                       properties:
                         host:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Hostname or IP address of the Memcached node used by the clients to connect to the Memcached server on this node.
                           type: string
                         nodeId:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Identifier of the Memcached node. The node id does not include project or location like the Memcached instance name.
                           type: string
                         port:
-                          description: >-
+                          description: |-
                             (Output)
-
                             The port number of the Memcached server on this node.
                           type: number
                         state:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Current state of the Memcached node.
                           type: string
                         zone:
-                          description: >-
+                          description: |-
                             (Output)
-
                             Location (GCP Zone) for the Memcached node.
                           type: string
                       type: object
                     type: array
                   memcacheParameters:
-                    description: >-
+                    description: |-
                       User-specified parameters for this memcache instance.
-
                       Structure is documented below.
                     properties:
                       id:
-                        description: >-
+                        description: |-
                           (Output)
-
                           This is a unique ID associated with this set of parameters.
                         type: string
                       params:
@@ -872,24 +738,19 @@ spec:
                         x-kubernetes-map-type: granular
                     type: object
                   memcacheVersion:
-                    description: >-
+                    description: |-
                       The major version of Memcached software. If not provided, latest supported version will be used.
-
                       Currently the latest supported major version is MEMCACHE_1_5. The minor version will be automatically
-
                       determined by our system based on the latest supported minor version.
-
                       Default value is MEMCACHE_1_5.
-
                       Possible values are: MEMCACHE_1_5, MEMCACHE_1_6_15.
                     type: string
                   name:
                     description: The resource name of the instance.
                     type: string
                   nodeConfig:
-                    description: >-
+                    description: |-
                       Configuration for memcache nodes.
-
                       Structure is documented below.
                     properties:
                       cpuCount:
@@ -903,20 +764,17 @@ spec:
                     description: Number of nodes in the memcache instance.
                     type: number
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   region:
                     description: The region of the Memcache instance. If it is not provided, the provider region is used.
                     type: string
                   reservedIpRangeId:
-                    description: >-
+                    description: |-
                       Contains the name of allocated IP address ranges associated with
-
                       the private service access connection for example, "test-default"
-
                       associated with IP range 10.0.0.0/29.
                     items:
                       type: string
@@ -924,16 +782,14 @@ spec:
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
                   zones:
-                    description: >-
+                    description: |-
                       Zones where memcache nodes should be provisioned.  If not
-
                       provided, all zones will be used.
                     items:
                       type: string
@@ -946,24 +802,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -974,9 +826,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -990,11 +841,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

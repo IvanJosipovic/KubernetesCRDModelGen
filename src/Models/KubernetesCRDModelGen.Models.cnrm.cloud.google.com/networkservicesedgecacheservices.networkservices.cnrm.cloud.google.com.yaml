@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: networkservicesedgecacheservices.networkservices.cnrm.cloud.google.com
 spec:
   group: networkservices.cnrm.cloud.google.com
@@ -57,12 +56,10 @@ spec:
                 description: A human-readable description of the resource.
                 type: string
               disableHttp2:
-                description: >-
+                description: |-
                   Disables HTTP/2.
 
-
                   HTTP/2 (h2) is enabled by default and recommended for performance. HTTP/2 improves connection re-use and reduces connection setup overhead by sending multiple streams over the same connection.
-
 
                   Some legacy HTTP clients may have issues with HTTP/2 connections due to broken HTTP/2 implementations. Setting this to true will prevent HTTP/2 from being advertised and negotiated.
                 type: boolean
@@ -73,9 +70,8 @@ spec:
                 description: Resource URL that points at the Cloud Armor edge security policy that is applied on each request against the EdgeCacheService.
                 type: string
               edgeSslCertificates:
-                description: >-
+                description: |-
                   URLs to sslCertificate resources that are used to authenticate connections between users and the EdgeCacheService.
-
 
                   Note that only "global" certificates with a "scope" of "EDGE_CACHE" can be attached to an EdgeCacheService.
                 items:
@@ -88,9 +84,8 @@ spec:
                     description: Specifies whether to enable logging for traffic served by this service.
                     type: boolean
                   sampleRate:
-                    description: >-
+                    description: |-
                       Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
-
 
                       This field can only be specified if logging is enabled for this service.
                     type: number
@@ -123,12 +118,10 @@ spec:
                     type: string
                 type: object
               requireTls:
-                description: >-
+                description: |-
                   Require TLS (HTTPS) for all clients connecting to this service.
 
-
                   Clients who connect over HTTP (port 80) will receive a HTTP 301 to the same URL over HTTPS (port 443).
-
                   You must have at least one (1) edgeSslCertificate specified to enable this.
                 type: boolean
               resourceID:
@@ -145,12 +138,10 @@ spec:
                           description: A human-readable description of the hostRule.
                           type: string
                         hosts:
-                          description: >-
+                          description: |-
                             The list of host patterns to match.
 
-
                             Host patterns must be valid hostnames. Ports are not allowed. Wildcard hosts are supported in the suffix or prefix form. * matches any string of ([a-z0-9-.]*). It does not match the empty string.
-
 
                             When multiple hosts are specified, hosts are matched in the following priority:
 
@@ -227,9 +218,8 @@ spec:
                                       type: object
                                     type: array
                                   responseHeaderToAdd:
-                                    description: >-
+                                    description: |-
                                       Headers to add to the response prior to sending it back to the client.
-
 
                                       Response headers are only sent to the client, and do not have an effect on the cache serving the response.
                                     items:
@@ -253,9 +243,8 @@ spec:
                                     items:
                                       properties:
                                         headerName:
-                                          description: >-
+                                          description: |-
                                             Headers to remove from the response prior to sending it back to the client.
-
 
                                             Response headers are only sent to the client, and do not have an effect on the cache serving the response.
                                           type: string
@@ -265,9 +254,8 @@ spec:
                                     type: array
                                 type: object
                               matchRule:
-                                description: >-
+                                description: |-
                                   The list of criteria for matching attributes of a request to this routeRule. This list has OR semantics: the request matches this routeRule when any of the matchRules are satisfied. However predicates
-
                                   within a given matchRule have AND semantics. All predicates within a matchRule must match for the request to match the rule.
                                 items:
                                   properties:
@@ -285,9 +273,8 @@ spec:
                                             description: The header name to match on.
                                             type: string
                                           invertMatch:
-                                            description: >-
+                                            description: |-
                                               If set to false (default), the headerMatch is considered a match if the match criteria above are met.
-
                                               If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
                                             type: boolean
                                           prefixMatch:
@@ -307,22 +294,15 @@ spec:
                                       description: Specifies that prefixMatch and fullPathMatch matches are case sensitive.
                                       type: boolean
                                     pathTemplateMatch:
-                                      description: >-
+                                      description: |-
                                         For satisfying the matchRule condition, the path of the request
-
                                         must match the wildcard pattern specified in pathTemplateMatch
-
                                         after removing any query parameters and anchor that may be part
-
                                         of the original URL.
 
-
                                         pathTemplateMatch must be between 1 and 255 characters
-
                                         (inclusive).  The pattern specified by pathTemplateMatch may
-
                                         have at most 5 wildcard operators and at most 5 variable
-
                                         captures in total.
                                       type: string
                                     prefixMatch:
@@ -348,22 +328,18 @@ spec:
                                   type: object
                                 type: array
                               origin:
-                                description: >-
+                                description: |-
                                   The Origin resource that requests to this route should fetch from when a matching response is not in cache. Origins can be defined as short names ("my-origin") or fully-qualified resource URLs - e.g. "networkservices.googleapis.com/projects/my-project/global/edgecacheorigins/my-origin"
-
 
                                   Only one of origin or urlRedirect can be set.
                                 type: string
                               priority:
-                                description: >-
+                                description: |-
                                   The priority of this route rule, where 1 is the highest priority.
-
 
                                   You cannot configure two or more routeRules with the same priority. Priority for each rule must be set to a number between 1 and 999 inclusive.
 
-
                                   Priority numbers can have gaps, which enable you to add or remove rules in the future without affecting the rest of the rules. For example, 1, 2, 3, 4, 5, 9, 12, 16 is a valid series of priority numbers
-
                                   to which you could add rules numbered from 6 to 8, 10 to 11, and 13 to 15 in the future without any impact on existing rules.
                                 type: string
                               routeAction:
@@ -373,9 +349,8 @@ spec:
                                     description: The policy to use for defining caching and signed request behaviour for requests that match this route.
                                     properties:
                                       addSignatures:
-                                        description: >-
+                                        description: |-
                                           Enable signature generation or propagation on this route.
-
 
                                           This field may only be specified when signedRequestMode is set to REQUIRE_TOKENS.
                                         properties:
@@ -385,9 +360,8 @@ spec:
                                               type: string
                                             type: array
                                           copiedParameters:
-                                            description: >-
+                                            description: |-
                                               The parameters to copy from the verified token to the generated token.
-
 
                                               Only the following parameters may be copied:
 
@@ -405,15 +379,13 @@ spec:
 
                                               You may specify up to 6 parameters to copy.  A given parameter is be copied only if the parameter exists in the verified token.  Parameter names are matched exactly as specified.  The order of the parameters does not matter.  Duplicates are not allowed.
 
-
                                               This field may only be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.
                                             items:
                                               type: string
                                             type: array
                                           keyset:
-                                            description: >-
+                                            description: |-
                                               The keyset to use for signature generation.
-
 
                                               The following are both valid paths to an EdgeCacheKeyset resource:
 
@@ -423,31 +395,24 @@ spec:
                                               This must be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.  This field may not be specified otherwise.
                                             type: string
                                           tokenQueryParameter:
-                                            description: >-
+                                            description: |-
                                               The query parameter in which to put the generated token.
-
 
                                               If not specified, defaults to 'edge-cache-token'.
 
-
                                               If specified, the name must be 1-64 characters long and match the regular expression '[a-zA-Z]([a-zA-Z0-9_-])*' which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
-
 
                                               This field may only be set when the GENERATE_TOKEN_HLS_COOKIELESS or PROPAGATE_TOKEN_HLS_COOKIELESS actions are specified.
                                             type: string
                                           tokenTtl:
-                                            description: >-
+                                            description: |-
                                               The duration the token is valid starting from the moment the token is first generated.
-
 
                                               Defaults to '86400s' (1 day).
 
-
                                               The TTL must be >= 0 and <= 604,800 seconds (1 week).
 
-
                                               This field may only be specified when the GENERATE_COOKIE or GENERATE_TOKEN_HLS_COOKIELESS actions are specified.
-
 
                                               A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                                             type: string
@@ -458,31 +423,24 @@ spec:
                                         description: Defines the request parameters that contribute to the cache key.
                                         properties:
                                           excludeHost:
-                                            description: >-
+                                            description: |-
                                               If true, requests to different hosts will be cached separately.
-
 
                                               Note: this should only be enabled if hosts share the same origin and content. Removing the host from the cache key may inadvertently result in different objects being cached than intended, depending on which route the first user matched.
                                             type: boolean
                                           excludeQueryString:
-                                            description: >-
+                                            description: |-
                                               If true, exclude query string parameters from the cache key
 
-
                                               If false (the default), include the query string parameters in
-
                                               the cache key according to includeQueryParameters and
-
                                               excludeQueryParameters. If neither includeQueryParameters nor
-
                                               excludeQueryParameters is set, the entire query string will be
-
                                               included.
                                             type: boolean
                                           excludedQueryParameters:
-                                            description: >-
+                                            description: |-
                                               Names of query string parameters to exclude from cache keys. All other parameters will be included.
-
 
                                               Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
                                             items:
@@ -492,9 +450,8 @@ spec:
                                             description: If true, http and https requests will be cached separately.
                                             type: boolean
                                           includedCookieNames:
-                                            description: >-
+                                            description: |-
                                               Names of Cookies to include in cache keys.  The cookie name and cookie value of each cookie named will be used as part of the cache key.
-
 
                                               Cookie names:
                                                 - must be valid RFC 6265 "cookie-name" tokens
@@ -508,25 +465,20 @@ spec:
                                               type: string
                                             type: array
                                           includedHeaderNames:
-                                            description: >-
+                                            description: |-
                                               Names of HTTP request headers to include in cache keys. The value of the header field will be used as part of the cache key.
 
-
                                               - Header names must be valid HTTP RFC 7230 header field values.
-
                                               - Header field names are case insensitive
-
                                               - To include the HTTP method, use ":method"
-
 
                                               Note that specifying several headers, and/or headers that have a large range of values (e.g. per-user) will dramatically impact the cache hit rate, and may result in a higher eviction rate and reduced performance.
                                             items:
                                               type: string
                                             type: array
                                           includedQueryParameters:
-                                            description: >-
+                                            description: |-
                                               Names of query string parameters to include in cache keys. All other parameters will be excluded.
-
 
                                               Either specify includedQueryParameters or excludedQueryParameters, not both. '&' and '=' will be percent encoded and not treated as delimiters.
                                             items:
@@ -534,111 +486,79 @@ spec:
                                             type: array
                                         type: object
                                       cacheMode:
-                                        description: >-
+                                        description: |-
                                           Cache modes allow users to control the behaviour of the cache, what content it should cache automatically, whether to respect origin headers, or whether to unconditionally cache all responses.
-
 
                                           For all cache modes, Cache-Control headers will be passed to the client. Use clientTtl to override what is sent to the client. Possible values: ["CACHE_ALL_STATIC", "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", "BYPASS_CACHE"].
                                         type: string
                                       clientTtl:
-                                        description: >-
+                                        description: |-
                                           Specifies a separate client (e.g. browser client) TTL, separate from the TTL used by the edge caches. Leaving this empty will use the same cache TTL for both the CDN and the client-facing response.
 
-
                                           - The TTL must be > 0 and <= 86400s (1 day)
-
                                           - The clientTtl cannot be larger than the defaultTtl (if set)
-
                                           - Fractions of a second are not allowed.
-
 
                                           Omit this field to use the defaultTtl, or the max-age set by the origin, as the client-facing TTL.
 
-
                                           When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.
-
                                           A duration in seconds terminated by 's'. Example: "3s".
                                         type: string
                                       defaultTtl:
-                                        description: >-
+                                        description: |-
                                           Specifies the default TTL for cached content served by this origin for responses that do not have an existing valid TTL (max-age or s-max-age).
-
 
                                           Defaults to 3600s (1 hour).
 
-
                                           - The TTL must be >= 0 and <= 31,536,000 seconds (1 year)
-
                                           - Setting a TTL of "0" means "always revalidate" (equivalent to must-revalidate)
-
                                           - The value of defaultTTL cannot be set to a value greater than that of maxTTL.
-
                                           - Fractions of a second are not allowed.
-
                                           - When the cacheMode is set to FORCE_CACHE_ALL, the defaultTTL will overwrite the TTL set in all responses.
-
 
                                           Note that infrequently accessed objects may be evicted from the cache before the defined TTL. Objects that expire will be revalidated with the origin.
 
-
                                           When the cache mode is set to "USE_ORIGIN_HEADERS" or "BYPASS_CACHE", you must omit this field.
-
 
                                           A duration in seconds terminated by 's'. Example: "3s".
                                         type: string
                                       maxTtl:
-                                        description: >-
+                                        description: |-
                                           Specifies the maximum allowed TTL for cached content served by this origin.
-
 
                                           Defaults to 86400s (1 day).
 
-
                                           Cache directives that attempt to set a max-age or s-maxage higher than this, or an Expires header more than maxTtl seconds in the future will be capped at the value of maxTTL, as if it were the value of an s-maxage Cache-Control directive.
 
-
                                           - The TTL must be >= 0 and <= 31,536,000 seconds (1 year)
-
                                           - Setting a TTL of "0" means "always revalidate"
-
                                           - The value of maxTtl must be equal to or greater than defaultTtl.
-
                                           - Fractions of a second are not allowed.
 
-
                                           When the cache mode is set to "USE_ORIGIN_HEADERS", "FORCE_CACHE_ALL", or "BYPASS_CACHE", you must omit this field.
-
 
                                           A duration in seconds terminated by 's'. Example: "3s".
                                         type: string
                                       negativeCaching:
-                                        description: >-
+                                        description: |-
                                           Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects. This can reduce the load on your origin and improve end-user experience by reducing response latency.
-
 
                                           By default, the CDNPolicy will apply the following default TTLs to these status codes:
 
-
                                           - HTTP 300 (Multiple Choice), 301, 308 (Permanent Redirects): 10m
-
                                           - HTTP 404 (Not Found), 410 (Gone), 451 (Unavailable For Legal Reasons): 120s
-
                                           - HTTP 405 (Method Not Found), 414 (URI Too Long), 501 (Not Implemented): 60s
-
 
                                           These defaults can be overridden in negativeCachingPolicy.
                                         type: boolean
                                       negativeCachingPolicy:
                                         additionalProperties:
                                           type: string
-                                        description: >-
+                                        description: |-
                                           Sets a cache TTL for the specified HTTP status code. negativeCaching must be enabled to configure negativeCachingPolicy.
 
-
                                           - Omitting the policy and leaving negativeCaching enabled will use the default TTLs for each status code, defined in negativeCaching.
-
                                           - TTLs must be >= 0 (where 0 is "always revalidate") and <= 86400s (1 day)
-
 
                                           Note that when specifying an explicit negativeCachingPolicy, you should take care to specify a cache TTL for all response codes that you wish to cache. The CDNPolicy will not apply any default negative caching when a policy exists.
                                         type: object
@@ -646,56 +566,45 @@ spec:
                                         description: The EdgeCacheKeyset containing the set of public keys used to validate signed requests at the edge.
                                         type: string
                                       signedRequestMaximumExpirationTtl:
-                                        description: >-
+                                        description: |-
                                           Limit how far into the future the expiration time of a signed request may be.
-
 
                                           When set, a signed request is rejected if its expiration time is later than now + signedRequestMaximumExpirationTtl, where now is the time at which the signed request is first handled by the CDN.
 
-
                                           - The TTL must be > 0.
-
                                           - Fractions of a second are not allowed.
-
 
                                           By default, signedRequestMaximumExpirationTtl is not set and the expiration time of a signed request may be arbitrarily far into future.
                                         type: string
                                       signedRequestMode:
-                                        description: >-
+                                        description: |-
                                           Whether to enforce signed requests. The default value is DISABLED, which means all content is public, and does not authorize access.
 
-
                                           You must also set a signedRequestKeyset to enable signed requests.
-
 
                                           When set to REQUIRE_SIGNATURES, all matching requests will have their signature validated. Requests that were not signed with the corresponding private key, or that are otherwise invalid (expired, do not match the signature, IP address, or header) will be rejected with a HTTP 403 and (if enabled) logged. Possible values: ["DISABLED", "REQUIRE_SIGNATURES", "REQUIRE_TOKENS"].
                                         type: string
                                       signedTokenOptions:
-                                        description: >-
+                                        description: |-
                                           Additional options for signed tokens.
-
 
                                           signedTokenOptions may only be specified when signedRequestMode is REQUIRE_TOKENS.
                                         properties:
                                           allowedSignatureAlgorithms:
-                                            description: >-
+                                            description: |-
                                               The allowed signature algorithms to use.
 
-
                                               Defaults to using only ED25519.
-
 
                                               You may specify up to 3 signature algorithms to use. Possible values: ["ED25519", "HMAC_SHA_256", "HMAC_SHA1"].
                                             items:
                                               type: string
                                             type: array
                                           tokenQueryParameter:
-                                            description: >-
+                                            description: |-
                                               The query parameter in which to find the token.
 
-
                                               The name must be 1-64 characters long and match the regular expression '[a-zA-Z]([a-zA-Z0-9_-])*' which means the first character must be a letter, and all following characters must be a dash, underscore, letter or digit.
-
 
                                               Defaults to 'edge-cache-token'.
                                             type: string
@@ -705,9 +614,8 @@ spec:
                                     description: CORSPolicy defines Cross-Origin-Resource-Sharing configuration, including which CORS response headers will be set.
                                     properties:
                                       allowCredentials:
-                                        description: >-
+                                        description: |-
                                           In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
-
 
                                           This translates to the Access-Control-Allow-Credentials response header.
                                         type: boolean
@@ -722,9 +630,8 @@ spec:
                                           type: string
                                         type: array
                                       allowOrigins:
-                                        description: >-
+                                        description: |-
                                           Specifies the list of origins that will be allowed to do CORS requests.
-
 
                                           This translates to the Access-Control-Allow-Origin response header.
                                         items:
@@ -739,16 +646,12 @@ spec:
                                           type: string
                                         type: array
                                       maxAge:
-                                        description: >-
+                                        description: |-
                                           Specifies how long results of a preflight request can be cached by a client in seconds. Note that many browser clients enforce a maximum TTL of 600s (10 minutes).
 
-
                                           - Setting the value to -1 forces a pre-flight check for all requests (not recommended)
-
                                           - A maximum TTL of 86400s can be set, but note that (as above) some clients may force pre-flight checks at a more regular interval.
-
                                           - This translates to the Access-Control-Max-Age header.
-
 
                                           A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
                                         type: string
@@ -765,30 +668,20 @@ spec:
                                         description: Prior to forwarding the request to the selected origin, the matching portion of the request's path is replaced by pathPrefixRewrite.
                                         type: string
                                       pathTemplateRewrite:
-                                        description: >-
+                                        description: |-
                                           Prior to forwarding the request to the selected origin, if the
-
                                           request matched a pathTemplateMatch, the matching portion of the
-
                                           request's path is replaced re-written using the pattern specified
-
                                           by pathTemplateRewrite.
 
-
                                           pathTemplateRewrite must be between 1 and 255 characters
-
                                           (inclusive), must start with a '/', and must only use variables
-
                                           captured by the route's pathTemplate matchers.
 
-
                                           pathTemplateRewrite may only be used when all of a route's
-
                                           MatchRules specify pathTemplate.
 
-
                                           Only one of pathPrefixRewrite and pathTemplateRewrite may be
-
                                           specified.
                                         type: string
                                     type: object
@@ -800,45 +693,35 @@ spec:
                                     description: The host that will be used in the redirect response instead of the one that was supplied in the request.
                                     type: string
                                   httpsRedirect:
-                                    description: >-
+                                    description: |-
                                       If set to true, the URL scheme in the redirected request is set to https. If set to false, the URL scheme of the redirected request will remain the same as that of the request.
-
 
                                       This can only be set if there is at least one (1) edgeSslCertificate set on the service.
                                     type: boolean
                                   pathRedirect:
-                                    description: >-
+                                    description: |-
                                       The path that will be used in the redirect response instead of the one that was supplied in the request.
 
-
                                       pathRedirect cannot be supplied together with prefixRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
-
 
                                       The path value must be between 1 and 1024 characters.
                                     type: string
                                   prefixRedirect:
-                                    description: >-
+                                    description: |-
                                       The prefix that replaces the prefixMatch specified in the routeRule, retaining the remaining portion of the URL before redirecting the request.
-
 
                                       prefixRedirect cannot be supplied together with pathRedirect. Supply one alone or neither. If neither is supplied, the path of the original request will be used for the redirect.
                                     type: string
                                   redirectResponseCode:
-                                    description: >-
+                                    description: |-
                                       The HTTP Status code to use for this RedirectAction.
-
 
                                       The supported values are:
 
-
                                       - 'MOVED_PERMANENTLY_DEFAULT', which is the default value and corresponds to 301.
-
                                       - 'FOUND', which corresponds to 302.
-
                                       - 'SEE_OTHER' which corresponds to 303.
-
                                       - 'TEMPORARY_REDIRECT', which corresponds to 307. in this case, the request method will be retained.
-
                                       - 'PERMANENT_REDIRECT', which corresponds to 308. in this case, the request method will be retained. Possible values: ["MOVED_PERMANENTLY_DEFAULT", "FOUND", "SEE_OTHER", "TEMPORARY_REDIRECT", "PERMANENT_REDIRECT"].
                                     type: string
                                   stripQuery:
@@ -860,9 +743,8 @@ spec:
                 - pathMatcher
                 type: object
               sslPolicy:
-                description: >-
+                description: |-
                   URL of the SslPolicy resource that will be associated with the EdgeCacheService.
-
 
                   If not set, the EdgeCacheService has no SSL policy configured, and will default to the "COMPATIBLE" policy.
                 type: string
@@ -916,7 +798,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -45,33 +45,24 @@ spec:
     name: v1api20211101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/eventhubs.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 256
                 minLength: 1
@@ -93,11 +83,9 @@ spec:
                     description: 'Destination: Properties of Destination where capture will be stored. (Storage Account, Blob Names)'
                     properties:
                       archiveNameFormat:
-                        description: >-
+                        description: |-
                           ArchiveNameFormat: Blob naming convention for archive, e.g.
-
                           {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters
-
                           (Namespace,EventHub .. etc) are mandatory irrespective of order
                         type: string
                       blobContainer:
@@ -120,11 +108,9 @@ spec:
                         description: 'StorageAccountResourceReference: Resource id of the storage account to be used to create the blobs'
                         properties:
                           armId:
-                            description: >-
+                            description: |-
                               ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                               The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                               ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
@@ -143,24 +129,21 @@ spec:
                     description: 'Enabled: A value that indicates whether capture description is enabled.'
                     type: boolean
                   encoding:
-                    description: >-
+                    description: |-
                       Encoding: Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be
-
                       deprecated in New API Version
                     enum:
                     - Avro
                     - AvroDeflate
                     type: string
                   intervalInSeconds:
-                    description: >-
+                    description: |-
                       IntervalInSeconds: The time window allows you to set the frequency with which the capture to Azure Blobs will happen,
-
                       value should between 60 to 900 seconds
                     type: integer
                   sizeLimitInBytes:
-                    description: >-
+                    description: |-
                       SizeLimitInBytes: The size window defines the amount of data built up in your Event Hub before an capture operation,
-
                       value should be between 10485760 to 524288000 bytes
                     type: integer
                   skipEmptyArchives:
@@ -169,44 +152,36 @@ spec:
                 type: object
               messageRetentionInDays:
                 description: 'MessageRetentionInDays: Number of days to retain the events for this Event Hub, value should be 1 to 7 days'
-                minimum: 1
+                minimum: 1.0
                 type: integer
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -217,33 +192,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -253,11 +221,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a eventhub.azure.com/Namespace resource
                 properties:
                   armId:
@@ -269,7 +235,7 @@ spec:
                 type: object
               partitionCount:
                 description: 'PartitionCount: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.'
-                minimum: 1
+                minimum: 1.0
                 type: integer
             required:
             - owner
@@ -283,11 +249,9 @@ spec:
                     description: 'Destination: Properties of Destination where capture will be stored. (Storage Account, Blob Names)'
                     properties:
                       archiveNameFormat:
-                        description: >-
+                        description: |-
                           ArchiveNameFormat: Blob naming convention for archive, e.g.
-
                           {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters
-
                           (Namespace,EventHub .. etc) are mandatory irrespective of order
                         type: string
                       blobContainer:
@@ -313,21 +277,18 @@ spec:
                     description: 'Enabled: A value that indicates whether capture description is enabled.'
                     type: boolean
                   encoding:
-                    description: >-
+                    description: |-
                       Encoding: Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be
-
                       deprecated in New API Version
                     type: string
                   intervalInSeconds:
-                    description: >-
+                    description: |-
                       IntervalInSeconds: The time window allows you to set the frequency with which the capture to Azure Blobs will happen,
-
                       value should between 60 to 900 seconds
                     type: integer
                   sizeLimitInBytes:
-                    description: >-
+                    description: |-
                       SizeLimitInBytes: The size window defines the amount of data built up in your Event Hub before an capture operation,
-
                       value should be between 10485760 to 524288000 bytes
                     type: integer
                   skipEmptyArchives:
@@ -347,28 +308,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -388,9 +343,8 @@ spec:
                 description: 'CreatedAt: Exact time the Event Hub was created.'
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               location:
@@ -463,35 +417,25 @@ spec:
     name: v1api20211101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20211101.NamespacesEventhub
-
           Generator information:
-
           - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2021-11-01/eventhubs.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -502,43 +446,37 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               captureDescription:
-                description: >-
+                description: |-
                   Storage version of v1api20211101.CaptureDescription
-
                   Properties to configure capture description for eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   destination:
-                    description: >-
+                    description: |-
                       Storage version of v1api20211101.Destination
-
                       Capture storage details for capture description
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       archiveNameFormat:
@@ -557,11 +495,9 @@ spec:
                         description: 'StorageAccountResourceReference: Resource id of the storage account to be used to create the blobs'
                         properties:
                           armId:
-                            description: >-
+                            description: |-
                               ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                               The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                               ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
@@ -590,48 +526,39 @@ spec:
               messageRetentionInDays:
                 type: integer
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20211101.NamespacesEventhubOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -641,33 +568,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -679,11 +599,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a eventhub.azure.com/Namespace resource
                 properties:
                   armId:
@@ -704,37 +622,32 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               captureDescription:
-                description: >-
+                description: |-
                   Storage version of v1api20211101.CaptureDescription_STATUS
-
                   Properties to configure capture description for eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   destination:
-                    description: >-
+                    description: |-
                       Storage version of v1api20211101.Destination_STATUS
-
                       Capture storage details for capture description
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       archiveNameFormat:
@@ -775,28 +688,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -831,17 +738,15 @@ spec:
               status:
                 type: string
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20211101.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -883,33 +788,24 @@ spec:
     name: v1api20240101
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/eventhubs.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -917,9 +813,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 256
                 minLength: 1
@@ -931,11 +826,9 @@ spec:
                     description: 'Destination: Properties of Destination where capture will be stored. (Storage Account, Blob Names)'
                     properties:
                       archiveNameFormat:
-                        description: >-
+                        description: |-
                           ArchiveNameFormat: Blob naming convention for archive, e.g.
-
                           {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters
-
                           (Namespace,EventHub .. etc) are mandatory irrespective of order
                         type: string
                       blobContainer:
@@ -961,19 +854,15 @@ spec:
                             - UserAssigned
                             type: string
                           userAssignedIdentityReference:
-                            description: >-
+                            description: |-
                               UserAssignedIdentityReference: ARM ID of Managed User Identity. This property is required is the type is
-
                               UserAssignedIdentity. If type is SystemAssigned, then the System Assigned Identity Associated with the namespace will be
-
                               used.
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -995,11 +884,9 @@ spec:
                         description: 'StorageAccountResourceReference: Resource id of the storage account to be used to create the blobs'
                         properties:
                           armId:
-                            description: >-
+                            description: |-
                               ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                               The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                               ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
@@ -1018,24 +905,21 @@ spec:
                     description: 'Enabled: A value that indicates whether capture description is enabled.'
                     type: boolean
                   encoding:
-                    description: >-
+                    description: |-
                       Encoding: Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be
-
                       deprecated in New API Version
                     enum:
                     - Avro
                     - AvroDeflate
                     type: string
                   intervalInSeconds:
-                    description: >-
+                    description: |-
                       IntervalInSeconds: The time window allows you to set the frequency with which the capture to Azure Blobs will happen,
-
                       value should between 60 to 900 seconds
                     type: integer
                   sizeLimitInBytes:
-                    description: >-
+                    description: |-
                       SizeLimitInBytes: The size window defines the amount of data built up in your Event Hub before an capture operation,
-
                       value should be between 10485760 to 524288000 bytes
                     type: integer
                   skipEmptyArchives:
@@ -1044,44 +928,36 @@ spec:
                 type: object
               messageRetentionInDays:
                 description: 'MessageRetentionInDays: Number of days to retain the events for this Event Hub, value should be 1 to 7 days'
-                minimum: 1
+                minimum: 1.0
                 type: integer
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1092,33 +968,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1128,11 +997,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a eventhub.azure.com/Namespace resource
                 properties:
                   armId:
@@ -1144,7 +1011,7 @@ spec:
                 type: object
               partitionCount:
                 description: 'PartitionCount: Number of partitions created for the Event Hub, allowed values are from 1 to 32 partitions.'
-                minimum: 1
+                minimum: 1.0
                 type: integer
               retentionDescription:
                 description: 'RetentionDescription: Event Hub retention settings'
@@ -1156,19 +1023,15 @@ spec:
                     - Delete
                     type: string
                   retentionTimeInHours:
-                    description: >-
+                    description: |-
                       RetentionTimeInHours: Number of hours to retain the events for this Event Hub. This value is only used when
-
                       cleanupPolicy is Delete. If cleanupPolicy is Compact the returned value of this property is Long.MaxValue
                     type: integer
                   tombstoneRetentionTimeInHours:
-                    description: >-
+                    description: |-
                       TombstoneRetentionTimeInHours: Number of hours to retain the tombstone markers of a compacted Event Hub. This value is
-
                       only used when cleanupPolicy is Compact. Consumer must complete reading the tombstone marker within this specified
-
                       amount of time if consumer begins from starting offset to ensure they get a valid snapshot for the specific key
-
                       described by the tombstone marker within the compacted Event Hub
                     type: integer
                 type: object
@@ -1187,11 +1050,9 @@ spec:
                     description: 'Destination: Properties of Destination where capture will be stored. (Storage Account, Blob Names)'
                     properties:
                       archiveNameFormat:
-                        description: >-
+                        description: |-
                           ArchiveNameFormat: Blob naming convention for archive, e.g.
-
                           {Namespace}/{EventHub}/{PartitionId}/{Year}/{Month}/{Day}/{Hour}/{Minute}/{Second}. Here all the parameters
-
                           (Namespace,EventHub .. etc) are mandatory irrespective of order
                         type: string
                       blobContainer:
@@ -1213,9 +1074,8 @@ spec:
                             description: 'Type: Type of Azure Active Directory Managed Identity.'
                             type: string
                           userAssignedIdentity:
-                            description: >-
+                            description: |-
                               UserAssignedIdentity: ARM ID of Managed User Identity. This property is required is the type is UserAssignedIdentity. If
-
                               type is SystemAssigned, then the System Assigned Identity Associated with the namespace will be used.
                             type: string
                         type: object
@@ -1230,21 +1090,18 @@ spec:
                     description: 'Enabled: A value that indicates whether capture description is enabled.'
                     type: boolean
                   encoding:
-                    description: >-
+                    description: |-
                       Encoding: Enumerates the possible values for the encoding format of capture description. Note: 'AvroDeflate' will be
-
                       deprecated in New API Version
                     type: string
                   intervalInSeconds:
-                    description: >-
+                    description: |-
                       IntervalInSeconds: The time window allows you to set the frequency with which the capture to Azure Blobs will happen,
-
                       value should between 60 to 900 seconds
                     type: integer
                   sizeLimitInBytes:
-                    description: >-
+                    description: |-
                       SizeLimitInBytes: The size window defines the amount of data built up in your Event Hub before an capture operation,
-
                       value should be between 10485760 to 524288000 bytes
                     type: integer
                   skipEmptyArchives:
@@ -1264,28 +1121,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1305,9 +1156,8 @@ spec:
                 description: 'CreatedAt: Exact time the Event Hub was created.'
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               location:
@@ -1334,19 +1184,15 @@ spec:
                     description: 'CleanupPolicy: Enumerates the possible values for cleanup policy'
                     type: string
                   retentionTimeInHours:
-                    description: >-
+                    description: |-
                       RetentionTimeInHours: Number of hours to retain the events for this Event Hub. This value is only used when
-
                       cleanupPolicy is Delete. If cleanupPolicy is Compact the returned value of this property is Long.MaxValue
                     type: integer
                   tombstoneRetentionTimeInHours:
-                    description: >-
+                    description: |-
                       TombstoneRetentionTimeInHours: Number of hours to retain the tombstone markers of a compacted Event Hub. This value is
-
                       only used when cleanupPolicy is Compact. Consumer must complete reading the tombstone marker within this specified
-
                       amount of time if consumer begins from starting offset to ensure they get a valid snapshot for the specific key
-
                       described by the tombstone marker within the compacted Event Hub
                     type: integer
                 type: object
@@ -1406,35 +1252,25 @@ spec:
     name: v1api20240101storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20240101.NamespacesEventhub
-
           Generator information:
-
           - Generated from: /eventhub/resource-manager/Microsoft.EventHub/stable/2024-01-01/eventhubs.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventHub/namespaces/{namespaceName}/eventhubs/{eventHubName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1445,43 +1281,37 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               captureDescription:
-                description: >-
+                description: |-
                   Storage version of v1api20240101.CaptureDescription
-
                   Properties to configure capture description for eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   destination:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240101.Destination
-
                       Capture storage details for capture description
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       archiveNameFormat:
@@ -1495,35 +1325,29 @@ spec:
                       dataLakeSubscriptionId:
                         type: string
                       identity:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240101.CaptureIdentity
-
                           A value that indicates whether capture description is enabled.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           type:
                             type: string
                           userAssignedIdentityReference:
-                            description: >-
+                            description: |-
                               UserAssignedIdentityReference: ARM ID of Managed User Identity. This property is required is the type is
-
                               UserAssignedIdentity. If type is SystemAssigned, then the System Assigned Identity Associated with the namespace will be
-
                               used.
                             properties:
                               armId:
-                                description: >-
+                                description: |-
                                   ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                   The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                   ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                 pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                 type: string
@@ -1544,11 +1368,9 @@ spec:
                         description: 'StorageAccountResourceReference: Resource id of the storage account to be used to create the blobs'
                         properties:
                           armId:
-                            description: >-
+                            description: |-
                               ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                               The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                               ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                             pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                             type: string
@@ -1577,48 +1399,39 @@ spec:
               messageRetentionInDays:
                 type: integer
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20240101.NamespacesEventhubOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1628,33 +1441,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1666,11 +1472,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a eventhub.azure.com/Namespace resource
                 properties:
                   armId:
@@ -1683,17 +1487,15 @@ spec:
               partitionCount:
                 type: integer
               retentionDescription:
-                description: >-
+                description: |-
                   Storage version of v1api20240101.RetentionDescription
-
                   Properties to configure retention settings for the  eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   cleanupPolicy:
@@ -1714,37 +1516,32 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               captureDescription:
-                description: >-
+                description: |-
                   Storage version of v1api20240101.CaptureDescription_STATUS
-
                   Properties to configure capture description for eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   destination:
-                    description: >-
+                    description: |-
                       Storage version of v1api20240101.Destination_STATUS
-
                       Capture storage details for capture description
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       archiveNameFormat:
@@ -1758,17 +1555,15 @@ spec:
                       dataLakeSubscriptionId:
                         type: string
                       identity:
-                        description: >-
+                        description: |-
                           Storage version of v1api20240101.CaptureIdentity_STATUS
-
                           A value that indicates whether capture description is enabled.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           type:
@@ -1804,28 +1599,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1858,17 +1647,15 @@ spec:
                   type: string
                 type: array
               retentionDescription:
-                description: >-
+                description: |-
                   Storage version of v1api20240101.RetentionDescription_STATUS
-
                   Properties to configure retention settings for the  eventhub
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   cleanupPolicy:
@@ -1881,17 +1668,15 @@ spec:
               status:
                 type: string
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20240101.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:

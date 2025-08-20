@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: aiplatformmodels.aiplatform.cnrm.cloud.google.com
 spec:
   group: aiplatform.cnrm.cloud.google.com
@@ -79,7 +78,7 @@ spec:
                 description: Input only. The specification of the container that is to be used when deploying this Model. The specification is ingested upon [ModelService.UploadModel][google.cloud.aiplatform.v1.ModelService.UploadModel], and all binaries it contains are copied and stored internally by Vertex AI. Not required for AutoML Models.
                 properties:
                   args:
-                    description: >-
+                    description: |-
                       Immutable. Specifies arguments for the command that runs when the container
                        starts. This overrides the container's
                        [`CMD`](https://docs.docker.com/engine/reference/builder/#cmd). Specify
@@ -118,7 +117,7 @@ spec:
                       type: string
                     type: array
                   command:
-                    description: >-
+                    description: |-
                       Immutable. Specifies the command that runs when the container starts. This
                        overrides the container's
                        [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint).
@@ -161,7 +160,7 @@ spec:
                     description: Immutable. Deployment timeout. Limit for deployment timeout is 2 hours.
                     type: string
                   env:
-                    description: >-
+                    description: |-
                       Immutable. List of environment variables to set in the container. After the
                        container starts running, code running in the container can read these
                        environment variables.
@@ -203,7 +202,7 @@ spec:
                       type: object
                     type: array
                   grpcPorts:
-                    description: >-
+                    description: |-
                       Immutable. List of ports to expose from the container. Vertex AI sends gRPC
                        prediction requests that it receives to the first port on this list. Vertex
                        AI also sends liveness and health checks to this port.
@@ -234,7 +233,7 @@ spec:
                             type: array
                         type: object
                       periodSeconds:
-                        description: >-
+                        description: |-
                           How often (in seconds) to perform the probe. Default to 10 seconds.
                            Minimum value is 1. Must be less than timeout_seconds.
 
@@ -242,7 +241,7 @@ spec:
                         format: int32
                         type: integer
                       timeoutSeconds:
-                        description: >-
+                        description: |-
                           Number of seconds after which the probe times out. Defaults to 1 second.
                            Minimum value is 1. Must be greater or equal to period_seconds.
 
@@ -251,7 +250,7 @@ spec:
                         type: integer
                     type: object
                   healthRoute:
-                    description: >-
+                    description: |-
                       Immutable. HTTP path on the container to send health checks to. Vertex AI
                        intermittently sends GET requests to this path on the container's IP
                        address and port to check that the container is healthy. Read more about
@@ -283,7 +282,7 @@ spec:
                          variable](https://cloud.google.com/vertex-ai/docs/predictions/custom-container-requirements#aip-variables).)
                     type: string
                   imageURI:
-                    description: >-
+                    description: |-
                       Required. Immutable. URI of the Docker image to be used as the custom
                        container for serving predictions. This URI must identify an image in
                        Artifact Registry or Container Registry. Learn more about the [container
@@ -304,7 +303,7 @@ spec:
                        in this field.
                     type: string
                   ports:
-                    description: >-
+                    description: |-
                       Immutable. List of ports to expose from the container. Vertex AI sends any
                        prediction requests that it receives to the first port on this list. Vertex
                        AI also sends
@@ -335,7 +334,7 @@ spec:
                       type: object
                     type: array
                   predictRoute:
-                    description: >-
+                    description: |-
                       Immutable. HTTP path on the container to send prediction requests to.
                        Vertex AI forwards requests sent using
                        [projects.locations.endpoints.predict][google.cloud.aiplatform.v1.PredictionService.Predict]
@@ -384,7 +383,7 @@ spec:
                             type: array
                         type: object
                       periodSeconds:
-                        description: >-
+                        description: |-
                           How often (in seconds) to perform the probe. Default to 10 seconds.
                            Minimum value is 1. Must be less than timeout_seconds.
 
@@ -392,7 +391,7 @@ spec:
                         format: int32
                         type: integer
                       timeoutSeconds:
-                        description: >-
+                        description: |-
                           Number of seconds after which the probe times out. Defaults to 1 second.
                            Minimum value is 1. Must be greater or equal to period_seconds.
 
@@ -402,7 +401,7 @@ spec:
                     type: object
                 type: object
               dataStats:
-                description: >-
+                description: |-
                   Stats of data used for training or evaluating the Model.
 
                    Only populated when the Model is trained by a TrainingPipeline with
@@ -450,7 +449,7 @@ spec:
                 description: Used to perform consistent read-modify-write updates. If not set, a blind "overwrite" update happens.
                 type: string
               explanationSpec:
-                description: >-
+                description: |-
                   The default explanation specification for this Model.
 
                    The Model can be used for
@@ -496,7 +495,7 @@ spec:
                               description: 'Specifies the shape of the values of the input if the input is a sparse representation. Refer to Tensorflow documentation for more details: https://www.tensorflow.org/api_docs/python/tf/sparse/SparseTensor.'
                               type: string
                             encodedBaselines:
-                              description: >-
+                              description: |-
                                 A list of baselines for the encoded tensor.
 
                                  The shape of each baseline should match the shape of the encoded tensor.
@@ -524,7 +523,7 @@ spec:
                                 type: object
                               type: array
                             encodedTensorName:
-                              description: >-
+                              description: |-
                                 Encoded tensor is a transformation of the input tensor. Must be provided
                                  if choosing
                                  [Integrated Gradients
@@ -567,7 +566,7 @@ spec:
                               description: 'Specifies the index of the values of the input tensor. Required when the input tensor is a sparse representation. Refer to Tensorflow documentation for more details: https://www.tensorflow.org/api_docs/python/tf/sparse/SparseTensor.'
                               type: string
                             inputBaselines:
-                              description: >-
+                              description: |-
                                 Baseline inputs for this feature.
 
                                  If no baseline is specified, Vertex AI chooses the baseline for this
@@ -623,7 +622,7 @@ spec:
                                   description: Excludes attributions above the specified percentile from the highlighted areas. Using the clip_percent_upperbound and clip_percent_lowerbound together can be useful for filtering out noise and making it easier to see areas of strong attribution. Defaults to 99.9.
                                   type: number
                                 colorMap:
-                                  description: >-
+                                  description: |-
                                     The color scheme used for the highlighted areas.
 
                                      Defaults to PINK_GREEN for
@@ -648,32 +647,21 @@ spec:
                                   type: string
                               type: object
                           type: object
-                        description: >-
+                        description: |-
                           Required. Map from feature names to feature input metadata. Keys are the
-
                           name of the features. Values are the specification of the feature.
 
-
                           An empty InputMetadata is valid. It describes a text feature which has the
-
                           name specified as the key in
-
                           [ExplanationMetadata.inputs][google.cloud.aiplatform.v1.ExplanationMetadata.inputs].
-
                           The baseline of the empty feature is chosen by Vertex AI.
 
-
                           For Vertex AI-provided Tensorflow images, the key can be any friendly
-
                           name of the feature. Once specified,
-
                           [featureAttributions][google.cloud.aiplatform.v1.Attribution.feature_attributions]
-
                           are keyed by this key (if not grouped with another feature).
 
-
                           For custom images, the key must match with the key in
-
                           [instance][google.cloud.aiplatform.v1.ExplainRequest.instances].
                         type: object
                       latentSpaceSource:
@@ -683,7 +671,7 @@ spec:
                         additionalProperties:
                           properties:
                             displayNameMappingKey:
-                              description: >-
+                              description: |-
                                 Specify a field name in the prediction to look for the display name.
 
                                  Use this if the prediction contains the display names for the outputs.
@@ -694,7 +682,7 @@ spec:
                                  for a specific output.
                               type: string
                             indexDisplayNameMapping:
-                              description: >-
+                              description: |-
                                 Static mapping between the index and display name.
 
                                  Use this if the outputs are a deterministic n-dimensional array, e.g. a
@@ -732,19 +720,14 @@ spec:
                               description: Name of the output tensor. Required and is only applicable to Vertex AI provided images for Tensorflow.
                               type: string
                           type: object
-                        description: >-
+                        description: |-
                           Required. Map from output names to output metadata.
 
-
                           For Vertex AI-provided Tensorflow images, keys can be any user defined
-
                           string that consists of any UTF-8 characters.
 
-
                           For custom images, keys are the name of the output field in the prediction
-
                           to be explained.
-
 
                           Currently only one key is allowed.
                         type: object
@@ -811,7 +794,7 @@ spec:
                         description: "An attribution method that computes Aumann-Shapley values taking advantage of the model's fully differentiable structure. Refer to this paper for more details: https://arxiv.org/abs/1703.01365"
                         properties:
                           blurBaselineConfig:
-                            description: >-
+                            description: |-
                               Config for IG with blur baseline.
 
                                When enabled, a linear path from the maximally blurred image to the input
@@ -824,7 +807,7 @@ spec:
                                 type: number
                             type: object
                           smoothGradConfig:
-                            description: >-
+                            description: |-
                               Config for SmoothGrad approximation of gradients.
 
                                When enabled, the gradients are approximated by averaging the gradients
@@ -849,7 +832,7 @@ spec:
                                     type: array
                                 type: object
                               noiseSigma:
-                                description: >-
+                                description: |-
                                   This is a single float value and will be used to add noise to all the
                                    features. Use this field when all features are normalized to have the
                                    same distribution: scale to range [0, 1], [-1, 1] or z-scoring, where
@@ -870,7 +853,7 @@ spec:
                                 type: integer
                             type: object
                           stepCount:
-                            description: >-
+                            description: |-
                               Required. The number of steps for approximating the path integral.
                                A good value to start is 50 and gradually increase until the
                                sum to diff property is within the desired error range.
@@ -883,7 +866,7 @@ spec:
                         description: 'An attribution method that approximates Shapley values for features that contribute to the label being predicted. A sampling strategy is used to approximate the value rather than considering all subsets of features. Refer to this paper for model details: https://arxiv.org/abs/1306.4265.'
                         properties:
                           pathCount:
-                            description: >-
+                            description: |-
                               Required. The number of feature permutations to consider when approximating
                                the Shapley values.
 
@@ -896,7 +879,7 @@ spec:
                         format: int32
                         type: integer
                       xraiAttribution:
-                        description: >-
+                        description: |-
                           An attribution method that redistributes Integrated Gradients
                            attribution to segmented regions, taking advantage of the model's fully
                            differentiable structure. Refer to this paper for
@@ -908,7 +891,7 @@ spec:
                            x-rays or quality-control cameras, use Integrated Gradients instead.
                         properties:
                           blurBaselineConfig:
-                            description: >-
+                            description: |-
                               Config for XRAI with blur baseline.
 
                                When enabled, a linear path from the maximally blurred image to the input
@@ -921,7 +904,7 @@ spec:
                                 type: number
                             type: object
                           smoothGradConfig:
-                            description: >-
+                            description: |-
                               Config for SmoothGrad approximation of gradients.
 
                                When enabled, the gradients are approximated by averaging the gradients
@@ -946,7 +929,7 @@ spec:
                                     type: array
                                 type: object
                               noiseSigma:
-                                description: >-
+                                description: |-
                                   This is a single float value and will be used to add noise to all the
                                    features. Use this field when all features are normalized to have the
                                    same distribution: scale to range [0, 1], [-1, 1] or z-scoring, where
@@ -967,7 +950,7 @@ spec:
                                 type: integer
                             type: object
                           stepCount:
-                            description: >-
+                            description: |-
                               Required. The number of steps for approximating the path integral.
                                A good value to start is 50 and gradually increase until the
                                sum to diff property is met within the desired error range.
@@ -981,7 +964,7 @@ spec:
               labels:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   The labels with user-defined metadata to organize your Models.
 
                    Label keys and values can be no longer than 64 characters
@@ -1160,7 +1143,7 @@ spec:
                       type: object
                     type: array
                   supportedInputStorageFormats:
-                    description: >-
+                    description: |-
                       Output only. The formats this Model supports in
                        [BatchPredictionJob.input_config][google.cloud.aiplatform.v1.BatchPredictionJob.input_config].
                        If
@@ -1211,7 +1194,7 @@ spec:
                       type: string
                     type: array
                   supportedOutputStorageFormats:
-                    description: >-
+                    description: |-
                       Output only. The formats this Model supports in
                        [BatchPredictionJob.output_config][google.cloud.aiplatform.v1.BatchPredictionJob.output_config].
                        If both
@@ -1277,7 +1260,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

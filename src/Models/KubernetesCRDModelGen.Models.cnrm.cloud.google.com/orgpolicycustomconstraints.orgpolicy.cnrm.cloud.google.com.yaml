@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: orgpolicycustomconstraints.orgpolicy.cnrm.cloud.google.com
 spec:
   group: orgpolicy.cnrm.cloud.google.com
@@ -58,7 +57,7 @@ spec:
                 description: Allow or deny type.
                 type: string
               condition:
-                description: >-
+                description: |-
                   Org policy condition/expression. For example:
                    `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
                    `resource.management.auto_upgrade == true`
@@ -89,7 +88,7 @@ spec:
                 description: The OrgPolicyCustomConstraint name. If not given, the metadata.name will be used.
                 type: string
               resourceTypes:
-                description: >-
+                description: |-
                   Immutable. The resource instance type on which this policy applies. Format
                    will be of the form : `<canonical service name>/<type>` Example:
 
@@ -148,7 +147,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

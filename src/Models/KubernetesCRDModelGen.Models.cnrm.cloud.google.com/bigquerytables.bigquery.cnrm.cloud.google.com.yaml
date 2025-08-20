@@ -3,11 +3,10 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: bigquerytables.bigquery.cnrm.cloud.google.com
 spec:
   group: bigquery.cnrm.cloud.google.com
@@ -170,7 +169,7 @@ spec:
                         description: The value that is used to quote data sections in a CSV file. BigQuery converts the string to ISO-8859-1 encoding, and then uses the first byte of the encoded string to split the data in its raw, binary state. The default value is a double-quote ("). If your data does not contain quoted sections, set the property value to an empty string. If your data contains quoted newline characters, you must also set the allowQuotedNewlines property to true. To include the specific quote character within a quoted value, precede it with an additional matching quote character. For example, if you want to escape the default character  ' " ', use ' "" '.
                         type: string
                       skipLeadingRows:
-                        description: >-
+                        description: |-
                           The number of rows at the top of a CSV file that BigQuery will
                            skip when reading the data. The default value is 0. This property is
                            useful if you have header rows in the file that should be skipped.
@@ -207,7 +206,7 @@ spec:
                     description: When set, configures hive partitioning support. Not all storage formats support hive partitioning -- requesting hive partitioning on an unsupported format will lead to an error, as will providing an invalid specification.
                     properties:
                       mode:
-                        description: >-
+                        description: |-
                           When set, what mode of hive partitioning to use when reading
                            data.  The following modes are supported:
 
@@ -223,7 +222,7 @@ spec:
                            Currently supported formats are: JSON, CSV, ORC, Avro and Parquet.
                         type: string
                       requirePartitionFilter:
-                        description: >-
+                        description: |-
                           If set to true, queries over this table require a partition
                            filter that can be used for partition elimination to be specified.
 
@@ -234,7 +233,7 @@ spec:
                            true will fail.
                         type: boolean
                       sourceUriPrefix:
-                        description: >-
+                        description: |-
                           When hive partition detection is requested, a common prefix for
                            all source uris must be required.  The prefix must end immediately before
                            the partition key encoding begins. For example, consider files following
@@ -278,7 +277,7 @@ spec:
                     description: Metadata Cache Mode for the table. Set this to enable caching of metadata from external data source.
                     type: string
                   objectMetadata:
-                    description: >-
+                    description: |-
                       ObjectMetadata is used to create Object Tables. Object Tables
                        contain a listing of objects (with their metadata) found at the
                        source_uris. If ObjectMetadata is set, source_format should be omitted.
@@ -465,7 +464,7 @@ spec:
                     description: Required. A query that BigQuery executes when the view is referenced.
                     type: string
                   useLegacySql:
-                    description: >-
+                    description: |-
                       Specifies whether to use BigQuery's legacy SQL for this view.
                        The default value is true. If set to false, the view will use
                        BigQuery's GoogleSQL:
@@ -544,7 +543,7 @@ spec:
                 description: Output only. A URL that can be used to access this resource again.
                 type: string
               type:
-                description: >-
+                description: |-
                   Output only. Describes the table type. The following values are supported:
 
                    * `TABLE`: A normal BigQuery table.
@@ -569,7 +568,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

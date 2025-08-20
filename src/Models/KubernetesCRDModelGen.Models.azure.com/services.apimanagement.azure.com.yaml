@@ -45,33 +45,24 @@ spec:
     name: v1api20220801
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimdeployment.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -84,9 +75,8 @@ spec:
                   description: Description of an additional API Management resource location.
                   properties:
                     disableGateway:
-                      description: >-
+                      description: |-
                         DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                         disable the gateway in this additional location.
                       type: boolean
                     location:
@@ -99,17 +89,14 @@ spec:
                       - Enabled
                       type: string
                     publicIpAddressReference:
-                      description: >-
+                      description: |-
                         PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                         service in the location. Supported only for Premium SKU being deployed in Virtual Network.
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -150,11 +137,9 @@ spec:
                           description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -187,18 +172,16 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 50
                 minLength: 1
                 pattern: ^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$
                 type: string
               certificates:
-                description: >-
+                description: |-
                   Certificates: List of Certificates that need to be installed in the API Management service. Max supported certificates
-
                   that can be installed is 10.
                 items:
                   description: Certificate configuration which consist of non-trusted intermediates and root certificates.
@@ -207,24 +190,21 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ExpiryFromConfig: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ`
-
                             as specified by the ISO 8601 standard.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -241,9 +221,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -260,9 +239,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -277,9 +255,8 @@ spec:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -290,9 +267,8 @@ spec:
                       description: 'EncodedCertificate: Base64 Encoded certificate.'
                       type: string
                     storeName:
-                      description: >-
+                      description: |-
                         StoreName: The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and
-
                         CertificateAuthority are valid locations.
                       enum:
                       - CertificateAuthority
@@ -305,61 +281,38 @@ spec:
               customProperties:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   CustomProperties: Custom properties of the API Management service.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher
-
                   TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API
-
                   Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be
-
                   used to disable just TLS 1.1 for communications with backends.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for
-
                   communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be
-
                   used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH
-
                   operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value
-
                   is `True` if the service was created on or before April 1, 2018 and `False` otherwise. Http2 setting's default value is
-
                   `False`.</br></br>You can disable any of the following ciphers by using settings
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
-
                   TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
-
                   TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256,
-
                   TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example,
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default
-
                   value is `true` for them.</br> Note: The following ciphers can't be disabled since they are required by internal
-
                   platform components:
-
                   TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
                 type: object
               disableGateway:
-                description: >-
+                description: |-
                   DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                   disable the gateway in master region.
                 type: boolean
               enableClientCertificate:
-                description: >-
+                description: |-
                   EnableClientCertificate: Property only meant to be used for Consumption SKU Service. This enforces a client certificate
-
                   to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the
-
                   policy on the gateway.
                 type: boolean
               hostnameConfigurations:
@@ -371,24 +324,21 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ExpiryFromConfig: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ`
-
                             as specified by the ISO 8601 standard.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -405,9 +355,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -424,9 +373,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -441,9 +389,8 @@ spec:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -466,13 +413,10 @@ spec:
                       - InProgress
                       type: string
                     defaultSslBinding:
-                      description: >-
+                      description: |-
                         DefaultSslBinding: Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate.
-
                         If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is
-
                         useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The
-
                         setting only applied to gateway Hostname Type.
                       type: boolean
                     encodedCertificate:
@@ -482,24 +426,21 @@ spec:
                       description: 'HostName: Hostname to configure on the Api Management service.'
                       type: string
                     identityClientId:
-                      description: >-
+                      description: |-
                         IdentityClientId: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to
-
                         the keyVault containing the SSL certificate.
                       type: string
                     identityClientIdFromConfig:
-                      description: >-
+                      description: |-
                         IdentityClientIdFromConfig: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET
-
                         access to the keyVault containing the SSL certificate.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes configmap being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap being referenced.
-
                             The configmap must be in the same namespace as the resource
                           type: string
                       required:
@@ -507,11 +448,9 @@ spec:
                       - name
                       type: object
                     keyVaultId:
-                      description: >-
+                      description: |-
                         KeyVaultId: Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided,
-
                         auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi.
-
                         The secret should be of type *application/x-pkcs12*
                       type: string
                     negotiateClientCertificate:
@@ -535,9 +474,8 @@ spec:
                 description: 'Identity: Managed service identity of the Api Management service.'
                 properties:
                   type:
-                    description: >-
+                    description: |-
                       Type: The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly
-
                       created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
                     enum:
                     - None
@@ -546,13 +484,10 @@ spec:
                     - UserAssigned
                     type: string
                   userAssignedIdentities:
-                    description: >-
+                    description: |-
                       UserAssignedIdentities: The list of user identities associated with the resource. The user identity
-
                       dictionary key references will be ARM resource ids in the form:
-
                       '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-
                       providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     items:
                       description: Information about the user assigned identity for the resource
@@ -561,11 +496,9 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -598,41 +531,33 @@ spec:
                 maxLength: 100
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -643,33 +568,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -679,11 +597,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -694,17 +610,14 @@ spec:
                     type: string
                 type: object
               publicIpAddressReference:
-                description: >-
+                description: |-
                   PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                   service in the region. Supported only for Developer and Premium SKU being deployed in Virtual Network.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -719,11 +632,9 @@ spec:
                     type: string
                 type: object
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Whether or not public endpoint access is allowed for this API Management service.  Value is
-
                   optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access
-
                   method. Default value is 'Enabled'
                 enum:
                 - Disabled
@@ -738,9 +649,8 @@ spec:
                 maxLength: 100
                 type: string
               restore:
-                description: >-
+                description: |-
                   Restore: Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True
-
                   all other properties will be ignored.
                 type: boolean
               sku:
@@ -775,11 +685,9 @@ spec:
                     description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -795,13 +703,10 @@ spec:
                     type: object
                 type: object
               virtualNetworkType:
-                description: >-
+                description: |-
                   VirtualNetworkType: The type of VPN in which API Management service needs to be configured in. None (Default Value)
-
                   means the API Management service is not part of any Virtual Network, External means the API Management deployment is set
-
                   up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is
-
                   setup inside a Virtual Network having an Intranet Facing Endpoint only.
                 enum:
                 - External
@@ -828,9 +733,8 @@ spec:
                   description: Description of an additional API Management resource location.
                   properties:
                     disableGateway:
-                      description: >-
+                      description: |-
                         DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                         disable the gateway in this additional location.
                       type: boolean
                     gatewayRegionalUrl:
@@ -843,9 +747,8 @@ spec:
                       description: 'NatGatewayState: Property can be used to enable NAT Gateway for this API Management service.'
                       type: string
                     outboundPublicIPAddresses:
-                      description: >-
+                      description: |-
                         OutboundPublicIPAddresses: Outbound public IPV4 address prefixes associated with NAT Gateway deployed service. Available
-
                         only for Premium SKU on stv2 platform.
                       items:
                         type: string
@@ -854,27 +757,23 @@ spec:
                       description: 'PlatformVersion: Compute Platform Version running the service.'
                       type: string
                     privateIPAddresses:
-                      description: >-
+                      description: |-
                         PrivateIPAddresses: Private Static Load Balanced IP addresses of the API Management service which is deployed in an
-
                         Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated
-
                         SKU.
                       items:
                         type: string
                       type: array
                     publicIPAddresses:
-                      description: >-
+                      description: |-
                         PublicIPAddresses: Public Static Load Balanced IP addresses of the API Management service in the additional location.
-
                         Available only for Basic, Standard, Premium and Isolated SKU.
                       items:
                         type: string
                       type: array
                     publicIpAddressId:
-                      description: >-
+                      description: |-
                         PublicIpAddressId: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed service in
-
                         the location. Supported only for Premium SKU being deployed in Virtual Network.
                       type: string
                     sku:
@@ -915,9 +814,8 @@ spec:
                     type: string
                 type: object
               certificates:
-                description: >-
+                description: |-
                   Certificates: List of Certificates that need to be installed in the API Management service. Max supported certificates
-
                   that can be installed is 10.
                 items:
                   description: Certificate configuration which consist of non-trusted intermediates and root certificates.
@@ -926,9 +824,8 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         subject:
@@ -942,9 +839,8 @@ spec:
                       description: 'EncodedCertificate: Base64 Encoded certificate.'
                       type: string
                     storeName:
-                      description: >-
+                      description: |-
                         StoreName: The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and
-
                         CertificateAuthority are valid locations.
                       type: string
                   type: object
@@ -962,28 +858,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1000,72 +890,48 @@ spec:
                   type: object
                 type: array
               createdAtUtc:
-                description: >-
+                description: |-
                   CreatedAtUtc: Creation UTC date of the API Management service.The date conforms to the following format:
-
                   `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               customProperties:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   CustomProperties: Custom properties of the API Management service.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher
-
                   TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API
-
                   Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be
-
                   used to disable just TLS 1.1 for communications with backends.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for
-
                   communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be
-
                   used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH
-
                   operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value
-
                   is `True` if the service was created on or before April 1, 2018 and `False` otherwise. Http2 setting's default value is
-
                   `False`.</br></br>You can disable any of the following ciphers by using settings
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
-
                   TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
-
                   TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256,
-
                   TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example,
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default
-
                   value is `true` for them.</br> Note: The following ciphers can't be disabled since they are required by internal
-
                   platform components:
-
                   TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
                 type: object
               developerPortalUrl:
                 description: 'DeveloperPortalUrl: DEveloper Portal endpoint URL of the API Management service.'
                 type: string
               disableGateway:
-                description: >-
+                description: |-
                   DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                   disable the gateway in master region.
                 type: boolean
               enableClientCertificate:
-                description: >-
+                description: |-
                   EnableClientCertificate: Property only meant to be used for Consumption SKU Service. This enforces a client certificate
-
                   to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the
-
                   policy on the gateway.
                 type: boolean
               etag:
@@ -1086,9 +952,8 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         subject:
@@ -1105,13 +970,10 @@ spec:
                       description: 'CertificateStatus: Certificate Status.'
                       type: string
                     defaultSslBinding:
-                      description: >-
+                      description: |-
                         DefaultSslBinding: Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate.
-
                         If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is
-
                         useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The
-
                         setting only applied to gateway Hostname Type.
                       type: boolean
                     encodedCertificate:
@@ -1121,17 +983,14 @@ spec:
                       description: 'HostName: Hostname to configure on the Api Management service.'
                       type: string
                     identityClientId:
-                      description: >-
+                      description: |-
                         IdentityClientId: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to
-
                         the keyVault containing the SSL certificate.
                       type: string
                     keyVaultId:
-                      description: >-
+                      description: |-
                         KeyVaultId: Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided,
-
                         auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi.
-
                         The secret should be of type *application/x-pkcs12*
                       type: string
                     negotiateClientCertificate:
@@ -1155,9 +1014,8 @@ spec:
                     description: 'TenantId: The client tenant id of the identity.'
                     type: string
                   type:
-                    description: >-
+                    description: |-
                       Type: The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly
-
                       created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
                     type: string
                   userAssignedIdentities:
@@ -1170,13 +1028,10 @@ spec:
                           description: 'PrincipalId: The principal id of user assigned identity.'
                           type: string
                       type: object
-                    description: >-
+                    description: |-
                       UserAssignedIdentities: The list of user identities associated with the resource. The user identity
-
                       dictionary key references will be ARM resource ids in the form:
-
                       '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-
                       providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     type: object
                 type: object
@@ -1196,9 +1051,8 @@ spec:
                 description: 'NotificationSenderEmail: Email address from which the notification will be sent.'
                 type: string
               outboundPublicIPAddresses:
-                description: >-
+                description: |-
                   OutboundPublicIPAddresses: Outbound public IPV4 address prefixes associated with NAT Gateway deployed service. Available
-
                   only for Premium SKU on stv2 platform.
                 items:
                   type: string
@@ -1232,9 +1086,8 @@ spec:
                           type: string
                       type: object
                     privateLinkServiceConnectionState:
-                      description: >-
+                      description: |-
                         PrivateLinkServiceConnectionState: A collection of information about the state of the connection between service
-
                         consumer and provider.
                       properties:
                         actionsRequired:
@@ -1256,39 +1109,33 @@ spec:
                   type: object
                 type: array
               privateIPAddresses:
-                description: >-
+                description: |-
                   PrivateIPAddresses: Private Static Load Balanced IP addresses of the API Management service in Primary region which is
-
                   deployed in an Internal Virtual Network. Available only for Basic, Standard, Premium and Isolated SKU.
                 items:
                   type: string
                 type: array
               provisioningState:
-                description: >-
+                description: |-
                   ProvisioningState: The current provisioning state of the API Management service which can be one of the following:
-
                   Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
                 type: string
               publicIPAddresses:
-                description: >-
+                description: |-
                   PublicIPAddresses: Public Static Load Balanced IP addresses of the API Management service in Primary region. Available
-
                   only for Basic, Standard, Premium and Isolated SKU.
                 items:
                   type: string
                 type: array
               publicIpAddressId:
-                description: >-
+                description: |-
                   PublicIpAddressId: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed service in
-
                   the region. Supported only for Developer and Premium SKU being deployed in Virtual Network.
                 type: string
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Whether or not public endpoint access is allowed for this API Management service.  Value is
-
                   optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access
-
                   method. Default value is 'Enabled'
                 type: string
               publisherEmail:
@@ -1298,9 +1145,8 @@ spec:
                 description: 'PublisherName: Publisher name.'
                 type: string
               restore:
-                description: >-
+                description: |-
                   Restore: Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True
-
                   all other properties will be ignored.
                 type: boolean
               scmUrl:
@@ -1344,9 +1190,8 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetProvisioningState:
-                description: >-
+                description: |-
                   TargetProvisioningState: The provisioning state of the API Management service, which is targeted by the long running
-
                   operation started on the service.
                 type: string
               type:
@@ -1366,13 +1211,10 @@ spec:
                     type: string
                 type: object
               virtualNetworkType:
-                description: >-
+                description: |-
                   VirtualNetworkType: The type of VPN in which API Management service needs to be configured in. None (Default Value)
-
                   means the API Management service is not part of any Virtual Network, External means the API Management deployment is set
-
                   up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is
-
                   setup inside a Virtual Network having an Intranet Facing Endpoint only.
                 type: string
               zones:
@@ -1402,35 +1244,25 @@ spec:
     name: v1api20220801storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20220801.Service
-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/stable/2022-08-01/apimdeployment.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1441,24 +1273,21 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               additionalLocations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220801.AdditionalLocation
-
                     Description of an additional API Management resource location.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     disableGateway:
@@ -1468,17 +1297,14 @@ spec:
                     natGatewayState:
                       type: string
                     publicIpAddressReference:
-                      description: >-
+                      description: |-
                         PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                         service in the location. Supported only for Premium SKU being deployed in Virtual Network.
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -1493,17 +1319,15 @@ spec:
                           type: string
                       type: object
                     sku:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.ApiManagementServiceSkuProperties
-
                         API Management service resource SKU properties.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         capacity:
@@ -1512,28 +1336,24 @@ spec:
                           type: string
                       type: object
                     virtualNetworkConfiguration:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.VirtualNetworkConfiguration
-
                         Configuration of a virtual network to which API Management service is deployed.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         subnetResourceReference:
                           description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1555,72 +1375,63 @@ spec:
                   type: object
                 type: array
               apiVersionConstraint:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.ApiVersionConstraint
-
                   Control Plane Apis version constraint for the API Management service.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   minApiVersion:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               certificates:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220801.CertificateConfiguration
-
                     Certificate configuration which consist of non-trusted intermediates and root certificates.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.CertificateInformation
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -1630,18 +1441,16 @@ spec:
                         subject:
                           type: string
                         subjectFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -1651,18 +1460,16 @@ spec:
                         thumbprint:
                           type: string
                         thumbprintFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -1671,18 +1478,16 @@ spec:
                           type: object
                       type: object
                     certificatePassword:
-                      description: >-
+                      description: |-
                         SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                         the resource it is on.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -1705,48 +1510,42 @@ spec:
                 type: boolean
               hostnameConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220801.HostnameConfiguration
-
                     Custom hostname configuration.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.CertificateInformation
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -1756,18 +1555,16 @@ spec:
                         subject:
                           type: string
                         subjectFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -1777,18 +1574,16 @@ spec:
                         thumbprint:
                           type: string
                         thumbprintFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -1797,18 +1592,16 @@ spec:
                           type: object
                       type: object
                     certificatePassword:
-                      description: >-
+                      description: |-
                         SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                         the resource it is on.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -1828,18 +1621,16 @@ spec:
                     identityClientId:
                       type: string
                     identityClientIdFromConfig:
-                      description: >-
+                      description: |-
                         ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                         the resource it is on.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes configmap being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap being referenced.
-
                             The configmap must be in the same namespace as the resource
                           type: string
                       required:
@@ -1855,45 +1646,39 @@ spec:
                   type: object
                 type: array
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.ApiManagementServiceIdentity
-
                   Identity properties of the Api Management service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.UserAssignedIdentityDetails
-
                         Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -1917,48 +1702,39 @@ spec:
               notificationSenderEmail:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.ServiceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1968,33 +1744,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -2006,11 +1775,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -2021,17 +1788,14 @@ spec:
                     type: string
                 type: object
               publicIpAddressReference:
-                description: >-
+                description: |-
                   PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                   service in the region. Supported only for Developer and Premium SKU being deployed in Virtual Network.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -2054,17 +1818,15 @@ spec:
               restore:
                 type: boolean
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.ApiManagementServiceSkuProperties
-
                   API Management service resource SKU properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -2077,28 +1839,24 @@ spec:
                   type: string
                 type: object
               virtualNetworkConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.VirtualNetworkConfiguration
-
                   Configuration of a virtual network to which API Management service is deployed.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   subnetResourceReference:
                     description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -2128,24 +1886,21 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               additionalLocations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220801.AdditionalLocation_STATUS
-
                     Description of an additional API Management resource location.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     disableGateway:
@@ -2173,17 +1928,15 @@ spec:
                     publicIpAddressId:
                       type: string
                     sku:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.ApiManagementServiceSkuProperties_STATUS
-
                         API Management service resource SKU properties.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         capacity:
@@ -2192,17 +1945,15 @@ spec:
                           type: string
                       type: object
                     virtualNetworkConfiguration:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.VirtualNetworkConfiguration_STATUS
-
                         Configuration of a virtual network to which API Management service is deployed.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         subnetResourceId:
@@ -2219,17 +1970,15 @@ spec:
                   type: object
                 type: array
               apiVersionConstraint:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.ApiVersionConstraint_STATUS
-
                   Control Plane Apis version constraint for the API Management service.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   minApiVersion:
@@ -2237,31 +1986,27 @@ spec:
                 type: object
               certificates:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220801.CertificateConfiguration_STATUS
-
                     Certificate configuration which consist of non-trusted intermediates and root certificates.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.CertificateInformation_STATUS
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
@@ -2289,28 +2034,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -2346,31 +2085,27 @@ spec:
                 type: string
               hostnameConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220801.HostnameConfiguration_STATUS
-
                     Custom hostname configuration.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.CertificateInformation_STATUS
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
@@ -2403,17 +2138,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.ApiManagementServiceIdentity_STATUS
-
                   Identity properties of the Api Management service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -2429,9 +2162,8 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
@@ -2461,17 +2193,15 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20220801.RemotePrivateEndpointConnectionWrapper_STATUS
-
                     Remote Private Endpoint Connection resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     groupIds:
@@ -2483,34 +2213,30 @@ spec:
                     name:
                       type: string
                     privateEndpoint:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.ArmIdWrapper_STATUS
-
                         A wrapper for an ARM resource id
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     privateLinkServiceConnectionState:
-                      description: >-
+                      description: |-
                         Storage version of v1api20220801.PrivateLinkServiceConnectionState_STATUS
-
                         A collection of information about the state of the connection between service consumer and provider.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         actionsRequired:
@@ -2549,17 +2275,15 @@ spec:
               scmUrl:
                 type: string
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.ApiManagementServiceSkuProperties_STATUS
-
                   API Management service resource SKU properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -2568,17 +2292,15 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -2603,17 +2325,15 @@ spec:
               type:
                 type: string
               virtualNetworkConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20220801.VirtualNetworkConfiguration_STATUS
-
                   Configuration of a virtual network to which API Management service is deployed.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   subnetResourceId:
@@ -2651,33 +2371,24 @@ spec:
     name: v1api20230501preview
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimdeployment.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -2690,9 +2401,8 @@ spec:
                   description: Description of an additional API Management resource location.
                   properties:
                     disableGateway:
-                      description: >-
+                      description: |-
                         DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                         disable the gateway in this additional location.
                       type: boolean
                     location:
@@ -2705,17 +2415,14 @@ spec:
                       - Enabled
                       type: string
                     publicIpAddressReference:
-                      description: >-
+                      description: |-
                         PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                         service in the location. Supported only for Premium SKU being deployed in Virtual Network.
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -2758,11 +2465,9 @@ spec:
                           description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -2795,18 +2500,16 @@ spec:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 50
                 minLength: 1
                 pattern: ^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$
                 type: string
               certificates:
-                description: >-
+                description: |-
                   Certificates: List of Certificates that need to be installed in the API Management service. Max supported certificates
-
                   that can be installed is 10.
                 items:
                   description: Certificate configuration which consist of non-trusted intermediates and root certificates.
@@ -2815,24 +2518,21 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ExpiryFromConfig: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ`
-
                             as specified by the ISO 8601 standard.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -2849,9 +2549,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -2868,9 +2567,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -2885,9 +2583,8 @@ spec:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -2898,9 +2595,8 @@ spec:
                       description: 'EncodedCertificate: Base64 Encoded certificate.'
                       type: string
                     storeName:
-                      description: >-
+                      description: |-
                         StoreName: The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and
-
                         CertificateAuthority are valid locations.
                       enum:
                       - CertificateAuthority
@@ -2914,11 +2610,9 @@ spec:
                 description: 'ConfigurationApi: Configuration API configuration of the API Management service.'
                 properties:
                   legacyApi:
-                    description: >-
+                    description: |-
                       LegacyApi: Indication whether or not the legacy Configuration API (v1) should be exposed on the API Management service.
-
                       Value is optional but must be 'Enabled' or 'Disabled'. If 'Disabled', legacy Configuration API (v1) will not be
-
                       available for self-hosted gateways. Default value is 'Enabled'
                     enum:
                     - Disabled
@@ -2928,47 +2622,27 @@ spec:
               customProperties:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   CustomProperties: Custom properties of the API Management service.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher
-
                   TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API
-
                   Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be
-
                   used to disable just TLS 1.1 for communications with backends.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for
-
                   communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be
-
                   used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH
-
                   operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value
-
                   is `True` if the service was created on or before April 1, 2018 and `False` otherwise. Http2 setting's default value is
-
                   `False`.</br></br>You can disable any of the following ciphers by using settings
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
-
                   TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
-
                   TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256,
-
                   TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example,
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default
-
                   value is `true` for them.</br> Note: The following ciphers can't be disabled since they are required by internal
-
                   platform components:
-
                   TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
                 type: object
               developerPortalStatus:
@@ -2978,17 +2652,14 @@ spec:
                 - Enabled
                 type: string
               disableGateway:
-                description: >-
+                description: |-
                   DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                   disable the gateway in master region.
                 type: boolean
               enableClientCertificate:
-                description: >-
+                description: |-
                   EnableClientCertificate: Property only meant to be used for Consumption SKU Service. This enforces a client certificate
-
                   to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the
-
                   policy on the gateway.
                 type: boolean
               hostnameConfigurations:
@@ -3000,24 +2671,21 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ExpiryFromConfig: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ`
-
                             as specified by the ISO 8601 standard.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -3034,9 +2702,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -3053,9 +2720,8 @@ spec:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -3070,9 +2736,8 @@ spec:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -3095,13 +2760,10 @@ spec:
                       - InProgress
                       type: string
                     defaultSslBinding:
-                      description: >-
+                      description: |-
                         DefaultSslBinding: Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate.
-
                         If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is
-
                         useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The
-
                         setting only applied to gateway Hostname Type.
                       type: boolean
                     encodedCertificate:
@@ -3111,24 +2773,21 @@ spec:
                       description: 'HostName: Hostname to configure on the Api Management service.'
                       type: string
                     identityClientId:
-                      description: >-
+                      description: |-
                         IdentityClientId: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to
-
                         the keyVault containing the SSL certificate.
                       type: string
                     identityClientIdFromConfig:
-                      description: >-
+                      description: |-
                         IdentityClientIdFromConfig: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET
-
                         access to the keyVault containing the SSL certificate.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes configmap being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap being referenced.
-
                             The configmap must be in the same namespace as the resource
                           type: string
                       required:
@@ -3136,11 +2795,9 @@ spec:
                       - name
                       type: object
                     keyVaultId:
-                      description: >-
+                      description: |-
                         KeyVaultId: Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided,
-
                         auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi.
-
                         The secret should be of type *application/x-pkcs12*
                       type: string
                     negotiateClientCertificate:
@@ -3165,9 +2822,8 @@ spec:
                 description: 'Identity: Managed service identity of the Api Management service.'
                 properties:
                   type:
-                    description: >-
+                    description: |-
                       Type: The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly
-
                       created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
                     enum:
                     - None
@@ -3176,13 +2832,10 @@ spec:
                     - UserAssigned
                     type: string
                   userAssignedIdentities:
-                    description: >-
+                    description: |-
                       UserAssignedIdentities: The list of user identities associated with the resource. The user identity
-
                       dictionary key references will be ARM resource ids in the form:
-
                       '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-
                       providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     items:
                       description: Information about the user assigned identity for the resource
@@ -3191,11 +2844,9 @@ spec:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -3234,41 +2885,33 @@ spec:
                 maxLength: 100
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3279,33 +2922,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -3315,11 +2951,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -3330,17 +2964,14 @@ spec:
                     type: string
                 type: object
               publicIpAddressReference:
-                description: >-
+                description: |-
                   PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                   service in the region. Supported only for Developer and Premium SKU being deployed in Virtual Network.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -3355,11 +2986,9 @@ spec:
                     type: string
                 type: object
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Whether or not public endpoint access is allowed for this API Management service.  Value is
-
                   optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access
-
                   method. Default value is 'Enabled'
                 enum:
                 - Disabled
@@ -3374,9 +3003,8 @@ spec:
                 maxLength: 100
                 type: string
               restore:
-                description: >-
+                description: |-
                   Restore: Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True
-
                   all other properties will be ignored.
                 type: boolean
               sku:
@@ -3413,11 +3041,9 @@ spec:
                     description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -3433,13 +3059,10 @@ spec:
                     type: object
                 type: object
               virtualNetworkType:
-                description: >-
+                description: |-
                   VirtualNetworkType: The type of VPN in which API Management service needs to be configured in. None (Default Value)
-
                   means the API Management service is not part of any Virtual Network, External means the API Management deployment is set
-
                   up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is
-
                   setup inside a Virtual Network having an Intranet Facing Endpoint only.
                 enum:
                 - External
@@ -3466,9 +3089,8 @@ spec:
                   description: Description of an additional API Management resource location.
                   properties:
                     disableGateway:
-                      description: >-
+                      description: |-
                         DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                         disable the gateway in this additional location.
                       type: boolean
                     gatewayRegionalUrl:
@@ -3481,9 +3103,8 @@ spec:
                       description: 'NatGatewayState: Property can be used to enable NAT Gateway for this API Management service.'
                       type: string
                     outboundPublicIPAddresses:
-                      description: >-
+                      description: |-
                         OutboundPublicIPAddresses: Outbound public IPV4 address prefixes associated with NAT Gateway deployed service. Available
-
                         only for Premium SKU on stv2 platform.
                       items:
                         type: string
@@ -3492,27 +3113,23 @@ spec:
                       description: 'PlatformVersion: Compute Platform Version running the service.'
                       type: string
                     privateIPAddresses:
-                      description: >-
+                      description: |-
                         PrivateIPAddresses: Private Static Load Balanced IP addresses of the API Management service which is deployed in an
-
                         Internal Virtual Network in a particular additional location. Available only for Basic, Standard, Premium and Isolated
-
                         SKU.
                       items:
                         type: string
                       type: array
                     publicIPAddresses:
-                      description: >-
+                      description: |-
                         PublicIPAddresses: Public Static Load Balanced IP addresses of the API Management service in the additional location.
-
                         Available only for Basic, Standard, Premium and Isolated SKU.
                       items:
                         type: string
                       type: array
                     publicIpAddressId:
-                      description: >-
+                      description: |-
                         PublicIpAddressId: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed service in
-
                         the location. Supported only for Premium SKU being deployed in Virtual Network.
                       type: string
                     sku:
@@ -3553,9 +3170,8 @@ spec:
                     type: string
                 type: object
               certificates:
-                description: >-
+                description: |-
                   Certificates: List of Certificates that need to be installed in the API Management service. Max supported certificates
-
                   that can be installed is 10.
                 items:
                   description: Certificate configuration which consist of non-trusted intermediates and root certificates.
@@ -3564,9 +3180,8 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         subject:
@@ -3580,9 +3195,8 @@ spec:
                       description: 'EncodedCertificate: Base64 Encoded certificate.'
                       type: string
                     storeName:
-                      description: >-
+                      description: |-
                         StoreName: The System.Security.Cryptography.x509certificates.StoreName certificate store location. Only Root and
-
                         CertificateAuthority are valid locations.
                       type: string
                   type: object
@@ -3600,28 +3214,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -3641,64 +3249,41 @@ spec:
                 description: 'ConfigurationApi: Configuration API configuration of the API Management service.'
                 properties:
                   legacyApi:
-                    description: >-
+                    description: |-
                       LegacyApi: Indication whether or not the legacy Configuration API (v1) should be exposed on the API Management service.
-
                       Value is optional but must be 'Enabled' or 'Disabled'. If 'Disabled', legacy Configuration API (v1) will not be
-
                       available for self-hosted gateways. Default value is 'Enabled'
                     type: string
                 type: object
               createdAtUtc:
-                description: >-
+                description: |-
                   CreatedAtUtc: Creation UTC date of the API Management service.The date conforms to the following format:
-
                   `yyyy-MM-ddTHH:mm:ssZ` as specified by the ISO 8601 standard.
                 type: string
               customProperties:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   CustomProperties: Custom properties of the API Management service.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TripleDes168` will disable the cipher
-
                   TLS_RSA_WITH_3DES_EDE_CBC_SHA for all TLS(1.0, 1.1 and 1.2).</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls11` can be used to disable just TLS 1.1.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Protocols.Tls10` can be used to disable TLS 1.0 on an API
-
                   Management service.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls11` can be
-
                   used to disable just TLS 1.1 for communications with backends.</br>Setting
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Backend.Protocols.Tls10` can be used to disable TLS 1.0 for
-
                   communications with backends.</br>Setting `Microsoft.WindowsAzure.ApiManagement.Gateway.Protocols.Server.Http2` can be
-
                   used to enable HTTP2 protocol on an API Management service.</br>Not specifying any of these properties on PATCH
-
                   operation will reset omitted properties' values to their defaults. For all the settings except Http2 the default value
-
                   is `True` if the service was created on or before April 1, 2018 and `False` otherwise. Http2 setting's default value is
-
                   `False`.</br></br>You can disable any of the following ciphers by using settings
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.[cipher_name]`: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,
-
                   TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,
-
                   TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256,
-
                   TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA. For example,
-
                   `Microsoft.WindowsAzure.ApiManagement.Gateway.Security.Ciphers.TLS_RSA_WITH_AES_128_CBC_SHA256`:`false`. The default
-
                   value is `true` for them.</br> Note: The following ciphers can't be disabled since they are required by internal
-
                   platform components:
-
                   TLS_AES_256_GCM_SHA384,TLS_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
                 type: object
               developerPortalStatus:
@@ -3708,17 +3293,14 @@ spec:
                 description: 'DeveloperPortalUrl: DEveloper Portal endpoint URL of the API Management service.'
                 type: string
               disableGateway:
-                description: >-
+                description: |-
                   DisableGateway: Property only valid for an Api Management service deployed in multiple locations. This can be used to
-
                   disable the gateway in master region.
                 type: boolean
               enableClientCertificate:
-                description: >-
+                description: |-
                   EnableClientCertificate: Property only meant to be used for Consumption SKU Service. This enforces a client certificate
-
                   to be presented on each request to the gateway. This also enables the ability to authenticate the certificate in the
-
                   policy on the gateway.
                 type: boolean
               etag:
@@ -3739,9 +3321,8 @@ spec:
                       description: 'Certificate: Certificate information.'
                       properties:
                         expiry:
-                          description: >-
+                          description: |-
                             Expiry: Expiration date of the certificate. The date conforms to the following format: `yyyy-MM-ddTHH:mm:ssZ` as
-
                             specified by the ISO 8601 standard.
                           type: string
                         subject:
@@ -3758,13 +3339,10 @@ spec:
                       description: 'CertificateStatus: Certificate Status.'
                       type: string
                     defaultSslBinding:
-                      description: >-
+                      description: |-
                         DefaultSslBinding: Specify true to setup the certificate associated with this Hostname as the Default SSL Certificate.
-
                         If a client does not send the SNI header, then this will be the certificate that will be challenged. The property is
-
                         useful if a service has multiple custom hostname enabled and it needs to decide on the default ssl certificate. The
-
                         setting only applied to gateway Hostname Type.
                       type: boolean
                     encodedCertificate:
@@ -3774,17 +3352,14 @@ spec:
                       description: 'HostName: Hostname to configure on the Api Management service.'
                       type: string
                     identityClientId:
-                      description: >-
+                      description: |-
                         IdentityClientId: System or User Assigned Managed identity clientId as generated by Azure AD, which has GET access to
-
                         the keyVault containing the SSL certificate.
                       type: string
                     keyVaultId:
-                      description: >-
+                      description: |-
                         KeyVaultId: Url to the KeyVault Secret containing the Ssl Certificate. If absolute Url containing version is provided,
-
                         auto-update of ssl certificate will not work. This requires Api Management service to be configured with aka.ms/apimmsi.
-
                         The secret should be of type *application/x-pkcs12*
                       type: string
                     negotiateClientCertificate:
@@ -3808,9 +3383,8 @@ spec:
                     description: 'TenantId: The client tenant id of the identity.'
                     type: string
                   type:
-                    description: >-
+                    description: |-
                       Type: The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an implicitly
-
                       created identity and a set of user assigned identities. The type 'None' will remove any identities from the service.
                     type: string
                   userAssignedIdentities:
@@ -3823,13 +3397,10 @@ spec:
                           description: 'PrincipalId: The principal id of user assigned identity.'
                           type: string
                       type: object
-                    description: >-
+                    description: |-
                       UserAssignedIdentities: The list of user identities associated with the resource. The user identity
-
                       dictionary key references will be ARM resource ids in the form:
-
                       '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/
-
                       providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.
                     type: object
                 type: object
@@ -3852,9 +3423,8 @@ spec:
                 description: 'NotificationSenderEmail: Email address from which the notification will be sent.'
                 type: string
               outboundPublicIPAddresses:
-                description: >-
+                description: |-
                   OutboundPublicIPAddresses: Outbound public IPV4 address prefixes associated with NAT Gateway deployed service. Available
-
                   only for Premium SKU on stv2 platform.
                 items:
                   type: string
@@ -3888,9 +3458,8 @@ spec:
                           type: string
                       type: object
                     privateLinkServiceConnectionState:
-                      description: >-
+                      description: |-
                         PrivateLinkServiceConnectionState: A collection of information about the state of the connection between service
-
                         consumer and provider.
                       properties:
                         actionsRequired:
@@ -3912,39 +3481,33 @@ spec:
                   type: object
                 type: array
               privateIPAddresses:
-                description: >-
+                description: |-
                   PrivateIPAddresses: Private Static Load Balanced IP addresses of the API Management service in Primary region which is
-
                   deployed in an Internal Virtual Network. Available only for Basic, Standard, Premium and Isolated SKU.
                 items:
                   type: string
                 type: array
               provisioningState:
-                description: >-
+                description: |-
                   ProvisioningState: The current provisioning state of the API Management service which can be one of the following:
-
                   Created/Activating/Succeeded/Updating/Failed/Stopped/Terminating/TerminationFailed/Deleted.
                 type: string
               publicIPAddresses:
-                description: >-
+                description: |-
                   PublicIPAddresses: Public Static Load Balanced IP addresses of the API Management service in Primary region. Available
-
                   only for Basic, Standard, Premium and Isolated SKU.
                 items:
                   type: string
                 type: array
               publicIpAddressId:
-                description: >-
+                description: |-
                   PublicIpAddressId: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed service in
-
                   the region. Supported only for Developer and Premium SKU being deployed in Virtual Network.
                 type: string
               publicNetworkAccess:
-                description: >-
+                description: |-
                   PublicNetworkAccess: Whether or not public endpoint access is allowed for this API Management service.  Value is
-
                   optional but if passed in, must be 'Enabled' or 'Disabled'. If 'Disabled', private endpoints are the exclusive access
-
                   method. Default value is 'Enabled'
                 type: string
               publisherEmail:
@@ -3954,9 +3517,8 @@ spec:
                 description: 'PublisherName: Publisher name.'
                 type: string
               restore:
-                description: >-
+                description: |-
                   Restore: Undelete Api Management Service if it was previously soft-deleted. If this flag is specified and set to True
-
                   all other properties will be ignored.
                 type: boolean
               scmUrl:
@@ -4000,9 +3562,8 @@ spec:
                 description: 'Tags: Resource tags.'
                 type: object
               targetProvisioningState:
-                description: >-
+                description: |-
                   TargetProvisioningState: The provisioning state of the API Management service, which is targeted by the long running
-
                   operation started on the service.
                 type: string
               type:
@@ -4022,13 +3583,10 @@ spec:
                     type: string
                 type: object
               virtualNetworkType:
-                description: >-
+                description: |-
                   VirtualNetworkType: The type of VPN in which API Management service needs to be configured in. None (Default Value)
-
                   means the API Management service is not part of any Virtual Network, External means the API Management deployment is set
-
                   up inside a Virtual Network having an Internet Facing Endpoint, and Internal means that API Management deployment is
-
                   setup inside a Virtual Network having an Intranet Facing Endpoint only.
                 type: string
               zones:
@@ -4058,35 +3616,25 @@ spec:
     name: v1api20230501previewstorage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230501preview.Service
-
           Generator information:
-
           - Generated from: /apimanagement/resource-manager/Microsoft.ApiManagement/preview/2023-05-01-preview/apimdeployment.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -4097,24 +3645,21 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               additionalLocations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501preview.AdditionalLocation
-
                     Description of an additional API Management resource location.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     disableGateway:
@@ -4124,17 +3669,14 @@ spec:
                     natGatewayState:
                       type: string
                     publicIpAddressReference:
-                      description: >-
+                      description: |-
                         PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                         service in the location. Supported only for Premium SKU being deployed in Virtual Network.
                       properties:
                         armId:
-                          description: >-
+                          description: |-
                             ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                             The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                             ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                           pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                           type: string
@@ -4149,17 +3691,15 @@ spec:
                           type: string
                       type: object
                     sku:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.ApiManagementServiceSkuProperties
-
                         API Management service resource SKU properties.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         capacity:
@@ -4168,28 +3708,24 @@ spec:
                           type: string
                       type: object
                     virtualNetworkConfiguration:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.VirtualNetworkConfiguration
-
                         Configuration of a virtual network to which API Management service is deployed.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         subnetResourceReference:
                           description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -4211,72 +3747,63 @@ spec:
                   type: object
                 type: array
               apiVersionConstraint:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ApiVersionConstraint
-
                   Control Plane Apis version constraint for the API Management service.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   minApiVersion:
                     type: string
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               certificates:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501preview.CertificateConfiguration
-
                     Certificate configuration which consist of non-trusted intermediates and root certificates.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.CertificateInformation
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -4286,18 +3813,16 @@ spec:
                         subject:
                           type: string
                         subjectFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -4307,18 +3832,16 @@ spec:
                         thumbprint:
                           type: string
                         thumbprintFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -4327,18 +3850,16 @@ spec:
                           type: object
                       type: object
                     certificatePassword:
-                      description: >-
+                      description: |-
                         SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                         the resource it is on.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -4352,17 +3873,15 @@ spec:
                   type: object
                 type: array
               configurationApi:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ConfigurationApi
-
                   Information regarding the Configuration API of the API Management service.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   legacyApi:
@@ -4380,48 +3899,42 @@ spec:
                 type: boolean
               hostnameConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501preview.HostnameConfiguration
-
                     Custom hostname configuration.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.CertificateInformation
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
                           type: string
                         expiryFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -4431,18 +3944,16 @@ spec:
                         subject:
                           type: string
                         subjectFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -4452,18 +3963,16 @@ spec:
                         thumbprint:
                           type: string
                         thumbprintFromConfig:
-                          description: >-
+                          description: |-
                             ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                             the resource it is on.
                           properties:
                             key:
                               description: Key is the key in the Kubernetes configmap being referenced
                               type: string
                             name:
-                              description: >-
+                              description: |-
                                 Name is the name of the Kubernetes configmap being referenced.
-
                                 The configmap must be in the same namespace as the resource
                               type: string
                           required:
@@ -4472,18 +3981,16 @@ spec:
                           type: object
                       type: object
                     certificatePassword:
-                      description: >-
+                      description: |-
                         SecretReference is a reference to a Kubernetes secret and key in the same namespace as
-
                         the resource it is on.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes secret being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes secret being referenced.
-
                             The secret must be in the same namespace as the resource
                           type: string
                       required:
@@ -4503,18 +4010,16 @@ spec:
                     identityClientId:
                       type: string
                     identityClientIdFromConfig:
-                      description: >-
+                      description: |-
                         ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
-
                         the resource it is on.
                       properties:
                         key:
                           description: Key is the key in the Kubernetes configmap being referenced
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap being referenced.
-
                             The configmap must be in the same namespace as the resource
                           type: string
                       required:
@@ -4530,45 +4035,39 @@ spec:
                   type: object
                 type: array
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ApiManagementServiceIdentity
-
                   Identity properties of the Api Management service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   type:
                     type: string
                   userAssignedIdentities:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.UserAssignedIdentityDetails
-
                         Information about the user assigned identity for the resource
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         reference:
                           description: ResourceReference represents a resource reference, either to a Kubernetes resource or directly to an Azure resource via ARMID
                           properties:
                             armId:
-                              description: >-
+                              description: |-
                                 ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                 The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                 ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                               pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                               type: string
@@ -4594,48 +4093,39 @@ spec:
               notificationSenderEmail:
                 type: string
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ServiceOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -4645,33 +4135,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -4683,11 +4166,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -4698,17 +4179,14 @@ spec:
                     type: string
                 type: object
               publicIpAddressReference:
-                description: >-
+                description: |-
                   PublicIpAddressReference: Public Standard SKU IP V4 based IP address to be associated with Virtual Network deployed
-
                   service in the region. Supported only for Developer and Premium SKU being deployed in Virtual Network.
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -4731,17 +4209,15 @@ spec:
               restore:
                 type: boolean
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ApiManagementServiceSkuProperties
-
                   API Management service resource SKU properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -4754,28 +4230,24 @@ spec:
                   type: string
                 type: object
               virtualNetworkConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.VirtualNetworkConfiguration
-
                   Configuration of a virtual network to which API Management service is deployed.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   subnetResourceReference:
                     description: 'SubnetResourceReference: The full resource ID of a subnet in a virtual network to deploy the API Management service in.'
                     properties:
                       armId:
-                        description: >-
+                        description: |-
                           ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                           The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                           ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                         pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                         type: string
@@ -4805,24 +4277,21 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               additionalLocations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501preview.AdditionalLocation_STATUS
-
                     Description of an additional API Management resource location.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     disableGateway:
@@ -4850,17 +4319,15 @@ spec:
                     publicIpAddressId:
                       type: string
                     sku:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.ApiManagementServiceSkuProperties_STATUS
-
                         API Management service resource SKU properties.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         capacity:
@@ -4869,17 +4336,15 @@ spec:
                           type: string
                       type: object
                     virtualNetworkConfiguration:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.VirtualNetworkConfiguration_STATUS
-
                         Configuration of a virtual network to which API Management service is deployed.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         subnetResourceId:
@@ -4896,17 +4361,15 @@ spec:
                   type: object
                 type: array
               apiVersionConstraint:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ApiVersionConstraint_STATUS
-
                   Control Plane Apis version constraint for the API Management service.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   minApiVersion:
@@ -4914,31 +4377,27 @@ spec:
                 type: object
               certificates:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501preview.CertificateConfiguration_STATUS
-
                     Certificate configuration which consist of non-trusted intermediates and root certificates.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.CertificateInformation_STATUS
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
@@ -4966,28 +4425,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -5004,17 +4457,15 @@ spec:
                   type: object
                 type: array
               configurationApi:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ConfigurationApi_STATUS
-
                   Information regarding the Configuration API of the API Management service.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   legacyApi:
@@ -5042,31 +4493,27 @@ spec:
                 type: string
               hostnameConfigurations:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501preview.HostnameConfiguration_STATUS
-
                     Custom hostname configuration.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     certificate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.CertificateInformation_STATUS
-
                         SSL certificate information.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         expiry:
@@ -5099,17 +4546,15 @@ spec:
               id:
                 type: string
               identity:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ApiManagementServiceIdentity_STATUS
-
                   Identity properties of the Api Management service resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   principalId:
@@ -5125,9 +4570,8 @@ spec:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         clientId:
@@ -5159,17 +4603,15 @@ spec:
                 type: string
               privateEndpointConnections:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20230501preview.RemotePrivateEndpointConnectionWrapper_STATUS
-
                     Remote Private Endpoint Connection resource.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     groupIds:
@@ -5181,34 +4623,30 @@ spec:
                     name:
                       type: string
                     privateEndpoint:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.ArmIdWrapper_STATUS
-
                         A wrapper for an ARM resource id
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         id:
                           type: string
                       type: object
                     privateLinkServiceConnectionState:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230501preview.PrivateLinkServiceConnectionState_STATUS
-
                         A collection of information about the state of the connection between service consumer and provider.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         actionsRequired:
@@ -5247,17 +4685,15 @@ spec:
               scmUrl:
                 type: string
               sku:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.ApiManagementServiceSkuProperties_STATUS
-
                   API Management service resource SKU properties.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   capacity:
@@ -5266,17 +4702,15 @@ spec:
                     type: string
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:
@@ -5301,17 +4735,15 @@ spec:
               type:
                 type: string
               virtualNetworkConfiguration:
-                description: >-
+                description: |-
                   Storage version of v1api20230501preview.VirtualNetworkConfiguration_STATUS
-
                   Configuration of a virtual network to which API Management service is deployed.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   subnetResourceId:

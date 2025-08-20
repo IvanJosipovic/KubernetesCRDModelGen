@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: alpha
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: securitycentersources.securitycenter.cnrm.cloud.google.com
 spec:
   group: securitycenter.cnrm.cloud.google.com
@@ -57,15 +56,11 @@ spec:
                 description: The description of the source (max of 1024 characters).
                 type: string
               displayName:
-                description: >-
+                description: |-
                   The source’s display name. A source’s display name must be unique
-
                   amongst its siblings, for example, two sources with the same parent
-
                   can't share the same display name. The display name must start and end
-
                   with a letter or digit, may contain letters, digits, spaces, hyphens,
-
                   and underscores, and can be no longer than 32 characters.
                 type: string
               organizationRef:
@@ -126,9 +121,8 @@ spec:
                   type: object
                 type: array
               name:
-                description: >-
+                description: |-
                   The resource name of this source, in the format
-
                   'organizations/{{organization}}/sources/{{source}}'.
                 type: string
               observedGeneration:
@@ -144,7 +138,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

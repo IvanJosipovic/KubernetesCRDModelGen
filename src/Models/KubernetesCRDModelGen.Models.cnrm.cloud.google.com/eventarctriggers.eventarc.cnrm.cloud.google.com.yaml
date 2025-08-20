@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: eventarctriggers.eventarc.cnrm.cloud.google.com
 spec:
   group: eventarc.cnrm.cloud.google.com
@@ -74,9 +73,8 @@ spec:
                     description: Optional. The name of the channel associated with the trigger in `projects/{project}/locations/{location}/channels/{channel}` format. You must provide a channel to receive events from Eventarc SaaS partners.
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       [WARNING] EventarcChannel not yet supported in Config Connector, use 'external' field to reference existing resources.
-
                       Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                     type: string
                   namespace:
@@ -103,9 +101,8 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           [WARNING] Configuring a Cloud Function in Trigger is not supported as of today. The Cloud Function resource name. Format: projects/{project}/locations/{location}/functions/{function}
-
 
                           Allowed value: The Google Cloud resource name of a `CloudFunctionsFunction` resource (format: `projects/{{project}}/locations/{{region}}/functions/{{name}}`).
                         type: string
@@ -142,9 +139,8 @@ spec:
                           - external
                         properties:
                           external:
-                            description: >-
+                            description: |-
                               Required. The name of the Cloud Run service being addressed. See https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services. Only services located in the same project of the trigger object can be addressed.
-
 
                               Allowed value: The Google Cloud resource name of a `RunService` resource (format: `projects/{{project}}/locations/{{location}}/services/{{name}}`).
                             type: string
@@ -179,9 +175,8 @@ spec:
                           - external
                         properties:
                           external:
-                            description: >-
+                            description: |-
                               Required. The name of the cluster the GKE service is running in. The cluster must be running in the same project as the trigger being created.
-
 
                               Allowed value: The `selfLink` field of a `ContainerCluster` resource.
                             type: string
@@ -242,9 +237,8 @@ spec:
                             description: 'Required. Name of the NetworkAttachment that allows access to the destination VPC. Format: `projects/{PROJECT_ID}/regions/{REGION}/networkAttachments/{NETWORK_ATTACHMENT_NAME}`'
                             type: string
                           name:
-                            description: >-
+                            description: |-
                               [WARNING] ComputeNetworkAttachment not yet supported in Config Connector, use 'external' field to reference existing resources.
-
                               Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                             type: string
                           namespace:
@@ -274,9 +268,8 @@ spec:
                         description: 'The resource name of the Workflow whose Executions are triggered by the events. The Workflow resource should be deployed in the same project as the trigger. Format: `projects/{project}/locations/{location}/workflows/{workflow}`'
                         type: string
                       name:
-                        description: >-
+                        description: |-
                           [WARNING] WorkflowsWorkflow not yet supported in Config Connector, use 'external' field to reference existing resources.
-
                           Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
                         type: string
                       namespace:
@@ -326,9 +319,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The project for the resource
-
 
                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                     type: string
@@ -359,9 +351,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       Optional. The IAM service account email associated with the trigger. The service account represents the identity of the trigger. The principal who calls this API must have `iam.serviceAccounts.actAs` permission in the service account. See https://cloud.google.com/iam/docs/understanding-service-accounts#sa_common for more information. For Cloud Run destinations, this service account is used to generate identity tokens when invoking the service. See https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account for information on how to invoke authenticated Cloud Run services. In order to create Audit Log triggers, the service account should also have `roles/eventarc.eventReceiver` IAM role.
-
 
                       Allowed value: The `email` field of an `IAMServiceAccount` resource.
                     type: string
@@ -396,9 +387,8 @@ spec:
                           - external
                         properties:
                           external:
-                            description: >-
+                            description: |-
                               Optional. The name of the Pub/Sub topic created and managed by Eventarc system as a transport for the event delivery. Format: `projects/{PROJECT_ID}/topics/{TOPIC_NAME}. You may set an existing topic for triggers of the type google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide here will not be deleted by Eventarc at trigger deletion.
-
 
                               Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).
                             type: string
@@ -481,7 +471,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

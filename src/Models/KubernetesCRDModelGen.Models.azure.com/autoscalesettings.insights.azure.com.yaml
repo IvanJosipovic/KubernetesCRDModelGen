@@ -45,33 +45,24 @@ spec:
     name: v1api20221001
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-10-01/autoscale_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/autoscalesettings/{autoscaleSettingName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,9 +70,8 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               enabled:
@@ -138,41 +128,33 @@ spec:
                   type: object
                 type: array
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -183,33 +165,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -219,11 +194,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -237,9 +210,8 @@ spec:
                 description: 'PredictiveAutoscalePolicy: the predictive autoscale policy mode.'
                 properties:
                   scaleLookAheadTime:
-                    description: >-
+                    description: |-
                       ScaleLookAheadTime: the amount of time to specify by which instances are launched in advance. It must be between 1
-
                       minute and 60 minutes in ISO 8601 format.
                     type: string
                   scaleMode:
@@ -253,9 +225,8 @@ spec:
                 - scaleMode
                 type: object
               profiles:
-                description: >-
+                description: |-
                   Profiles: the collection of automatic scaling profiles that specify different scaling parameters for different time
-
                   periods. A maximum of 20 profiles can be specified.
                 items:
                   description: Autoscale profile.
@@ -264,15 +235,13 @@ spec:
                       description: 'Capacity: the number of instances that can be used during this profile.'
                       properties:
                         default:
-                          description: >-
+                          description: |-
                             Default: the number of instances that will be set if metrics are not available for evaluation. The default is only used
-
                             if the current instance count is lower than the default.
                           type: string
                         maximum:
-                          description: >-
+                          description: |-
                             Maximum: the maximum number of instances for the resource. The actual maximum number of instances is limited by the
-
                             cores that are available in the subscription.
                           type: string
                         minimum:
@@ -293,51 +262,29 @@ spec:
                           description: 'Start: the start time for the profile in ISO 8601 format.'
                           type: string
                         timeZone:
-                          description: >-
+                          description: |-
                             TimeZone: the timezone of the start and end times for the profile. Some examples of valid time zones are: Dateline
-
                             Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard
-
                             Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time,
-
                             Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern
-
                             Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time,
-
                             Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E.
-
                             South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo
-
                             Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time,
-
                             Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard
-
                             Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time,
-
                             Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe
-
                             Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad
-
                             Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard
-
                             Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3,
-
                             Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard
-
                             Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard
-
                             Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE
-
                             Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard
-
                             Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard
-
                             Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS
-
                             Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard
-
                             Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji
-
                             Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time
                           type: string
                       required:
@@ -351,11 +298,9 @@ spec:
                       description: 'Recurrence: the repeating times at which this profile begins. This element is not used if the FixedDate element is used.'
                       properties:
                         frequency:
-                          description: >-
+                          description: |-
                             Frequency: the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning
-
                             each week will have the same set of profiles. For example, to set a daily schedule, set schedule to every day of the
-
                             week. The frequency property specifies that the schedule is repeated weekly.
                           enum:
                           - Day
@@ -376,9 +321,8 @@ spec:
                                 type: string
                               type: array
                             hours:
-                              description: >-
+                              description: |-
                                 Hours: A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM
-
                                 times are not supported).
                               items:
                                 type: integer
@@ -389,51 +333,29 @@ spec:
                                 type: integer
                               type: array
                             timeZone:
-                              description: >-
+                              description: |-
                                 TimeZone: the timezone for the hours of the profile. Some examples of valid time zones are: Dateline Standard Time,
-
                                 UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US
-
                                 Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central
-
                                 Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard
-
                                 Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central
-
                                 Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South
-
                                 America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard
-
                                 Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco
-
                                 Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time,
-
                                 Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan
-
                                 Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe
-
                                 Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad
-
                                 Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard
-
                                 Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3,
-
                                 Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard
-
                                 Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard
-
                                 Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE
-
                                 Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard
-
                                 Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard
-
                                 Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS
-
                                 Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard
-
                                 Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji
-
                                 Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time
                               type: string
                           required:
@@ -447,9 +369,8 @@ spec:
                       - schedule
                       type: object
                     rules:
-                      description: >-
+                      description: |-
                         Rules: the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules
-
                         can be specified.
                       items:
                         description: A rule that provide the triggers and parameters for the scaling action.
@@ -458,9 +379,8 @@ spec:
                             description: 'MetricTrigger: the trigger that results in a scaling action.'
                             properties:
                               dimensions:
-                                description: >-
+                                description: |-
                                   Dimensions: List of dimension conditions. For example:
-
                                   [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
                                 items:
                                   description: Specifies an auto scale rule metric dimension.
@@ -469,9 +389,8 @@ spec:
                                       description: 'DimensionName: Name of the dimension.'
                                       type: string
                                     Operator:
-                                      description: >-
+                                      description: |-
                                         Operator: the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the
-
                                         values. 'NotEquals' being not equal to all of the values
                                       enum:
                                       - Equals
@@ -504,11 +423,9 @@ spec:
                                 description: 'MetricResourceUriReference: the resource identifier of the resource the rule monitors.'
                                 properties:
                                   armId:
-                                    description: >-
+                                    description: |-
                                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
@@ -545,9 +462,8 @@ spec:
                                 description: 'Threshold: the threshold of the metric that triggers the scale action.'
                                 type: number
                               timeAggregation:
-                                description: >-
+                                description: |-
                                   TimeAggregation: time aggregation type. How the data that is collected should be combined over time. The default value
-
                                   is Average.
                                 enum:
                                 - Average
@@ -558,15 +474,13 @@ spec:
                                 - Total
                                 type: string
                               timeGrain:
-                                description: >-
+                                description: |-
                                   TimeGrain: the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric
-
                                   definitions for the metric. Must be between 12 hours and 1 minute.
                                 type: string
                               timeWindow:
-                                description: >-
+                                description: |-
                                   TimeWindow: the range of time in which instance data is collected. This value must be greater than the delay in metric
-
                                   collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
                                 type: string
                             required:
@@ -583,9 +497,8 @@ spec:
                             description: 'ScaleAction: the parameters for the scaling action.'
                             properties:
                               cooldown:
-                                description: >-
+                                description: |-
                                   Cooldown: the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week
-
                                   and 1 minute in ISO 8601 format.
                                 type: string
                               direction:
@@ -604,9 +517,8 @@ spec:
                                 - ServiceAllowedNextValue
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   Value: the number of instances that are involved in the scaling action. This value must be 1 or greater. The default
-
                                   value is 1.
                                 type: string
                             required:
@@ -629,11 +541,9 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Tags: Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping
-
                   this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no
-
                   greater in length than 128 characters and a value no greater in length than 256 characters.
                 type: object
               targetResourceLocation:
@@ -643,11 +553,9 @@ spec:
                 description: 'TargetResourceUriReference: the resource identifier of the resource that the autoscale setting should be added to.'
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -681,28 +589,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -774,9 +676,8 @@ spec:
                 description: 'PredictiveAutoscalePolicy: the predictive autoscale policy mode.'
                 properties:
                   scaleLookAheadTime:
-                    description: >-
+                    description: |-
                       ScaleLookAheadTime: the amount of time to specify by which instances are launched in advance. It must be between 1
-
                       minute and 60 minutes in ISO 8601 format.
                     type: string
                   scaleMode:
@@ -784,9 +685,8 @@ spec:
                     type: string
                 type: object
               profiles:
-                description: >-
+                description: |-
                   Profiles: the collection of automatic scaling profiles that specify different scaling parameters for different time
-
                   periods. A maximum of 20 profiles can be specified.
                 items:
                   description: Autoscale profile.
@@ -795,15 +695,13 @@ spec:
                       description: 'Capacity: the number of instances that can be used during this profile.'
                       properties:
                         default:
-                          description: >-
+                          description: |-
                             Default: the number of instances that will be set if metrics are not available for evaluation. The default is only used
-
                             if the current instance count is lower than the default.
                           type: string
                         maximum:
-                          description: >-
+                          description: |-
                             Maximum: the maximum number of instances for the resource. The actual maximum number of instances is limited by the
-
                             cores that are available in the subscription.
                           type: string
                         minimum:
@@ -824,51 +722,29 @@ spec:
                           description: 'Start: the start time for the profile in ISO 8601 format.'
                           type: string
                         timeZone:
-                          description: >-
+                          description: |-
                             TimeZone: the timezone of the start and end times for the profile. Some examples of valid time zones are: Dateline
-
                             Standard Time, UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard
-
                             Time, US Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time,
-
                             Central Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern
-
                             Standard Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time,
-
                             Central Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E.
-
                             South America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo
-
                             Standard Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time,
-
                             Morocco Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard
-
                             Time, Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time,
-
                             Jordan Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe
-
                             Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad
-
                             Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard
-
                             Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3,
-
                             Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard
-
                             Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard
-
                             Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE
-
                             Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard
-
                             Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard
-
                             Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS
-
                             Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard
-
                             Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji
-
                             Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time
                           type: string
                       required:
@@ -882,11 +758,9 @@ spec:
                       description: 'Recurrence: the repeating times at which this profile begins. This element is not used if the FixedDate element is used.'
                       properties:
                         frequency:
-                          description: >-
+                          description: |-
                             Frequency: the recurrence frequency. How often the schedule profile should take effect. This value must be Week, meaning
-
                             each week will have the same set of profiles. For example, to set a daily schedule, set schedule to every day of the
-
                             week. The frequency property specifies that the schedule is repeated weekly.
                           enum:
                           - Day
@@ -907,9 +781,8 @@ spec:
                                 type: string
                               type: array
                             hours:
-                              description: >-
+                              description: |-
                                 Hours: A collection of hours that the profile takes effect on. Values supported are 0 to 23 on the 24-hour clock (AM/PM
-
                                 times are not supported).
                               items:
                                 type: integer
@@ -920,51 +793,29 @@ spec:
                                 type: integer
                               type: array
                             timeZone:
-                              description: >-
+                              description: |-
                                 TimeZone: the timezone for the hours of the profile. Some examples of valid time zones are: Dateline Standard Time,
-
                                 UTC-11, Hawaiian Standard Time, Alaskan Standard Time, Pacific Standard Time (Mexico), Pacific Standard Time, US
-
                                 Mountain Standard Time, Mountain Standard Time (Mexico), Mountain Standard Time, Central America Standard Time, Central
-
                                 Standard Time, Central Standard Time (Mexico), Canada Central Standard Time, SA Pacific Standard Time, Eastern Standard
-
                                 Time, US Eastern Standard Time, Venezuela Standard Time, Paraguay Standard Time, Atlantic Standard Time, Central
-
                                 Brazilian Standard Time, SA Western Standard Time, Pacific SA Standard Time, Newfoundland Standard Time, E. South
-
                                 America Standard Time, Argentina Standard Time, SA Eastern Standard Time, Greenland Standard Time, Montevideo Standard
-
                                 Time, Bahia Standard Time, UTC-02, Mid-Atlantic Standard Time, Azores Standard Time, Cape Verde Standard Time, Morocco
-
                                 Standard Time, UTC, GMT Standard Time, Greenwich Standard Time, W. Europe Standard Time, Central Europe Standard Time,
-
                                 Romance Standard Time, Central European Standard Time, W. Central Africa Standard Time, Namibia Standard Time, Jordan
-
                                 Standard Time, GTB Standard Time, Middle East Standard Time, Egypt Standard Time, Syria Standard Time, E. Europe
-
                                 Standard Time, South Africa Standard Time, FLE Standard Time, Turkey Standard Time, Israel Standard Time, Kaliningrad
-
                                 Standard Time, Libya Standard Time, Arabic Standard Time, Arab Standard Time, Belarus Standard Time, Russian Standard
-
                                 Time, E. Africa Standard Time, Iran Standard Time, Arabian Standard Time, Azerbaijan Standard Time, Russia Time Zone 3,
-
                                 Mauritius Standard Time, Georgian Standard Time, Caucasus Standard Time, Afghanistan Standard Time, West Asia Standard
-
                                 Time, Ekaterinburg Standard Time, Pakistan Standard Time, India Standard Time, Sri Lanka Standard Time, Nepal Standard
-
                                 Time, Central Asia Standard Time, Bangladesh Standard Time, N. Central Asia Standard Time, Myanmar Standard Time, SE
-
                                 Asia Standard Time, North Asia Standard Time, China Standard Time, North Asia East Standard Time, Singapore Standard
-
                                 Time, W. Australia Standard Time, Taipei Standard Time, Ulaanbaatar Standard Time, Tokyo Standard Time, Korea Standard
-
                                 Time, Yakutsk Standard Time, Cen. Australia Standard Time, AUS Central Standard Time, E. Australia Standard Time, AUS
-
                                 Eastern Standard Time, West Pacific Standard Time, Tasmania Standard Time, Magadan Standard Time, Vladivostok Standard
-
                                 Time, Russia Time Zone 10, Central Pacific Standard Time, Russia Time Zone 11, New Zealand Standard Time, UTC+12, Fiji
-
                                 Standard Time, Kamchatka Standard Time, Tonga Standard Time, Samoa Standard Time, Line Islands Standard Time
                               type: string
                           required:
@@ -978,9 +829,8 @@ spec:
                       - schedule
                       type: object
                     rules:
-                      description: >-
+                      description: |-
                         Rules: the collection of rules that provide the triggers and parameters for the scaling action. A maximum of 10 rules
-
                         can be specified.
                       items:
                         description: A rule that provide the triggers and parameters for the scaling action.
@@ -989,9 +839,8 @@ spec:
                             description: 'MetricTrigger: the trigger that results in a scaling action.'
                             properties:
                               dimensions:
-                                description: >-
+                                description: |-
                                   Dimensions: List of dimension conditions. For example:
-
                                   [{"DimensionName":"AppName","Operator":"Equals","Values":["App1"]},{"DimensionName":"Deployment","Operator":"Equals","Values":["default"]}].
                                 items:
                                   description: Specifies an auto scale rule metric dimension.
@@ -1000,9 +849,8 @@ spec:
                                       description: 'DimensionName: Name of the dimension.'
                                       type: string
                                     Operator:
-                                      description: >-
+                                      description: |-
                                         Operator: the dimension operator. Only 'Equals' and 'NotEquals' are supported. 'Equals' being equal to any of the
-
                                         values. 'NotEquals' being not equal to all of the values
                                       enum:
                                       - Equals
@@ -1057,9 +905,8 @@ spec:
                                 description: 'Threshold: the threshold of the metric that triggers the scale action.'
                                 type: number
                               timeAggregation:
-                                description: >-
+                                description: |-
                                   TimeAggregation: time aggregation type. How the data that is collected should be combined over time. The default value
-
                                   is Average.
                                 enum:
                                 - Average
@@ -1070,15 +917,13 @@ spec:
                                 - Total
                                 type: string
                               timeGrain:
-                                description: >-
+                                description: |-
                                   TimeGrain: the granularity of metrics the rule monitors. Must be one of the predefined values returned from metric
-
                                   definitions for the metric. Must be between 12 hours and 1 minute.
                                 type: string
                               timeWindow:
-                                description: >-
+                                description: |-
                                   TimeWindow: the range of time in which instance data is collected. This value must be greater than the delay in metric
-
                                   collection, which can vary from resource-to-resource. Must be between 12 hours and 5 minutes.
                                 type: string
                             required:
@@ -1095,9 +940,8 @@ spec:
                             description: 'ScaleAction: the parameters for the scaling action.'
                             properties:
                               cooldown:
-                                description: >-
+                                description: |-
                                   Cooldown: the amount of time to wait since the last scaling action before this action occurs. It must be between 1 week
-
                                   and 1 minute in ISO 8601 format.
                                 type: string
                               direction:
@@ -1116,9 +960,8 @@ spec:
                                 - ServiceAllowedNextValue
                                 type: string
                               value:
-                                description: >-
+                                description: |-
                                   Value: the number of instances that are involved in the scaling action. This value must be 1 or greater. The default
-
                                   value is 1.
                                 type: string
                             required:
@@ -1165,11 +1008,9 @@ spec:
               tags:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   Tags: Gets or sets a list of key value pairs that describe the resource. These tags can be used in viewing and grouping
-
                   this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no
-
                   greater in length than 128 characters and a value no greater in length than 256 characters.
                 type: object
               targetResourceLocation:
@@ -1203,35 +1044,25 @@ spec:
     name: v1api20221001storage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20221001.AutoscaleSetting
-
           Generator information:
-
           - Generated from: /monitor/resource-manager/Microsoft.Insights/stable/2022-10-01/autoscale_API.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Insights/autoscalesettings/{autoscaleSettingName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1242,15 +1073,13 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               enabled:
@@ -1261,31 +1090,27 @@ spec:
                 type: string
               notifications:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20221001.AutoscaleNotification
-
                     Autoscale notification.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     email:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.EmailNotification
-
                         Email notification of an autoscale event.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         customEmails:
@@ -1301,17 +1126,15 @@ spec:
                       type: string
                     webhooks:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20221001.WebhookNotification
-
                           Webhook notification of an autoscale event.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
@@ -1325,48 +1148,39 @@ spec:
                   type: object
                 type: array
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20221001.AutoscaleSettingOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1376,33 +1190,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1414,11 +1221,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a resources.azure.com/ResourceGroup resource
                 properties:
                   armId:
@@ -1429,17 +1234,15 @@ spec:
                     type: string
                 type: object
               predictiveAutoscalePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20221001.PredictiveAutoscalePolicy
-
                   The parameters for enabling predictive autoscale.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   scaleLookAheadTime:
@@ -1449,31 +1252,27 @@ spec:
                 type: object
               profiles:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20221001.AutoscaleProfile
-
                     Autoscale profile.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     capacity:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.ScaleCapacity
-
                         The number of instances that can be used during this profile.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         default:
@@ -1484,17 +1283,15 @@ spec:
                           type: string
                       type: object
                     fixedDate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.TimeWindow
-
                         A specific date-time for the profile.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         end:
@@ -1507,33 +1304,29 @@ spec:
                     name:
                       type: string
                     recurrence:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.Recurrence
-
                         The repeating times at which this profile begins. This element is not used if the FixedDate element is used.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         frequency:
                           type: string
                         schedule:
-                          description: >-
+                          description: |-
                             Storage version of v1api20221001.RecurrentSchedule
-
                             The scheduling constraints for when the profile begins.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             days:
@@ -1554,46 +1347,40 @@ spec:
                       type: object
                     rules:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20221001.ScaleRule
-
                           A rule that provide the triggers and parameters for the scaling action.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           metricTrigger:
-                            description: >-
+                            description: |-
                               Storage version of v1api20221001.MetricTrigger
-
                               The trigger that results in a scaling action.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               dimensions:
                                 items:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20221001.ScaleRuleMetricDimension
-
                                     Specifies an auto scale rule metric dimension.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     DimensionName:
@@ -1618,11 +1405,9 @@ spec:
                                 description: 'MetricResourceUriReference: the resource identifier of the resource the rule monitors.'
                                 properties:
                                   armId:
-                                    description: >-
+                                    description: |-
                                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                                     type: string
@@ -1652,17 +1437,15 @@ spec:
                             - metricResourceUriReference
                             type: object
                           scaleAction:
-                            description: >-
+                            description: |-
                               Storage version of v1api20221001.ScaleAction
-
                               The parameters for the scaling action.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               cooldown:
@@ -1688,11 +1471,9 @@ spec:
                 description: 'TargetResourceUriReference: the resource identifier of the resource that the autoscale setting should be added to.'
                 properties:
                   armId:
-                    description: >-
+                    description: |-
                       ARMID is a string of the form /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}.
-
                       The /resourcegroups/{resourceGroupName} bit is optional as some resources are scoped at the subscription level
-
                       ARMID is mutually exclusive with Group, Kind, Namespace and Name.
                     pattern: (?i)(^(/subscriptions/([^/]+)(/resourcegroups/([^/]+))?)?/providers/([^/]+)/([^/]+/[^/]+)(/([^/]+/[^/]+))*$|^/subscriptions/([^/]+)(/resourcegroups/([^/]+))?$)
                     type: string
@@ -1715,9 +1496,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -1732,28 +1512,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1779,31 +1553,27 @@ spec:
                 type: string
               notifications:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20221001.AutoscaleNotification_STATUS
-
                     Autoscale notification.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     email:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.EmailNotification_STATUS
-
                         Email notification of an autoscale event.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         customEmails:
@@ -1819,17 +1589,15 @@ spec:
                       type: string
                     webhooks:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20221001.WebhookNotification_STATUS
-
                           Webhook notification of an autoscale event.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           properties:
@@ -1843,17 +1611,15 @@ spec:
                   type: object
                 type: array
               predictiveAutoscalePolicy:
-                description: >-
+                description: |-
                   Storage version of v1api20221001.PredictiveAutoscalePolicy_STATUS
-
                   The parameters for enabling predictive autoscale.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   scaleLookAheadTime:
@@ -1863,31 +1629,27 @@ spec:
                 type: object
               profiles:
                 items:
-                  description: >-
+                  description: |-
                     Storage version of v1api20221001.AutoscaleProfile_STATUS
-
                     Autoscale profile.
                   properties:
                     $propertyBag:
                       additionalProperties:
                         type: string
-                      description: >-
+                      description: |-
                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                         resources, allowing for full fidelity round trip conversions
                       type: object
                     capacity:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.ScaleCapacity_STATUS
-
                         The number of instances that can be used during this profile.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         default:
@@ -1898,17 +1660,15 @@ spec:
                           type: string
                       type: object
                     fixedDate:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.TimeWindow_STATUS
-
                         A specific date-time for the profile.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         end:
@@ -1921,33 +1681,29 @@ spec:
                     name:
                       type: string
                     recurrence:
-                      description: >-
+                      description: |-
                         Storage version of v1api20221001.Recurrence_STATUS
-
                         The repeating times at which this profile begins. This element is not used if the FixedDate element is used.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         frequency:
                           type: string
                         schedule:
-                          description: >-
+                          description: |-
                             Storage version of v1api20221001.RecurrentSchedule_STATUS
-
                             The scheduling constraints for when the profile begins.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             days:
@@ -1968,46 +1724,40 @@ spec:
                       type: object
                     rules:
                       items:
-                        description: >-
+                        description: |-
                           Storage version of v1api20221001.ScaleRule_STATUS
-
                           A rule that provide the triggers and parameters for the scaling action.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           metricTrigger:
-                            description: >-
+                            description: |-
                               Storage version of v1api20221001.MetricTrigger_STATUS
-
                               The trigger that results in a scaling action.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               dimensions:
                                 items:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20221001.ScaleRuleMetricDimension_STATUS
-
                                     Specifies an auto scale rule metric dimension.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     DimensionName:
@@ -2044,17 +1794,15 @@ spec:
                                 type: string
                             type: object
                           scaleAction:
-                            description: >-
+                            description: |-
                               Storage version of v1api20221001.ScaleAction_STATUS
-
                               The parameters for the scaling action.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               cooldown:
@@ -2073,17 +1821,15 @@ spec:
               properties_name:
                 type: string
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20221001.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:

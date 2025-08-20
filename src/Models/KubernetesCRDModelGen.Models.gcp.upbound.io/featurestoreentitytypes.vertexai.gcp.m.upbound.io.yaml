@@ -36,25 +36,18 @@ spec:
         description: FeaturestoreEntitytype is the Schema for the FeaturestoreEntitytypes API. An entity type is a type of object in a system that needs to be modeled and have stored information about.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -84,26 +77,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -117,9 +104,8 @@ spec:
                     description: Selector for a Featurestore in vertexai to populate featurestore.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -135,26 +121,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -169,17 +149,14 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   monitoringConfig:
-                    description: >-
+                    description: |-
                       The default monitoring configuration for all Features under this EntityType.
-
                       If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
-
                       Structure is documented below.
                     properties:
                       categoricalThresholdConfig:
-                        description: >-
+                        description: |-
                           Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING).
-
                           Structure is documented below.
                         properties:
                           value:
@@ -187,9 +164,8 @@ spec:
                             type: number
                         type: object
                       importFeaturesAnalysis:
-                        description: >-
+                        description: |-
                           The config for ImportFeatures Analysis Based Feature Monitoring.
-
                           Structure is documented below.
                         properties:
                           anomalyDetectionBaseline:
@@ -200,9 +176,8 @@ spec:
                             type: string
                         type: object
                       numericalThresholdConfig:
-                        description: >-
+                        description: |-
                           Threshold for numerical features of anomaly detection. This is shared by all objectives of Featurestore Monitoring for numerical features (i.e. Features with type (Feature.ValueType) DOUBLE or INT64).
-
                           Structure is documented below.
                         properties:
                           value:
@@ -210,18 +185,16 @@ spec:
                             type: number
                         type: object
                       snapshotAnalysis:
-                        description: >-
+                        description: |-
                           The config for Snapshot Analysis Based Feature Monitoring.
-
                           Structure is documented below.
                         properties:
                           disabled:
                             description: 'The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.'
                             type: boolean
                           monitoringIntervalDays:
-                            description: >-
+                            description: |-
                               Configuration of the snapshot analysis based monitoring pipeline running interval. The value indicates number of days. The default value is 1.
-
                               If both FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days and [FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval][] are set when creating/updating EntityTypes/Features, FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days will be used.
                             type: number
                           stalenessDays:
@@ -234,25 +207,16 @@ spec:
                     type: string
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   description:
@@ -275,26 +239,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -308,9 +266,8 @@ spec:
                     description: Selector for a Featurestore in vertexai to populate featurestore.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -326,26 +283,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -360,17 +311,14 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   monitoringConfig:
-                    description: >-
+                    description: |-
                       The default monitoring configuration for all Features under this EntityType.
-
                       If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
-
                       Structure is documented below.
                     properties:
                       categoricalThresholdConfig:
-                        description: >-
+                        description: |-
                           Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING).
-
                           Structure is documented below.
                         properties:
                           value:
@@ -378,9 +326,8 @@ spec:
                             type: number
                         type: object
                       importFeaturesAnalysis:
-                        description: >-
+                        description: |-
                           The config for ImportFeatures Analysis Based Feature Monitoring.
-
                           Structure is documented below.
                         properties:
                           anomalyDetectionBaseline:
@@ -391,9 +338,8 @@ spec:
                             type: string
                         type: object
                       numericalThresholdConfig:
-                        description: >-
+                        description: |-
                           Threshold for numerical features of anomaly detection. This is shared by all objectives of Featurestore Monitoring for numerical features (i.e. Features with type (Feature.ValueType) DOUBLE or INT64).
-
                           Structure is documented below.
                         properties:
                           value:
@@ -401,18 +347,16 @@ spec:
                             type: number
                         type: object
                       snapshotAnalysis:
-                        description: >-
+                        description: |-
                           The config for Snapshot Analysis Based Feature Monitoring.
-
                           Structure is documented below.
                         properties:
                           disabled:
                             description: 'The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.'
                             type: boolean
                           monitoringIntervalDays:
-                            description: >-
+                            description: |-
                               Configuration of the snapshot analysis based monitoring pipeline running interval. The value indicates number of days. The default value is 1.
-
                               If both FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days and [FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval][] are set when creating/updating EntityTypes/Features, FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days will be used.
                             type: number
                           stalenessDays:
@@ -427,22 +371,16 @@ spec:
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -457,11 +395,9 @@ spec:
                 default:
                   kind: ClusterProviderConfig
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   kind:
@@ -475,13 +411,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -526,17 +459,14 @@ spec:
                     type: object
                     x-kubernetes-map-type: granular
                   monitoringConfig:
-                    description: >-
+                    description: |-
                       The default monitoring configuration for all Features under this EntityType.
-
                       If this is populated with [FeaturestoreMonitoringConfig.monitoring_interval] specified, snapshot analysis monitoring is enabled. Otherwise, snapshot analysis monitoring is disabled.
-
                       Structure is documented below.
                     properties:
                       categoricalThresholdConfig:
-                        description: >-
+                        description: |-
                           Threshold for categorical features of anomaly detection. This is shared by all types of Featurestore Monitoring for categorical features (i.e. Features with type (Feature.ValueType) BOOL or STRING).
-
                           Structure is documented below.
                         properties:
                           value:
@@ -544,9 +474,8 @@ spec:
                             type: number
                         type: object
                       importFeaturesAnalysis:
-                        description: >-
+                        description: |-
                           The config for ImportFeatures Analysis Based Feature Monitoring.
-
                           Structure is documented below.
                         properties:
                           anomalyDetectionBaseline:
@@ -557,9 +486,8 @@ spec:
                             type: string
                         type: object
                       numericalThresholdConfig:
-                        description: >-
+                        description: |-
                           Threshold for numerical features of anomaly detection. This is shared by all objectives of Featurestore Monitoring for numerical features (i.e. Features with type (Feature.ValueType) DOUBLE or INT64).
-
                           Structure is documented below.
                         properties:
                           value:
@@ -567,18 +495,16 @@ spec:
                             type: number
                         type: object
                       snapshotAnalysis:
-                        description: >-
+                        description: |-
                           The config for Snapshot Analysis Based Feature Monitoring.
-
                           Structure is documented below.
                         properties:
                           disabled:
                             description: 'The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.'
                             type: boolean
                           monitoringIntervalDays:
-                            description: >-
+                            description: |-
                               Configuration of the snapshot analysis based monitoring pipeline running interval. The value indicates number of days. The default value is 1.
-
                               If both FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days and [FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval][] are set when creating/updating EntityTypes/Features, FeaturestoreMonitoringConfig.SnapshotAnalysis.monitoring_interval_days will be used.
                             type: number
                           stalenessDays:
@@ -594,9 +520,8 @@ spec:
                   terraformLabels:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       The combination of labels configured directly on the resource
-
                       and default labels configured on the provider.
                     type: object
                     x-kubernetes-map-type: granular
@@ -610,24 +535,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -638,9 +559,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -654,11 +574,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

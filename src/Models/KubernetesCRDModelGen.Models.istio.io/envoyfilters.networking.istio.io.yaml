@@ -34,9 +34,8 @@ spec:
                 items:
                   properties:
                     applyTo:
-                      description: >-
+                      description: |-
                         Specifies where in the Envoy configuration, the patch should be applied.
-
 
                         Valid Options: LISTENER, FILTER_CHAIN, NETWORK_FILTER, HTTP_FILTER, ROUTE_CONFIGURATION, VIRTUAL_HOST, HTTP_ROUTE, CLUSTER, EXTENSION_CONFIG, BOOTSTRAP, LISTENER_FILTER
                       enum:
@@ -90,9 +89,8 @@ spec:
                               type: string
                           type: object
                         context:
-                          description: >-
+                          description: |-
                             The specific config generation context to match on.
-
 
                             Valid Options: ANY, SIDECAR_INBOUND, SIDECAR_OUTBOUND, GATEWAY
                           enum:
@@ -195,9 +193,8 @@ spec:
                                   description: Match a specific route within the virtual host.
                                   properties:
                                     action:
-                                      description: >-
+                                      description: |-
                                         Match a route with specific action type.
-
 
                                         Valid Options: ANY, ROUTE, REDIRECT, DIRECT_RESPONSE
                                       enum:
@@ -217,9 +214,8 @@ spec:
                       description: The patch to apply along with the operation.
                       properties:
                         filterClass:
-                          description: >-
+                          description: |-
                             Determines the filter insertion order.
-
 
                             Valid Options: AUTHN, AUTHZ, STATS
                           enum:
@@ -229,9 +225,8 @@ spec:
                           - STATS
                           type: string
                         operation:
-                          description: >-
+                          description: |-
                             Determines how the patch should be applied.
-
 
                             Valid Options: MERGE, ADD, REMOVE, INSERT_BEFORE, INSERT_AFTER, INSERT_FIRST, REPLACE
                           enum:
@@ -352,9 +347,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

@@ -3,10 +3,9 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
+    cnrm.cloud.google.com/system: "true"
   name: iapsettings.iap.cnrm.cloud.google.com
 spec:
   group: iap.cnrm.cloud.google.com
@@ -196,7 +195,7 @@ spec:
                         description: Whether the provided attribute propagation settings should be evaluated on user requests. If set to true, attributes returned from the expression will be propagated in the set output credentials.
                         type: boolean
                       expression:
-                        description: >-
+                        description: |-
                           Raw string CEL expression. Must return a list of attributes. A maximum of
                            45 attributes can be selected. Expressions can select different attribute
                            types from `attributes`: `attributes.saml_attributes`,
@@ -638,7 +637,7 @@ spec:
                         description: Whether the provided attribute propagation settings should be evaluated on user requests. If set to true, attributes returned from the expression will be propagated in the set output credentials.
                         type: boolean
                       expression:
-                        description: >-
+                        description: |-
                           Raw string CEL expression. Must return a list of attributes. A maximum of
                            45 attributes can be selected. Expressions can select different attribute
                            types from `attributes`: `attributes.saml_attributes`,
@@ -907,7 +906,5 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
-  conditions: 
-  storedVersions: 
+    kind: ""
+    plural: ""

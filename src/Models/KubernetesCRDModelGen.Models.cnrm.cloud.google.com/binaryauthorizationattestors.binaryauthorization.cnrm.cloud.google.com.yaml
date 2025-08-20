@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: binaryauthorizationattestors.binaryauthorization.cnrm.cloud.google.com
 spec:
   group: binaryauthorization.cnrm.cloud.google.com
@@ -74,9 +73,8 @@ spec:
                   - external
                 properties:
                   external:
-                    description: >-
+                    description: |-
                       The project for the resource
-
 
                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                     type: string
@@ -111,9 +109,8 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           Required. The Drydock resource name of a Attestation. Authority Note, created by the user, in the format: `projects/*/notes/*`. This field may not be updated. An attestation by this attestor is stored as a Grafeas Attestation. Authority Occurrence that names a container image and that links to this Note. Grafeas is an external dependency.
-
 
                           Allowed value: The Google Cloud resource name of a `ContainerAnalysisNote` resource (format: `projects/{{project}}/notes/{{name}}`).
                         type: string
@@ -201,7 +198,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

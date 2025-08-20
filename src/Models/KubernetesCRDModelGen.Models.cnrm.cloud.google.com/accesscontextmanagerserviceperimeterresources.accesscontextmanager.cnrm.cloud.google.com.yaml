@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
-    cnrm.cloud.google.com/tf2crd: true
+    cnrm.cloud.google.com/system: "true"
+    cnrm.cloud.google.com/tf2crd: "true"
   name: accesscontextmanagerserviceperimeterresources.accesscontextmanager.cnrm.cloud.google.com
 spec:
   group: accesscontextmanager.cnrm.cloud.google.com
@@ -54,12 +53,10 @@ spec:
           spec:
             properties:
               perimeterNameRef:
-                description: >-
+                description: |-
                   Only the `external` field is supported to configure the reference.
 
-
                   The name of the Service Perimeter to add this resource to. 
-
                   Referencing a resource name leads to recursive reference and Config Connector does not support the feature for now.
                 oneOf:
                 - not:
@@ -182,12 +179,10 @@ spec:
           spec:
             properties:
               perimeterNameRef:
-                description: >-
+                description: |-
                   Only the `external` field is supported to configure the reference.
 
-
                   The name of the Service Perimeter to add this resource to. 
-
                   Referencing a resource name leads to recursive reference and Config Connector does not support the feature for now.
                 oneOf:
                 - not:
@@ -281,7 +276,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

@@ -36,25 +36,18 @@ spec:
         description: DataTransferConfig is the Schema for the DataTransferConfigs API. Represents a data transfer configuration.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -64,19 +57,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -85,15 +72,11 @@ spec:
               forProvider:
                 properties:
                   dataRefreshWindowDays:
-                    description: >-
+                    description: |-
                       The number of days to look back to automatically refresh the data.
-
                       For example, if dataRefreshWindowDays = 10, then every day BigQuery
-
                       reingests data for [today-10, today-1], rather than ingesting data for
-
                       just [today-1]. Only valid if the data source supports the feature.
-
                       Set the value to 0 to use the default value.
                     type: number
                   dataSourceId:
@@ -113,26 +96,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -146,9 +123,8 @@ spec:
                     description: Selector for a Dataset in bigquery to populate destinationDatasetId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -161,26 +137,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -195,11 +165,9 @@ spec:
                     description: The user specified display name for the transfer config.
                     type: string
                   emailPreferences:
-                    description: >-
+                    description: |-
                       Email notifications will be sent according to these preferences to the
-
                       email address of the user who owns this transfer config.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -209,9 +177,8 @@ spec:
                       type: object
                     type: array
                   encryptionConfiguration:
-                    description: >-
+                    description: |-
                       Represents the encryption configuration for a transfer.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -229,26 +196,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -262,9 +223,8 @@ spec:
                           description: Selector for a CryptoKey in kms to populate kmsKeyName.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -277,26 +237,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -307,111 +261,80 @@ spec:
                       type: object
                     type: array
                   location:
-                    description: >-
+                    description: |-
                       The geographic location where the transfer config should reside.
-
                       Examples: US, EU, asia-northeast1. The default value is US.
                     type: string
                   notificationPubsubTopic:
-                    description: >-
+                    description: |-
                       Pub/Sub topic where notifications will be sent after transfer runs
-
                       associated with this transfer config finish.
                     type: string
                   params:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
-
                       section for each data source. For example the parameters for Cloud Storage transfers are listed here:
-
                       https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
-
                       NOTE : If you are attempting to update a parameter that cannot be updated (due to api limitations) please force recreation of the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schedule:
-                    description: >-
+                    description: |-
                       Data transfer schedule. If the data source does not support a custom
-
                       schedule, this should be empty. If it is empty, the default value for
-
                       the data source will be used. The specified times are in UTC. Examples
-
                       of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
-
                       jun 13:15, and first sunday of quarter 00:00. See more explanation
-
                       about the format here:
-
                       https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
-
                       NOTE: the granularity should be at least 8 hours, or less frequent.
                     type: string
                   scheduleOptions:
-                    description: >-
+                    description: |-
                       Options customizing the data transfer schedule.
-
                       Structure is documented below.
                     items:
                       properties:
                         disableAutoScheduling:
-                          description: >-
+                          description: |-
                             If true, automatic scheduling of data transfer runs for this
-
                             configuration will be disabled. The runs can be started on ad-hoc
-
                             basis using transferConfigs.startManualRuns API. When automatic
-
                             scheduling is disabled, the TransferConfig.schedule field will
-
                             be ignored.
                           type: boolean
                         endTime:
-                          description: >-
+                          description: |-
                             Defines time to stop scheduling transfer runs. A transfer run cannot be
-
                             scheduled at or after the end time. The end time can be changed at any
-
                             moment. The time when a data transfer can be triggered manually is not
-
                             limited by this option.
                           type: string
                         startTime:
-                          description: >-
+                          description: |-
                             Specifies time to start scheduling transfer runs. The first run will be
-
                             scheduled at or after the start time according to a recurrence pattern
-
                             defined in the schedule string. The start time can be changed at any
-
                             moment. The time when a data transfer can be triggered manually is not
-
                             limited by this option.
                           type: string
                       type: object
                     type: array
                   sensitiveParams:
-                    description: >-
+                    description: |-
                       Different parameters are configured primarily using the the params field on this
-
                       resource. This block contains the parameters which contain secrets or passwords so that they can be marked
-
                       sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
-
                       in the params map in the api request.
-
                       Credentials may not be specified in both locations and will cause an error. Changing from one location
-
                       to a different credential configuration in the config will require an apply to update state.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -433,9 +356,8 @@ spec:
                           - namespace
                           type: object
                         secretAccessKeyWo:
-                          description: >-
+                          description: |-
                             The Secret Access Key of the AWS account transferring data from.
-
                             Note: This property is write-only and will not be read from the API.
                           type: string
                         secretAccessKeyWoVersion:
@@ -443,46 +365,31 @@ spec:
                       type: object
                     type: array
                   serviceAccountName:
-                    description: >-
+                    description: |-
                       Service account email. If this field is set, transfer config will
-
                       be created with this service account credentials. It requires that
-
                       requesting user calling this API has permissions to act as this service account.
                     type: string
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   dataRefreshWindowDays:
-                    description: >-
+                    description: |-
                       The number of days to look back to automatically refresh the data.
-
                       For example, if dataRefreshWindowDays = 10, then every day BigQuery
-
                       reingests data for [today-10, today-1], rather than ingesting data for
-
                       just [today-1]. Only valid if the data source supports the feature.
-
                       Set the value to 0 to use the default value.
                     type: number
                   dataSourceId:
@@ -502,26 +409,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -535,9 +436,8 @@ spec:
                     description: Selector for a Dataset in bigquery to populate destinationDatasetId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -550,26 +450,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -584,11 +478,9 @@ spec:
                     description: The user specified display name for the transfer config.
                     type: string
                   emailPreferences:
-                    description: >-
+                    description: |-
                       Email notifications will be sent according to these preferences to the
-
                       email address of the user who owns this transfer config.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -598,9 +490,8 @@ spec:
                       type: object
                     type: array
                   encryptionConfiguration:
-                    description: >-
+                    description: |-
                       Represents the encryption configuration for a transfer.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -618,26 +509,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -651,9 +536,8 @@ spec:
                           description: Selector for a CryptoKey in kms to populate kmsKeyName.
                           properties:
                             matchControllerRef:
-                              description: >-
+                              description: |-
                                 MatchControllerRef ensures an object with the same controller reference
-
                                 as the selecting object is selected.
                               type: boolean
                             matchLabels:
@@ -666,26 +550,20 @@ spec:
                               properties:
                                 resolution:
                                   default: Required
-                                  description: >-
+                                  description: |-
                                     Resolution specifies whether resolution of this reference is required.
-
                                     The default is 'Required', which means the reconcile will fail if the
-
                                     reference cannot be resolved. 'Optional' means this reference will be
-
                                     a no-op if it cannot be resolved.
                                   enum:
                                   - Required
                                   - Optional
                                   type: string
                                 resolve:
-                                  description: >-
+                                  description: |-
                                     Resolve specifies when this reference should be resolved. The default
-
                                     is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                     the corresponding field is not present. Use 'Always' to resolve the
-
                                     reference on every reconcile.
                                   enum:
                                   - Always
@@ -696,111 +574,80 @@ spec:
                       type: object
                     type: array
                   location:
-                    description: >-
+                    description: |-
                       The geographic location where the transfer config should reside.
-
                       Examples: US, EU, asia-northeast1. The default value is US.
                     type: string
                   notificationPubsubTopic:
-                    description: >-
+                    description: |-
                       Pub/Sub topic where notifications will be sent after transfer runs
-
                       associated with this transfer config finish.
                     type: string
                   params:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
-
                       section for each data source. For example the parameters for Cloud Storage transfers are listed here:
-
                       https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
-
                       NOTE : If you are attempting to update a parameter that cannot be updated (due to api limitations) please force recreation of the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schedule:
-                    description: >-
+                    description: |-
                       Data transfer schedule. If the data source does not support a custom
-
                       schedule, this should be empty. If it is empty, the default value for
-
                       the data source will be used. The specified times are in UTC. Examples
-
                       of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
-
                       jun 13:15, and first sunday of quarter 00:00. See more explanation
-
                       about the format here:
-
                       https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
-
                       NOTE: the granularity should be at least 8 hours, or less frequent.
                     type: string
                   scheduleOptions:
-                    description: >-
+                    description: |-
                       Options customizing the data transfer schedule.
-
                       Structure is documented below.
                     items:
                       properties:
                         disableAutoScheduling:
-                          description: >-
+                          description: |-
                             If true, automatic scheduling of data transfer runs for this
-
                             configuration will be disabled. The runs can be started on ad-hoc
-
                             basis using transferConfigs.startManualRuns API. When automatic
-
                             scheduling is disabled, the TransferConfig.schedule field will
-
                             be ignored.
                           type: boolean
                         endTime:
-                          description: >-
+                          description: |-
                             Defines time to stop scheduling transfer runs. A transfer run cannot be
-
                             scheduled at or after the end time. The end time can be changed at any
-
                             moment. The time when a data transfer can be triggered manually is not
-
                             limited by this option.
                           type: string
                         startTime:
-                          description: >-
+                          description: |-
                             Specifies time to start scheduling transfer runs. The first run will be
-
                             scheduled at or after the start time according to a recurrence pattern
-
                             defined in the schedule string. The start time can be changed at any
-
                             moment. The time when a data transfer can be triggered manually is not
-
                             limited by this option.
                           type: string
                       type: object
                     type: array
                   sensitiveParams:
-                    description: >-
+                    description: |-
                       Different parameters are configured primarily using the the params field on this
-
                       resource. This block contains the parameters which contain secrets or passwords so that they can be marked
-
                       sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
-
                       in the params map in the api request.
-
                       Credentials may not be specified in both locations and will cause an error. Changing from one location
-
                       to a different credential configuration in the config will require an apply to update state.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -822,9 +669,8 @@ spec:
                           - namespace
                           type: object
                         secretAccessKeyWo:
-                          description: >-
+                          description: |-
                             The Secret Access Key of the AWS account transferring data from.
-
                             Note: This property is write-only and will not be read from the API.
                           type: string
                         secretAccessKeyWoVersion:
@@ -832,41 +678,29 @@ spec:
                       type: object
                     type: array
                   serviceAccountName:
-                    description: >-
+                    description: |-
                       Service account email. If this field is set, transfer config will
-
                       be created with this service account credentials. It requires that
-
                       requesting user calling this API has permissions to act as this service account.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -880,11 +714,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -895,26 +727,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -925,13 +751,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -960,15 +783,11 @@ spec:
               atProvider:
                 properties:
                   dataRefreshWindowDays:
-                    description: >-
+                    description: |-
                       The number of days to look back to automatically refresh the data.
-
                       For example, if dataRefreshWindowDays = 10, then every day BigQuery
-
                       reingests data for [today-10, today-1], rather than ingesting data for
-
                       just [today-1]. Only valid if the data source supports the feature.
-
                       Set the value to 0 to use the default value.
                     type: number
                   dataSourceId:
@@ -984,11 +803,9 @@ spec:
                     description: The user specified display name for the transfer config.
                     type: string
                   emailPreferences:
-                    description: >-
+                    description: |-
                       Email notifications will be sent according to these preferences to the
-
                       email address of the user who owns this transfer config.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -998,9 +815,8 @@ spec:
                       type: object
                     type: array
                   encryptionConfiguration:
-                    description: >-
+                    description: |-
                       Represents the encryption configuration for a transfer.
-
                       Structure is documented below.
                     items:
                       properties:
@@ -1013,130 +829,94 @@ spec:
                     description: an identifier for the resource with format {{name}}
                     type: string
                   location:
-                    description: >-
+                    description: |-
                       The geographic location where the transfer config should reside.
-
                       Examples: US, EU, asia-northeast1. The default value is US.
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       The resource name of the transfer config. Transfer config names have the
-
                       form projects/{projectId}/locations/{location}/transferConfigs/{configId}
-
                       or projects/{projectId}/transferConfigs/{configId},
-
                       where configId is usually a uuid, but this is not required.
-
                       The name is ignored when creating a transfer config.
                     type: string
                   notificationPubsubTopic:
-                    description: >-
+                    description: |-
                       Pub/Sub topic where notifications will be sent after transfer runs
-
                       associated with this transfer config finish.
                     type: string
                   params:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
-
                       section for each data source. For example the parameters for Cloud Storage transfers are listed here:
-
                       https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
-
                       NOTE : If you are attempting to update a parameter that cannot be updated (due to api limitations) please force recreation of the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schedule:
-                    description: >-
+                    description: |-
                       Data transfer schedule. If the data source does not support a custom
-
                       schedule, this should be empty. If it is empty, the default value for
-
                       the data source will be used. The specified times are in UTC. Examples
-
                       of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
-
                       jun 13:15, and first sunday of quarter 00:00. See more explanation
-
                       about the format here:
-
                       https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
-
                       NOTE: the granularity should be at least 8 hours, or less frequent.
                     type: string
                   scheduleOptions:
-                    description: >-
+                    description: |-
                       Options customizing the data transfer schedule.
-
                       Structure is documented below.
                     items:
                       properties:
                         disableAutoScheduling:
-                          description: >-
+                          description: |-
                             If true, automatic scheduling of data transfer runs for this
-
                             configuration will be disabled. The runs can be started on ad-hoc
-
                             basis using transferConfigs.startManualRuns API. When automatic
-
                             scheduling is disabled, the TransferConfig.schedule field will
-
                             be ignored.
                           type: boolean
                         endTime:
-                          description: >-
+                          description: |-
                             Defines time to stop scheduling transfer runs. A transfer run cannot be
-
                             scheduled at or after the end time. The end time can be changed at any
-
                             moment. The time when a data transfer can be triggered manually is not
-
                             limited by this option.
                           type: string
                         startTime:
-                          description: >-
+                          description: |-
                             Specifies time to start scheduling transfer runs. The first run will be
-
                             scheduled at or after the start time according to a recurrence pattern
-
                             defined in the schedule string. The start time can be changed at any
-
                             moment. The time when a data transfer can be triggered manually is not
-
                             limited by this option.
                           type: string
                       type: object
                     type: array
                   sensitiveParams:
-                    description: >-
+                    description: |-
                       Different parameters are configured primarily using the the params field on this
-
                       resource. This block contains the parameters which contain secrets or passwords so that they can be marked
-
                       sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
-
                       in the params map in the api request.
-
                       Credentials may not be specified in both locations and will cause an error. Changing from one location
-
                       to a different credential configuration in the config will require an apply to update state.
-
                       Structure is documented below.
                     items:
                       properties:
                         secretAccessKeyWo:
-                          description: >-
+                          description: |-
                             The Secret Access Key of the AWS account transferring data from.
-
                             Note: This property is write-only and will not be read from the API.
                           type: string
                         secretAccessKeyWoVersion:
@@ -1144,11 +924,9 @@ spec:
                       type: object
                     type: array
                   serviceAccountName:
-                    description: >-
+                    description: |-
                       Service account email. If this field is set, transfer config will
-
                       be created with this service account credentials. It requires that
-
                       requesting user calling this API has permissions to act as this service account.
                     type: string
                 type: object
@@ -1158,24 +936,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -1186,9 +960,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -1202,11 +975,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer
@@ -1237,25 +1008,18 @@ spec:
         description: DataTransferConfig is the Schema for the DataTransferConfigs API. Represents a data transfer configuration.
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -1265,19 +1029,13 @@ spec:
             properties:
               deletionPolicy:
                 default: Delete
-                description: >-
+                description: |-
                   DeletionPolicy specifies what will happen to the underlying external
-
                   when this managed resource is deleted - either "Delete" or "Orphan" the
-
                   external resource.
-
                   This field is planned to be deprecated in favor of the ManagementPolicies
-
                   field in a future release. Currently, both could be set independently and
-
                   non-default values would be honored if the feature flag is enabled.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
                 enum:
                 - Orphan
@@ -1286,15 +1044,11 @@ spec:
               forProvider:
                 properties:
                   dataRefreshWindowDays:
-                    description: >-
+                    description: |-
                       The number of days to look back to automatically refresh the data.
-
                       For example, if dataRefreshWindowDays = 10, then every day BigQuery
-
                       reingests data for [today-10, today-1], rather than ingesting data for
-
                       just [today-1]. Only valid if the data source supports the feature.
-
                       Set the value to 0 to use the default value.
                     type: number
                   dataSourceId:
@@ -1314,26 +1068,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1347,9 +1095,8 @@ spec:
                     description: Selector for a Dataset in bigquery to populate destinationDatasetId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1362,26 +1109,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1396,11 +1137,9 @@ spec:
                     description: The user specified display name for the transfer config.
                     type: string
                   emailPreferences:
-                    description: >-
+                    description: |-
                       Email notifications will be sent according to these preferences to the
-
                       email address of the user who owns this transfer config.
-
                       Structure is documented below.
                     properties:
                       enableFailureEmail:
@@ -1408,9 +1147,8 @@ spec:
                         type: boolean
                     type: object
                   encryptionConfiguration:
-                    description: >-
+                    description: |-
                       Represents the encryption configuration for a transfer.
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
@@ -1427,26 +1165,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1460,9 +1192,8 @@ spec:
                         description: Selector for a CryptoKey in kms to populate kmsKeyName.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1475,26 +1206,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1504,111 +1229,79 @@ spec:
                         type: object
                     type: object
                   location:
-                    description: >-
+                    description: |-
                       The geographic location where the transfer config should reside.
-
                       Examples: US, EU, asia-northeast1. The default value is US.
                     type: string
                   notificationPubsubTopic:
-                    description: >-
+                    description: |-
                       Pub/Sub topic where notifications will be sent after transfer runs
-
                       associated with this transfer config finish.
                     type: string
                   params:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
-
                       section for each data source. For example the parameters for Cloud Storage transfers are listed here:
-
                       https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
-
                       NOTE : If you are attempting to update a parameter that cannot be updated (due to api limitations) please force recreation of the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schedule:
-                    description: >-
+                    description: |-
                       Data transfer schedule. If the data source does not support a custom
-
                       schedule, this should be empty. If it is empty, the default value for
-
                       the data source will be used. The specified times are in UTC. Examples
-
                       of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
-
                       jun 13:15, and first sunday of quarter 00:00. See more explanation
-
                       about the format here:
-
                       https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
-
                       NOTE: The minimum interval time between recurring transfers depends
-
                       on the data source; refer to the documentation for your data source.
                     type: string
                   scheduleOptions:
-                    description: >-
+                    description: |-
                       Options customizing the data transfer schedule.
-
                       Structure is documented below.
                     properties:
                       disableAutoScheduling:
-                        description: >-
+                        description: |-
                           If true, automatic scheduling of data transfer runs for this
-
                           configuration will be disabled. The runs can be started on ad-hoc
-
                           basis using transferConfigs.startManualRuns API. When automatic
-
                           scheduling is disabled, the TransferConfig.schedule field will
-
                           be ignored.
                         type: boolean
                       endTime:
-                        description: >-
+                        description: |-
                           Defines time to stop scheduling transfer runs. A transfer run cannot be
-
                           scheduled at or after the end time. The end time can be changed at any
-
                           moment. The time when a data transfer can be triggered manually is not
-
                           limited by this option.
                         type: string
                       startTime:
-                        description: >-
+                        description: |-
                           Specifies time to start scheduling transfer runs. The first run will be
-
                           scheduled at or after the start time according to a recurrence pattern
-
                           defined in the schedule string. The start time can be changed at any
-
                           moment. The time when a data transfer can be triggered manually is not
-
                           limited by this option.
                         type: string
                     type: object
                   sensitiveParams:
-                    description: >-
+                    description: |-
                       Different parameters are configured primarily using the the params field on this
-
                       resource. This block contains the parameters which contain secrets or passwords so that they can be marked
-
                       sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
-
                       in the params map in the api request.
-
                       Credentials may not be specified in both locations and will cause an error. Changing from one location
-
                       to a different credential configuration in the config will require an apply to update state.
-
                       Structure is documented below.
                     properties:
                       secretAccessKeySecretRef:
@@ -1629,55 +1322,39 @@ spec:
                         - namespace
                         type: object
                       secretAccessKeyWo:
-                        description: >-
+                        description: |-
                           The Secret Access Key of the AWS account transferring data from.
-
                           Note: This property is write-only and will not be read from the API.
                         type: string
                       secretAccessKeyWoVersion:
                         type: number
                     type: object
                   serviceAccountName:
-                    description: >-
+                    description: |-
                       Service account email. If this field is set, transfer config will
-
                       be created with this service account credentials. It requires that
-
                       requesting user calling this API has permissions to act as this service account.
                     type: string
                 type: object
               initProvider:
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It will be honored
-
                   unless the Management Policies feature flag is disabled.
-
                   InitProvider holds the same fields as ForProvider, with the exception
-
                   of Identifier and other resource reference fields. The fields that are
-
                   in InitProvider are merged into ForProvider when the resource is created.
-
                   The same fields are also added to the terraform ignore_changes hook, to
-
                   avoid updating them after creation. This is useful for fields that are
-
                   required on creation, but we do not desire to update them after creation,
-
                   for example because of an external controller is managing them, like an
-
                   autoscaler.
                 properties:
                   dataRefreshWindowDays:
-                    description: >-
+                    description: |-
                       The number of days to look back to automatically refresh the data.
-
                       For example, if dataRefreshWindowDays = 10, then every day BigQuery
-
                       reingests data for [today-10, today-1], rather than ingesting data for
-
                       just [today-1]. Only valid if the data source supports the feature.
-
                       Set the value to 0 to use the default value.
                     type: number
                   dataSourceId:
@@ -1697,26 +1374,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1730,9 +1401,8 @@ spec:
                     description: Selector for a Dataset in bigquery to populate destinationDatasetId.
                     properties:
                       matchControllerRef:
-                        description: >-
+                        description: |-
                           MatchControllerRef ensures an object with the same controller reference
-
                           as the selecting object is selected.
                         type: boolean
                       matchLabels:
@@ -1745,26 +1415,20 @@ spec:
                         properties:
                           resolution:
                             default: Required
-                            description: >-
+                            description: |-
                               Resolution specifies whether resolution of this reference is required.
-
                               The default is 'Required', which means the reconcile will fail if the
-
                               reference cannot be resolved. 'Optional' means this reference will be
-
                               a no-op if it cannot be resolved.
                             enum:
                             - Required
                             - Optional
                             type: string
                           resolve:
-                            description: >-
+                            description: |-
                               Resolve specifies when this reference should be resolved. The default
-
                               is 'IfNotPresent', which will attempt to resolve the reference only when
-
                               the corresponding field is not present. Use 'Always' to resolve the
-
                               reference on every reconcile.
                             enum:
                             - Always
@@ -1779,11 +1443,9 @@ spec:
                     description: The user specified display name for the transfer config.
                     type: string
                   emailPreferences:
-                    description: >-
+                    description: |-
                       Email notifications will be sent according to these preferences to the
-
                       email address of the user who owns this transfer config.
-
                       Structure is documented below.
                     properties:
                       enableFailureEmail:
@@ -1791,9 +1453,8 @@ spec:
                         type: boolean
                     type: object
                   encryptionConfiguration:
-                    description: >-
+                    description: |-
                       Represents the encryption configuration for a transfer.
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
@@ -1810,26 +1471,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1843,9 +1498,8 @@ spec:
                         description: Selector for a CryptoKey in kms to populate kmsKeyName.
                         properties:
                           matchControllerRef:
-                            description: >-
+                            description: |-
                               MatchControllerRef ensures an object with the same controller reference
-
                               as the selecting object is selected.
                             type: boolean
                           matchLabels:
@@ -1858,26 +1512,20 @@ spec:
                             properties:
                               resolution:
                                 default: Required
-                                description: >-
+                                description: |-
                                   Resolution specifies whether resolution of this reference is required.
-
                                   The default is 'Required', which means the reconcile will fail if the
-
                                   reference cannot be resolved. 'Optional' means this reference will be
-
                                   a no-op if it cannot be resolved.
                                 enum:
                                 - Required
                                 - Optional
                                 type: string
                               resolve:
-                                description: >-
+                                description: |-
                                   Resolve specifies when this reference should be resolved. The default
-
                                   is 'IfNotPresent', which will attempt to resolve the reference only when
-
                                   the corresponding field is not present. Use 'Always' to resolve the
-
                                   reference on every reconcile.
                                 enum:
                                 - Always
@@ -1887,111 +1535,79 @@ spec:
                         type: object
                     type: object
                   location:
-                    description: >-
+                    description: |-
                       The geographic location where the transfer config should reside.
-
                       Examples: US, EU, asia-northeast1. The default value is US.
                     type: string
                   notificationPubsubTopic:
-                    description: >-
+                    description: |-
                       Pub/Sub topic where notifications will be sent after transfer runs
-
                       associated with this transfer config finish.
                     type: string
                   params:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
-
                       section for each data source. For example the parameters for Cloud Storage transfers are listed here:
-
                       https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
-
                       NOTE : If you are attempting to update a parameter that cannot be updated (due to api limitations) please force recreation of the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schedule:
-                    description: >-
+                    description: |-
                       Data transfer schedule. If the data source does not support a custom
-
                       schedule, this should be empty. If it is empty, the default value for
-
                       the data source will be used. The specified times are in UTC. Examples
-
                       of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
-
                       jun 13:15, and first sunday of quarter 00:00. See more explanation
-
                       about the format here:
-
                       https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
-
                       NOTE: The minimum interval time between recurring transfers depends
-
                       on the data source; refer to the documentation for your data source.
                     type: string
                   scheduleOptions:
-                    description: >-
+                    description: |-
                       Options customizing the data transfer schedule.
-
                       Structure is documented below.
                     properties:
                       disableAutoScheduling:
-                        description: >-
+                        description: |-
                           If true, automatic scheduling of data transfer runs for this
-
                           configuration will be disabled. The runs can be started on ad-hoc
-
                           basis using transferConfigs.startManualRuns API. When automatic
-
                           scheduling is disabled, the TransferConfig.schedule field will
-
                           be ignored.
                         type: boolean
                       endTime:
-                        description: >-
+                        description: |-
                           Defines time to stop scheduling transfer runs. A transfer run cannot be
-
                           scheduled at or after the end time. The end time can be changed at any
-
                           moment. The time when a data transfer can be triggered manually is not
-
                           limited by this option.
                         type: string
                       startTime:
-                        description: >-
+                        description: |-
                           Specifies time to start scheduling transfer runs. The first run will be
-
                           scheduled at or after the start time according to a recurrence pattern
-
                           defined in the schedule string. The start time can be changed at any
-
                           moment. The time when a data transfer can be triggered manually is not
-
                           limited by this option.
                         type: string
                     type: object
                   sensitiveParams:
-                    description: >-
+                    description: |-
                       Different parameters are configured primarily using the the params field on this
-
                       resource. This block contains the parameters which contain secrets or passwords so that they can be marked
-
                       sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
-
                       in the params map in the api request.
-
                       Credentials may not be specified in both locations and will cause an error. Changing from one location
-
                       to a different credential configuration in the config will require an apply to update state.
-
                       Structure is documented below.
                     properties:
                       secretAccessKeySecretRef:
@@ -2012,50 +1628,37 @@ spec:
                         - namespace
                         type: object
                       secretAccessKeyWo:
-                        description: >-
+                        description: |-
                           The Secret Access Key of the AWS account transferring data from.
-
                           Note: This property is write-only and will not be read from the API.
                         type: string
                       secretAccessKeyWoVersion:
                         type: number
                     type: object
                   serviceAccountName:
-                    description: >-
+                    description: |-
                       Service account email. If this field is set, transfer config will
-
                       be created with this service account credentials. It requires that
-
                       requesting user calling this API has permissions to act as this service account.
                     type: string
                 type: object
               managementPolicies:
                 default:
                 - '*'
-                description: >-
+                description: |-
                   THIS IS A BETA FIELD. It is on by default but can be opted out
-
                   through a Crossplane feature flag.
-
                   ManagementPolicies specify the array of actions Crossplane is allowed to
-
                   take on the managed and external resources.
-
                   This field is planned to replace the DeletionPolicy field in a future
-
                   release. Currently, both could be set independently and non-default
-
                   values would be honored if the feature flag is enabled. If both are
-
                   custom, the DeletionPolicy field will be ignored.
-
                   See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
-
                   and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
                 items:
-                  description: >-
+                  description: |-
                     A ManagementAction represents an action that the Crossplane controllers
-
                     can take on an external resource.
                   enum:
                   - Observe
@@ -2069,11 +1672,9 @@ spec:
               providerConfigRef:
                 default:
                   name: default
-                description: >-
+                description: |-
                   ProviderConfigReference specifies how the provider that will be used to
-
                   create, observe, update, and delete this managed resource should be
-
                   configured.
                 properties:
                   name:
@@ -2084,26 +1685,20 @@ spec:
                     properties:
                       resolution:
                         default: Required
-                        description: >-
+                        description: |-
                           Resolution specifies whether resolution of this reference is required.
-
                           The default is 'Required', which means the reconcile will fail if the
-
                           reference cannot be resolved. 'Optional' means this reference will be
-
                           a no-op if it cannot be resolved.
                         enum:
                         - Required
                         - Optional
                         type: string
                       resolve:
-                        description: >-
+                        description: |-
                           Resolve specifies when this reference should be resolved. The default
-
                           is 'IfNotPresent', which will attempt to resolve the reference only when
-
                           the corresponding field is not present. Use 'Always' to resolve the
-
                           reference on every reconcile.
                         enum:
                         - Always
@@ -2114,13 +1709,10 @@ spec:
                 - name
                 type: object
               writeConnectionSecretToRef:
-                description: >-
+                description: |-
                   WriteConnectionSecretToReference specifies the namespace and name of a
-
                   Secret to which any connection details for this managed resource should
-
                   be written. Connection details frequently include the endpoint, username,
-
                   and password required to connect to the managed resource.
                 properties:
                   name:
@@ -2149,15 +1741,11 @@ spec:
               atProvider:
                 properties:
                   dataRefreshWindowDays:
-                    description: >-
+                    description: |-
                       The number of days to look back to automatically refresh the data.
-
                       For example, if dataRefreshWindowDays = 10, then every day BigQuery
-
                       reingests data for [today-10, today-1], rather than ingesting data for
-
                       just [today-1]. Only valid if the data source supports the feature.
-
                       Set the value to 0 to use the default value.
                     type: number
                   dataSourceId:
@@ -2173,11 +1761,9 @@ spec:
                     description: The user specified display name for the transfer config.
                     type: string
                   emailPreferences:
-                    description: >-
+                    description: |-
                       Email notifications will be sent according to these preferences to the
-
                       email address of the user who owns this transfer config.
-
                       Structure is documented below.
                     properties:
                       enableFailureEmail:
@@ -2185,9 +1771,8 @@ spec:
                         type: boolean
                     type: object
                   encryptionConfiguration:
-                    description: >-
+                    description: |-
                       Represents the encryption configuration for a transfer.
-
                       Structure is documented below.
                     properties:
                       kmsKeyName:
@@ -2198,140 +1783,101 @@ spec:
                     description: an identifier for the resource with format {{name}}
                     type: string
                   location:
-                    description: >-
+                    description: |-
                       The geographic location where the transfer config should reside.
-
                       Examples: US, EU, asia-northeast1. The default value is US.
                     type: string
                   name:
-                    description: >-
+                    description: |-
                       The resource name of the transfer config. Transfer config names have the
-
                       form projects/{projectId}/locations/{location}/transferConfigs/{configId}
-
                       or projects/{projectId}/transferConfigs/{configId},
-
                       where configId is usually a uuid, but this is not required.
-
                       The name is ignored when creating a transfer config.
                     type: string
                   notificationPubsubTopic:
-                    description: >-
+                    description: |-
                       Pub/Sub topic where notifications will be sent after transfer runs
-
                       associated with this transfer config finish.
                     type: string
                   params:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       Parameters specific to each data source. For more information see the bq tab in the 'Setting up a data transfer'
-
                       section for each data source. For example the parameters for Cloud Storage transfers are listed here:
-
                       https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
-
                       NOTE : If you are attempting to update a parameter that cannot be updated (due to api limitations) please force recreation of the resource.
                     type: object
                     x-kubernetes-map-type: granular
                   project:
-                    description: >-
+                    description: |-
                       The ID of the project in which the resource belongs.
-
                       If it is not provided, the provider project is used.
                     type: string
                   schedule:
-                    description: >-
+                    description: |-
                       Data transfer schedule. If the data source does not support a custom
-
                       schedule, this should be empty. If it is empty, the default value for
-
                       the data source will be used. The specified times are in UTC. Examples
-
                       of valid format: 1st,3rd monday of month 15:30, every wed,fri of jan,
-
                       jun 13:15, and first sunday of quarter 00:00. See more explanation
-
                       about the format here:
-
                       https://cloud.google.com/appengine/docs/flexible/python/scheduling-jobs-with-cron-yaml#the_schedule_format
-
                       NOTE: The minimum interval time between recurring transfers depends
-
                       on the data source; refer to the documentation for your data source.
                     type: string
                   scheduleOptions:
-                    description: >-
+                    description: |-
                       Options customizing the data transfer schedule.
-
                       Structure is documented below.
                     properties:
                       disableAutoScheduling:
-                        description: >-
+                        description: |-
                           If true, automatic scheduling of data transfer runs for this
-
                           configuration will be disabled. The runs can be started on ad-hoc
-
                           basis using transferConfigs.startManualRuns API. When automatic
-
                           scheduling is disabled, the TransferConfig.schedule field will
-
                           be ignored.
                         type: boolean
                       endTime:
-                        description: >-
+                        description: |-
                           Defines time to stop scheduling transfer runs. A transfer run cannot be
-
                           scheduled at or after the end time. The end time can be changed at any
-
                           moment. The time when a data transfer can be triggered manually is not
-
                           limited by this option.
                         type: string
                       startTime:
-                        description: >-
+                        description: |-
                           Specifies time to start scheduling transfer runs. The first run will be
-
                           scheduled at or after the start time according to a recurrence pattern
-
                           defined in the schedule string. The start time can be changed at any
-
                           moment. The time when a data transfer can be triggered manually is not
-
                           limited by this option.
                         type: string
                     type: object
                   sensitiveParams:
-                    description: >-
+                    description: |-
                       Different parameters are configured primarily using the the params field on this
-
                       resource. This block contains the parameters which contain secrets or passwords so that they can be marked
-
                       sensitive and hidden from plan output. The name of the field, eg: secret_access_key, will be the key
-
                       in the params map in the api request.
-
                       Credentials may not be specified in both locations and will cause an error. Changing from one location
-
                       to a different credential configuration in the config will require an apply to update state.
-
                       Structure is documented below.
                     properties:
                       secretAccessKeyWo:
-                        description: >-
+                        description: |-
                           The Secret Access Key of the AWS account transferring data from.
-
                           Note: This property is write-only and will not be read from the API.
                         type: string
                       secretAccessKeyWoVersion:
                         type: number
                     type: object
                   serviceAccountName:
-                    description: >-
+                    description: |-
                       Service account email. If this field is set, transfer config will
-
                       be created with this service account credentials. It requires that
-
                       requesting user calling this API has permissions to act as this service account.
                     type: string
                 type: object
@@ -2341,24 +1887,20 @@ spec:
                   description: A Condition that may apply to a resource.
                   properties:
                     lastTransitionTime:
-                      description: >-
+                      description: |-
                         LastTransitionTime is the last time this condition transitioned from one
-
                         status to another.
                       format: date-time
                       type: string
                     message:
-                      description: >-
+                      description: |-
                         A Message containing details about this condition's last transition from
-
                         one status to another, if any.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration represents the .metadata.generation that the condition was set based upon.
-
                         For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
@@ -2369,9 +1911,8 @@ spec:
                       description: Status of this condition; is it currently True, False, or Unknown?
                       type: string
                     type:
-                      description: >-
+                      description: |-
                         Type of this condition. At most one of each condition type may apply to
-
                         a resource at any point in time.
                       type: string
                   required:
@@ -2385,11 +1926,9 @@ spec:
                 - type
                 x-kubernetes-list-type: map
               observedGeneration:
-                description: >-
+                description: |-
                   ObservedGeneration is the latest metadata.generation
-
                   which resulted in either a ready state, or stalled due to error
-
                   it can not recover from without human intervention.
                 format: int64
                 type: integer

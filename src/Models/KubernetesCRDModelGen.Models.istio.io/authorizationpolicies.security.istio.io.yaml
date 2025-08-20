@@ -48,9 +48,8 @@ spec:
               - provider
             properties:
               action:
-                description: >-
+                description: |-
                   Optional.
-
 
                   Valid Options: ALLOW, DENY, AUDIT, CUSTOM
                 enum:
@@ -144,9 +143,8 @@ spec:
                             type: object
                             x-kubernetes-validations:
                             - message: Cannot set serviceAccounts with namespaces or principals
-                              rule: >-
+                              rule: |-
                                 (has(self.serviceAccounts) || has(self.notServiceAccounts)) ? (!has(self.principals) &&
-
                                 !has(self.notPrincipals) && !has(self.namespaces) && !has(self.notNamespaces)) : true
                         type: object
                       maxItems: 512
@@ -355,9 +353,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:
@@ -408,9 +405,8 @@ spec:
               - provider
             properties:
               action:
-                description: >-
+                description: |-
                   Optional.
-
 
                   Valid Options: ALLOW, DENY, AUDIT, CUSTOM
                 enum:
@@ -504,9 +500,8 @@ spec:
                             type: object
                             x-kubernetes-validations:
                             - message: Cannot set serviceAccounts with namespaces or principals
-                              rule: >-
+                              rule: |-
                                 (has(self.serviceAccounts) || has(self.notServiceAccounts)) ? (!has(self.principals) &&
-
                                 !has(self.notPrincipals) && !has(self.namespaces) && !has(self.notNamespaces)) : true
                         type: object
                       maxItems: 512
@@ -715,9 +710,8 @@ spec:
                       description: A url pointing to the Istio documentation for this specific error type.
                       type: string
                     level:
-                      description: >-
+                      description: |-
                         Represents how severe a message is.
-
 
                         Valid Options: UNKNOWN, ERROR, WARNING, INFO
                       enum:

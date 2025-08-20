@@ -45,33 +45,24 @@ spec:
     name: v1api20230315preview
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Generator information:
-
           - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -79,18 +70,16 @@ spec:
           spec:
             properties:
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 maxLength: 50
                 minLength: 1
                 pattern: ^[a-z0-9]([-a-z0-9]*[a-z0-9])?$
                 type: string
               managedClusterUpdate:
-                description: >-
+                description: |-
                   ManagedClusterUpdate: The update to be applied to all clusters in the UpdateRun. The managedClusterUpdate can be
-
                   modified until the run is started.
                 properties:
                   upgrade:
@@ -112,41 +101,33 @@ spec:
                 - upgrade
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   OperatorSpec: The specification for configuring operator behavior. This field is interpreted by the operator and not
-
                   passed directly to Azure
                 properties:
                   configMapExpressions:
                     description: 'ConfigMapExpressions: configures where to place operator written dynamic ConfigMaps (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -157,33 +138,26 @@ spec:
                   secretExpressions:
                     description: 'SecretExpressions: configures where to place operator written dynamic secrets (created with CEL expressions).'
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -193,11 +167,9 @@ spec:
                     type: array
                 type: object
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a containerservice.azure.com/Fleet resource
                 properties:
                   armId:
@@ -208,27 +180,22 @@ spec:
                     type: string
                 type: object
               strategy:
-                description: >-
+                description: |-
                   Strategy: The strategy defines the order in which the clusters will be updated.
-
                   If not set, all members will be updated sequentially. The UpdateRun status will show a single UpdateStage and a single
-
                   UpdateGroup targeting all members.
-
                   The strategy of the UpdateRun can be modified until the run is started.
                 properties:
                   stages:
                     description: 'Stages: The list of stages that compose this update run. Min size: 1.'
                     items:
-                      description: >-
+                      description: |-
                         Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting
-
                         the next stage.
                       properties:
                         afterStageWaitInSeconds:
-                          description: >-
+                          description: |-
                             AfterStageWaitInSeconds: The time in seconds to wait at the end of this stage before starting the next one. Defaults to
-
                             0 seconds if unspecified.
                           type: integer
                         groups:
@@ -237,9 +204,8 @@ spec:
                             description: A group to be updated.
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name: Name of the group.
-
                                   It must match a group name of an existing fleet member.
                                 maxLength: 50
                                 minLength: 1
@@ -281,28 +247,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -319,25 +279,20 @@ spec:
                   type: object
                 type: array
               eTag:
-                description: >-
+                description: |-
                   ETag: If eTag is provided in the response body, it may also be provided as a header per the normal etag convention.
-
                   Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in
-
                   the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header
-
                   fields.
                 type: string
               id:
-                description: >-
+                description: |-
                   Id: Fully qualified resource ID for the resource. Ex -
-
                   /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
                 type: string
               managedClusterUpdate:
-                description: >-
+                description: |-
                   ManagedClusterUpdate: The update to be applied to all clusters in the UpdateRun. The managedClusterUpdate can be
-
                   modified until the run is started.
                 properties:
                   upgrade:
@@ -760,27 +715,22 @@ spec:
                     type: object
                 type: object
               strategy:
-                description: >-
+                description: |-
                   Strategy: The strategy defines the order in which the clusters will be updated.
-
                   If not set, all members will be updated sequentially. The UpdateRun status will show a single UpdateStage and a single
-
                   UpdateGroup targeting all members.
-
                   The strategy of the UpdateRun can be modified until the run is started.
                 properties:
                   stages:
                     description: 'Stages: The list of stages that compose this update run. Min size: 1.'
                     items:
-                      description: >-
+                      description: |-
                         Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting
-
                         the next stage.
                       properties:
                         afterStageWaitInSeconds:
-                          description: >-
+                          description: |-
                             AfterStageWaitInSeconds: The time in seconds to wait at the end of this stage before starting the next one. Defaults to
-
                             0 seconds if unspecified.
                           type: integer
                         groups:
@@ -789,9 +739,8 @@ spec:
                             description: A group to be updated.
                             properties:
                               name:
-                                description: >-
+                                description: |-
                                   Name: Name of the group.
-
                                   It must match a group name of an existing fleet member.
                                 type: string
                             type: object
@@ -849,35 +798,25 @@ spec:
     name: v1api20230315previewstorage
     schema:
       openAPIV3Schema:
-        description: >-
+        description: |-
           Storage version of v1api20230315preview.FleetsUpdateRun
-
           Generator information:
-
           - Generated from: /containerservice/resource-manager/Microsoft.ContainerService/fleet/preview/2023-03-15-preview/fleets.json
-
           - ARM URI: /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ContainerService/fleets/{fleetName}/updateRuns/{updateRunName}
         properties:
           apiVersion:
-            description: >-
+            description: |-
               APIVersion defines the versioned schema of this representation of an object.
-
               Servers should convert recognized schemas to the latest internal value, and
-
               may reject unrecognized values.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
             type: string
           kind:
-            description: >-
+            description: |-
               Kind is a string value representing the REST resource this object represents.
-
               Servers may infer this from the endpoint the client submits requests to.
-
               Cannot be updated.
-
               In CamelCase.
-
               More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
             type: string
           metadata:
@@ -888,43 +827,37 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               azureName:
-                description: >-
+                description: |-
                   AzureName: The name of the resource in Azure. This is often the same as the name of the resource in Kubernetes but it
-
                   doesn't have to be.
                 type: string
               managedClusterUpdate:
-                description: >-
+                description: |-
                   Storage version of v1api20230315preview.ManagedClusterUpdate
-
                   The update to be applied to the ManagedClusters.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   upgrade:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230315preview.ManagedClusterUpgradeSpec
-
                       The upgrade to apply to a ManagedCluster.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kubernetesVersion:
@@ -934,48 +867,39 @@ spec:
                     type: object
                 type: object
               operatorSpec:
-                description: >-
+                description: |-
                   Storage version of v1api20230315preview.FleetsUpdateRunOperatorSpec
-
                   Details for configuring operator behavior. Fields in this struct are interpreted by the operator directly rather than being passed to Azure
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   configMapExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -985,33 +909,26 @@ spec:
                     type: array
                   secretExpressions:
                     items:
-                      description: >-
+                      description: |-
                         DestinationExpression is a CEL expression and a destination to store the result in. The destination may
-
                         be a secret or a configmap. The value of the expression is stored at the specified location in
-
                         the destination.
                       properties:
                         key:
-                          description: >-
+                          description: |-
                             Key is the key in the ConfigMap or Secret being written to. If the CEL expression in Value returns a string
-
                             this is required to identify what key to write to. If the CEL expression in Value returns a map[string]string
-
                             Key must not be set, instead the keys written will be determined dynamically based on the keys of the resulting
-
                             map[string]string.
                           type: string
                         name:
-                          description: >-
+                          description: |-
                             Name is the name of the Kubernetes configmap or secret to write to.
-
                             The configmap or secret will be created in the same namespace as the resource.
                           type: string
                         value:
-                          description: >-
+                          description: |-
                             Value is a CEL expression. The CEL expression may return a string or a map[string]string. For more information
-
                             on CEL in ASO see https://azure.github.io/azure-service-operator/guide/expressions/
                           type: string
                       required:
@@ -1023,11 +940,9 @@ spec:
               originalVersion:
                 type: string
               owner:
-                description: >-
+                description: |-
                   Owner: The owner of the resource. The owner controls where the resource goes when it is deployed. The owner also
-
                   controls the resources lifecycle. When the owner is deleted the resource will also be deleted. Owner is expected to be a
-
                   reference to a containerservice.azure.com/Fleet resource
                 properties:
                   armId:
@@ -1038,63 +953,50 @@ spec:
                     type: string
                 type: object
               strategy:
-                description: >-
+                description: |-
                   Storage version of v1api20230315preview.UpdateRunStrategy
-
                   Defines the update sequence of the clusters via stages and groups.
-
                   Stages within a run are executed sequentially one
-
                   after another.
-
                   Groups within a stage are executed in parallel.
-
                   Member clusters within a group are updated sequentially
-
                   one after another.
-
                   A valid strategy contains no duplicate groups within or across stages.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   stages:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230315preview.UpdateStage
-
                         Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting
-
                         the next stage.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         afterStageWaitInSeconds:
                           type: integer
                         groups:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230315preview.UpdateGroup
-
                               A group to be updated.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
@@ -1115,9 +1017,8 @@ spec:
               $propertyBag:
                 additionalProperties:
                   type: string
-                description: >-
+                description: |-
                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                   resources, allowing for full fidelity round trip conversions
                 type: object
               conditions:
@@ -1132,28 +1033,22 @@ spec:
                       description: Message is a human readable message indicating details about the transition. This field may be empty.
                       type: string
                     observedGeneration:
-                      description: >-
+                      description: |-
                         ObservedGeneration is the .metadata.generation that the condition was set based upon. For instance, if
-
                         .metadata.generation is currently 12, but the .status.condition[x].observedGeneration is 9, the condition is out of date
-
                         with respect to the current state of the instance.
                       format: int64
                       type: integer
                     reason:
-                      description: >-
+                      description: |-
                         Reason for the condition's last transition.
-
                         Reasons are upper CamelCase (PascalCase) with no spaces. A reason is always provided, this field will not be empty.
                       type: string
                     severity:
-                      description: >-
+                      description: |-
                         Severity with which to treat failures of this type of condition.
-
                         For conditions which have positive polarity (Status == True is their normal/healthy state), this will be omitted when Status == True
-
                         For conditions which have negative polarity (Status == False is their normal/healthy state), this will be omitted when Status == False.
-
                         This is omitted in all cases when Status == Unknown
                       type: string
                     status:
@@ -1174,31 +1069,27 @@ spec:
               id:
                 type: string
               managedClusterUpdate:
-                description: >-
+                description: |-
                   Storage version of v1api20230315preview.ManagedClusterUpdate_STATUS
-
                   The update to be applied to the ManagedClusters.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   upgrade:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230315preview.ManagedClusterUpgradeSpec_STATUS
-
                       The upgrade to apply to a ManagedCluster.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       kubernetesVersion:
@@ -1212,91 +1103,79 @@ spec:
               provisioningState:
                 type: string
               status:
-                description: >-
+                description: |-
                   Storage version of v1api20230315preview.UpdateRunStatus_STATUS
-
                   The status of a UpdateRun.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   stages:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230315preview.UpdateStageStatus_STATUS
-
                         The status of a UpdateStage.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         afterStageWaitStatus:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230315preview.WaitStatus_STATUS
-
                             The status of the wait duration.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             status:
-                              description: >-
+                              description: |-
                                 Storage version of v1api20230315preview.UpdateStatus_STATUS
-
                                 The status for an operation or group of operations.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 completedTime:
                                   type: string
                                 error:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20230315preview.ErrorDetail_STATUS
-
                                     The error detail.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     additionalInfo:
                                       items:
-                                        description: >-
+                                        description: |-
                                           Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                           The resource management error additional info.
                                         properties:
                                           $propertyBag:
                                             additionalProperties:
                                               type: string
-                                            description: >-
+                                            description: |-
                                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                               resources, allowing for full fidelity round trip conversions
                                             type: object
                                           info:
@@ -1316,24 +1195,21 @@ spec:
                                           $propertyBag:
                                             additionalProperties:
                                               type: string
-                                            description: >-
+                                            description: |-
                                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                               resources, allowing for full fidelity round trip conversions
                                             type: object
                                           additionalInfo:
                                             items:
-                                              description: >-
+                                              description: |-
                                                 Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                                 The resource management error additional info.
                                               properties:
                                                 $propertyBag:
                                                   additionalProperties:
                                                     type: string
-                                                  description: >-
+                                                  description: |-
                                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                     resources, allowing for full fidelity round trip conversions
                                                   type: object
                                                 info:
@@ -1367,32 +1243,28 @@ spec:
                           type: object
                         groups:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230315preview.UpdateGroupStatus_STATUS
-
                               The status of a UpdateGroup.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               members:
                                 items:
-                                  description: >-
+                                  description: |-
                                     Storage version of v1api20230315preview.MemberUpdateStatus_STATUS
-
                                     The status of a member update operation.
                                   properties:
                                     $propertyBag:
                                       additionalProperties:
                                         type: string
-                                      description: >-
+                                      description: |-
                                         PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                         resources, allowing for full fidelity round trip conversions
                                       type: object
                                     clusterResourceId:
@@ -1402,48 +1274,42 @@ spec:
                                     operationId:
                                       type: string
                                     status:
-                                      description: >-
+                                      description: |-
                                         Storage version of v1api20230315preview.UpdateStatus_STATUS
-
                                         The status for an operation or group of operations.
                                       properties:
                                         $propertyBag:
                                           additionalProperties:
                                             type: string
-                                          description: >-
+                                          description: |-
                                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                             resources, allowing for full fidelity round trip conversions
                                           type: object
                                         completedTime:
                                           type: string
                                         error:
-                                          description: >-
+                                          description: |-
                                             Storage version of v1api20230315preview.ErrorDetail_STATUS
-
                                             The error detail.
                                           properties:
                                             $propertyBag:
                                               additionalProperties:
                                                 type: string
-                                              description: >-
+                                              description: |-
                                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                 resources, allowing for full fidelity round trip conversions
                                               type: object
                                             additionalInfo:
                                               items:
-                                                description: >-
+                                                description: |-
                                                   Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                                   The resource management error additional info.
                                                 properties:
                                                   $propertyBag:
                                                     additionalProperties:
                                                       type: string
-                                                    description: >-
+                                                    description: |-
                                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                       resources, allowing for full fidelity round trip conversions
                                                     type: object
                                                   info:
@@ -1463,24 +1329,21 @@ spec:
                                                   $propertyBag:
                                                     additionalProperties:
                                                       type: string
-                                                    description: >-
+                                                    description: |-
                                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                       resources, allowing for full fidelity round trip conversions
                                                     type: object
                                                   additionalInfo:
                                                     items:
-                                                      description: >-
+                                                      description: |-
                                                         Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                                         The resource management error additional info.
                                                       properties:
                                                         $propertyBag:
                                                           additionalProperties:
                                                             type: string
-                                                          description: >-
+                                                          description: |-
                                                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                             resources, allowing for full fidelity round trip conversions
                                                           type: object
                                                         info:
@@ -1514,48 +1377,42 @@ spec:
                               name:
                                 type: string
                               status:
-                                description: >-
+                                description: |-
                                   Storage version of v1api20230315preview.UpdateStatus_STATUS
-
                                   The status for an operation or group of operations.
                                 properties:
                                   $propertyBag:
                                     additionalProperties:
                                       type: string
-                                    description: >-
+                                    description: |-
                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                       resources, allowing for full fidelity round trip conversions
                                     type: object
                                   completedTime:
                                     type: string
                                   error:
-                                    description: >-
+                                    description: |-
                                       Storage version of v1api20230315preview.ErrorDetail_STATUS
-
                                       The error detail.
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: >-
+                                        description: |-
                                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                           resources, allowing for full fidelity round trip conversions
                                         type: object
                                       additionalInfo:
                                         items:
-                                          description: >-
+                                          description: |-
                                             Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                             The resource management error additional info.
                                           properties:
                                             $propertyBag:
                                               additionalProperties:
                                                 type: string
-                                              description: >-
+                                              description: |-
                                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                 resources, allowing for full fidelity round trip conversions
                                               type: object
                                             info:
@@ -1575,24 +1432,21 @@ spec:
                                             $propertyBag:
                                               additionalProperties:
                                                 type: string
-                                              description: >-
+                                              description: |-
                                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                 resources, allowing for full fidelity round trip conversions
                                               type: object
                                             additionalInfo:
                                               items:
-                                                description: >-
+                                                description: |-
                                                   Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                                   The resource management error additional info.
                                                 properties:
                                                   $propertyBag:
                                                     additionalProperties:
                                                       type: string
-                                                    description: >-
+                                                    description: |-
                                                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                       resources, allowing for full fidelity round trip conversions
                                                     type: object
                                                   info:
@@ -1626,48 +1480,42 @@ spec:
                         name:
                           type: string
                         status:
-                          description: >-
+                          description: |-
                             Storage version of v1api20230315preview.UpdateStatus_STATUS
-
                             The status for an operation or group of operations.
                           properties:
                             $propertyBag:
                               additionalProperties:
                                 type: string
-                              description: >-
+                              description: |-
                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                 resources, allowing for full fidelity round trip conversions
                               type: object
                             completedTime:
                               type: string
                             error:
-                              description: >-
+                              description: |-
                                 Storage version of v1api20230315preview.ErrorDetail_STATUS
-
                                 The error detail.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 additionalInfo:
                                   items:
-                                    description: >-
+                                    description: |-
                                       Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                       The resource management error additional info.
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: >-
+                                        description: |-
                                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                           resources, allowing for full fidelity round trip conversions
                                         type: object
                                       info:
@@ -1687,24 +1535,21 @@ spec:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: >-
+                                        description: |-
                                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                           resources, allowing for full fidelity round trip conversions
                                         type: object
                                       additionalInfo:
                                         items:
-                                          description: >-
+                                          description: |-
                                             Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                             The resource management error additional info.
                                           properties:
                                             $propertyBag:
                                               additionalProperties:
                                                 type: string
-                                              description: >-
+                                              description: |-
                                                 PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                                 resources, allowing for full fidelity round trip conversions
                                               type: object
                                             info:
@@ -1736,48 +1581,42 @@ spec:
                       type: object
                     type: array
                   status:
-                    description: >-
+                    description: |-
                       Storage version of v1api20230315preview.UpdateStatus_STATUS
-
                       The status for an operation or group of operations.
                     properties:
                       $propertyBag:
                         additionalProperties:
                           type: string
-                        description: >-
+                        description: |-
                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                           resources, allowing for full fidelity round trip conversions
                         type: object
                       completedTime:
                         type: string
                       error:
-                        description: >-
+                        description: |-
                           Storage version of v1api20230315preview.ErrorDetail_STATUS
-
                           The error detail.
                         properties:
                           $propertyBag:
                             additionalProperties:
                               type: string
-                            description: >-
+                            description: |-
                               PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                               resources, allowing for full fidelity round trip conversions
                             type: object
                           additionalInfo:
                             items:
-                              description: >-
+                              description: |-
                                 Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                 The resource management error additional info.
                               properties:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 info:
@@ -1797,24 +1636,21 @@ spec:
                                 $propertyBag:
                                   additionalProperties:
                                     type: string
-                                  description: >-
+                                  description: |-
                                     PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                     resources, allowing for full fidelity round trip conversions
                                   type: object
                                 additionalInfo:
                                   items:
-                                    description: >-
+                                    description: |-
                                       Storage version of v1api20230315preview.ErrorAdditionalInfo_STATUS
-
                                       The resource management error additional info.
                                     properties:
                                       $propertyBag:
                                         additionalProperties:
                                           type: string
-                                        description: >-
+                                        description: |-
                                           PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                           resources, allowing for full fidelity round trip conversions
                                         type: object
                                       info:
@@ -1845,63 +1681,50 @@ spec:
                     type: object
                 type: object
               strategy:
-                description: >-
+                description: |-
                   Storage version of v1api20230315preview.UpdateRunStrategy_STATUS
-
                   Defines the update sequence of the clusters via stages and groups.
-
                   Stages within a run are executed sequentially one
-
                   after another.
-
                   Groups within a stage are executed in parallel.
-
                   Member clusters within a group are updated sequentially
-
                   one after another.
-
                   A valid strategy contains no duplicate groups within or across stages.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   stages:
                     items:
-                      description: >-
+                      description: |-
                         Storage version of v1api20230315preview.UpdateStage_STATUS
-
                         Defines a stage which contains the groups to update and the steps to take (e.g., wait for a time period) before starting
-
                         the next stage.
                       properties:
                         $propertyBag:
                           additionalProperties:
                             type: string
-                          description: >-
+                          description: |-
                             PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                             resources, allowing for full fidelity round trip conversions
                           type: object
                         afterStageWaitInSeconds:
                           type: integer
                         groups:
                           items:
-                            description: >-
+                            description: |-
                               Storage version of v1api20230315preview.UpdateGroup_STATUS
-
                               A group to be updated.
                             properties:
                               $propertyBag:
                                 additionalProperties:
                                   type: string
-                                description: >-
+                                description: |-
                                   PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                                   resources, allowing for full fidelity round trip conversions
                                 type: object
                               name:
@@ -1914,17 +1737,15 @@ spec:
                     type: array
                 type: object
               systemData:
-                description: >-
+                description: |-
                   Storage version of v1api20230315preview.SystemData_STATUS
-
                   Metadata pertaining to creation and last modification of the resource.
                 properties:
                   $propertyBag:
                     additionalProperties:
                       type: string
-                    description: >-
+                    description: |-
                       PropertyBag is an unordered set of stashed information that used for properties not directly supported by storage
-
                       resources, allowing for full fidelity round trip conversions
                     type: object
                   createdAt:

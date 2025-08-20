@@ -3,12 +3,11 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     cnrm.cloud.google.com/version: 1.132.1
-  creationTimestamp: 
   labels:
-    cnrm.cloud.google.com/dcl2crd: true
-    cnrm.cloud.google.com/managed-by-kcc: true
+    cnrm.cloud.google.com/dcl2crd: "true"
+    cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
-    cnrm.cloud.google.com/system: true
+    cnrm.cloud.google.com/system: "true"
   name: dlpjobtriggers.dlp.cnrm.cloud.google.com
 spec:
   group: dlp.cnrm.cloud.google.com
@@ -90,9 +89,8 @@ spec:
                                 - external
                               properties:
                                 external:
-                                  description: >-
+                                  description: |-
                                     Cloud Pub/Sub topic to send notifications to. The topic must have given publishing access rights to the DLP API service account executing the long running DlpJob sending the notifications. Format is projects/{project}/topics/{topic}.
-
 
                                     Allowed value: The Google Cloud resource name of a `PubSubTopic` resource (format: `projects/{{project}}/topics/{{name}}`).
                                   type: string
@@ -149,9 +147,8 @@ spec:
                                         - external
                                       properties:
                                         external:
-                                          description: >-
+                                          description: |-
                                             Dataset ID of the table.
-
 
                                             Allowed value: The Google Cloud resource name of a `BigQueryDataset` resource (format: `projects/{{project}}/datasets/{{name}}`).
                                           type: string
@@ -179,9 +176,8 @@ spec:
                                         - external
                                       properties:
                                         external:
-                                          description: >-
+                                          description: |-
                                             The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
-
 
                                             Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                                           type: string
@@ -209,9 +205,8 @@ spec:
                                         - external
                                       properties:
                                         external:
-                                          description: >-
+                                          description: |-
                                             Name of the table.
-
 
                                             Allowed value: The Google Cloud resource name of a `BigQueryTable` resource (format: `projects/{{project}}/datasets/{{dataset_id}}/tables/{{name}}`).
                                           type: string
@@ -353,9 +348,8 @@ spec:
                                     - external
                                   properties:
                                     external:
-                                      description: >-
+                                      description: |-
                                         Resource name of the requested `StoredInfoType`, for example `organizations/433245324/storedInfoTypes/432452342` or `projects/project-id/storedInfoTypes/432452342`.
-
 
                                         Allowed value: The Google Cloud resource name of a `DLPStoredInfoType` resource (format: `{{parent}}/storedInfoTypes/{{name}}`).
                                       type: string
@@ -560,9 +554,8 @@ spec:
                       - external
                     properties:
                       external:
-                        description: >-
+                        description: |-
                           If provided, will be used as the default for all values in InspectConfig. `inspect_config` will be merged into the values persisted as part of the template.
-
 
                           Allowed value: The Google Cloud resource name of a `DLPInspectTemplate` resource (format: `{{parent}}/inspectTemplates/{{name}}`).
                         type: string
@@ -637,9 +630,8 @@ spec:
                                   - external
                                 properties:
                                   external:
-                                    description: >-
+                                    description: |-
                                       Dataset ID of the table.
-
 
                                       Allowed value: The Google Cloud resource name of a `BigQueryDataset` resource (format: `projects/{{project}}/datasets/{{name}}`).
                                     type: string
@@ -667,9 +659,8 @@ spec:
                                   - external
                                 properties:
                                   external:
-                                    description: >-
+                                    description: |-
                                       The Google Cloud Platform project ID of the project containing the table. If omitted, project ID is inferred from the API call.
-
 
                                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                                     type: string
@@ -697,9 +688,8 @@ spec:
                                   - external
                                 properties:
                                   external:
-                                    description: >-
+                                    description: |-
                                       Name of the table.
-
 
                                       Allowed value: The Google Cloud resource name of a `BigQueryTable` resource (format: `projects/{{project}}/datasets/{{dataset_id}}/tables/{{name}}`).
                                     type: string
@@ -748,9 +738,8 @@ spec:
                                       - external
                                     properties:
                                       external:
-                                        description: >-
+                                        description: |-
                                           The name of a Cloud Storage bucket. Required.
-
 
                                           Allowed value: The Google Cloud resource name of a `StorageBucket` resource (format: `{{name}}`).
                                         type: string
@@ -824,9 +813,8 @@ spec:
                                   - external
                                 properties:
                                   external:
-                                    description: >-
+                                    description: |-
                                       The ID of the project to which the entities belong.
-
 
                                       Allowed value: The Google Cloud resource name of a `Project` resource (format: `projects/{{name}}`).
                                     type: string
@@ -1039,7 +1027,7 @@ spec:
       status: {}
 status:
   acceptedNames:
-    kind: ''
-    plural: ''
+    kind: ""
+    plural: ""
   conditions: []
   storedVersions: []

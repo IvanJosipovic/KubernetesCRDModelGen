@@ -2,43 +2,57 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   labels:
-    eventing.knative.dev/source: true
-    duck.knative.dev/source: true
-    knative.dev/crd-install: true
+    eventing.knative.dev/source: "true"
+    duck.knative.dev/source: "true"
+    knative.dev/crd-install: "true"
     app.kubernetes.io/version: 1.19.1
     app.kubernetes.io/name: knative-eventing
   name: integrationsources.sources.knative.dev
 spec:
   group: sources.knative.dev
+  names:
+    categories:
+    - all
+    - knative
+    - sources
+    kind: IntegrationSource
+    plural: integrationsources
+    singular: integrationsource
+  scope: Namespaced
   versions:
-  - name: v1alpha1
-    served: true
-    storage: true
-    subresources:
-      status: {}
+  - additionalPrinterColumns:
+    - jsonPath: .status.sinkUri
+      name: Sink
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: Ready
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].reason
+      name: Reason
+      type: string
+    name: v1alpha1
     schema:
       openAPIV3Schema:
         description: IntegrationSource is an event source that starts a container image which generates events under certain situations and sends messages to a sink URI
-        type: object
         properties:
           spec:
-            type: object
             properties:
               ceOverrides:
                 description: CloudEventOverrides defines overrides to control the output format and modifications of the event sent to the sink.
-                type: object
                 properties:
                   extensions:
                     description: Extensions specify what attribute are added or overridden on the outbound event. Each `Extensions` key-value pair are set on the event as an attribute extension independently.
                     type: object
                     x-kubernetes-preserve-unknown-fields: true
+                type: object
               sink:
                 description: Sink is a reference to an object that will resolve to a uri to use as the sink.
-                type: object
                 properties:
                   ref:
                     description: Ref points to an Addressable.
-                    type: object
                     properties:
                       apiVersion:
                         description: API version of the referent.
@@ -52,6 +66,7 @@ spec:
                       namespace:
                         description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/ This is optional field, it gets defaulted to the object holding it if left out.'
                         type: string
+                    type: object
                   uri:
                     description: URI can be an absolute URL(non-empty scheme and non-empty host) pointing to the target or a relative URI. Relative URIs will be resolved using the base URI retrieved from Ref.
                     type: string
@@ -61,225 +76,226 @@ spec:
                   audience:
                     description: Audience is the OIDC audience. This only needs to be set if the target is not an Addressable and thus the Audience can't be received from the target itself. If specified, it takes precedence over the target's Audience.
                     type: string
-              timer:
                 type: object
+              timer:
                 properties:
                   period:
-                    type: integer
-                    title: Period
-                    description: The interval (in milliseconds) to wait between producing the next message.
                     default: 1000
+                    description: The interval (in milliseconds) to wait between producing the next message.
+                    title: Period
+                    type: integer
                   message:
-                    type: string
-                    title: Message
                     description: The message to generate.
                     example: hello world
-                  contentType:
+                    title: Message
                     type: string
-                    title: Content Type
-                    description: The content type of the generated message.
+                  contentType:
                     default: text/plain
+                    description: The content type of the generated message.
+                    title: Content Type
+                    type: string
                   repeatCount:
-                    type: integer
-                    title: Repeat Count
                     description: Specifies a maximum limit of number of fires
-              aws:
+                    title: Repeat Count
+                    type: integer
                 type: object
+              aws:
                 properties:
                   s3:
-                    type: object
                     properties:
                       arn:
-                        type: string
-                        title: Bucket Name
                         description: The S3 Bucket name or Amazon Resource Name (ARN).
+                        title: Bucket Name
+                        type: string
                       deleteAfterRead:
-                        type: boolean
-                        title: Auto-delete Objects
-                        description: Specifies to delete objects after consuming them.
                         default: true
+                        description: Specifies to delete objects after consuming them.
+                        title: Auto-delete Objects
+                        type: boolean
                       moveAfterRead:
-                        type: boolean
-                        title: Move Objects After Delete
+                        default: false
                         description: Move objects from S3 bucket to a different bucket after they have been retrieved.
-                        default: false
-                      destinationBucket:
-                        type: string
-                        title: Destination Bucket
-                        description: Define the destination bucket where an object must be moved when moveAfterRead is set to true.
-                      destinationBucketPrefix:
-                        type: string
-                        title: Destination Bucket Prefix
-                        description: Define the destination bucket prefix to use when an object must be moved, and moveAfterRead is set to true.
-                      destinationBucketSuffix:
-                        type: string
-                        title: Destination Bucket Suffix
-                        description: Define the destination bucket suffix to use when an object must be moved, and moveAfterRead is set to true.
-                      region:
-                        type: string
-                        title: AWS Region
-                        description: The AWS region to access.
-                      autoCreateBucket:
+                        title: Move Objects After Delete
                         type: boolean
-                        title: Autocreate Bucket
-                        description: Specifies to automatically create the S3 bucket.
-                        default: false
-                      prefix:
+                      destinationBucket:
+                        description: Define the destination bucket where an object must be moved when moveAfterRead is set to true.
+                        title: Destination Bucket
                         type: string
-                        title: Prefix
+                      destinationBucketPrefix:
+                        description: Define the destination bucket prefix to use when an object must be moved, and moveAfterRead is set to true.
+                        title: Destination Bucket Prefix
+                        type: string
+                      destinationBucketSuffix:
+                        description: Define the destination bucket suffix to use when an object must be moved, and moveAfterRead is set to true.
+                        title: Destination Bucket Suffix
+                        type: string
+                      region:
+                        description: The AWS region to access.
+                        title: AWS Region
+                        type: string
+                      autoCreateBucket:
+                        default: false
+                        description: Specifies to automatically create the S3 bucket.
+                        title: Autocreate Bucket
+                        type: boolean
+                      prefix:
                         description: The AWS S3 bucket prefix to consider while searching.
                         example: folder/
-                      ignoreBody:
-                        type: boolean
-                        title: Ignore Body
-                        description: If true, the S3 Object body is ignored. Setting this to true overrides any behavior defined by the `includeBody` option. If false, the S3 object is put in the body.
-                        default: false
-                      uriEndpointOverride:
+                        title: Prefix
                         type: string
-                        title: Overwrite Endpoint URI
+                      ignoreBody:
+                        default: false
+                        description: If true, the S3 Object body is ignored. Setting this to true overrides any behavior defined by the `includeBody` option. If false, the S3 object is put in the body.
+                        title: Ignore Body
+                        type: boolean
+                      uriEndpointOverride:
                         description: The overriding endpoint URI. To use this option, you must also select the `overrideEndpoint` option.
+                        title: Overwrite Endpoint URI
+                        type: string
                       overrideEndpoint:
-                        type: boolean
-                        title: Endpoint Overwrite
+                        default: false
                         description: Select this option to override the endpoint URI. To use this option, you must also provide a URI for the `uriEndpointOverride` option.
-                        default: false
-                      forcePathStyle:
+                        title: Endpoint Overwrite
                         type: boolean
-                        title: Force Path Style
-                        description: Forces path style when accessing AWS S3 buckets.
+                      forcePathStyle:
                         default: false
+                        description: Forces path style when accessing AWS S3 buckets.
+                        title: Force Path Style
+                        type: boolean
                       delay:
-                        type: integer
-                        title: Delay
-                        description: The number of milliseconds before the next poll of the selected bucket.
                         default: 500
-                      maxMessagesPerPoll:
+                        description: The number of milliseconds before the next poll of the selected bucket.
+                        title: Delay
                         type: integer
-                        title: Max Messages Per Poll
-                        description: Gets the maximum number of messages as a limit to poll at each polling. Gets the maximum number of messages as a limit to poll at each polling. The default value is 10. Use 0 or a negative number to set it as unlimited.
+                      maxMessagesPerPoll:
                         default: 10
-                  sqs:
+                        description: Gets the maximum number of messages as a limit to poll at each polling. Gets the maximum number of messages as a limit to poll at each polling. The default value is 10. Use 0 or a negative number to set it as unlimited.
+                        title: Max Messages Per Poll
+                        type: integer
                     type: object
+                  sqs:
                     properties:
                       arn:
-                        type: string
-                        title: Queue Name
                         description: The SQS Queue Name or ARN
+                        title: Queue Name
+                        type: string
                       deleteAfterRead:
-                        type: boolean
-                        title: Auto-delete Messages
-                        description: Delete messages after consuming them
                         default: true
+                        description: Delete messages after consuming them
+                        title: Auto-delete Messages
+                        type: boolean
                       region:
-                        type: string
-                        title: AWS Region
                         description: The AWS region to access.
+                        title: AWS Region
+                        type: string
                       autoCreateQueue:
-                        type: boolean
-                        title: Autocreate Queue
+                        default: false
                         description: Setting the autocreation of the SQS queue.
-                        default: false
+                        title: Autocreate Queue
+                        type: boolean
                       host:
-                        type: string
-                        title: AWS Host
-                        description: The hostname of the Amazon AWS cloud.
                         default: amazonaws.com
+                        description: The hostname of the Amazon AWS cloud.
+                        title: AWS Host
+                        type: string
                       protocol:
-                        type: string
-                        title: Protocol
-                        description: The underlying protocol used to communicate with SQS
                         default: https
+                        description: The underlying protocol used to communicate with SQS
                         example: http or https
+                        title: Protocol
+                        type: string
                       queueURL:
-                        type: string
-                        title: Queue URL
                         description: The full SQS Queue URL (required if using KEDA)
-                      uriEndpointOverride:
+                        title: Queue URL
                         type: string
-                        title: Overwrite Endpoint URI
+                      uriEndpointOverride:
                         description: The overriding endpoint URI. To use this option, you must also select the `overrideEndpoint` option.
+                        title: Overwrite Endpoint URI
+                        type: string
                       overrideEndpoint:
-                        type: boolean
-                        title: Endpoint Overwrite
+                        default: false
                         description: Select this option to override the endpoint URI. To use this option, you must also provide a URI for the `uriEndpointOverride` option.
-                        default: false
-                      delay:
-                        type: integer
-                        title: Delay
-                        description: The number of milliseconds before the next poll of the selected stream
-                        default: 500
-                      greedy:
+                        title: Endpoint Overwrite
                         type: boolean
-                        title: Greedy Scheduler
-                        description: If greedy is enabled, then the polling will happen immediately again, if the previous run polled 1 or more messages.
+                      delay:
+                        default: 500
+                        description: The number of milliseconds before the next poll of the selected stream
+                        title: Delay
+                        type: integer
+                      greedy:
                         default: false
+                        description: If greedy is enabled, then the polling will happen immediately again, if the previous run polled 1 or more messages.
+                        title: Greedy Scheduler
+                        type: boolean
                       maxMessagesPerPoll:
-                        type: integer
-                        title: Max Messages Per Poll
-                        description: The maximum number of messages to return. Amazon SQS never returns more messages than this value (however, fewer messages might be returned). Valid values 1 to 10. Default 1.
                         default: 1
+                        description: The maximum number of messages to return. Amazon SQS never returns more messages than this value (however, fewer messages might be returned). Valid values 1 to 10. Default 1.
+                        title: Max Messages Per Poll
+                        type: integer
                       waitTimeSeconds:
-                        type: integer
-                        title: Wait Time Seconds
                         description: The duration (in seconds) for which the call waits for a message to arrive in the queue before returning. If a message is available, the call returns sooner than WaitTimeSeconds. If no messages are available and the wait time expires, the call does not return a message list.
-                      visibilityTimeout:
+                        title: Wait Time Seconds
                         type: integer
-                        title: Visibility Timeout
+                      visibilityTimeout:
                         description: The duration (in seconds) that the received messages are hidden from subsequent retrieve requests after being retrieved by a ReceiveMessage request.
-                  ddbStreams:
+                        title: Visibility Timeout
+                        type: integer
                     type: object
+                  ddbStreams:
                     properties:
                       table:
-                        type: string
-                        title: Table
                         description: The name of the DynamoDB table.
+                        title: Table
+                        type: string
                       region:
-                        type: string
-                        title: AWS Region
                         description: The AWS region to access.
+                        title: AWS Region
+                        type: string
                       streamIteratorType:
-                        type: string
-                        title: Stream Iterator Type
-                        description: Defines where in the DynamoDB stream to start getting records. There are two enums and the value can be one of FROM_LATEST and FROM_START. Note that using FROM_START can cause a significant delay before the stream has caught up to real-time.
                         default: FROM_LATEST
-                      uriEndpointOverride:
+                        description: Defines where in the DynamoDB stream to start getting records. There are two enums and the value can be one of FROM_LATEST and FROM_START. Note that using FROM_START can cause a significant delay before the stream has caught up to real-time.
+                        title: Stream Iterator Type
                         type: string
-                        title: Overwrite Endpoint URI
+                      uriEndpointOverride:
                         description: The overriding endpoint URI. To use this option, you must also select the `overrideEndpoint` option.
+                        title: Overwrite Endpoint URI
+                        type: string
                       overrideEndpoint:
-                        type: boolean
-                        title: Endpoint Overwrite
-                        description: Select this option to override the endpoint URI. To use this option, you must also provide a URI for the `uriEndpointOverride` option.
                         default: false
+                        description: Select this option to override the endpoint URI. To use this option, you must also provide a URI for the `uriEndpointOverride` option.
+                        title: Endpoint Overwrite
+                        type: boolean
                       delay:
-                        type: integer
-                        title: Delay
-                        description: The number of milliseconds before the next poll from the database.
                         default: 500
+                        description: The number of milliseconds before the next poll from the database.
+                        title: Delay
+                        type: integer
+                    type: object
                   auth:
                     description: Auth configurations
-                    type: object
                     properties:
                       secret:
                         description: Auth secret
-                        type: object
                         properties:
                           ref:
-                            description: >
+                            description: |
                               Secret reference.
-                            type: object
-                            required:
-                            - name
                             properties:
                               name:
                                 description: Secret name
                                 type: string
+                            required:
+                            - name
+                            type: object
+                        type: object
+                    type: object
+                type: object
               template:
+                description: 'A template in the shape of `Deployment.spec.template` to be used for this ContainerSource. More info: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/'
                 type: object
                 x-kubernetes-preserve-unknown-fields: true
-                description: 'A template in the shape of `Deployment.spec.template` to be used for this ContainerSource. More info: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/'
-          status:
             type: object
+          status:
             properties:
               annotations:
                 description: Annotations is additional Status fields for the Resource to save some additional State as well as convey more information to the user. This is roughly akin to Annotations on any k8s resource, just the reconciler conveying richer information outwards.
@@ -287,19 +303,18 @@ spec:
                 x-kubernetes-preserve-unknown-fields: true
               auth:
                 description: Auth provides the relevant information for OIDC authentication.
-                type: object
                 properties:
                   serviceAccountName:
                     description: ServiceAccountName is the name of the generated service account used for this components OIDC authentication.
                     type: string
                   serviceAccountNames:
                     description: ServiceAccountNames is the list of names of the generated service accounts used for this components OIDC authentication.
-                    type: array
                     items:
                       type: string
+                    type: array
+                type: object
               ceAttributes:
                 description: CloudEventAttributes are the specific attributes that the Source uses as part of its CloudEvents.
-                type: array
                 items:
                   type: object
                   properties:
@@ -309,9 +324,9 @@ spec:
                     type:
                       description: Type refers to the CloudEvent type attribute.
                       type: string
+                type: array
               conditions:
                 description: Conditions the latest available observations of a resource's current state.
-                type: array
                 items:
                   type: object
                   required:
@@ -336,10 +351,11 @@ spec:
                     type:
                       description: Type of condition.
                       type: string
+                type: array
               observedGeneration:
                 description: ObservedGeneration is the 'Generation' of the Service that was last processed by the controller.
-                type: integer
                 format: int64
+                type: integer
               sinkUri:
                 description: SinkURI is the current active sink URI that has been configured for the Source.
                 type: string
@@ -349,25 +365,9 @@ spec:
               sinkAudience:
                 description: Audience is the OIDC audience of the sink.
                 type: string
-    additionalPrinterColumns:
-    - name: Sink
-      type: string
-      jsonPath: .status.sinkUri
-    - name: Age
-      type: date
-      jsonPath: .metadata.creationTimestamp
-    - name: Ready
-      type: string
-      jsonPath: .status.conditions[?(@.type=='Ready')].status
-    - name: Reason
-      type: string
-      jsonPath: .status.conditions[?(@.type=='Ready')].reason
-  names:
-    categories:
-    - all
-    - knative
-    - sources
-    kind: IntegrationSource
-    plural: integrationsources
-    singular: integrationsource
-  scope: Namespaced
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
