@@ -214,23 +214,26 @@ public class CodeGenerator : ICodeGenerator
                     .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.ConstKeyword));
 
             // Create a property declaration for ApiVersion
-            var apiVersion = CreateProperty("string", "apiVersion", "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources");
+            var apiVersion = CreateProperty("string", "apiVersion", "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources", true, group + "/" + version);
 
             // Create a property declaration for Kind
-            var kindProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds");
+            var kindProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", true, kind);
 
             // Create a property declaration for Metadata
             var metaProp = CreateProperty("V1ObjectMeta", "metadata", "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata");
 
             @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
 
+            // Create a property declaration for List Kind
+            var kindListProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", true, listKind);
+
             // Create a property declaration for List Metadata
             var metaListProp = CreateProperty("V1ListMeta", "metadata", "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.");
 
             // Create a property declaration for List Kind
-            var kindListProp = CreateProperty($"IList<{className}>", "items", $"List of {className} objects.");
+            var kindIListProp = CreateProperty($"IList<{className}>", "items", $"List of {className} objects.");
 
-            @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaListProp, kindListProp);
+            @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindListProp, metaListProp, kindIListProp);
             types.Add(@classList);
         }
 
@@ -468,7 +471,7 @@ public class CodeGenerator : ICodeGenerator
         return enumDeclaration.Identifier.Text;
     }
 
-    private static PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true)
+    private static PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true, string? defaultValue = null)
     {
         var propDecleration = SyntaxFactory.PropertyDeclaration(required ? SyntaxFactory.ParseTypeName(typeName) : SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
@@ -519,6 +522,17 @@ public class CodeGenerator : ICodeGenerator
                 SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
                 SyntaxFactory.CarriageReturnLineFeed));
 
+        if (!string.IsNullOrEmpty(defaultValue))
+        {
+            propDecleration = propDecleration.WithInitializer(
+                SyntaxFactory.EqualsValueClause(
+                    SyntaxFactory.LiteralExpression(
+                        SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(defaultValue)
+                    )
+                )
+            )
+            .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken));
+        }
 
         return propDecleration;
     }

@@ -344,6 +344,11 @@ spec:
           type.GetField("KubeGroup").GetValue(null).Should().Be("kubeui.com");
           type.GetField("KubeKind").GetValue(null).Should().Be(namedKind);
           type.GetField("KubePluralName").GetValue(null).Should().Be("tests");
+
+            var instance = Activator.CreateInstance(type);
+
+            type.GetProperty("ApiVersion").GetValue(instance).Should().Be("kubeui.com/v1beta1");
+            type.GetProperty("Kind").GetValue(instance).Should().Be(namedKind);
         }
     }
 
