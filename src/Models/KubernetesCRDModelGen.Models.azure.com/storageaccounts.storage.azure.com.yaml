@@ -6,7 +6,7 @@ metadata:
     controller-gen.kubebuilder.io/version: v0.17.3
   labels:
     app.kubernetes.io/name: azure-service-operator
-    app.kubernetes.io/version: v2.14.0
+    app.kubernetes.io/version: v2.15.0
   name: storageaccounts.storage.azure.com
 spec:
   conversion:
@@ -22,6 +22,9 @@ spec:
       - v1
   group: storage.azure.com
   names:
+    categories:
+    - azure
+    - storage
     kind: StorageAccount
     listKind: StorageAccountList
     plural: storageaccounts
@@ -418,8 +421,21 @@ spec:
                         value:
                           description: 'Value: Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.'
                           type: string
-                      required:
-                      - value
+                        valueFromConfig:
+                          description: 'ValueFromConfig: Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.'
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: |-
+                                Name is the name of the Kubernetes configmap being referenced.
+                                The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       type: object
                     type: array
                   resourceAccessRules:
@@ -1927,6 +1943,23 @@ spec:
                           type: string
                         value:
                           type: string
+                        valueFromConfig:
+                          description: |-
+                            ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
+                            the resource it is on.
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: |-
+                                Name is the name of the Kubernetes configmap being referenced.
+                                The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       type: object
                     type: array
                   resourceAccessRules:
@@ -3675,8 +3708,21 @@ spec:
                         value:
                           description: 'Value: Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.'
                           type: string
-                      required:
-                      - value
+                        valueFromConfig:
+                          description: 'ValueFromConfig: Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.'
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: |-
+                                Name is the name of the Kubernetes configmap being referenced.
+                                The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       type: object
                     type: array
                   resourceAccessRules:
@@ -5346,6 +5392,23 @@ spec:
                           type: string
                         value:
                           type: string
+                        valueFromConfig:
+                          description: |-
+                            ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
+                            the resource it is on.
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: |-
+                                Name is the name of the Kubernetes configmap being referenced.
+                                The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       type: object
                     type: array
                   resourceAccessRules:
@@ -7173,8 +7236,21 @@ spec:
                         value:
                           description: 'Value: Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.'
                           type: string
-                      required:
-                      - value
+                        valueFromConfig:
+                          description: 'ValueFromConfig: Specifies the IP or IP range in CIDR format. Only IPV4 address is allowed.'
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: |-
+                                Name is the name of the Kubernetes configmap being referenced.
+                                The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       type: object
                     type: array
                   resourceAccessRules:
@@ -8864,6 +8940,23 @@ spec:
                           type: string
                         value:
                           type: string
+                        valueFromConfig:
+                          description: |-
+                            ConfigMapReference is a reference to a Kubernetes configmap and key in the same namespace as
+                            the resource it is on.
+                          properties:
+                            key:
+                              description: Key is the key in the Kubernetes configmap being referenced
+                              type: string
+                            name:
+                              description: |-
+                                Name is the name of the Kubernetes configmap being referenced.
+                                The configmap must be in the same namespace as the resource
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
                       type: object
                     type: array
                   resourceAccessRules:

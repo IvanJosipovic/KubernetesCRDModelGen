@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.19.1
+    app.kubernetes.io/version: 1.18.1
     knative.dev/crd-install: "true"
     duck.knative.dev/addressable: "true"
   name: routes.serving.knative.dev
