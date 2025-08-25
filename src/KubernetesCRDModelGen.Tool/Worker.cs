@@ -1,7 +1,6 @@
 using k8s.Models;
 using k8s;
 using KubernetesCRDModelGen;
-using Microsoft.CodeAnalysis;
 using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 using YamlDotNet.Core.Events;
@@ -72,7 +71,7 @@ namespace Worker
                                 var crd = KubernetesYaml.Deserialize<V1CustomResourceDefinition>(yaml);
                                 var code = generator.GenerateCode(crd, @namespace);
 
-                                var filename = CodeGenerator.RemoveIllegalFileNameCharacters($"{crd.Metadata.Name.Replace(".", "-")}.g.cs");
+                                var filename = CodeGenerator.RemoveIllegalFileNameCharacters($"{crd.Metadata.Name}.g.cs");
 
                                 logger.LogInformation("Generating: {file}", filename);
 
