@@ -14,6 +14,9 @@ namespace KubernetesCRDModelGen;
 /// <inheritdoc/>
 public class Generator : IGenerator
 {
+    /// <summary>
+    /// Default Namespace
+    /// </summary>
     public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
     private readonly ILogger<Generator> logger;
@@ -110,24 +113,30 @@ public class Generator : IGenerator
 
     private CompilationUnitSyntax GenerateCompilationUnit(V1CustomResourceDefinition crd, string @namespace)
     {
-        var version = crd.Spec.Versions.First(x => x.Served && x.Storage);
+        var versions = crd.Spec.Versions.Where(x => x.Served);
 
-        var schema = version.Schema.OpenAPIV3Schema;
+        var types = new List<MemberDeclarationSyntax>();
 
-        var reader = new OpenApiJsonReader();
-
-        var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
-
-        var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
-
-        if (diag != null && diag.Errors.Count > 0)
+        foreach (var version in versions)
         {
-            logger.LogError("Error: {err}", diag.Errors.Select(x => x.Message));
+            var schema = version.Schema.OpenAPIV3Schema;
+
+            var reader = new OpenApiJsonReader();
+
+            var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
+
+            var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
+
+            if (diag != null && diag.Errors.Count > 0)
+            {
+                logger.LogError("Error: {err}", diag.Errors.Select(x => x.Message));
+            }
+
+            var code = codeGenerator.GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
+            types.AddRange(code);
         }
 
-        var code = codeGenerator.GenerateCompilationUnit(doc, @namespace, version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
-
-        return code;
+        return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, [.. types]);
     }
 
     private MetadataReference[] GetReferences()

@@ -99,6 +99,7 @@ spec:
             metadata:
               type: object
 ";
+        var code = GetCode(yaml);
         var types = GetTypeYaml(yaml, "Test", "TestList");
         types.Should().AllSatisfy(
           t => t.Namespace.Should().Be(Namespace + ".kubeui.com")
@@ -350,6 +351,69 @@ spec:
             type.GetProperty("ApiVersion").GetValue(instance).Should().Be("kubeui.com/v1beta1");
             type.GetProperty("Kind").GetValue(instance).Should().Be(namedKind);
         }
+    }
+
+    [Fact]
+    public void TestMultiVersion()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                someString:
+                  type: string
+    - name: v1beta2
+      served: true
+      storage: false
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                someString:
+                  type: string
+";
+        var type = GetTypeYaml(yaml, "Test", "TestList");
+
+        type.Length.Should().Be(4);
+        type[0].Name.Should().Be("V1beta1TestList");
+        type[1].Name.Should().Be("V1beta1Test");
+        type[2].Name.Should().Be("V1beta2TestList");
+        type[3].Name.Should().Be("V1beta2Test");
     }
 
     [Fact]

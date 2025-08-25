@@ -79,30 +79,32 @@ namespace KubernetesCRDModelGen.SourceGenerator
                         {
                             try
                             {
-                                var version = crd.Spec.Versions.First(x => x.Served && x.Storage);
+                                var versions = crd.Spec.Versions.Where(x => x.Served);
 
-                                var doc = openAPIReader.ReadFragment<OpenApiSchema>(version.Schema.OpenAPIV3Schema, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
-
-                                if (diag != null && diag.Errors.Count > 0)
+                                foreach (var version in versions)
                                 {
-                                    context.ReportDiagnostic(Diagnostic.Create(
-                                        new DiagnosticDescriptor(
-                                            "KG3",
-                                            "Error Parsin Open API Spec",
-                                            "Loaded file: {0}\r\n{1}",
-                                            "KubernetesCRDModelGen",
-                                            DiagnosticSeverity.Error,
-                                            true),
-                                        Location.None,
-                                        pair.Name, diag.Errors.Select(x => x.Message).Aggregate((a,b) => a + "\r\n" + b)));
+                                    var doc = openAPIReader.ReadFragment<OpenApiSchema>(version.Schema.OpenAPIV3Schema, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
+                                    if (diag != null && diag.Errors.Count > 0)
+                                    {
+                                        context.ReportDiagnostic(Diagnostic.Create(
+                                            new DiagnosticDescriptor(
+                                                "KG3",
+                                                "Error Parsin Open API Spec",
+                                                "Loaded file: {0}\r\n{1}",
+                                                "KubernetesCRDModelGen",
+                                                DiagnosticSeverity.Error,
+                                                true),
+                                            Location.None,
+                                            pair.Name, diag.Errors.Select(x => x.Message).Aggregate((a, b) => a + "\r\n" + b)));
+                                    }
+
+                                    var code = codeGenerator.GenerateCompilationUnit(doc, "KubernetesCRDModelGen.Models", version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
+
+                                    var filename = CodeGenerator.RemoveIllegalFileNameCharacters($"{version.Name}.{crd.Metadata.Name}.g.cs");
+
+                                    context.AddSource(filename, code.NormalizeWhitespace().ToFullString());
                                 }
-
-                                var code = codeGenerator.GenerateCompilationUnit(doc, "KubernetesCRDModelGen.Models", version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
-
-                                var filename = CodeGenerator.RemoveIllegalFileNameCharacters($"{crd.Metadata.Name.Replace(".", "-")}.g.cs");
-
-                                context.AddSource(filename, code.NormalizeWhitespace().ToFullString());
                             }
                             catch (Exception e)
                             {

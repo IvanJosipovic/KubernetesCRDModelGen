@@ -36,13 +36,15 @@ public class CodeGenerator : ICodeGenerator
     /// <inheritdoc/>
     public CompilationUnitSyntax GenerateCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind)
     {
-        listKind ??= kind + "List";
+        return GenerateCompilationUnit(@namespace, group, GenerateClass(schema, kind, version, group, plural, listKind));
+    }
 
-        var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + group, true))).NormalizeWhitespace();
-
-        namespaceDeclaration = namespaceDeclaration.AddMembers(GenerateClass(schema, kind, version, group, plural, listKind));
-
-        var nullableTrivia = SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true);
+    /// <inheritdoc/>
+    public CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, MemberDeclarationSyntax[] members)
+    {
+        var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + group, true)))
+            .NormalizeWhitespace()
+            .AddMembers(members);
 
         var compilationUnit = SyntaxFactory.CompilationUnit()
             .WithUsings(GenerateUsings())
@@ -51,23 +53,12 @@ public class CodeGenerator : ICodeGenerator
         return compilationUnit;
     }
 
-    private static SyntaxList<UsingDirectiveSyntax> GenerateUsings()
+    /// <inheritdoc/>
+    public BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null)
     {
-        return SyntaxFactory.List([
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s.Models")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Runtime.Serialization")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Nodes")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Serialization")),
-        ]);
-    }
+        bool isRoot = version != null && group != null && plural != null;
 
-    private BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null)
-    {
-        bool isRoot = version != null && group != null && plural != null && listKind != null;
+        listKind ??= kind + "List";
 
         var types = new List<BaseTypeDeclarationSyntax>();
 
@@ -316,6 +307,20 @@ public class CodeGenerator : ICodeGenerator
         types.Add(@class);
 
         return [.. types];
+    }
+
+    private static SyntaxList<UsingDirectiveSyntax> GenerateUsings()
+    {
+        return SyntaxFactory.List([
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s.Models")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Runtime.Serialization")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Nodes")),
+            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Serialization")),
+        ]);
     }
 
     private string GetOrGenerateType(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
