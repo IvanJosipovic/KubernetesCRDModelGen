@@ -18,7 +18,7 @@ This project contains components which allow generation of C# Classes/Assemblies
 ## How to use
 
 - Programmatically
-  ```
+  ```csharp
   var crd = KubernetesYaml.LoadAllFromString(yaml);
   var fac = new LoggerFactory();
   var generator = new Generator(fac);
