@@ -86,6 +86,13 @@ public class CodeGenerator : ICodeGenerator
                                 SyntaxFactory.CarriageReturnLineFeed))
                         .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
 
+        // Add a public default constructor
+        var defaultConstructor = SyntaxFactory.ConstructorDeclaration(className)
+            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
+            .WithBody(SyntaxFactory.Block());
+
+        @class = @class.AddMembers(defaultConstructor);
+
         if (isRoot)
         {
             // Base Classes
