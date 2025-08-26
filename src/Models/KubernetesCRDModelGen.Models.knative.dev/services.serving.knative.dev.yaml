@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.18.1
+    app.kubernetes.io/version: 1.19.2
     knative.dev/crd-install: "true"
     duck.knative.dev/addressable: "true"
     duck.knative.dev/podspecable: "true"
@@ -259,7 +259,7 @@ spec:
                                 Cannot be updated.
                               type: array
                               items:
-                                description: EnvFromSource represents the source of a set of ConfigMaps
+                                description: EnvFromSource represents the source of a set of ConfigMaps or Secrets
                                 type: object
                                 properties:
                                   configMapRef:
@@ -280,7 +280,7 @@ spec:
                                         type: boolean
                                     x-kubernetes-map-type: atomic
                                   prefix:
-                                    description: An optional identifier to prepend to each key in the ConfigMap. Must be a C_IDENTIFIER.
+                                    description: Optional text to prepend to the name of each environment variable. Must be a C_IDENTIFIER.
                                     type: string
                                   secretRef:
                                     description: The Secret to select from
@@ -1144,6 +1144,10 @@ spec:
                               x-kubernetes-preserve-unknown-fields: true
                             hostPath:
                               description: This is accessible behind a feature flag - kubernetes.podspec-volumes-hostpath
+                              type: object
+                              x-kubernetes-preserve-unknown-fields: true
+                            image:
+                              description: This is accessible behind a feature flag - kubernetes.podspec-volumes-image
                               type: object
                               x-kubernetes-preserve-unknown-fields: true
                             name:
