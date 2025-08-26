@@ -5,7 +5,7 @@ metadata:
     knative.dev/crd-install: "true"
     messaging.knative.dev/subscribable: "true"
     duck.knative.dev/addressable: "true"
-    app.kubernetes.io/version: 1.18.3
+    app.kubernetes.io/version: 1.19.2
     app.kubernetes.io/name: knative-eventing
   name: channels.messaging.knative.dev
 spec:

@@ -5,7 +5,7 @@ metadata:
     eventing.knative.dev/source: "true"
     duck.knative.dev/source: "true"
     knative.dev/crd-install: "true"
-    app.kubernetes.io/version: 1.18.3
+    app.kubernetes.io/version: 1.19.2
     app.kubernetes.io/name: knative-eventing
   name: integrationsources.sources.knative.dev
 spec:
@@ -27,7 +27,7 @@ spec:
     - jsonPath: .metadata.creationTimestamp
       name: Age
       type: date
-    - jsonPath: .status.conditions[?(@.type=="Ready")].status
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
       name: Ready
       type: string
     - jsonPath: .status.conditions[?(@.type=='Ready')].reason
@@ -290,6 +290,10 @@ spec:
                         type: object
                     type: object
                 type: object
+              template:
+                description: 'A template in the shape of `Deployment.spec.template` to be used for this ContainerSource. More info: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/'
+                type: object
+                x-kubernetes-preserve-unknown-fields: true
             type: object
           status:
             properties:
