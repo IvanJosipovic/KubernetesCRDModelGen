@@ -18,7 +18,15 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <NoWarn>CS1591,CS8618</NoWarn>
         <WarningsAsErrors>$(WarningsAsErrors);CS8784;CS8785</WarningsAsErrors>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
     </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Exclude the output of source generators from the compilation, show it in the IDE -->
+        <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+        <None Include="$(CompilerGeneratedFilesOutputPath)/**/*.cs" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient" Version="17.0.4" />
