@@ -86,19 +86,14 @@ public class CodeGenerator : ICodeGenerator
                                 SyntaxFactory.CarriageReturnLineFeed))
                         .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
 
-        // Add a public default constructor
-        var defaultConstructor = SyntaxFactory.ConstructorDeclaration(className)
-            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
-            .WithBody(SyntaxFactory.Block());
-
-        @class = @class.AddMembers(defaultConstructor);
-
         if (isRoot)
         {
             // Base Classes
             @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ObjectMeta>")));
 
-            var @classList = SyntaxFactory.ClassDeclaration(CleanIdentifier(version + listKind))
+            var classListName = CleanIdentifier(version + listKind);
+
+            var @classList = SyntaxFactory.ClassDeclaration(classListName)
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
                 .AddAttributeLists(SyntaxFactory.AttributeList()
                     .AddAttributes(
