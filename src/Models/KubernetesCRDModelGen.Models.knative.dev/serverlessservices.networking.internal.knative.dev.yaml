@@ -4,7 +4,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: 1.19.2
+    app.kubernetes.io/version: 1.19.4
     knative.dev/crd-install: "true"
   name: serverlessservices.networking.internal.knative.dev
 spec:
