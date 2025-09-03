@@ -478,7 +478,7 @@ public class CodeGenerator : ICodeGenerator
         return enumDeclaration.Identifier.Text;
     }
 
-    private static PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true, string? defaultValue = null)
+    private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true, string? defaultValue = null)
     {
         var propDecleration = SyntaxFactory.PropertyDeclaration(required ? SyntaxFactory.ParseTypeName(typeName) : SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
@@ -505,7 +505,7 @@ public class CodeGenerator : ICodeGenerator
                                             SyntaxKind.StringLiteralExpression,
                                             SyntaxFactory.Literal(propertyName)))))))));
 
-        if (typeName.EndsWith("Enum"))
+        if (EnumSupport && typeName.EndsWith("Enum"))
         {
             propDecleration = propDecleration.AddAttributeLists(
                 SyntaxFactory.AttributeList(
