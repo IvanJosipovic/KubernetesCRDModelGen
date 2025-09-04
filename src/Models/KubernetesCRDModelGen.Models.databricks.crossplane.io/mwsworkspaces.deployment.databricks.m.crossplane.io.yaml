@@ -1,0 +1,1111 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.18.0
+  name: mwsworkspaces.deployment.databricks.m.crossplane.io
+spec:
+  group: deployment.databricks.m.crossplane.io
+  names:
+    categories:
+    - crossplane
+    - managed
+    - databricks
+    kind: MwsWorkspaces
+    listKind: MwsWorkspacesList
+    plural: mwsworkspaces
+    singular: mwsworkspaces
+  scope: Namespaced
+  versions:
+  - additionalPrinterColumns:
+    - jsonPath: .status.conditions[?(@.type=='Synced')].status
+      name: SYNCED
+      type: string
+    - jsonPath: .status.conditions[?(@.type=='Ready')].status
+      name: READY
+      type: string
+    - jsonPath: .metadata.annotations.crossplane\.io/external-name
+      name: EXTERNAL-NAME
+      type: string
+    - jsonPath: .metadata.creationTimestamp
+      name: AGE
+      type: date
+    name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: MwsWorkspaces is the Schema for the MwsWorkspacess API.
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: MwsWorkspacesSpec defines the desired state of MwsWorkspaces
+            properties:
+              forProvider:
+                properties:
+                  accountIdSecretRef:
+                    description: Account Id that could be found in the top right corner of Accounts Console.
+                    properties:
+                      key:
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
+                  awsRegion:
+                    description: (AWS only) region of VPC.
+                    type: string
+                  cloud:
+                    type: string
+                  cloudResourceContainer:
+                    description: '(GCP only) A block that specifies GCP workspace configurations, consisting of following blocks:'
+                    items:
+                      properties:
+                        gcp:
+                          description: 'A block that consists of the following field:'
+                          items:
+                            properties:
+                              projectId:
+                                description: The Google Cloud project ID, which the workspace uses to instantiate cloud resources for your workspace.
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
+                  computeMode:
+                    description: '- The compute mode for the workspace. When unset, a classic workspace is created, and both credentials_id and storage_configuration_id must be specified. When set to SERVERLESS, the resulting workspace is a serverless workspace, and credentials_id and storage_configuration_id must not be set. The only allowed value for this is SERVERLESS. Changing this field requires recreation of the workspace.'
+                    type: string
+                  creationTime:
+                    description: (Integer) time when workspace was created
+                    type: number
+                  credentialsId:
+                    description: (AWS only, Optional) credentials_id from credentials. This must not be specified when compute_mode is set to SERVERLESS.
+                    type: string
+                  credentialsIdRef:
+                    description: Reference to a MwsCredentials in deployment to populate credentialsId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      namespace:
+                        description: Namespace of the referenced object
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  credentialsIdSelector:
+                    description: Selector for a MwsCredentials in deployment to populate credentialsId.
+                    properties:
+                      matchControllerRef:
+                        description: |-
+                          MatchControllerRef ensures an object with the same controller reference
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      namespace:
+                        description: Namespace for the selector
+                        type: string
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  customTags:
+                    additionalProperties:
+                      type: string
+                    description: '- The custom tags key-value pairing that is attached to this workspace. These tags will be applied to clusters automatically in addition to any default_tags or custom_tags on a cluster level. Please note it can take up to an hour for custom_tags to be set due to scheduling on Control Plane. After custom tags are applied, they can be modified however they can never be completely removed.'
+                    type: object
+                    x-kubernetes-map-type: granular
+                  customerManagedKeyId:
+                    description: (String) Canonical unique identifier for the workspace, of the format <account-id>/<workspace-id>
+                    type: string
+                  deploymentName:
+                    description: part of URL as in https://<prefix>-<deployment-name>.cloud.databricks.com. Deployment name cannot be used until a deployment name prefix is defined. Please contact your Databricks representative. Once a new deployment prefix is added/updated, it only will affect the new workspaces created.
+                    type: string
+                  externalCustomerInfo:
+                    items:
+                      properties:
+                        authoritativeUserEmail:
+                          type: string
+                        authoritativeUserFullName:
+                          type: string
+                        customerName:
+                          type: string
+                      type: object
+                    type: array
+                  gcpManagedNetworkConfig:
+                    items:
+                      properties:
+                        gkeClusterPodIpRange:
+                          type: string
+                        gkeClusterServiceIpRange:
+                          type: string
+                        subnetCidr:
+                          type: string
+                      type: object
+                    type: array
+                  gkeConfig:
+                    items:
+                      properties:
+                        connectivityType:
+                          type: string
+                        masterIpRange:
+                          type: string
+                      type: object
+                    type: array
+                  isNoPublicIpEnabled:
+                    type: boolean
+                  location:
+                    description: (GCP only) region of the subnet.
+                    type: string
+                  managedServicesCustomerManagedKeyId:
+                    description: customer_managed_key_id from customer managed keys with use_cases set to MANAGED_SERVICES. This is used to encrypt the workspace's notebook and secret data in the control plane.
+                    type: string
+                  networkId:
+                    description: network_id from networks.
+                    type: string
+                  networkIdRef:
+                    description: Reference to a MwsNetworks in deployment to populate networkId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      namespace:
+                        description: Namespace of the referenced object
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  networkIdSelector:
+                    description: Selector for a MwsNetworks in deployment to populate networkId.
+                    properties:
+                      matchControllerRef:
+                        description: |-
+                          MatchControllerRef ensures an object with the same controller reference
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      namespace:
+                        description: Namespace for the selector
+                        type: string
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  pricingTier:
+                    description: '- The pricing tier of the workspace.'
+                    type: string
+                  privateAccessSettingsId:
+                    description: Canonical unique identifier of databricks_mws_private_access_settings in Databricks Account.
+                    type: string
+                  storageConfigurationId:
+                    description: (AWS only, Optional) storage_configuration_id from storage configuration. This must not be specified when compute_mode is set to SERVERLESS.
+                    type: string
+                  storageConfigurationIdRef:
+                    description: Reference to a MwsStorageConfigurations in deployment to populate storageConfigurationId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      namespace:
+                        description: Namespace of the referenced object
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  storageConfigurationIdSelector:
+                    description: Selector for a MwsStorageConfigurations in deployment to populate storageConfigurationId.
+                    properties:
+                      matchControllerRef:
+                        description: |-
+                          MatchControllerRef ensures an object with the same controller reference
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      namespace:
+                        description: Namespace for the selector
+                        type: string
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  storageCustomerManagedKeyId:
+                    description: customer_managed_key_id from customer managed keys with use_cases set to STORAGE. This is used to encrypt the DBFS Storage & Cluster Volumes.
+                    type: string
+                  token:
+                    items:
+                      properties:
+                        comment:
+                          description: Comment, that will appear in "User Settings / Access Tokens" page on Workspace UI.
+                          type: string
+                        lifetimeSeconds:
+                          description: Token expiry lifetime. By default its 2592000 (30 days).
+                          type: number
+                        tokenId:
+                          description: (String) Canonical unique identifier for the workspace, of the format <account-id>/<workspace-id>
+                          type: string
+                        tokenValueSecretRef:
+                          description: |-
+                            A LocalSecretKeySelector is a reference to a secret key
+                            in the same namespace with the referencing object.
+                          properties:
+                            key:
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
+                      type: object
+                    type: array
+                  workspaceId:
+                    description: (String) workspace id
+                    type: number
+                  workspaceName:
+                    description: name of the workspace, will appear on UI.
+                    type: string
+                  workspaceStatus:
+                    description: (String) workspace status
+                    type: string
+                  workspaceStatusMessage:
+                    description: (String) updates on workspace status
+                    type: string
+                  workspaceUrl:
+                    description: (String) URL of the workspace
+                    type: string
+                type: object
+              initProvider:
+                description: |-
+                  THIS IS A BETA FIELD. It will be honored
+                  unless the Management Policies feature flag is disabled.
+                  InitProvider holds the same fields as ForProvider, with the exception
+                  of Identifier and other resource reference fields. The fields that are
+                  in InitProvider are merged into ForProvider when the resource is created.
+                  The same fields are also added to the terraform ignore_changes hook, to
+                  avoid updating them after creation. This is useful for fields that are
+                  required on creation, but we do not desire to update them after creation,
+                  for example because of an external controller is managing them, like an
+                  autoscaler.
+                properties:
+                  accountIdSecretRef:
+                    description: Account Id that could be found in the top right corner of Accounts Console.
+                    properties:
+                      key:
+                        type: string
+                      name:
+                        description: Name of the secret.
+                        type: string
+                    required:
+                    - key
+                    - name
+                    type: object
+                  awsRegion:
+                    description: (AWS only) region of VPC.
+                    type: string
+                  cloud:
+                    type: string
+                  cloudResourceContainer:
+                    description: '(GCP only) A block that specifies GCP workspace configurations, consisting of following blocks:'
+                    items:
+                      properties:
+                        gcp:
+                          description: 'A block that consists of the following field:'
+                          items:
+                            properties:
+                              projectId:
+                                description: The Google Cloud project ID, which the workspace uses to instantiate cloud resources for your workspace.
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
+                  computeMode:
+                    description: '- The compute mode for the workspace. When unset, a classic workspace is created, and both credentials_id and storage_configuration_id must be specified. When set to SERVERLESS, the resulting workspace is a serverless workspace, and credentials_id and storage_configuration_id must not be set. The only allowed value for this is SERVERLESS. Changing this field requires recreation of the workspace.'
+                    type: string
+                  creationTime:
+                    description: (Integer) time when workspace was created
+                    type: number
+                  credentialsId:
+                    description: (AWS only, Optional) credentials_id from credentials. This must not be specified when compute_mode is set to SERVERLESS.
+                    type: string
+                  credentialsIdRef:
+                    description: Reference to a MwsCredentials in deployment to populate credentialsId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      namespace:
+                        description: Namespace of the referenced object
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  credentialsIdSelector:
+                    description: Selector for a MwsCredentials in deployment to populate credentialsId.
+                    properties:
+                      matchControllerRef:
+                        description: |-
+                          MatchControllerRef ensures an object with the same controller reference
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      namespace:
+                        description: Namespace for the selector
+                        type: string
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  customTags:
+                    additionalProperties:
+                      type: string
+                    description: '- The custom tags key-value pairing that is attached to this workspace. These tags will be applied to clusters automatically in addition to any default_tags or custom_tags on a cluster level. Please note it can take up to an hour for custom_tags to be set due to scheduling on Control Plane. After custom tags are applied, they can be modified however they can never be completely removed.'
+                    type: object
+                    x-kubernetes-map-type: granular
+                  customerManagedKeyId:
+                    description: (String) Canonical unique identifier for the workspace, of the format <account-id>/<workspace-id>
+                    type: string
+                  deploymentName:
+                    description: part of URL as in https://<prefix>-<deployment-name>.cloud.databricks.com. Deployment name cannot be used until a deployment name prefix is defined. Please contact your Databricks representative. Once a new deployment prefix is added/updated, it only will affect the new workspaces created.
+                    type: string
+                  externalCustomerInfo:
+                    items:
+                      properties:
+                        authoritativeUserEmail:
+                          type: string
+                        authoritativeUserFullName:
+                          type: string
+                        customerName:
+                          type: string
+                      type: object
+                    type: array
+                  gcpManagedNetworkConfig:
+                    items:
+                      properties:
+                        gkeClusterPodIpRange:
+                          type: string
+                        gkeClusterServiceIpRange:
+                          type: string
+                        subnetCidr:
+                          type: string
+                      type: object
+                    type: array
+                  gkeConfig:
+                    items:
+                      properties:
+                        connectivityType:
+                          type: string
+                        masterIpRange:
+                          type: string
+                      type: object
+                    type: array
+                  isNoPublicIpEnabled:
+                    type: boolean
+                  location:
+                    description: (GCP only) region of the subnet.
+                    type: string
+                  managedServicesCustomerManagedKeyId:
+                    description: customer_managed_key_id from customer managed keys with use_cases set to MANAGED_SERVICES. This is used to encrypt the workspace's notebook and secret data in the control plane.
+                    type: string
+                  networkId:
+                    description: network_id from networks.
+                    type: string
+                  networkIdRef:
+                    description: Reference to a MwsNetworks in deployment to populate networkId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      namespace:
+                        description: Namespace of the referenced object
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  networkIdSelector:
+                    description: Selector for a MwsNetworks in deployment to populate networkId.
+                    properties:
+                      matchControllerRef:
+                        description: |-
+                          MatchControllerRef ensures an object with the same controller reference
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      namespace:
+                        description: Namespace for the selector
+                        type: string
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  pricingTier:
+                    description: '- The pricing tier of the workspace.'
+                    type: string
+                  privateAccessSettingsId:
+                    description: Canonical unique identifier of databricks_mws_private_access_settings in Databricks Account.
+                    type: string
+                  storageConfigurationId:
+                    description: (AWS only, Optional) storage_configuration_id from storage configuration. This must not be specified when compute_mode is set to SERVERLESS.
+                    type: string
+                  storageConfigurationIdRef:
+                    description: Reference to a MwsStorageConfigurations in deployment to populate storageConfigurationId.
+                    properties:
+                      name:
+                        description: Name of the referenced object.
+                        type: string
+                      namespace:
+                        description: Namespace of the referenced object
+                        type: string
+                      policy:
+                        description: Policies for referencing.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    required:
+                    - name
+                    type: object
+                  storageConfigurationIdSelector:
+                    description: Selector for a MwsStorageConfigurations in deployment to populate storageConfigurationId.
+                    properties:
+                      matchControllerRef:
+                        description: |-
+                          MatchControllerRef ensures an object with the same controller reference
+                          as the selecting object is selected.
+                        type: boolean
+                      matchLabels:
+                        additionalProperties:
+                          type: string
+                        description: MatchLabels ensures an object with matching labels is selected.
+                        type: object
+                      namespace:
+                        description: Namespace for the selector
+                        type: string
+                      policy:
+                        description: Policies for selection.
+                        properties:
+                          resolution:
+                            default: Required
+                            description: |-
+                              Resolution specifies whether resolution of this reference is required.
+                              The default is 'Required', which means the reconcile will fail if the
+                              reference cannot be resolved. 'Optional' means this reference will be
+                              a no-op if it cannot be resolved.
+                            enum:
+                            - Required
+                            - Optional
+                            type: string
+                          resolve:
+                            description: |-
+                              Resolve specifies when this reference should be resolved. The default
+                              is 'IfNotPresent', which will attempt to resolve the reference only when
+                              the corresponding field is not present. Use 'Always' to resolve the
+                              reference on every reconcile.
+                            enum:
+                            - Always
+                            - IfNotPresent
+                            type: string
+                        type: object
+                    type: object
+                  storageCustomerManagedKeyId:
+                    description: customer_managed_key_id from customer managed keys with use_cases set to STORAGE. This is used to encrypt the DBFS Storage & Cluster Volumes.
+                    type: string
+                  token:
+                    items:
+                      properties:
+                        comment:
+                          description: Comment, that will appear in "User Settings / Access Tokens" page on Workspace UI.
+                          type: string
+                        lifetimeSeconds:
+                          description: Token expiry lifetime. By default its 2592000 (30 days).
+                          type: number
+                        tokenId:
+                          description: (String) Canonical unique identifier for the workspace, of the format <account-id>/<workspace-id>
+                          type: string
+                        tokenValueSecretRef:
+                          description: |-
+                            A LocalSecretKeySelector is a reference to a secret key
+                            in the same namespace with the referencing object.
+                          properties:
+                            key:
+                              type: string
+                            name:
+                              description: Name of the secret.
+                              type: string
+                          required:
+                          - key
+                          - name
+                          type: object
+                      type: object
+                    type: array
+                  workspaceId:
+                    description: (String) workspace id
+                    type: number
+                  workspaceName:
+                    description: name of the workspace, will appear on UI.
+                    type: string
+                  workspaceStatus:
+                    description: (String) workspace status
+                    type: string
+                  workspaceStatusMessage:
+                    description: (String) updates on workspace status
+                    type: string
+                  workspaceUrl:
+                    description: (String) URL of the workspace
+                    type: string
+                required:
+                - accountIdSecretRef
+                type: object
+              managementPolicies:
+                default:
+                - '*'
+                description: |-
+                  THIS IS A BETA FIELD. It is on by default but can be opted out
+                  through a Crossplane feature flag.
+                  ManagementPolicies specify the array of actions Crossplane is allowed to
+                  take on the managed and external resources.
+                  See the design doc for more information: https://github.com/crossplane/crossplane/blob/499895a25d1a1a0ba1604944ef98ac7a1a71f197/design/design-doc-observe-only-resources.md?plain=1#L223
+                  and this one: https://github.com/crossplane/crossplane/blob/444267e84783136daa93568b364a5f01228cacbe/design/one-pager-ignore-changes.md
+                items:
+                  description: |-
+                    A ManagementAction represents an action that the Crossplane controllers
+                    can take on an external resource.
+                  enum:
+                  - Observe
+                  - Create
+                  - Update
+                  - Delete
+                  - LateInitialize
+                  - '*'
+                  type: string
+                type: array
+              providerConfigRef:
+                default:
+                  kind: ClusterProviderConfig
+                  name: default
+                description: |-
+                  ProviderConfigReference specifies how the provider that will be used to
+                  create, observe, update, and delete this managed resource should be
+                  configured.
+                properties:
+                  kind:
+                    description: Kind of the referenced object.
+                    type: string
+                  name:
+                    description: Name of the referenced object.
+                    type: string
+                required:
+                - kind
+                - name
+                type: object
+              writeConnectionSecretToRef:
+                description: |-
+                  WriteConnectionSecretToReference specifies the namespace and name of a
+                  Secret to which any connection details for this managed resource should
+                  be written. Connection details frequently include the endpoint, username,
+                  and password required to connect to the managed resource.
+                properties:
+                  name:
+                    description: Name of the secret.
+                    type: string
+                required:
+                - name
+                type: object
+            required:
+            - forProvider
+            type: object
+            x-kubernetes-validations:
+            - message: spec.forProvider.accountIdSecretRef is a required parameter
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.accountIdSecretRef)"
+            - message: spec.forProvider.workspaceName is a required parameter
+              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.workspaceName) || (has(self.initProvider) && has(self.initProvider.workspaceName))"
+          status:
+            description: MwsWorkspacesStatus defines the observed state of MwsWorkspaces.
+            properties:
+              atProvider:
+                properties:
+                  awsRegion:
+                    description: (AWS only) region of VPC.
+                    type: string
+                  cloud:
+                    type: string
+                  cloudResourceContainer:
+                    description: '(GCP only) A block that specifies GCP workspace configurations, consisting of following blocks:'
+                    items:
+                      properties:
+                        gcp:
+                          description: 'A block that consists of the following field:'
+                          items:
+                            properties:
+                              projectId:
+                                description: The Google Cloud project ID, which the workspace uses to instantiate cloud resources for your workspace.
+                                type: string
+                            type: object
+                          type: array
+                      type: object
+                    type: array
+                  computeMode:
+                    description: '- The compute mode for the workspace. When unset, a classic workspace is created, and both credentials_id and storage_configuration_id must be specified. When set to SERVERLESS, the resulting workspace is a serverless workspace, and credentials_id and storage_configuration_id must not be set. The only allowed value for this is SERVERLESS. Changing this field requires recreation of the workspace.'
+                    type: string
+                  creationTime:
+                    description: (Integer) time when workspace was created
+                    type: number
+                  credentialsId:
+                    description: (AWS only, Optional) credentials_id from credentials. This must not be specified when compute_mode is set to SERVERLESS.
+                    type: string
+                  customTags:
+                    additionalProperties:
+                      type: string
+                    description: '- The custom tags key-value pairing that is attached to this workspace. These tags will be applied to clusters automatically in addition to any default_tags or custom_tags on a cluster level. Please note it can take up to an hour for custom_tags to be set due to scheduling on Control Plane. After custom tags are applied, they can be modified however they can never be completely removed.'
+                    type: object
+                    x-kubernetes-map-type: granular
+                  customerManagedKeyId:
+                    description: (String) Canonical unique identifier for the workspace, of the format <account-id>/<workspace-id>
+                    type: string
+                  deploymentName:
+                    description: part of URL as in https://<prefix>-<deployment-name>.cloud.databricks.com. Deployment name cannot be used until a deployment name prefix is defined. Please contact your Databricks representative. Once a new deployment prefix is added/updated, it only will affect the new workspaces created.
+                    type: string
+                  effectiveComputeMode:
+                    description: (String) The effective compute mode for the workspace. This is either SERVERLESS for serverless workspaces or HYBRID for classic workspaces.
+                    type: string
+                  externalCustomerInfo:
+                    items:
+                      properties:
+                        authoritativeUserEmail:
+                          type: string
+                        authoritativeUserFullName:
+                          type: string
+                        customerName:
+                          type: string
+                      type: object
+                    type: array
+                  gcpManagedNetworkConfig:
+                    items:
+                      properties:
+                        gkeClusterPodIpRange:
+                          type: string
+                        gkeClusterServiceIpRange:
+                          type: string
+                        subnetCidr:
+                          type: string
+                      type: object
+                    type: array
+                  gcpWorkspaceSa:
+                    description: (String, GCP only) identifier of a service account created for the workspace in form of db-<workspace-id>@prod-gcp-<region>.iam.gserviceaccount.com
+                    type: string
+                  gkeConfig:
+                    items:
+                      properties:
+                        connectivityType:
+                          type: string
+                        masterIpRange:
+                          type: string
+                      type: object
+                    type: array
+                  id:
+                    description: (String) Canonical unique identifier for the workspace, of the format <account-id>/<workspace-id>
+                    type: string
+                  isNoPublicIpEnabled:
+                    type: boolean
+                  location:
+                    description: (GCP only) region of the subnet.
+                    type: string
+                  managedServicesCustomerManagedKeyId:
+                    description: customer_managed_key_id from customer managed keys with use_cases set to MANAGED_SERVICES. This is used to encrypt the workspace's notebook and secret data in the control plane.
+                    type: string
+                  networkId:
+                    description: network_id from networks.
+                    type: string
+                  pricingTier:
+                    description: '- The pricing tier of the workspace.'
+                    type: string
+                  privateAccessSettingsId:
+                    description: Canonical unique identifier of databricks_mws_private_access_settings in Databricks Account.
+                    type: string
+                  storageConfigurationId:
+                    description: (AWS only, Optional) storage_configuration_id from storage configuration. This must not be specified when compute_mode is set to SERVERLESS.
+                    type: string
+                  storageCustomerManagedKeyId:
+                    description: customer_managed_key_id from customer managed keys with use_cases set to STORAGE. This is used to encrypt the DBFS Storage & Cluster Volumes.
+                    type: string
+                  token:
+                    items:
+                      properties:
+                        comment:
+                          description: Comment, that will appear in "User Settings / Access Tokens" page on Workspace UI.
+                          type: string
+                        lifetimeSeconds:
+                          description: Token expiry lifetime. By default its 2592000 (30 days).
+                          type: number
+                        tokenId:
+                          description: (String) Canonical unique identifier for the workspace, of the format <account-id>/<workspace-id>
+                          type: string
+                      type: object
+                    type: array
+                  workspaceId:
+                    description: (String) workspace id
+                    type: number
+                  workspaceName:
+                    description: name of the workspace, will appear on UI.
+                    type: string
+                  workspaceStatus:
+                    description: (String) workspace status
+                    type: string
+                  workspaceStatusMessage:
+                    description: (String) updates on workspace status
+                    type: string
+                  workspaceUrl:
+                    description: (String) URL of the workspace
+                    type: string
+                type: object
+              conditions:
+                description: Conditions of the resource.
+                items:
+                  description: A Condition that may apply to a resource.
+                  properties:
+                    lastTransitionTime:
+                      description: |-
+                        LastTransitionTime is the last time this condition transitioned from one
+                        status to another.
+                      format: date-time
+                      type: string
+                    message:
+                      description: |-
+                        A Message containing details about this condition's last transition from
+                        one status to another, if any.
+                      type: string
+                    observedGeneration:
+                      description: |-
+                        ObservedGeneration represents the .metadata.generation that the condition was set based upon.
+                        For instance, if .metadata.generation is currently 12, but the .status.conditions[x].observedGeneration is 9, the condition is out of date
+                        with respect to the current state of the instance.
+                      format: int64
+                      type: integer
+                    reason:
+                      description: A Reason for this condition's last transition from one status to another.
+                      type: string
+                    status:
+                      description: Status of this condition; is it currently True, False, or Unknown?
+                      type: string
+                    type:
+                      description: |-
+                        Type of this condition. At most one of each condition type may apply to
+                        a resource at any point in time.
+                      type: string
+                  required:
+                  - lastTransitionTime
+                  - reason
+                  - status
+                  - type
+                  type: object
+                type: array
+                x-kubernetes-list-map-keys:
+                - type
+                x-kubernetes-list-type: map
+              observedGeneration:
+                description: |-
+                  ObservedGeneration is the latest metadata.generation
+                  which resulted in either a ready state, or stalled due to error
+                  it can not recover from without human intervention.
+                format: int64
+                type: integer
+            type: object
+        required:
+        - spec
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
