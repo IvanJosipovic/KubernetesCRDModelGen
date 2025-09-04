@@ -2,14 +2,14 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    controller-gen.kubebuilder.io/version: v0.14.0
+    controller-gen.kubebuilder.io/version: v0.18.0
   name: providerconfigs.databricks.crossplane.io
 spec:
   group: databricks.crossplane.io
   names:
     categories:
     - crossplane
-    - provider
+    - providerconfig
     - databricks
     kind: ProviderConfig
     listKind: ProviderConfigList
@@ -28,7 +28,7 @@ spec:
     name: v1beta1
     schema:
       openAPIV3Schema:
-        description: A ProviderConfig configures a Databricks provider.
+        description: A ProviderConfig configures the Databricks provider.
         properties:
           apiVersion:
             description: |-
@@ -99,8 +99,10 @@ spec:
                     enum:
                     - None
                     - Secret
-                    - InjectedIdentity
-                    - Environment
+                    - UserAssignedManagedIdentity
+                    - SystemAssignedManagedIdentity
+                    - OIDCTokenFile
+                    - Upbound
                     - Filesystem
                     type: string
                 required:
