@@ -23,7 +23,7 @@ public class Generator : IGenerator
 
     private readonly CodeGenerator codeGenerator;
 
-    private readonly MetadataReference[] metadataReferences;
+    private static readonly MetadataReference[] metadataReferences = GetReferences();
 
     private readonly CSharpCompilationOptions _options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
         .WithConcurrentBuild(true)
@@ -47,7 +47,6 @@ public class Generator : IGenerator
     {
         logger = loggerFactory.CreateLogger<Generator>();
         codeGenerator = new CodeGenerator();
-        metadataReferences ??= GetReferences();
     }
 
     /// <inheritdoc/>
@@ -116,16 +115,17 @@ public class Generator : IGenerator
         var versions = crd.Spec.Versions.Where(x => x.Served);
 
         var types = new List<MemberDeclarationSyntax>();
+        var reader = new OpenApiJsonReader();
 
         foreach (var version in versions)
         {
             var schema = version.Schema.OpenAPIV3Schema;
 
-            var reader = new OpenApiJsonReader();
-
             var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
 
             var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
+
+            node = null;
 
             if (diag != null && diag.Errors.Count > 0)
             {
@@ -139,11 +139,11 @@ public class Generator : IGenerator
         return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, [.. types]);
     }
 
-    private MetadataReference[] GetReferences()
+    private static MetadataReference[] GetReferences()
     {
         var references = new List<MetadataReference>();
 
-        var assembly = GetType().Assembly;
+        var assembly = typeof(Generator).Assembly;
 
         var assemblies = assembly.GetManifestResourceNames().Where(x => x.StartsWith("runtime.") && x.EndsWith(".dll")).ToList();
 
