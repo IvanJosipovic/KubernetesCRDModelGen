@@ -66,24 +66,26 @@ public class CodeGenerator : ICodeGenerator
 
         var @class = SyntaxFactory.ClassDeclaration(className)
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
-                        .AddAttributeLists(SyntaxFactory.AttributeList()
-                            .AddAttributes(
-                            [
-                                SyntaxFactory.Attribute(
-                                    SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
-                                    {
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
-                                    }))),
-                                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
-                            ])
+                        .AddAttributeLists(
+                            SyntaxFactory.AttributeList()
+                                .AddAttributes(
+                                [
+                                    SyntaxFactory.Attribute(
+                                        SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                                        .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
+                                        {
+                                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                                        }))),
+                                    SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
+                                ])
+                                .WithTrailingTrivia(
+                                    SyntaxFactory.TriviaList(SyntaxFactory.ElasticCarriageReturnLineFeed)
+                                        .AddRange(SummaryComment(schema.Description)))
                         )
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
-                                SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)),
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed))
+                                SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true))))
                         .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
 
         if (isRoot)
@@ -95,24 +97,26 @@ public class CodeGenerator : ICodeGenerator
 
             var @classList = SyntaxFactory.ClassDeclaration(classListName)
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
-                .AddAttributeLists(SyntaxFactory.AttributeList()
-                    .AddAttributes(
-                    [
-                        SyntaxFactory.Attribute(
-                                    SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
-                                    {
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
-                                    }))),
-                                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
-                    ])
+                .AddAttributeLists(
+                    SyntaxFactory.AttributeList()
+                        .AddAttributes(
+                        [
+                            SyntaxFactory.Attribute(
+                                SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                                .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
+                                {
+                                    SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                                    SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                                }))),
+                            SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
+                        ])
+                        .WithTrailingTrivia(
+                            SyntaxFactory.TriviaList(SyntaxFactory.ElasticCarriageReturnLineFeed)
+                                .AddRange(SummaryComment(schema.Description)))
                 )
                 .WithLeadingTrivia(
                     SyntaxFactory.TriviaList(
-                        SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)),
-                        SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                        SyntaxFactory.CarriageReturnLineFeed))
+                        SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true))))
                 .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
@@ -393,22 +397,22 @@ public class CodeGenerator : ICodeGenerator
     {
         var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
-            .AddAttributeLists(SyntaxFactory.AttributeList()
-                .AddAttributes(
-                [
-                    SyntaxFactory.Attribute(
-                        SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                        .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
-                        [
-                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
-                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
-                        ]))),
-                ])
-            )
-            .WithLeadingTrivia(
-                            SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed));
+            .AddAttributeLists(
+                SyntaxFactory.AttributeList()
+                    .AddAttributes(
+                    [
+                        SyntaxFactory.Attribute(
+                            SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+                            .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
+                            [
+                                SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
+                                SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                            ]))),
+                    ])
+                    .WithTrailingTrivia(
+                        SyntaxFactory.TriviaList(SyntaxFactory.ElasticCarriageReturnLineFeed)
+                            .AddRange(SummaryComment(schema.Description)))
+            );
 
         for (var i = 0; i < schema.Enum.Count; i++)
         {
@@ -433,10 +437,6 @@ public class CodeGenerator : ICodeGenerator
 
                 enumDeclaration = enumDeclaration.AddMembers(
                     SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
-                        .WithLeadingTrivia(
-                            SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(value.Replace("\n", " ").Replace("\r", " "))}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed))
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
                                 SyntaxFactory.AttributeList(
@@ -466,7 +466,9 @@ public class CodeGenerator : ICodeGenerator
                                                 )
                                         ]
                                     )
-                                )
+                                ).WithTrailingTrivia(
+                                    SyntaxFactory.TriviaList(SyntaxFactory.ElasticCarriageReturnLineFeed)
+                                        .AddRange(SummaryComment(value)))
                             )
                         )
                 );
@@ -524,10 +526,11 @@ public class CodeGenerator : ICodeGenerator
                         ))));
         }
 
-        propDecleration = propDecleration.WithLeadingTrivia(
-            SyntaxFactory.TriviaList(
-                SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                SyntaxFactory.CarriageReturnLineFeed));
+        var lastAttribute = propDecleration.AttributeLists.Last();
+        propDecleration = propDecleration.WithAttributeLists(
+            propDecleration.AttributeLists.Replace(lastAttribute, lastAttribute.WithTrailingTrivia(
+                SyntaxFactory.TriviaList(SyntaxFactory.ElasticCarriageReturnLineFeed)
+                    .AddRange(SummaryComment(comment)))));
 
         if (!string.IsNullOrEmpty(defaultValue))
         {
@@ -606,6 +609,12 @@ public class CodeGenerator : ICodeGenerator
         }
 
         return result;
+    }
+
+    private static SyntaxTriviaList SummaryComment(string? text)
+    {
+        var sanitized = XmlString(text?.Replace("\n", " ").Replace("\r", " ") ?? string.Empty);
+        return SyntaxFactory.ParseLeadingTrivia($"/// <summary>{sanitized}</summary>\n");
     }
 
     private static string XmlString(string text)
