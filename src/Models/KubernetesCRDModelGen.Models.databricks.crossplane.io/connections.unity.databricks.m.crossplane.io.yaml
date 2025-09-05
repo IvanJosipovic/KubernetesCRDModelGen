@@ -63,17 +63,6 @@ spec:
                   connectionType:
                     description: Connection type. MYSQL, POSTGRESQL, SNOWFLAKE, REDSHIFT SQLDW, SQLSERVER, DATABRICKS, SALESFORCE, BIGQUERY, WORKDAY_RAAS, HIVE_METASTORE, GA4_RAW_DATA, SERVICENOW, SALESFORCE_DATA_CLOUD, GLUE, ORACLE, TERADATA, HTTP or POWER_BI are supported. Up-to-date list of connection type supported is in the documentation. Change forces creation of a new resource.
                     type: string
-                  environmentSettings:
-                    items:
-                      properties:
-                        environmentVersion:
-                          type: string
-                        javaDependencies:
-                          items:
-                            type: string
-                          type: array
-                      type: object
-                    type: array
                   name:
                     description: Name of the Connection.
                     type: string
@@ -118,17 +107,6 @@ spec:
                   connectionType:
                     description: Connection type. MYSQL, POSTGRESQL, SNOWFLAKE, REDSHIFT SQLDW, SQLSERVER, DATABRICKS, SALESFORCE, BIGQUERY, WORKDAY_RAAS, HIVE_METASTORE, GA4_RAW_DATA, SERVICENOW, SALESFORCE_DATA_CLOUD, GLUE, ORACLE, TERADATA, HTTP or POWER_BI are supported. Up-to-date list of connection type supported is in the documentation. Change forces creation of a new resource.
                     type: string
-                  environmentSettings:
-                    items:
-                      properties:
-                        environmentVersion:
-                          type: string
-                        javaDependencies:
-                          items:
-                            type: string
-                          type: array
-                      type: object
-                    type: array
                   name:
                     description: Name of the Connection.
                     type: string
@@ -230,17 +208,6 @@ spec:
                   credentialType:
                     description: The type of credential for this connection.
                     type: string
-                  environmentSettings:
-                    items:
-                      properties:
-                        environmentVersion:
-                          type: string
-                        javaDependencies:
-                          items:
-                            type: string
-                          type: array
-                      type: object
-                    type: array
                   fullName:
                     description: Full name of connection.
                     type: string

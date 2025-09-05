@@ -84,6 +84,8 @@ spec:
                         pauseStatus:
                           description: Indicate whether this continuous job is paused or not. Either PAUSED or UNPAUSED. When the pause_status field is omitted in the block, the server will default to using UNPAUSED as a value for pause_status.
                           type: string
+                        taskRetryMode:
+                          type: string
                       type: object
                     type: array
                   controlRunState:
@@ -4114,6 +4116,8 @@ spec:
                       properties:
                         pauseStatus:
                           description: Indicate whether this continuous job is paused or not. Either PAUSED or UNPAUSED. When the pause_status field is omitted in the block, the server will default to using UNPAUSED as a value for pause_status.
+                          type: string
+                        taskRetryMode:
                           type: string
                       type: object
                     type: array
@@ -8231,6 +8235,8 @@ spec:
                       properties:
                         pauseStatus:
                           description: Indicate whether this continuous job is paused or not. Either PAUSED or UNPAUSED. When the pause_status field is omitted in the block, the server will default to using UNPAUSED as a value for pause_status.
+                          type: string
+                        taskRetryMode:
                           type: string
                       type: object
                     type: array

@@ -124,6 +124,25 @@ spec:
                           description: 'The Microsoft Teams configuration of the Notification Destination. It must contain the following:'
                           items:
                             properties:
+                              appId:
+                                description: The unique ID of the Notification Destination.
+                                type: string
+                              appIdSet:
+                                type: boolean
+                              authSecret:
+                                type: string
+                              authSecretSet:
+                                type: boolean
+                              channelUrl:
+                                description: The Slack webhook URL.
+                                type: string
+                              channelUrlSet:
+                                type: boolean
+                              tenantId:
+                                description: The unique ID of the Notification Destination.
+                                type: string
+                              tenantIdSet:
+                                type: boolean
                               urlSecretRef:
                                 description: The Slack webhook URL.
                                 properties:
@@ -164,13 +183,32 @@ spec:
                           description: 'The Slack configuration of the Notification Destination. It must contain the following:'
                           items:
                             properties:
-                              channelId:
-                                description: The unique ID of the Notification Destination.
-                                type: string
+                              channelIdSecretRef:
+                                description: Slack channel ID for notifications.
+                                properties:
+                                  key:
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                type: object
                               channelIdSet:
                                 type: boolean
-                              oauthToken:
-                                type: string
+                              oauthTokenSecretRef:
+                                description: OAuth token for Slack authentication.
+                                properties:
+                                  key:
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                type: object
                               oauthTokenSet:
                                 type: boolean
                               urlSecretRef:
@@ -278,6 +316,25 @@ spec:
                           description: 'The Microsoft Teams configuration of the Notification Destination. It must contain the following:'
                           items:
                             properties:
+                              appId:
+                                description: The unique ID of the Notification Destination.
+                                type: string
+                              appIdSet:
+                                type: boolean
+                              authSecret:
+                                type: string
+                              authSecretSet:
+                                type: boolean
+                              channelUrl:
+                                description: The Slack webhook URL.
+                                type: string
+                              channelUrlSet:
+                                type: boolean
+                              tenantId:
+                                description: The unique ID of the Notification Destination.
+                                type: string
+                              tenantIdSet:
+                                type: boolean
                               urlSecretRef:
                                 description: The Slack webhook URL.
                                 properties:
@@ -318,13 +375,32 @@ spec:
                           description: 'The Slack configuration of the Notification Destination. It must contain the following:'
                           items:
                             properties:
-                              channelId:
-                                description: The unique ID of the Notification Destination.
-                                type: string
+                              channelIdSecretRef:
+                                description: Slack channel ID for notifications.
+                                properties:
+                                  key:
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                type: object
                               channelIdSet:
                                 type: boolean
-                              oauthToken:
-                                type: string
+                              oauthTokenSecretRef:
+                                description: OAuth token for Slack authentication.
+                                properties:
+                                  key:
+                                    type: string
+                                  name:
+                                    description: Name of the secret.
+                                    type: string
+                                required:
+                                - key
+                                - name
+                                type: object
                               oauthTokenSet:
                                 type: boolean
                               urlSecretRef:
@@ -449,6 +525,25 @@ spec:
                           description: 'The Microsoft Teams configuration of the Notification Destination. It must contain the following:'
                           items:
                             properties:
+                              appId:
+                                description: The unique ID of the Notification Destination.
+                                type: string
+                              appIdSet:
+                                type: boolean
+                              authSecret:
+                                type: string
+                              authSecretSet:
+                                type: boolean
+                              channelUrl:
+                                description: The Slack webhook URL.
+                                type: string
+                              channelUrlSet:
+                                type: boolean
+                              tenantId:
+                                description: The unique ID of the Notification Destination.
+                                type: string
+                              tenantIdSet:
+                                type: boolean
                               urlSet:
                                 type: boolean
                             type: object
@@ -465,13 +560,8 @@ spec:
                           description: 'The Slack configuration of the Notification Destination. It must contain the following:'
                           items:
                             properties:
-                              channelId:
-                                description: The unique ID of the Notification Destination.
-                                type: string
                               channelIdSet:
                                 type: boolean
-                              oauthToken:
-                                type: string
                               oauthTokenSet:
                                 type: boolean
                               urlSet:
