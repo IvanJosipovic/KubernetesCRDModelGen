@@ -599,6 +599,36 @@ spec:
                                 type: array
                             type: object
                           type: array
+                        sourceConfigurations:
+                          items:
+                            properties:
+                              catalog:
+                                description: The name of catalog in Unity Catalog. Change of this parameter forces recreation of the pipeline. (Conflicts with storage).
+                                items:
+                                  properties:
+                                    postgres:
+                                      items:
+                                        properties:
+                                          slotConfig:
+                                            items:
+                                              properties:
+                                                publicationName:
+                                                  description: A user-friendly name for this pipeline. The name can be used to identify pipeline jobs in the UI.
+                                                  type: string
+                                                slotName:
+                                                  description: A user-friendly name for this pipeline. The name can be used to identify pipeline jobs in the UI.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                        type: object
+                                      type: array
+                                    sourceCatalog:
+                                      description: The name of catalog in Unity Catalog. Change of this parameter forces recreation of the pipeline. (Conflicts with storage).
+                                      type: string
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
                         sourceType:
                           type: string
                         tableConfiguration:
@@ -1409,6 +1439,36 @@ spec:
                                             type: array
                                         type: object
                                       type: array
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
+                        sourceConfigurations:
+                          items:
+                            properties:
+                              catalog:
+                                description: The name of catalog in Unity Catalog. Change of this parameter forces recreation of the pipeline. (Conflicts with storage).
+                                items:
+                                  properties:
+                                    postgres:
+                                      items:
+                                        properties:
+                                          slotConfig:
+                                            items:
+                                              properties:
+                                                publicationName:
+                                                  description: A user-friendly name for this pipeline. The name can be used to identify pipeline jobs in the UI.
+                                                  type: string
+                                                slotName:
+                                                  description: A user-friendly name for this pipeline. The name can be used to identify pipeline jobs in the UI.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                        type: object
+                                      type: array
+                                    sourceCatalog:
+                                      description: The name of catalog in Unity Catalog. Change of this parameter forces recreation of the pipeline. (Conflicts with storage).
+                                      type: string
                                   type: object
                                 type: array
                             type: object
@@ -2304,6 +2364,36 @@ spec:
                                             type: array
                                         type: object
                                       type: array
+                                  type: object
+                                type: array
+                            type: object
+                          type: array
+                        sourceConfigurations:
+                          items:
+                            properties:
+                              catalog:
+                                description: The name of catalog in Unity Catalog. Change of this parameter forces recreation of the pipeline. (Conflicts with storage).
+                                items:
+                                  properties:
+                                    postgres:
+                                      items:
+                                        properties:
+                                          slotConfig:
+                                            items:
+                                              properties:
+                                                publicationName:
+                                                  description: A user-friendly name for this pipeline. The name can be used to identify pipeline jobs in the UI.
+                                                  type: string
+                                                slotName:
+                                                  description: A user-friendly name for this pipeline. The name can be used to identify pipeline jobs in the UI.
+                                                  type: string
+                                              type: object
+                                            type: array
+                                        type: object
+                                      type: array
+                                    sourceCatalog:
+                                      description: The name of catalog in Unity Catalog. Change of this parameter forces recreation of the pipeline. (Conflicts with storage).
+                                      type: string
                                   type: object
                                 type: array
                             type: object

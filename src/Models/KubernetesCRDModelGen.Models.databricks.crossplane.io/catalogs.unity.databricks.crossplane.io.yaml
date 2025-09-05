@@ -71,12 +71,26 @@ spec:
                 type: string
               forProvider:
                 properties:
+                  browseOnly:
+                    type: boolean
                   comment:
                     description: User-supplied free-form text.
                     type: string
                   connectionName:
                     description: 'For Foreign Catalogs: the name of the connection to an external data source. Changes forces creation of a new resource.'
                     type: string
+                  effectivePredictiveOptimizationFlag:
+                    items:
+                      properties:
+                        inheritedFromName:
+                          description: Name of Catalog relative to parent metastore.
+                          type: string
+                        inheritedFromType:
+                          type: string
+                        value:
+                          type: string
+                      type: object
+                    type: array
                   enablePredictiveOptimization:
                     description: Whether predictive optimization should be enabled for this object and objects under it. Can be ENABLE, DISABLE or INHERIT
                     type: string
@@ -110,8 +124,17 @@ spec:
                   providerName:
                     description: 'For Delta Sharing Catalogs: the name of the delta sharing provider. Change forces creation of a new resource.'
                     type: string
+                  provisioningInfo:
+                    items:
+                      properties:
+                        state:
+                          type: string
+                      type: object
+                    type: array
                   shareName:
                     description: 'For Delta Sharing Catalogs: the name of the share under the share provider. Change forces creation of a new resource.'
+                    type: string
+                  storageLocation:
                     type: string
                   storageRoot:
                     description: Managed location of the catalog. Location in cloud storage where data for managed tables will be stored. If not specified, the location will default to the metastore root location. Change forces creation of a new resource.
@@ -130,12 +153,26 @@ spec:
                   for example because of an external controller is managing them, like an
                   autoscaler.
                 properties:
+                  browseOnly:
+                    type: boolean
                   comment:
                     description: User-supplied free-form text.
                     type: string
                   connectionName:
                     description: 'For Foreign Catalogs: the name of the connection to an external data source. Changes forces creation of a new resource.'
                     type: string
+                  effectivePredictiveOptimizationFlag:
+                    items:
+                      properties:
+                        inheritedFromName:
+                          description: Name of Catalog relative to parent metastore.
+                          type: string
+                        inheritedFromType:
+                          type: string
+                        value:
+                          type: string
+                      type: object
+                    type: array
                   enablePredictiveOptimization:
                     description: Whether predictive optimization should be enabled for this object and objects under it. Can be ENABLE, DISABLE or INHERIT
                     type: string
@@ -169,8 +206,17 @@ spec:
                   providerName:
                     description: 'For Delta Sharing Catalogs: the name of the delta sharing provider. Change forces creation of a new resource.'
                     type: string
+                  provisioningInfo:
+                    items:
+                      properties:
+                        state:
+                          type: string
+                      type: object
+                    type: array
                   shareName:
                     description: 'For Delta Sharing Catalogs: the name of the share under the share provider. Change forces creation of a new resource.'
+                    type: string
+                  storageLocation:
                     type: string
                   storageRoot:
                     description: Managed location of the catalog. Location in cloud storage where data for managed tables will be stored. If not specified, the location will default to the metastore root location. Change forces creation of a new resource.
@@ -262,26 +308,46 @@ spec:
             required:
             - forProvider
             type: object
-            x-kubernetes-validations:
-            - message: spec.forProvider.name is a required parameter
-              rule: "!('*' in self.managementPolicies || 'Create' in self.managementPolicies || 'Update' in self.managementPolicies) || has(self.forProvider.name) || (has(self.initProvider) && has(self.initProvider.name))"
           status:
             description: CatalogStatus defines the observed state of Catalog.
             properties:
               atProvider:
                 properties:
+                  browseOnly:
+                    type: boolean
+                  catalogType:
+                    type: string
                   comment:
                     description: User-supplied free-form text.
                     type: string
                   connectionName:
                     description: 'For Foreign Catalogs: the name of the connection to an external data source. Changes forces creation of a new resource.'
                     type: string
+                  createdAt:
+                    type: number
+                  createdBy:
+                    type: string
+                  effectivePredictiveOptimizationFlag:
+                    items:
+                      properties:
+                        inheritedFromName:
+                          description: Name of Catalog relative to parent metastore.
+                          type: string
+                        inheritedFromType:
+                          type: string
+                        value:
+                          type: string
+                      type: object
+                    type: array
                   enablePredictiveOptimization:
                     description: Whether predictive optimization should be enabled for this object and objects under it. Can be ENABLE, DISABLE or INHERIT
                     type: string
                   forceDestroy:
                     description: Delete catalog regardless of its contents.
                     type: boolean
+                  fullName:
+                    description: Name of Catalog relative to parent metastore.
+                    type: string
                   id:
                     description: ID of this catalog - same as the name.
                     type: string
@@ -312,11 +378,26 @@ spec:
                   providerName:
                     description: 'For Delta Sharing Catalogs: the name of the delta sharing provider. Change forces creation of a new resource.'
                     type: string
+                  provisioningInfo:
+                    items:
+                      properties:
+                        state:
+                          type: string
+                      type: object
+                    type: array
+                  securableType:
+                    type: string
                   shareName:
                     description: 'For Delta Sharing Catalogs: the name of the share under the share provider. Change forces creation of a new resource.'
                     type: string
+                  storageLocation:
+                    type: string
                   storageRoot:
                     description: Managed location of the catalog. Location in cloud storage where data for managed tables will be stored. If not specified, the location will default to the metastore root location. Change forces creation of a new resource.
+                    type: string
+                  updatedAt:
+                    type: number
+                  updatedBy:
                     type: string
                 type: object
               conditions:

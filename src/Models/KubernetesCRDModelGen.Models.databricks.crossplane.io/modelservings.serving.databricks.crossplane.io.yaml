@@ -180,6 +180,9 @@ spec:
                               renewalPeriod:
                                 description: Renewal period field for a serving endpoint rate limit. Currently, only minute is supported.
                                 type: string
+                              tokens:
+                                description: Specifies how many tokens are allowed for a key within the renewal_period.
+                                type: number
                             type: object
                           type: array
                         usageTrackingConfig:
@@ -710,6 +713,9 @@ spec:
                               renewalPeriod:
                                 description: Renewal period field for a serving endpoint rate limit. Currently, only minute is supported.
                                 type: string
+                              tokens:
+                                description: Specifies how many tokens are allowed for a key within the renewal_period.
+                                type: number
                             type: object
                           type: array
                         usageTrackingConfig:
@@ -1321,6 +1327,9 @@ spec:
                               renewalPeriod:
                                 description: Renewal period field for a serving endpoint rate limit. Currently, only minute is supported.
                                 type: string
+                              tokens:
+                                description: Specifies how many tokens are allowed for a key within the renewal_period.
+                                type: number
                             type: object
                           type: array
                         usageTrackingConfig:

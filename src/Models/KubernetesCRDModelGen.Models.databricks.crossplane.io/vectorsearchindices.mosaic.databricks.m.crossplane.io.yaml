@@ -66,7 +66,7 @@ spec:
                           items:
                             properties:
                               embeddingModelEndpointName:
-                                description: The name of the embedding model endpoint
+                                description: The name of the embedding model endpoint, used by default for both ingestion and querying.
                                 type: string
                               embeddingModelEndpointNameRef:
                                 description: Reference to a ModelServing in serving to populate embeddingModelEndpointName.
@@ -147,6 +147,9 @@ spec:
                                         type: string
                                     type: object
                                 type: object
+                              modelEndpointNameForQuery:
+                                description: The name of the embedding model endpoint which, if specified, is used for querying (not ingestion).
+                                type: string
                               name:
                                 description: Three-level name of the Mosaic AI Vector Search Index to create (catalog.schema.index_name).
                                 type: string
@@ -184,7 +187,10 @@ spec:
                           items:
                             properties:
                               embeddingModelEndpointName:
-                                description: The name of the embedding model endpoint
+                                description: The name of the embedding model endpoint, used by default for both ingestion and querying.
+                                type: string
+                              modelEndpointNameForQuery:
+                                description: The name of the embedding model endpoint which, if specified, is used for querying (not ingestion).
                                 type: string
                               name:
                                 description: Three-level name of the Mosaic AI Vector Search Index to create (catalog.schema.index_name).
@@ -322,7 +328,7 @@ spec:
                           items:
                             properties:
                               embeddingModelEndpointName:
-                                description: The name of the embedding model endpoint
+                                description: The name of the embedding model endpoint, used by default for both ingestion and querying.
                                 type: string
                               embeddingModelEndpointNameRef:
                                 description: Reference to a ModelServing in serving to populate embeddingModelEndpointName.
@@ -403,6 +409,9 @@ spec:
                                         type: string
                                     type: object
                                 type: object
+                              modelEndpointNameForQuery:
+                                description: The name of the embedding model endpoint which, if specified, is used for querying (not ingestion).
+                                type: string
                               name:
                                 description: Three-level name of the Mosaic AI Vector Search Index to create (catalog.schema.index_name).
                                 type: string
@@ -440,7 +449,10 @@ spec:
                           items:
                             properties:
                               embeddingModelEndpointName:
-                                description: The name of the embedding model endpoint
+                                description: The name of the embedding model endpoint, used by default for both ingestion and querying.
+                                type: string
+                              modelEndpointNameForQuery:
+                                description: The name of the embedding model endpoint which, if specified, is used for querying (not ingestion).
                                 type: string
                               name:
                                 description: Three-level name of the Mosaic AI Vector Search Index to create (catalog.schema.index_name).
@@ -638,7 +650,10 @@ spec:
                           items:
                             properties:
                               embeddingModelEndpointName:
-                                description: The name of the embedding model endpoint
+                                description: The name of the embedding model endpoint, used by default for both ingestion and querying.
+                                type: string
+                              modelEndpointNameForQuery:
+                                description: The name of the embedding model endpoint which, if specified, is used for querying (not ingestion).
                                 type: string
                               name:
                                 description: Three-level name of the Mosaic AI Vector Search Index to create (catalog.schema.index_name).
@@ -680,7 +695,10 @@ spec:
                           items:
                             properties:
                               embeddingModelEndpointName:
-                                description: The name of the embedding model endpoint
+                                description: The name of the embedding model endpoint, used by default for both ingestion and querying.
+                                type: string
+                              modelEndpointNameForQuery:
+                                description: The name of the embedding model endpoint which, if specified, is used for querying (not ingestion).
                                 type: string
                               name:
                                 description: Three-level name of the Mosaic AI Vector Search Index to create (catalog.schema.index_name).
