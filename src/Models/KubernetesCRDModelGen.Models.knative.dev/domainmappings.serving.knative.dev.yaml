@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     app.kubernetes.io/name: knative-serving
-    app.kubernetes.io/version: 1.19.4
+    app.kubernetes.io/version: 1.19.5
     knative.dev/crd-install: "true"
   name: domainmappings.serving.knative.dev
 spec:
