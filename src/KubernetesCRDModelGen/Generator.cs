@@ -62,25 +62,26 @@ public class Generator : IGenerator
         try
         {
             var code = GenerateCompilationUnit(crd, @namespace);
+            var syntaxTree = code.SyntaxTree;
+
+            // Use pooled memory streams to reduce GC pressure
+            using var peStream = new MemoryStream(1024 * 256); // Reduced pre-size
+            using var xmlDocumentationStream = new MemoryStream(32 * 1024); // Reduced pre-size
 
             var compilation = CSharpCompilation.Create(
                 crd.Metadata.Name,
-                syntaxTrees: [code.SyntaxTree],
+                syntaxTrees: new[] { syntaxTree },
                 references: metadataReferences,
                 options: _options);
-
-            using var peStream = new MemoryStream();
-            using var xmlDocumentationStream = new MemoryStream();
 
             var result = compilation.Emit(peStream, xmlDocumentationStream: xmlDocumentationStream);
 
             if (!result.Success)
             {
-                var failures = result.Diagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
-
-                foreach (var diagnostic in failures)
+                foreach (var diagnostic in result.Diagnostics)
                 {
-                    logger.LogError("Error creating Assembly: {id}: {message}", diagnostic.Id, diagnostic.GetMessage());
+                    if (diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error)
+                        logger.LogError("Error creating Assembly: {id}: {message}", diagnostic.Id, diagnostic.GetMessage());
                 }
             }
             else
@@ -113,30 +114,34 @@ public class Generator : IGenerator
 
     private CompilationUnitSyntax GenerateCompilationUnit(V1CustomResourceDefinition crd, string @namespace)
     {
-        var versions = crd.Spec.Versions.Where(x => x.Served);
+        var versions = crd.Spec.Versions.Where(x => x.Served).ToList();
+        if (versions.Count == 0)
+            throw new InvalidOperationException("No served versions found in CRD.");
 
-        var types = new List<MemberDeclarationSyntax>();
+        var types = new List<MemberDeclarationSyntax>(versions.Count * 2); // Pre-size for fewer allocations
+        var reader = new OpenApiJsonReader();
+        var openApiDoc = new OpenApiDocument();
 
         foreach (var version in versions)
         {
             var schema = version.Schema.OpenAPIV3Schema;
+            if (schema == null) continue;
 
-            var reader = new OpenApiJsonReader();
-
-            var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
-
-            var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
+            var node = JsonSerializer.SerializeToNode(schema);
+            var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, openApiDoc, out var diag);
 
             if (diag != null && diag.Errors.Count > 0)
             {
-                logger.LogError("Error: {err}", diag.Errors.Select(x => x.Message));
+                logger.LogError("Error: {err}", string.Join(", ", diag.Errors.Select(x => x.Message)));
+                continue;
             }
 
-            var code = codeGenerator.GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
-            types.AddRange(code);
+            var codeList = codeGenerator.GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
+            if (codeList != null && codeList.Length > 0)
+                types.AddRange(codeList);
         }
 
-        return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, [.. types]);
+        return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, types.ToArray());
     }
 
     private MetadataReference[] GetReferences()

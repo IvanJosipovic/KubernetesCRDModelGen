@@ -507,6 +507,7 @@ public class CodeGenerator : ICodeGenerator
 
         if (EnumSupport && typeName.EndsWith("Enum"))
         {
+            var cleanTypeName = CleanIdentifier(typeName);
             propDecleration = propDecleration.AddAttributeLists(
                 SyntaxFactory.AttributeList(
                     SyntaxFactory.SingletonSeparatedList(
@@ -516,7 +517,7 @@ public class CodeGenerator : ICodeGenerator
                                 SyntaxFactory.SingletonSeparatedList(
                                     SyntaxFactory.AttributeArgument(
                                         SyntaxFactory.TypeOfExpression(
-                                            SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(typeName)}>")
+                                            SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{cleanTypeName}>")
                                         )
                                     )
                                 )
@@ -546,24 +547,20 @@ public class CodeGenerator : ICodeGenerator
 
     internal static string? CleanIdentifier(string name, bool @namespace = false)
     {
-        // trim off leading and trailing whitespace
+        if (string.IsNullOrWhiteSpace(name))
+            return null;
+
         name = name.Trim();
 
-        // should deal with spaces => camel casing;
-        if (@namespace == false)
+        // Avoid Humanizer.Dehumanize if not needed
+        if (!@namespace && name.IndexOf(' ') >= 0)
         {
             name = name.Dehumanize();
         }
 
-        if (string.IsNullOrEmpty(name))
-        {
-            return null;
-        }
-
-        var sb = new StringBuilder();
+        var sb = new StringBuilder(name.Length + 4); // Pre-size for fewer allocations
         if (!SyntaxFacts.IsIdentifierStartCharacter(name[0]))
         {
-            // the first characters
             sb.Append('_');
         }
 
@@ -584,25 +581,15 @@ public class CodeGenerator : ICodeGenerator
 
         if (@namespace)
         {
-            var newResult = string.Empty;
-            foreach (var chunk in result.Split('.'))
+            var chunks = result.Split('.');
+            for (int i = 0; i < chunks.Length; i++)
             {
-                if (!string.IsNullOrEmpty(newResult))
+                if (SyntaxFacts.GetKeywordKind(chunks[i]) != SyntaxKind.None)
                 {
-                    newResult += '.';
-                }
-
-                if (SyntaxFacts.GetKeywordKind(chunk) != SyntaxKind.None)
-                {
-                    newResult += '@' + chunk;
-                }
-                else
-                {
-                    newResult += chunk;
+                    chunks[i] = '@' + chunks[i];
                 }
             }
-
-            return newResult;
+            return string.Join(".", chunks);
         }
 
         return result;
