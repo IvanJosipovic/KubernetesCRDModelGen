@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.132.1
+    cnrm.cloud.google.com/version: 1.134.0
   labels:
     cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
@@ -333,6 +333,166 @@ spec:
                         description: The maximum number of audit violations to be stored in a constraint. If not set, the internal default of 20 will be used.
                         format: int64
                         type: integer
+                      deploymentConfigs:
+                        description: Map of deployment configs to deployments (“admission”, “audit”, “mutation”).
+                        properties:
+                          admission:
+                            properties:
+                              containerResources:
+                                description: Container resource requirements.
+                                properties:
+                                  limits:
+                                    description: Limits describes the maximum amount of compute resources allowed for use by the running container.
+                                    properties:
+                                      cpu:
+                                        description: CPU requirement expressed in Kubernetes resource units.
+                                        type: string
+                                      memory:
+                                        description: Memory requirement expressed in Kubernetes resource units.
+                                        type: string
+                                    type: object
+                                  requests:
+                                    description: Requests describes the amount of compute resources reserved for the container by the kube-scheduler.
+                                    properties:
+                                      cpu:
+                                        description: CPU requirement expressed in Kubernetes resource units.
+                                        type: string
+                                      memory:
+                                        description: Memory requirement expressed in Kubernetes resource units.
+                                        type: string
+                                    type: object
+                                type: object
+                              podAffinity:
+                                description: Pod affinity configuration.
+                                type: string
+                              podTolerations:
+                                description: Pod tolerations of node taints.
+                                items:
+                                  properties:
+                                    effect:
+                                      description: Matches a taint effect.
+                                      type: string
+                                    key:
+                                      description: Matches a taint key (not necessarily unique).
+                                      type: string
+                                    operator:
+                                      description: Matches a taint operator.
+                                      type: string
+                                    value:
+                                      description: Matches a taint value.
+                                      type: string
+                                  type: object
+                                type: array
+                              replicaCount:
+                                description: Pod replica count.
+                                format: int64
+                                type: integer
+                            type: object
+                          audit:
+                            properties:
+                              containerResources:
+                                description: Container resource requirements.
+                                properties:
+                                  limits:
+                                    description: Limits describes the maximum amount of compute resources allowed for use by the running container.
+                                    properties:
+                                      cpu:
+                                        description: CPU requirement expressed in Kubernetes resource units.
+                                        type: string
+                                      memory:
+                                        description: Memory requirement expressed in Kubernetes resource units.
+                                        type: string
+                                    type: object
+                                  requests:
+                                    description: Requests describes the amount of compute resources reserved for the container by the kube-scheduler.
+                                    properties:
+                                      cpu:
+                                        description: CPU requirement expressed in Kubernetes resource units.
+                                        type: string
+                                      memory:
+                                        description: Memory requirement expressed in Kubernetes resource units.
+                                        type: string
+                                    type: object
+                                type: object
+                              podAffinity:
+                                description: Pod affinity configuration.
+                                type: string
+                              podTolerations:
+                                description: Pod tolerations of node taints.
+                                items:
+                                  properties:
+                                    effect:
+                                      description: Matches a taint effect.
+                                      type: string
+                                    key:
+                                      description: Matches a taint key (not necessarily unique).
+                                      type: string
+                                    operator:
+                                      description: Matches a taint operator.
+                                      type: string
+                                    value:
+                                      description: Matches a taint value.
+                                      type: string
+                                  type: object
+                                type: array
+                              replicaCount:
+                                description: Pod replica count.
+                                format: int64
+                                type: integer
+                            type: object
+                          mutation:
+                            properties:
+                              containerResources:
+                                description: Container resource requirements.
+                                properties:
+                                  limits:
+                                    description: Limits describes the maximum amount of compute resources allowed for use by the running container.
+                                    properties:
+                                      cpu:
+                                        description: CPU requirement expressed in Kubernetes resource units.
+                                        type: string
+                                      memory:
+                                        description: Memory requirement expressed in Kubernetes resource units.
+                                        type: string
+                                    type: object
+                                  requests:
+                                    description: Requests describes the amount of compute resources reserved for the container by the kube-scheduler.
+                                    properties:
+                                      cpu:
+                                        description: CPU requirement expressed in Kubernetes resource units.
+                                        type: string
+                                      memory:
+                                        description: Memory requirement expressed in Kubernetes resource units.
+                                        type: string
+                                    type: object
+                                type: object
+                              podAffinity:
+                                description: Pod affinity configuration.
+                                type: string
+                              podTolerations:
+                                description: Pod tolerations of node taints.
+                                items:
+                                  properties:
+                                    effect:
+                                      description: Matches a taint effect.
+                                      type: string
+                                    key:
+                                      description: Matches a taint key (not necessarily unique).
+                                      type: string
+                                    operator:
+                                      description: Matches a taint operator.
+                                      type: string
+                                    value:
+                                      description: Matches a taint value.
+                                      type: string
+                                  type: object
+                                type: array
+                              replicaCount:
+                                description: Pod replica count.
+                                format: int64
+                                type: integer
+                            type: object
+                        type: object
                       exemptableNamespaces:
                         description: The set of namespaces that are excluded from Policy Controller checks. Namespaces do not need to currently exist on the cluster.
                         items:
@@ -374,8 +534,6 @@ spec:
                   version:
                     description: Optional. Version of Policy Controller to install. Defaults to the latest version.
                     type: string
-                required:
-                - policyControllerHubConfig
                 type: object
               projectRef:
                 description: Immutable. The Project that this resource belongs to.

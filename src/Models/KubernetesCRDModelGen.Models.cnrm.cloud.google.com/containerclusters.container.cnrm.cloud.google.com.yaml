@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.132.1
+    cnrm.cloud.google.com/version: 1.134.0
   labels:
     cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/stability-level: stable
@@ -371,6 +371,24 @@ spec:
                     type: boolean
                 required:
                 - enabled
+                type: object
+              controlPlaneEndpointsConfig:
+                description: Configuration for all of the cluster's control plane endpoints. Currently supports only DNS endpoint configuration and disable IP endpoint. Other IP endpoint configurations are available in private_cluster_config.
+                properties:
+                  dnsEndpointConfig:
+                    description: DNS endpoint configuration.
+                    properties:
+                      allowExternalTraffic:
+                        description: Controls whether user traffic is allowed over this endpoint. Note that GCP-managed services may still use the endpoint even if this is false.
+                        type: boolean
+                    type: object
+                  ipEndpointsConfig:
+                    description: IP endpoint configuration.
+                    properties:
+                      enabled:
+                        description: Controls whether to allow direct IP access. When false, configuration of masterAuthorizedNetworksConfig, privateClusterConfig.enablePrivateEndpoint, privateClusterConfig.privateEndpointSubnetwork and privateClusterConfig.masterGlobalAccessConfig fields won't be used, and privateClusterConfig.privateEndpoint and privateClusterConfig.publicEndpoint fields won't be populated.
+                        type: boolean
+                    type: object
                 type: object
               costManagementConfig:
                 description: Cost management configuration for the cluster.
@@ -1251,7 +1269,7 @@ spec:
                     description: When true, the cluster's private endpoint is used as the cluster endpoint and access through the public endpoint is disabled. When false, either endpoint can be used.
                     type: boolean
                   enablePrivateNodes:
-                    description: Immutable. Enables the private cluster feature, creating a private endpoint on the cluster. In a private cluster, nodes only have RFC 1918 private addresses and communicate with the master's private endpoint via private networking.
+                    description: Enables the private cluster feature, creating a private endpoint on the cluster. In a private cluster, nodes only have RFC 1918 private addresses and communicate with the master's private endpoint via private networking.
                     type: boolean
                   masterGlobalAccessConfig:
                     description: Controls cluster master global access settings.
@@ -1468,6 +1486,17 @@ spec:
               observedState:
                 description: The observed state of the underlying GCP resource.
                 properties:
+                  controlPlaneEndpointsConfig:
+                    description: Configuration for all of the cluster's control plane endpoints. Currently supports only DNS endpoint configuration and disable IP endpoint. Other IP endpoint configurations are available in private_cluster_config.
+                    properties:
+                      dnsEndpointConfig:
+                        description: DNS endpoint configuration.
+                        properties:
+                          endpoint:
+                            description: The cluster's DNS endpoint.
+                            type: string
+                        type: object
+                    type: object
                   masterAuth:
                     description: DEPRECATED. Basic authentication was removed for GKE cluster versions >= 1.19. The authentication information for accessing the Kubernetes master. Some values in this block are only returned by the API if your service account has permission to get credentials for your GKE cluster. If you see an unexpected diff unsetting your client cert, ensure you have the container.clusters.getCredentials permission.
                     properties:
