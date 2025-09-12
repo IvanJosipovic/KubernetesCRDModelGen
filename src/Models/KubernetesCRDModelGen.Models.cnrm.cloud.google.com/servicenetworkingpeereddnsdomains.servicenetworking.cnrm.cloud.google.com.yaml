@@ -5,21 +5,20 @@ metadata:
     cnrm.cloud.google.com/version: 1.134.0
   labels:
     cnrm.cloud.google.com/managed-by-kcc: "true"
-    cnrm.cloud.google.com/stability-level: alpha
     cnrm.cloud.google.com/system: "true"
-    cnrm.cloud.google.com/tf2crd: "true"
-  name: healthcaredatasets.healthcare.cnrm.cloud.google.com
+  name: servicenetworkingpeereddnsdomains.servicenetworking.cnrm.cloud.google.com
 spec:
-  group: healthcare.cnrm.cloud.google.com
+  group: servicenetworking.cnrm.cloud.google.com
   names:
     categories:
     - gcp
-    kind: HealthcareDataset
-    plural: healthcaredatasets
+    kind: ServiceNetworkingPeeredDNSDomain
+    listKind: ServiceNetworkingPeeredDNSDomainList
+    plural: servicenetworkingpeereddnsdomains
     shortNames:
-    - gcphealthcaredataset
-    - gcphealthcaredatasets
-    singular: healthcaredataset
+    - gcpservicenetworkingpeereddnsdomain
+    - gcpservicenetworkingpeereddnsdomains
+    singular: servicenetworkingpeereddnsdomain
   scope: Namespaced
   versions:
   - additionalPrinterColumns:
@@ -41,19 +40,21 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
+        description: ServiceNetworkingPeeredDNSDomain is the Schema for the ServiceNetworkingPeeredDNSDomain API
         properties:
           apiVersion:
-            description: 'apiVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#resources'
+            description: 'APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources'
             type: string
           kind:
-            description: 'kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds'
+            description: 'Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds'
             type: string
           metadata:
             type: object
           spec:
+            description: ServiceNetworkingPeeredDNSDomainSpec defines the desired state of ServiceNetworkingPeeredDNSDomain
             properties:
-              location:
-                description: Immutable. The location for the Dataset.
+              dnsSuffix:
+                description: The DNS domain name suffix e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends with a trailing dot.
                 type: string
               projectRef:
                 description: The project that this resource belongs to.
@@ -73,32 +74,29 @@ spec:
                   - external
                 properties:
                   external:
-                    description: 'Allowed value: The `name` field of a `Project` resource.'
+                    description: The `projectID` field of a project, when not managed by Config Connector.
+                    type: string
+                  kind:
+                    description: The kind of the Project resource; optional but must be `Project` if provided.
                     type: string
                   name:
-                    description: 'Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names'
+                    description: The `name` field of a `Project` resource.
                     type: string
                   namespace:
-                    description: 'Namespace of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/'
+                    description: The `namespace` field of a `Project` resource.
                     type: string
                 type: object
               resourceID:
-                description: Immutable. Optional. The name of the resource. Used for creation and acquisition. When unset, the value of `metadata.name` is used as the default.
-                type: string
-              timeZone:
-                description: |-
-                  The default timezone used by this dataset. Must be a either a valid IANA time zone name such as
-                  "America/New_York" or empty, which defaults to UTC. This is used for parsing times in resources
-                  (e.g., HL7 messages) where no explicit timezone is specified.
+                description: The ServiceNetworkingPeeredDNSDomain name. If not given, the metadata.name will be used.
                 type: string
             required:
-            - location
             - projectRef
             type: object
           status:
+            description: ServiceNetworkingPeeredDNSDomainStatus defines the config connector machine state of ServiceNetworkingPeeredDNSDomain
             properties:
               conditions:
-                description: Conditions represent the latest available observation of the resource's current state.
+                description: Conditions represent the latest available observations of the object's current state.
                 items:
                   properties:
                     lastTransitionTime:
@@ -118,12 +116,16 @@ spec:
                       type: string
                   type: object
                 type: array
+              externalRef:
+                description: A unique specifier for the ServiceNetworkingPeeredDNSDomain resource in GCP.
+                type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
+                format: int64
                 type: integer
-              selfLink:
-                description: The fully qualified name of this dataset.
-                type: string
+              observedState:
+                description: ObservedState is the state of the resource as most recently observed in GCP.
+                type: object
             type: object
         required:
         - spec
@@ -136,5 +138,3 @@ status:
   acceptedNames:
     kind: ""
     plural: ""
-  conditions: []
-  storedVersions: []
