@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.134.0
+    cnrm.cloud.google.com/version: 1.135.0
   labels:
     cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/system: "true"
@@ -56,8 +56,8 @@ spec:
               dnsSuffix:
                 description: The DNS domain name suffix e.g. `example.com.`. Cloud DNS requires that a DNS suffix ends with a trailing dot.
                 type: string
-              projectRef:
-                description: The project that this resource belongs to.
+              networkRef:
+                description: The network that this resource belongs to.
                 oneOf:
                 - not:
                     required:
@@ -74,23 +74,20 @@ spec:
                   - external
                 properties:
                   external:
-                    description: The `projectID` field of a project, when not managed by Config Connector.
-                    type: string
-                  kind:
-                    description: The kind of the Project resource; optional but must be `Project` if provided.
+                    description: A reference to an externally managed Compute Network resource. Should be in the format `projects/{{projectID}}/global/networks/{{network}}`.
                     type: string
                   name:
-                    description: The `name` field of a `Project` resource.
+                    description: The `name` field of a `ComputeNetwork` resource.
                     type: string
                   namespace:
-                    description: The `namespace` field of a `Project` resource.
+                    description: The `namespace` field of a `ComputeNetwork` resource.
                     type: string
                 type: object
               resourceID:
                 description: The ServiceNetworkingPeeredDNSDomain name. If not given, the metadata.name will be used.
                 type: string
             required:
-            - projectRef
+            - networkRef
             type: object
           status:
             description: ServiceNetworkingPeeredDNSDomainStatus defines the config connector machine state of ServiceNetworkingPeeredDNSDomain

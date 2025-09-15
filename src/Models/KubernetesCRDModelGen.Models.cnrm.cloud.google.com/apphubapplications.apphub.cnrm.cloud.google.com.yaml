@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.134.0
+    cnrm.cloud.google.com/version: 1.135.0
   labels:
     cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/system: "true"
@@ -188,14 +188,14 @@ spec:
                   type: object
                 type: array
               externalRef:
-                description: A unique specifier for the AppHubApplication resource in GCP.
+                description: A unique specifier for the AppHubApplication resource in Google Cloud.
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 format: int64
                 type: integer
               observedState:
-                description: ObservedState is the state of the resource as most recently observed in GCP.
+                description: ObservedState is the state of the resource as most recently observed in Google Cloud .
                 properties:
                   createTime:
                     description: Output only. Create time.
@@ -385,14 +385,14 @@ spec:
                   type: object
                 type: array
               externalRef:
-                description: A unique specifier for the AppHubApplication resource in GCP.
+                description: A unique specifier for the AppHubApplication resource in Google Cloud .
                 type: string
               observedGeneration:
                 description: ObservedGeneration is the generation of the resource that was most recently observed by the Config Connector controller. If this is equal to metadata.generation, then that means that the current reported status reflects the most recent desired state of the resource.
                 format: int64
                 type: integer
               observedState:
-                description: ObservedState is the state of the resource as most recently observed in GCP.
+                description: ObservedState is the state of the resource as most recently observed in Google Cloud .
                 properties:
                   createTime:
                     description: Output only. Create time.

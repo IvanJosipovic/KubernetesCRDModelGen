@@ -2,7 +2,7 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   annotations:
-    cnrm.cloud.google.com/version: 1.134.0
+    cnrm.cloud.google.com/version: 1.135.0
   labels:
     cnrm.cloud.google.com/managed-by-kcc: "true"
     cnrm.cloud.google.com/system: "true"
@@ -129,15 +129,12 @@ spec:
                         - external
                       required:
                       - name
-                      - kind
                     - not:
                         anyOf:
                         - required:
                           - name
                         - required:
                           - namespace
-                        - required:
-                          - kind
                       required:
                       - external
                     properties:
@@ -253,15 +250,12 @@ spec:
                         - external
                       required:
                       - name
-                      - kind
                     - not:
                         anyOf:
                         - required:
                           - name
                         - required:
                           - namespace
-                        - required:
-                          - kind
                       required:
                       - external
                     properties:
@@ -388,15 +382,12 @@ spec:
                         - external
                       required:
                       - name
-                      - kind
                     - not:
                         anyOf:
                         - required:
                           - name
                         - required:
                           - namespace
-                        - required:
-                          - kind
                       required:
                       - external
                     properties:
@@ -571,15 +562,12 @@ spec:
                         - external
                       required:
                       - name
-                      - kind
                     - not:
                         anyOf:
                         - required:
                           - name
                         - required:
                           - namespace
-                        - required:
-                          - kind
                       required:
                       - external
                     properties:
@@ -695,15 +683,12 @@ spec:
                         - external
                       required:
                       - name
-                      - kind
                     - not:
                         anyOf:
                         - required:
                           - name
                         - required:
                           - namespace
-                        - required:
-                          - kind
                       required:
                       - external
                     properties:
@@ -830,15 +815,12 @@ spec:
                         - external
                       required:
                       - name
-                      - kind
                     - not:
                         anyOf:
                         - required:
                           - name
                         - required:
                           - namespace
-                        - required:
-                          - kind
                       required:
                       - external
                     properties:
