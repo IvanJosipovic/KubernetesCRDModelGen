@@ -4,7 +4,7 @@ metadata:
   labels:
     app.kubernetes.io/name: knative-serving
     app.kubernetes.io/component: networking
-    app.kubernetes.io/version: 1.19.5
+    app.kubernetes.io/version: 1.19.6
     knative.dev/crd-install: "true"
   name: clusterdomainclaims.networking.internal.knative.dev
 spec:

@@ -3,7 +3,7 @@ kind: CustomResourceDefinition
 metadata:
   labels:
     knative.dev/crd-install: "true"
-    app.kubernetes.io/version: 1.19.4
+    app.kubernetes.io/version: 1.19.5
     app.kubernetes.io/name: knative-eventing
   name: triggers.eventing.knative.dev
 spec:
