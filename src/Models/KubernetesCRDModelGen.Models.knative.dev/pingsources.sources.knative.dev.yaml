@@ -13,7 +13,7 @@ metadata:
     eventing.knative.dev/source: "true"
     duck.knative.dev/source: "true"
     knative.dev/crd-install: "true"
-    app.kubernetes.io/version: 1.19.4
+    app.kubernetes.io/version: 1.19.5
     app.kubernetes.io/name: knative-eventing
   name: pingsources.sources.knative.dev
 spec:
