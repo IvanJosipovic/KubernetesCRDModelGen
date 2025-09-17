@@ -1,12 +1,10 @@
 name: Update CRDs
 
 on:
-  push:
-    branches:
-      - dev
-  workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *"
+  workflow_call:
+    secrets:
+      GITHUB_TOKEN:
+        required: true
 
 jobs:
   sync-crds:
