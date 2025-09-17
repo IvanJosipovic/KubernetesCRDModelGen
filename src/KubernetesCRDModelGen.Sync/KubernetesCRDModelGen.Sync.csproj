@@ -11,7 +11,7 @@
     <ToolCommandName>KubernetesCRDModelGen.Sync</ToolCommandName>
     <PackageId>KubernetesCRDModelGen.Sync</PackageId>
     <Authors>Ivan Josipovic</Authors>
-    <Description>Converts Custom Resource Definition Yaml files to Models</Description>
+    <Description>Synchronizes Custom Resource Definitions from numerous sources</Description>
     <PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
     <RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -26,5 +26,9 @@
     <PackageReference Include="SemanticVersioning" Version="3.0.0" />
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
     <PackageReference Include="KubernetesClient" Version="17.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
