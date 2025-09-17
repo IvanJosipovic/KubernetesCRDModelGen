@@ -3,7 +3,7 @@ name: CICD
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
+      GH_TOKEN:
         required: true
       NUGET_API_KEY:
         required: true
@@ -23,7 +23,7 @@ jobs:
         extra_plugins: |
           conventional-changelog-conventionalcommits
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v5
@@ -43,7 +43,7 @@ jobs:
         extra_plugins: |
           conventional-changelog-conventionalcommits
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: .NET NuGet Push
       if: steps.semantic.outputs.new_release_published == 'true'

@@ -3,7 +3,7 @@ name: Update CRDs
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
+      GH_TOKEN:
         required: true
 
 jobs:
@@ -57,7 +57,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           branch: sync-charts
           commit-message: "feat: Update CRDs"
           title: "feat: Update CRDs"
@@ -67,6 +67,6 @@ jobs:
         if: steps.checkfiles.outputs.createpr == 'True'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
           merge-method: squash
