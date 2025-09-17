@@ -81,11 +81,11 @@ public class Worker : BackgroundService
     {
         foreach (var url in config.DirectUrl!.Urls)
         {
-            await ProcessDirectUrl(config, url, config.DirectUrl.Filter);
+            await ProcessDirectUrl(url, config.DirectUrl.Filter);
         }
     }
 
-    private async Task ProcessDirectUrl(Config config, string url, string? filter = null)
+    private async Task ProcessDirectUrl(string url, string? filter = null)
     {
         using var client = httpClientFactory.CreateClient();
 
@@ -98,7 +98,7 @@ public class Worker : BackgroundService
 
         if (ext == ".yaml" || ext == ".yml")
         {
-            ProcessYamlStream(config, stream);
+            ProcessYamlStream(stream);
         }
         else if (url.EndsWith(".zip"))
         {
@@ -112,7 +112,7 @@ public class Worker : BackgroundService
                         continue;
                     }
                     using var fileContents = zipStream.GetInputStream(entry);
-                    ProcessYamlStream(config, fileContents);
+                    ProcessYamlStream(fileContents);
                 }
             }
         }
@@ -132,7 +132,7 @@ public class Worker : BackgroundService
                     using var fileContents = new MemoryStream();
                     await tarInputStream.CopyEntryContentsAsync(fileContents, CancellationToken.None);
                     fileContents.Position = 0;
-                    ProcessYamlStream(config, fileContents);
+                    ProcessYamlStream(fileContents);
                 }
             }
         }
@@ -168,7 +168,7 @@ public class Worker : BackgroundService
         {
             if (!string.IsNullOrEmpty(config.GitHub.AssetFilter) && item.name.StartsWith(config.GitHub.AssetFilter, StringComparison.InvariantCultureIgnoreCase))
             {
-                await ProcessDirectUrl(config, item.browser_download_url);
+                await ProcessDirectUrl(item.browser_download_url);
             }
         }
     }
@@ -184,12 +184,12 @@ public class Worker : BackgroundService
         byte[] byteArray = Encoding.UTF8.GetBytes(yaml);
         var stream = new MemoryStream(byteArray);
 
-        ProcessYamlStream(config, stream);
+        ProcessYamlStream(stream);
 
         await HelmClient.RepoRemove("temp");
     }
 
-    private void ProcessYamlStream(Config config, Stream stream)
+    private void ProcessYamlStream(Stream stream)
     {
         try
         {
@@ -200,7 +200,7 @@ public class Worker : BackgroundService
             {
                 if (resource is V1CustomResourceDefinition crd)
                 {
-                    var filePath = Path.Combine(GetProjectPath(config), crd.Name() + ".yaml");
+                    var filePath = Path.Combine("crds", crd.Name() + ".yaml");
 
                     File.WriteAllText(filePath, KubernetesYaml.Serialize(crd));
                 }
@@ -251,20 +251,27 @@ public class Worker : BackgroundService
         return "KubernetesCRDModelGen.Models." + config.Group;
     }
 
-    private string GetProjectPath(Config config)
+    private static void CreateProject(Config config)
     {
-        return Path.Combine(configuration.GetValue<string>("ModelDir"), GetName(config));
-    }
+        Directory.CreateDirectory("crds");
 
-    private void CreateProject(Config config)
-    {
-        var projectPath = GetProjectPath(config);
+        var csprojPath = Path.Combine(GetName(config) + ".csproj");
 
-        var csprojPath = Path.Combine(projectPath, GetName(config) + ".csproj");
+        File.WriteAllText(csprojPath, $"""
+            <Project Sdk="Microsoft.NET.Sdk">
+              <PropertyGroup>
+                <PackageId>{GetName(config)}</PackageId>
+                <RepositoryUrl>https://github.com/IvanJosipovic/{GetName(config)}</RepositoryUrl>
+              </PropertyGroup>
+            </Project>
+            """);
 
-        Directory.CreateDirectory(projectPath);
-
-        File.WriteAllText(csprojPath, """<Project Sdk="Microsoft.NET.Sdk"></Project>""");
+        File.WriteAllText("README.md", $"""
+            ## {GetName(config)}
+            C# models generated from {config.Group} CRDs
+            [![Nuget](https://img.shields.io/nuget/vpre/{GetName(config)}.svg?style=flat-square)](https://www.nuget.org/packages/{GetName(config)})
+            [![Nuget)](https://img.shields.io/nuget/dt/{GetName(config)}.svg?style=flat-square)](https://www.nuget.org/packages/{GetName(config)})
+            """);
     }
 }
 
