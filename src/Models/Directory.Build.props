@@ -22,13 +22,12 @@
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient" Version="17.0.14" />
+        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-alpha.614" />
         <PackageReference Include="System.Text.Json" Version="9.0.9" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="..\..\..\README.md" Pack="true" PackagePath="\" />
+        <None Include="README.md" Pack="true" PackagePath="\" />
         <AdditionalFiles Include="*.yaml" />
-        <ProjectReference Include="..\..\KubernetesCRDModelGen.SourceGenerator\KubernetesCRDModelGen.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
-        <ProjectReference Include="..\..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
     </ItemGroup>
 </Project>
