@@ -28,6 +28,6 @@
 
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath="\" />
-        <AdditionalFiles Include="*.yaml" />
+        <AdditionalFiles Include="crds\*.yaml" />
     </ItemGroup>
 </Project>
