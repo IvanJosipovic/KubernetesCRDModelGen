@@ -24,7 +24,7 @@ jobs:
         run: dotnet tool install --global KubernetesCRDModelGen.Sync --prerelease
 
       - name: Get default props
-        run: wget https://raw.githubusercontent.com/IvanJosipovic/KubernetesCRDModelGen/refs/heads/alpha/src/Models/Directory.Build.props
+        run: wget -q https://raw.githubusercontent.com/IvanJosipovic/KubernetesCRDModelGen/refs/heads/alpha/src/Models/Directory.Build.props -O Directory.Build.props
 
       - name: Clean Models
         run: rm -rf crds
