@@ -22,7 +22,7 @@
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient" Version="17.0.14" />
-        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-alpha.614" />
+        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-alpha.615" />
         <PackageReference Include="System.Text.Json" Version="9.0.9" />
     </ItemGroup>
 
