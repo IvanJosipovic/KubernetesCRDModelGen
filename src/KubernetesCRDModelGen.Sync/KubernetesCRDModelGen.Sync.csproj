@@ -20,10 +20,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="appsettings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="CliWrap" Version="3.9.0" />
     <PackageReference Include="KubernetesClient" Version="17.0.14" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.9" />
@@ -32,12 +28,5 @@
     <PackageReference Include="Semver" Version="3.0.0" />
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
     <PackageReference Include="Valleysoft.DockerRegistryClient" Version="6.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
-    <None Include="appsettings.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 </Project>
