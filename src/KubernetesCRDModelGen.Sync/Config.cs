@@ -10,6 +10,8 @@ internal class Config
 
     public DirectUrlConfig? DirectUrl { get; set; }
 
+    public OCIConfig? OCI { get; set; }
+
     internal class DirectUrlConfig
     {
         public List<string>? Urls { get; set; }
@@ -35,5 +37,14 @@ internal class Config
         public bool? PreRelease { get; set; }
 
         public string? CMD { get; set; }
+    }
+
+    internal class OCIConfig
+    {
+        public required string Image { get; set; }
+
+        public string? SemVer { get; set; }
+
+        public string? Tag { get; set; }
     }
 }

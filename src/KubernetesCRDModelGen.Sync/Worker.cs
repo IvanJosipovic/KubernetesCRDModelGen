@@ -60,6 +60,10 @@ public class Worker : BackgroundService
                     {
                         await ProcessHelmChart(item);
                     }
+                    if (item.OCI != null)
+                    {
+                        await ProcessOCI(item);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -75,6 +79,23 @@ public class Worker : BackgroundService
         }
 
         _lifeTime.StopApplication();
+    }
+
+    private async Task ProcessOCI(Config item)
+    {
+        var streams = await OCIClient.OCIClient.GetStreams(item);
+
+        foreach (var stream in streams)
+        {
+            try
+            {
+                ProcessYamlStream(stream.Value);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error Processing Yaml Stream: {key}", stream.Key);
+            }
+        }
     }
 
     private async Task ProcessDirectUrls(Config config)
