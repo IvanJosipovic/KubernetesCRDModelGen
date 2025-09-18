@@ -24,7 +24,7 @@ jobs:
         run: dotnet tool install --global KubernetesCRDModelGen.Sync --prerelease
 
       - name: Delete default props
-        run: rm Directory.Build.props
+        run: rm Directory.Build.props || true
 
       - name: Get default props
         run: wget -q https://raw.githubusercontent.com/IvanJosipovic/KubernetesCRDModelGen/refs/heads/alpha/src/Models/Directory.Build.props -O Directory.Build.props
@@ -74,3 +74,4 @@ jobs:
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
 
           merge-method: squash
+
