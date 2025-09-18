@@ -29,4 +29,8 @@
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
     <PackageReference Include="Valleysoft.DockerRegistryClient" Version="6.1.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>
