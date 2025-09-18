@@ -52,7 +52,7 @@ jobs:
         shell: pwsh
         run: |
           git add .
-          $createPR = (git diff --cached --numstat | Measure-Object -Line).Lines -gt 1;
+          $createPR = (git diff --cached --numstat | Measure-Object -Line).Lines -gt 0;
           echo "createpr=$createPR" >> $env:GITHUB_OUTPUT
 
       - name: Create Pull Request
@@ -74,4 +74,5 @@ jobs:
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
 
           merge-method: squash
+
 
