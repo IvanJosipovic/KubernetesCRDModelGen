@@ -145,34 +145,15 @@ internal static partial class OCIClient
         {
             foreach (var layer in docker.Layers)
             {
-                try
-                {
-                    var stream = await client.Blobs.GetAsync(GetRepositoryName(image), layer.Digest);
+                var stream = await client.Blobs.GetAsync(GetRepositoryName(image), layer.Digest);
 
-                    var copy = new MemoryStream();
-                    stream.CopyTo(copy);
-                    copy.Position = 0;
+                var copy = new MemoryStream();
+                stream.CopyTo(copy);
+                copy.Position = 0;
 
-                    try
-                    {
-                        var newYamls = ExtractAllYaml(copy);
-                        foreach (var kvp in newYamls)
-                            yamls[kvp.Key] = kvp.Value;
-                    }
-                    catch (Exception ex2)
-                    {
-
-                        throw;
-                    }
-
-
-                }
-                catch (Exception ex)
-                {
-
-                    throw;
-                }
-
+                var newYamls = ExtractAllYaml(copy);
+                foreach (var kvp in newYamls)
+                    yamls[kvp.Key] = kvp.Value;
             }
         }
         if (manifest is OciImageManifest oci)
