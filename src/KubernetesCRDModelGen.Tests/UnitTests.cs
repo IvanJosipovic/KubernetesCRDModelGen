@@ -12,6 +12,7 @@ using System.Text.Json;
 using System.Collections;
 using Microsoft.Extensions.Logging;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 
 namespace KubernetesCRDModelGen.Tests;
 
@@ -1132,9 +1133,11 @@ spec:
 
         var prop = specType.GetProperty("NumberProp");
         prop.PropertyType.Should().Be(typeof(double));
+        prop.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
 
         var prop2 = specType.GetProperty("NumberProp2");
         prop2.PropertyType.Should().Be<Nullable<double>>();
+        prop2.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
     }
 
     [Fact]
@@ -1859,6 +1862,9 @@ spec:
 {
   "apiVersion": "v1beta1",
   "kind": "Test",
+  "metadata": {
+       "name": "test"
+  },
   "spec": {
         "testEnum": [
             "test_test"

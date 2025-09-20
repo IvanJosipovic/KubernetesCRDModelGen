@@ -4,11 +4,11 @@ internal class Config
 {
     public required string Group { get; set; }
 
-    public HelmConfig? Helm { get; set; }
+    public DirectUrlConfig? DirectUrl { get; set; }
 
     public GitHubConfig? GitHub { get; set; }
 
-    public DirectUrlConfig? DirectUrl { get; set; }
+    public HelmConfig? Helm { get; set; }
 
     public OCIConfig? OCI { get; set; }
 

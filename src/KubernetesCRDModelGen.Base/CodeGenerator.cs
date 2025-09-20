@@ -480,18 +480,29 @@ public class CodeGenerator : ICodeGenerator
 
     private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true, string? defaultValue = null)
     {
-        var propDecleration = SyntaxFactory.PropertyDeclaration(required ? SyntaxFactory.ParseTypeName(typeName) : SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
-            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+        PropertyDeclarationSyntax propDecleration;
 
-        propDecleration = propDecleration.WithAccessorList(
-            SyntaxFactory.AccessorList(
-                SyntaxFactory.List(
-                    [
-                        SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
+        if (required)
+        {
+            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(typeName), CleanIdentifier(propertyName))
+                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
+                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
+        }
+        else
+        {
+            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
+                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+        }
+
+            propDecleration = propDecleration.WithAccessorList(
+                SyntaxFactory.AccessorList(
+                    SyntaxFactory.List(
+                        [
+                            SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
                             .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
                         SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
                             .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-                    ])));
+                        ])));
 
         propDecleration = propDecleration.AddAttributeLists(
             SyntaxFactory.AttributeList(
