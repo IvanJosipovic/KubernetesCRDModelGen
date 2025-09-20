@@ -487,7 +487,7 @@ public class CodeGenerator : ICodeGenerator
             propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(typeName), CleanIdentifier(propertyName))
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
 
-            if (!string.IsNullOrEmpty(defaultValue))
+            if (string.IsNullOrEmpty(defaultValue))
             {
                 propDecleration = propDecleration.AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
             }
