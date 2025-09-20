@@ -485,8 +485,12 @@ public class CodeGenerator : ICodeGenerator
         if (required)
         {
             propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(typeName), CleanIdentifier(propertyName))
-                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
-                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
+                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+
+            if (!string.IsNullOrEmpty(defaultValue))
+            {
+                propDecleration = propDecleration.AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
+            }
         }
         else
         {
