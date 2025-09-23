@@ -512,7 +512,7 @@ public class CodeGenerator : ICodeGenerator
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
         }
 
-        if (isRequired)
+        if (isRequired && defaultValue == null)
         {
             propDecleration = propDecleration.AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
         }
