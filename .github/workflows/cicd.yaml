@@ -1,4 +1,4 @@
-name: CICD
+﻿name: CICD
 
 on:
   workflow_dispatch:
@@ -9,6 +9,13 @@ on:
       - 'beta'
   pull_request:
     types: [opened, reopened, synchronize]
+
+permissions:
+  id-token: write
+  contents: write
+  actions: write
+  checks: write
+  issues: write
 
 jobs:
   create-release:
@@ -36,7 +43,15 @@ jobs:
       run: dotnet build -c Release
 
     - name: .NET Test
-      run: dotnet test -c Release --collect:"XPlat Code Coverage"
+      run: dotnet test -c Release --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test-results.trx"
+
+    - name: Test Report
+      uses: dorny/test-reporter@v2
+      if: success() || failure()
+      with:
+        name: Tests
+        path: tests/**/TestResults/test-results.trx
+        reporter: dotnet-trx
 
     - name: Coverage
       uses: codecov/codecov-action@v5
@@ -61,9 +76,16 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: NuGet login (OIDC → temp API key)
+      if: steps.semantic.outputs.new_release_published == 'true'
+      uses: NuGet/login@v1
+      id: login
+      with:
+        user: IvanJosipovic
+
     - name: .NET NuGet Push
       if: steps.semantic.outputs.new_release_published == 'true'
-      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ steps.login.outputs.NUGET_API_KEY }}
 
     - uses: actions/upload-artifact@v4
       with:
