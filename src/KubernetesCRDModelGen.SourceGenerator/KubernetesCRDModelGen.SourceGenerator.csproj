@@ -34,7 +34,7 @@
         <PackageReference Include="System.Text.Json" Version="9.0.9" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Json)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.9" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="10.0.0-rc.1.25451.107" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGMicrosoft_Bcl_AsyncInterfaces)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" GeneratePathProperty="true" PrivateAssets="all" />
@@ -43,7 +43,7 @@
         <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Runtime_CompilerServices_Unsafe)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="System.IO.Pipelines" Version="9.0.9" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.IO.Pipelines" Version="10.0.0-rc.1.25451.107" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_IO_Pipelines)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="System.Buffers" Version="4.6.1" GeneratePathProperty="true" PrivateAssets="all" />
@@ -55,7 +55,7 @@
         <PackageReference Include="System.Numerics.Vectors" Version="4.6.1" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Numerics_Vectors)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
-        <PackageReference Include="System.Text.Encodings.Web" Version="9.0.9" GeneratePathProperty="true" PrivateAssets="all" />
+        <PackageReference Include="System.Text.Encodings.Web" Version="10.0.0-rc.1.25451.107" GeneratePathProperty="true" PrivateAssets="all" />
         <None Include="$(PKGSystem_Text_Encodings_Web)\lib\netstandard2.0\*.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
 
         <PackageReference Include="YamlDotNet" Version="16.3.0" GeneratePathProperty="true" PrivateAssets="all" />
