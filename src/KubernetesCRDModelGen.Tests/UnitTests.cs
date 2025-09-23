@@ -10243,7 +10243,7 @@ spec:
     }
 
     [Fact]
-    public void TestNullable()
+    public void TestRequiredNumber()
     {
         var yaml = @"
     apiVersion: apiextensions.k8s.io/v1
@@ -10265,47 +10265,262 @@ spec:
           schema:
             openAPIV3Schema:
               type: object
+              required:
+              - spec
               properties:
                 spec:
                   type: object
                   description: Demo of string field with required and nullable combinations
                   required:
-                    - modeReqNullable
-                    - modeReqNonNull
+                    - reqNullable
+                    - reqNonNull
+                    - reqNullableDefault
+                    - reqNonNullDefault
                   properties:
-                    modeReqNullable:
+                    reqNullable:
                       type: number
                       nullable: true
                       description: required and may be null
-                    modeReqNonNull:
+                    reqNonNull:
                       type: number
+                      nullable: false
                       description: required and must be non null
-                    modeOptNullable:
+                    reqNullableDefault:
+                      type: number
+                      nullable: true
+                      description: required and may be null
+                      default: 1
+                    reqNonNullDefault:
+                      type: number
+                      nullable: false
+                      description: required and must be non null
+                      default: 1
+
+                    optNullable:
                       type: number
                       nullable: true
                       description: optional may be omitted or set to null
-                    modeOptNonNull:
+                    optNonNull:
                       type: number
+                      nullable: false
                       description: optional may be omitted but if present must be non null
+                    optNullableDefault:
+                      type: number
+                      nullable: true
+                      description: optional may be omitted or set to null
+                      default: 1
+                    optNonNullDefault:
+                      type: number
+                      nullable: false
+                      description: optional may be omitted but if present must be non null
+                      default: 1
     ";
         var code = GetCode(yaml);
         var type = GetTypeYaml(yaml, "Test");
         var specType = type.GetProperty("Spec").PropertyType;
 
-        // modeReqNullable: required and nullable
-        var modeReqNullable = specType.GetProperty("ModeReqNullable");
-        modeReqNullable.PropertyType.Should().Be<Nullable<double>>();
+        // reqNullable: required and may be null
+        var reqNullable = specType.GetProperty("ReqNullable");
+        reqNullable.PropertyType.Should().Be<Nullable<double>>();
+        reqNullable.IsNullableReferenceType().Should().BeTrue();
+        reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
 
-        // modeReqNonNull: required and non-null
-        var modeReqNonNull = specType.GetProperty("ModeReqNonNull");
-        modeReqNonNull.PropertyType.Should().Be<double>();
+        // reqNonNull: required and must be non null
+        var reqNonNull = specType.GetProperty("ReqNonNull");
+        reqNonNull.PropertyType.Should().Be<double>();
+        reqNonNull.IsNullableReferenceType().Should().BeFalse();
+        reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
 
-        // modeOptNullable: optional and nullable
-        var modeOptNullable = specType.GetProperty("ModeOptNullable");
-        modeOptNullable.PropertyType.Should().Be<Nullable<double>>();
+        // reqNullableDefault: optional and nullable with default
+        var reqNullableDefault = specType.GetProperty("ReqNullableDefault");
+        reqNullableDefault.PropertyType.Should().Be<Nullable<double>>();
+        reqNullableDefault.IsNullableReferenceType().Should().BeTrue();
+        reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
 
-        // modeOptNonNull: optional but if present must be non-null
-        var modeOptNonNull = specType.GetProperty("ModeOptNonNull");
-        modeOptNonNull.PropertyType.Should().Be<Nullable<double>>();
+        // reqNonNull: optional and non-null with default
+        var reqNonNullDefault = specType.GetProperty("ReqNonNullDefault");
+        reqNonNullDefault.PropertyType.Should().Be<Nullable<double>>();
+        reqNonNullDefault.IsNullableReferenceType().Should().BeTrue();
+        reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // Optional
+
+        // optNullable: optional and nullable
+        var optNullable = specType.GetProperty("OptNullable");
+        optNullable.PropertyType.Should().Be<Nullable<double>>();
+        optNullable.IsNullableReferenceType().Should().BeTrue();
+        optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // optNonNull: optional but if present must be non-null
+        var optNonNull = specType.GetProperty("OptNonNull");
+        optNonNull.PropertyType.Should().Be<Nullable<double>>();
+        optNonNull.IsNullableReferenceType().Should().BeTrue();
+        optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // optNullable: optional and nullable with default
+        var optNullableDefault = specType.GetProperty("OptNullableDefault");
+        optNullableDefault.PropertyType.Should().Be<Nullable<double>>();
+        optNullableDefault.IsNullableReferenceType().Should().BeTrue();
+        optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // optNonNull: optional but if present must be non-null with default
+        var optNonNullDefault = specType.GetProperty("OptNonNullDefault");
+        optNonNullDefault.PropertyType.Should().Be<Nullable<double>>();
+        optNonNullDefault.IsNullableReferenceType().Should().BeTrue();
+        optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+    }
+
+    [Fact]
+    public void TestRequiredString()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              required:
+              - spec
+              properties:
+                spec:
+                  type: object
+                  description: Demo of string field with required and nullable combinations
+                  required:
+                    - reqNullable
+                    - reqNonNull
+                    - reqNullableDefault
+                    - reqNonNullDefault
+                  properties:
+                    reqNullable:
+                      type: string
+                      nullable: true
+                      description: required and may be null
+                    reqNonNull:
+                      type: string
+                      nullable: false
+                      description: required and must be non null
+
+                    reqNullableDefault:
+                      type: string
+                      nullable: true
+                      description: required and may be null
+                      default: '1'
+                    reqNonNullDefault:
+                      type: string
+                      nullable: false
+                      description: required and must be non null
+                      default: '1'
+
+                    optNullable:
+                      type: string
+                      nullable: true
+                      description: optional may be omitted or set to null
+                    optNonNull:
+                      type: string
+                      nullable: false
+                      description: optional may be omitted but if present must be non null
+
+                    optNullableDefault:
+                      type: string
+                      nullable: true
+                      description: optional may be omitted or set to null
+                      default: '1'
+
+                    optNonNullDefault:
+                      type: string
+                      nullable: false
+                      description: optional may be omitted but if present must be non null
+                      default: '1'
+    ";
+        var code = GetCode(yaml);
+        var type = GetTypeYaml(yaml, "Test");
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        // reqNullable: required and may be null
+        // true true false
+        var reqNullable = specType.GetProperty("ReqNullable");
+        reqNullable.PropertyType.Should().Be<string>();
+        reqNullable.IsNullableReferenceType().Should().BeTrue();
+        //reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+
+        // reqNonNull: required and must be non null
+        // true false false
+        var reqNonNull = specType.GetProperty("ReqNonNull");
+        reqNonNull.PropertyType.Should().Be<string>();
+        reqNonNull.IsNullableReferenceType().Should().BeFalse();
+        //reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+
+        // reqNullableDefault: optional and nullable with default
+        // true true true
+        var reqNullableDefault = specType.GetProperty("ReqNullableDefault");
+        reqNullableDefault.PropertyType.Should().Be<string>();
+        reqNullableDefault.IsNullableReferenceType().Should().BeTrue();
+        //reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // reqNonNull: optional and non-null with default
+        // true false true
+        var reqNonNullDefault = specType.GetProperty("ReqNonNullDefault");
+        reqNonNullDefault.PropertyType.Should().Be<string>();
+        reqNonNullDefault.IsNullableReferenceType().Should().BeTrue();
+        //reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // Optional
+
+        // optNullable: optional and nullable
+        // false true false
+        var optNullable = specType.GetProperty("OptNullable");
+        optNullable.PropertyType.Should().Be<string>();
+        optNullable.IsNullableReferenceType().Should().BeTrue();
+        //optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // optNonNull: optional but if present must be non-null
+        // false false false
+        var optNonNull = specType.GetProperty("OptNonNull");
+        optNonNull.PropertyType.Should().Be<string>();
+        optNonNull.IsNullableReferenceType().Should().BeTrue();
+        //optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // optNullable: optional and nullable with default
+        // false true true
+        var optNullableDefault = specType.GetProperty("OptNullableDefault");
+        optNullableDefault.PropertyType.Should().Be<string>();
+        optNullableDefault.IsNullableReferenceType().Should().BeTrue();
+        //optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+
+        // optNonNull: optional but if present must be non-null with default
+        // false false true
+        var optNonNullDefault = specType.GetProperty("OptNonNullDefault");
+        optNonNullDefault.PropertyType.Should().Be<string>();
+        optNonNullDefault.IsNullableReferenceType().Should().BeTrue();
+        //optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+    }
+}
+
+public static class ReflectionHelpers
+{
+    public static bool IsNullableReferenceType(this PropertyInfo property)
+    {
+        // If it's a value type, only Nullable<T> counts
+        if (property.PropertyType.IsValueType)
+            return Nullable.GetUnderlyingType(property.PropertyType) != null;
+
+        var nullabilityContext = new NullabilityInfoContext();
+        var nullableStringInfo = nullabilityContext.Create(property);
+
+        return nullableStringInfo.ReadState == NullabilityState.Nullable;
     }
 }

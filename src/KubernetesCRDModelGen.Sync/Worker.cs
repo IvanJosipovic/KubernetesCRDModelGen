@@ -283,6 +283,7 @@ public class Worker : BackgroundService
               <PropertyGroup>
                 <PackageId>{GetName(config)}</PackageId>
                 <RepositoryUrl>https://github.com/IvanJosipovic/{GetName(config)}</RepositoryUrl>
+                <Description>C# models for Kubernetes CRDs in group {config.Group}</Description>
               </PropertyGroup>
             </Project>
             """);
@@ -291,7 +292,7 @@ public class Worker : BackgroundService
             ## {GetName(config)}
             [![Nuget](https://img.shields.io/nuget/vpre/{GetName(config)}.svg?style=flat-square)](https://www.nuget.org/packages/{GetName(config)})[![Nuget)](https://img.shields.io/nuget/dt/{GetName(config)}.svg?style=flat-square)](https://www.nuget.org/packages/{GetName(config)})
 
-            C# models for Kubernetes CRDs in group {config.Group}.
+            C# models for Kubernetes CRDs in group {config.Group}
             """);
     }
 }

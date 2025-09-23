@@ -4,6 +4,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -207,10 +208,10 @@ public class CodeGenerator : ICodeGenerator
                     .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.ConstKeyword));
 
             // Create a property declaration for ApiVersion
-            var apiVersion = CreateProperty("string", "apiVersion", "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources", true, group + "/" + version);
+            var apiVersion = CreateProperty("string", "apiVersion", "APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources", false, group + "/" + version);
 
             // Create a property declaration for Kind
-            var kindProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", true, kind);
+            var kindProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", false, kind);
 
             // Create a property declaration for Metadata
             var metaProp = CreateProperty("V1ObjectMeta", "metadata", "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata");
@@ -218,7 +219,7 @@ public class CodeGenerator : ICodeGenerator
             @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
 
             // Create a property declaration for List Kind
-            var kindListProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", true, listKind);
+            var kindListProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", false, listKind);
 
             // Create a property declaration for List Metadata
             var metaListProp = CreateProperty("V1ListMeta", "metadata", "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}.");
@@ -247,13 +248,12 @@ public class CodeGenerator : ICodeGenerator
                 .WithAccessorList(
                     SyntaxFactory.AccessorList(
                         SyntaxFactory.List(
-                            new AccessorDeclarationSyntax[]
-                            {
+                            [
                                 SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
                                     .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
                                 SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
                                     .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-                            }
+                            ]
                         )
                     )
                 )
@@ -294,13 +294,32 @@ public class CodeGenerator : ICodeGenerator
                     @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
                 }
 
-                var newProperty = CreateProperty(type, property.Key, property.Value.Description, schema.Required?.Contains(property.Key) == true && (property.Value.Type.HasValue && !property.Value.Type.Value.HasFlag(JsonSchemaType.Null)));
+                var isRequired = schema.Required?.Contains(property.Key) == true;
+                var isNullable = property.Value.Type.HasValue && property.Value.Type.Value.HasFlag(JsonSchemaType.Null);
+                var hasDefault = property.Value.Default != null;
+
+                var resultNullable =
+                                       (isRequired && isNullable && !hasDefault)
+                                  //|| (isRequired && !isNullable && !hasDefault)
+                                  || (isRequired && isNullable && hasDefault)
+                                  || (isRequired && !isNullable && hasDefault)
+
+                                  || (!isRequired && isNullable && !hasDefault)
+                                  || (!isRequired && !isNullable && !hasDefault)
+                                  || (!isRequired && isNullable && hasDefault)
+                                  || (!isRequired && !isNullable && hasDefault);
+
+                var resultRequired =
+                                       (isRequired && isNullable && !hasDefault)
+                                    || (isRequired && !isNullable && !hasDefault);
+
+                var newProperty = CreateProperty(type, property.Key, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
 
                 //Check if class already contains a property with the same name
                 var count = 1;
                 while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
                 {
-                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, schema.Required?.Contains(property.Key) == true && (property.Value.Type.HasValue && !property.Value.Type.Value.HasFlag(JsonSchemaType.Null)));
+                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
                 }
 
                 @class = @class.AddMembers(newProperty);
@@ -478,23 +497,27 @@ public class CodeGenerator : ICodeGenerator
         return enumDeclaration.Identifier.Text;
     }
 
-    private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool required = true, string? defaultValue = null)
+    private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool isNullable = true, string? defaultValue = null, bool isRequired = false)
     {
         PropertyDeclarationSyntax propDecleration;
 
-        if (required)
+        if (isNullable)
         {
-            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(typeName), CleanIdentifier(propertyName))
-                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
-                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
+            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
+                .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
         }
         else
         {
-            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
-                        .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
+            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(typeName), CleanIdentifier(propertyName))
+                .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
         }
 
-            propDecleration = propDecleration.WithAccessorList(
+        if (isRequired && defaultValue == null)
+        {
+            propDecleration = propDecleration.AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
+        }
+
+        propDecleration = propDecleration.WithAccessorList(
                 SyntaxFactory.AccessorList(
                     SyntaxFactory.List(
                         [
