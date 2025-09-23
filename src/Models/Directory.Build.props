@@ -1,8 +1,7 @@
 <Project>
     <PropertyGroup>
-        <TargetFrameworks>net8.0</TargetFrameworks>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
         <Authors>Ivan Josipovic</Authors>
-        <Description>Kubernetes Custom Resource Definition Models</Description>
         <PackageTags>Kubernetes CustomResourceDefinition CRD Models</PackageTags>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -22,9 +21,12 @@
 
     <ItemGroup>
         <PackageReference Include="KubernetesClient" Version="17.0.14" />
-        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-alpha.616">     
+        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-alpha.619">
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
         <PackageReference Include="System.Text.Json" Version="9.0.9" />
     </ItemGroup>
 
