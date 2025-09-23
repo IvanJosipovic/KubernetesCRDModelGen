@@ -1,5 +1,6 @@
 # KubernetesCRDModelGen
 
+[![Nuget](https://img.shields.io/nuget/vpre/KubernetesCRDModelGen.svg?style=flat-square)](https://www.nuget.org/packages/KubernetesCRDModelGen)[![Nuget)](https://img.shields.io/nuget/dt/KubernetesCRDModelGen.svg?style=flat-square)](https://www.nuget.org/packages/KubernetesCRDModelGen)
 [![codecov](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen/branch/alpha/graph/badge.svg?token=Xxq5yw1TtO)](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen)
 
 ## What is this?
