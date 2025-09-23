@@ -69,6 +69,7 @@ jobs:
 
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'
+      id: semantic_final
       uses: cycjimmy/semantic-release-action@v5
       with:
         extra_plugins: |
@@ -77,14 +78,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: NuGet login (OIDC → temp API key)
-      if: steps.semantic.outputs.new_release_published == 'true'
+      if: steps.semantic_final.outputs.new_release_published == 'true'
       uses: NuGet/login@v1
       id: login
       with:
         user: IvanJosipovic
 
     - name: .NET NuGet Push
-      if: steps.semantic.outputs.new_release_published == 'true'
+      if: steps.semantic_final.outputs.new_release_published == 'true'
       run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ steps.login.outputs.NUGET_API_KEY }}
 
     - uses: actions/upload-artifact@v4

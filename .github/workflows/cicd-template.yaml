@@ -38,6 +38,7 @@ jobs:
 
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'
+      id: semantic_final
       uses: cycjimmy/semantic-release-action@v5
       with:
         extra_plugins: |
@@ -46,7 +47,7 @@ jobs:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: .NET NuGet Push
-      if: steps.semantic.outputs.new_release_published == 'true'
+      if: steps.semantic_final.outputs.new_release_published == 'true'
       run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
 
     - uses: actions/upload-artifact@v4
