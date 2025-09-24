@@ -10485,7 +10485,7 @@ spec:
         var optNullable = specType.GetProperty("OptNullable");
         optNullable.PropertyType.Should().Be<string>();
         optNullable.IsNullableReferenceType().Should().BeTrue();
-        /optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
 
         // optNonNull: optional but if present must be non-null
         // false false false
