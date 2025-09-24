@@ -4,7 +4,6 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi;
-using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -452,10 +451,6 @@ public class CodeGenerator : ICodeGenerator
 
                 enumDeclaration = enumDeclaration.AddMembers(
                     SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
-                        .WithLeadingTrivia(
-                            SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(value.Replace("\n", " ").Replace("\r", " "))}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed))
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
                                 SyntaxFactory.AttributeList(
@@ -488,6 +483,10 @@ public class CodeGenerator : ICodeGenerator
                                 )
                             )
                         )
+                        .WithLeadingTrivia(
+                            SyntaxFactory.TriviaList(
+                                SyntaxFactory.Comment($"/// <summary>{XmlString(value.Replace("\n", " ").Replace("\r", " "))}</summary>"),
+                                SyntaxFactory.CarriageReturnLineFeed))
                 );
             }
         }
