@@ -10455,28 +10455,28 @@ spec:
         var reqNullable = specType.GetProperty("ReqNullable");
         reqNullable.PropertyType.Should().Be<string>();
         reqNullable.IsNullableReferenceType().Should().BeTrue();
-        //reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+        reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
 
         // reqNonNull: required and must be non null
         // true false false
         var reqNonNull = specType.GetProperty("ReqNonNull");
         reqNonNull.PropertyType.Should().Be<string>();
         reqNonNull.IsNullableReferenceType().Should().BeFalse();
-        //reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+        reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
 
         // reqNullableDefault: optional and nullable with default
         // true true true
         var reqNullableDefault = specType.GetProperty("ReqNullableDefault");
         reqNullableDefault.PropertyType.Should().Be<string>();
         reqNullableDefault.IsNullableReferenceType().Should().BeTrue();
-        //reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
 
         // reqNonNull: optional and non-null with default
         // true false true
         var reqNonNullDefault = specType.GetProperty("ReqNonNullDefault");
         reqNonNullDefault.PropertyType.Should().Be<string>();
         reqNonNullDefault.IsNullableReferenceType().Should().BeTrue();
-        //reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
 
         // Optional
 
@@ -10485,28 +10485,28 @@ spec:
         var optNullable = specType.GetProperty("OptNullable");
         optNullable.PropertyType.Should().Be<string>();
         optNullable.IsNullableReferenceType().Should().BeTrue();
-        //optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        /optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
 
         // optNonNull: optional but if present must be non-null
         // false false false
         var optNonNull = specType.GetProperty("OptNonNull");
         optNonNull.PropertyType.Should().Be<string>();
         optNonNull.IsNullableReferenceType().Should().BeTrue();
-        //optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
 
         // optNullable: optional and nullable with default
         // false true true
         var optNullableDefault = specType.GetProperty("OptNullableDefault");
         optNullableDefault.PropertyType.Should().Be<string>();
         optNullableDefault.IsNullableReferenceType().Should().BeTrue();
-        //optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
 
         // optNonNull: optional but if present must be non-null with default
         // false false true
         var optNonNullDefault = specType.GetProperty("OptNonNullDefault");
         optNonNullDefault.PropertyType.Should().Be<string>();
         optNonNullDefault.IsNullableReferenceType().Should().BeTrue();
-        //optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
     }
 }
 
