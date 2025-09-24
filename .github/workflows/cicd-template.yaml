@@ -34,7 +34,7 @@ jobs:
       run: dotnet build -c Release
 
     - name: .NET Pack
-      run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}
+      run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1-alpha.1' }}
 
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'
