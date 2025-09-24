@@ -38,13 +38,13 @@ public class Worker : BackgroundService
 
             _logger.LogInformation("Model Directory: {dir}", configuration.GetValue<string>("ModelDir"));
 
+            Directory.CreateDirectory(configuration.GetValue<string>("ModelDir"));
+
             var config = configuration.GetSection("Config").Get<List<Config>>();
 
             foreach (var item in config)
             {
                 _logger.LogInformation("Processing: {group}", item.Group);
-
-                CreateProject(item);
 
                 try
                 {
@@ -265,47 +265,5 @@ public class Worker : BackgroundService
         }
 
         return results;
-    }
-
-    private static string GetName(Config config)
-    {
-        return "KubernetesCRDModelGen.Models." + config.Group;
-    }
-
-    private static void CreateProject(Config config)
-    {
-        Directory.CreateDirectory("crds");
-
-        var csprojPath = Path.Combine(GetName(config) + ".csproj");
-
-        File.WriteAllText(csprojPath, $"""
-            <Project Sdk="Microsoft.NET.Sdk">
-              <PropertyGroup>
-                <PackageId>{GetName(config)}</PackageId>
-                <RepositoryUrl>https://github.com/IvanJosipovic/{GetName(config)}</RepositoryUrl>
-                <Description>C# models for Kubernetes CRDs in group {config.Group}</Description>
-              </PropertyGroup>
-            </Project>
-            """);
-
-        File.WriteAllText("README.md", $"""
-            ## {GetName(config)}
-            [![Nuget](https://img.shields.io/nuget/vpre/{GetName(config)}.svg?style=flat-square)](https://www.nuget.org/packages/{GetName(config)})[![Nuget)](https://img.shields.io/nuget/dt/{GetName(config)}.svg?style=flat-square)](https://www.nuget.org/packages/{GetName(config)})
-
-            C# models for Kubernetes CRDs in group {config.Group}
-            """);
-    }
-}
-
-class MapTagsToObject : INodeTypeResolver
-{
-    public bool Resolve(NodeEvent? nodeEvent, ref Type currentType)
-    {
-        if (nodeEvent != null && !nodeEvent.Tag.IsEmpty)
-        {
-            currentType = typeof(object);
-            return true;
-        }
-        return false;
     }
 }
