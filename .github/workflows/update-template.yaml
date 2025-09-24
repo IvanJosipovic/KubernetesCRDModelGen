@@ -27,7 +27,7 @@ jobs:
         run: rm -rf crds
 
       - name: Sync CRDs
-        run: KubernetesCRDModelGen.Sync
+        run: KubernetesCRDModelGen.Sync --ModelDir=crds
 
       - name: Validate Yamls
         working-directory: crds
@@ -68,5 +68,6 @@ jobs:
           pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
 
           merge-method: squash
+
 
 
