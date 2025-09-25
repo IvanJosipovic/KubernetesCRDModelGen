@@ -5,7 +5,7 @@
 
 ## What is this?
 
-This project contains components which allow generation of C# Classes/Assemblies from Kubernetes Custom Resource Definitions.
+This project contains components which allow generation of C# Classes/Assemblies from Kubernetes Custom Resource Definitions
 
 - KubernetesCRDModelGen
   - Custom Resource Definition to C# Class/Assembly Generator
