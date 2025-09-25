@@ -1,7 +1,7 @@
 # KubernetesCRDModelGen
 
 [![Nuget](https://img.shields.io/nuget/vpre/KubernetesCRDModelGen.svg?style=flat-square)](https://www.nuget.org/packages/KubernetesCRDModelGen)[![Nuget)](https://img.shields.io/nuget/dt/KubernetesCRDModelGen.svg?style=flat-square)](https://www.nuget.org/packages/KubernetesCRDModelGen)
-[![codecov](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen/branch/alpha/graph/badge.svg?token=Xxq5yw1TtO)](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen)
+[![codecov](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen/branch/main/graph/badge.svg?token=Xxq5yw1TtO)](https://codecov.io/gh/IvanJosipovic/KubernetesCRDModelGen)
 
 ## What is this?
 
@@ -48,7 +48,7 @@ Update the .csproj with the following settings. The Models will be generated in 
 
   <ItemGroup>
     <PackageReference Include="KubernetesClient" Version="17.0.4" />
-    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.0.0-0" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.*.*" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
     <AdditionalFiles Include="*.yaml" />
   </ItemGroup>
 
