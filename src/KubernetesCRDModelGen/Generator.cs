@@ -1,4 +1,5 @@
 using k8s.Models;
+using KubernetesCRDModelGen.Base;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -6,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using System.Reflection;
+using System.Runtime.Loader;
 using System.Text.Json;
 using System.Xml;
 
@@ -31,13 +33,7 @@ public class Generator : IGenerator
         .WithNullableContextOptions(NullableContextOptions.Enable)
         .WithOptimizationLevel(OptimizationLevel.Release)
         .WithOverflowChecks(false)
-        .WithPlatform(Platform.AnyCpu)
-        .WithSpecificDiagnosticOptions(
-        [
-            // Don't warn for binding redirects
-            new("CS1701", ReportDiagnostic.Suppress),
-            new("CS1702", ReportDiagnostic.Suppress)
-        ]);
+        .WithPlatform(Platform.AnyCpu);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Generator"/> class.
@@ -86,9 +82,11 @@ public class Generator : IGenerator
             else
             {
                 peStream.Seek(0, SeekOrigin.Begin);
-                var assembly = Assembly.Load(peStream.ToArray());
-
                 xmlDocumentationStream.Seek(0, SeekOrigin.Begin);
+
+                var alc = new AssemblyLoadContext(crd.Metadata.Name, isCollectible: true);
+                var assembly = alc.LoadFromStream(peStream);
+
                 var xml = new XmlDocument();
                 xml.Load(xmlDocumentationStream);
 

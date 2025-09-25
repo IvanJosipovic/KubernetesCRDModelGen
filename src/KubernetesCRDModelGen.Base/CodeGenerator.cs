@@ -1,5 +1,4 @@
 using Humanizer;
-using KubernetesCRDModelGen.Base;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -9,7 +8,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Xml.Linq;
 
-namespace KubernetesCRDModelGen;
+namespace KubernetesCRDModelGen.Base;
 
 /// <inheritdoc/>
 public class CodeGenerator : ICodeGenerator
@@ -21,13 +20,6 @@ public class CodeGenerator : ICodeGenerator
     private bool EnumSupport = true;
 
     private static readonly string CurrentVersion = typeof(CodeGenerator).Assembly.GetName().Version.ToString();
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="CodeGenerator"/> class.
-    /// </summary>
-    public CodeGenerator()
-    {
-    }
 
     /// <inheritdoc/>
     public void SetEnumSupport(bool enabled)

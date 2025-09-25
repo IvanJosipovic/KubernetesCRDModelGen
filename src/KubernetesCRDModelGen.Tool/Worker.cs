@@ -4,6 +4,7 @@ using KubernetesCRDModelGen;
 using YamlDotNet.Core;
 using YamlDotNet.Serialization;
 using YamlDotNet.Core.Events;
+using KubernetesCRDModelGen.Base;
 
 namespace Worker
 {

@@ -13,6 +13,7 @@ using System.Collections;
 using Microsoft.Extensions.Logging;
 using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
+using KubernetesCRDModelGen.Base;
 
 namespace KubernetesCRDModelGen.Tests;
 

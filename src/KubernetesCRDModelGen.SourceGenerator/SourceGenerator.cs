@@ -1,4 +1,5 @@
-﻿using Microsoft.CodeAnalysis;
+﻿using KubernetesCRDModelGen.Base;
+using Microsoft.CodeAnalysis;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using System;

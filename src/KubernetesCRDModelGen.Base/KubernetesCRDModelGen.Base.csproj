@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFrameworks>netstandard2.0</TargetFrameworks>
+        <TargetFrameworks>netstandard2.0;net8.0;net9.0;net10.0</TargetFrameworks>
         <Authors>Ivan Josipovic</Authors>
         <Description>Converts Kubernetes OpenApi Schema to Models</Description>
         <PackageTags>Kubernetes V1JSONSchemaProps JSONSchemaProps Open Api Schema CRD CustomResourceDefinition Model JSON</PackageTags>
@@ -23,6 +23,9 @@
         <PackageReference Include="Humanizer.Core" Version="2.14.1" />
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
         <PackageReference Include="Microsoft.OpenApi" Version="2.3.2" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net8.0'">
         <PackageReference Include="System.Text.Json" Version="9.0.9" />
     </ItemGroup>
 
