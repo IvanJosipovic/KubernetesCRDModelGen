@@ -1,0 +1,73 @@
+name: Update CRDs
+
+on:
+  workflow_call:
+    secrets:
+      GH_TOKEN:
+        required: true
+
+jobs:
+  sync-crds:
+    name: Update CRDs
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out code
+        uses: actions/checkout@v5
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: global.json
+
+      - name: Get Sync Tool
+        run: dotnet tool install --global KubernetesCRDModelGen.Sync --prerelease
+
+      - name: Clean Models
+        run: rm -rf crds
+
+      - name: Sync CRDs
+        run: KubernetesCRDModelGen.Sync --ModelDir=crds
+
+      - name: Validate Yamls
+        working-directory: crds
+        shell: pwsh
+        run: |
+          foreach ($Dir in Get-ChildItem -Directory) {
+            $YamlFiles = Get-ChildItem -Path $Dir.FullName -Filter *.yaml -File -ErrorAction SilentlyContinue
+
+            if ($YamlFiles.Count -eq 0) {
+              throw "No .yaml file found in directory: $($Dir.FullName)"
+            }
+          }
+
+      - name: Check Files Changed
+        id: checkfiles
+        shell: pwsh
+        run: |
+          git add .
+          $createPR = (git diff --cached --numstat | Measure-Object -Line).Lines -gt 0;
+          echo "createpr=$createPR" >> $env:GITHUB_OUTPUT
+
+      - name: Create Pull Request
+        if: steps.checkfiles.outputs.createpr == 'True'
+        id: cpr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          branch: sync-charts
+          commit-message: "feat: Update CRDs"
+          title: "feat: Update CRDs"
+          body: "Automated CRD Sync"
+
+      - name: Enable Pull Request Automerge
+        if: steps.checkfiles.outputs.createpr == 'True'
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
+
+          merge-method: squash
+
+
+

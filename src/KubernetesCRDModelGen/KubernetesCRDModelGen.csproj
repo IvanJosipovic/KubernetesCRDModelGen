@@ -1,0 +1,64 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+        <Authors>Ivan Josipovic</Authors>
+        <Description>Converts Kubernetes Custom Resource Definition Yaml files to Models</Description>
+        <PackageTags>Kubernetes CRD CustomResourceDefinition Model Convert Yaml</PackageTags>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="KubernetesClient" Version="17.0.14" />
+        <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0-rc.1.25451.107" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net9.0'">
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.9" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <InternalsVisibleTo Include="KubernetesCRDModelGen.Tests" />
+    </ItemGroup>
+
+    <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
+        <ItemGroup>
+            <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'System.Runtime' Or '%(ReferencePath.Filename)' == 'System.Runtime.Serialization.Primitives')" />
+
+            <XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient')" />
+
+            <!-- add these assemblies to the list of embedded resources -->
+            <EmbeddedResource Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).dll'-&gt; Exists())">
+                <LogicalName>runtime.%(FilesToEmbed.Filename)%(FilesToEmbed.Extension)</LogicalName>
+            </EmbeddedResource>
+
+            <!-- add xml documentation for list of assemblies -->
+            <EmbeddedResource Include="@(XmlFilesToEmbed)">
+                <LogicalName>runtime.%(XmlFilesToEmbed.Filename)%(XmlFilesToEmbed.Extension)</LogicalName>
+            </EmbeddedResource>
+        </ItemGroup>
+
+        <Message Importance="high" Text="Embedding: @(FilesToEmbed->'%(Filename)%(Extension)', ', ')" />
+        <Message Importance="high" Text="EmbeddingXml: @(XmlFilesToEmbed->'%(Filename)%(Extension)', ', ')" />
+    </Target>
+</Project>

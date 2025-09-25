@@ -1,0 +1,42 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabled": true,
+  "timezone": "America/Vancouver",
+  "dependencyDashboard": true,
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "semanticCommits": "enabled",
+  "suppressNotifications": [
+    "prIgnoreNotification"
+  ],
+  "rebaseWhen": "conflicted",
+  "assignees": [
+    "@ivanjosipovic"
+  ],
+  "extends": [
+    "config:recommended"
+  ],
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "automerge": true,
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "matchFileNames": [
+        "src/KubernetesCRDModelGen.Tests/KubernetesCRDModelGen.Tests.csproj"
+      ]
+    },
+    {
+      "groupName": "Microsoft OpenAPI",
+      "separateMajorMinor": true,
+      "groupSlug": "microsoft-openapi",
+      "matchPackageNames": [
+        "/Microsoft.OpenApi/",
+        "/Microsoft.OpenApi.*/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <UserSecretsId>dotnet-KubernetesCRDModelGen.Sync-9c67cb4e-ce62-4808-ae34-39928f9e90d0</UserSecretsId>
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>KubernetesCRDModelGen.Sync</ToolCommandName>
+    <PackageId>KubernetesCRDModelGen.Sync</PackageId>
+    <Authors>Ivan Josipovic</Authors>
+    <Description>Synchronizes Custom Resource Definitions from numerous sources</Description>
+    <PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
+    <RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CliWrap" Version="3.9.0" />
+    <PackageReference Include="KubernetesClient" Version="17.0.14" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0-rc.1.25451.107" />
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="9.9.0" />
+    <PackageReference Include="SemanticVersioning" Version="3.0.0" />
+    <PackageReference Include="Semver" Version="3.0.0" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="Valleysoft.DockerRegistryClient" Version="6.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+</Project>

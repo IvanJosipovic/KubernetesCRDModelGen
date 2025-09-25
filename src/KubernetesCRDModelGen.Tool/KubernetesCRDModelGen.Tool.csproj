@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <UserSecretsId>dotnet-Worker-EE8C9BAD-2932-452F-AFB9-DCCB944C8931</UserSecretsId>
+        <IsPackable>true</IsPackable>
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>KubernetesCRDModelGen</ToolCommandName>
+        <PackageId>KubernetesCRDModelGen.Tool</PackageId>
+        <Authors>Ivan Josipovic</Authors>
+        <Description>Converts Custom Resource Definition Yaml files to Models</Description>
+        <PackageTags>Kubernetes Yaml CRD Converts Custom Resource Model</PackageTags>
+        <RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0-rc.1.25451.107" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" />
+        <ProjectReference Include="..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>

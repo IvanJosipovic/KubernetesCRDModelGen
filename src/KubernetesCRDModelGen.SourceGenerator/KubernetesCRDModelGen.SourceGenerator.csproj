@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Authors>Ivan Josipovic</Authors>
+        <Description>Converts Custom Resource Definition Yaml files to Models</Description>
+        <PackageTags>Kubernetes Yaml CRD Custom Resource Definition Model</PackageTags>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <RepositoryUrl>https://github.com/IvanJosipovic/KubernetesCRDModelGen</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <IncludeSymbols>false</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <IsPackable>true</IsPackable>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="4.14.0" PrivateAssets="all" />
+        <PackageReference Include="YamlDotNet" Version="16.3.0" PrivateAssets="all" />
+        <PackageReference Include="YamlDotNet.System.Text.Json" Version="1.6.6" PrivateAssets="all"  />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Generator dependencies -->
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+        <None Include="$(OutputPath)\KubernetesCRDModelGen.Base.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+    </ItemGroup>
+
+        <ItemGroup>
+        <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+        <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" PrivateAssets="all" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths</GetTargetPathDependsOn>
+    </PropertyGroup>
+
+    <Target Name="GetDependencyTargetPaths" AfterTargets="ResolvePackageDependenciesForBuild">
+        <ItemGroup>
+            <DllDependencies
+                 Include="@(ResolvedCompileFileDefinitions->'%(FullPath)')"
+                 Condition="$([System.String]::Equals('%(ResolvedCompileFileDefinitions.Extension)', '.dll')) and ! $([System.String]::Copy('%(ResolvedCompileFileDefinitions.Filename)').StartsWith('Microsoft.CodeAnalysis'))" />
+            <TargetPathWithTargetPlatformMoniker Include="@(DllDependencies)" IncludeRuntimeDependency="false" />
+            <None Include="@(DllDependencies)" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+        </ItemGroup>
+    </Target>
+</Project>
