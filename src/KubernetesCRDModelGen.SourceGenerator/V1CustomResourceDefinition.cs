@@ -1,9 +1,10 @@
-﻿using Microsoft.OpenApi;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 
 namespace KubernetesCRDModelGen.SourceGenerator;
+#nullable disable
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 public class V1ObjectMeta
 {
@@ -94,3 +95,4 @@ public class V1CustomResourceDefinition
     [JsonPropertyName("spec")]
     public V1CustomResourceDefinitionSpec Spec { get; set; }
 }
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member

@@ -4,9 +4,9 @@ using k8s.Models;
 
 namespace KubernetesCRDModelGen;
 
-// <summary>
-// Provides methods to generate an assembly or source code from a Kubernetes Custom Resource Definition (CRD).
-// </summary>
+/// <summary>
+/// Provides methods to generate an assembly or source code from a Kubernetes Custom Resource Definition (CRD).
+/// </summary>
 public interface IGenerator
 {
     /// <summary>

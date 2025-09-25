@@ -20,6 +20,8 @@ public class CodeGenerator : ICodeGenerator
 
     private bool EnumSupport = true;
 
+    private static readonly string CurrentVersion = typeof(CodeGenerator).Assembly.GetName().Version.ToString();
+
     /// <summary>
     /// Initializes a new instance of the <see cref="CodeGenerator"/> class.
     /// </summary>
@@ -71,11 +73,11 @@ public class CodeGenerator : ICodeGenerator
                             [
                                 SyntaxFactory.Attribute(
                                     SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
-                                    {
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
-                                    }))),
+                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
+                                    [
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
+                                    ]))),
                                 SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
                             ])
                         )
@@ -100,11 +102,11 @@ public class CodeGenerator : ICodeGenerator
                     [
                         SyntaxFactory.Attribute(
                                     SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(new[]
-                                    {
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
-                                    }))),
+                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
+                                    [
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
+                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
+                                    ]))),
                                 SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
                     ])
                 )
@@ -418,8 +420,8 @@ public class CodeGenerator : ICodeGenerator
                         SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
                         .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
                         [
-                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen.Tool"))),
-                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("1.0.0.0")))
+                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
+                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
                         ]))),
                 ])
             )

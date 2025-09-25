@@ -8,9 +8,9 @@ namespace KubernetesCRDModelGen.Benchmarks;
 [MemoryDiagnoser]
 public class Benchmark
 {
-    IGenerator generator;
+    IGenerator generator = null!;
 
-    V1CustomResourceDefinition crd;
+    V1CustomResourceDefinition crd = null!;
 
     [GlobalSetup]
     public void GlobalSetup()
@@ -25,6 +25,6 @@ public class Benchmark
     [Benchmark]
     public void Test1()
     {
-        var ass = generator.GenerateAssembly(crd);
+        var ass = generator!.GenerateAssembly(crd);
     }
 }

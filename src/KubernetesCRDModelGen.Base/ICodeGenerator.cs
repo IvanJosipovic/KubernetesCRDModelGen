@@ -3,9 +3,9 @@ using Microsoft.OpenApi;
 
 namespace KubernetesCRDModelGen.Base;
 
-// <summary>
-// Provides methods to generate source code from a IOpenApiSchema.
-// </summary>
+/// <summary>
+/// Provides methods to generate source code from a IOpenApiSchema.
+/// </summary>
 public interface ICodeGenerator
 {
     /// <summary>

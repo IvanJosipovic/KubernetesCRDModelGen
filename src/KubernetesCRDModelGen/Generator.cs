@@ -42,7 +42,7 @@ public class Generator : IGenerator
     /// <summary>
     /// Initializes a new instance of the <see cref="Generator"/> class.
     /// </summary>
-    /// <param name="logger">The logger to use for logging messages.</param>
+    /// <param name="loggerFactory">The logger to use for logging messages.</param>
     public Generator(ILoggerFactory loggerFactory)
     {
         logger = loggerFactory.CreateLogger<Generator>();
