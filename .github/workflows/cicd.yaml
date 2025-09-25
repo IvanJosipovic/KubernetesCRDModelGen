@@ -40,7 +40,7 @@ jobs:
         global-json-file: global.json
 
     - name: .NET Build
-      run: dotnet build -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}
+      run: dotnet build -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1-alpha.1' }}
 
     - name: .NET Test
       run: dotnet test -c Release --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test-results.trx"
@@ -65,7 +65,7 @@ jobs:
       run: dotnet run -c Release
 
     - name: .NET Pack
-      run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}
+      run: dotnet pack -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1-alpha.1' }}
 
     - name: Semantic Release
       if: steps.semantic.outputs.new_release_published == 'true'
@@ -92,3 +92,4 @@ jobs:
       with:
         name: NuGet Package
         path: src/**/*.nupkg
+
