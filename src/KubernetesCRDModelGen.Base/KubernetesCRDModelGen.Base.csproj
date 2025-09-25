@@ -17,7 +17,6 @@
         <IsPackable>true</IsPackable>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <InformationalVersion>$(Version)</InformationalVersion>
     </PropertyGroup>
 
     <ItemGroup>

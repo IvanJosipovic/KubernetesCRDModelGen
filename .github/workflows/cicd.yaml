@@ -40,7 +40,7 @@ jobs:
         global-json-file: global.json
 
     - name: .NET Build
-      run: dotnet build -c Release
+      run: dotnet build -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '1.0.0' }}
 
     - name: .NET Test
       run: dotnet test -c Release --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test-results.trx"
