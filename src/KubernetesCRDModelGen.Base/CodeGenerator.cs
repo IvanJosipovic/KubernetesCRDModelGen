@@ -3,6 +3,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi;
+using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
@@ -19,7 +20,7 @@ public class CodeGenerator : ICodeGenerator
 
     private bool EnumSupport = true;
 
-    private static readonly string CurrentVersion = typeof(CodeGenerator).Assembly.GetName().Version.ToString();
+    private static readonly string CurrentVersion = typeof(CodeGenerator).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
 
     /// <inheritdoc/>
     public void SetEnumSupport(bool enabled)
