@@ -1298,7 +1298,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        var itemType = specType.GetProperty("IntOrString").PropertyType.Should().Be<IntstrIntOrString?>();
+        var itemType = specType.GetProperty("IntOrString").PropertyType.Should().Be<IntOrString?>();
     }
 
     [Fact]
@@ -1348,7 +1348,7 @@ spec:
 
         var itemType = specType.GetProperty("IntOrStringArray").PropertyType.GenericTypeArguments[0];
 
-        itemType.Should().Be<IntstrIntOrString>();
+        itemType.Should().Be<IntOrString>();
     }
 
     [Fact]
