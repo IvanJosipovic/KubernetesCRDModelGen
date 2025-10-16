@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <PackageReference Include="CliWrap" Version="3.9.0" />
-    <PackageReference Include="KubernetesClient" Version="17.0.14" />
+    <PackageReference Include="KubernetesClient" Version="18.0.5" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.0-rc.1.25451.107" />
     <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="9.9.0" />
     <PackageReference Include="SemanticVersioning" Version="3.0.0" />
