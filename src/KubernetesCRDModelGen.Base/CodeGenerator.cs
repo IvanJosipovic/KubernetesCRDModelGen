@@ -346,7 +346,7 @@ public class CodeGenerator : ICodeGenerator
         }
         else if (schema.Extensions != null && schema.Extensions.TryGetValue(KubeIntOrString, out var value) && value is JsonNodeExtension value1 && value1.Node.GetValueKind() == JsonValueKind.True)
         {
-            return "IntstrIntOrString";
+            return "IntOrString";
         }
 
         switch (schema.Type)
@@ -662,3 +662,4 @@ public class CodeGenerator : ICodeGenerator
         return sanitizedFileName;
     }
 }
+
