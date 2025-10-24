@@ -50,7 +50,7 @@ jobs:
       if: steps.semantic_final.outputs.new_release_published == 'true'
       run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
 
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v5
       with:
         name: NuGet Package
         path: '**/*.nupkg'
