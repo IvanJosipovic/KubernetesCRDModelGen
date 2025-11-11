@@ -24,8 +24,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" />
-        <ProjectReference Include="..\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
+      <ProjectReference Include="..\..\src\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" />
+      <ProjectReference Include="..\..\src\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
     </ItemGroup>
 
 </Project>
