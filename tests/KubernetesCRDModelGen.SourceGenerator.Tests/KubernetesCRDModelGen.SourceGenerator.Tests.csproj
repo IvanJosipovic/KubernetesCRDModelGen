@@ -4,7 +4,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsAsErrors>$(WarningsAsErrors);CS8785</WarningsAsErrors>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,3 +15,4 @@
   </ItemGroup>
 
 </Project>
+
