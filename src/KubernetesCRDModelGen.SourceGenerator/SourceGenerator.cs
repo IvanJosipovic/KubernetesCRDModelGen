@@ -60,8 +60,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
                     var openAPIReader = new OpenApiJsonReader();
 
                     var deserializer = new DeserializerBuilder()
-                        .WithTypeConverter(new SystemTextJsonYamlTypeConverter())
-                        .WithTypeInspector(x => new SystemTextJsonTypeInspector(x))
+                        .AddSystemTextJson()
                         .IgnoreUnmatchedProperties()
                         .Build();
 
