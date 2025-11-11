@@ -28,7 +28,7 @@ This project contains components which allow generation of C# Classes/Assemblies
   ```
 - CLI
   - Install .Net Tool
-    - `dotnet tool install --global KubernetesCRDModelGen.Tool --prerelease`
+    - `dotnet tool install --global KubernetesCRDModelGen.Tool`
   - Run
     - `KubernetesCRDModelGen --FolderPath /path/to/yamls --Namespace Namespace`
 
@@ -40,14 +40,14 @@ Update the .csproj with the following settings. The Models will be generated in 
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFrameworks>net10.0</TargetFrameworks>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KubernetesClient" Version="17.0.4" />
+    <PackageReference Include="KubernetesClient" Version="18.0.5" />
     <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.*.*" />
     <AdditionalFiles Include="*.yaml" />
   </ItemGroup>
