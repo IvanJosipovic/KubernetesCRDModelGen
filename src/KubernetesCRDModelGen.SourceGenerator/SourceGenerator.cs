@@ -24,7 +24,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
 #if DEBUG
             if (!Debugger.IsAttached)
             {
-                Debugger.Launch();
+                //Debugger.Launch();
             }
 #endif
             codeGenerator = new CodeGenerator();
