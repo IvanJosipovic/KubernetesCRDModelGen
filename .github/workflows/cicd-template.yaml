@@ -15,6 +15,15 @@ jobs:
     steps:
     - uses: actions/checkout@v5
 
+    - name: Validate Yamls
+      shell: pwsh
+      run: |
+        $YamlFiles = Get-ChildItem -Path crds -Filter *.yaml -File
+  
+        if ($YamlFiles.Count -eq 0) {
+          throw "No .yaml file found in crd directory"
+        }
+
     - name: Semantic Release
       uses: cycjimmy/semantic-release-action@v5
       id: semantic
@@ -54,3 +63,6 @@ jobs:
       with:
         name: NuGet Package
         path: '**/*.nupkg'
+
+
+
