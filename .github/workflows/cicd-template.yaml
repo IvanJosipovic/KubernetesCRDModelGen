@@ -21,7 +21,7 @@ jobs:
         $YamlFiles = Get-ChildItem -Path crds -Filter *.yaml -File
   
         if ($YamlFiles.Count -eq 0) {
-          throw "No .yaml file found in directory: $($Dir.FullName)"
+          throw "No .yaml file found in crd directory"
         }
 
     - name: Semantic Release
@@ -63,5 +63,6 @@ jobs:
       with:
         name: NuGet Package
         path: '**/*.nupkg'
+
 
 
