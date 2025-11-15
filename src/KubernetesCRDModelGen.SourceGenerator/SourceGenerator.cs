@@ -19,6 +19,8 @@ namespace KubernetesCRDModelGen.SourceGenerator
     {
         private static CodeGenerator codeGenerator;
 
+        private static HttpClient httpClient;
+
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
 #if DEBUG
@@ -30,18 +32,16 @@ namespace KubernetesCRDModelGen.SourceGenerator
             codeGenerator = new CodeGenerator();
 
             var localFilesPipeline = context.AdditionalTextsProvider.Select(static (text, cancellationToken) =>
-            {
-                if (!text.Path.EndsWith(".yaml"))
                 {
-                    return default;
-                }
+                    if (!text.Path.EndsWith(".yaml"))
+                    {
+                        return default;
+                    }
 
-                return (Name: Path.GetFileName(text.Path), Text: text.GetText(cancellationToken)?.ToString());
-            })
-            .Where((pair) => pair is not ((_, null) or (null, _)));
+                    return (Name: Path.GetFileName(text.Path), Text: text.GetText(cancellationToken)?.ToString());
+                })
+                .Where((pair) => pair is not ((_, null) or (null, _)));
 
-
-            var client = new HttpClient();
             var externalYamlUrlsPipeline = context
                 .AnalyzerConfigOptionsProvider
                 .Select((config, _) => config.GlobalOptions
@@ -49,11 +49,37 @@ namespace KubernetesCRDModelGen.SourceGenerator
                     ? yamlCrdUrls.Replace("\n", "").Split([','], StringSplitOptions.RemoveEmptyEntries)
                     : [])
                 .SelectMany((urls, _) => urls)
-                .Select((url, _) => (Url: url, Text: client.GetStringAsync(url).Result));
-                
+                .Select((url, _) =>
+                {
+                    try
+                    {
+                        var text = httpClient.GetStringAsync(url).GetAwaiter().GetResult();
+                        return (Url: url, Text: text);
+                    }
+                    catch (Exception ex)
+                    {
+                        return (Url: url, Text: null);
+                    }
+                });
+
 
             context.RegisterSourceOutput(localFilesPipeline, static (context, pair) =>
             {
+                if (pair.Text is null)
+                {
+                    context.ReportDiagnostic(
+                        Diagnostic.Create(
+                            new DiagnosticDescriptor(
+                                "KG5",
+                                "Failed to fetch YAML",
+                                "Failed to fetch URL {0}",
+                                "KubernetesCRDModelGen",
+                                DiagnosticSeverity.Error,
+                                true),
+                            Location.None,
+                            pair.Name));
+                }
+
                 // Log the filename that is loaded
                 context.ReportDiagnostic(Diagnostic.Create(
                     new DiagnosticDescriptor(
@@ -71,7 +97,6 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
             context.RegisterSourceOutput(externalYamlUrlsPipeline, static (context, pair) =>
             {
-
                 context.ReportDiagnostic(Diagnostic.Create(
                     new DiagnosticDescriptor(
                         "KG4",
@@ -124,25 +149,31 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
                                 foreach (var version in versions)
                                 {
-                                    var doc = openAPIReader.ReadFragment<OpenApiSchema>(version.Schema.OpenAPIV3Schema, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
+                                    var doc = openAPIReader.ReadFragment<OpenApiSchema>(version.Schema.OpenAPIV3Schema,
+                                        OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
                                     if (diag != null && diag.Errors.Count > 0)
                                     {
                                         context.ReportDiagnostic(Diagnostic.Create(
                                             new DiagnosticDescriptor(
                                                 "KG3",
-                                                "Error Parsin Open API Spec",
+                                                "Error Parsing Open API Spec",
                                                 "Loaded source: {0}\r\n{1}",
                                                 "KubernetesCRDModelGen",
                                                 DiagnosticSeverity.Error,
                                                 true),
                                             Location.None,
-                                            sourceName, diag.Errors.Select(x => x.Message).Aggregate((a, b) => a + "\r\n" + b)));
+                                            sourceName,
+                                            diag.Errors.Select(x => x.Message).Aggregate((a, b) => a + "\r\n" + b)));
                                     }
 
-                                    var code = codeGenerator.GenerateCompilationUnit(doc, "KubernetesCRDModelGen.Models", version.Name, crd.Spec.Names.Kind, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
+                                    var code = codeGenerator.GenerateCompilationUnit(doc,
+                                        "KubernetesCRDModelGen.Models", version.Name, crd.Spec.Names.Kind,
+                                        crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
 
-                                    var filename = CodeGenerator.RemoveIllegalFileNameCharacters($"{version.Name}.{crd.Metadata.Name}.g.cs");
+                                    var filename =
+                                        CodeGenerator.RemoveIllegalFileNameCharacters(
+                                            $"{version.Name}.{crd.Metadata.Name}.g.cs");
 
                                     context.AddSource(filename, code.NormalizeWhitespace().ToFullString());
                                 }
@@ -151,12 +182,13 @@ namespace KubernetesCRDModelGen.SourceGenerator
                             {
                                 context.ReportDiagnostic(Diagnostic.Create(
                                     new DiagnosticDescriptor(
-                                    "KG2",
-                                    $"Error converting {sourceName} {key}",
-                                    "{0}\n{1}",
-                                    "KubernetesCRDModelGen",
-                                    DiagnosticSeverity.Error,
-                                    true), Location.None, $"Error converting {sourceName} {key} {e.Message}", e.StackTrace));
+                                        "KG2",
+                                        $"Error converting {sourceName} {key}",
+                                        "{0}\n{1}",
+                                        "KubernetesCRDModelGen",
+                                        DiagnosticSeverity.Error,
+                                        true), Location.None, $"Error converting {sourceName} {key} {e.Message}",
+                                    e.StackTrace));
                             }
                         }
                     }
@@ -165,12 +197,12 @@ namespace KubernetesCRDModelGen.SourceGenerator
                 {
                     context.ReportDiagnostic(Diagnostic.Create(
                         new DiagnosticDescriptor(
-                        "KG1",
-                        $"Error parsing {sourceName}",
-                        "{0}\n{1}",
-                        "KubernetesCRDModelGen",
-                        DiagnosticSeverity.Error,
-                        true), Location.None, e, e.StackTrace));
+                            "KG1",
+                            $"Error parsing {sourceName}",
+                            "{0}\n{1}",
+                            "KubernetesCRDModelGen",
+                            DiagnosticSeverity.Error,
+                            true), Location.None, e, e.StackTrace));
                 }
             }
         }
