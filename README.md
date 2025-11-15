@@ -49,7 +49,22 @@ Update the .csproj with the following settings. The Models will be generated in 
   <ItemGroup>
     <PackageReference Include="KubernetesClient" Version="18.0.5" />
     <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.*.*" />
+  </ItemGroup>
+
+  <!-- For local CRD files -->
+  <ItemGroup>
     <AdditionalFiles Include="*.yaml" />
+
+  </ItemGroup>
+
+  <!-- For Remote CRD files -->
+  <ItemGroup>
+    <!-- Single line style: -->
+    <CRDYamlSourceUrls>https://app1.com/crd.yaml,https://app2.com/crd.yaml</CRDYamlSourceUrls>
+
+    <!-- Multi line style: -->
+    <CRDYamlSourceUrls>https://app1.com/crd.yaml</CRDYamlSourceUrls>
+    <CRDYamlSourceUrls>$(CRDYamlSourceUrls),https://app2.com/crd.yaml</CRDYamlSourceUrls>
   </ItemGroup>
 
 </Project>
