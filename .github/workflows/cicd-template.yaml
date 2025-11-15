@@ -16,7 +16,6 @@ jobs:
     - uses: actions/checkout@v5
 
     - name: Validate Yamls
-      working-directory: src/Models
       shell: pwsh
       run: |
         $YamlFiles = Get-ChildItem -Path crds -Filter *.yaml -File
@@ -64,4 +63,5 @@ jobs:
       with:
         name: NuGet Package
         path: '**/*.nupkg'
+
 
