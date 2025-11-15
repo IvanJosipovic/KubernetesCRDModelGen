@@ -54,7 +54,6 @@ Update the .csproj with the following settings. The Models will be generated in 
   <!-- For local CRD files -->
   <ItemGroup>
     <AdditionalFiles Include="*.yaml" />
-
   </ItemGroup>
 
   <!-- For Remote CRD files -->
@@ -86,16 +85,20 @@ We publish the following premade packages
 | cnrm.cloud.google.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.cnrm.cloud.google.com/) |
 | crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.crossplane.io/) |
 | databricks.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.databricks.crossplane.io/) |
+| databricks.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.databricks.upbound.io/) |
 | fluxcd.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.fluxcd.io/) |
 | gateway.networking.k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.gateway.networking.k8s.io/) |
 | gcp.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.gcp.upbound.io/) |
+| github.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.github.upbound.io/) |
 | helm.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.helm.crossplane.io/) |
+| http.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.http.crossplane.io/) |
 | istio.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.istio.io/) |
 | jetstack.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.jetstack.io/) |
 | keda.sh | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.keda.sh/) |
 | knative.dev | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.knative.dev/) |
 | kubernetes.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.kubernetes.crossplane.io/) |
 | kubevirt.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.kubevirt.io/) |
+| longhorn.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.longhorn.io/) |
 | opentofu.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.opentofu.upbound.io/) |
 | postgresql.cnpg.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.postgresql.cnpg.io/) |
 | projectcalico.org | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.projectcalico.org/) |
