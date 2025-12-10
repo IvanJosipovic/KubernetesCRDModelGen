@@ -20,7 +20,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="KubernetesClient" Version="18.0.5" />
+        <PackageReference Include="KubernetesClient" Version="18.0.13" />
         <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" />
     </ItemGroup>
 
