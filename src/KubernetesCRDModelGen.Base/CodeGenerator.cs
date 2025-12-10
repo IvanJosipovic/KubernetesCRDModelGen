@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
+using System.Text.Json.Serialization;
 using System.Xml.Linq;
 
 namespace KubernetesCRDModelGen.Base;
@@ -398,7 +399,7 @@ public class CodeGenerator : ICodeGenerator
 
                 return $"IList<{GetOrGenerateType(schema.Items, types, parentClassName, propertyName)}>";
             default:
-                throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema));
+                throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema, CodeGeneratorSourceGenerationContext.Default.IOpenApiSchema));
         }
     }
 
@@ -663,3 +664,7 @@ public class CodeGenerator : ICodeGenerator
     }
 }
 
+[JsonSerializable(typeof(IOpenApiSchema))]
+internal partial class CodeGeneratorSourceGenerationContext : JsonSerializerContext
+{
+}
