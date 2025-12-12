@@ -89,7 +89,7 @@ jobs:
       if: steps.semantic_final.outputs.new_release_published == 'true'
       run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ steps.login.outputs.NUGET_API_KEY }}
 
-    - uses: actions/upload-artifact@v5
+    - uses: actions/upload-artifact@v6
       with:
         name: NuGet Package
         path: src/**/*.nupkg
