@@ -9,7 +9,9 @@ using Microsoft.OpenApi.Reader;
 using System.Reflection;
 using System.Runtime.Loader;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Xml;
+using static k8s.KubernetesJson;
 
 namespace KubernetesCRDModelGen;
 
@@ -121,8 +123,7 @@ public class Generator : IGenerator
 
             var reader = new OpenApiJsonReader();
 
-            var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
-
+            var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps);
             var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
             if (diag != null && diag.Errors.Count > 0)
@@ -154,4 +155,17 @@ public class Generator : IGenerator
 
         return [.. references];
     }
+}
+
+[JsonSerializable(typeof(V1JSONSchemaProps))]
+[JsonSerializable(typeof(Dictionary<object, object>))]
+[JsonSerializable(typeof(byte))]
+[JsonSourceGenerationOptions(
+    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+    PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
+    UseStringEnumConverter = true,
+    Converters = new[] { typeof(Iso8601TimeSpanConverter), typeof(KubernetesDateTimeConverter), typeof(KubernetesDateTimeOffsetConverter)})
+]
+internal partial class GeneratorSourceGenerationContext : JsonSerializerContext
+{
 }
