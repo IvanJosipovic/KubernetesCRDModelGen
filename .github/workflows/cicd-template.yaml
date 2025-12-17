@@ -13,7 +13,16 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
+
+    - name: Validate Yamls
+      shell: pwsh
+      run: |
+        $YamlFiles = Get-ChildItem -Path crds -Filter *.yaml -File
+  
+        if ($YamlFiles.Count -eq 0) {
+          throw "No .yaml file found in crd directory"
+        }
 
     - name: Semantic Release
       uses: cycjimmy/semantic-release-action@v5
@@ -50,7 +59,10 @@ jobs:
       if: steps.semantic_final.outputs.new_release_published == 'true'
       run: dotnet nuget push **/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }}
 
-    - uses: actions/upload-artifact@v5
+    - uses: actions/upload-artifact@v6
       with:
         name: NuGet Package
         path: '**/*.nupkg'
+
+
+

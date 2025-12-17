@@ -16,13 +16,14 @@ permissions:
   actions: write
   checks: write
   issues: write
+  pull-requests: write
 
 jobs:
   create-release:
     name: Create Release
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    - uses: actions/checkout@v6
 
     - name: Semantic Release
       uses: cycjimmy/semantic-release-action@v5
@@ -50,14 +51,14 @@ jobs:
       if: success() || failure()
       with:
         name: Tests
-        path: '**/TestResults/test-results.trx'
+        path: tests/**/*.trx
         reporter: dotnet-trx
 
     - name: Coverage
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: coverage.cobertura.xml
+        files: tests/**/*.cobertura.xml
         fail_ci_if_error: false
 
     - name: Benchmarks
@@ -88,8 +89,7 @@ jobs:
       if: steps.semantic_final.outputs.new_release_published == 'true'
       run: dotnet nuget push src/**/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ steps.login.outputs.NUGET_API_KEY }}
 
-    - uses: actions/upload-artifact@v5
+    - uses: actions/upload-artifact@v6
       with:
         name: NuGet Package
         path: src/**/*.nupkg
-

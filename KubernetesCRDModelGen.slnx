@@ -1,0 +1,32 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/benchmarks/">
+    <Project Path="benchmarks/KubernetesCRDModelGen.Benchmarks/KubernetesCRDModelGen.Benchmarks.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".github/workflows/cicd-template.yaml" />
+    <File Path=".github/workflows/cicd.yaml" />
+    <File Path=".github/workflows/update-template.yaml" />
+    <File Path=".releaserc.json" />
+    <File Path="global.json" />
+    <File Path="README.md" />
+    <File Path="src/Models/Directory.Build.props" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/KubernetesCRDModelGen.Base/KubernetesCRDModelGen.Base.csproj" />
+    <Project Path="src/KubernetesCRDModelGen.SourceGenerator/KubernetesCRDModelGen.SourceGenerator.csproj" />
+    <Project Path="src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj" />
+    <Project Path="src/KubernetesCRDModelGen.Tool/KubernetesCRDModelGen.Tool.csproj" />
+    <Project Path="src/KubernetesCRDModelGen/KubernetesCRDModelGen.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/KubernetesCRDModelGen.Tests/KubernetesCRDModelGen.Tests.csproj" />
+    <Project Path="tests/KubernetesCRDModelGen.SourceGenerator.Tests/KubernetesCRDModelGen.SourceGenerator.Tests.csproj" />
+  </Folder>
+
+</Solution>
