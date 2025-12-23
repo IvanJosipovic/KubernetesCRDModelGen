@@ -21,7 +21,7 @@ jobs:
           global-json-file: global.json
 
       - name: Get Sync Tool
-        run: dotnet tool install --global KubernetesCRDModelGen.Sync --prerelease
+        run: dotnet tool install --global KubernetesCRDModelGen.Sync
 
       - name: Clean Models
         run: rm -rf crds

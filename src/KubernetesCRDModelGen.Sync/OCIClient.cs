@@ -30,7 +30,7 @@ internal static partial class OCIClient
                 throw new Exception($"No tags match the specified SemVer range: {config.OCI.SemVer}");
             }
 
-            var highestVersion = matchingVersions.OrderBy(x => x.version).First();
+            var highestVersion = matchingVersions.OrderByDescending(x => x.version.ToVersion()).First();
 
             var yamls = await DownloadImage(config.OCI.Image + ":" + highestVersion.tag);
             return yamls;
