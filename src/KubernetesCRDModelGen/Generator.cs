@@ -123,7 +123,8 @@ public class Generator : IGenerator
 
             var reader = new OpenApiJsonReader();
 
-            var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps);
+            var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
+
             var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
             if (diag != null && diag.Errors.Count > 0)
