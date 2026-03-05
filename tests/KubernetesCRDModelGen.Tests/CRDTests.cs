@@ -19,8 +19,7 @@ public class CRDTests
         var fac = new LoggerFactory();
 
         var generator = new Generator(fac);
-        var crd = KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml").GetAwaiter().GetResult();
-
+        var crd = await KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml");
 
         var ass = generator.GenerateAssembly(crd);
         if (ass.Item1 == null || ass.Item2 == null)
