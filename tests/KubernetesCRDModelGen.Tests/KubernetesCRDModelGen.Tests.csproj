@@ -28,4 +28,10 @@
       <ProjectReference Include="..\..\src\KubernetesCRDModelGen\KubernetesCRDModelGen.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="managedclusters.containerservice.azure.com.yaml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

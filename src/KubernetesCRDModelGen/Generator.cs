@@ -113,23 +113,25 @@ public class Generator : IGenerator
 
     private CompilationUnitSyntax GenerateCompilationUnit(V1CustomResourceDefinition crd, string @namespace)
     {
-        var versions = crd.Spec.Versions.Where(x => x.Served);
+        var types = new List<MemberDeclarationSyntax>(crd.Spec.Versions.Count);
 
-        var types = new List<MemberDeclarationSyntax>();
+        var reader = new OpenApiJsonReader();
 
-        foreach (var version in versions)
+        foreach (var version in crd.Spec.Versions)
         {
-            var schema = version.Schema.OpenAPIV3Schema;
+            if (!version.Served)
+            {
+                continue;
+            }
 
-            var reader = new OpenApiJsonReader();
-
-            var node = JsonSerializer.SerializeToNode(version.Schema.OpenAPIV3Schema);
+            var node = JsonSerializer.SerializeToNode(version.Schema?.OpenAPIV3Schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps!);
 
             var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
             if (diag != null && diag.Errors.Count > 0)
             {
-                logger.LogError("Error: {err}", diag.Errors.Select(x => x.Message));
+                var messages = string.Join(" | ", diag.Errors.Select(x => x.Message));
+                logger.LogError("Error converting schema to OpenAPI: {messages}", messages);
             }
 
             var code = codeGenerator.GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
@@ -161,6 +163,9 @@ public class Generator : IGenerator
 [JsonSerializable(typeof(V1JSONSchemaProps))]
 [JsonSerializable(typeof(Dictionary<object, object>))]
 [JsonSerializable(typeof(byte))]
+[JsonSerializable(typeof(Int16))]
+[JsonSerializable(typeof(Int32))]
+[JsonSerializable(typeof(Int64))]
 [JsonSourceGenerationOptions(
     DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
