@@ -2212,7 +2212,7 @@ spec:
 
         var objYaml = KubernetesYaml.Serialize(obj);
 
-        objYaml.Should().Be("""
+        objYaml.ReplaceLineEndings("\n").Should().Be("""
 apiVersion: v1beta1
 kind: Test
 spec:
@@ -2289,7 +2289,7 @@ spec:
         propertyType.SetValue(spec, listInstance);
         var objYaml = KubernetesYaml.Serialize(obj);
 
-        objYaml.Should().Be("""
+        objYaml.ReplaceLineEndings("\n").Should().Be("""
 apiVersion: v1beta1
 kind: Test
 spec:
