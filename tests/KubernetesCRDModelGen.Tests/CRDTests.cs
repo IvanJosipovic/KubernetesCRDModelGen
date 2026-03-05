@@ -14,7 +14,7 @@ public class CRDTests
 {
 
     [Fact]
-    public async Task TestNamespace()
+    public async Task TestGenerateAssemblySucceeds()
     {
         var fac = new LoggerFactory();
 
