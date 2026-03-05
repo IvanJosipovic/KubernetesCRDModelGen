@@ -22,9 +22,7 @@ public class CRDTests
         var crd = await KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml");
 
         var ass = generator.GenerateAssembly(crd);
-        if (ass.Item1 == null || ass.Item2 == null)
-        {
-            throw new Exception("Failed to generate assembly");
-        }
+        Assert.NotNull(ass.Item1);
+        Assert.NotNull(ass.Item2);
     }
 }
