@@ -174,5 +174,5 @@ public class Generator : IGenerator
 ]
 internal partial class GeneratorSourceGenerationContext : JsonSerializerContext
 {
-
 }
+
