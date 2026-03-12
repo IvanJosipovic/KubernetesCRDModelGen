@@ -97,7 +97,7 @@ public class Generator : IGenerator
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Error creating Assembly");
+            logger.LogError(ex, "Error creating Assembly for CRD {crdName}", crd.Metadata.Name);
         }
 
         return (null, null);
@@ -175,5 +175,4 @@ public class Generator : IGenerator
 ]
 internal partial class GeneratorSourceGenerationContext : JsonSerializerContext
 {
-
 }
