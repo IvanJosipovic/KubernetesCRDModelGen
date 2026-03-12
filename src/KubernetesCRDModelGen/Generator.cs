@@ -97,7 +97,7 @@ public class Generator : IGenerator
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Error creating Assembly");
+            logger.LogError(ex, "Error creating Assembly: ");
         }
 
         return (null, null);
@@ -174,4 +174,5 @@ public class Generator : IGenerator
 ]
 internal partial class GeneratorSourceGenerationContext : JsonSerializerContext
 {
+
 }
