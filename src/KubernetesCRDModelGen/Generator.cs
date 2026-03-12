@@ -160,6 +160,7 @@ public class Generator : IGenerator
     }
 }
 
+[JsonSerializable(typeof(JsonElement))]
 [JsonSerializable(typeof(V1JSONSchemaProps))]
 [JsonSerializable(typeof(Dictionary<object, object>))]
 [JsonSerializable(typeof(byte))]
@@ -174,4 +175,5 @@ public class Generator : IGenerator
 ]
 internal partial class GeneratorSourceGenerationContext : JsonSerializerContext
 {
+
 }
