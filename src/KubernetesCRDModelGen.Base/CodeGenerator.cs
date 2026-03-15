@@ -308,13 +308,15 @@ public class CodeGenerator : ICodeGenerator
                                        (isRequired && isNullable && !hasDefault)
                                     || (isRequired && !isNullable && !hasDefault);
 
-                var newProperty = CreateProperty(type, property.Key, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
+                var isEnumType = EnumSupport && schema.Enum != null && schema.Enum.Any() && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>()));
+
+                var newProperty = CreateProperty(type, property.Key, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable, isEnumType: isEnumType);
 
                 //Check if class already contains a property with the same name
                 var count = 1;
                 while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
                 {
-                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
+                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable, isEnumType: isEnumType);
                 }
 
                 @class = @class.AddMembers(newProperty);
@@ -492,7 +494,7 @@ public class CodeGenerator : ICodeGenerator
         return enumDeclaration.Identifier.Text;
     }
 
-    private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool isNullable = true, string? defaultValue = null, bool isRequired = false)
+    private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool isNullable = true, string? defaultValue = null, bool isRequired = false, bool isEnumType = false)
     {
         PropertyDeclarationSyntax propDecleration;
 
@@ -534,7 +536,7 @@ public class CodeGenerator : ICodeGenerator
                                             SyntaxKind.StringLiteralExpression,
                                             SyntaxFactory.Literal(propertyName)))))))));
 
-        if (EnumSupport && typeName.EndsWith("Enum"))
+        if (EnumSupport && isEnumType)
         {
             propDecleration = propDecleration.AddAttributeLists(
                 SyntaxFactory.AttributeList(

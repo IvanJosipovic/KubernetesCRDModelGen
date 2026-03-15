@@ -2217,7 +2217,7 @@ apiVersion: v1beta1
 kind: Test
 spec:
   testEnum: test_test
-""");
+""".ReplaceLineEndings("\n"));
     }
 
     [Fact]
@@ -2295,7 +2295,7 @@ kind: Test
 spec:
   testEnum:
   - test_test
-""");
+""".ReplaceLineEndings("\n"));
     }
 
     [Fact]
@@ -10508,6 +10508,97 @@ spec:
         optNonNullDefault.PropertyType.Should().Be<string>();
         optNonNullDefault.IsNullableReferenceType().Should().BeTrue();
         optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+    }
+
+    [Fact]
+    public void TestEnumPropName()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              enum:
+                type: string
+            type: object
+        type: object
+";
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        specType.GetProperty("Enum").PropertyType.Should().Be<string?>();
+    }
+
+    [Fact]
+    public void TestEnumPropName2()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    served: true
+    storage: true
+    schema:
+      openAPIV3Schema:
+        properties:
+          apiVersion:
+            type: string
+          kind:
+            type: string
+          metadata:
+            type: object
+          spec:
+            properties:
+              enum:
+                properties:
+                  value:
+                    type: string
+                type: object
+            type: object
+        type: object
+";
+        var type = GetTypeYaml(yaml, "Test");
+
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var nested1 = specType.GetProperty("Enum").PropertyType;
+        nested1.Name.Should().Be("V1alpha1TestSpecEnum");
+        nested1.IsClass.Should().BeTrue();
     }
 }
 
