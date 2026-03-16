@@ -308,15 +308,13 @@ public class CodeGenerator : ICodeGenerator
                                        (isRequired && isNullable && !hasDefault)
                                     || (isRequired && !isNullable && !hasDefault);
 
-                var isEnumType = EnumSupport && schema.Enum != null && schema.Enum.Any() && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>()));
-
-                var newProperty = CreateProperty(type, property.Key, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable, isEnumType: isEnumType);
+                var newProperty = CreateProperty(type, property.Key, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
 
                 //Check if class already contains a property with the same name
                 var count = 1;
                 while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
                 {
-                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable, isEnumType: isEnumType);
+                    newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
                 }
 
                 @class = @class.AddMembers(newProperty);
@@ -407,7 +405,9 @@ public class CodeGenerator : ICodeGenerator
 
     private static string GenerateEnum(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
-        var enumDeclaration = SyntaxFactory.EnumDeclaration(CleanIdentifier(parentClassName + " " + propertyName) + "Enum")
+        var enumName = CleanIdentifier(parentClassName + " " + propertyName) + "Enum";
+
+        var enumDeclaration = SyntaxFactory.EnumDeclaration(enumName)
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
             .AddAttributeLists(SyntaxFactory.AttributeList()
                 .AddAttributes(
@@ -419,6 +419,18 @@ public class CodeGenerator : ICodeGenerator
                             SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
                             SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
                         ]))),
+                    SyntaxFactory.Attribute(SyntaxFactory.ParseName("JsonConverter"))
+                        .WithArgumentList(
+                            SyntaxFactory.AttributeArgumentList(
+                                SyntaxFactory.SingletonSeparatedList(
+                                    SyntaxFactory.AttributeArgument(
+                                        SyntaxFactory.TypeOfExpression(
+                                            SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{enumName}>")
+                                        )
+                                    )
+                                )
+                            )
+                        ),
                 ])
             )
             .WithLeadingTrivia(
@@ -494,7 +506,7 @@ public class CodeGenerator : ICodeGenerator
         return enumDeclaration.Identifier.Text;
     }
 
-    private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool isNullable = true, string? defaultValue = null, bool isRequired = false, bool isEnumType = false)
+    private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool isNullable = true, string? defaultValue = null, bool isRequired = false)
     {
         PropertyDeclarationSyntax propDecleration;
 
@@ -535,26 +547,6 @@ public class CodeGenerator : ICodeGenerator
                                         SyntaxFactory.LiteralExpression(
                                             SyntaxKind.StringLiteralExpression,
                                             SyntaxFactory.Literal(propertyName)))))))));
-
-        if (EnumSupport && isEnumType)
-        {
-            propDecleration = propDecleration.AddAttributeLists(
-                SyntaxFactory.AttributeList(
-                    SyntaxFactory.SingletonSeparatedList(
-                        SyntaxFactory.Attribute(
-                            SyntaxFactory.ParseName("JsonConverter"),
-                            SyntaxFactory.AttributeArgumentList(
-                                SyntaxFactory.SingletonSeparatedList(
-                                    SyntaxFactory.AttributeArgument(
-                                        SyntaxFactory.TypeOfExpression(
-                                            SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{CleanIdentifier(typeName)}>")
-                                        )
-                                    )
-                                )
-                            )
-                        ))));
-        }
-
         propDecleration = propDecleration.WithLeadingTrivia(
             SyntaxFactory.TriviaList(
                 SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
