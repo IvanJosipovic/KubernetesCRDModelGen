@@ -1,6 +1,6 @@
 using k8s.Models;
 using k8s;
-using FluentAssertions;
+using Shouldly;
 using System.Text.Json.Nodes;
 using System.Collections.Generic;
 using System;
@@ -103,9 +103,10 @@ spec:
 ";
         var code = GetCode(yaml);
         var types = GetTypeYaml(yaml, "Test", "TestList");
-        types.Should().AllSatisfy(
-          t => t.Namespace.Should().Be(Namespace + ".kubeui.com")
-        );
+        foreach (var t in types)
+        {
+            t.Namespace.ShouldBe(Namespace + ".kubeui.com");
+        }
     }
 
     [Fact]
@@ -140,9 +141,10 @@ spec:
               type: object
 ";
         var types = GetTypeYaml(yaml, "Test", "TestList");
-        types.Should().AllSatisfy(
-          t => t.Assembly.ManifestModule.ScopeName.Should().Be("tests.kubeui.com.dll")
-        );
+        foreach (var t in types)
+        {
+            t.Assembly.ManifestModule.ScopeName.ShouldBe("tests.kubeui.com.dll");
+        }
     }
 
     [Fact]
@@ -187,16 +189,16 @@ spec:
           var attribute = type.CustomAttributes.First(x => x.AttributeType == typeof(KubernetesEntityAttribute));
 
           var kind = attribute.NamedArguments.First(x => x.MemberName == "Kind");
-          kind.TypedValue.Value.Should().Be(namedKind);
+          kind.TypedValue.Value.ShouldBe(namedKind);
 
           var group = attribute.NamedArguments.First(x => x.MemberName == "Group");
-          group.TypedValue.Value.Should().Be("kubeui.com");
+          group.TypedValue.Value.ShouldBe("kubeui.com");
 
           var version = attribute.NamedArguments.First(x => x.MemberName == "ApiVersion");
-          version.TypedValue.Value.Should().Be("v1beta1");
+          version.TypedValue.Value.ShouldBe("v1beta1");
 
           var plural = attribute.NamedArguments.First(x => x.MemberName == "PluralName");
-          plural.TypedValue.Value.Should().Be("tests");
+          plural.TypedValue.Value.ShouldBe("tests");
         }
     }
 
@@ -241,16 +243,16 @@ spec:
             var attribute = type.CustomAttributes.First(x => x.AttributeType == typeof(KubernetesEntityAttribute));
 
             var kind = attribute.NamedArguments.First(x => x.MemberName == "Kind");
-            kind.TypedValue.Value.Should().Be(namedKind);
+            kind.TypedValue.Value.ShouldBe(namedKind);
 
             var group = attribute.NamedArguments.First(x => x.MemberName == "Group");
-            group.TypedValue.Value.Should().Be("kubeui.com");
+            group.TypedValue.Value.ShouldBe("kubeui.com");
 
             var version = attribute.NamedArguments.First(x => x.MemberName == "ApiVersion");
-            version.TypedValue.Value.Should().Be("v1beta1");
+            version.TypedValue.Value.ShouldBe("v1beta1");
 
             var plural = attribute.NamedArguments.First(x => x.MemberName == "PluralName");
-            plural.TypedValue.Value.Should().Be("tests");
+            plural.TypedValue.Value.ShouldBe("tests");
         }
     }
 
@@ -290,19 +292,19 @@ spec:
               type: object
 ";
         var type = GetTypeYaml(yaml, "Test");
-        type.Name.Should().Be("V1beta1Test");
-        type.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
-        type.IsAssignableTo(typeof(IKubernetesObject<V1ObjectMeta>)).Should().BeTrue();
-        type.IsAssignableTo(typeof(IMetadata<V1ObjectMeta>)).Should().BeTrue();
-        type.GetInterfaces().FirstOrDefault(x => x.Name == "ISpec`1").Should().NotBeNull();
-        type.GetInterfaces().FirstOrDefault(x => x.Name == "IStatus`1").Should().NotBeNull();
+        type.Name.ShouldBe("V1beta1Test");
+        type.IsAssignableTo(typeof(IKubernetesObject)).ShouldBeTrue();
+        type.IsAssignableTo(typeof(IKubernetesObject<V1ObjectMeta>)).ShouldBeTrue();
+        type.IsAssignableTo(typeof(IMetadata<V1ObjectMeta>)).ShouldBeTrue();
+        type.GetInterfaces().FirstOrDefault(x => x.Name == "ISpec`1").ShouldNotBeNull();
+        type.GetInterfaces().FirstOrDefault(x => x.Name == "IStatus`1").ShouldNotBeNull();
 
         var typeList = GetTypeYaml(yaml, "TestList");
-        typeList.Name.Should().Be("V1beta1TestList");
-        typeList.IsAssignableTo(typeof(IKubernetesObject)).Should().BeTrue();
-        typeList.IsAssignableTo(typeof(IKubernetesObject<V1ListMeta>)).Should().BeTrue();
-        typeList.IsAssignableTo(typeof(IMetadata<V1ListMeta>)).Should().BeTrue();
-        typeList.GetInterfaces().FirstOrDefault(x => x.Name == "IItems`1").Should().NotBeNull();
+        typeList.Name.ShouldBe("V1beta1TestList");
+        typeList.IsAssignableTo(typeof(IKubernetesObject)).ShouldBeTrue();
+        typeList.IsAssignableTo(typeof(IKubernetesObject<V1ListMeta>)).ShouldBeTrue();
+        typeList.IsAssignableTo(typeof(IMetadata<V1ListMeta>)).ShouldBeTrue();
+        typeList.GetInterfaces().FirstOrDefault(x => x.Name == "IItems`1").ShouldNotBeNull();
     }
 
     [Fact]
@@ -343,15 +345,15 @@ spec:
 
         static void ShouldHaveCorrectFieldValues(Type type, string namedKind)
         {
-          type.GetField("KubeApiVersion").GetValue(null).Should().Be("v1beta1");
-          type.GetField("KubeGroup").GetValue(null).Should().Be("kubeui.com");
-          type.GetField("KubeKind").GetValue(null).Should().Be(namedKind);
-          type.GetField("KubePluralName").GetValue(null).Should().Be("tests");
+          type.GetField("KubeApiVersion").GetValue(null).ShouldBe("v1beta1");
+          type.GetField("KubeGroup").GetValue(null).ShouldBe("kubeui.com");
+          type.GetField("KubeKind").GetValue(null).ShouldBe(namedKind);
+          type.GetField("KubePluralName").GetValue(null).ShouldBe("tests");
 
             var instance = Activator.CreateInstance(type);
 
-            type.GetProperty("ApiVersion").GetValue(instance).Should().Be("kubeui.com/v1beta1");
-            type.GetProperty("Kind").GetValue(instance).Should().Be(namedKind);
+            type.GetProperty("ApiVersion").GetValue(instance).ShouldBe("kubeui.com/v1beta1");
+            type.GetProperty("Kind").GetValue(instance).ShouldBe(namedKind);
         }
     }
 
@@ -411,11 +413,11 @@ spec:
 ";
         var type = GetTypeYaml(yaml, "Test", "TestList");
 
-        type.Length.Should().Be(4);
-        type[0].Name.Should().Be("V1beta1TestList");
-        type[1].Name.Should().Be("V1beta1Test");
-        type[2].Name.Should().Be("V1beta2TestList");
-        type[3].Name.Should().Be("V1beta2Test");
+        type.Length.ShouldBe(4);
+        type[0].Name.ShouldBe("V1beta1TestList");
+        type[1].Name.ShouldBe("V1beta1Test");
+        type[2].Name.ShouldBe("V1beta2TestList");
+        type[3].Name.ShouldBe("V1beta2Test");
     }
 
     [Fact]
@@ -458,7 +460,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("SomeString").PropertyType.Should().Be<string?>();
+        specType.GetProperty("SomeString").PropertyType.ShouldBe(typeof(string));
     }
 
     [Fact]
@@ -501,7 +503,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("SomeBool").PropertyType.Should().Be<bool?>();
+        specType.GetProperty("SomeBool").PropertyType.ShouldBe(typeof(bool?));
     }
 
     [Fact]
@@ -544,7 +546,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("IntProp").PropertyType.Should().Be<int?>();
+        specType.GetProperty("IntProp").PropertyType.ShouldBe(typeof(int?));
     }
 
     [Fact]
@@ -588,7 +590,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Int64Prop").PropertyType.Should().Be<long?>();
+        specType.GetProperty("Int64Prop").PropertyType.ShouldBe(typeof(long?));
     }
 
     [Fact]
@@ -631,7 +633,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("NumberProp").PropertyType.Should().Be<double?>();
+        specType.GetProperty("NumberProp").PropertyType.ShouldBe(typeof(double?));
     }
 
     [Fact]
@@ -672,9 +674,9 @@ spec:
 ";
         var type = GetTypeYaml(yaml, "Test");
 
-        type.GetProperty("Spec").PropertyType.Should().Be<JsonNode>();
+        type.GetProperty("Spec").PropertyType.ShouldBe(typeof(JsonNode));
 
-        type.GetProperty("Status").PropertyType.Should().Be<JsonNode>();
+        type.GetProperty("Status").PropertyType.ShouldBe(typeof(JsonNode));
     }
 
     [Fact]
@@ -717,7 +719,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Values").PropertyType.Should().Be<JsonNode?>();
+        specType.GetProperty("Values").PropertyType.ShouldBe(typeof(JsonNode));
     }
 
     [Fact]
@@ -760,7 +762,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("SomeString").PropertyType.Should().Be<string>();
+        specType.GetProperty("SomeString").PropertyType.ShouldBe(typeof(string));
     }
 
     [Fact]
@@ -807,13 +809,13 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).Should().BeTrue();
+        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).ShouldBeTrue();
 
         var listType = specType.GenericTypeArguments[0];
 
-        listType.Name.Should().Be("V1beta1TestSpec");
-        listType.GetProperty("LastTransitionTime").PropertyType.Should().Be<double?>();
-        listType.GetProperty("Message").PropertyType.Should().Be<string?>();
+        listType.Name.ShouldBe("V1beta1TestSpec");
+        listType.GetProperty("LastTransitionTime").PropertyType.ShouldBe(typeof(double?));
+        listType.GetProperty("Message").PropertyType.ShouldBe(typeof(string));
     }
 
     [Fact]
@@ -858,7 +860,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Array").PropertyType.Should().Be<IList<string>>();
+        specType.GetProperty("Array").PropertyType.ShouldBe(typeof(IList<string>));
     }
 
     [Fact]
@@ -903,7 +905,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Array").PropertyType.Should().Be<IList<JsonNode>>();
+        specType.GetProperty("Array").PropertyType.ShouldBe(typeof(IList<JsonNode>));
     }
 
     [Fact]
@@ -948,7 +950,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Array").PropertyType.Should().Be<IList<double>>();
+        specType.GetProperty("Array").PropertyType.ShouldBe(typeof(IList<double>));
     }
 
     [Fact]
@@ -993,7 +995,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Array").PropertyType.Should().Be<IList<int>>();
+        specType.GetProperty("Array").PropertyType.ShouldBe(typeof(IList<int>));
     }
 
     [Fact]
@@ -1039,7 +1041,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Array").PropertyType.Should().Be<IList<long>>();
+        specType.GetProperty("Array").PropertyType.ShouldBe(typeof(IList<long>));
     }
 
     [Fact]
@@ -1084,7 +1086,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("CustomSelector").PropertyType.Should().Be<IDictionary<string, string>>();
+        specType.GetProperty("CustomSelector").PropertyType.ShouldBe(typeof(IDictionary<string, string>));
     }
 
     [Fact]
@@ -1133,12 +1135,12 @@ spec:
 
 
         var prop = specType.GetProperty("NumberProp");
-        prop.PropertyType.Should().Be(typeof(double));
-        prop.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+        prop.PropertyType.ShouldBe(typeof(double));
+        prop.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeTrue();
 
         var prop2 = specType.GetProperty("NumberProp2");
-        prop2.PropertyType.Should().Be<Nullable<double>>();
-        prop2.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        prop2.PropertyType.ShouldBe(typeof(Nullable<double>));
+        prop2.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
     }
 
     [Fact]
@@ -1190,9 +1192,9 @@ spec:
 
         var rootType = specType.GetProperty("Root").PropertyType;
 
-        rootType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
+        rootType.GetProperty("NumberProp").PropertyType.ShouldBe(typeof(double));
 
-        rootType.GetProperty("NumberProp2").PropertyType.Should().Be<double?>();
+        rootType.GetProperty("NumberProp2").PropertyType.ShouldBe(typeof(double?));
     }
 
     [Fact]
@@ -1248,11 +1250,11 @@ spec:
 
         var arrayType = typeof(IList<>).MakeGenericType(itemType);
 
-        specType.GetProperty("Array").PropertyType.Should().Be(arrayType);
+        specType.GetProperty("Array").PropertyType.ShouldBe(arrayType);
 
-        itemType.GetProperty("NumberProp").PropertyType.Should().Be<double>();
+        itemType.GetProperty("NumberProp").PropertyType.ShouldBe(typeof(double));
 
-        itemType.GetProperty("NumberProp2").PropertyType.Should().Be<double?>();
+        itemType.GetProperty("NumberProp2").PropertyType.ShouldBe(typeof(double?));
     }
 
     [Fact]
@@ -1298,7 +1300,9 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        var itemType = specType.GetProperty("IntOrString").PropertyType.Should().Be<IntOrString?>();
+        var itemType = specType.GetProperty("IntOrString").PropertyType;
+
+        itemType.ShouldBe(typeof(IntOrString));
     }
 
     [Fact]
@@ -1348,7 +1352,7 @@ spec:
 
         var itemType = specType.GetProperty("IntOrStringArray").PropertyType.GenericTypeArguments[0];
 
-        itemType.Should().Be<IntOrString>();
+        itemType.ShouldBe(typeof(IntOrString));
     }
 
     [Fact]
@@ -1398,18 +1402,18 @@ spec:
 
         var enumType = specType.GetProperty("TestEnum").PropertyType;
 
-        Nullable.GetUnderlyingType(enumType).IsEnum.Should().BeTrue();
+        Nullable.GetUnderlyingType(enumType).IsEnum.ShouldBeTrue();
 
         var members = GetMembers(enumType);
 
-        members.Should().HaveCount(3);
+        members.Length.ShouldBe(3);
 
-        members[0].Name.Should().Be("Always");
-        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("always");
-        members[1].Name.Should().Be("Always1");
-        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("Always");
-        members[2].Name.Should().Be("Always2");
-        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("Always-");
+        members[0].Name.ShouldBe("Always");
+        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("always");
+        members[1].Name.ShouldBe("Always1");
+        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("Always");
+        members[2].Name.ShouldBe("Always2");
+        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("Always-");
     }
 
     [Fact]
@@ -1459,18 +1463,18 @@ spec:
 
         var enumType = specType.GetProperty("TestEnum").PropertyType;
 
-        Nullable.GetUnderlyingType(enumType).IsEnum.Should().BeTrue();
+        Nullable.GetUnderlyingType(enumType).IsEnum.ShouldBeTrue();
 
         var members = GetMembers(enumType);
 
-        members.Should().HaveCount(3);
+        members.Length.ShouldBe(3);
 
-        members[0].Name.Should().Be("Always");
-        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("always");
-        members[1].Name.Should().Be("IfNotPresent");
-        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("ifNotPresent");
-        members[2].Name.Should().Be("Never");
-        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
+        members[0].Name.ShouldBe("Always");
+        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("always");
+        members[1].Name.ShouldBe("IfNotPresent");
+        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("ifNotPresent");
+        members[2].Name.ShouldBe("Never");
+        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("never");
     }
 
     [Fact]
@@ -1522,20 +1526,20 @@ spec:
 
         var itemType = specType.GetProperty("EnumArray").PropertyType;
 
-        typeof(IList<>).IsAssignableFrom(itemType.GetGenericTypeDefinition()).Should().BeTrue();
+        typeof(IList<>).IsAssignableFrom(itemType.GetGenericTypeDefinition()).ShouldBeTrue();
 
-        itemType.GenericTypeArguments[0].IsEnum.Should().BeTrue();
+        itemType.GenericTypeArguments[0].IsEnum.ShouldBeTrue();
 
         var members = GetMembers(itemType.GenericTypeArguments[0]);
 
-        members.Should().HaveCount(3);
+        members.Length.ShouldBe(3);
 
-        members[0].Name.Should().Be("Always");
-        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("Always");
-        members[1].Name.Should().Be("IfNotPresent");
-        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("IfNotPresent");
-        members[2].Name.Should().Be("TestTest");
-        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("test_test");
+        members[0].Name.ShouldBe("Always");
+        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("Always");
+        members[1].Name.ShouldBe("IfNotPresent");
+        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("IfNotPresent");
+        members[2].Name.ShouldBe("TestTest");
+        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("test_test");
     }
 
     [Fact]
@@ -1585,7 +1589,7 @@ spec:
 
         var enumType = specType.GetProperty("TestEnum").PropertyType;
 
-        enumType.Should().Be<string>();
+        enumType.ShouldBe(typeof(string));
     }
 
     /// <summary>
@@ -1639,18 +1643,18 @@ spec:
 
         var enumType = specType.GetProperty("TestEnum").PropertyType;
 
-        Nullable.GetUnderlyingType(enumType).IsEnum.Should().BeTrue();
+        Nullable.GetUnderlyingType(enumType).IsEnum.ShouldBeTrue();
 
         var members = GetMembers(enumType);
 
-        members.Should().HaveCount(3);
+        members.Length.ShouldBe(3);
 
-        members[0].Name.Should().Be("Always");
-        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("always");
-        members[1].Name.Should().Be("Option1");
-        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("");
-        members[2].Name.Should().Be("Never");
-        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
+        members[0].Name.ShouldBe("Always");
+        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("always");
+        members[1].Name.ShouldBe("Option1");
+        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("");
+        members[2].Name.ShouldBe("Never");
+        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("never");
 
         var testJson = "{\"spec\": {\"testEnum\\: \"\" } }";
 
@@ -1658,11 +1662,11 @@ spec:
 
         var spec = @object.GetType().GetProperty("Spec").GetValue(@object);
 
-        spec.GetType().GetProperty("TestEnum").GetValue(spec).Should().Be(Enum.Parse(enumType, "Option1"));
+        spec.GetType().GetProperty("TestEnum").GetValue(spec).ShouldBe(Enum.Parse(enumType, "Option1"));
 
         var testJson2 = KubernetesJson.Serialize(@object);
 
-        testJson2.Should().Be(testJson);
+        testJson2.ShouldBe(testJson);
     }
 
     /// <summary>
@@ -1718,18 +1722,18 @@ spec:
 
         enumType = Nullable.GetUnderlyingType(enumType);
 
-        enumType.IsEnum.Should().BeTrue();
+        enumType.IsEnum.ShouldBeTrue();
 
         var members = GetMembers(enumType);
 
-        members.Should().HaveCount(3);
+        members.Length.ShouldBe(3);
 
-        members[0].Name.Should().Be("Always");
-        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("always");
-        members[1].Name.Should().Be("Option1");
-        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("");
-        members[2].Name.Should().Be("Never");
-        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.Should().Be("never");
+        members[0].Name.ShouldBe("Always");
+        members[0].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("always");
+        members[1].Name.ShouldBe("Option1");
+        members[1].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("");
+        members[2].Name.ShouldBe("Never");
+        members[2].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("never");
 
         var testYaml = "spec:\r\n  testEnum: ''";
 
@@ -1737,10 +1741,10 @@ spec:
 
         var spec = @object.GetType().GetProperty("Spec").GetValue(@object);
 
-        spec.GetType().GetProperty("TestEnum").GetValue(spec).Should().Be(Enum.Parse(enumType, "Option1"));
+        spec.GetType().GetProperty("TestEnum").GetValue(spec).ShouldBe(Enum.Parse(enumType, "Option1"));
 
         var testYaml2 = KubernetesYaml.Serialize(@object);
-        testYaml2.Should().Be(testYaml);
+        testYaml2.ShouldBe(testYaml);
     }
 
     [Fact]
@@ -1804,10 +1808,10 @@ spec:
         var deserializeMethod = typeof(KubernetesJson).GetMethod("Deserialize", [typeof(string), typeof(JsonSerializerOptions)]).MakeGenericMethod(type);
         var obj = deserializeMethod.Invoke(null, [objJson, null]);
 
-        obj.Should().NotBeNull();
+        obj.ShouldNotBeNull();
         var spec = type.GetProperty("Spec")!.GetValue(obj);
 
-        spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
+        spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.ShouldBe(Enum.Parse(enumType, "TestTest"));
     }
 
     [Fact]
@@ -1877,14 +1881,14 @@ spec:
         var deserializeMethod = typeof(KubernetesJson).GetMethod("Deserialize", [typeof(string), typeof(JsonSerializerOptions)]).MakeGenericMethod(type);
         var obj = deserializeMethod.Invoke(null, [objJson, null]);
 
-        obj.Should().NotBeNull();
+        obj.ShouldNotBeNull();
         var spec = type.GetProperty("Spec")!.GetValue(obj);
 
         var prop = spec.GetType().GetProperty("TestEnum")!.GetValue(spec);
 
-        ((IList)prop).Count.Should().Be(1);
+        ((IList)prop).Count.ShouldBe(1);
 
-        ((IList)prop)[0].Should().Be(Enum.Parse(enumType, "TestTest"));
+        ((IList)prop)[0].ShouldBe(Enum.Parse(enumType, "TestTest"));
     }
 
     [Fact]
@@ -1947,7 +1951,7 @@ spec:
 
         var objJson = KubernetesJson.Serialize(obj);
 
-        objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"test_test"}}""");
+        objJson.ShouldBe("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":"test_test"}}""");
     }
 
     [Fact]
@@ -2016,7 +2020,7 @@ spec:
 
         var objJson = KubernetesJson.Serialize(obj);
 
-        objJson.Should().Be("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":["test_test"]}}""");
+        objJson.ShouldBe("""{"apiVersion":"v1beta1","kind":"Test","spec":{"testEnum":["test_test"]}}""");
     }
 
     [Fact]
@@ -2077,10 +2081,10 @@ spec:
         var deserializeMethod = typeof(KubernetesYaml).GetMethod("Deserialize", [typeof(string), typeof(bool)]).MakeGenericMethod(type);
         var obj = deserializeMethod.Invoke(null, [objYaml, false]);
 
-        obj.Should().NotBeNull();
+        obj.ShouldNotBeNull();
         var spec = type.GetProperty("Spec")!.GetValue(obj);
 
-        spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.Should().Be(Enum.Parse(enumType, "TestTest"));
+        spec.GetType().GetProperty("TestEnum")!.GetValue(spec)!.ShouldBe(Enum.Parse(enumType, "TestTest"));
     }
 
     [Fact]
@@ -2144,12 +2148,12 @@ spec:
         var deserializeMethod = typeof(KubernetesYaml).GetMethod("Deserialize", [typeof(string), typeof(bool)]).MakeGenericMethod(type);
         var obj = deserializeMethod.Invoke(null, [objYaml, false]);
 
-        obj.Should().NotBeNull();
+        obj.ShouldNotBeNull();
         var spec = type.GetProperty("Spec")!.GetValue(obj);
 
         var list = (IList)spec.GetType().GetProperty("TestEnum")!.GetValue(spec);
 
-        list[0].Should().Be(Enum.Parse(enumType, "TestTest"));
+        list[0].ShouldBe(Enum.Parse(enumType, "TestTest"));
     }
 
     [Fact]
@@ -2212,7 +2216,7 @@ spec:
 
         var objYaml = KubernetesYaml.Serialize(obj);
 
-        objYaml.ReplaceLineEndings("\n").Should().Be("""
+        objYaml.ReplaceLineEndings("\n").ShouldBe("""
 apiVersion: v1beta1
 kind: Test
 spec:
@@ -2289,7 +2293,7 @@ spec:
         propertyType.SetValue(spec, listInstance);
         var objYaml = KubernetesYaml.Serialize(obj);
 
-        objYaml.ReplaceLineEndings("\n").Should().Be("""
+        objYaml.ReplaceLineEndings("\n").ShouldBe("""
 apiVersion: v1beta1
 kind: Test
 spec:
@@ -2352,13 +2356,13 @@ spec:
 
         var testEnumType = Nullable.GetUnderlyingType(specType.GetProperty("TestEnum").PropertyType)!;
         var testEnumConverter = testEnumType.GetCustomAttribute<System.Text.Json.Serialization.JsonConverterAttribute>();
-        testEnumConverter.Should().NotBeNull();
-        testEnumConverter!.ConverterType.Should().Be(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<>).MakeGenericType(testEnumType));
+        testEnumConverter.ShouldNotBeNull();
+        testEnumConverter!.ConverterType.ShouldBe(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<>).MakeGenericType(testEnumType));
 
         var enumArrayType = specType.GetProperty("EnumArray").PropertyType.GenericTypeArguments[0];
         var enumArrayConverter = enumArrayType.GetCustomAttribute<System.Text.Json.Serialization.JsonConverterAttribute>();
-        enumArrayConverter.Should().NotBeNull();
-        enumArrayConverter!.ConverterType.Should().Be(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<>).MakeGenericType(enumArrayType));
+        enumArrayConverter.ShouldNotBeNull();
+        enumArrayConverter!.ConverterType.ShouldBe(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<>).MakeGenericType(enumArrayType));
     }
 
     [Fact]
@@ -2409,14 +2413,14 @@ spec:
 
         var nested1 = specType.GetProperty("Nested1").PropertyType;
 
-        nested1.Name.Should().Be("V1beta1TestSpecNested1");
-        nested1.IsClass.Should().BeTrue();
+        nested1.Name.ShouldBe("V1beta1TestSpecNested1");
+        nested1.IsClass.ShouldBeTrue();
 
         var nested11 = nested1.GetProperty("Nested11").PropertyType;
 
-        nested11.Name.Should().Be("V1beta1TestSpecNested1Nested11");
-        nested11.IsClass.Should().BeTrue();
-        nested11.GetProperty("Prop1").PropertyType.Should().Be<string>();
+        nested11.Name.ShouldBe("V1beta1TestSpecNested1Nested11");
+        nested11.IsClass.ShouldBeTrue();
+        nested11.GetProperty("Prop1").PropertyType.ShouldBe(typeof(string));
     }
 
     [Fact]
@@ -2467,14 +2471,14 @@ spec:
 
         var nested1 = specType.GetProperty("Nested").PropertyType;
 
-        nested1.Name.Should().Be("V1beta1TestSpecNested");
-        nested1.IsClass.Should().BeTrue();
+        nested1.Name.ShouldBe("V1beta1TestSpecNested");
+        nested1.IsClass.ShouldBeTrue();
 
         var nested11 = nested1.GetProperty("Nested").PropertyType;
 
-        nested11.Name.Should().Be("V1beta1TestSpecNestedNested");
-        nested11.IsClass.Should().BeTrue();
-        nested11.GetProperty("Prop1").PropertyType.Should().Be<string>();
+        nested11.Name.ShouldBe("V1beta1TestSpecNestedNested");
+        nested11.IsClass.ShouldBeTrue();
+        nested11.GetProperty("Prop1").PropertyType.ShouldBe(typeof(string));
     }
 
     [Fact]
@@ -2524,19 +2528,19 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).Should().BeTrue();
+        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).ShouldBeTrue();
 
         var listType = specType.GenericTypeArguments[0];
 
-        listType.Name.Should().Be("V1beta1TestSpec");
+        listType.Name.ShouldBe("V1beta1TestSpec");
 
-        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).Should().BeTrue();
+        typeof(IList<>).IsAssignableFrom(specType.GetGenericTypeDefinition()).ShouldBeTrue();
 
         var specType2 = listType.GetProperty("Spec").PropertyType;
 
         var listType2 = specType2.GenericTypeArguments[0];
 
-        listType2.Name.Should().Be("V1beta1TestSpecSpec");
+        listType2.Name.ShouldBe("V1beta1TestSpecSpec");
     }
 
     private static MemberInfo[] GetMembers(Type type)
@@ -2561,7 +2565,7 @@ spec:
 
     public void TestCleanIdentifier(string input, string expected, bool @namespace = false)
     {
-        CodeGenerator.CleanIdentifier(input, @namespace).Should().Be(expected);
+        CodeGenerator.CleanIdentifier(input, @namespace).ShouldBe(expected);
     }
 
     [Fact]
@@ -2609,9 +2613,9 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("MirrorPercent").PropertyType.Should().Be<string?>();
-        specType.GetProperty("MirrorPercent1").PropertyType.Should().Be<string?>();
-        specType.GetProperty("MirrorPercent2").PropertyType.Should().Be<string?>();
+        specType.GetProperty("MirrorPercent").PropertyType.ShouldBe(typeof(string));
+        specType.GetProperty("MirrorPercent1").PropertyType.ShouldBe(typeof(string));
+        specType.GetProperty("MirrorPercent2").PropertyType.ShouldBe(typeof(string));
     }
 
     private static readonly MethodInfo _deserializeJson = typeof(KubernetesJson).GetMethod(nameof(KubernetesJson.Deserialize), BindingFlags.Static | BindingFlags.Public, [typeof(string), typeof(JsonSerializerOptions)]);
@@ -10303,7 +10307,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.Should().NotBeNull();
+        specType.ShouldNotBeNull();
     }
 
     [Fact]
@@ -10385,53 +10389,53 @@ spec:
 
         // reqNullable: required and may be null
         var reqNullable = specType.GetProperty("ReqNullable");
-        reqNullable.PropertyType.Should().Be<Nullable<double>>();
-        reqNullable.IsNullableReferenceType().Should().BeTrue();
-        reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+        reqNullable.PropertyType.ShouldBe(typeof(Nullable<double>));
+        reqNullable.IsNullableReferenceType().ShouldBeTrue();
+        reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeTrue();
 
         // reqNonNull: required and must be non null
         var reqNonNull = specType.GetProperty("ReqNonNull");
-        reqNonNull.PropertyType.Should().Be<double>();
-        reqNonNull.IsNullableReferenceType().Should().BeFalse();
-        reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+        reqNonNull.PropertyType.ShouldBe(typeof(double));
+        reqNonNull.IsNullableReferenceType().ShouldBeFalse();
+        reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeTrue();
 
         // reqNullableDefault: optional and nullable with default
         var reqNullableDefault = specType.GetProperty("ReqNullableDefault");
-        reqNullableDefault.PropertyType.Should().Be<Nullable<double>>();
-        reqNullableDefault.IsNullableReferenceType().Should().BeTrue();
-        reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        reqNullableDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
+        reqNullableDefault.IsNullableReferenceType().ShouldBeTrue();
+        reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // reqNonNull: optional and non-null with default
         var reqNonNullDefault = specType.GetProperty("ReqNonNullDefault");
-        reqNonNullDefault.PropertyType.Should().Be<Nullable<double>>();
-        reqNonNullDefault.IsNullableReferenceType().Should().BeTrue();
-        reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        reqNonNullDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
+        reqNonNullDefault.IsNullableReferenceType().ShouldBeTrue();
+        reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // Optional
 
         // optNullable: optional and nullable
         var optNullable = specType.GetProperty("OptNullable");
-        optNullable.PropertyType.Should().Be<Nullable<double>>();
-        optNullable.IsNullableReferenceType().Should().BeTrue();
-        optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNullable.PropertyType.ShouldBe(typeof(Nullable<double>));
+        optNullable.IsNullableReferenceType().ShouldBeTrue();
+        optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // optNonNull: optional but if present must be non-null
         var optNonNull = specType.GetProperty("OptNonNull");
-        optNonNull.PropertyType.Should().Be<Nullable<double>>();
-        optNonNull.IsNullableReferenceType().Should().BeTrue();
-        optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNonNull.PropertyType.ShouldBe(typeof(Nullable<double>));
+        optNonNull.IsNullableReferenceType().ShouldBeTrue();
+        optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // optNullable: optional and nullable with default
         var optNullableDefault = specType.GetProperty("OptNullableDefault");
-        optNullableDefault.PropertyType.Should().Be<Nullable<double>>();
-        optNullableDefault.IsNullableReferenceType().Should().BeTrue();
-        optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNullableDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
+        optNullableDefault.IsNullableReferenceType().ShouldBeTrue();
+        optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // optNonNull: optional but if present must be non-null with default
         var optNonNullDefault = specType.GetProperty("OptNonNullDefault");
-        optNonNullDefault.PropertyType.Should().Be<Nullable<double>>();
-        optNonNullDefault.IsNullableReferenceType().Should().BeTrue();
-        optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNonNullDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
+        optNonNullDefault.IsNullableReferenceType().ShouldBeTrue();
+        optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
     }
 
     [Fact]
@@ -10517,60 +10521,60 @@ spec:
         // reqNullable: required and may be null
         // true true false
         var reqNullable = specType.GetProperty("ReqNullable");
-        reqNullable.PropertyType.Should().Be<string>();
-        reqNullable.IsNullableReferenceType().Should().BeTrue();
-        reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+        reqNullable.PropertyType.ShouldBe(typeof(string));
+        reqNullable.IsNullableReferenceType().ShouldBeTrue();
+        reqNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeTrue();
 
         // reqNonNull: required and must be non null
         // true false false
         var reqNonNull = specType.GetProperty("ReqNonNull");
-        reqNonNull.PropertyType.Should().Be<string>();
-        reqNonNull.IsNullableReferenceType().Should().BeFalse();
-        reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeTrue();
+        reqNonNull.PropertyType.ShouldBe(typeof(string));
+        reqNonNull.IsNullableReferenceType().ShouldBeFalse();
+        reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeTrue();
 
         // reqNullableDefault: optional and nullable with default
         // true true true
         var reqNullableDefault = specType.GetProperty("ReqNullableDefault");
-        reqNullableDefault.PropertyType.Should().Be<string>();
-        reqNullableDefault.IsNullableReferenceType().Should().BeTrue();
-        reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        reqNullableDefault.PropertyType.ShouldBe(typeof(string));
+        reqNullableDefault.IsNullableReferenceType().ShouldBeTrue();
+        reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // reqNonNull: optional and non-null with default
         // true false true
         var reqNonNullDefault = specType.GetProperty("ReqNonNullDefault");
-        reqNonNullDefault.PropertyType.Should().Be<string>();
-        reqNonNullDefault.IsNullableReferenceType().Should().BeTrue();
-        reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        reqNonNullDefault.PropertyType.ShouldBe(typeof(string));
+        reqNonNullDefault.IsNullableReferenceType().ShouldBeTrue();
+        reqNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // Optional
 
         // optNullable: optional and nullable
         // false true false
         var optNullable = specType.GetProperty("OptNullable");
-        optNullable.PropertyType.Should().Be<string>();
-        optNullable.IsNullableReferenceType().Should().BeTrue();
-        optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNullable.PropertyType.ShouldBe(typeof(string));
+        optNullable.IsNullableReferenceType().ShouldBeTrue();
+        optNullable.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // optNonNull: optional but if present must be non-null
         // false false false
         var optNonNull = specType.GetProperty("OptNonNull");
-        optNonNull.PropertyType.Should().Be<string>();
-        optNonNull.IsNullableReferenceType().Should().BeTrue();
-        optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNonNull.PropertyType.ShouldBe(typeof(string));
+        optNonNull.IsNullableReferenceType().ShouldBeTrue();
+        optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // optNullable: optional and nullable with default
         // false true true
         var optNullableDefault = specType.GetProperty("OptNullableDefault");
-        optNullableDefault.PropertyType.Should().Be<string>();
-        optNullableDefault.IsNullableReferenceType().Should().BeTrue();
-        optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNullableDefault.PropertyType.ShouldBe(typeof(string));
+        optNullableDefault.IsNullableReferenceType().ShouldBeTrue();
+        optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
         // optNonNull: optional but if present must be non-null with default
         // false false true
         var optNonNullDefault = specType.GetProperty("OptNonNullDefault");
-        optNonNullDefault.PropertyType.Should().Be<string>();
-        optNonNullDefault.IsNullableReferenceType().Should().BeTrue();
-        optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).Should().BeFalse();
+        optNonNullDefault.PropertyType.ShouldBe(typeof(string));
+        optNonNullDefault.IsNullableReferenceType().ShouldBeTrue();
+        optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
     }
 
     [Fact]
@@ -10613,7 +10617,7 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        specType.GetProperty("Enum").PropertyType.Should().Be<string?>();
+        specType.GetProperty("Enum").PropertyType.ShouldBe(typeof(string));
     }
 
     [Fact]
@@ -10660,8 +10664,8 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         var nested1 = specType.GetProperty("Enum").PropertyType;
-        nested1.Name.Should().Be("V1alpha1TestSpecEnum");
-        nested1.IsClass.Should().BeTrue();
+        nested1.Name.ShouldBe("V1alpha1TestSpecEnum");
+        nested1.IsClass.ShouldBeTrue();
     }
 }
 
