@@ -2299,6 +2299,69 @@ spec:
     }
 
     [Fact]
+    public void TestEnumJsonConverterOnEnumType()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1beta1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              properties:
+                apiVersion:
+                  type: string
+                kind:
+                  type: string
+                metadata:
+                  type: object
+                spec:
+                  type: object
+                  properties:
+                    testEnum:
+                      enum:
+                      - always
+                      - ifNotPresent
+                      - never
+                      type: string
+                    enumArray:
+                      items:
+                        enum:
+                        - always
+                        - ifNotPresent
+                        - test_test
+                        type: string
+                      type: array
+";
+
+        var type = GetTypeYaml(yaml, "Test");
+        var specType = type.GetProperty("Spec").PropertyType;
+
+        var testEnumType = Nullable.GetUnderlyingType(specType.GetProperty("TestEnum").PropertyType)!;
+        var testEnumConverter = testEnumType.GetCustomAttribute<System.Text.Json.Serialization.JsonConverterAttribute>();
+        testEnumConverter.Should().NotBeNull();
+        testEnumConverter!.ConverterType.Should().Be(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<>).MakeGenericType(testEnumType));
+
+        var enumArrayType = specType.GetProperty("EnumArray").PropertyType.GenericTypeArguments[0];
+        var enumArrayConverter = enumArrayType.GetCustomAttribute<System.Text.Json.Serialization.JsonConverterAttribute>();
+        enumArrayConverter.Should().NotBeNull();
+        enumArrayConverter!.ConverterType.Should().Be(typeof(System.Text.Json.Serialization.JsonStringEnumConverter<>).MakeGenericType(enumArrayType));
+    }
+
+    [Fact]
     public void TestObject()
     {
         var yaml = @"
@@ -10616,3 +10679,4 @@ public static class ReflectionHelpers
         return nullableStringInfo.ReadState == NullabilityState.Nullable;
     }
 }
+
