@@ -77,9 +77,8 @@ public class CodeGenerator : ICodeGenerator
                         )
                         .WithLeadingTrivia(
                             SyntaxFactory.TriviaList(
-                                SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)),
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed))
+                                SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)))
+                                .AddRange(CreateSummaryTrivia(schema.Description)))
                         .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
 
         if (isRoot)
@@ -106,9 +105,8 @@ public class CodeGenerator : ICodeGenerator
                 )
                 .WithLeadingTrivia(
                     SyntaxFactory.TriviaList(
-                        SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)),
-                        SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                        SyntaxFactory.CarriageReturnLineFeed))
+                        SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)))
+                        .AddRange(CreateSummaryTrivia(schema.Description)))
                 .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
@@ -434,9 +432,7 @@ public class CodeGenerator : ICodeGenerator
                 ])
             )
             .WithLeadingTrivia(
-                            SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(schema.Description?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed));
+                CreateSummaryTrivia(schema.Description));
 
         for (var i = 0; i < schema.Enum.Count; i++)
         {
@@ -494,9 +490,7 @@ public class CodeGenerator : ICodeGenerator
                             )
                         )
                         .WithLeadingTrivia(
-                            SyntaxFactory.TriviaList(
-                                SyntaxFactory.Comment($"/// <summary>{XmlString(value.Replace("\n", " ").Replace("\r", " "))}</summary>"),
-                                SyntaxFactory.CarriageReturnLineFeed))
+                            CreateSummaryTrivia(value))
                 );
             }
         }
@@ -548,9 +542,7 @@ public class CodeGenerator : ICodeGenerator
                                             SyntaxKind.StringLiteralExpression,
                                             SyntaxFactory.Literal(propertyName)))))))));
         propDecleration = propDecleration.WithLeadingTrivia(
-            SyntaxFactory.TriviaList(
-                SyntaxFactory.Comment($"/// <summary>{XmlString(comment?.Replace("\n", " ").Replace("\r", " ") ?? "")}</summary>"),
-                SyntaxFactory.CarriageReturnLineFeed));
+            CreateSummaryTrivia(comment));
 
         if (!string.IsNullOrEmpty(defaultValue))
         {
@@ -638,6 +630,12 @@ public class CodeGenerator : ICodeGenerator
             return text;
         }
         return new XElement("t", text).LastNode?.ToString() ?? "";
+    }
+
+    private static SyntaxTriviaList CreateSummaryTrivia(string? text)
+    {
+        var sanitizedText = XmlString(text?.Replace("\n", " ").Replace("\r", " ") ?? string.Empty);
+        return SyntaxFactory.ParseLeadingTrivia($"/// <summary>{sanitizedText}</summary>{Environment.NewLine}");
     }
 
     /// <summary>
