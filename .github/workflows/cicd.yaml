@@ -47,7 +47,7 @@ jobs:
       run: dotnet test -c Release --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test-results.trx"
 
     - name: Test Report
-      uses: dorny/test-reporter@v2
+      uses: dorny/test-reporter@v3
       if: success() || failure()
       with:
         name: Tests
@@ -55,7 +55,7 @@ jobs:
         reporter: dotnet-trx
 
     - name: Coverage
-      uses: codecov/codecov-action@v5
+      uses: codecov/codecov-action@v6
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         files: tests/**/*.cobertura.xml
