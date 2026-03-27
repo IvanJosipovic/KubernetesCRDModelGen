@@ -1,9 +1,9 @@
 using k8s;
 using k8s.Models;
-using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using Xunit;
+using Shouldly;
 
 namespace KubernetesCRDModelGen.Tests;
 
@@ -70,13 +70,13 @@ spec:
 
         var (_, xml) = generator.GenerateAssembly(crd, modelNamespace);
 
-        xml.Should().NotBeNull();
+        xml.ShouldNotBeNull();
         xml!.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.example.com.V1WidgetSpec.Size']/summary")
-            ?.InnerText.Should().Be("Size of the widget.");
+            ?.InnerText.ShouldBe("Size of the widget.");
         xml.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.example.com.V1WidgetSpec.Enabled']/summary")
-            ?.InnerText.Should().Be("Whether the widget is enabled.");
+            ?.InnerText.ShouldBe("Whether the widget is enabled.");
         xml.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.example.com.V1Widget.Spec']/summary")
-            ?.InnerText.Should().Be("Widget desired state.");
+            ?.InnerText.ShouldBe("Widget desired state.");
     }
 
     [Fact]
@@ -88,12 +88,12 @@ spec:
 
         var (_, xml) = generator.GenerateAssembly(crd, modelNamespace);
 
-        xml.Should().NotBeNull();
+        xml.ShouldNotBeNull();
         xml!.SelectSingleNode("/doc/members/member[@name='T:KubernetesCRDModelGen.Tests.Models.containerservice.azure.com.V1api20210501ManagedClusterSpecAadProfile']/summary")
-            ?.InnerText.Should().Be("AadProfile: The Azure Active Directory configuration.");
+            ?.InnerText.ShouldBe("AadProfile: The Azure Active Directory configuration.");
         xml.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.containerservice.azure.com.V1api20210501ManagedClusterSpecAadProfile.AdminGroupObjectIDs']/summary")
-            ?.InnerText.Should().Be("AdminGroupObjectIDs: The list of AAD group object IDs that will have admin role of the cluster.");
+            ?.InnerText.ShouldBe("AdminGroupObjectIDs: The list of AAD group object IDs that will have admin role of the cluster.");
         xml.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.containerservice.azure.com.V1api20210501ManagedClusterSpec.AadProfile']/summary")
-            ?.InnerText.Should().Be("AadProfile: The Azure Active Directory configuration.");
+            ?.InnerText.ShouldBe("AadProfile: The Azure Active Directory configuration.");
     }
 }
