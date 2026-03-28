@@ -1,6 +1,5 @@
 using k8s;
 using k8s.Models;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -15,9 +14,7 @@ public partial class GeneratorTests
 
     protected static IGenerator GetGenerator()
     {
-        var fac = LoggerFactory.Create((x) => { });
-
-        return new Generator(fac);
+        return new Generator();
     }
 
     protected static Type? GetTypeYaml(string yaml, string kind)
@@ -36,18 +33,18 @@ public partial class GeneratorTests
 
     protected static Type? GetType(V1CustomResourceDefinition crd, string kind)
     {
-        var assembly = GetGenerator().GenerateAssembly(crd, Namespace);
+        var result = GetGenerator().GenerateAssembly(crd, Namespace);
 
-        var types = assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
+        var types = result.Assembly!.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && z.TypedValue.Value.Equals(kind))));
 
         return types.First();
     }
 
     protected static Type[]? GetType(V1CustomResourceDefinition crd, string kind, string kindList)
     {
-        var assembly = GetGenerator().GenerateAssembly(crd, Namespace);
+        var result = GetGenerator().GenerateAssembly(crd, Namespace);
 
-        return [.. assembly.Item1.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && new[] { kind, kindList }.Contains(z.TypedValue.Value))))];
+        return [.. result.Assembly!.DefinedTypes.Where(x => x.CustomAttributes.Any(y => y.AttributeType == typeof(KubernetesEntityAttribute) && y.NamedArguments.Any(z => z.MemberName == "Kind" && new[] { kind, kindList }.Contains(z.TypedValue.Value))))];
     }
 
     protected static string GetCode(string yaml)
@@ -62,14 +59,14 @@ public partial class GeneratorTests
         return GetGenerator().GenerateCode(crd, Namespace);
     }
 
-    protected static (Assembly?, XmlDocument?) GenerateAssembly(string yaml, string? @namespace = null)
+    protected static GeneratedAssemblyResult GenerateAssembly(string yaml, string? @namespace = null)
     {
         var crd = KubernetesYaml.LoadAllFromString(yaml);
 
         return GenerateAssembly((V1CustomResourceDefinition)crd[0], @namespace);
     }
 
-    protected static (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string? @namespace = null)
+    protected static GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string? @namespace = null)
     {
         return GetGenerator().GenerateAssembly(crd, @namespace ?? Namespace);
     }

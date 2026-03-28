@@ -1,7 +1,6 @@
-﻿using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Attributes;
 using k8s;
 using k8s.Models;
-using Microsoft.Extensions.Logging;
 
 namespace KubernetesCRDModelGen.Benchmarks;
 
@@ -15,9 +14,7 @@ public class Benchmark
     [GlobalSetup]
     public void GlobalSetup()
     {
-        var fac = new LoggerFactory();
-
-        generator = new Generator(fac);
+        generator = new Generator();
 
         crd = KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml").GetAwaiter().GetResult();
     }
@@ -29,8 +26,10 @@ public class Benchmark
         {
             throw new Exception("CRD NULL");
         }
-        var ass = generator!.GenerateAssembly(crd);
-        if (ass.Item1 == null || ass.Item2 == null)
+        var result = generator!.GenerateAssembly(crd);
+        using var unloadHandle = result.UnloadHandle;
+
+        if (!result.Success || result.Assembly == null || result.XmlDocumentation == null)
         {
             throw new Exception("Failed to generate assembly");
         }

@@ -1,6 +1,5 @@
 using k8s;
 using k8s.Models;
-using Microsoft.Extensions.Logging;
 using Shouldly;
 using System;
 using System.Reflection;
@@ -16,9 +15,15 @@ public partial class GeneratorTests
     {
         var crd = await KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml");
 
-        var ass = GenerateAssembly(crd);
-        Assert.NotNull(ass.Item1);
-        Assert.NotNull(ass.Item2);
+        var result = GenerateAssembly(crd);
+        using var unloadHandle = result.UnloadHandle;
+
+        result.Success.ShouldBeTrue();
+        result.Assembly.ShouldNotBeNull();
+        result.XmlDocumentation.ShouldNotBeNull();
+        result.Diagnostics.ShouldNotContain(x => x.Severity == GeneratedAssemblyDiagnosticSeverity.Error);
+        unloadHandle.ShouldNotBeNull();
+        unloadHandle!.IsUnloaded.ShouldBeFalse();
     }
 
     [Fact]
@@ -64,7 +69,9 @@ spec:
                   description: Whether the widget is enabled.
 """;
 
-        var (_, xml) = GenerateAssembly(yaml, modelNamespace);
+        var result = GenerateAssembly(yaml, modelNamespace);
+        using var unloadHandle = result.UnloadHandle;
+        var xml = result.XmlDocumentation;
 
         xml.ShouldNotBeNull();
         xml!.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.example.com.V1WidgetSpec.Size']/summary")
@@ -110,7 +117,9 @@ spec:
               type: object
 """;
 
-        var (assembly, _) = GenerateAssembly(yaml, modelNamespace);
+        var result = GenerateAssembly(yaml, modelNamespace);
+        using var unloadHandle = result.UnloadHandle;
+        var assembly = result.Assembly;
 
         assembly.ShouldNotBeNull();
         var root = assembly!.GetType("KubernetesCRDModelGen.Tests.Models.example.com.V1Widget");
@@ -157,7 +166,7 @@ spec:
 """;
 
         var crd = (V1CustomResourceDefinition)KubernetesYaml.LoadAllFromString(yaml)[0];
-        var generator = new Generator(new LoggerFactory());
+        var generator = new Generator();
 
         var code = generator.GenerateCode(crd, modelNamespace);
 
@@ -171,7 +180,9 @@ spec:
         const string modelNamespace = "KubernetesCRDModelGen.Tests.Models";
         var crd = await KubernetesYaml.LoadFromFileAsync<V1CustomResourceDefinition>("managedclusters.containerservice.azure.com.yaml");
 
-        var (_, xml) = GenerateAssembly(crd, modelNamespace);
+        var result = GenerateAssembly(crd, modelNamespace);
+        using var unloadHandle = result.UnloadHandle;
+        var xml = result.XmlDocumentation;
 
         xml.ShouldNotBeNull();
         xml!.SelectSingleNode("/doc/members/member[@name='T:KubernetesCRDModelGen.Tests.Models.containerservice.azure.com.V1api20210501ManagedClusterSpecAadProfile']/summary")
@@ -224,12 +235,26 @@ spec:
 """;
 
         var crd = (V1CustomResourceDefinition)KubernetesYaml.LoadAllFromString(yaml)[0];
-        var generator = new Generator(new LoggerFactory());
+        var generator = new Generator();
 
         var code = generator.GenerateCode(crd, modelNamespace);
 
         code.IndexOf("#nullable enable", StringComparison.Ordinal).ShouldBeGreaterThanOrEqualTo(0);
         (code.Split("#nullable enable", StringSplitOptions.None).Length - 1).ShouldBe(1);
         code.ShouldNotContain("#nullable disable");
+    }
+
+    [Fact]
+    public void TestGenerateAssemblyReturnsStructuredDiagnosticsOnFailure()
+    {
+        var result = GenerateAssembly(new V1CustomResourceDefinition());
+
+        result.Success.ShouldBeFalse();
+        result.Assembly.ShouldBeNull();
+        result.XmlDocumentation.ShouldBeNull();
+        result.UnloadHandle.ShouldBeNull();
+        result.Diagnostics.ShouldNotBeEmpty();
+        result.Diagnostics.ShouldContain(x => x.Id == GeneratedAssemblyDiagnostic.ExceptionDiagnosticId);
+        result.Diagnostics.ShouldContain(x => x.Severity == GeneratedAssemblyDiagnosticSeverity.Error);
     }
 }
