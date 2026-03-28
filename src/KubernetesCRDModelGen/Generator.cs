@@ -7,9 +7,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Metadata;
 using System.Xml;
 using static k8s.KubernetesJson;
 
@@ -29,6 +31,8 @@ public class Generator : IGenerator
 
     private static readonly Lazy<MetadataReference[]> MetadataReferencesCache = new(GetReferences);
     private static readonly Lazy<CSharpCompilation> CompilationTemplateCache = new(CreateCompilationTemplate);
+    private static readonly JsonTypeInfo<V1JSONSchemaProps> V1JsonSchemaPropsTypeInfo = GeneratorSourceGenerationContext.Default.V1JSONSchemaProps;
+    private static readonly ConditionalWeakTable<V1JSONSchemaProps, OpenApiSchema> OpenApiSchemaCache = new();
     private static readonly OpenApiSpecVersion OpenApiVersion = OpenApiSpecVersion.OpenApi3_0;
 
     private static readonly CSharpCompilationOptions CompilationOptions = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
@@ -135,18 +139,7 @@ public class Generator : IGenerator
                 continue;
             }
 
-            schemaStream.SetLength(0);
-            JsonSerializer.Serialize(schemaStream, schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps);
-            schemaStream.Position = 0;
-
-            var doc = reader.ReadFragment<OpenApiSchema>(schemaStream, OpenApiVersion, new OpenApiDocument(), out var diag);
-
-            if (diag != null && diag.Errors.Count > 0)
-            {
-                var messages = string.Join(" | ", diag.Errors.Select(x => x.Message));
-                logger.LogError("Error converting schema to OpenAPI: {messages}", messages);
-            }
-
+            var doc = GetOpenApiSchema(reader, schemaStream, schema);
             if (doc is null)
             {
                 continue;
@@ -182,6 +175,33 @@ public class Generator : IGenerator
         }
 
         return [.. references];
+    }
+
+    private OpenApiSchema? GetOpenApiSchema(OpenApiJsonReader reader, MemoryStream schemaStream, V1JSONSchemaProps schema)
+    {
+        if (OpenApiSchemaCache.TryGetValue(schema, out var cachedSchema))
+        {
+            return cachedSchema;
+        }
+
+        schemaStream.SetLength(0);
+        JsonSerializer.Serialize(schemaStream, schema, V1JsonSchemaPropsTypeInfo);
+        schemaStream.Position = 0;
+
+        var openApiSchema = reader.ReadFragment<OpenApiSchema>(schemaStream, OpenApiVersion, new OpenApiDocument(), out var diag);
+
+        if (diag != null && diag.Errors.Count > 0)
+        {
+            var messages = string.Join(" | ", diag.Errors.Select(x => x.Message));
+            logger.LogError("Error converting schema to OpenAPI: {messages}", messages);
+        }
+
+        if (openApiSchema is not null)
+        {
+            OpenApiSchemaCache.Add(schema, openApiSchema);
+        }
+
+        return openApiSchema;
     }
 }
 
