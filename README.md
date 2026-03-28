@@ -61,7 +61,7 @@ Update the .csproj with the following settings. The Models will be generated in 
 
   <ItemGroup>
     <PackageReference Include="KubernetesClient" Version="19.0.2" />
-    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="2.*.*" />
+    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="2.*" />
   </ItemGroup>
 
   <!-- For local CRD files -->
