@@ -27,10 +27,10 @@ public class Generator : IGenerator
 
     private readonly CodeGenerator codeGenerator;
 
-    private readonly MetadataReference[] metadataReferences;
+    private static readonly Lazy<MetadataReference[]> MetadataReferencesCache = new(GetReferences);
 
     private readonly CSharpCompilationOptions _options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
-        .WithConcurrentBuild(true)
+        .WithConcurrentBuild(false)
         .WithDeterministic(true)
         .WithNullableContextOptions(NullableContextOptions.Enable)
         .WithOptimizationLevel(OptimizationLevel.Release)
@@ -45,7 +45,6 @@ public class Generator : IGenerator
     {
         logger = loggerFactory.CreateLogger<Generator>();
         codeGenerator = new CodeGenerator();
-        metadataReferences ??= GetReferences();
     }
 
     /// <inheritdoc/>
@@ -64,7 +63,7 @@ public class Generator : IGenerator
             var compilation = CSharpCompilation.Create(
                 crd.Metadata.Name,
                 syntaxTrees: [code.SyntaxTree],
-                references: metadataReferences,
+                references: MetadataReferencesCache.Value,
                 options: _options);
 
             using var peStream = new MemoryStream();
@@ -160,11 +159,11 @@ public class Generator : IGenerator
         return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, [.. types]);
     }
 
-    private MetadataReference[] GetReferences()
+    private static MetadataReference[] GetReferences()
     {
         var references = new List<MetadataReference>();
 
-        var assembly = GetType().Assembly;
+        var assembly = typeof(Generator).Assembly;
 
         var assemblies = assembly.GetManifestResourceNames().Where(x => x.StartsWith("runtime.") && x.EndsWith(".dll")).ToList();
 
