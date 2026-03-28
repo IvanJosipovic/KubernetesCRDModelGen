@@ -36,7 +36,7 @@ properties:
     }
 
     [Fact]
-    public void BuildTypes_DeduplicatesCollidingNestedTypeNames()
+    public void BuildTypes_KeepsDistinctNestedSchemasDistinctWhenTypeNamesCollide()
     {
         var schema = LoadSchema("""
 type: object
@@ -58,11 +58,13 @@ properties:
         var types = builder.BuildTypes(schema, "Spec");
         var classes = types.OfType<GeneratedClassModel>().ToArray();
         var spec = classes.Single(x => x.Name == "Spec");
-        var nested = classes.Where(x => x.Name == "SpecChildOne").ToArray();
+        var childOne = classes.Single(x => x.Name == "SpecChildOne");
+        var childOne1 = classes.Single(x => x.Name == "SpecChildOne1");
 
-        nested.Length.ShouldBe(1);
-        spec.Properties.Select(x => x.Type.DisplayName).ShouldBe(["SpecChildOne", "SpecChildOne"]);
+        spec.Properties.Select(x => x.Type.DisplayName).ShouldBe(["SpecChildOne", "SpecChildOne1"]);
         spec.Properties.Select(x => x.Name).ShouldBe(["ChildOne", "ChildOne1"]);
+        childOne.Properties.Select(x => x.Name).ShouldBe(["Name"]);
+        childOne1.Properties.Select(x => x.Name).ShouldBe(["Enabled"]);
     }
 
     [Fact]

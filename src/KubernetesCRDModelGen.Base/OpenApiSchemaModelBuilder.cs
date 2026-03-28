@@ -27,9 +27,9 @@ internal sealed class OpenApiSchemaModelBuilder
         => new(@namespace, group, BuildTypes(schema, kind, version, group, plural, listKind, isObsolete, obsoleteMessage));
 
     public IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
-        => BuildTypes(schema, kind, new HashSet<string>(StringComparer.Ordinal), version, group, plural, listKind, isObsolete, obsoleteMessage);
+        => BuildTypes(schema, kind, new HashSet<string>(StringComparer.Ordinal), false, version, group, plural, listKind, isObsolete, obsoleteMessage);
 
-    private IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, HashSet<string> typeNames, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
+    private IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, HashSet<string> typeNames, bool nameReserved, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
     {
         var isRoot = version != null && group != null && plural != null;
         listKind ??= kind + "List";
@@ -38,7 +38,12 @@ internal sealed class OpenApiSchemaModelBuilder
         var propertyNames = new HashSet<string>(StringComparer.Ordinal);
         var className = CodeGenerationUtilities.CleanIdentifier((isRoot ? version : string.Empty) + " " + kind);
 
-        if (string.IsNullOrEmpty(className) || !typeNames.Add(className!))
+        if (string.IsNullOrEmpty(className))
+        {
+            return [];
+        }
+
+        if (!nameReserved && !typeNames.Add(className!))
         {
             return [];
         }
@@ -186,14 +191,14 @@ internal sealed class OpenApiSchemaModelBuilder
                     return Generic("IDictionary", StringType, ResolveType(schema.AdditionalProperties, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage));
                 }
 
-                var nestedClassName = CodeGenerationUtilities.CleanIdentifier(parentClassName + " " + propertyName);
-                if (string.IsNullOrEmpty(nestedClassName))
+                var nestedClassName = GetUniqueTypeName(parentClassName + " " + propertyName, typeNames);
+                if (nestedClassName is null)
                 {
                     return ObjectType;
                 }
 
-                types.AddRange(BuildTypes(schema, nestedClassName!, typeNames, isObsolete: isObsolete, obsoleteMessage: obsoleteMessage));
-                return Named(nestedClassName!);
+                types.AddRange(BuildTypes(schema, nestedClassName, typeNames, true, isObsolete: isObsolete, obsoleteMessage: obsoleteMessage));
+                return Named(nestedClassName);
 
             case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
@@ -234,17 +239,12 @@ internal sealed class OpenApiSchemaModelBuilder
 
     private GeneratedTypeReference BuildEnum(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName, bool isObsolete = false, string? obsoleteMessage = null)
     {
-        var enumName = CodeGenerationUtilities.CleanIdentifier(parentClassName + " " + propertyName) + "Enum";
-        if (string.IsNullOrEmpty(enumName))
+        var enumName = GetUniqueTypeName(parentClassName + " " + propertyName + "Enum", typeNames);
+        if (enumName is null)
         {
             return StringType;
         }
-        var enumNameValue = enumName!;
-
-        if (!typeNames.Add(enumNameValue))
-        {
-            return Named(enumNameValue);
-        }
+        var enumNameValue = enumName;
 
         var memberNames = new HashSet<string>(StringComparer.Ordinal);
         var enumValues = schema.Enum!;
@@ -279,6 +279,25 @@ internal sealed class OpenApiSchemaModelBuilder
 
         types.Add(new GeneratedEnumModel(enumNameValue, schema.Description, members, isObsolete, obsoleteMessage));
         return Named(enumNameValue);
+    }
+
+    private static string? GetUniqueTypeName(string candidate, HashSet<string> typeNames)
+    {
+        var baseName = CodeGenerationUtilities.CleanIdentifier(candidate);
+        if (string.IsNullOrEmpty(baseName))
+        {
+            return null;
+        }
+
+        var baseNameValue = baseName!;
+        var uniqueName = baseNameValue;
+        var count = 1;
+        while (!typeNames.Add(uniqueName))
+        {
+            uniqueName = baseNameValue + count++;
+        }
+
+        return uniqueName;
     }
 
     private static GeneratedNamedTypeReference Named(string name)
