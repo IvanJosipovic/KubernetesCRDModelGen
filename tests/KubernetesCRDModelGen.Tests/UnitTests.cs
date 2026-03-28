@@ -308,6 +308,109 @@ spec:
     }
 
     [Fact]
+    public void TestBaseClassesRespectNullableSpecAndStatus()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              nullable: true
+              properties:
+                name:
+                  type: string
+            status:
+              type: object
+              nullable: true
+              properties:
+                phase:
+                  type: string
+";
+
+        var code = GetCode(yaml);
+
+        code.ShouldContain("ISpec<V1beta1TestSpec?>");
+        code.ShouldContain("IStatus<V1beta1TestStatus?>");
+    }
+
+    [Fact]
+    public void TestBaseClassesRespectNonNullableSpecAndStatus()
+    {
+        var yaml = @"
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1beta1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          required:
+            - spec
+            - status
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                name:
+                  type: string
+            status:
+              type: object
+              properties:
+                phase:
+                  type: string
+";
+
+        var code = GetCode(yaml);
+
+        code.ShouldContain("ISpec<V1beta1TestSpec>");
+        code.ShouldContain("IStatus<V1beta1TestStatus>");
+        code.ShouldNotContain("ISpec<V1beta1TestSpec?>");
+        code.ShouldNotContain("IStatus<V1beta1TestStatus?>");
+    }
+
+    [Fact]
     public void TestConstants()
     {
         var yaml = @"
