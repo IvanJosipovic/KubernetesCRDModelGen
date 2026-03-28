@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
+using System.Security;
 
 namespace KubernetesCRDModelGen.Base;
 
@@ -629,7 +630,7 @@ public class CodeGenerator : ICodeGenerator
         if (!normalizedText.Contains('\n'))
         {
             return SyntaxFactory.ParseLeadingTrivia(
-                $"/// <summary>{SyntaxFactory.XmlText(normalizedText).ToFullString()}</summary>{Environment.NewLine}");
+                $"/// <summary>{SecurityElement.Escape(normalizedText) ?? string.Empty}</summary>{Environment.NewLine}");
         }
 
         var lines = normalizedText.Split('\n');
@@ -639,7 +640,7 @@ public class CodeGenerator : ICodeGenerator
 
         foreach (var line in lines)
         {
-            builder.Append("/// ").Append(SyntaxFactory.XmlText(line).ToFullString()).Append(Environment.NewLine);
+            builder.Append("/// ").Append(SecurityElement.Escape(line) ?? string.Empty).Append(Environment.NewLine);
         }
 
         builder.Append("/// </summary>").Append(Environment.NewLine);
