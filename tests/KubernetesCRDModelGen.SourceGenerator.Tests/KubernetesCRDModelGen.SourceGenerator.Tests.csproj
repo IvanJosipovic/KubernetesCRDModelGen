@@ -18,7 +18,7 @@
     <PackageReference Include="Shouldly" Version="4.3.0" />
     <PackageReference Include="YamlDotNet" Version="16.3.0" />
     <PackageReference Include="YamlDotNet.System.Text.Json" Version="1.7.1" />
-    <PackageReference Include="xunit.v3.mtp-v2" Version="3.2.1" />
+    <PackageReference Include="xunit.v3.mtp-v2" Version="3.2.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.5">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
