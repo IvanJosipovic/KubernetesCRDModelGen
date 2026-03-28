@@ -229,6 +229,38 @@ properties:
     }
 
     [Fact]
+    public void BuildTypes_AddsImplicitEmbeddedResourceProperties()
+    {
+        var schema = LoadSchema("""
+type: object
+properties:
+  spec:
+    type: object
+    properties:
+      template:
+        type: object
+        x-kubernetes-embedded-resource: true
+        properties:
+          spec:
+            type: object
+            properties:
+              replicas:
+                type: integer
+""");
+
+        var builder = new OpenApiSchemaModelBuilder();
+
+        var types = builder.BuildTypes(schema, "Widget", "v1", "example.com", "widgets", "WidgetList");
+        var template = types.OfType<GeneratedClassModel>().Single(x => x.Name == "V1WidgetSpecTemplate");
+
+        template.Properties.Select(x => x.Name).ShouldContain("ApiVersion");
+        template.Properties.Select(x => x.Name).ShouldContain("Kind");
+        template.Properties.Select(x => x.Name).ShouldContain("Metadata");
+        template.Properties.Select(x => x.Name).ShouldContain("Spec");
+        template.Properties.Single(x => x.Name == "Metadata").Type.DisplayName.ShouldBe("V1ObjectMeta");
+    }
+
+    [Fact]
     public void CodeGenerator_FacadeMatchesSharedModelPipeline()
     {
         var schema = LoadSchema("""

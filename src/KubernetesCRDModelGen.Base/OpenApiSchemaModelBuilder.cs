@@ -8,6 +8,8 @@ namespace KubernetesCRDModelGen.Base;
 
 internal sealed class OpenApiSchemaModelBuilder
 {
+    private const string KubeEmbeddedType = "x-kubernetes-embedded-type";
+    private const string KubeEmbeddedResource = "x-kubernetes-embedded-resource";
     private const string KubePreserveUnknownFields = "x-kubernetes-preserve-unknown-fields";
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
     private static readonly GeneratedTypeReference StringType = Named("string");
@@ -110,6 +112,14 @@ internal sealed class OpenApiSchemaModelBuilder
             preserveNode.Node.GetValueKind() == JsonValueKind.True)
         {
             properties.Add(new GeneratedPropertyModel("ExtensionData", "ExtensionData", Generic("IDictionary", StringType, JsonElementType), null, true, null, false, true));
+            propertyNames.Add("ExtensionData");
+        }
+
+        var isEmbeddedType = IsTrueExtension(schema.Extensions, KubeEmbeddedType)
+            || IsTrueExtension(schema.Extensions, KubeEmbeddedResource);
+        if (isEmbeddedType && !isRoot)
+        {
+            AddEmbeddedResourceProperties(properties, propertyNames);
         }
 
         if (schema.Properties != null)
@@ -122,7 +132,7 @@ internal sealed class OpenApiSchemaModelBuilder
 
             foreach (var property in schema.Properties)
             {
-                if (isRoot && (property.Key == "apiVersion" || property.Key == "kind" || property.Key == "metadata"))
+                if ((isRoot || isEmbeddedType) && (property.Key == "apiVersion" || property.Key == "kind" || property.Key == "metadata"))
                 {
                     continue;
                 }
@@ -173,6 +183,32 @@ internal sealed class OpenApiSchemaModelBuilder
     {
         var identifier = CodeGenerationUtilities.CleanIdentifier(propertyName) ?? propertyName;
         return new GeneratedPropertyModel(identifier, propertyName, type, description, isNullable, null, isRequired);
+    }
+
+    private static void AddEmbeddedResourceProperties(List<GeneratedPropertyModel> properties, HashSet<string> propertyNames)
+    {
+        AddPropertyIfMissing(
+            properties,
+            propertyNames,
+            new GeneratedPropertyModel("ApiVersion", "apiVersion", StringType, "APIVersion defines the versioned schema of this representation of an object.", true));
+        AddPropertyIfMissing(
+            properties,
+            propertyNames,
+            new GeneratedPropertyModel("Kind", "kind", StringType, "Kind is a string value representing the REST resource this object represents.", true));
+        AddPropertyIfMissing(
+            properties,
+            propertyNames,
+            new GeneratedPropertyModel("Metadata", "metadata", V1ObjectMetaType, "Standard object's metadata.", true));
+    }
+
+    private static void AddPropertyIfMissing(List<GeneratedPropertyModel> properties, HashSet<string> propertyNames, GeneratedPropertyModel property)
+    {
+        if (!propertyNames.Add(property.Name))
+        {
+            return;
+        }
+
+        properties.Add(property);
     }
 
     private GeneratedTypeReference ResolveType(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName, Action<string>? reportWarning = null, bool isObsolete = false, string? obsoleteMessage = null)
@@ -318,6 +354,12 @@ internal sealed class OpenApiSchemaModelBuilder
                 return IntType;
         }
     }
+
+    private static bool IsTrueExtension(IDictionary<string, IOpenApiExtension>? extensions, string extensionName)
+        => extensions != null
+           && extensions.TryGetValue(extensionName, out var extension)
+           && extension is JsonNodeExtension nodeExtension
+           && nodeExtension.Node.GetValueKind() == JsonValueKind.True;
 
     private static string? GetUniqueTypeName(string candidate, HashSet<string> typeNames)
     {

@@ -388,4 +388,58 @@ spec:
         var specType = type!.GetProperty("Spec")!.PropertyType;
         specType.GetProperty("OddCount")!.PropertyType.ShouldBe(typeof(int?));
     }
+
+    [Fact]
+    public void TestGenerateAssemblyAddsImplicitEmbeddedResourceProperties()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                template:
+                  type: object
+                  x-kubernetes-embedded-resource: true
+                  properties:
+                    spec:
+                      type: object
+                      properties:
+                        replicas:
+                          type: integer
+""";
+
+        var type = GetTypeYaml(yaml, "Test");
+        var specType = type!.GetProperty("Spec")!.PropertyType;
+        var templateType = specType.GetProperty("Template")!.PropertyType;
+
+        templateType.GetProperty("ApiVersion")!.PropertyType.ShouldBe(typeof(string));
+        templateType.GetProperty("Kind")!.PropertyType.ShouldBe(typeof(string));
+        templateType.GetProperty("Metadata")!.PropertyType.ShouldBe(typeof(V1ObjectMeta));
+        templateType.GetProperty("Spec")!.ShouldNotBeNull();
+    }
 }
