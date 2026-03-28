@@ -124,7 +124,22 @@ public class Generator : IGenerator
                 continue;
             }
 
-            var node = JsonSerializer.SerializeToNode(version.Schema?.OpenAPIV3Schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps!);
+            if (version.Schema?.OpenAPIV3Schema is null)
+            {
+                continue;
+            }
+
+            var schema = version.Schema.OpenAPIV3Schema;
+            if (schema is null)
+            {
+                continue;
+            }
+
+            var node = JsonSerializer.SerializeToNode(schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps!);
+            if (node is null)
+            {
+                continue;
+            }
 
             var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
@@ -132,6 +147,11 @@ public class Generator : IGenerator
             {
                 var messages = string.Join(" | ", diag.Errors.Select(x => x.Message));
                 logger.LogError("Error converting schema to OpenAPI: {messages}", messages);
+            }
+
+            if (doc is null)
+            {
+                continue;
             }
 
             var code = codeGenerator.GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);

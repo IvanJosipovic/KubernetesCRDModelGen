@@ -359,7 +359,7 @@ public class CodeGenerator : ICodeGenerator
                     {
                         if (!types.Any(x => x.Identifier.Text == newClass.Identifier.Text))
                         {
-                            types.AddRange(nestedClasses);
+                            types.Add(newClass);
                         }
                     }
 

@@ -17,9 +17,9 @@ namespace KubernetesCRDModelGen.SourceGenerator
     [Generator]
     public class SourceGenerator : IIncrementalGenerator
     {
-        private static CodeGenerator codeGenerator;
+        private static readonly CodeGenerator codeGenerator = new();
 
-        private static HttpClient httpClient;
+        private static readonly HttpClient httpClient = new();
 
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
@@ -29,11 +29,10 @@ namespace KubernetesCRDModelGen.SourceGenerator
                 //Debugger.Launch();
             }
 #endif
-            codeGenerator = new CodeGenerator();
-
             var localFilesPipeline = context.AdditionalTextsProvider.Select(static (text, cancellationToken) =>
                 {
-                    if (!text.Path.EndsWith(".yaml"))
+                    if (!text.Path.EndsWith(".yaml", StringComparison.OrdinalIgnoreCase) &&
+                        !text.Path.EndsWith(".yml", StringComparison.OrdinalIgnoreCase))
                     {
                         return default;
                     }
@@ -46,7 +45,10 @@ namespace KubernetesCRDModelGen.SourceGenerator
                 .AnalyzerConfigOptionsProvider
                 .Select((config, _) => config.GlobalOptions
                     .TryGetValue($"build_property.CRDYamlSourceUrls", out var yamlCrdUrls)
-                    ? yamlCrdUrls.Replace("\n", "").Split([','], StringSplitOptions.RemoveEmptyEntries)
+                    ? yamlCrdUrls
+                        .Replace("\n", "")
+                        .Split([','], StringSplitOptions.RemoveEmptyEntries)
+                        .Select(url => url.Trim())
                     : [])
                 .SelectMany((urls, _) => urls)
                 .Select((url, _) =>
@@ -54,11 +56,11 @@ namespace KubernetesCRDModelGen.SourceGenerator
                     try
                     {
                         var text = httpClient.GetStringAsync(url).GetAwaiter().GetResult();
-                        return (Url: url, Text: text);
+                        return (Url: url, Text: (string?)text);
                     }
-                    catch (Exception ex)
+                    catch
                     {
-                        return (Url: url, Text: null);
+                        return (Url: url, Text: (string?)null);
                     }
                 });
 
@@ -71,13 +73,15 @@ namespace KubernetesCRDModelGen.SourceGenerator
                         Diagnostic.Create(
                             new DiagnosticDescriptor(
                                 "KG5",
-                                "Failed to fetch YAML",
-                                "Failed to fetch URL {0}",
+                                "Failed to read YAML",
+                                "Failed to read YAML file {0}",
                                 "KubernetesCRDModelGen",
-                                DiagnosticSeverity.Error,
-                                true),
-                            Location.None,
-                            pair.Name));
+                            DiagnosticSeverity.Error,
+                            true),
+                        Location.None,
+                        pair.Name));
+
+                    return;
                 }
 
                 // Log the filename that is loaded
@@ -97,6 +101,22 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
             context.RegisterSourceOutput(externalYamlUrlsPipeline, static (context, pair) =>
             {
+                if (pair.Text is null)
+                {
+                    context.ReportDiagnostic(Diagnostic.Create(
+                        new DiagnosticDescriptor(
+                            "KG5",
+                            "Failed to fetch YAML",
+                            "Failed to fetch URL {0}",
+                            "KubernetesCRDModelGen",
+                            DiagnosticSeverity.Error,
+                            true),
+                        Location.None,
+                        pair.Url));
+
+                    return;
+                }
+
                 context.ReportDiagnostic(Diagnostic.Create(
                     new DiagnosticDescriptor(
                         "KG4",
@@ -149,6 +169,11 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
                                 foreach (var version in versions)
                                 {
+                                    if (version.Schema?.OpenAPIV3Schema is null)
+                                    {
+                                        continue;
+                                    }
+
                                     var doc = openAPIReader.ReadFragment<OpenApiSchema>(version.Schema.OpenAPIV3Schema,
                                         OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
@@ -165,6 +190,11 @@ namespace KubernetesCRDModelGen.SourceGenerator
                                             Location.None,
                                             sourceName,
                                             diag.Errors.Select(x => x.Message).Aggregate((a, b) => a + "\r\n" + b)));
+                                    }
+
+                                    if (doc is null)
+                                    {
+                                        continue;
                                     }
 
                                     var code = codeGenerator.GenerateCompilationUnit(doc,
