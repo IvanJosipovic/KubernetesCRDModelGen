@@ -17,8 +17,10 @@ public interface ICodeGenerator
     /// <param name="group"></param>
     /// <param name="plural"></param>
     /// <param name="listKind"></param>
+    /// <param name="isObsolete">Marks generated types as obsolete.</param>
+    /// <param name="obsoleteMessage">Optional obsolete message.</param>
     /// <returns></returns>
-    BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null);
+    BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null);
 
     /// <summary>
     /// Generates source code from the given schema with the containing types.
@@ -30,8 +32,10 @@ public interface ICodeGenerator
     /// <param name="group">Api Group</param>
     /// <param name="plural">Kube Plural</param>
     /// <param name="listKind">Kube List Kind</param>
+    /// <param name="isObsolete">Marks generated types as obsolete.</param>
+    /// <param name="obsoleteMessage">Optional obsolete message.</param>
     /// <returns>CompilationUnitSyntax with the generated source code.</returns>
-    CompilationUnitSyntax GenerateCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind);
+    CompilationUnitSyntax GenerateCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind, bool isObsolete = false, string? obsoleteMessage = null);
 
     /// <summary>
     /// Generates source code from the given schema with the containing members.

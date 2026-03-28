@@ -23,13 +23,13 @@ internal sealed class OpenApiSchemaModelBuilder
 
     public bool EnumSupport { get; set; } = true;
 
-    public GeneratedCompilationUnitModel BuildCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind)
-        => new(@namespace, group, BuildTypes(schema, kind, version, group, plural, listKind));
+    public GeneratedCompilationUnitModel BuildCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind, bool isObsolete = false, string? obsoleteMessage = null)
+        => new(@namespace, group, BuildTypes(schema, kind, version, group, plural, listKind, isObsolete, obsoleteMessage));
 
-    public IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null)
-        => BuildTypes(schema, kind, new HashSet<string>(StringComparer.Ordinal), version, group, plural, listKind);
+    public IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
+        => BuildTypes(schema, kind, new HashSet<string>(StringComparer.Ordinal), version, group, plural, listKind, isObsolete, obsoleteMessage);
 
-    private IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, HashSet<string> typeNames, string? version = null, string? group = null, string? plural = null, string? listKind = null)
+    private IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, HashSet<string> typeNames, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
     {
         var isRoot = version != null && group != null && plural != null;
         listKind ??= kind + "List";
@@ -83,7 +83,9 @@ internal sealed class OpenApiSchemaModelBuilder
                     new GeneratedPropertyModel("Kind", "kind", StringType, "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", false, listKind),
                     new GeneratedPropertyModel("Metadata", "metadata", V1ListMetaType, "ListMeta describes metadata that synthetic resources must have, including lists and various status objects. A resource may have only one of {ObjectMeta, ListMeta}."),
                     new GeneratedPropertyModel("Items", "items", Generic("IList", Named(classNameValue)), $"List of {classNameValue} objects.")
-                ]));
+                ],
+                isObsolete,
+                obsoleteMessage));
         }
 
         if (schema.Extensions != null &&
@@ -109,7 +111,7 @@ internal sealed class OpenApiSchemaModelBuilder
                     continue;
                 }
 
-                var type = ResolveType(property.Value, types, typeNames, classNameValue, property.Key);
+                var type = ResolveType(property.Value, types, typeNames, classNameValue, property.Key, isObsolete, obsoleteMessage);
                 var isRequired = requiredNames?.Contains(property.Key) == true;
                 var isNullable = property.Value.Type.HasValue && property.Value.Type.Value.HasFlag(JsonSchemaType.Null);
                 var hasDefault = property.Value.Default != null;
@@ -149,7 +151,7 @@ internal sealed class OpenApiSchemaModelBuilder
             }
         }
 
-        types.Add(new GeneratedClassModel(classNameValue, schema.Description, isRoot, baseTypes, fields, properties));
+        types.Add(new GeneratedClassModel(classNameValue, schema.Description, isRoot, baseTypes, fields, properties, isObsolete, obsoleteMessage));
         return types;
     }
 
@@ -159,7 +161,7 @@ internal sealed class OpenApiSchemaModelBuilder
         return new GeneratedPropertyModel(identifier, propertyName, type, description, isNullable, defaultValue, isRequired);
     }
 
-    private GeneratedTypeReference ResolveType(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName)
+    private GeneratedTypeReference ResolveType(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName, bool isObsolete = false, string? obsoleteMessage = null)
     {
         if (schema.Extensions != null &&
             schema.Extensions.TryGetValue(KubePreserveUnknownFields, out var preserveUnknownFields) &&
@@ -183,7 +185,7 @@ internal sealed class OpenApiSchemaModelBuilder
             case JsonSchemaType.Object:
                 if (schema.AdditionalProperties != null)
                 {
-                    return Generic("IDictionary", StringType, ResolveType(schema.AdditionalProperties, types, typeNames, parentClassName, propertyName));
+                    return Generic("IDictionary", StringType, ResolveType(schema.AdditionalProperties, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage));
                 }
 
                 var nestedClassName = CodeGenerationUtilities.CleanIdentifier(parentClassName + " " + propertyName);
@@ -192,13 +194,13 @@ internal sealed class OpenApiSchemaModelBuilder
                     return ObjectType;
                 }
 
-                types.AddRange(BuildTypes(schema, nestedClassName!, typeNames));
+                types.AddRange(BuildTypes(schema, nestedClassName!, typeNames, isObsolete: isObsolete, obsoleteMessage: obsoleteMessage));
                 return Named(nestedClassName!);
 
             case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
                 return EnumSupport && HasStringEnumValues(schema.Enum)
-                    ? BuildEnum(schema, types, typeNames, parentClassName, propertyName)
+                    ? BuildEnum(schema, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage)
                     : StringType;
 
             case JsonSchemaType.Null | JsonSchemaType.Number:
@@ -217,7 +219,7 @@ internal sealed class OpenApiSchemaModelBuilder
             case JsonSchemaType.Array:
                 if (EnumSupport && HasStringEnumValues(schema.Enum))
                 {
-                    return Generic("IList", BuildEnum(schema, types, typeNames, parentClassName, propertyName));
+                    return Generic("IList", BuildEnum(schema, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage));
                 }
 
                 if (schema.Items is null)
@@ -225,14 +227,14 @@ internal sealed class OpenApiSchemaModelBuilder
                     return Generic("IList", ObjectType);
                 }
 
-                return Generic("IList", ResolveType(schema.Items, types, typeNames, parentClassName, propertyName));
+                return Generic("IList", ResolveType(schema.Items, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage));
 
             default:
                 throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema, CodeGeneratorSourceGenerationContext.Default.IOpenApiSchema));
         }
     }
 
-    private GeneratedTypeReference BuildEnum(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName)
+    private GeneratedTypeReference BuildEnum(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName, bool isObsolete = false, string? obsoleteMessage = null)
     {
         var enumName = CodeGenerationUtilities.CleanIdentifier(parentClassName + " " + propertyName) + "Enum";
         if (string.IsNullOrEmpty(enumName))
@@ -277,7 +279,7 @@ internal sealed class OpenApiSchemaModelBuilder
             members.Add(new GeneratedEnumMemberModel(identifier!, value, null));
         }
 
-        types.Add(new GeneratedEnumModel(enumNameValue, schema.Description, members));
+        types.Add(new GeneratedEnumModel(enumNameValue, schema.Description, members, isObsolete, obsoleteMessage));
         return Named(enumNameValue);
     }
 

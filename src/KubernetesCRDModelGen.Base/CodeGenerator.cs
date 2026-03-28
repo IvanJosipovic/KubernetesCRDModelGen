@@ -16,16 +16,16 @@ public class CodeGenerator : ICodeGenerator
     }
 
     /// <inheritdoc/>
-    public CompilationUnitSyntax GenerateCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind)
-        => renderer.RenderCompilationUnit(modelBuilder.BuildCompilationUnit(schema, @namespace, version, kind, group, plural, listKind));
+    public CompilationUnitSyntax GenerateCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind, bool isObsolete = false, string? obsoleteMessage = null)
+        => renderer.RenderCompilationUnit(modelBuilder.BuildCompilationUnit(schema, @namespace, version, kind, group, plural, listKind, isObsolete, obsoleteMessage));
 
     /// <inheritdoc/>
     public CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, IReadOnlyList<MemberDeclarationSyntax> members)
         => renderer.RenderCompilationUnit(@namespace, group, members);
 
     /// <inheritdoc/>
-    public BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null)
-        => renderer.RenderTypes(modelBuilder.BuildTypes(schema, kind, version, group, plural, listKind));
+    public BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
+        => renderer.RenderTypes(modelBuilder.BuildTypes(schema, kind, version, group, plural, listKind, isObsolete, obsoleteMessage));
 
     internal static string? CleanIdentifier(string name, bool @namespace = false)
         => CodeGenerationUtilities.CleanIdentifier(name, @namespace);

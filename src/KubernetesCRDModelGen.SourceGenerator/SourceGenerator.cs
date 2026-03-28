@@ -203,7 +203,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
                                     var code = codeGenerator.GenerateCompilationUnit(doc,
                                         "KubernetesCRDModelGen.Models", version.Name, crd.Spec.Names.Kind,
-                                        crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
+                                        crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind, version.Deprecated == true, version.DeprecationWarning);
 
                                     var filename =
                                         CodeGenerator.RemoveIllegalFileNameCharacters(
