@@ -38,7 +38,7 @@ public class SourceGeneratorTests
             test.TestState.GeneratedSources.Add((typeof(SourceGeneratorUnderTest), generatedSource.filename, generatedSource.content));
         }
 
-        await test.RunAsync();
+        await test.RunAsync(TestContext.Current.CancellationToken);
     }
 
     [Fact]
@@ -48,7 +48,7 @@ public class SourceGeneratorTests
         test.TestCode = "namespace Dummy; public class Marker {}";
         test.TestState.AdditionalFiles.Add(("notes.txt", "hello world"));
 
-        await test.RunAsync();
+        await test.RunAsync(TestContext.Current.CancellationToken);
     }
 
     [Fact]
@@ -60,7 +60,7 @@ public class SourceGeneratorTests
         test.ExpectedDiagnostics.Add(new DiagnosticResult("KG0", DiagnosticSeverity.Info).WithNoLocation());
         test.ExpectedDiagnostics.Add(new DiagnosticResult("KG1", DiagnosticSeverity.Error).WithNoLocation());
 
-        await test.RunAsync();
+        await test.RunAsync(TestContext.Current.CancellationToken);
     }
 
     [Fact]
@@ -108,10 +108,10 @@ public class SourceGeneratorTests
         var codeGenerator = new CodeGenerator();
         var openApiReader = new OpenApiJsonReader();
 
-        foreach (var version in crd.Spec.Versions.Where(version => version.Served))
+        foreach (var version in crd.Spec.Versions.Where(version => version.Served && version.Schema?.OpenAPIV3Schema is not null))
         {
             var schema = openApiReader.ReadFragment<OpenApiSchema>(
-                version.Schema.OpenAPIV3Schema,
+                version.Schema!.OpenAPIV3Schema,
                 OpenApiSpecVersion.OpenApi3_0,
                 new OpenApiDocument(),
                 out _);

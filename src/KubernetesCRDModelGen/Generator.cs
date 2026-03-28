@@ -7,9 +7,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.Json.Serialization.Metadata;
 using System.Xml;
 using static k8s.KubernetesJson;
 
@@ -27,10 +29,14 @@ public class Generator : IGenerator
 
     private readonly CodeGenerator codeGenerator;
 
-    private readonly MetadataReference[] metadataReferences;
+    private static readonly Lazy<MetadataReference[]> MetadataReferencesCache = new(GetReferences);
+    private static readonly Lazy<CSharpCompilation> CompilationTemplateCache = new(CreateCompilationTemplate);
+    private static readonly JsonTypeInfo<V1JSONSchemaProps> V1JsonSchemaPropsTypeInfo = GeneratorSourceGenerationContext.Default.V1JSONSchemaProps;
+    private static readonly ConditionalWeakTable<V1JSONSchemaProps, OpenApiSchema> OpenApiSchemaCache = new();
+    private static readonly OpenApiSpecVersion OpenApiVersion = OpenApiSpecVersion.OpenApi3_0;
 
-    private readonly CSharpCompilationOptions _options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
-        .WithConcurrentBuild(true)
+    private static readonly CSharpCompilationOptions CompilationOptions = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+        .WithConcurrentBuild(false)
         .WithDeterministic(true)
         .WithNullableContextOptions(NullableContextOptions.Enable)
         .WithOptimizationLevel(OptimizationLevel.Release)
@@ -45,7 +51,6 @@ public class Generator : IGenerator
     {
         logger = loggerFactory.CreateLogger<Generator>();
         codeGenerator = new CodeGenerator();
-        metadataReferences ??= GetReferences();
     }
 
     /// <inheritdoc/>
@@ -61,11 +66,9 @@ public class Generator : IGenerator
         {
             var code = GenerateCompilationUnit(crd, @namespace);
 
-            var compilation = CSharpCompilation.Create(
-                crd.Metadata.Name,
-                syntaxTrees: [code.SyntaxTree],
-                references: metadataReferences,
-                options: _options);
+            var compilation = CompilationTemplateCache.Value
+                .WithAssemblyName(crd.Metadata.Name)
+                .AddSyntaxTrees(code.SyntaxTree);
 
             using var peStream = new MemoryStream();
             using var xmlDocumentationStream = new MemoryStream();
@@ -116,6 +119,7 @@ public class Generator : IGenerator
         var types = new List<MemberDeclarationSyntax>(crd.Spec.Versions.Count);
 
         var reader = new OpenApiJsonReader();
+        using var schemaStream = new MemoryStream();
 
         foreach (var version in crd.Spec.Versions)
         {
@@ -135,20 +139,7 @@ public class Generator : IGenerator
                 continue;
             }
 
-            var node = JsonSerializer.SerializeToNode(schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps!);
-            if (node is null)
-            {
-                continue;
-            }
-
-            var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
-
-            if (diag != null && diag.Errors.Count > 0)
-            {
-                var messages = string.Join(" | ", diag.Errors.Select(x => x.Message));
-                logger.LogError("Error converting schema to OpenAPI: {messages}", messages);
-            }
-
+            var doc = GetOpenApiSchema(reader, schemaStream, schema);
             if (doc is null)
             {
                 continue;
@@ -158,14 +149,21 @@ public class Generator : IGenerator
             types.AddRange(code);
         }
 
-        return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, [.. types]);
+        return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, types);
     }
 
-    private MetadataReference[] GetReferences()
+    private static CSharpCompilation CreateCompilationTemplate()
+        => CSharpCompilation.Create(
+            assemblyName: "KubernetesCRDModelGen.Dynamic",
+            syntaxTrees: [],
+            references: MetadataReferencesCache.Value,
+            options: CompilationOptions);
+
+    private static MetadataReference[] GetReferences()
     {
         var references = new List<MetadataReference>();
 
-        var assembly = GetType().Assembly;
+        var assembly = typeof(Generator).Assembly;
 
         var assemblies = assembly.GetManifestResourceNames().Where(x => x.StartsWith("runtime.") && x.EndsWith(".dll")).ToList();
 
@@ -177,6 +175,33 @@ public class Generator : IGenerator
         }
 
         return [.. references];
+    }
+
+    private OpenApiSchema? GetOpenApiSchema(OpenApiJsonReader reader, MemoryStream schemaStream, V1JSONSchemaProps schema)
+    {
+        if (OpenApiSchemaCache.TryGetValue(schema, out var cachedSchema))
+        {
+            return cachedSchema;
+        }
+
+        schemaStream.SetLength(0);
+        JsonSerializer.Serialize(schemaStream, schema, V1JsonSchemaPropsTypeInfo);
+        schemaStream.Position = 0;
+
+        var openApiSchema = reader.ReadFragment<OpenApiSchema>(schemaStream, OpenApiVersion, new OpenApiDocument(), out var diag);
+
+        if (diag != null && diag.Errors.Count > 0)
+        {
+            var messages = string.Join(" | ", diag.Errors.Select(x => x.Message));
+            logger.LogError("Error converting schema to OpenAPI: {messages}", messages);
+        }
+
+        if (openApiSchema is not null)
+        {
+            OpenApiSchemaCache.Add(schema, openApiSchema);
+        }
+
+        return openApiSchema;
     }
 }
 
