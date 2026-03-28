@@ -128,7 +128,7 @@ We publish the following premade packages
 |---|---|
 | `'object'` with Properties | generated class |
 | `'object'` with AdditionalProperties | `IDictionary<string, TValue>` |
-| `'object'` with `x-kubernetes-embedded-type` | currently treated like a normal object, so usually a generated class |
+| `'object'` with `x-kubernetes-embedded-resource` | generated class, with implicit `apiVersion`, `kind`, and `metadata` properties added when missing |
 | `'object'` with `x-kubernetes-preserve-unknown-fields` | `JsonNode`, plus `JsonExtensionData` at object roots with the extension |
 | `x-kubernetes-int-or-string` | `k8s.Models.IntOrString` |
 | `'array'` | `IList<T>` |
