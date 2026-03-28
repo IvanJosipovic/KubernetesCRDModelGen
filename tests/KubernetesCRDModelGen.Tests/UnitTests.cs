@@ -10667,6 +10667,94 @@ spec:
         nested1.Name.ShouldBe("V1alpha1TestSpecEnum");
         nested1.IsClass.ShouldBeTrue();
     }
+
+    [Fact]
+    public void TestGenerateCodePreservesMultiLineXmlSummaries()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              description: |-
+                line1
+                line2
+""";
+
+        var code = GetCode(yaml);
+
+        code.ShouldContain("/// <summary>");
+        code.ShouldContain("/// line1");
+        code.ShouldContain("/// line2");
+        code.ShouldContain("/// </summary>");
+    }
+
+    [Fact]
+    public void TestGenerateCodeEscapesXmlCharactersInSummaries()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              description: "a < b && c > d"
+""";
+
+        var crd = (V1CustomResourceDefinition)KubernetesYaml.LoadAllFromString(yaml)[0];
+        var (_, xml) = GetGenerator().GenerateAssembly(crd, Namespace);
+
+        xml.ShouldNotBeNull();
+        xml!.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.kubeui.com.V1Test.Spec']/summary")
+            ?.InnerText.ShouldBe("a < b && c > d");
+    }
 }
 
 public static class ReflectionHelpers
@@ -10683,4 +10771,3 @@ public static class ReflectionHelpers
         return nullableStringInfo.ReadState == NullabilityState.Nullable;
     }
 }
-
