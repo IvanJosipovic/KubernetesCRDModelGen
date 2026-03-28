@@ -116,6 +116,7 @@ public class Generator : IGenerator
         var types = new List<MemberDeclarationSyntax>(crd.Spec.Versions.Count);
 
         var reader = new OpenApiJsonReader();
+        using var schemaStream = new MemoryStream();
 
         foreach (var version in crd.Spec.Versions)
         {
@@ -135,13 +136,11 @@ public class Generator : IGenerator
                 continue;
             }
 
-            var node = JsonSerializer.SerializeToNode(schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps!);
-            if (node is null)
-            {
-                continue;
-            }
+            schemaStream.SetLength(0);
+            JsonSerializer.Serialize(schemaStream, schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps);
+            schemaStream.Position = 0;
 
-            var doc = reader.ReadFragment<OpenApiSchema>(node, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
+            var doc = reader.ReadFragment<OpenApiSchema>(schemaStream, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
 
             if (diag != null && diag.Errors.Count > 0)
             {

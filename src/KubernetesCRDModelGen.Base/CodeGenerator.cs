@@ -19,9 +19,56 @@ public class CodeGenerator : ICodeGenerator
 
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
 
-    private bool EnumSupport = true;
+    private static readonly string CurrentVersion = typeof(CodeGenerator).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? string.Empty;
 
-    private static readonly string CurrentVersion = typeof(CodeGenerator).Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
+    private static readonly SyntaxList<UsingDirectiveSyntax> Usings = SyntaxFactory.List([
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s")),
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s.Models")),
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")),
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic")),
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Runtime.Serialization")),
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json")),
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Nodes")),
+        SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Serialization")),
+    ]);
+
+    private static readonly AttributeListSyntax GeneratedCodeAttributeList = SyntaxFactory.AttributeList().AddAttributes([
+        SyntaxFactory.Attribute(
+            SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
+            .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList([
+                SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
+                SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
+            ]))),
+    ]);
+
+    private static readonly AttributeListSyntax ExcludeFromCodeCoverageAttributeList = SyntaxFactory.AttributeList().AddAttributes([
+        SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
+    ]);
+
+    private static readonly AttributeListSyntax KubernetesEntityAttributeList = SyntaxFactory.AttributeList().AddAttributes([
+        SyntaxFactory.Attribute(SyntaxFactory.ParseName("KubernetesEntity"))
+            .WithArgumentList(
+                SyntaxFactory.AttributeArgumentList()
+                .AddArguments(
+                    SyntaxFactory.AttributeArgument(
+                        SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("Group")),
+                        null,
+                        SyntaxFactory.IdentifierName("KubeGroup")),
+                    SyntaxFactory.AttributeArgument(
+                        SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("Kind")),
+                        null,
+                        SyntaxFactory.IdentifierName("KubeKind")),
+                    SyntaxFactory.AttributeArgument(
+                        SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("ApiVersion")),
+                        null,
+                        SyntaxFactory.IdentifierName("KubeApiVersion")),
+                    SyntaxFactory.AttributeArgument(
+                        SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("PluralName")),
+                        null,
+                        SyntaxFactory.IdentifierName("KubePluralName"))))
+    ]);
+
+    private bool EnumSupport = true;
 
     /// <inheritdoc/>
     public void SetEnumSupport(bool enabled)
@@ -43,7 +90,7 @@ public class CodeGenerator : ICodeGenerator
             .AddMembers(members);
 
         var compilationUnit = SyntaxFactory.CompilationUnit()
-            .WithUsings(GenerateUsings())
+            .WithUsings(Usings)
             .WithLeadingTrivia(
                 SyntaxFactory.TriviaList(
                     SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true))))
@@ -60,24 +107,14 @@ public class CodeGenerator : ICodeGenerator
         listKind ??= kind + "List";
 
         var types = new List<BaseTypeDeclarationSyntax>();
+        var propertyNames = new HashSet<string>(StringComparer.Ordinal);
 
         var className = CleanIdentifier((isRoot ? version : string.Empty) + " " + kind);
 
         var @class = SyntaxFactory.ClassDeclaration(className)
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
-                        .AddAttributeLists(SyntaxFactory.AttributeList()
-                            .AddAttributes(
-                            [
-                                SyntaxFactory.Attribute(
-                                    SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
-                                    [
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
-                                    ]))),
-                                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
-                            ])
-                        )
+                        .AddAttributeLists(GeneratedCodeAttributeList)
+                        .AddAttributeLists(ExcludeFromCodeCoverageAttributeList)
                         .WithLeadingTrivia(CreateSummaryTrivia(schema.Description));
 
         if (isRoot)
@@ -89,50 +126,16 @@ public class CodeGenerator : ICodeGenerator
 
             var @classList = SyntaxFactory.ClassDeclaration(classListName)
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
-                .AddAttributeLists(SyntaxFactory.AttributeList()
-                    .AddAttributes(
-                    [
-                        SyntaxFactory.Attribute(
-                                    SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                                    .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
-                                    [
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
-                                        SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
-                                    ]))),
-                                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
-                    ])
-                )
+                .AddAttributeLists(GeneratedCodeAttributeList)
+                .AddAttributeLists(ExcludeFromCodeCoverageAttributeList)
                 .WithLeadingTrivia(CreateSummaryTrivia(schema.Description));
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{className}>")));
 
-            // Create an attribute syntax for the KubernetesEntity attribute
-            var kubernetesEntityAttribute = SyntaxFactory.Attribute(
-                SyntaxFactory.ParseName("KubernetesEntity"))
-                .WithArgumentList(
-                    SyntaxFactory.AttributeArgumentList()
-                    .AddArguments(
-                        SyntaxFactory.AttributeArgument(
-                            SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("Group")),
-                            null,
-                            SyntaxFactory.IdentifierName("KubeGroup")),
-                        SyntaxFactory.AttributeArgument(
-                            SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("Kind")),
-                            null,
-                            SyntaxFactory.IdentifierName("KubeKind")),
-                        SyntaxFactory.AttributeArgument(
-                            SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("ApiVersion")),
-                            null,
-                            SyntaxFactory.IdentifierName("KubeApiVersion")),
-                        SyntaxFactory.AttributeArgument(
-                            SyntaxFactory.NameEquals(SyntaxFactory.IdentifierName("PluralName")),
-                            null,
-                            SyntaxFactory.IdentifierName("KubePluralName"))));
-
-            @class = @class.AddAttributeLists(SyntaxFactory.AttributeList().AddAttributes(kubernetesEntityAttribute));
-            @classList = @classList.AddAttributeLists(SyntaxFactory.AttributeList().AddAttributes(kubernetesEntityAttribute));
+            @class = @class.AddAttributeLists(KubernetesEntityAttributeList);
+            @classList = @classList.AddAttributeLists(KubernetesEntityAttributeList);
 
             // Create the field declarations for the KubernetesEntity attribute
             var kubeApiVersion = SyntaxFactory.FieldDeclaration(
@@ -323,7 +326,7 @@ public class CodeGenerator : ICodeGenerator
 
                 //Check if class already contains a property with the same name
                 var count = 1;
-                while (@class.Members.Where(x => x.IsKind(SyntaxKind.PropertyDeclaration)).Any(x => ((PropertyDeclarationSyntax)x).Identifier.Text == newProperty.Identifier.Text))
+                while (!propertyNames.Add(newProperty.Identifier.Text))
                 {
                     newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
                 }
@@ -334,20 +337,6 @@ public class CodeGenerator : ICodeGenerator
         types.Add(@class);
 
         return [.. types];
-    }
-
-    private static SyntaxList<UsingDirectiveSyntax> GenerateUsings()
-    {
-        return SyntaxFactory.List([
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s.Models")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Runtime.Serialization")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Nodes")),
-            SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Text.Json.Serialization")),
-        ]);
     }
 
     private string GetOrGenerateType(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
@@ -373,9 +362,15 @@ public class CodeGenerator : ICodeGenerator
                 {
                     var nestedClasses = GenerateClass(schema, CleanIdentifier(parentClassName + " " + propertyName));
 
+                    var existingTypeNames = new HashSet<string>(StringComparer.Ordinal);
+                    foreach (var existingType in types)
+                    {
+                        existingTypeNames.Add(existingType.Identifier.Text);
+                    }
+
                     foreach (var newClass in nestedClasses)
                     {
-                        if (!types.Any(x => x.Identifier.Text == newClass.Identifier.Text))
+                        if (existingTypeNames.Add(newClass.Identifier.Text))
                         {
                             types.Add(newClass);
                         }
@@ -385,7 +380,7 @@ public class CodeGenerator : ICodeGenerator
                 }
             case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
-                if (EnumSupport && schema.Enum != null && schema.Enum.Any() && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
+                if (EnumSupport && schema.Enum != null && schema.Enum.Count > 0 && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
                     return GenerateEnum(schema, types, parentClassName, propertyName);
                 return "string";
             case JsonSchemaType.Null | JsonSchemaType.Number:
@@ -403,7 +398,7 @@ public class CodeGenerator : ICodeGenerator
             case JsonSchemaType.Null | JsonSchemaType.Array:
             case JsonSchemaType.Array:
 
-                if (EnumSupport && schema.Enum != null && schema.Enum.Any() && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
+                if (EnumSupport && schema.Enum != null && schema.Enum.Count > 0 && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
                 {
                     return $"IList<{GenerateEnum(schema, types, parentClassName, propertyName)}>";
                 }
@@ -417,33 +412,24 @@ public class CodeGenerator : ICodeGenerator
     private static string GenerateEnum(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
     {
         var enumName = CleanIdentifier(parentClassName + " " + propertyName) + "Enum";
+        var memberNames = new HashSet<string>(StringComparer.Ordinal);
 
         var enumDeclaration = SyntaxFactory.EnumDeclaration(enumName)
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
-            .AddAttributeLists(SyntaxFactory.AttributeList()
-                .AddAttributes(
-                [
-                    SyntaxFactory.Attribute(
-                        SyntaxFactory.ParseName("global::System.CodeDom.Compiler.GeneratedCode"))
-                        .WithArgumentList(SyntaxFactory.AttributeArgumentList(SyntaxFactory.SeparatedList(
-                        [
-                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal("KubernetesCRDModelGen"))),
-                            SyntaxFactory.AttributeArgument(SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(CurrentVersion)))
-                        ]))),
-                    SyntaxFactory.Attribute(SyntaxFactory.ParseName("JsonConverter"))
-                        .WithArgumentList(
-                            SyntaxFactory.AttributeArgumentList(
-                                SyntaxFactory.SingletonSeparatedList(
-                                    SyntaxFactory.AttributeArgument(
-                                        SyntaxFactory.TypeOfExpression(
-                                            SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{enumName}>")
-                                        )
+            .AddAttributeLists(GeneratedCodeAttributeList)
+            .AddAttributeLists(SyntaxFactory.AttributeList().AddAttributes(
+                SyntaxFactory.Attribute(SyntaxFactory.ParseName("JsonConverter"))
+                    .WithArgumentList(
+                        SyntaxFactory.AttributeArgumentList(
+                            SyntaxFactory.SingletonSeparatedList(
+                                SyntaxFactory.AttributeArgument(
+                                    SyntaxFactory.TypeOfExpression(
+                                        SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{enumName}>")
                                     )
                                 )
                             )
-                        ),
-                ])
-            )
+                        ))
+            ))
             .WithLeadingTrivia(
                 CreateSummaryTrivia(schema.Description));
 
@@ -463,7 +449,7 @@ public class CodeGenerator : ICodeGenerator
 
                 // Check if identifier already exists
                 var c = 1;
-                while (enumDeclaration.Members.Any(x => x.Identifier.Text == identifier))
+                while (!memberNames.Add(identifier))
                 {
                     identifier = CleanIdentifier(value) + c++;
                 }
