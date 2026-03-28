@@ -61,7 +61,7 @@ properties:
         var nested = classes.Where(x => x.Name == "SpecChildOne").ToArray();
 
         nested.Length.ShouldBe(1);
-        spec.Properties.Select(x => x.TypeName).ShouldBe(["SpecChildOne", "SpecChildOne"]);
+        spec.Properties.Select(x => x.Type.DisplayName).ShouldBe(["SpecChildOne", "SpecChildOne"]);
         spec.Properties.Select(x => x.Name).ShouldBe(["ChildOne", "ChildOne1"]);
     }
 
@@ -152,16 +152,16 @@ properties:
         var spec = classes.Single(x => x.Name == "V1WidgetSpec");
 
         list.IsKubernetesEntity.ShouldBeTrue();
-        list.BaseTypes.ShouldBe(["IKubernetesObject<V1ListMeta>", "IItems<V1Widget>"]);
+        list.BaseTypes.Select(x => x.DisplayName).ShouldBe(["IKubernetesObject<V1ListMeta>", "IItems<V1Widget>"]);
         list.Properties.Select(x => x.Name).ShouldBe(["ApiVersion", "Kind", "Metadata", "Items"]);
 
         root.IsKubernetesEntity.ShouldBeTrue();
-        root.BaseTypes.ShouldContain("IKubernetesObject<V1ObjectMeta>");
-        root.BaseTypes.ShouldContain("ISpec<V1WidgetSpec?>");
+        root.BaseTypes.Select(x => x.DisplayName).ShouldContain("IKubernetesObject<V1ObjectMeta>");
+        root.BaseTypes.Select(x => x.DisplayName).ShouldContain("ISpec<V1WidgetSpec?>");
         root.Fields.Select(x => x.Name).ShouldBe(["KubeApiVersion", "KubeKind", "KubeGroup", "KubePluralName"]);
         root.Properties.Select(x => x.Name).ShouldBe(["ApiVersion", "Kind", "Metadata", "Spec"]);
 
-        spec.Properties.Single(x => x.Name == "Size").TypeName.ShouldBe("string");
+        spec.Properties.Single(x => x.Name == "Size").Type.DisplayName.ShouldBe("string");
     }
 
     [Fact]

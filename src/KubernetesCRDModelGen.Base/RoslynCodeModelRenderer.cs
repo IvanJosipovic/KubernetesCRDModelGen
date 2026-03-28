@@ -47,6 +47,7 @@ internal sealed class RoslynCodeModelRenderer
     private static readonly NameSyntax JsonExtensionDataAttributeName = SyntaxFactory.IdentifierName("JsonExtensionData");
     private static readonly NameSyntax EnumMemberAttributeName = SyntaxFactory.IdentifierName("EnumMember");
     private static readonly NameSyntax JsonStringEnumMemberNameAttributeName = SyntaxFactory.IdentifierName("JsonStringEnumMemberName");
+    private static readonly NameSyntax JsonStringEnumConverterName = SyntaxFactory.IdentifierName("JsonStringEnumConverter");
     private static readonly AccessorListSyntax AutoPropertyAccessorList = SyntaxFactory.AccessorList(
         SyntaxFactory.List(
             [
@@ -98,7 +99,7 @@ internal sealed class RoslynCodeModelRenderer
         foreach (var baseType in model.BaseTypes)
         {
             declaration = declaration.AddBaseListTypes(
-                SyntaxFactory.SimpleBaseType(CodeGenerationUtilities.GetTypeSyntax(baseType)));
+                SyntaxFactory.SimpleBaseType(RenderTypeSyntax(baseType)));
         }
 
         if (model.Fields.Count > 0)
@@ -125,7 +126,12 @@ internal sealed class RoslynCodeModelRenderer
                         SyntaxFactory.AttributeArgumentList(
                             SyntaxFactory.SingletonSeparatedList(
                                 SyntaxFactory.AttributeArgument(
-                                    SyntaxFactory.TypeOfExpression(CodeGenerationUtilities.GetTypeSyntax($"JsonStringEnumConverter<{model.Name}>"))))))))
+                                    SyntaxFactory.TypeOfExpression(
+                                        SyntaxFactory.GenericName(
+                                            ((IdentifierNameSyntax)JsonStringEnumConverterName).Identifier,
+                                            SyntaxFactory.TypeArgumentList(
+                                                SyntaxFactory.SingletonSeparatedList<TypeSyntax>(
+                                                    SyntaxFactory.IdentifierName(model.Name)))))))))))
             .WithLeadingTrivia(CodeGenerationUtilities.CreateSummaryTrivia(model.Summary));
 
         if (model.Members.Count > 0)
@@ -138,7 +144,7 @@ internal sealed class RoslynCodeModelRenderer
 
     private static FieldDeclarationSyntax RenderField(GeneratedFieldModel model)
         => SyntaxFactory.FieldDeclaration(
-                SyntaxFactory.VariableDeclaration(CodeGenerationUtilities.GetTypeSyntax(model.TypeName))
+                SyntaxFactory.VariableDeclaration(RenderTypeSyntax(model.Type))
                     .WithVariables(
                         SyntaxFactory.SingletonSeparatedList(
                             SyntaxFactory.VariableDeclarator(model.Name)
@@ -152,7 +158,7 @@ internal sealed class RoslynCodeModelRenderer
         if (model.IsExtensionData)
         {
             return SyntaxFactory.PropertyDeclaration(
-                    SyntaxFactory.NullableType(CodeGenerationUtilities.GetTypeSyntax(model.TypeName)),
+                    SyntaxFactory.NullableType(RenderTypeSyntax(model.Type)),
                     SyntaxFactory.Identifier(model.Name))
                 .WithModifiers(SyntaxFactory.TokenList(SyntaxFactory.Token(SyntaxKind.PublicKeyword)))
                 .WithAccessorList(AutoPropertyAccessorList)
@@ -165,8 +171,8 @@ internal sealed class RoslynCodeModelRenderer
 
         PropertyDeclarationSyntax declaration = SyntaxFactory.PropertyDeclaration(
                 model.IsNullable
-                    ? SyntaxFactory.NullableType(CodeGenerationUtilities.GetTypeSyntax(model.TypeName))
-                    : CodeGenerationUtilities.GetTypeSyntax(model.TypeName),
+                    ? SyntaxFactory.NullableType(RenderTypeSyntax(model.Type))
+                    : RenderTypeSyntax(model.Type),
                 model.Name)
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
             .WithAccessorList(AutoPropertyAccessorList)
@@ -220,4 +226,64 @@ internal sealed class RoslynCodeModelRenderer
                                                     SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(model.Value))))))
                             ]))))
             .WithLeadingTrivia(CodeGenerationUtilities.CreateSummaryTrivia(model.Summary));
+
+    private static TypeSyntax RenderTypeSyntax(GeneratedTypeReference type)
+        => type switch
+        {
+            GeneratedNamedTypeReference namedType => RenderNamedTypeSyntax(namedType.Name),
+            GeneratedGenericTypeReference genericType => RenderGenericTypeSyntax(genericType),
+            GeneratedNullableTypeReference nullableType => SyntaxFactory.NullableType(RenderTypeSyntax(nullableType.InnerType)),
+            _ => throw new InvalidOperationException($"Unsupported generated type reference: {type.GetType().Name}")
+        };
+
+    private static TypeSyntax RenderGenericTypeSyntax(GeneratedGenericTypeReference genericType)
+    {
+        var baseName = RenderNameSyntax(genericType.Name);
+        var typeArgumentList = SyntaxFactory.TypeArgumentList(
+            SyntaxFactory.SeparatedList(genericType.TypeArguments.Select(RenderTypeSyntax)));
+
+        if (baseName is QualifiedNameSyntax qualifiedName)
+        {
+            return qualifiedName.WithRight(
+                SyntaxFactory.GenericName(qualifiedName.Right.Identifier, typeArgumentList));
+        }
+
+        if (baseName is AliasQualifiedNameSyntax aliasQualifiedName)
+        {
+            return aliasQualifiedName.WithName(
+                SyntaxFactory.GenericName(aliasQualifiedName.Name.Identifier, typeArgumentList));
+        }
+
+        return SyntaxFactory.GenericName(((IdentifierNameSyntax)baseName).Identifier, typeArgumentList);
+    }
+
+    private static TypeSyntax RenderNamedTypeSyntax(string name)
+        => name switch
+        {
+            "bool" => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.BoolKeyword)),
+            "double" => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.DoubleKeyword)),
+            "int" => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.IntKeyword)),
+            "long" => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.LongKeyword)),
+            "object" => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.ObjectKeyword)),
+            "string" => SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.StringKeyword)),
+            _ => RenderNameSyntax(name) as TypeSyntax
+                ?? throw new InvalidOperationException($"Unable to render type syntax for '{name}'.")
+        };
+
+    private static NameSyntax RenderNameSyntax(string name)
+    {
+        var segments = name.Split('.');
+        NameSyntax? current = null;
+
+        for (var i = 0; i < segments.Length; i++)
+        {
+            var segment = segments[i];
+            var identifier = SyntaxFactory.Identifier(segment);
+            current = current is null
+                ? SyntaxFactory.IdentifierName(identifier)
+                : SyntaxFactory.QualifiedName(current, SyntaxFactory.IdentifierName(identifier));
+        }
+
+        return current ?? SyntaxFactory.IdentifierName(name);
+    }
 }

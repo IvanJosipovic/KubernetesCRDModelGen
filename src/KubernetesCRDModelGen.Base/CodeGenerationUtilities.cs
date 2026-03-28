@@ -1,7 +1,6 @@
 using Humanizer;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System.Security;
 using System.Text;
 
@@ -9,10 +8,6 @@ namespace KubernetesCRDModelGen.Base;
 
 internal static class CodeGenerationUtilities
 {
-    private static readonly object CacheLock = new();
-    private static readonly Dictionary<(string Name, bool Namespace), string?> CleanIdentifierCache = new();
-    private static readonly Dictionary<string, SyntaxTriviaList> SummaryTriviaCache = new(StringComparer.Ordinal);
-    private static readonly Dictionary<string, TypeSyntax> TypeSyntaxCache = new(StringComparer.Ordinal);
     private static readonly HashSet<char> InvalidFileNameCharacters = [.. Path.GetInvalidFileNameChars()];
 
     internal static string? CleanIdentifier(string name, bool @namespace = false)
@@ -20,15 +15,6 @@ internal static class CodeGenerationUtilities
         if (string.IsNullOrEmpty(name))
         {
             return null;
-        }
-
-        var cacheKey = (name, @namespace);
-        lock (CacheLock)
-        {
-            if (CleanIdentifierCache.TryGetValue(cacheKey, out var cached))
-            {
-                return cached;
-            }
         }
 
         name = name.Trim();
@@ -89,75 +75,40 @@ internal static class CodeGenerationUtilities
             result = namespaceBuilder.ToString();
         }
 
-        lock (CacheLock)
-        {
-            CleanIdentifierCache[cacheKey] = result;
-        }
-
         return result;
     }
 
     internal static SyntaxTriviaList CreateSummaryTrivia(string? text)
     {
-        var normalizedText = text?.Replace("\r\n", "\n").Replace('\r', '\n') ?? string.Empty;
-        lock (CacheLock)
+        if (string.IsNullOrWhiteSpace(text))
         {
-            if (SummaryTriviaCache.TryGetValue(normalizedText, out var cached))
-            {
-                return cached;
-            }
+            return default;
         }
 
-        SyntaxTriviaList trivia;
+        var summaryText = text!;
+        var normalizedText = summaryText.Replace("\r\n", "\n").Replace('\r', '\n');
+
         if (!normalizedText.Contains('\n'))
         {
-            trivia = SyntaxFactory.ParseLeadingTrivia($"/// <summary>{SecurityElement.Escape(normalizedText) ?? string.Empty}</summary>{Environment.NewLine}");
+            return SyntaxFactory.ParseLeadingTrivia($"/// <summary>{SecurityElement.Escape(normalizedText) ?? string.Empty}</summary>{Environment.NewLine}");
         }
-        else
-        {
-            var builder = new StringBuilder(normalizedText.Length + 32);
-            builder.Append("/// <summary>").Append(Environment.NewLine);
 
-            var lineStart = 0;
-            for (var i = 0; i <= normalizedText.Length; i++)
+        var builder = new StringBuilder(normalizedText.Length + 32);
+        builder.Append("/// <summary>").Append(Environment.NewLine);
+
+        var lineStart = 0;
+        for (var i = 0; i <= normalizedText.Length; i++)
+        {
+            if (i == normalizedText.Length || normalizedText[i] == '\n')
             {
-                if (i == normalizedText.Length || normalizedText[i] == '\n')
-                {
-                    var line = normalizedText.Substring(lineStart, i - lineStart);
-                    builder.Append("/// ").Append(SecurityElement.Escape(line) ?? string.Empty).Append(Environment.NewLine);
-                    lineStart = i + 1;
-                }
-            }
-
-            builder.Append("/// </summary>").Append(Environment.NewLine);
-            trivia = SyntaxFactory.ParseLeadingTrivia(builder.ToString());
-        }
-
-        lock (CacheLock)
-        {
-            SummaryTriviaCache[normalizedText] = trivia;
-        }
-
-        return trivia;
-    }
-
-    internal static TypeSyntax GetTypeSyntax(string typeName)
-    {
-        lock (CacheLock)
-        {
-            if (TypeSyntaxCache.TryGetValue(typeName, out var cached))
-            {
-                return cached;
+                var line = normalizedText.Substring(lineStart, i - lineStart);
+                builder.Append("/// ").Append(SecurityElement.Escape(line) ?? string.Empty).Append(Environment.NewLine);
+                lineStart = i + 1;
             }
         }
 
-        var parsed = SyntaxFactory.ParseTypeName(typeName);
-        lock (CacheLock)
-        {
-            TypeSyntaxCache[typeName] = parsed;
-        }
-
-        return parsed;
+        builder.Append("/// </summary>").Append(Environment.NewLine);
+        return SyntaxFactory.ParseLeadingTrivia(builder.ToString());
     }
 
     internal static string RemoveIllegalFileNameCharacters(string fileName)

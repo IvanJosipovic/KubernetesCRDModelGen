@@ -1,4 +1,50 @@
+using System.Linq;
+
 namespace KubernetesCRDModelGen.Base;
+
+internal abstract class GeneratedTypeReference
+{
+    public abstract string DisplayName { get; }
+}
+
+internal sealed class GeneratedNamedTypeReference : GeneratedTypeReference
+{
+    public GeneratedNamedTypeReference(string name)
+    {
+        Name = name;
+    }
+
+    public string Name { get; }
+
+    public override string DisplayName => Name;
+}
+
+internal sealed class GeneratedGenericTypeReference : GeneratedTypeReference
+{
+    public GeneratedGenericTypeReference(string name, IReadOnlyList<GeneratedTypeReference> typeArguments)
+    {
+        Name = name;
+        TypeArguments = typeArguments;
+    }
+
+    public string Name { get; }
+
+    public IReadOnlyList<GeneratedTypeReference> TypeArguments { get; }
+
+    public override string DisplayName => $"{Name}<{string.Join(", ", TypeArguments.Select(x => x.DisplayName))}>";
+}
+
+internal sealed class GeneratedNullableTypeReference : GeneratedTypeReference
+{
+    public GeneratedNullableTypeReference(GeneratedTypeReference innerType)
+    {
+        InnerType = innerType;
+    }
+
+    public GeneratedTypeReference InnerType { get; }
+
+    public override string DisplayName => InnerType.DisplayName + "?";
+}
 
 internal sealed class GeneratedCompilationUnitModel
 {
@@ -35,7 +81,7 @@ internal sealed class GeneratedClassModel : GeneratedTypeModel
         string name,
         string? summary,
         bool isKubernetesEntity,
-        IReadOnlyList<string> baseTypes,
+        IReadOnlyList<GeneratedTypeReference> baseTypes,
         IReadOnlyList<GeneratedFieldModel> fields,
         IReadOnlyList<GeneratedPropertyModel> properties) : base(name, summary)
     {
@@ -47,7 +93,7 @@ internal sealed class GeneratedClassModel : GeneratedTypeModel
 
     public bool IsKubernetesEntity { get; }
 
-    public IReadOnlyList<string> BaseTypes { get; }
+    public IReadOnlyList<GeneratedTypeReference> BaseTypes { get; }
 
     public IReadOnlyList<GeneratedFieldModel> Fields { get; }
 
@@ -66,16 +112,16 @@ internal sealed class GeneratedEnumModel : GeneratedTypeModel
 
 internal sealed class GeneratedFieldModel
 {
-    public GeneratedFieldModel(string name, string typeName, string value)
+    public GeneratedFieldModel(string name, GeneratedTypeReference type, string value)
     {
         Name = name;
-        TypeName = typeName;
+        Type = type;
         Value = value;
     }
 
     public string Name { get; }
 
-    public string TypeName { get; }
+    public GeneratedTypeReference Type { get; }
 
     public string Value { get; }
 }
@@ -85,7 +131,7 @@ internal sealed class GeneratedPropertyModel
     public GeneratedPropertyModel(
         string name,
         string jsonName,
-        string typeName,
+        GeneratedTypeReference type,
         string? summary,
         bool isNullable = true,
         string? defaultValue = null,
@@ -94,7 +140,7 @@ internal sealed class GeneratedPropertyModel
     {
         Name = name;
         JsonName = jsonName;
-        TypeName = typeName;
+        Type = type;
         Summary = summary;
         IsNullable = isNullable;
         DefaultValue = defaultValue;
@@ -106,7 +152,7 @@ internal sealed class GeneratedPropertyModel
 
     public string JsonName { get; }
 
-    public string TypeName { get; }
+    public GeneratedTypeReference Type { get; }
 
     public string? Summary { get; }
 
