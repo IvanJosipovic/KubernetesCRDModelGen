@@ -142,7 +142,7 @@ internal sealed class GeneratedPropertyModel
         GeneratedTypeReference type,
         string? summary,
         bool isNullable = true,
-        string? defaultValue = null,
+        string? initializerValue = null,
         bool isRequired = false,
         bool isExtensionData = false)
     {
@@ -151,7 +151,7 @@ internal sealed class GeneratedPropertyModel
         Type = type;
         Summary = summary;
         IsNullable = isNullable;
-        DefaultValue = defaultValue;
+        InitializerValue = initializerValue;
         IsRequired = isRequired;
         IsExtensionData = isExtensionData;
     }
@@ -166,7 +166,7 @@ internal sealed class GeneratedPropertyModel
 
     public bool IsNullable { get; }
 
-    public string? DefaultValue { get; }
+    public string? InitializerValue { get; }
 
     public bool IsRequired { get; }
 
