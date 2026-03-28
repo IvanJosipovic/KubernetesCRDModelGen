@@ -8,7 +8,6 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
-using System.Xml.Linq;
 
 namespace KubernetesCRDModelGen.Base;
 
@@ -623,19 +622,29 @@ public class CodeGenerator : ICodeGenerator
         return result;
     }
 
-    private static string XmlString(string text)
-    {
-        if (string.IsNullOrEmpty(text))
-        {
-            return text;
-        }
-        return new XElement("t", text).LastNode?.ToString() ?? "";
-    }
-
     private static SyntaxTriviaList CreateSummaryTrivia(string? text)
     {
-        var sanitizedText = XmlString(text?.Replace("\n", " ").Replace("\r", " ") ?? string.Empty);
-        return SyntaxFactory.ParseLeadingTrivia($"/// <summary>{sanitizedText}</summary>{Environment.NewLine}");
+        var normalizedText = text?.Replace("\r\n", "\n").Replace('\r', '\n') ?? string.Empty;
+
+        if (!normalizedText.Contains('\n'))
+        {
+            return SyntaxFactory.ParseLeadingTrivia(
+                $"/// <summary>{SyntaxFactory.XmlText(normalizedText).ToFullString()}</summary>{Environment.NewLine}");
+        }
+
+        var lines = normalizedText.Split('\n');
+        var builder = new StringBuilder();
+
+        builder.Append("/// <summary>").Append(Environment.NewLine);
+
+        foreach (var line in lines)
+        {
+            builder.Append("/// ").Append(SyntaxFactory.XmlText(line).ToFullString()).Append(Environment.NewLine);
+        }
+
+        builder.Append("/// </summary>").Append(Environment.NewLine);
+
+        return SyntaxFactory.ParseLeadingTrivia(builder.ToString());
     }
 
     /// <summary>
