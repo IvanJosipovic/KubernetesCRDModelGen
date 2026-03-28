@@ -257,4 +257,135 @@ spec:
         result.Diagnostics.ShouldContain(x => x.Id == GeneratedAssemblyDiagnostic.ExceptionDiagnosticId);
         result.Diagnostics.ShouldContain(x => x.Severity == GeneratedAssemblyDiagnosticSeverity.Error);
     }
+
+    [Fact]
+    public void TestGenerateAssemblyMapsSupportedFormatsToRuntimeTypes()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                payload:
+                  type: string
+                  format: byte
+                blob:
+                  type: string
+                  format: binary
+                createdAt:
+                  type: string
+                  format: date-time
+                birthDate:
+                  type: string
+                  format: date
+                timeout:
+                  type: string
+                  format: duration
+                ratio:
+                  type: number
+                  format: float
+                amount:
+                  type: number
+                  format: double
+                score:
+                  type: number
+                smallCount:
+                  type: integer
+                  format: int32
+                largeCount:
+                  type: integer
+                  format: int64
+""";
+
+        var type = GetTypeYaml(yaml, "Test");
+        var specType = type!.GetProperty("Spec")!.PropertyType;
+
+        specType.GetProperty("Payload")!.PropertyType.ShouldBe(typeof(byte[]));
+        specType.GetProperty("Blob")!.PropertyType.ShouldBe(typeof(byte[]));
+        specType.GetProperty("CreatedAt")!.PropertyType.ShouldBe(typeof(DateTime?));
+        specType.GetProperty("BirthDate")!.PropertyType.ShouldBe(typeof(DateTime?));
+        specType.GetProperty("Timeout")!.PropertyType.ShouldBe(typeof(TimeSpan?));
+        specType.GetProperty("Ratio")!.PropertyType.ShouldBe(typeof(float?));
+        specType.GetProperty("Amount")!.PropertyType.ShouldBe(typeof(double?));
+        specType.GetProperty("Score")!.PropertyType.ShouldBe(typeof(double?));
+        specType.GetProperty("SmallCount")!.PropertyType.ShouldBe(typeof(int?));
+        specType.GetProperty("LargeCount")!.PropertyType.ShouldBe(typeof(long?));
+    }
+
+    [Fact]
+    public void TestGenerateAssemblyWarnsOnUnknownIntegerFormatAndFallsBackToInt()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: tests.kubeui.com
+spec:
+  group: kubeui.com
+  names:
+    plural: tests
+    singular: test
+    kind: Test
+    listKind: TestList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                oddCount:
+                  type: integer
+                  format: uint64
+""";
+
+        var result = GenerateAssembly(yaml);
+        using var unloadHandle = result.UnloadHandle;
+
+        result.Success.ShouldBeTrue();
+        result.Diagnostics.ShouldContain(x =>
+            x.Id == "KCRDGEN003" &&
+            x.Severity == GeneratedAssemblyDiagnosticSeverity.Warning &&
+            x.Message.Contains("Unsupported integer format 'uint64'", StringComparison.Ordinal));
+
+        var type = GetTypeYaml(yaml, "Test");
+        var specType = type!.GetProperty("Spec")!.PropertyType;
+        specType.GetProperty("OddCount")!.PropertyType.ShouldBe(typeof(int?));
+    }
 }
