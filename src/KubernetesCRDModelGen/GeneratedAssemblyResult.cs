@@ -81,6 +81,7 @@ public sealed class GeneratedAssemblyDiagnostic
 {
     internal const string ExceptionDiagnosticId = "KCRDGEN001";
     internal const string OpenApiSchemaDiagnosticId = "KCRDGEN002";
+    internal const string IntegerFormatDiagnosticId = "KCRDGEN003";
 
     /// <summary>
     /// Initializes a new instance of the <see cref="GeneratedAssemblyDiagnostic"/> class.

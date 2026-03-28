@@ -1,4 +1,5 @@
 using Microsoft.OpenApi;
+using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
@@ -10,11 +11,15 @@ internal sealed class OpenApiSchemaModelBuilder
     private const string KubePreserveUnknownFields = "x-kubernetes-preserve-unknown-fields";
     private const string KubeIntOrString = "x-kubernetes-int-or-string";
     private static readonly GeneratedTypeReference StringType = Named("string");
+    private static readonly GeneratedTypeReference ByteArrayType = Named("byte[]");
     private static readonly GeneratedTypeReference ObjectType = Named("object");
+    private static readonly GeneratedTypeReference FloatType = Named("float");
     private static readonly GeneratedTypeReference DoubleType = Named("double");
     private static readonly GeneratedTypeReference BoolType = Named("bool");
     private static readonly GeneratedTypeReference IntType = Named("int");
     private static readonly GeneratedTypeReference LongType = Named("long");
+    private static readonly GeneratedTypeReference DateTimeType = Named(nameof(DateTime));
+    private static readonly GeneratedTypeReference TimeSpanType = Named(nameof(TimeSpan));
     private static readonly GeneratedTypeReference JsonNodeType = Named(nameof(JsonNode));
     private static readonly GeneratedTypeReference JsonElementType = Named(nameof(JsonElement));
     private static readonly GeneratedTypeReference IntOrStringType = Named("IntOrString");
@@ -26,10 +31,16 @@ internal sealed class OpenApiSchemaModelBuilder
     public GeneratedCompilationUnitModel BuildCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind, bool isObsolete = false, string? obsoleteMessage = null)
         => new(@namespace, group, BuildTypes(schema, kind, version, group, plural, listKind, isObsolete, obsoleteMessage));
 
-    public IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
-        => BuildTypes(schema, kind, new HashSet<string>(StringComparer.Ordinal), false, version, group, plural, listKind, isObsolete, obsoleteMessage);
+    public GeneratedCompilationUnitModel BuildCompilationUnitWithWarnings(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind, Action<string>? reportWarning = null, bool isObsolete = false, string? obsoleteMessage = null)
+        => new(@namespace, group, BuildTypesWithWarnings(schema, kind, reportWarning, version, group, plural, listKind, isObsolete, obsoleteMessage));
 
-    private IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, HashSet<string> typeNames, bool nameReserved, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
+    public IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
+        => BuildTypes(schema, kind, new HashSet<string>(StringComparer.Ordinal), false, reportWarning: null, version, group, plural, listKind, isObsolete, obsoleteMessage);
+
+    public IReadOnlyList<GeneratedTypeModel> BuildTypesWithWarnings(IOpenApiSchema schema, string kind, Action<string>? reportWarning = null, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
+        => BuildTypes(schema, kind, new HashSet<string>(StringComparer.Ordinal), false, reportWarning, version, group, plural, listKind, isObsolete, obsoleteMessage);
+
+    private IReadOnlyList<GeneratedTypeModel> BuildTypes(IOpenApiSchema schema, string kind, HashSet<string> typeNames, bool nameReserved, Action<string>? reportWarning = null, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
     {
         var isRoot = version != null && group != null && plural != null;
         listKind ??= kind + "List";
@@ -116,7 +127,7 @@ internal sealed class OpenApiSchemaModelBuilder
                     continue;
                 }
 
-                var type = ResolveType(property.Value, types, typeNames, classNameValue, property.Key, isObsolete, obsoleteMessage);
+                var type = ResolveType(property.Value, types, typeNames, classNameValue, property.Key, reportWarning, isObsolete, obsoleteMessage);
                 var isRequired = requiredNames?.Contains(property.Key) == true;
                 var isNullable = property.Value.Type.HasValue && property.Value.Type.Value.HasFlag(JsonSchemaType.Null);
                 var hasDefault = property.Value.Default != null;
@@ -164,7 +175,7 @@ internal sealed class OpenApiSchemaModelBuilder
         return new GeneratedPropertyModel(identifier, propertyName, type, description, isNullable, null, isRequired);
     }
 
-    private GeneratedTypeReference ResolveType(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName, bool isObsolete = false, string? obsoleteMessage = null)
+    private GeneratedTypeReference ResolveType(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName, Action<string>? reportWarning = null, bool isObsolete = false, string? obsoleteMessage = null)
     {
         if (schema.Extensions != null &&
             schema.Extensions.TryGetValue(KubePreserveUnknownFields, out var preserveUnknownFields) &&
@@ -188,7 +199,7 @@ internal sealed class OpenApiSchemaModelBuilder
             case JsonSchemaType.Object:
                 if (schema.AdditionalProperties != null)
                 {
-                    return Generic("IDictionary", StringType, ResolveType(schema.AdditionalProperties, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage));
+                    return Generic("IDictionary", StringType, ResolveType(schema.AdditionalProperties, types, typeNames, parentClassName, propertyName, reportWarning, isObsolete, obsoleteMessage));
                 }
 
                 var nestedClassName = GetUniqueTypeName(parentClassName + " " + propertyName, typeNames);
@@ -197,18 +208,18 @@ internal sealed class OpenApiSchemaModelBuilder
                     return ObjectType;
                 }
 
-                types.AddRange(BuildTypes(schema, nestedClassName, typeNames, true, isObsolete: isObsolete, obsoleteMessage: obsoleteMessage));
+                types.AddRange(BuildTypes(schema, nestedClassName, typeNames, true, reportWarning, isObsolete: isObsolete, obsoleteMessage: obsoleteMessage));
                 return Named(nestedClassName);
 
             case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
                 return EnumSupport && HasStringEnumValues(schema.Enum)
                     ? BuildEnum(schema, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage)
-                    : StringType;
+                    : ResolveStringType(schema.Format);
 
             case JsonSchemaType.Null | JsonSchemaType.Number:
             case JsonSchemaType.Number:
-                return DoubleType;
+                return schema.Format == "float" ? FloatType : DoubleType;
 
             case JsonSchemaType.Null | JsonSchemaType.Boolean:
             case JsonSchemaType.Boolean:
@@ -216,7 +227,7 @@ internal sealed class OpenApiSchemaModelBuilder
 
             case JsonSchemaType.Null | JsonSchemaType.Integer:
             case JsonSchemaType.Integer:
-                return schema.Format == "int64" ? LongType : IntType;
+                return ResolveIntegerType(schema.Format, propertyName, reportWarning);
 
             case JsonSchemaType.Null | JsonSchemaType.Array:
             case JsonSchemaType.Array:
@@ -230,7 +241,7 @@ internal sealed class OpenApiSchemaModelBuilder
                     return Generic("IList", ObjectType);
                 }
 
-                return Generic("IList", ResolveType(schema.Items, types, typeNames, parentClassName, propertyName, isObsolete, obsoleteMessage));
+                return Generic("IList", ResolveType(schema.Items, types, typeNames, parentClassName, propertyName, reportWarning, isObsolete, obsoleteMessage));
 
             default:
                 throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema, CodeGeneratorSourceGenerationContext.Default.IOpenApiSchema));
@@ -279,6 +290,33 @@ internal sealed class OpenApiSchemaModelBuilder
 
         types.Add(new GeneratedEnumModel(enumNameValue, schema.Description, members, isObsolete, obsoleteMessage));
         return Named(enumNameValue);
+    }
+
+    private static GeneratedTypeReference ResolveStringType(string? format)
+        => format switch
+        {
+            "binary" => ByteArrayType,
+            "byte" => ByteArrayType,
+            "date" => DateTimeType,
+            "date-time" => DateTimeType,
+            "duration" => TimeSpanType,
+            _ => StringType
+        };
+
+    private static GeneratedTypeReference ResolveIntegerType(string? format, string propertyName, Action<string>? reportWarning)
+    {
+        switch (format)
+        {
+            case null:
+            case "":
+            case "int32":
+                return IntType;
+            case "int64":
+                return LongType;
+            default:
+                reportWarning?.Invoke($"Unsupported integer format '{format}' on property '{propertyName}'. Falling back to int.");
+                return IntType;
+        }
     }
 
     private static string? GetUniqueTypeName(string candidate, HashSet<string> typeNames)

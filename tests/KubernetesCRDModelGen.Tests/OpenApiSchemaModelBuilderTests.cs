@@ -172,6 +172,63 @@ properties:
     }
 
     [Fact]
+    public void BuildTypes_MapsSupportedFormatsToConcreteClrTypes()
+    {
+        var schema = LoadSchema("""
+type: object
+properties:
+  spec:
+    type: object
+    properties:
+      payload:
+        type: string
+        format: byte
+      blob:
+        type: string
+        format: binary
+      createdAt:
+        type: string
+        format: date-time
+      birthDate:
+        type: string
+        format: date
+      timeout:
+        type: string
+        format: duration
+      ratio:
+        type: number
+        format: float
+      amount:
+        type: number
+        format: double
+      score:
+        type: number
+      smallCount:
+        type: integer
+        format: int32
+      largeCount:
+        type: integer
+        format: int64
+""");
+
+        var builder = new OpenApiSchemaModelBuilder();
+
+        var types = builder.BuildTypes(schema, "Widget", "v1", "example.com", "widgets", "WidgetList");
+        var spec = types.OfType<GeneratedClassModel>().Single(x => x.Name == "V1WidgetSpec");
+
+        spec.Properties.Single(x => x.Name == "Payload").Type.DisplayName.ShouldBe("byte[]");
+        spec.Properties.Single(x => x.Name == "Blob").Type.DisplayName.ShouldBe("byte[]");
+        spec.Properties.Single(x => x.Name == "CreatedAt").Type.DisplayName.ShouldBe("DateTime");
+        spec.Properties.Single(x => x.Name == "BirthDate").Type.DisplayName.ShouldBe("DateTime");
+        spec.Properties.Single(x => x.Name == "Timeout").Type.DisplayName.ShouldBe("TimeSpan");
+        spec.Properties.Single(x => x.Name == "Ratio").Type.DisplayName.ShouldBe("float");
+        spec.Properties.Single(x => x.Name == "Amount").Type.DisplayName.ShouldBe("double");
+        spec.Properties.Single(x => x.Name == "Score").Type.DisplayName.ShouldBe("double");
+        spec.Properties.Single(x => x.Name == "SmallCount").Type.DisplayName.ShouldBe("int");
+        spec.Properties.Single(x => x.Name == "LargeCount").Type.DisplayName.ShouldBe("long");
+    }
+
+    [Fact]
     public void CodeGenerator_FacadeMatchesSharedModelPipeline()
     {
         var schema = LoadSchema("""

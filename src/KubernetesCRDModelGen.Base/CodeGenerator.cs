@@ -1,5 +1,6 @@
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi;
+using System.Collections.Generic;
 
 namespace KubernetesCRDModelGen.Base;
 
@@ -19,6 +20,12 @@ public class CodeGenerator : ICodeGenerator
     public CompilationUnitSyntax GenerateCompilationUnit(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind, bool isObsolete = false, string? obsoleteMessage = null)
         => renderer.RenderCompilationUnit(modelBuilder.BuildCompilationUnit(schema, @namespace, version, kind, group, plural, listKind, isObsolete, obsoleteMessage));
 
+    /// <summary>
+    /// Generates source code and reports non-fatal mapping warnings encountered during model construction.
+    /// </summary>
+    public CompilationUnitSyntax GenerateCompilationUnitWithWarnings(IOpenApiSchema schema, string @namespace, string version, string kind, string group, string plural, string? listKind, Action<string>? reportWarning, bool isObsolete = false, string? obsoleteMessage = null)
+        => renderer.RenderCompilationUnit(modelBuilder.BuildCompilationUnitWithWarnings(schema, @namespace, version, kind, group, plural, listKind, reportWarning, isObsolete, obsoleteMessage));
+
     /// <inheritdoc/>
     public CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, IReadOnlyList<MemberDeclarationSyntax> members)
         => renderer.RenderCompilationUnit(@namespace, group, members);
@@ -26,6 +33,12 @@ public class CodeGenerator : ICodeGenerator
     /// <inheritdoc/>
     public BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, bool isObsolete = false, string? obsoleteMessage = null)
         => renderer.RenderTypes(modelBuilder.BuildTypes(schema, kind, version, group, plural, listKind, isObsolete, obsoleteMessage));
+
+    /// <summary>
+    /// Generates types and reports non-fatal mapping warnings encountered during model construction.
+    /// </summary>
+    public BaseTypeDeclarationSyntax[] GenerateClassWithWarnings(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null, Action<string>? reportWarning = null, bool isObsolete = false, string? obsoleteMessage = null)
+        => renderer.RenderTypes(modelBuilder.BuildTypesWithWarnings(schema, kind, reportWarning, version, group, plural, listKind, isObsolete, obsoleteMessage));
 
     internal static string? CleanIdentifier(string name, bool @namespace = false)
         => CodeGenerationUtilities.CleanIdentifier(name, @namespace);

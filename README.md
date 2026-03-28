@@ -124,25 +124,26 @@ We publish the following premade packages
 
 ## Type Mappings
 
-| OpenAPIv3 type | Type |
+| OpenAPIv3 type | This library emits |
 |---|---|
-| 'object' with Properties | object |
-| 'object' with AdditionalProperties | Dictionary |
-| 'object' with x-kubernetes-embedded-type | object |
-| 'object' with x-kubernetes-preserve-unknown-fields | object |
-| 'object' with x-kubernetes-int-or-string | k8s.Models.IntstrIntOrString |
-| 'array' | List |
-| 'array' with x-kubernetes-list-type=atomic | List |
-| 'array' with x-kubernetes-list-type=map | List |
-| 'array' with x-kubernetes-list-type=set | List |
-| 'boolean' | boolean |
-| 'number' (all formats) | double |
-| 'integer' (all formats) | int |
-| 'integer' with format=int64 | long |
-| 'null' | null |
-| 'string' | string |
-| 'string' with format=binary | ~~bytes~~ |
-| 'string' with format=byte (base64 encoded) | ~~bytes~~ |
-| 'string' with format=date | ~~timestamp (google.protobuf.Timestamp)~~ |
-| 'string' with format=date-time | ~~timestamp (google.protobuf.Timestamp)~~ |
-| 'string' with format=duration | ~~duration (google.protobuf.Duration)~~ |
+| `'object'` with Properties | generated class |
+| `'object'` with AdditionalProperties | `IDictionary<string, TValue>` |
+| `'object'` with `x-kubernetes-embedded-type` | currently treated like a normal object, so usually a generated class |
+| `'object'` with `x-kubernetes-preserve-unknown-fields` | `JsonNode`, plus `JsonExtensionData` at object roots with the extension |
+| `x-kubernetes-int-or-string` | `k8s.Models.IntOrString` |
+| `'array'` | `IList<T>` |
+| `'array'` with `x-kubernetes-list-type=atomic` | `IList<T>` |
+| `'array'` with `x-kubernetes-list-type=map` | `IList<T>` |
+| `'array'` with `x-kubernetes-list-type=set` | `IList<T>` |
+| `'boolean'` | `bool` |
+| `'number'` with `format=float` | `float` |
+| `'number'` default / `format=double` | `double` |
+| `'integer'` default / `format=int32` | `int` |
+| `'integer'` with `format=int64` | `long` |
+| `'null'` | nullable reference/value type when combined with another schema type |
+| `'string'` | `string` |
+| `'string'` with `format=binary` | `byte[]` |
+| `'string'` with `format=byte` (base64 encoded) | `byte[]` |
+| `'string'` with `format=date` | `DateTime` |
+| `'string'` with `format=date-time` | `DateTime` |
+| `'string'` with `format=duration` | `TimeSpan` |
