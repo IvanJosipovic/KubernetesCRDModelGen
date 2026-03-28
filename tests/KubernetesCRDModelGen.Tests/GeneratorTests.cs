@@ -10813,7 +10813,9 @@ spec:
 """;
 
         var crd = (V1CustomResourceDefinition)KubernetesYaml.LoadAllFromString(yaml)[0];
-        var (_, xml) = GetGenerator().GenerateAssembly(crd, Namespace);
+        var result = GetGenerator().GenerateAssembly(crd, Namespace);
+        using var unloadHandle = result.UnloadHandle;
+        var xml = result.XmlDocumentation;
 
         xml.ShouldNotBeNull();
         xml!.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.kubeui.com.V1Test.Spec']/summary")

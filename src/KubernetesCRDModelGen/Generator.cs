@@ -3,7 +3,6 @@ using KubernetesCRDModelGen.Base;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using System.Reflection;
@@ -25,8 +24,6 @@ public class Generator : IGenerator
     /// </summary>
     public const string ModelNamespace = "KubernetesCRDModelGen.Models";
 
-    private readonly ILogger<Generator> logger;
-
     private readonly CodeGenerator codeGenerator;
 
     private static readonly Lazy<MetadataReference[]> MetadataReferencesCache = new(GetReferences);
@@ -46,10 +43,8 @@ public class Generator : IGenerator
     /// <summary>
     /// Initializes a new instance of the <see cref="Generator"/> class.
     /// </summary>
-    /// <param name="loggerFactory">The logger to use for logging messages.</param>
-    public Generator(ILoggerFactory loggerFactory)
+    public Generator()
     {
-        logger = loggerFactory.CreateLogger<Generator>();
         codeGenerator = new CodeGenerator();
     }
 
@@ -60,50 +55,59 @@ public class Generator : IGenerator
     }
 
     /// <inheritdoc/>
-    public (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
+    public GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
     {
+        var crdName = crd.Metadata?.Name ?? "<unknown>";
+
         try
         {
-            var code = GenerateCompilationUnit(crd, @namespace);
+            var schemaDiagnostics = new List<GeneratedAssemblyDiagnostic>();
+            var code = GenerateCompilationUnit(crd, @namespace, schemaDiagnostics);
 
             var compilation = CompilationTemplateCache.Value
-                .WithAssemblyName(crd.Metadata.Name)
+                .WithAssemblyName(crdName)
                 .AddSyntaxTrees(code.SyntaxTree);
 
             using var peStream = new MemoryStream();
             using var xmlDocumentationStream = new MemoryStream();
 
             var result = compilation.Emit(peStream, xmlDocumentationStream: xmlDocumentationStream);
+            var diagnostics = schemaDiagnostics
+                .Concat(result.Diagnostics
+                .Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity >= DiagnosticSeverity.Warning)
+                .Select(GeneratedAssemblyDiagnostic.FromRoslynDiagnostic)
+                .ToArray())
+                .ToArray();
 
             if (!result.Success)
             {
-                var failures = result.Diagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity == DiagnosticSeverity.Error);
-
-                foreach (var diagnostic in failures)
-                {
-                    logger.LogError("Error creating Assembly: {id}: {message}", diagnostic.Id, diagnostic.GetMessage());
-                }
+                return new GeneratedAssemblyResult(null, null, diagnostics, null);
             }
-            else
-            {
-                peStream.Seek(0, SeekOrigin.Begin);
-                xmlDocumentationStream.Seek(0, SeekOrigin.Begin);
 
-                var alc = new AssemblyLoadContext(crd.Metadata.Name, isCollectible: true);
-                var assembly = alc.LoadFromStream(peStream);
+            peStream.Seek(0, SeekOrigin.Begin);
+            xmlDocumentationStream.Seek(0, SeekOrigin.Begin);
 
-                var xml = new XmlDocument();
-                xml.Load(xmlDocumentationStream);
+            var alc = new AssemblyLoadContext(crdName, isCollectible: true);
+            var assembly = alc.LoadFromStream(peStream);
 
-                return (assembly, xml);
-            }
+            var xml = new XmlDocument();
+            xml.Load(xmlDocumentationStream);
+
+            return new GeneratedAssemblyResult(
+                assembly,
+                xml,
+                diagnostics,
+                new GeneratedAssemblyUnloadHandle(alc));
         }
         catch (Exception ex)
         {
-            logger.LogError(ex, "Error creating Assembly for CRD {crdName}", crd.Metadata.Name);
+            return new GeneratedAssemblyResult(
+                null,
+                null,
+                [GeneratedAssemblyDiagnostic.FromException(ex)],
+                null,
+                ex);
         }
-
-        return (null, null);
     }
 
     /// <inheritdoc/>
@@ -114,7 +118,7 @@ public class Generator : IGenerator
         return code.NormalizeWhitespace().ToFullString();
     }
 
-    private CompilationUnitSyntax GenerateCompilationUnit(V1CustomResourceDefinition crd, string @namespace)
+    private CompilationUnitSyntax GenerateCompilationUnit(V1CustomResourceDefinition crd, string @namespace, ICollection<GeneratedAssemblyDiagnostic>? diagnostics = null)
     {
         var types = new List<MemberDeclarationSyntax>(crd.Spec.Versions.Count);
 
@@ -139,7 +143,7 @@ public class Generator : IGenerator
                 continue;
             }
 
-            var doc = GetOpenApiSchema(reader, schemaStream, schema);
+            var doc = GetOpenApiSchema(reader, schemaStream, schema, diagnostics);
             if (doc is null)
             {
                 continue;
@@ -177,7 +181,7 @@ public class Generator : IGenerator
         return [.. references];
     }
 
-    private OpenApiSchema? GetOpenApiSchema(OpenApiJsonReader reader, MemoryStream schemaStream, V1JSONSchemaProps schema)
+    private OpenApiSchema? GetOpenApiSchema(OpenApiJsonReader reader, MemoryStream schemaStream, V1JSONSchemaProps schema, ICollection<GeneratedAssemblyDiagnostic>? diagnostics = null)
     {
         if (OpenApiSchemaCache.TryGetValue(schema, out var cachedSchema))
         {
@@ -192,8 +196,14 @@ public class Generator : IGenerator
 
         if (diag != null && diag.Errors.Count > 0)
         {
-            var messages = string.Join(" | ", diag.Errors.Select(x => x.Message));
-            logger.LogError("Error converting schema to OpenAPI: {messages}", messages);
+            foreach (var error in diag.Errors)
+            {
+                diagnostics?.Add(
+                    GeneratedAssemblyDiagnostic.Create(
+                        GeneratedAssemblyDiagnostic.OpenApiSchemaDiagnosticId,
+                        error.Message,
+                        GeneratedAssemblyDiagnosticSeverity.Warning));
+            }
         }
 
         if (openApiSchema is not null)

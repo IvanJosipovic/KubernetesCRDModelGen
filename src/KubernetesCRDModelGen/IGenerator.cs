@@ -1,5 +1,3 @@
-﻿using System.Reflection;
-using System.Xml;
 using k8s.Models;
 
 namespace KubernetesCRDModelGen;
@@ -14,8 +12,8 @@ public interface IGenerator
     /// </summary>
     /// <param name="crd">The custom resource definition.</param>
     /// <param name="namespace">The namespace to use for the generated code.</param>
-    /// <returns>A tuple containing the generated assembly and associated XML document.</returns>
-    (Assembly?, XmlDocument?) GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = Generator.ModelNamespace);
+    /// <returns>A structured result containing the generated assembly, XML document, diagnostics, and unload handle.</returns>
+    GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = Generator.ModelNamespace);
 
     /// <summary>
     /// Generates source code from the given CRD with the containing types.

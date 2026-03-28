@@ -21,10 +21,23 @@ This project contains components which allow generation of C# Classes/Assemblies
 - Programmatically
   ```csharp
   var crd = KubernetesYaml.LoadAllFromString(yaml);
-  var fac = new LoggerFactory();
-  var generator = new Generator(fac);
+  var generator = new Generator();
   var code = generator.GenerateCode(crd);
-  var assembly = generator.GenerateAssembly(crd)
+  var result = generator.GenerateAssembly(crd);
+  using var unloadHandle = result.UnloadHandle;
+
+  if (!result.Success)
+  {
+      foreach (var diagnostic in result.Diagnostics)
+      {
+          Console.WriteLine($"{diagnostic.Severity}: {diagnostic.Id}: {diagnostic.Message}");
+      }
+  }
+  else
+  {
+      var assembly = result.Assembly;
+      var xml = result.XmlDocumentation;
+  }
   ```
 - CLI
   - Install .Net Tool
@@ -47,8 +60,8 @@ Update the .csproj with the following settings. The Models will be generated in 
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KubernetesClient" Version="18.0.5" />
-    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.*.*" />
+    <PackageReference Include="KubernetesClient" Version="19.0.2" />
+    <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="2.*.*" />
   </ItemGroup>
 
   <!-- For local CRD files -->
