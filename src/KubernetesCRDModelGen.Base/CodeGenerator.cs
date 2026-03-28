@@ -46,7 +46,7 @@ public class CodeGenerator : ICodeGenerator
     ]);
 
     private static readonly AttributeListSyntax KubernetesEntityAttributeList = SyntaxFactory.AttributeList().AddAttributes([
-        SyntaxFactory.Attribute(SyntaxFactory.ParseName("KubernetesEntity"))
+        SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("KubernetesEntity"))
             .WithArgumentList(
                 SyntaxFactory.AttributeArgumentList()
                 .AddArguments(
@@ -67,6 +67,24 @@ public class CodeGenerator : ICodeGenerator
                         null,
                         SyntaxFactory.IdentifierName("KubePluralName"))))
     ]);
+
+    private static readonly object CacheLock = new();
+    private static readonly Dictionary<(string Name, bool Namespace), string?> CleanIdentifierCache = new();
+    private static readonly Dictionary<string, SyntaxTriviaList> SummaryTriviaCache = new(StringComparer.Ordinal);
+    private static readonly Dictionary<string, TypeSyntax> TypeSyntaxCache = new(StringComparer.Ordinal);
+    private static readonly HashSet<char> InvalidFileNameCharacters = [.. Path.GetInvalidFileNameChars()];
+    private static readonly NameSyntax JsonConverterAttributeName = SyntaxFactory.IdentifierName("JsonConverter");
+    private static readonly NameSyntax JsonExtensionDataAttributeName = SyntaxFactory.IdentifierName("JsonExtensionData");
+    private static readonly NameSyntax EnumMemberAttributeName = SyntaxFactory.IdentifierName("EnumMember");
+    private static readonly NameSyntax JsonStringEnumMemberNameAttributeName = SyntaxFactory.IdentifierName("JsonStringEnumMemberName");
+    private static readonly AccessorListSyntax AutoPropertyAccessorList = SyntaxFactory.AccessorList(
+        SyntaxFactory.List(
+            [
+                SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
+                    .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
+                SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
+                    .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
+            ]));
 
     private bool EnumSupport = true;
 
@@ -127,7 +145,7 @@ public class CodeGenerator : ICodeGenerator
         if (isRoot)
         {
             // Base Classes
-            @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ObjectMeta>")));
+            @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(GetTypeSyntax("IKubernetesObject<V1ObjectMeta>")));
 
             var classListName = CleanIdentifier(version + listKind);
             if (string.IsNullOrEmpty(classListName) || !typeNames.Add(classListName))
@@ -141,9 +159,9 @@ public class CodeGenerator : ICodeGenerator
                 .AddAttributeLists(ExcludeFromCodeCoverageAttributeList)
                 .WithLeadingTrivia(CreateSummaryTrivia(schema.Description));
 
-            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
+            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(GetTypeSyntax("IKubernetesObject<V1ListMeta>")));
 
-            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IItems<{className}>")));
+            @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(GetTypeSyntax($"IItems<{className}>")));
 
             @class = @class.AddAttributeLists(KubernetesEntityAttributeList);
             @classList = @classList.AddAttributeLists(KubernetesEntityAttributeList);
@@ -151,7 +169,7 @@ public class CodeGenerator : ICodeGenerator
             // Create the field declarations for the KubernetesEntity attribute
             var kubeApiVersion = SyntaxFactory.FieldDeclaration(
                     SyntaxFactory.VariableDeclaration(
-                        SyntaxFactory.ParseTypeName("string"))
+                        GetTypeSyntax("string"))
                     .WithVariables(
                         SyntaxFactory.SingletonSeparatedList(
                             SyntaxFactory.VariableDeclarator("KubeApiVersion")
@@ -163,7 +181,7 @@ public class CodeGenerator : ICodeGenerator
 
             var kubeKind = SyntaxFactory.FieldDeclaration(
                     SyntaxFactory.VariableDeclaration(
-                        SyntaxFactory.ParseTypeName("string"))
+                        GetTypeSyntax("string"))
                     .WithVariables(
                         SyntaxFactory.SingletonSeparatedList(
                             SyntaxFactory.VariableDeclarator("KubeKind")
@@ -175,7 +193,7 @@ public class CodeGenerator : ICodeGenerator
 
             var kubeListKind = SyntaxFactory.FieldDeclaration(
                     SyntaxFactory.VariableDeclaration(
-                        SyntaxFactory.ParseTypeName("string"))
+                        GetTypeSyntax("string"))
                     .WithVariables(
                         SyntaxFactory.SingletonSeparatedList(
                             SyntaxFactory.VariableDeclarator("KubeKind")
@@ -187,7 +205,7 @@ public class CodeGenerator : ICodeGenerator
 
             var kubeGroup = SyntaxFactory.FieldDeclaration(
                     SyntaxFactory.VariableDeclaration(
-                        SyntaxFactory.ParseTypeName("string"))
+                        GetTypeSyntax("string"))
                     .WithVariables(
                         SyntaxFactory.SingletonSeparatedList(
                             SyntaxFactory.VariableDeclarator("KubeGroup")
@@ -199,7 +217,7 @@ public class CodeGenerator : ICodeGenerator
 
             var kubePluralName = SyntaxFactory.FieldDeclaration(
                     SyntaxFactory.VariableDeclaration(
-                        SyntaxFactory.ParseTypeName("string"))
+                        GetTypeSyntax("string"))
                     .WithVariables(
                         SyntaxFactory.SingletonSeparatedList(
                             SyntaxFactory.VariableDeclarator("KubePluralName")
@@ -238,7 +256,7 @@ public class CodeGenerator : ICodeGenerator
             // Create property
             var property = SyntaxFactory.PropertyDeclaration(
                     SyntaxFactory.NullableType(
-                        SyntaxFactory.ParseTypeName("IDictionary<string, JsonElement>")
+                        GetTypeSyntax("IDictionary<string, JsonElement>")
                     ),
                     SyntaxFactory.Identifier("ExtensionData")
                 )
@@ -262,7 +280,7 @@ public class CodeGenerator : ICodeGenerator
                 .WithAttributeLists(
                     SyntaxFactory.SingletonList(
                         SyntaxFactory.AttributeList(
-                            SyntaxFactory.SingletonSeparatedList(SyntaxFactory.Attribute(SyntaxFactory.ParseName("JsonExtensionData")))
+                        SyntaxFactory.SingletonSeparatedList(SyntaxFactory.Attribute(JsonExtensionDataAttributeName))
                         )
                     )
                 );
@@ -311,7 +329,7 @@ public class CodeGenerator : ICodeGenerator
 
                 if (isRoot && property.Key == "spec")
                 {
-                    var specType = SyntaxFactory.ParseTypeName(type);
+                    var specType = GetTypeSyntax(type);
                     if (resultNullable)
                     {
                         specType = SyntaxFactory.NullableType(specType);
@@ -326,7 +344,7 @@ public class CodeGenerator : ICodeGenerator
 
                 if (isRoot && property.Key == "status")
                 {
-                    var statusType = SyntaxFactory.ParseTypeName(type);
+                    var statusType = GetTypeSyntax(type);
                     if (resultNullable)
                     {
                         statusType = SyntaxFactory.NullableType(statusType);
@@ -426,13 +444,13 @@ public class CodeGenerator : ICodeGenerator
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
             .AddAttributeLists(GeneratedCodeAttributeList)
             .AddAttributeLists(SyntaxFactory.AttributeList().AddAttributes(
-                SyntaxFactory.Attribute(SyntaxFactory.ParseName("JsonConverter"))
+                SyntaxFactory.Attribute(JsonConverterAttributeName)
                     .WithArgumentList(
                         SyntaxFactory.AttributeArgumentList(
                             SyntaxFactory.SingletonSeparatedList(
                                 SyntaxFactory.AttributeArgument(
                                     SyntaxFactory.TypeOfExpression(
-                                        SyntaxFactory.ParseTypeName($"JsonStringEnumConverter<{enumName}>")
+                                        GetTypeSyntax($"JsonStringEnumConverter<{enumName}>")
                                     )
                                 )
                             )
@@ -449,17 +467,19 @@ public class CodeGenerator : ICodeGenerator
             {
                 var value = option.GetValue<string>();
                 var identifier = CleanIdentifier(value);
+                var baseIdentifier = identifier;
 
                 if (string.IsNullOrEmpty(identifier))
                 {
                     identifier = "Option" + i;
+                    baseIdentifier = identifier;
                 }
 
                 // Check if identifier already exists
                 var c = 1;
                 while (!memberNames.Add(identifier))
                 {
-                    identifier = CleanIdentifier(value) + c++;
+                    identifier = baseIdentifier + c++;
                 }
 
                 enumDeclaration = enumDeclaration.AddMembers(
@@ -469,7 +489,7 @@ public class CodeGenerator : ICodeGenerator
                                 SyntaxFactory.AttributeList(
                                     SyntaxFactory.SeparatedList(
                                         [
-                                            SyntaxFactory.Attribute(SyntaxFactory.ParseName("EnumMember"))
+                                            SyntaxFactory.Attribute(EnumMemberAttributeName)
                                                 .WithArgumentList(
                                                     SyntaxFactory.AttributeArgumentList(
                                                         SyntaxFactory.SingletonSeparatedList(
@@ -481,7 +501,7 @@ public class CodeGenerator : ICodeGenerator
                                                         )
                                                     )
                                                 ),
-                                            SyntaxFactory.Attribute(SyntaxFactory.ParseName("JsonStringEnumMemberName"))
+                                            SyntaxFactory.Attribute(JsonStringEnumMemberNameAttributeName)
                                                 .WithArgumentList(
                                                     SyntaxFactory.AttributeArgumentList(
                                                         SyntaxFactory.SingletonSeparatedList(
@@ -529,15 +549,16 @@ public class CodeGenerator : ICodeGenerator
     private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool isNullable = true, string? defaultValue = null, bool isRequired = false)
     {
         PropertyDeclarationSyntax propDecleration;
+        var propertyType = GetTypeSyntax(typeName);
 
         if (isNullable)
         {
-            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.NullableType(SyntaxFactory.ParseTypeName(typeName)), CleanIdentifier(propertyName))
+            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.NullableType(propertyType), CleanIdentifier(propertyName))
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
         }
         else
         {
-            propDecleration = SyntaxFactory.PropertyDeclaration(SyntaxFactory.ParseTypeName(typeName), CleanIdentifier(propertyName))
+            propDecleration = SyntaxFactory.PropertyDeclaration(propertyType, CleanIdentifier(propertyName))
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword));
         }
 
@@ -547,14 +568,7 @@ public class CodeGenerator : ICodeGenerator
         }
 
         propDecleration = propDecleration.WithAccessorList(
-                SyntaxFactory.AccessorList(
-                    SyntaxFactory.List(
-                        [
-                            SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
-                            .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),
-                        SyntaxFactory.AccessorDeclaration(SyntaxKind.SetAccessorDeclaration)
-                            .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken))
-                        ])));
+            AutoPropertyAccessorList);
 
         propDecleration = propDecleration.AddAttributeLists(
             SyntaxFactory.AttributeList(
@@ -587,6 +601,20 @@ public class CodeGenerator : ICodeGenerator
 
     internal static string? CleanIdentifier(string name, bool @namespace = false)
     {
+        if (string.IsNullOrEmpty(name))
+        {
+            return null;
+        }
+
+        var cacheKey = (name, @namespace);
+        lock (CacheLock)
+        {
+            if (CleanIdentifierCache.TryGetValue(cacheKey, out var cached))
+            {
+                return cached;
+            }
+        }
+
         // trim off leading and trailing whitespace
         name = name.Trim();
 
@@ -601,7 +629,7 @@ public class CodeGenerator : ICodeGenerator
             return null;
         }
 
-        var sb = new StringBuilder();
+        var sb = new StringBuilder(name.Length + 1);
         if (!SyntaxFacts.IsIdentifierStartCharacter(name[0]))
         {
             // the first characters
@@ -625,25 +653,34 @@ public class CodeGenerator : ICodeGenerator
 
         if (@namespace)
         {
-            var newResult = string.Empty;
-            foreach (var chunk in result.Split('.'))
+            var namespaceBuilder = new StringBuilder(result.Length + 4);
+            var start = 0;
+            for (var i = 0; i <= result.Length; i++)
             {
-                if (!string.IsNullOrEmpty(newResult))
+                if (i == result.Length || result[i] == '.')
                 {
-                    newResult += '.';
-                }
+                    if (namespaceBuilder.Length > 0)
+                    {
+                        namespaceBuilder.Append('.');
+                    }
 
-                if (SyntaxFacts.GetKeywordKind(chunk) != SyntaxKind.None)
-                {
-                    newResult += '@' + chunk;
-                }
-                else
-                {
-                    newResult += chunk;
+                    var chunk = result.Substring(start, i - start);
+                    if (SyntaxFacts.GetKeywordKind(chunk) != SyntaxKind.None)
+                    {
+                        namespaceBuilder.Append('@');
+                    }
+
+                    namespaceBuilder.Append(chunk);
+                    start = i + 1;
                 }
             }
 
-            return newResult;
+            result = namespaceBuilder.ToString();
+        }
+
+        lock (CacheLock)
+        {
+            CleanIdentifierCache[cacheKey] = result;
         }
 
         return result;
@@ -652,26 +689,66 @@ public class CodeGenerator : ICodeGenerator
     private static SyntaxTriviaList CreateSummaryTrivia(string? text)
     {
         var normalizedText = text?.Replace("\r\n", "\n").Replace('\r', '\n') ?? string.Empty;
+        lock (CacheLock)
+        {
+            if (SummaryTriviaCache.TryGetValue(normalizedText, out var cached))
+            {
+                return cached;
+            }
+        }
 
+        SyntaxTriviaList trivia;
         if (!normalizedText.Contains('\n'))
         {
-            return SyntaxFactory.ParseLeadingTrivia(
+            trivia = SyntaxFactory.ParseLeadingTrivia(
                 $"/// <summary>{SecurityElement.Escape(normalizedText) ?? string.Empty}</summary>{Environment.NewLine}");
         }
-
-        var lines = normalizedText.Split('\n');
-        var builder = new StringBuilder();
-
-        builder.Append("/// <summary>").Append(Environment.NewLine);
-
-        foreach (var line in lines)
+        else
         {
-            builder.Append("/// ").Append(SecurityElement.Escape(line) ?? string.Empty).Append(Environment.NewLine);
+            var builder = new StringBuilder(normalizedText.Length + 32);
+            builder.Append("/// <summary>").Append(Environment.NewLine);
+
+            var lineStart = 0;
+            for (var i = 0; i <= normalizedText.Length; i++)
+            {
+                if (i == normalizedText.Length || normalizedText[i] == '\n')
+                {
+                    var line = normalizedText.Substring(lineStart, i - lineStart);
+                    builder.Append("/// ").Append(SecurityElement.Escape(line) ?? string.Empty).Append(Environment.NewLine);
+                    lineStart = i + 1;
+                }
+            }
+
+            builder.Append("/// </summary>").Append(Environment.NewLine);
+            trivia = SyntaxFactory.ParseLeadingTrivia(builder.ToString());
         }
 
-        builder.Append("/// </summary>").Append(Environment.NewLine);
+        lock (CacheLock)
+        {
+            SummaryTriviaCache[normalizedText] = trivia;
+        }
 
-        return SyntaxFactory.ParseLeadingTrivia(builder.ToString());
+        return trivia;
+    }
+
+    private static TypeSyntax GetTypeSyntax(string typeName)
+    {
+        lock (CacheLock)
+        {
+            if (TypeSyntaxCache.TryGetValue(typeName, out var cached))
+            {
+                return cached;
+            }
+        }
+
+        var parsed = SyntaxFactory.ParseTypeName(typeName);
+
+        lock (CacheLock)
+        {
+            TypeSyntaxCache[typeName] = parsed;
+        }
+
+        return parsed;
     }
 
     /// <summary>
@@ -685,10 +762,17 @@ public class CodeGenerator : ICodeGenerator
         if (string.IsNullOrEmpty(fileName))
             throw new ArgumentException("File name cannot be null or empty", nameof(fileName));
 
-        // Remove invalid characters from the input
-        string sanitizedFileName = new([.. fileName.Where(c => !Path.GetInvalidFileNameChars().Contains(c))]);
+        var builder = new StringBuilder(fileName.Length);
+        for (var i = 0; i < fileName.Length; i++)
+        {
+            var ch = fileName[i];
+            if (!InvalidFileNameCharacters.Contains(ch))
+            {
+                builder.Append(ch);
+            }
+        }
 
-        return sanitizedFileName;
+        return builder.ToString();
     }
 }
 
