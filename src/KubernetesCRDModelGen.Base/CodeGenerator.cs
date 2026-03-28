@@ -270,18 +270,6 @@ public class CodeGenerator : ICodeGenerator
 
                 var type = GetOrGenerateType(property.Value, types, @class.Identifier.Text, property.Key);
 
-                // Add ISpec base class
-                if (isRoot && property.Key == "spec")
-                {
-                    @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"ISpec<{type}>")));
-                }
-
-                // Add IStatus base class
-                if (isRoot && property.Key == "status")
-                {
-                    @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName($"IStatus<{type}>")));
-                }
-
                 var isRequired = schema.Required?.Contains(property.Key) == true;
                 var isNullable = property.Value.Type.HasValue && property.Value.Type.Value.HasFlag(JsonSchemaType.Null);
                 var hasDefault = property.Value.Default != null;
@@ -300,6 +288,36 @@ public class CodeGenerator : ICodeGenerator
                 var resultRequired =
                                        (isRequired && isNullable && !hasDefault)
                                     || (isRequired && !isNullable && !hasDefault);
+
+                if (isRoot && property.Key == "spec")
+                {
+                    var specType = SyntaxFactory.ParseTypeName(type);
+                    if (resultNullable)
+                    {
+                        specType = SyntaxFactory.NullableType(specType);
+                    }
+
+                    // Add ISpec base class with the final nullability of the generated Spec type.
+                    @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(
+                        SyntaxFactory.GenericName("ISpec")
+                            .WithTypeArgumentList(SyntaxFactory.TypeArgumentList(
+                                SyntaxFactory.SingletonSeparatedList(specType)))));
+                }
+
+                if (isRoot && property.Key == "status")
+                {
+                    var statusType = SyntaxFactory.ParseTypeName(type);
+                    if (resultNullable)
+                    {
+                        statusType = SyntaxFactory.NullableType(statusType);
+                    }
+
+                    // Add IStatus base class with the final nullability of the generated Status type.
+                    @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(
+                        SyntaxFactory.GenericName("IStatus")
+                            .WithTypeArgumentList(SyntaxFactory.TypeArgumentList(
+                                SyntaxFactory.SingletonSeparatedList(statusType)))));
+                }
 
                 var newProperty = CreateProperty(type, property.Key, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
 
