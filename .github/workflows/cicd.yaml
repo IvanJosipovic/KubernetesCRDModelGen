@@ -44,7 +44,7 @@ jobs:
       run: dotnet build -c Release -p:Version=${{ (steps.semantic.outputs.new_release_published && steps.semantic.outputs.new_release_version) || '0.0.1-alpha.1' }}
 
     - name: .NET Test
-      run: dotnet test -c Release --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test-results.trx"
+      run: dotnet test -c Release --coverage --coverage-output-format cobertura --coverage-output coverage.cobertura.xml --report-xunit-trx --report-xunit-trx-filename test-results.trx
 
     - name: Test Report
       uses: dorny/test-reporter@v3
