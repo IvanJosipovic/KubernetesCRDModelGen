@@ -44,6 +44,9 @@ public class CodeGenerator : ICodeGenerator
 
         var compilationUnit = SyntaxFactory.CompilationUnit()
             .WithUsings(GenerateUsings())
+            .WithLeadingTrivia(
+                SyntaxFactory.TriviaList(
+                    SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true))))
             .AddMembers(namespaceDeclaration);
 
         return compilationUnit;
@@ -75,11 +78,7 @@ public class CodeGenerator : ICodeGenerator
                                 SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
                             ])
                         )
-                        .WithLeadingTrivia(
-                            SyntaxFactory.TriviaList(
-                                SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)))
-                                .AddRange(CreateSummaryTrivia(schema.Description)))
-                        .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
+                        .WithLeadingTrivia(CreateSummaryTrivia(schema.Description));
 
         if (isRoot)
         {
@@ -103,11 +102,7 @@ public class CodeGenerator : ICodeGenerator
                                 SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
                     ])
                 )
-                .WithLeadingTrivia(
-                    SyntaxFactory.TriviaList(
-                        SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true)))
-                        .AddRange(CreateSummaryTrivia(schema.Description)))
-                .WithTrailingTrivia(SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.DisableKeyword), true)));
+                .WithLeadingTrivia(CreateSummaryTrivia(schema.Description));
 
             @classList = @classList.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ListMeta>")));
 

@@ -1,6 +1,7 @@
 using k8s;
 using k8s.Models;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 using Shouldly;
@@ -95,5 +96,56 @@ spec:
             ?.InnerText.ShouldBe("AdminGroupObjectIDs: The list of AAD group object IDs that will have admin role of the cluster.");
         xml.SelectSingleNode("/doc/members/member[@name='P:KubernetesCRDModelGen.Tests.Models.containerservice.azure.com.V1api20210501ManagedClusterSpec.AadProfile']/summary")
             ?.InnerText.ShouldBe("AadProfile: The Azure Active Directory configuration.");
+    }
+
+    [Fact]
+    public async Task TestGenerateCodeEmitsNullableDirectiveOncePerFile()
+    {
+        const string modelNamespace = "KubernetesCRDModelGen.Tests.Models";
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: widgets.example.com
+spec:
+  group: example.com
+  names:
+    plural: widgets
+    singular: widget
+    kind: Widget
+    listKind: WidgetList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+            spec:
+              type: object
+              properties:
+                nested:
+                  type: object
+                  properties:
+                    value:
+                      type: string
+""";
+
+        var crd = (V1CustomResourceDefinition)KubernetesYaml.LoadAllFromString(yaml)[0];
+        var generator = new Generator(new LoggerFactory());
+
+        var code = generator.GenerateCode(crd, modelNamespace);
+
+        code.IndexOf("#nullable enable", StringComparison.Ordinal).ShouldBeGreaterThanOrEqualTo(0);
+        (code.Split("#nullable enable", StringSplitOptions.None).Length - 1).ShouldBe(1);
+        code.ShouldNotContain("#nullable disable");
     }
 }
