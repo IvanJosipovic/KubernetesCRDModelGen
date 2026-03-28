@@ -104,7 +104,6 @@ public class CodeGenerator : ICodeGenerator
     public CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, MemberDeclarationSyntax[] members)
     {
         var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(SyntaxFactory.ParseName(CleanIdentifier(@namespace + "." + group, true)))
-            .NormalizeWhitespace()
             .AddMembers(members);
 
         var compilationUnit = SyntaxFactory.CompilationUnit()
@@ -129,6 +128,7 @@ public class CodeGenerator : ICodeGenerator
 
         var types = new List<BaseTypeDeclarationSyntax>();
         var propertyNames = new HashSet<string>(StringComparer.Ordinal);
+        var classMembers = new List<MemberDeclarationSyntax>();
 
         var className = CleanIdentifier((isRoot ? version : string.Empty) + " " + kind);
         if (string.IsNullOrEmpty(className) || !typeNames.Add(className))
@@ -236,7 +236,7 @@ public class CodeGenerator : ICodeGenerator
             // Create a property declaration for Metadata
             var metaProp = CreateProperty("V1ObjectMeta", "metadata", "Standard object's metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata", isNullable: false);
 
-            @class = @class.AddMembers(kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp);
+            classMembers.AddRange([kubeApiVersion, kubeKind, kubeGroup, kubePluralName, apiVersion, kindProp, metaProp]);
 
             // Create a property declaration for List Kind
             var kindListProp = CreateProperty("string", "kind", "Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds", false, listKind);
@@ -247,7 +247,7 @@ public class CodeGenerator : ICodeGenerator
             // Create a property declaration for List Kind
             var kindIListProp = CreateProperty($"IList<{className}>", "items", $"List of {className} objects.");
 
-            @classList = @classList.AddMembers(kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindListProp, metaListProp, kindIListProp);
+            @classList = @classList.AddMembers([kubeApiVersion, kubeListKind, kubeGroup, kubePluralName, apiVersion, kindListProp, metaListProp, kindIListProp]);
             types.Add(@classList);
         }
 
@@ -285,7 +285,7 @@ public class CodeGenerator : ICodeGenerator
                     )
                 );
 
-            @class = @class.AddMembers(property);
+            classMembers.Add(property);
         }
         if (schema.Properties != null)
         {
@@ -366,9 +366,10 @@ public class CodeGenerator : ICodeGenerator
                     newProperty = CreateProperty(type, property.Key + count++, property.Value.Description, isRequired: resultRequired, isNullable: resultNullable);
                 }
 
-                @class = @class.AddMembers(newProperty);
+                classMembers.Add(newProperty);
             }
         }
+        @class = @class.AddMembers([.. classMembers]);
         types.Add(@class);
 
         return [.. types];
@@ -435,6 +436,7 @@ public class CodeGenerator : ICodeGenerator
     {
         var enumName = CleanIdentifier(parentClassName + " " + propertyName) + "Enum";
         var memberNames = new HashSet<string>(StringComparer.Ordinal);
+        var enumMembers = new List<EnumMemberDeclarationSyntax>();
         if (string.IsNullOrEmpty(enumName) || !typeNames.Add(enumName))
         {
             return enumName;
@@ -482,7 +484,7 @@ public class CodeGenerator : ICodeGenerator
                     identifier = baseIdentifier + c++;
                 }
 
-                enumDeclaration = enumDeclaration.AddMembers(
+                enumMembers.Add(
                     SyntaxFactory.EnumMemberDeclaration(SyntaxFactory.Identifier(identifier))
                         .WithAttributeLists(
                             SyntaxFactory.SingletonList(
@@ -517,11 +519,11 @@ public class CodeGenerator : ICodeGenerator
                             )
                         )
                         .WithLeadingTrivia(
-                            CreateSummaryTrivia(value))
-                );
+                            CreateSummaryTrivia(value)));
             }
         }
 
+        enumDeclaration = enumDeclaration.AddMembers([.. enumMembers]);
         types.Add(enumDeclaration);
 
         return enumDeclaration.Identifier.Text;
