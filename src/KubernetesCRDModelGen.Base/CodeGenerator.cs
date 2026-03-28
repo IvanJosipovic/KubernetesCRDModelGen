@@ -101,6 +101,9 @@ public class CodeGenerator : ICodeGenerator
 
     /// <inheritdoc/>
     public BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, string? version = null, string? group = null, string? plural = null, string? listKind = null)
+        => GenerateClass(schema, kind, new HashSet<string>(StringComparer.Ordinal), version, group, plural, listKind);
+
+    private BaseTypeDeclarationSyntax[] GenerateClass(IOpenApiSchema schema, string kind, HashSet<string> typeNames, string? version = null, string? group = null, string? plural = null, string? listKind = null)
     {
         bool isRoot = version != null && group != null && plural != null;
 
@@ -110,6 +113,10 @@ public class CodeGenerator : ICodeGenerator
         var propertyNames = new HashSet<string>(StringComparer.Ordinal);
 
         var className = CleanIdentifier((isRoot ? version : string.Empty) + " " + kind);
+        if (string.IsNullOrEmpty(className) || !typeNames.Add(className))
+        {
+            return [];
+        }
 
         var @class = SyntaxFactory.ClassDeclaration(className)
                         .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
@@ -123,6 +130,10 @@ public class CodeGenerator : ICodeGenerator
             @class = @class.AddBaseListTypes(SyntaxFactory.SimpleBaseType(SyntaxFactory.ParseTypeName("IKubernetesObject<V1ObjectMeta>")));
 
             var classListName = CleanIdentifier(version + listKind);
+            if (string.IsNullOrEmpty(classListName) || !typeNames.Add(classListName))
+            {
+                return [];
+            }
 
             var @classList = SyntaxFactory.ClassDeclaration(classListName)
                 .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword), SyntaxFactory.Token(SyntaxKind.PartialKeyword))
@@ -260,6 +271,12 @@ public class CodeGenerator : ICodeGenerator
         }
         if (schema.Properties != null)
         {
+            HashSet<string>? requiredNames = null;
+            if (schema.Required is { Count: > 0 })
+            {
+                requiredNames = new HashSet<string>(schema.Required, StringComparer.Ordinal);
+            }
+
             foreach (var property in schema.Properties)
             {
                 if (isRoot)
@@ -271,9 +288,9 @@ public class CodeGenerator : ICodeGenerator
                     }
                 }
 
-                var type = GetOrGenerateType(property.Value, types, @class.Identifier.Text, property.Key);
+                var type = GetOrGenerateType(property.Value, types, typeNames, @class.Identifier.Text, property.Key);
 
-                var isRequired = schema.Required?.Contains(property.Key) == true;
+                var isRequired = requiredNames?.Contains(property.Key) == true;
                 var isNullable = property.Value.Type.HasValue && property.Value.Type.Value.HasFlag(JsonSchemaType.Null);
                 var hasDefault = property.Value.Default != null;
 
@@ -339,7 +356,7 @@ public class CodeGenerator : ICodeGenerator
         return [.. types];
     }
 
-    private string GetOrGenerateType(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
+    private string GetOrGenerateType(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, HashSet<string> typeNames, string parentClassName, string propertyName)
     {
         if (schema.Extensions != null && schema.Extensions.TryGetValue(KubePreserveUnknownFields, out var value2) && value2 is JsonNodeExtension value3 && value3.Node.GetValueKind() == JsonValueKind.True)
         {
@@ -356,32 +373,19 @@ public class CodeGenerator : ICodeGenerator
             case JsonSchemaType.Object:
                 if (schema.AdditionalProperties != null)
                 {
-                    return $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, types, parentClassName, propertyName)}>";
+                    return $"IDictionary<string, {GetOrGenerateType(schema.AdditionalProperties, types, typeNames, parentClassName, propertyName)}>";
                 }
                 else
                 {
-                    var nestedClasses = GenerateClass(schema, CleanIdentifier(parentClassName + " " + propertyName));
-
-                    var existingTypeNames = new HashSet<string>(StringComparer.Ordinal);
-                    foreach (var existingType in types)
-                    {
-                        existingTypeNames.Add(existingType.Identifier.Text);
-                    }
-
-                    foreach (var newClass in nestedClasses)
-                    {
-                        if (existingTypeNames.Add(newClass.Identifier.Text))
-                        {
-                            types.Add(newClass);
-                        }
-                    }
+                    var nestedClasses = GenerateClass(schema, CleanIdentifier(parentClassName + " " + propertyName), typeNames);
+                    types.AddRange(nestedClasses);
 
                     return nestedClasses[nestedClasses.Length - 1].Identifier.Text;
                 }
             case JsonSchemaType.Null | JsonSchemaType.String:
             case JsonSchemaType.String:
-                if (EnumSupport && schema.Enum != null && schema.Enum.Count > 0 && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
-                    return GenerateEnum(schema, types, parentClassName, propertyName);
+                if (EnumSupport && HasStringEnumValues(schema.Enum))
+                    return GenerateEnum(schema, types, typeNames, parentClassName, propertyName);
                 return "string";
             case JsonSchemaType.Null | JsonSchemaType.Number:
             case JsonSchemaType.Number:
@@ -398,21 +402,25 @@ public class CodeGenerator : ICodeGenerator
             case JsonSchemaType.Null | JsonSchemaType.Array:
             case JsonSchemaType.Array:
 
-                if (EnumSupport && schema.Enum != null && schema.Enum.Count > 0 && schema.Enum.All(x => !string.IsNullOrEmpty(x.GetValue<string>())))
+                if (EnumSupport && HasStringEnumValues(schema.Enum))
                 {
-                    return $"IList<{GenerateEnum(schema, types, parentClassName, propertyName)}>";
+                    return $"IList<{GenerateEnum(schema, types, typeNames, parentClassName, propertyName)}>";
                 }
 
-                return $"IList<{GetOrGenerateType(schema.Items, types, parentClassName, propertyName)}>";
+                return $"IList<{GetOrGenerateType(schema.Items, types, typeNames, parentClassName, propertyName)}>";
             default:
                 throw new Exception("Unsupported Type: " + JsonSerializer.Serialize(schema, CodeGeneratorSourceGenerationContext.Default.IOpenApiSchema));
         }
     }
 
-    private static string GenerateEnum(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, string parentClassName, string propertyName)
+    private static string GenerateEnum(IOpenApiSchema schema, List<BaseTypeDeclarationSyntax> types, HashSet<string> typeNames, string parentClassName, string propertyName)
     {
         var enumName = CleanIdentifier(parentClassName + " " + propertyName) + "Enum";
         var memberNames = new HashSet<string>(StringComparer.Ordinal);
+        if (string.IsNullOrEmpty(enumName) || !typeNames.Add(enumName))
+        {
+            return enumName;
+        }
 
         var enumDeclaration = SyntaxFactory.EnumDeclaration(enumName)
             .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword))
@@ -497,6 +505,25 @@ public class CodeGenerator : ICodeGenerator
         types.Add(enumDeclaration);
 
         return enumDeclaration.Identifier.Text;
+    }
+
+    private static bool HasStringEnumValues(IList<JsonNode>? values)
+    {
+        if (values is null || values.Count == 0)
+        {
+            return false;
+        }
+
+        for (var i = 0; i < values.Count; i++)
+        {
+            var value = values[i];
+            if (value is null || value.GetValueKind() != JsonValueKind.String || string.IsNullOrEmpty(value.GetValue<string>()))
+            {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private PropertyDeclarationSyntax CreateProperty(string typeName, string propertyName, string comment = "", bool isNullable = true, string? defaultValue = null, bool isRequired = false)
