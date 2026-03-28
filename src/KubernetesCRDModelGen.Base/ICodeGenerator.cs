@@ -40,7 +40,7 @@ public interface ICodeGenerator
     /// <param name="group"></param>
     /// <param name="members"></param>
     /// <returns></returns>
-    CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, MemberDeclarationSyntax[] members);
+    CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, IReadOnlyList<MemberDeclarationSyntax> members);
 
     /// <summary>
     /// Enables or disables enum support in the generated code.

@@ -20,7 +20,7 @@ public class CodeGenerator : ICodeGenerator
         => renderer.RenderCompilationUnit(modelBuilder.BuildCompilationUnit(schema, @namespace, version, kind, group, plural, listKind));
 
     /// <inheritdoc/>
-    public CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, MemberDeclarationSyntax[] members)
+    public CompilationUnitSyntax GenerateCompilationUnit(string @namespace, string group, IReadOnlyList<MemberDeclarationSyntax> members)
         => renderer.RenderCompilationUnit(@namespace, group, members);
 
     /// <inheritdoc/>

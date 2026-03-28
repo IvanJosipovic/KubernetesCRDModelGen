@@ -57,11 +57,11 @@ internal sealed class RoslynCodeModelRenderer
     public CompilationUnitSyntax RenderCompilationUnit(GeneratedCompilationUnitModel model)
         => RenderCompilationUnit(model.NamespaceName, model.Group, RenderTypes(model.Types));
 
-    public CompilationUnitSyntax RenderCompilationUnit(string @namespace, string group, MemberDeclarationSyntax[] members)
+    public CompilationUnitSyntax RenderCompilationUnit(string @namespace, string group, IReadOnlyList<MemberDeclarationSyntax> members)
     {
         var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(
                 SyntaxFactory.ParseName(CodeGenerationUtilities.CleanIdentifier(@namespace + "." + group, true)!))
-            .AddMembers(members);
+            .AddMembers([.. members]);
 
         return SyntaxFactory.CompilationUnit()
             .WithUsings(Usings)

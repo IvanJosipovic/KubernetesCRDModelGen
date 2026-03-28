@@ -28,8 +28,10 @@ public class Generator : IGenerator
     private readonly CodeGenerator codeGenerator;
 
     private static readonly Lazy<MetadataReference[]> MetadataReferencesCache = new(GetReferences);
+    private static readonly Lazy<CSharpCompilation> CompilationTemplateCache = new(CreateCompilationTemplate);
+    private static readonly OpenApiSpecVersion OpenApiVersion = OpenApiSpecVersion.OpenApi3_0;
 
-    private readonly CSharpCompilationOptions _options = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
+    private static readonly CSharpCompilationOptions CompilationOptions = new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary)
         .WithConcurrentBuild(false)
         .WithDeterministic(true)
         .WithNullableContextOptions(NullableContextOptions.Enable)
@@ -60,11 +62,9 @@ public class Generator : IGenerator
         {
             var code = GenerateCompilationUnit(crd, @namespace);
 
-            var compilation = CSharpCompilation.Create(
-                crd.Metadata.Name,
-                syntaxTrees: [code.SyntaxTree],
-                references: MetadataReferencesCache.Value,
-                options: _options);
+            var compilation = CompilationTemplateCache.Value
+                .WithAssemblyName(crd.Metadata.Name)
+                .AddSyntaxTrees(code.SyntaxTree);
 
             using var peStream = new MemoryStream();
             using var xmlDocumentationStream = new MemoryStream();
@@ -139,7 +139,7 @@ public class Generator : IGenerator
             JsonSerializer.Serialize(schemaStream, schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps);
             schemaStream.Position = 0;
 
-            var doc = reader.ReadFragment<OpenApiSchema>(schemaStream, OpenApiSpecVersion.OpenApi3_0, new OpenApiDocument(), out var diag);
+            var doc = reader.ReadFragment<OpenApiSchema>(schemaStream, OpenApiVersion, new OpenApiDocument(), out var diag);
 
             if (diag != null && diag.Errors.Count > 0)
             {
@@ -156,8 +156,15 @@ public class Generator : IGenerator
             types.AddRange(code);
         }
 
-        return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, [.. types]);
+        return codeGenerator.GenerateCompilationUnit(@namespace, crd.Spec.Group, types);
     }
+
+    private static CSharpCompilation CreateCompilationTemplate()
+        => CSharpCompilation.Create(
+            assemblyName: "KubernetesCRDModelGen.Dynamic",
+            syntaxTrees: [],
+            references: MetadataReferencesCache.Value,
+            options: CompilationOptions);
 
     private static MetadataReference[] GetReferences()
     {
