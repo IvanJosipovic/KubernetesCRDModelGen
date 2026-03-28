@@ -10422,13 +10422,13 @@ spec:
         reqNonNull.IsNullableReferenceType().ShouldBeFalse();
         reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeTrue();
 
-        // reqNullableDefault: optional and nullable with default
+        // reqNullableDefault: optional and nullable because the schema defines a default
         var reqNullableDefault = specType.GetProperty("ReqNullableDefault");
         reqNullableDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
         reqNullableDefault.IsNullableReferenceType().ShouldBeTrue();
         reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
-        // reqNonNull: optional and non-null with default
+        // reqNonNullDefault: optional and nullable because the schema defines a default
         var reqNonNullDefault = specType.GetProperty("ReqNonNullDefault");
         reqNonNullDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
         reqNonNullDefault.IsNullableReferenceType().ShouldBeTrue();
@@ -10448,13 +10448,13 @@ spec:
         optNonNull.IsNullableReferenceType().ShouldBeTrue();
         optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
-        // optNullable: optional and nullable with default
+        // optNullableDefault: optional and nullable because the schema defines a default
         var optNullableDefault = specType.GetProperty("OptNullableDefault");
         optNullableDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
         optNullableDefault.IsNullableReferenceType().ShouldBeTrue();
         optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
-        // optNonNull: optional but if present must be non-null with default
+        // optNonNullDefault: optional and nullable because the schema defines a default
         var optNonNullDefault = specType.GetProperty("OptNonNullDefault");
         optNonNullDefault.PropertyType.ShouldBe(typeof(Nullable<double>));
         optNonNullDefault.IsNullableReferenceType().ShouldBeTrue();
@@ -10555,14 +10555,14 @@ spec:
         reqNonNull.IsNullableReferenceType().ShouldBeFalse();
         reqNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeTrue();
 
-        // reqNullableDefault: optional and nullable with default
+        // reqNullableDefault: optional and nullable because the schema defines a default
         // true true true
         var reqNullableDefault = specType.GetProperty("ReqNullableDefault");
         reqNullableDefault.PropertyType.ShouldBe(typeof(string));
         reqNullableDefault.IsNullableReferenceType().ShouldBeTrue();
         reqNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
-        // reqNonNull: optional and non-null with default
+        // reqNonNullDefault: optional and nullable because the schema defines a default
         // true false true
         var reqNonNullDefault = specType.GetProperty("ReqNonNullDefault");
         reqNonNullDefault.PropertyType.ShouldBe(typeof(string));
@@ -10585,19 +10585,60 @@ spec:
         optNonNull.IsNullableReferenceType().ShouldBeTrue();
         optNonNull.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
-        // optNullable: optional and nullable with default
+        // optNullableDefault: optional and nullable because the schema defines a default
         // false true true
         var optNullableDefault = specType.GetProperty("OptNullableDefault");
         optNullableDefault.PropertyType.ShouldBe(typeof(string));
         optNullableDefault.IsNullableReferenceType().ShouldBeTrue();
         optNullableDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
 
-        // optNonNull: optional but if present must be non-null with default
+        // optNonNullDefault: optional and nullable because the schema defines a default
         // false false true
         var optNonNullDefault = specType.GetProperty("OptNonNullDefault");
         optNonNullDefault.PropertyType.ShouldBe(typeof(string));
         optNonNullDefault.IsNullableReferenceType().ShouldBeTrue();
         optNonNullDefault.IsDefined(typeof(RequiredMemberAttribute), inherit: false).ShouldBeFalse();
+    }
+
+    [Fact]
+    public void TestOnlyKubernetesIdentityPropertiesEmitInitializers()
+    {
+        var yaml = @"
+    apiVersion: apiextensions.k8s.io/v1
+    kind: CustomResourceDefinition
+    metadata:
+      name: tests.kubeui.com
+    spec:
+      group: kubeui.com
+      names:
+        plural: tests
+        singular: test
+        kind: Test
+        listKind: TestList
+      scope: Namespaced
+      versions:
+        - name: v1
+          served: true
+          storage: true
+          schema:
+            openAPIV3Schema:
+              type: object
+              required:
+              - spec
+              properties:
+                spec:
+                  type: object
+                  properties:
+                    ordinary:
+                      type: string
+                      default: hello
+";
+        var code = GetCode(yaml);
+
+        code.ShouldContain("public string ApiVersion { get; set; } = \"kubeui.com/v1\";");
+        code.ShouldContain("public string Kind { get; set; } = \"Test\";");
+        code.ShouldContain("public string Kind { get; set; } = \"TestList\";");
+        code.ShouldNotContain("public string? Ordinary { get; set; } = \"hello\";");
     }
 
     [Fact]

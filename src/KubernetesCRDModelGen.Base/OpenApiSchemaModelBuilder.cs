@@ -115,8 +115,6 @@ internal sealed class OpenApiSchemaModelBuilder
                 var isRequired = requiredNames?.Contains(property.Key) == true;
                 var isNullable = property.Value.Type.HasValue && property.Value.Type.Value.HasFlag(JsonSchemaType.Null);
                 var hasDefault = property.Value.Default != null;
-                var defaultValue = GetDefaultValue(property.Value.Default);
-
                 var resultNullable =
                     (isRequired && isNullable && !hasDefault)
                     || (isRequired && isNullable && hasDefault)
@@ -140,11 +138,11 @@ internal sealed class OpenApiSchemaModelBuilder
                     baseTypes.Add(Generic("IStatus", resultNullable ? Nullable(type) : type));
                 }
 
-                var generatedProperty = CreatePropertyModel(type, property.Key, property.Value.Description, resultNullable, resultRequired, defaultValue);
+                var generatedProperty = CreatePropertyModel(type, property.Key, property.Value.Description, resultNullable, resultRequired);
                 var count = 1;
                 while (!propertyNames.Add(generatedProperty.Name))
                 {
-                    generatedProperty = CreatePropertyModel(type, property.Key + count++, property.Value.Description, resultNullable, resultRequired, defaultValue);
+                    generatedProperty = CreatePropertyModel(type, property.Key + count++, property.Value.Description, resultNullable, resultRequired);
                 }
 
                 properties.Add(generatedProperty);
@@ -155,10 +153,10 @@ internal sealed class OpenApiSchemaModelBuilder
         return types;
     }
 
-    private static GeneratedPropertyModel CreatePropertyModel(GeneratedTypeReference type, string propertyName, string? description, bool isNullable, bool isRequired, string? defaultValue)
+    private static GeneratedPropertyModel CreatePropertyModel(GeneratedTypeReference type, string propertyName, string? description, bool isNullable, bool isRequired)
     {
         var identifier = CodeGenerationUtilities.CleanIdentifier(propertyName) ?? propertyName;
-        return new GeneratedPropertyModel(identifier, propertyName, type, description, isNullable, defaultValue, isRequired);
+        return new GeneratedPropertyModel(identifier, propertyName, type, description, isNullable, null, isRequired);
     }
 
     private GeneratedTypeReference ResolveType(IOpenApiSchema schema, List<GeneratedTypeModel> types, HashSet<string> typeNames, string parentClassName, string propertyName, bool isObsolete = false, string? obsoleteMessage = null)
@@ -314,15 +312,6 @@ internal sealed class OpenApiSchemaModelBuilder
         return true;
     }
 
-    private static string? GetDefaultValue(JsonNode? value)
-    {
-        if (value is null || value.GetValueKind() != JsonValueKind.String)
-        {
-            return null;
-        }
-
-        return value.GetValue<string>();
-    }
 }
 
 [JsonSerializable(typeof(IOpenApiSchema))]

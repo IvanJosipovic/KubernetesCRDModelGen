@@ -194,16 +194,16 @@ internal sealed class RoslynCodeModelRenderer
                                             SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(model.JsonName)))))))))
             .WithLeadingTrivia(CodeGenerationUtilities.CreateSummaryTrivia(model.Summary));
 
-        if (model.IsRequired && model.DefaultValue == null)
+        if (model.IsRequired)
         {
             declaration = declaration.AddModifiers(SyntaxFactory.Token(SyntaxKind.RequiredKeyword));
         }
 
-        if (!string.IsNullOrEmpty(model.DefaultValue))
+        if (model.InitializerValue != null)
         {
             declaration = declaration.WithInitializer(
                     SyntaxFactory.EqualsValueClause(
-                        SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(model.DefaultValue!))))
+                        SyntaxFactory.LiteralExpression(SyntaxKind.StringLiteralExpression, SyntaxFactory.Literal(model.InitializerValue))))
                 .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken));
         }
 
