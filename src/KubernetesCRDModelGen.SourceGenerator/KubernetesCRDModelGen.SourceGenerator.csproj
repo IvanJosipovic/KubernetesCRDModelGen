@@ -28,7 +28,7 @@
         <PackageReference Include="YamlDotNet.System.Text.Json" Version="1.7.1" PrivateAssets="all"  />
     </ItemGroup>
 
-    <ItemGroup>
+    <ItemGroup Condition="'$(IsPacking)' == 'true'">
         <!-- Generator dependencies -->
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\KubernetesCRDModelGen.Base.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
@@ -39,11 +39,11 @@
         <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" PrivateAssets="all" />
     </ItemGroup>
 
-    <PropertyGroup>
+    <PropertyGroup Condition="'$(IsPacking)' == 'true'">
         <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths</GetTargetPathDependsOn>
     </PropertyGroup>
 
-    <Target Name="GetDependencyTargetPaths" AfterTargets="ResolvePackageDependenciesForBuild">
+    <Target Name="GetDependencyTargetPaths" AfterTargets="ResolvePackageDependenciesForBuild" Condition="'$(IsPacking)' == 'true'">
         <ItemGroup>
             <DllDependencies
                  Include="@(ResolvedCompileFileDefinitions->'%(FullPath)')"
@@ -53,7 +53,7 @@
         </ItemGroup>
     </Target>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(IsPacking)' == 'true'">
     <None Include="KubernetesCRDModelGen.SourceGenerator.props" Visible="false"
           Pack="true" PackagePath="build" />
   </ItemGroup>

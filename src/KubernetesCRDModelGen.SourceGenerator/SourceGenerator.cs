@@ -14,6 +14,9 @@ using YamlDotNet.System.Text.Json;
 
 namespace KubernetesCRDModelGen.SourceGenerator
 {
+    /// <summary>
+    /// Generates C# source files from CRD YAML inputs.
+    /// </summary>
     [Generator]
     public class SourceGenerator : IIncrementalGenerator
     {
@@ -21,6 +24,7 @@ namespace KubernetesCRDModelGen.SourceGenerator
 
         private static readonly HttpClient httpClient = new();
 
+        /// <inheritdoc />
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
 #if DEBUG
