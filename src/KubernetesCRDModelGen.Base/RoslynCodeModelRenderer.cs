@@ -31,6 +31,9 @@ internal sealed class RoslynCodeModelRenderer
     private static readonly AttributeListSyntax ExcludeFromCodeCoverageAttributeList = SyntaxFactory.AttributeList().AddAttributes([
         SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage"))
     ]);
+    private static readonly AttributeListSyntax ObsoleteAttributeList = SyntaxFactory.AttributeList().AddAttributes([
+        SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Obsolete"))
+    ]);
 
     private static readonly AttributeListSyntax KubernetesEntityAttributeList = SyntaxFactory.AttributeList().AddAttributes([
         SyntaxFactory.Attribute(SyntaxFactory.IdentifierName("KubernetesEntity"))
@@ -91,6 +94,8 @@ internal sealed class RoslynCodeModelRenderer
             .AddAttributeLists(ExcludeFromCodeCoverageAttributeList)
             .WithLeadingTrivia(CodeGenerationUtilities.CreateSummaryTrivia(model.Summary));
 
+        declaration = AddObsoleteAttribute(declaration, model);
+
         if (model.IsKubernetesEntity)
         {
             declaration = declaration.AddAttributeLists(KubernetesEntityAttributeList);
@@ -133,6 +138,8 @@ internal sealed class RoslynCodeModelRenderer
                                                 SyntaxFactory.SingletonSeparatedList<TypeSyntax>(
                                                     SyntaxFactory.IdentifierName(model.Name)))))))))))
             .WithLeadingTrivia(CodeGenerationUtilities.CreateSummaryTrivia(model.Summary));
+
+        declaration = AddObsoleteAttribute(declaration, model);
 
         if (model.Members.Count > 0)
         {
@@ -285,5 +292,30 @@ internal sealed class RoslynCodeModelRenderer
         }
 
         return current ?? SyntaxFactory.IdentifierName(name);
+    }
+
+    private static TDeclaration AddObsoleteAttribute<TDeclaration>(TDeclaration declaration, GeneratedTypeModel model)
+        where TDeclaration : BaseTypeDeclarationSyntax
+    {
+        if (!model.IsObsolete)
+        {
+            return declaration;
+        }
+
+        if (string.IsNullOrWhiteSpace(model.ObsoleteMessage))
+        {
+            return (TDeclaration)declaration.AddAttributeLists(ObsoleteAttributeList);
+        }
+
+        return (TDeclaration)declaration.AddAttributeLists(
+            SyntaxFactory.AttributeList().AddAttributes(
+                SyntaxFactory.Attribute(SyntaxFactory.ParseName("global::System.Obsolete"))
+                    .WithArgumentList(
+                        SyntaxFactory.AttributeArgumentList(
+                            SyntaxFactory.SingletonSeparatedList(
+                                SyntaxFactory.AttributeArgument(
+                                    SyntaxFactory.LiteralExpression(
+                                        SyntaxKind.StringLiteralExpression,
+                                        SyntaxFactory.Literal(model.ObsoleteMessage!))))))));
     }
 }

@@ -125,7 +125,9 @@ public class SourceGeneratorTests
                     crd.Spec.Names.Kind,
                     crd.Spec.Group,
                     crd.Spec.Names.Plural,
-                    crd.Spec.Names.ListKind)
+                    crd.Spec.Names.ListKind,
+                    version.Deprecated == true,
+                    version.DeprecationWarning)
                 .NormalizeWhitespace()
                 .ToFullString();
 

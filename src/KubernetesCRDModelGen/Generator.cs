@@ -145,7 +145,7 @@ public class Generator : IGenerator
                 continue;
             }
 
-            var code = codeGenerator.GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind);
+            var code = codeGenerator.GenerateClass(doc, crd.Spec.Names.Kind, version.Name, crd.Spec.Group, crd.Spec.Names.Plural, crd.Spec.Names.ListKind, version.Deprecated == true, version.DeprecationWarning);
             types.AddRange(code);
         }
 

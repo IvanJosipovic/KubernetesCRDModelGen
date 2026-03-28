@@ -64,15 +64,21 @@ internal sealed class GeneratedCompilationUnitModel
 
 internal abstract class GeneratedTypeModel
 {
-    protected GeneratedTypeModel(string name, string? summary)
+    protected GeneratedTypeModel(string name, string? summary, bool isObsolete = false, string? obsoleteMessage = null)
     {
         Name = name;
         Summary = summary;
+        IsObsolete = isObsolete;
+        ObsoleteMessage = obsoleteMessage;
     }
 
     public string Name { get; }
 
     public string? Summary { get; }
+
+    public bool IsObsolete { get; }
+
+    public string? ObsoleteMessage { get; }
 }
 
 internal sealed class GeneratedClassModel : GeneratedTypeModel
@@ -83,7 +89,9 @@ internal sealed class GeneratedClassModel : GeneratedTypeModel
         bool isKubernetesEntity,
         IReadOnlyList<GeneratedTypeReference> baseTypes,
         IReadOnlyList<GeneratedFieldModel> fields,
-        IReadOnlyList<GeneratedPropertyModel> properties) : base(name, summary)
+        IReadOnlyList<GeneratedPropertyModel> properties,
+        bool isObsolete = false,
+        string? obsoleteMessage = null) : base(name, summary, isObsolete, obsoleteMessage)
     {
         IsKubernetesEntity = isKubernetesEntity;
         BaseTypes = baseTypes;
@@ -102,7 +110,7 @@ internal sealed class GeneratedClassModel : GeneratedTypeModel
 
 internal sealed class GeneratedEnumModel : GeneratedTypeModel
 {
-    public GeneratedEnumModel(string name, string? summary, IReadOnlyList<GeneratedEnumMemberModel> members) : base(name, summary)
+    public GeneratedEnumModel(string name, string? summary, IReadOnlyList<GeneratedEnumMemberModel> members, bool isObsolete = false, string? obsoleteMessage = null) : base(name, summary, isObsolete, obsoleteMessage)
     {
         Members = members;
     }
