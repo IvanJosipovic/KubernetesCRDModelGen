@@ -205,29 +205,34 @@ public class Generator : IGenerator
     {
         try
         {
-            var analyzerPath = Directory
-                .EnumerateFiles(
-                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "dotnet", "packs"),
-                    "System.Text.Json.SourceGeneration.dll",
-                    SearchOption.AllDirectories)
-                .FirstOrDefault();
+            var generatorAssembly = typeof(Generator).Assembly;
+            var embeddedResourceName = generatorAssembly
+                .GetManifestResourceNames()
+                .FirstOrDefault(name => name.EndsWith("System.Text.Json.SourceGeneration.dll", StringComparison.OrdinalIgnoreCase));
 
-            if (analyzerPath is null)
+            if (embeddedResourceName is null)
             {
                 return null;
             }
 
-            var assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(analyzerPath);
-            var generatorType = assembly.GetType("System.Text.Json.SourceGeneration.JsonSourceGenerator", throwOnError: false);
+            using var stream = generatorAssembly.GetManifestResourceStream(embeddedResourceName);
+            if (stream is null)
+            {
+                return null;
+            }
 
-            return generatorType is null
-                ? null
-                : Activator.CreateInstance(generatorType) as IIncrementalGenerator;
+            var sourceGeneratorAssembly = AssemblyLoadContext.Default.LoadFromStream(stream);
+            var generatorType = sourceGeneratorAssembly.GetType("System.Text.Json.SourceGeneration.JsonSourceGenerator", throwOnError: false);
+
+            return generatorType is not null && Activator.CreateInstance(generatorType) is IIncrementalGenerator generator
+                ? generator
+                : null;
         }
         catch
         {
-            return null;
         }
+
+        return null;
     }
 
     private static MetadataReference[] GetReferences()
