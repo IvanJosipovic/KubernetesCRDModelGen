@@ -1,10 +1,15 @@
 using k8s;
 using k8s.Models;
+using Microsoft.OpenApi;
+using Microsoft.OpenApi.Reader;
 using Shouldly;
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Xml;
 using Xunit;
 
 namespace KubernetesCRDModelGen.Tests;
@@ -312,6 +317,53 @@ spec:
         result.Diagnostics.ShouldNotBeEmpty();
         result.Diagnostics.ShouldContain(x => x.Id == GeneratedAssemblyDiagnostic.ExceptionDiagnosticId);
         result.Diagnostics.ShouldContain(x => x.Severity == GeneratedAssemblyDiagnosticSeverity.Error);
+    }
+
+    [Fact]
+    public void TestGeneratedAssemblyResultDeconstructsAndReportsSuccess()
+    {
+        var xml = new XmlDocument();
+        var assembly = typeof(string).Assembly;
+        var result = new GeneratedAssemblyResult(assembly, xml, Array.Empty<GeneratedAssemblyDiagnostic>(), null);
+
+        result.Success.ShouldBeTrue();
+
+        result.Deconstruct(out var deconstructedAssembly, out var deconstructedXml);
+
+        deconstructedAssembly.ShouldBeSameAs(assembly);
+        deconstructedXml.ShouldBeSameAs(xml);
+    }
+
+    [Fact]
+    public void TestGetOpenApiSchemaCachesParsedSchema()
+    {
+        var generator = new Generator();
+        var method = typeof(Generator).GetMethod("GetOpenApiSchema", BindingFlags.Instance | BindingFlags.NonPublic);
+        method.ShouldNotBeNull();
+
+        var schema = new V1JSONSchemaProps
+        {
+            Type = "object",
+            Properties = new Dictionary<string, V1JSONSchemaProps>
+            {
+                ["name"] = new()
+                {
+                    Type = "string",
+                },
+            },
+        };
+
+        var reader = new OpenApiJsonReader();
+        using var schemaStream = new MemoryStream();
+        var diagnostics = new List<GeneratedAssemblyDiagnostic>();
+
+        var first = (OpenApiSchema?)method!.Invoke(generator, [reader, schemaStream, schema, diagnostics]);
+        var second = (OpenApiSchema?)method.Invoke(generator, [reader, schemaStream, schema, diagnostics]);
+
+        first.ShouldNotBeNull();
+        second.ShouldNotBeNull();
+        second.ShouldBeSameAs(first);
+        diagnostics.ShouldBeEmpty();
     }
 
     [Fact]
