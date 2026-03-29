@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
 using System.Text.Json;
+using System.Text.Encodings.Web;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
 using System.Xml;
@@ -28,6 +29,7 @@ public class Generator : IGenerator
 
     private static readonly Lazy<MetadataReference[]> MetadataReferencesCache = new(GetReferences);
     private static readonly Lazy<CSharpCompilation> CompilationTemplateCache = new(CreateCompilationTemplate);
+    private static readonly Lazy<IIncrementalGenerator?> JsonSourceGeneratorCache = new(GetJsonSourceGenerator);
     private static readonly JsonTypeInfo<V1JSONSchemaProps> V1JsonSchemaPropsTypeInfo = GeneratorSourceGenerationContext.Default.V1JSONSchemaProps;
     private static readonly ConditionalWeakTable<V1JSONSchemaProps, OpenApiSchema> OpenApiSchemaCache = new();
     private static readonly OpenApiSpecVersion OpenApiVersion = OpenApiSpecVersion.OpenApi3_0;
@@ -67,6 +69,7 @@ public class Generator : IGenerator
             var compilation = CompilationTemplateCache.Value
                 .WithAssemblyName(crdName)
                 .AddSyntaxTrees(code.SyntaxTree);
+            compilation = RunJsonSourceGenerator(compilation, schemaDiagnostics);
 
             using var peStream = new MemoryStream();
             using var xmlDocumentationStream = new MemoryStream();
@@ -176,6 +179,57 @@ public class Generator : IGenerator
             references: MetadataReferencesCache.Value,
             options: CompilationOptions);
 
+    private static CSharpCompilation RunJsonSourceGenerator(CSharpCompilation compilation, ICollection<GeneratedAssemblyDiagnostic>? diagnostics)
+    {
+        var generator = JsonSourceGeneratorCache.Value;
+        if (generator is null)
+        {
+            return compilation;
+        }
+
+        var driver = CSharpGeneratorDriver.Create(generator);
+        driver.RunGeneratorsAndUpdateCompilation(compilation, out var outputCompilation, out var generatorDiagnostics);
+
+        if (diagnostics is not null)
+        {
+            foreach (var diagnostic in generatorDiagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity >= DiagnosticSeverity.Warning))
+            {
+                diagnostics.Add(GeneratedAssemblyDiagnostic.FromRoslynDiagnostic(diagnostic));
+            }
+        }
+
+        return (CSharpCompilation)outputCompilation;
+    }
+
+    private static IIncrementalGenerator? GetJsonSourceGenerator()
+    {
+        try
+        {
+            var analyzerPath = Directory
+                .EnumerateFiles(
+                    Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "dotnet", "packs"),
+                    "System.Text.Json.SourceGeneration.dll",
+                    SearchOption.AllDirectories)
+                .FirstOrDefault();
+
+            if (analyzerPath is null)
+            {
+                return null;
+            }
+
+            var assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(analyzerPath);
+            var generatorType = assembly.GetType("System.Text.Json.SourceGeneration.JsonSourceGenerator", throwOnError: false);
+
+            return generatorType is null
+                ? null
+                : Activator.CreateInstance(generatorType) as IIncrementalGenerator;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
     private static MetadataReference[] GetReferences()
     {
         var references = new List<MetadataReference>();
@@ -190,6 +244,8 @@ public class Generator : IGenerator
             var ass = MetadataReference.CreateFromStream(stream!);
             references.Add(ass);
         }
+
+        references.Add(MetadataReference.CreateFromFile(typeof(JavaScriptEncoder).Assembly.Location));
 
         return [.. references];
     }

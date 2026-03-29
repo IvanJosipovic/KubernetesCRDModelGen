@@ -2,6 +2,7 @@ using k8s;
 using k8s.Models;
 using Shouldly;
 using System;
+using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Xunit;
@@ -129,6 +130,61 @@ spec:
         list.ShouldNotBeNull();
         root!.GetCustomAttribute<ObsoleteAttribute>()!.Message.ShouldBe("widgets.example.com/v1 is deprecated.");
         list!.GetCustomAttribute<ObsoleteAttribute>()!.Message.ShouldBe("widgets.example.com/v1 is deprecated.");
+    }
+
+    [Fact]
+    public void TestGenerateAssemblyEmitsModelSourceGenerationContext()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: widgets.example.com
+spec:
+  group: example.com
+  names:
+    plural: widgets
+    singular: widget
+    kind: Widget
+    listKind: WidgetList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+""";
+
+        var result = GenerateAssembly(yaml);
+        using var unloadHandle = result.UnloadHandle;
+        var assembly = result.Assembly;
+
+        assembly.ShouldNotBeNull(string.Join(Environment.NewLine, result.Diagnostics.Select(x => $"{x.Id} {x.Severity} {x.Message}")));
+        var context = assembly!.GetType("KubernetesCRDModelGen.Tests.Models.example.com.ModelSourceGenerationContext");
+        var rootType = assembly.GetType("KubernetesCRDModelGen.Tests.Models.example.com.V1Widget");
+        var listType = assembly.GetType("KubernetesCRDModelGen.Tests.Models.example.com.V1WidgetList");
+
+        context.ShouldNotBeNull();
+        rootType.ShouldNotBeNull();
+        listType.ShouldNotBeNull();
+        context!.IsSubclassOf(typeof(System.Text.Json.Serialization.JsonSerializerContext)).ShouldBeTrue();
+        context.CustomAttributes
+            .Where(x => x.AttributeType == typeof(System.Text.Json.Serialization.JsonSerializableAttribute))
+            .Select(x => x.ConstructorArguments[0].Value)
+            .ShouldContain(rootType);
+        context.CustomAttributes
+            .Where(x => x.AttributeType == typeof(System.Text.Json.Serialization.JsonSerializableAttribute))
+            .Select(x => x.ConstructorArguments[0].Value)
+            .ShouldContain(listType);
     }
 
     [Fact]
