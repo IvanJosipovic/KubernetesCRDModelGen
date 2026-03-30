@@ -73,23 +73,23 @@ public class SourceGeneratorTests
 
         v1.content.Contains("partial class V1KubeVirt").ShouldBeTrue();
         v1.content.Contains("partial class V1KubeVirtList").ShouldBeTrue();
-        v1.content.Contains("internal partial class ModelSourceGenerationContext").ShouldBeTrue();
+        v1.content.Contains("public partial class ModelSourceGenerationContext").ShouldBeTrue();
         v1.content.IndexOf("[JsonSerializable(typeof(V1KubeVirt))]", StringComparison.Ordinal).ShouldBeGreaterThanOrEqualTo(0);
         v1.content.IndexOf("[JsonSerializable(typeof(V1KubeVirtList))]", StringComparison.Ordinal).ShouldBeGreaterThanOrEqualTo(0);
         v1.content.IndexOf("[JsonSerializable(typeof(V1KubeVirt))]", StringComparison.Ordinal)
-            .ShouldBeLessThan(v1.content.IndexOf("internal partial class ModelSourceGenerationContext", StringComparison.Ordinal));
+            .ShouldBeLessThan(v1.content.IndexOf("public partial class ModelSourceGenerationContext", StringComparison.Ordinal));
         v1.content.IndexOf("[JsonSerializable(typeof(V1KubeVirtList))]", StringComparison.Ordinal)
-            .ShouldBeLessThan(v1.content.IndexOf("internal partial class ModelSourceGenerationContext", StringComparison.Ordinal));
+            .ShouldBeLessThan(v1.content.IndexOf("public partial class ModelSourceGenerationContext", StringComparison.Ordinal));
 
         v1alpha3.content.Contains("partial class V1alpha3KubeVirt").ShouldBeTrue();
         v1alpha3.content.Contains("partial class V1alpha3KubeVirtList").ShouldBeTrue();
-        v1alpha3.content.Contains("internal partial class ModelSourceGenerationContext").ShouldBeTrue();
+        v1alpha3.content.Contains("public partial class ModelSourceGenerationContext").ShouldBeTrue();
         v1alpha3.content.IndexOf("[JsonSerializable(typeof(V1alpha3KubeVirt))]", StringComparison.Ordinal).ShouldBeGreaterThanOrEqualTo(0);
         v1alpha3.content.IndexOf("[JsonSerializable(typeof(V1alpha3KubeVirtList))]", StringComparison.Ordinal).ShouldBeGreaterThanOrEqualTo(0);
         v1alpha3.content.IndexOf("[JsonSerializable(typeof(V1alpha3KubeVirt))]", StringComparison.Ordinal)
-            .ShouldBeLessThan(v1alpha3.content.IndexOf("internal partial class ModelSourceGenerationContext", StringComparison.Ordinal));
+            .ShouldBeLessThan(v1alpha3.content.IndexOf("public partial class ModelSourceGenerationContext", StringComparison.Ordinal));
         v1alpha3.content.IndexOf("[JsonSerializable(typeof(V1alpha3KubeVirtList))]", StringComparison.Ordinal)
-            .ShouldBeLessThan(v1alpha3.content.IndexOf("internal partial class ModelSourceGenerationContext", StringComparison.Ordinal));
+            .ShouldBeLessThan(v1alpha3.content.IndexOf("public partial class ModelSourceGenerationContext", StringComparison.Ordinal));
         generatedSources.All(source => source.content.Contains("public string ApiVersion { get; set; }")).ShouldBeTrue();
         generatedSources.All(source => source.content.Split("#nullable enable", StringSplitOptions.None).Length - 1 == 1).ShouldBeTrue();
         generatedSources.All(source => !source.content.Contains("#nullable disable")).ShouldBeTrue();
