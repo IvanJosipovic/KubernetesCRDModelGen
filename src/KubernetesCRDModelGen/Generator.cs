@@ -190,22 +190,31 @@ public class Generator : IGenerator
         var driver = CSharpGeneratorDriver.Create(generator);
         driver.RunGeneratorsAndUpdateCompilation(compilation, out var outputCompilation, out var generatorDiagnostics);
 
-        if (diagnostics is not null)
-        {
-            foreach (var diagnostic in generatorDiagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity >= DiagnosticSeverity.Warning))
-            {
-                diagnostics.Add(GeneratedAssemblyDiagnostic.FromRoslynDiagnostic(diagnostic));
-            }
-        }
+        AppendRoslynDiagnostics(diagnostics, generatorDiagnostics);
 
         return (CSharpCompilation)outputCompilation;
     }
 
     private static IIncrementalGenerator? GetJsonSourceGenerator()
+        => GetJsonSourceGenerator(typeof(Generator).Assembly, static (assembly, resourceName) => assembly.GetManifestResourceStream(resourceName));
+
+    private static void AppendRoslynDiagnostics(ICollection<GeneratedAssemblyDiagnostic>? diagnostics, IEnumerable<Diagnostic> roslynDiagnostics)
+    {
+        if (diagnostics is null)
+        {
+            return;
+        }
+
+        foreach (var diagnostic in roslynDiagnostics.Where(diagnostic => diagnostic.IsWarningAsError || diagnostic.Severity >= DiagnosticSeverity.Warning))
+        {
+            diagnostics.Add(GeneratedAssemblyDiagnostic.FromRoslynDiagnostic(diagnostic));
+        }
+    }
+
+    private static IIncrementalGenerator? GetJsonSourceGenerator(Assembly generatorAssembly, Func<Assembly, string, Stream?> openResourceStream)
     {
         try
         {
-            var generatorAssembly = typeof(Generator).Assembly;
             var embeddedResourceName = generatorAssembly
                 .GetManifestResourceNames()
                 .FirstOrDefault(name => name.EndsWith("System.Text.Json.SourceGeneration.dll", StringComparison.OrdinalIgnoreCase));
@@ -215,7 +224,7 @@ public class Generator : IGenerator
                 return null;
             }
 
-            using var stream = generatorAssembly.GetManifestResourceStream(embeddedResourceName);
+            using var stream = openResourceStream(generatorAssembly, embeddedResourceName);
             if (stream is null)
             {
                 return null;

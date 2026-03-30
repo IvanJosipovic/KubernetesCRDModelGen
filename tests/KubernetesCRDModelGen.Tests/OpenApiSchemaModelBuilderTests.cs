@@ -2,10 +2,14 @@ using k8s;
 using k8s.Models;
 using KubernetesCRDModelGen;
 using KubernetesCRDModelGen.Base;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using Shouldly;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.Json;
@@ -288,6 +292,25 @@ properties:
         throughFacade.ToFullString().ShouldContain("JsonSerializable(typeof(V1Widget))");
         throughFacade.ToFullString().ShouldContain("JsonSerializable(typeof(V1WidgetList))");
     }
+
+      [Fact]
+      public void RenderCompilationUnit_DoesNotEmitSourceGenerationContextWithoutSerializableTypes()
+      {
+        var renderer = new RoslynCodeModelRenderer();
+        MemberDeclarationSyntax[] members =
+        [
+          SyntaxFactory.StructDeclaration("Spec")
+            .AddModifiers(SyntaxFactory.Token(SyntaxKind.PublicKeyword)),
+        ];
+
+        var compilationUnit = renderer.RenderCompilationUnit("Tests.Models", "example.com", members);
+  var code = compilationUnit.NormalizeWhitespace().ToFullString();
+
+        code.ShouldContain("using static k8s.KubernetesJson;");
+        code.ShouldContain("public struct Spec");
+        code.ShouldNotContain("ModelSourceGenerationContext");
+        code.ShouldNotContain("JsonSerializable(typeof(Spec))");
+      }
 
     private static OpenApiSchema LoadSchema(string schemaYaml)
     {

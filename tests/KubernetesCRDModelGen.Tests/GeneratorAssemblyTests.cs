@@ -1,5 +1,7 @@
 using k8s;
 using k8s.Models;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Reader;
 using Shouldly;
@@ -333,6 +335,104 @@ spec:
         deconstructedAssembly.ShouldBeSameAs(assembly);
         deconstructedXml.ShouldBeSameAs(xml);
     }
+
+  [Fact]
+  public void TestGetJsonSourceGeneratorLoadsEmbeddedGenerator()
+  {
+    var wrapperMethod = typeof(Generator).GetMethod("GetJsonSourceGenerator", BindingFlags.Static | BindingFlags.NonPublic, null, Type.EmptyTypes, null);
+    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
+      .Single(method => method.Name == "GetJsonSourceGenerator" && method.GetParameters().Length == 2);
+
+    wrapperMethod.ShouldNotBeNull();
+    method.ShouldNotBeNull();
+
+    var wrapperGenerator = wrapperMethod!.Invoke(null, null);
+    var generator = method.Invoke(null, [typeof(Generator).Assembly, (Func<Assembly, string, Stream?>)((assembly, resourceName) => assembly.GetManifestResourceStream(resourceName))]);
+
+    wrapperGenerator.ShouldNotBeNull();
+    generator.ShouldNotBeNull();
+    generator!.GetType().FullName.ShouldBe("System.Text.Json.SourceGeneration.JsonSourceGenerator");
+  }
+
+  [Fact]
+  public void TestGetJsonSourceGeneratorReturnsNullWhenResourceIsMissing()
+  {
+    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
+      .Single(candidate => candidate.Name == "GetJsonSourceGenerator" && candidate.GetParameters().Length == 2);
+
+    var generator = method.Invoke(null, [typeof(string).Assembly, (Func<Assembly, string, Stream?>)((assembly, resourceName) => assembly.GetManifestResourceStream(resourceName))]);
+
+    generator.ShouldBeNull();
+  }
+
+  [Fact]
+  public void TestGetJsonSourceGeneratorReturnsNullWhenResourceStreamCannotBeOpened()
+  {
+    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
+      .Single(candidate => candidate.Name == "GetJsonSourceGenerator" && candidate.GetParameters().Length == 2);
+
+    var generator = method.Invoke(null, [typeof(Generator).Assembly, (Func<Assembly, string, Stream?>)((_, _) => null)]);
+
+    generator.ShouldBeNull();
+  }
+
+  [Fact]
+  public void TestGetJsonSourceGeneratorReturnsNullWhenLoadingThrows()
+  {
+    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
+      .Single(candidate => candidate.Name == "GetJsonSourceGenerator" && candidate.GetParameters().Length == 2);
+
+    var generator = method.Invoke(null, [typeof(Generator).Assembly, (Func<Assembly, string, Stream?>)((_, _) => throw new InvalidOperationException("boom"))]);
+
+    generator.ShouldBeNull();
+  }
+
+  [Fact]
+  public void TestRunJsonSourceGeneratorAddsGeneratedSyntaxWhenDiagnosticsCollectionIsNull()
+  {
+    var createCompilationTemplate = typeof(Generator).GetMethod("CreateCompilationTemplate", BindingFlags.Static | BindingFlags.NonPublic);
+    var runJsonSourceGenerator = typeof(Generator).GetMethod("RunJsonSourceGenerator", BindingFlags.Static | BindingFlags.NonPublic);
+
+    createCompilationTemplate.ShouldNotBeNull();
+    runJsonSourceGenerator.ShouldNotBeNull();
+
+    var compilation = ((CSharpCompilation)createCompilationTemplate!.Invoke(null, null)!)
+      .AddSyntaxTrees(
+        CSharpSyntaxTree.ParseText(
+          """
+using System.Text.Json.Serialization;
+
+[JsonSerializable(typeof(int))]
+internal partial class ValidContext : JsonSerializerContext
+{
+}
+""",
+          cancellationToken: TestContext.Current.CancellationToken));
+
+    var updatedCompilation = (CSharpCompilation)runJsonSourceGenerator!.Invoke(null, [compilation, null])!;
+
+    updatedCompilation.SyntaxTrees.Count().ShouldBeGreaterThan(compilation.SyntaxTrees.Count());
+  }
+
+  [Fact]
+  public void TestRunJsonSourceGeneratorAddsGeneratorDiagnostics()
+  {
+    var method = typeof(Generator).GetMethod("AppendRoslynDiagnostics", BindingFlags.Static | BindingFlags.NonPublic);
+    var diagnostics = new List<GeneratedAssemblyDiagnostic>();
+    var roslynDiagnostics = new[]
+    {
+      Diagnostic.Create(
+        new DiagnosticDescriptor("TEST001", "Test warning", "generator warning", "Testing", DiagnosticSeverity.Warning, isEnabledByDefault: true),
+        Location.None),
+    };
+
+    method.ShouldNotBeNull();
+
+    _ = method!.Invoke(null, [diagnostics, roslynDiagnostics]);
+
+    diagnostics.Count.ShouldBe(1);
+    diagnostics[0].Id.ShouldBe("TEST001");
+  }
 
     [Fact]
     public void TestGetOpenApiSchemaCachesParsedSchema()
