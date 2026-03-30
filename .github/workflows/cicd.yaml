@@ -59,7 +59,7 @@ jobs:
       uses: codecov/codecov-action@v6
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        files: tests/KubernetesCRDModelGen.Tests/**/coverage.cobertura.xml
+        files: tests/**/coverage.cobertura.xml
         fail_ci_if_error: false
 
     - name: Benchmarks

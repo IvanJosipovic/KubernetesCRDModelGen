@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.Loader;
 using System.Text.Json;
+using System.Diagnostics.CodeAnalysis;
 using System.Text.Encodings.Web;
 using System.Text.Json.Serialization;
 using System.Text.Json.Serialization.Metadata;
@@ -311,6 +312,7 @@ public class Generator : IGenerator
     UseStringEnumConverter = true,
     Converters = new[] { typeof(Iso8601TimeSpanConverter), typeof(KubernetesDateTimeConverter), typeof(KubernetesDateTimeOffsetConverter)})
 ]
+[ExcludeFromCodeCoverage]
 internal partial class GeneratorSourceGenerationContext : JsonSerializerContext
 {
 }
