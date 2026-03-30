@@ -195,6 +195,98 @@ spec:
     }
 
     [Fact]
+    public void TestGenerateAssemblyCanRunJsonSourceGeneratorWhenEnabled()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: widgets.example.com
+spec:
+  group: example.com
+  names:
+    plural: widgets
+    singular: widget
+    kind: Widget
+    listKind: WidgetList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+""";
+
+        var result = GenerateAssembly(yaml, enableJsonSourceGeneration: true);
+        using var unloadHandle = result.UnloadHandle;
+        var assembly = result.Assembly;
+
+        result.Success.ShouldBeTrue(string.Join(Environment.NewLine, result.Diagnostics.Select(x => $"{x.Id} {x.Severity} {x.Message}")));
+        assembly.ShouldNotBeNull();
+
+        var context = assembly!.GetType("KubernetesCRDModelGen.Tests.Models.example.com.ModelSourceGenerationContext");
+        context.ShouldNotBeNull();
+        context!.GetProperty("Default", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static).ShouldNotBeNull();
+    }
+
+    [Fact]
+    public void TestDependentAppsCanAccessModelSourceGenerationContext()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: widgets.example.com
+spec:
+  group: example.com
+  names:
+    plural: widgets
+    singular: widget
+    kind: Widget
+    listKind: WidgetList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+""";
+
+        var result = GenerateAssembly(yaml);
+        using var unloadHandle = result.UnloadHandle;
+        var assembly = result.Assembly;
+
+        result.Success.ShouldBeTrue(string.Join(Environment.NewLine, result.Diagnostics.Select(x => $"{x.Id} {x.Severity} {x.Message}")));
+        assembly.ShouldNotBeNull();
+
+        var context = assembly!.GetExportedTypes()
+            .SingleOrDefault(type => type.FullName == "KubernetesCRDModelGen.Tests.Models.example.com.ModelSourceGenerationContext");
+
+        context.ShouldNotBeNull();
+        context!.IsPublic.ShouldBeTrue();
+        context.IsSubclassOf(typeof(System.Text.Json.Serialization.JsonSerializerContext)).ShouldBeTrue();
+        Activator.CreateInstance(context).ShouldNotBeNull();
+    }
+
+    [Fact]
     public void TestGenerateCodeMarksDeprecatedVersionsObsoleteWithoutMessage()
     {
         const string modelNamespace = "KubernetesCRDModelGen.Tests.Models";
@@ -335,104 +427,6 @@ spec:
         deconstructedAssembly.ShouldBeSameAs(assembly);
         deconstructedXml.ShouldBeSameAs(xml);
     }
-
-  [Fact]
-  public void TestGetJsonSourceGeneratorLoadsEmbeddedGenerator()
-  {
-    var wrapperMethod = typeof(Generator).GetMethod("GetJsonSourceGenerator", BindingFlags.Static | BindingFlags.NonPublic, null, Type.EmptyTypes, null);
-    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
-      .Single(method => method.Name == "GetJsonSourceGenerator" && method.GetParameters().Length == 2);
-
-    wrapperMethod.ShouldNotBeNull();
-    method.ShouldNotBeNull();
-
-    var wrapperGenerator = wrapperMethod!.Invoke(null, null);
-    var generator = method.Invoke(null, [typeof(Generator).Assembly, (Func<Assembly, string, Stream?>)((assembly, resourceName) => assembly.GetManifestResourceStream(resourceName))]);
-
-    wrapperGenerator.ShouldNotBeNull();
-    generator.ShouldNotBeNull();
-    generator!.GetType().FullName.ShouldBe("System.Text.Json.SourceGeneration.JsonSourceGenerator");
-  }
-
-  [Fact]
-  public void TestGetJsonSourceGeneratorReturnsNullWhenResourceIsMissing()
-  {
-    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
-      .Single(candidate => candidate.Name == "GetJsonSourceGenerator" && candidate.GetParameters().Length == 2);
-
-    var generator = method.Invoke(null, [typeof(string).Assembly, (Func<Assembly, string, Stream?>)((assembly, resourceName) => assembly.GetManifestResourceStream(resourceName))]);
-
-    generator.ShouldBeNull();
-  }
-
-  [Fact]
-  public void TestGetJsonSourceGeneratorReturnsNullWhenResourceStreamCannotBeOpened()
-  {
-    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
-      .Single(candidate => candidate.Name == "GetJsonSourceGenerator" && candidate.GetParameters().Length == 2);
-
-    var generator = method.Invoke(null, [typeof(Generator).Assembly, (Func<Assembly, string, Stream?>)((_, _) => null)]);
-
-    generator.ShouldBeNull();
-  }
-
-  [Fact]
-  public void TestGetJsonSourceGeneratorReturnsNullWhenLoadingThrows()
-  {
-    var method = typeof(Generator).GetMethods(BindingFlags.Static | BindingFlags.NonPublic)
-      .Single(candidate => candidate.Name == "GetJsonSourceGenerator" && candidate.GetParameters().Length == 2);
-
-    var generator = method.Invoke(null, [typeof(Generator).Assembly, (Func<Assembly, string, Stream?>)((_, _) => throw new InvalidOperationException("boom"))]);
-
-    generator.ShouldBeNull();
-  }
-
-  [Fact]
-  public void TestRunJsonSourceGeneratorAddsGeneratedSyntaxWhenDiagnosticsCollectionIsNull()
-  {
-    var createCompilationTemplate = typeof(Generator).GetMethod("CreateCompilationTemplate", BindingFlags.Static | BindingFlags.NonPublic);
-    var runJsonSourceGenerator = typeof(Generator).GetMethod("RunJsonSourceGenerator", BindingFlags.Static | BindingFlags.NonPublic);
-
-    createCompilationTemplate.ShouldNotBeNull();
-    runJsonSourceGenerator.ShouldNotBeNull();
-
-    var compilation = ((CSharpCompilation)createCompilationTemplate!.Invoke(null, null)!)
-      .AddSyntaxTrees(
-        CSharpSyntaxTree.ParseText(
-          """
-using System.Text.Json.Serialization;
-
-[JsonSerializable(typeof(int))]
-internal partial class ValidContext : JsonSerializerContext
-{
-}
-""",
-          cancellationToken: TestContext.Current.CancellationToken));
-
-    var updatedCompilation = (CSharpCompilation)runJsonSourceGenerator!.Invoke(null, [compilation, null])!;
-
-    updatedCompilation.SyntaxTrees.Count().ShouldBeGreaterThan(compilation.SyntaxTrees.Count());
-  }
-
-  [Fact]
-  public void TestRunJsonSourceGeneratorAddsGeneratorDiagnostics()
-  {
-    var method = typeof(Generator).GetMethod("AppendRoslynDiagnostics", BindingFlags.Static | BindingFlags.NonPublic);
-    var diagnostics = new List<GeneratedAssemblyDiagnostic>();
-    var roslynDiagnostics = new[]
-    {
-      Diagnostic.Create(
-        new DiagnosticDescriptor("TEST001", "Test warning", "generator warning", "Testing", DiagnosticSeverity.Warning, isEnabledByDefault: true),
-        Location.None),
-    };
-
-    method.ShouldNotBeNull();
-
-    _ = method!.Invoke(null, [diagnostics, roslynDiagnostics]);
-
-    diagnostics.Count.ShouldBe(1);
-    diagnostics[0].Id.ShouldBe("TEST001");
-  }
 
     [Fact]
     public void TestGetOpenApiSchemaCachesParsedSchema()

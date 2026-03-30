@@ -106,7 +106,7 @@ internal sealed class RoslynCodeModelRenderer
     PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
     UseStringEnumConverter = true,
     Converters = new[] { typeof(Iso8601TimeSpanConverter), typeof(KubernetesDateTimeConverter), typeof(KubernetesDateTimeOffsetConverter) })]
-internal partial class ModelSourceGenerationContext : JsonSerializerContext
+public partial class ModelSourceGenerationContext : JsonSerializerContext
 {
 }
 """;

@@ -58,7 +58,7 @@ public class Generator : IGenerator
     }
 
     /// <inheritdoc/>
-    public GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace)
+    public GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = ModelNamespace, bool enableJsonSourceGeneration = false)
     {
         var crdName = crd.Metadata?.Name ?? "<unknown>";
 
@@ -70,7 +70,19 @@ public class Generator : IGenerator
             var compilation = CompilationTemplateCache.Value
                 .WithAssemblyName(crdName)
                 .AddSyntaxTrees(code.SyntaxTree);
-            compilation = RunJsonSourceGenerator(compilation, schemaDiagnostics);
+
+            if (enableJsonSourceGeneration)
+            {
+                compilation = RunJsonSourceGenerator(compilation, schemaDiagnostics);
+            }
+            else
+            {
+                var contextImplementation = CreateJsonSerializerContextImplementation(code);
+                if (contextImplementation is not null)
+                {
+                    compilation = compilation.AddSyntaxTrees(contextImplementation);
+                }
+            }
 
             using var peStream = new MemoryStream();
             using var xmlDocumentationStream = new MemoryStream();
@@ -199,6 +211,26 @@ public class Generator : IGenerator
     private static IIncrementalGenerator? GetJsonSourceGenerator()
         => GetJsonSourceGenerator(typeof(Generator).Assembly, static (assembly, resourceName) => assembly.GetManifestResourceStream(resourceName));
 
+    private static MetadataReference[] GetReferences()
+    {
+        var references = new List<MetadataReference>();
+
+        var assembly = typeof(Generator).Assembly;
+
+        var assemblies = assembly.GetManifestResourceNames().Where(x => x.StartsWith("runtime.") && x.EndsWith(".dll")).ToList();
+
+        foreach (var item in assemblies)
+        {
+            using var stream = assembly.GetManifestResourceStream(item);
+            var ass = MetadataReference.CreateFromStream(stream!);
+            references.Add(ass);
+        }
+
+        references.Add(MetadataReference.CreateFromFile(typeof(JavaScriptEncoder).Assembly.Location));
+
+        return [.. references];
+    }
+
     private static void AppendRoslynDiagnostics(ICollection<GeneratedAssemblyDiagnostic>? diagnostics, IEnumerable<Diagnostic> roslynDiagnostics)
     {
         if (diagnostics is null)
@@ -245,24 +277,53 @@ public class Generator : IGenerator
         return null;
     }
 
-    private static MetadataReference[] GetReferences()
+    private static SyntaxTree? CreateJsonSerializerContextImplementation(CompilationUnitSyntax compilationUnit)
     {
-        var references = new List<MetadataReference>();
-
-        var assembly = typeof(Generator).Assembly;
-
-        var assemblies = assembly.GetManifestResourceNames().Where(x => x.StartsWith("runtime.") && x.EndsWith(".dll")).ToList();
-
-        foreach (var item in assemblies)
+        var ns = compilationUnit.Members.OfType<BaseNamespaceDeclarationSyntax>().SingleOrDefault();
+        if (ns is null || !ns.Members.OfType<ClassDeclarationSyntax>().Any(member => member.Identifier.ValueText == "ModelSourceGenerationContext"))
         {
-            using var stream = assembly.GetManifestResourceStream(item);
-            var ass = MetadataReference.CreateFromStream(stream!);
-            references.Add(ass);
+            return null;
         }
 
-        references.Add(MetadataReference.CreateFromFile(typeof(JavaScriptEncoder).Assembly.Location));
+        var source = $$"""
+namespace {{ns.Name}};
 
-        return [.. references];
+public partial class ModelSourceGenerationContext
+{
+    public ModelSourceGenerationContext()
+        : base(new global::System.Text.Json.JsonSerializerOptions())
+    {
+    }
+
+    public ModelSourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+        : base(options)
+    {
+    }
+
+    protected override global::System.Text.Json.JsonSerializerOptions GeneratedSerializerOptions { get; } = CreateGeneratedSerializerOptions();
+
+    public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo GetTypeInfo(global::System.Type type)
+        => throw new global::System.NotSupportedException("Runtime-generated serializer metadata is not available for dynamically compiled model assemblies.");
+
+    private static global::System.Text.Json.JsonSerializerOptions CreateGeneratedSerializerOptions()
+    {
+        var options = new global::System.Text.Json.JsonSerializerOptions
+        {
+            DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+            PropertyNamingPolicy = global::System.Text.Json.JsonNamingPolicy.CamelCase,
+        };
+
+        options.Converters.Add(new global::System.Text.Json.Serialization.JsonStringEnumConverter());
+        options.Converters.Add(new global::k8s.KubernetesJson.Iso8601TimeSpanConverter());
+        options.Converters.Add(new global::k8s.KubernetesJson.KubernetesDateTimeConverter());
+        options.Converters.Add(new global::k8s.KubernetesJson.KubernetesDateTimeOffsetConverter());
+
+        return options;
+    }
+}
+""";
+
+        return CSharpSyntaxTree.ParseText(source);
     }
 
     private OpenApiSchema? GetOpenApiSchema(OpenApiJsonReader reader, MemoryStream schemaStream, V1JSONSchemaProps schema, ICollection<GeneratedAssemblyDiagnostic>? diagnostics = null)

@@ -288,7 +288,7 @@ properties:
         var throughFacade = generator.GenerateCompilationUnit(schema, "Tests.Models", "v1", "Widget", "example.com", "widgets", "WidgetList");
 
         direct.ToFullString().ShouldBe(throughFacade.ToFullString());
-        throughFacade.ToFullString().ShouldContain("internal partial class ModelSourceGenerationContext");
+        throughFacade.ToFullString().ShouldContain("public partial class ModelSourceGenerationContext");
         throughFacade.ToFullString().ShouldContain("JsonSerializable(typeof(V1Widget))");
         throughFacade.ToFullString().ShouldContain("JsonSerializable(typeof(V1WidgetList))");
     }
