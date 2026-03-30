@@ -12,6 +12,7 @@ internal sealed class RoslynCodeModelRenderer
     private static readonly SyntaxList<UsingDirectiveSyntax> Usings = SyntaxFactory.List([
         SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s")),
         SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("k8s.Models")),
+        SyntaxFactory.ParseCompilationUnit("using static k8s.KubernetesJson;").Usings[0],
         SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System")),
         SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Collections.Generic")),
         SyntaxFactory.UsingDirective(SyntaxFactory.ParseName("System.Runtime.Serialization")),
@@ -63,9 +64,14 @@ internal sealed class RoslynCodeModelRenderer
 
     public CompilationUnitSyntax RenderCompilationUnit(string @namespace, string group, IReadOnlyList<MemberDeclarationSyntax> members)
     {
+        var context = RenderJsonSerializerContext(members);
+        var renderedMembers = context is null
+            ? members.ToArray()
+            : [.. members, context];
+
         var namespaceDeclaration = SyntaxFactory.FileScopedNamespaceDeclaration(
                 SyntaxFactory.ParseName(CodeGenerationUtilities.CleanIdentifier(@namespace + "." + group, true)!))
-            .AddMembers([.. members]);
+            .AddMembers(renderedMembers);
 
         return SyntaxFactory.CompilationUnit()
             .WithUsings(Usings)
@@ -73,6 +79,39 @@ internal sealed class RoslynCodeModelRenderer
                 SyntaxFactory.TriviaList(
                     SyntaxFactory.Trivia(SyntaxFactory.NullableDirectiveTrivia(SyntaxFactory.Token(SyntaxKind.EnableKeyword), true))))
             .AddMembers(namespaceDeclaration);
+    }
+
+    private static MemberDeclarationSyntax? RenderJsonSerializerContext(IReadOnlyList<MemberDeclarationSyntax> members)
+    {
+        var serializableTypes = members
+            .OfType<BaseTypeDeclarationSyntax>()
+            .Where(member => member is ClassDeclarationSyntax or EnumDeclarationSyntax)
+            .Select(member => member.Identifier.ValueText)
+            .Distinct(StringComparer.Ordinal)
+            .ToArray();
+
+        if (serializableTypes.Length == 0)
+        {
+            return null;
+        }
+
+        var attributes = string.Join(
+            Environment.NewLine,
+            serializableTypes.Select(type => $"[JsonSerializable(typeof({type}))]"));
+
+        var contextDeclaration = $$"""
+{{attributes}}
+[JsonSourceGenerationOptions(
+    DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+    PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase,
+    UseStringEnumConverter = true,
+    Converters = new[] { typeof(Iso8601TimeSpanConverter), typeof(KubernetesDateTimeConverter), typeof(KubernetesDateTimeOffsetConverter) })]
+public partial class ModelSourceGenerationContext : JsonSerializerContext
+{
+}
+""";
+
+        return SyntaxFactory.ParseMemberDeclaration(contextDeclaration);
     }
 
     public BaseTypeDeclarationSyntax[] RenderTypes(IReadOnlyList<GeneratedTypeModel> types)

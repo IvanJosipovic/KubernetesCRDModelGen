@@ -12,8 +12,9 @@ public interface IGenerator
     /// </summary>
     /// <param name="crd">The custom resource definition.</param>
     /// <param name="namespace">The namespace to use for the generated code.</param>
+    /// <param name="enableJsonSourceGeneration">True to run System.Text.Json source generation for the emitted assembly; false to use the lightweight runtime context implementation.</param>
     /// <returns>A structured result containing the generated assembly, XML document, diagnostics, and unload handle.</returns>
-    GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = Generator.ModelNamespace);
+    GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string @namespace = Generator.ModelNamespace, bool enableJsonSourceGeneration = false);
 
     /// <summary>
     /// Generates source code from the given CRD with the containing types.

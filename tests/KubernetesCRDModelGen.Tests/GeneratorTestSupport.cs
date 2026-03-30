@@ -59,16 +59,16 @@ public partial class GeneratorTests
         return GetGenerator().GenerateCode(crd, Namespace);
     }
 
-    protected static GeneratedAssemblyResult GenerateAssembly(string yaml, string? @namespace = null)
+    protected static GeneratedAssemblyResult GenerateAssembly(string yaml, string? @namespace = null, bool enableJsonSourceGeneration = false)
     {
         var crd = KubernetesYaml.LoadAllFromString(yaml);
 
-        return GenerateAssembly((V1CustomResourceDefinition)crd[0], @namespace);
+        return GenerateAssembly((V1CustomResourceDefinition)crd[0], @namespace, enableJsonSourceGeneration);
     }
 
-    protected static GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string? @namespace = null)
+    protected static GeneratedAssemblyResult GenerateAssembly(V1CustomResourceDefinition crd, string? @namespace = null, bool enableJsonSourceGeneration = false)
     {
-        return GetGenerator().GenerateAssembly(crd, @namespace ?? Namespace);
+        return GetGenerator().GenerateAssembly(crd, @namespace ?? Namespace, enableJsonSourceGeneration);
     }
 
     protected static MemberInfo[] GetMembers(Type type)

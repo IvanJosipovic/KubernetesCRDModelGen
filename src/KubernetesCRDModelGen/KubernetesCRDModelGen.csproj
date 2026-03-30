@@ -32,12 +32,17 @@
     <Target Name="EmbedResolveReferences" AfterTargets="ResolveReferences">
         <ItemGroup>
             <FilesToEmbed Include="@(ReferencePath)" Condition="('%(ReferencePath.Filename)' == 'KubernetesClient' Or '%(ReferencePath.Filename)' == 'System.Text.Json' Or '%(ReferencePath.Filename)' == 'System.Runtime' Or '%(ReferencePath.Filename)' == 'System.Runtime.Serialization.Primitives')" />
+            <JsonSourceGenerator Include="@(ReferencePath-&gt;'%(RootDir)%(Directory)..\..\analyzers\dotnet\cs\System.Text.Json.SourceGeneration.dll')" Condition="('%(ReferencePath.Filename)' == 'System.Text.Json') and Exists('%(RootDir)%(Directory)..\..\analyzers\dotnet\cs\System.Text.Json.SourceGeneration.dll')" />
 
             <XmlFilesToEmbed Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).xml'-&gt; Exists())" Condition="('%(FilesToEmbed.Filename)' == 'KubernetesClient')" />
 
             <!-- add these assemblies to the list of embedded resources -->
             <EmbeddedResource Include="@(FilesToEmbed-&gt;'%(RelativeDir)%(FileName).dll'-&gt; Exists())">
                 <LogicalName>runtime.%(FilesToEmbed.Filename)%(FilesToEmbed.Extension)</LogicalName>
+            </EmbeddedResource>
+
+            <EmbeddedResource Include="@(JsonSourceGenerator)" Condition="Exists('%(JsonSourceGenerator.FullPath)')">
+                <LogicalName>analyzers.System.Text.Json.SourceGeneration.dll</LogicalName>
             </EmbeddedResource>
 
             <!-- add xml documentation for list of assemblies -->

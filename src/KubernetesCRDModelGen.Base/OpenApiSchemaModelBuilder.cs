@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
+using System.Diagnostics.CodeAnalysis;
 
 namespace KubernetesCRDModelGen.Base;
 
@@ -414,6 +415,7 @@ internal sealed class OpenApiSchemaModelBuilder
 }
 
 [JsonSerializable(typeof(IOpenApiSchema))]
+[ExcludeFromCodeCoverage]
 internal partial class CodeGeneratorSourceGenerationContext : JsonSerializerContext
 {
 }

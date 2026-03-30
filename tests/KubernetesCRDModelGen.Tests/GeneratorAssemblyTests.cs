@@ -1,9 +1,17 @@
 using k8s;
 using k8s.Models;
+using Microsoft.CodeAnalysis;
+using Microsoft.CodeAnalysis.CSharp;
+using Microsoft.OpenApi;
+using Microsoft.OpenApi.Reader;
 using Shouldly;
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Xml;
 using Xunit;
 
 namespace KubernetesCRDModelGen.Tests;
@@ -132,6 +140,153 @@ spec:
     }
 
     [Fact]
+    public void TestGenerateAssemblyEmitsModelSourceGenerationContext()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: widgets.example.com
+spec:
+  group: example.com
+  names:
+    plural: widgets
+    singular: widget
+    kind: Widget
+    listKind: WidgetList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+""";
+
+        var result = GenerateAssembly(yaml);
+        using var unloadHandle = result.UnloadHandle;
+        var assembly = result.Assembly;
+
+        assembly.ShouldNotBeNull(string.Join(Environment.NewLine, result.Diagnostics.Select(x => $"{x.Id} {x.Severity} {x.Message}")));
+        var context = assembly!.GetType("KubernetesCRDModelGen.Tests.Models.example.com.ModelSourceGenerationContext");
+        var rootType = assembly.GetType("KubernetesCRDModelGen.Tests.Models.example.com.V1Widget");
+        var listType = assembly.GetType("KubernetesCRDModelGen.Tests.Models.example.com.V1WidgetList");
+
+        context.ShouldNotBeNull();
+        rootType.ShouldNotBeNull();
+        listType.ShouldNotBeNull();
+        context!.IsSubclassOf(typeof(System.Text.Json.Serialization.JsonSerializerContext)).ShouldBeTrue();
+        context.CustomAttributes
+            .Where(x => x.AttributeType == typeof(System.Text.Json.Serialization.JsonSerializableAttribute))
+            .Select(x => x.ConstructorArguments[0].Value)
+            .ShouldContain(rootType);
+        context.CustomAttributes
+            .Where(x => x.AttributeType == typeof(System.Text.Json.Serialization.JsonSerializableAttribute))
+            .Select(x => x.ConstructorArguments[0].Value)
+            .ShouldContain(listType);
+    }
+
+    [Fact]
+    public void TestGenerateAssemblyCanRunJsonSourceGeneratorWhenEnabled()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: widgets.example.com
+spec:
+  group: example.com
+  names:
+    plural: widgets
+    singular: widget
+    kind: Widget
+    listKind: WidgetList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+""";
+
+        var result = GenerateAssembly(yaml, enableJsonSourceGeneration: true);
+        using var unloadHandle = result.UnloadHandle;
+        var assembly = result.Assembly;
+
+        result.Success.ShouldBeTrue(string.Join(Environment.NewLine, result.Diagnostics.Select(x => $"{x.Id} {x.Severity} {x.Message}")));
+        assembly.ShouldNotBeNull();
+
+        var context = assembly!.GetType("KubernetesCRDModelGen.Tests.Models.example.com.ModelSourceGenerationContext");
+        context.ShouldNotBeNull();
+        context!.GetProperty("Default", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static).ShouldNotBeNull();
+    }
+
+    [Fact]
+    public void TestDependentAppsCanAccessModelSourceGenerationContext()
+    {
+        var yaml = """
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: widgets.example.com
+spec:
+  group: example.com
+  names:
+    plural: widgets
+    singular: widget
+    kind: Widget
+    listKind: WidgetList
+  scope: Namespaced
+  versions:
+    - name: v1
+      served: true
+      storage: true
+      schema:
+        openAPIV3Schema:
+          type: object
+          properties:
+            apiVersion:
+              type: string
+            kind:
+              type: string
+            metadata:
+              type: object
+""";
+
+        var result = GenerateAssembly(yaml);
+        using var unloadHandle = result.UnloadHandle;
+        var assembly = result.Assembly;
+
+        result.Success.ShouldBeTrue(string.Join(Environment.NewLine, result.Diagnostics.Select(x => $"{x.Id} {x.Severity} {x.Message}")));
+        assembly.ShouldNotBeNull();
+
+        var context = assembly!.GetExportedTypes()
+            .SingleOrDefault(type => type.FullName == "KubernetesCRDModelGen.Tests.Models.example.com.ModelSourceGenerationContext");
+
+        context.ShouldNotBeNull();
+        context!.IsPublic.ShouldBeTrue();
+        context.IsSubclassOf(typeof(System.Text.Json.Serialization.JsonSerializerContext)).ShouldBeTrue();
+        Activator.CreateInstance(context).ShouldNotBeNull();
+    }
+
+    [Fact]
     public void TestGenerateCodeMarksDeprecatedVersionsObsoleteWithoutMessage()
     {
         const string modelNamespace = "KubernetesCRDModelGen.Tests.Models";
@@ -256,6 +411,53 @@ spec:
         result.Diagnostics.ShouldNotBeEmpty();
         result.Diagnostics.ShouldContain(x => x.Id == GeneratedAssemblyDiagnostic.ExceptionDiagnosticId);
         result.Diagnostics.ShouldContain(x => x.Severity == GeneratedAssemblyDiagnosticSeverity.Error);
+    }
+
+    [Fact]
+    public void TestGeneratedAssemblyResultDeconstructsAndReportsSuccess()
+    {
+        var xml = new XmlDocument();
+        var assembly = typeof(string).Assembly;
+        var result = new GeneratedAssemblyResult(assembly, xml, Array.Empty<GeneratedAssemblyDiagnostic>(), null);
+
+        result.Success.ShouldBeTrue();
+
+        result.Deconstruct(out var deconstructedAssembly, out var deconstructedXml);
+
+        deconstructedAssembly.ShouldBeSameAs(assembly);
+        deconstructedXml.ShouldBeSameAs(xml);
+    }
+
+    [Fact]
+    public void TestGetOpenApiSchemaCachesParsedSchema()
+    {
+        var generator = new Generator();
+        var method = typeof(Generator).GetMethod("GetOpenApiSchema", BindingFlags.Instance | BindingFlags.NonPublic);
+        method.ShouldNotBeNull();
+
+        var schema = new V1JSONSchemaProps
+        {
+            Type = "object",
+            Properties = new Dictionary<string, V1JSONSchemaProps>
+            {
+                ["name"] = new()
+                {
+                    Type = "string",
+                },
+            },
+        };
+
+        var reader = new OpenApiJsonReader();
+        using var schemaStream = new MemoryStream();
+        var diagnostics = new List<GeneratedAssemblyDiagnostic>();
+
+        var first = (OpenApiSchema?)method!.Invoke(generator, [reader, schemaStream, schema, diagnostics]);
+        var second = (OpenApiSchema?)method.Invoke(generator, [reader, schemaStream, schema, diagnostics]);
+
+        first.ShouldNotBeNull();
+        second.ShouldNotBeNull();
+        second.ShouldBeSameAs(first);
+        diagnostics.ShouldBeEmpty();
     }
 
     [Fact]
