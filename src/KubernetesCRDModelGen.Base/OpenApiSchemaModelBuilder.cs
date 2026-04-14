@@ -335,7 +335,7 @@ internal sealed class OpenApiSchemaModelBuilder
             "byte" => ByteArrayType,
             "date" => DateTimeType,
             "date-time" => DateTimeType,
-            "duration" => TimeSpanType,
+            "duration" => StringType,
             _ => StringType
         };
 
