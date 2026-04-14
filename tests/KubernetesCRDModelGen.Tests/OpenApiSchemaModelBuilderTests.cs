@@ -308,7 +308,7 @@ spec:
       schema:
         openAPIV3Schema:
 {{Indent(schemaYaml, 10)}}
-""" )[0];
+""")[0];
 
         using var stream = new MemoryStream();
         JsonSerializer.Serialize(stream, crd.Spec.Versions.Single().Schema!.OpenAPIV3Schema, GeneratorSourceGenerationContext.Default.V1JSONSchemaProps);

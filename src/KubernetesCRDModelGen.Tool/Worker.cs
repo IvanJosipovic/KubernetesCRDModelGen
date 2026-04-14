@@ -89,7 +89,7 @@ namespace Worker
                 }
                 catch (Exception e)
                 {
-                    logger.LogError(e,"Error parsing {file}", file);
+                    logger.LogError(e, "Error parsing {file}", file);
                     Environment.ExitCode = 1;
                     appLifetime.StopApplication();
                 }
