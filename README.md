@@ -146,4 +146,4 @@ We publish the following premade packages
 | `'string'` with `format=byte` (base64 encoded) | `byte[]` |
 | `'string'` with `format=date` | `DateTime` |
 | `'string'` with `format=date-time` | `DateTime` |
-| `'string'` with `format=duration` | `TimeSpan` |
+| `'string'` with `format=duration` | `string` |

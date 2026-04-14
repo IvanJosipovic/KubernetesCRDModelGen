@@ -329,7 +329,7 @@ spec:
         specType.GetProperty("Blob")!.PropertyType.ShouldBe(typeof(byte[]));
         specType.GetProperty("CreatedAt")!.PropertyType.ShouldBe(typeof(DateTime?));
         specType.GetProperty("BirthDate")!.PropertyType.ShouldBe(typeof(DateTime?));
-        specType.GetProperty("Timeout")!.PropertyType.ShouldBe(typeof(TimeSpan?));
+        specType.GetProperty("Timeout")!.PropertyType.ShouldBe(typeof(string));
         specType.GetProperty("Ratio")!.PropertyType.ShouldBe(typeof(float?));
         specType.GetProperty("Amount")!.PropertyType.ShouldBe(typeof(double?));
         specType.GetProperty("Score")!.PropertyType.ShouldBe(typeof(double?));

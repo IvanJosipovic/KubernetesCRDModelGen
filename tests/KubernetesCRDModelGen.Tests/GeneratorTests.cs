@@ -134,19 +134,19 @@ spec:
 
         static void ShouldHaveCorrectAttributeArguments(Type type, string namedKind)
         {
-          var attribute = type.CustomAttributes.First(x => x.AttributeType == typeof(KubernetesEntityAttribute));
+            var attribute = type.CustomAttributes.First(x => x.AttributeType == typeof(KubernetesEntityAttribute));
 
-          var kind = attribute.NamedArguments.First(x => x.MemberName == "Kind");
-          kind.TypedValue.Value.ShouldBe(namedKind);
+            var kind = attribute.NamedArguments.First(x => x.MemberName == "Kind");
+            kind.TypedValue.Value.ShouldBe(namedKind);
 
-          var group = attribute.NamedArguments.First(x => x.MemberName == "Group");
-          group.TypedValue.Value.ShouldBe("kubeui.com");
+            var group = attribute.NamedArguments.First(x => x.MemberName == "Group");
+            group.TypedValue.Value.ShouldBe("kubeui.com");
 
-          var version = attribute.NamedArguments.First(x => x.MemberName == "ApiVersion");
-          version.TypedValue.Value.ShouldBe("v1beta1");
+            var version = attribute.NamedArguments.First(x => x.MemberName == "ApiVersion");
+            version.TypedValue.Value.ShouldBe("v1beta1");
 
-          var plural = attribute.NamedArguments.First(x => x.MemberName == "PluralName");
-          plural.TypedValue.Value.ShouldBe("tests");
+            var plural = attribute.NamedArguments.First(x => x.MemberName == "PluralName");
+            plural.TypedValue.Value.ShouldBe("tests");
         }
     }
 
@@ -396,10 +396,10 @@ spec:
 
         static void ShouldHaveCorrectFieldValues(Type type, string namedKind)
         {
-          type.GetField("KubeApiVersion").GetValue(null).ShouldBe("v1beta1");
-          type.GetField("KubeGroup").GetValue(null).ShouldBe("kubeui.com");
-          type.GetField("KubeKind").GetValue(null).ShouldBe(namedKind);
-          type.GetField("KubePluralName").GetValue(null).ShouldBe("tests");
+            type.GetField("KubeApiVersion").GetValue(null).ShouldBe("v1beta1");
+            type.GetField("KubeGroup").GetValue(null).ShouldBe("kubeui.com");
+            type.GetField("KubeKind").GetValue(null).ShouldBe(namedKind);
+            type.GetField("KubePluralName").GetValue(null).ShouldBe("tests");
 
             var instance = Activator.CreateInstance(type);
 
@@ -2065,7 +2065,7 @@ spec:
 
         var listInstance = Activator.CreateInstance(list);
 
-         ((IList)listInstance).Add(Enum.Parse(propertyType.PropertyType.GenericTypeArguments[0], "TestTest"));
+        ((IList)listInstance).Add(Enum.Parse(propertyType.PropertyType.GenericTypeArguments[0], "TestTest"));
 
         propertyType.SetValue(spec, listInstance);
 
