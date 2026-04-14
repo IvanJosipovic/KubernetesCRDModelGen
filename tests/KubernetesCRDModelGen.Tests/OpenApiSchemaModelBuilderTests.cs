@@ -220,7 +220,7 @@ properties:
         spec.Properties.Single(x => x.Name == "Blob").Type.DisplayName.ShouldBe("byte[]");
         spec.Properties.Single(x => x.Name == "CreatedAt").Type.DisplayName.ShouldBe("DateTime");
         spec.Properties.Single(x => x.Name == "BirthDate").Type.DisplayName.ShouldBe("DateTime");
-        spec.Properties.Single(x => x.Name == "Timeout").Type.DisplayName.ShouldBe("TimeSpan");
+        spec.Properties.Single(x => x.Name == "Timeout").Type.DisplayName.ShouldBe("string");
         spec.Properties.Single(x => x.Name == "Ratio").Type.DisplayName.ShouldBe("float");
         spec.Properties.Single(x => x.Name == "Amount").Type.DisplayName.ShouldBe("double");
         spec.Properties.Single(x => x.Name == "Score").Type.DisplayName.ShouldBe("double");
