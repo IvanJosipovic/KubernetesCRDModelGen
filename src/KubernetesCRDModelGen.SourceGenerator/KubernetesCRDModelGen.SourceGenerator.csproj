@@ -28,22 +28,22 @@
         <PackageReference Include="YamlDotNet.System.Text.Json" Version="1.7.1" PrivateAssets="all"  />
     </ItemGroup>
 
-    <ItemGroup Condition="'$(IsPacking)' == 'true'">
+    <ItemGroup>
         <!-- Generator dependencies -->
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\KubernetesCRDModelGen.Base.dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 
-        <ItemGroup>
+    <ItemGroup>
         <None Include="..\..\README.md" Pack="true" PackagePath="\" />
         <ProjectReference Include="..\KubernetesCRDModelGen.Base\KubernetesCRDModelGen.Base.csproj" PrivateAssets="all" />
     </ItemGroup>
 
-    <PropertyGroup Condition="'$(IsPacking)' == 'true'">
+    <PropertyGroup>
         <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths</GetTargetPathDependsOn>
     </PropertyGroup>
 
-    <Target Name="GetDependencyTargetPaths" AfterTargets="ResolvePackageDependenciesForBuild" Condition="'$(IsPacking)' == 'true'">
+    <Target Name="GetDependencyTargetPaths" AfterTargets="ResolvePackageDependenciesForBuild">
         <ItemGroup>
             <DllDependencies
                  Include="@(ResolvedCompileFileDefinitions->'%(FullPath)')"
@@ -53,10 +53,10 @@
         </ItemGroup>
     </Target>
 
-  <ItemGroup Condition="'$(IsPacking)' == 'true'">
-    <None Include="KubernetesCRDModelGen.SourceGenerator.props" Visible="false"
-          Pack="true" PackagePath="build" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="KubernetesCRDModelGen.SourceGenerator.props" Visible="false"
+              Pack="true" PackagePath="build" />
+    </ItemGroup>
 
 
 </Project>
