@@ -41,6 +41,9 @@ jobs:
             }
           }
 
+      - name: Build
+        run: dotnet build
+
       - name: Check Files Changed
         id: checkfiles
         shell: pwsh
