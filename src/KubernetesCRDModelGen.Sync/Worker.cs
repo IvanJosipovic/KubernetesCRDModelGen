@@ -196,18 +196,21 @@ public class Worker : BackgroundService
 
     private async Task ProcessHelmChart(Config config)
     {
-        await HelmClient.RepoRemove("temp");
-        await HelmClient.RepoAdd("temp", config.Helm!.Repo);
-        await HelmClient.RepoUpdate();
+        var yaml = "";
 
-        var yaml = await HelmClient.Template("temp", config.Helm.Chart, config.Helm.PreRelease.GetValueOrDefault(), config.Helm.CMD);
+        if (config.Helm.Repo.StartsWith("oci://"))
+        {
+            yaml = await HelmClient.TemplateOCIRepo(config.Helm.Repo, config.Helm.Chart, config.Helm.PreRelease.GetValueOrDefault(), config.Helm.CMD);
+        }
+        else
+        {
+            yaml = await HelmClient.TemplateHttpRepo(config.Helm.Repo, config.Helm.Chart, config.Helm.PreRelease.GetValueOrDefault(), config.Helm.CMD);
+        }
 
         byte[] byteArray = Encoding.UTF8.GetBytes(yaml);
         var stream = new MemoryStream(byteArray);
 
         ProcessYamlStream(stream);
-
-        await HelmClient.RepoRemove("temp");
     }
 
     private void ProcessYamlStream(Stream stream)
