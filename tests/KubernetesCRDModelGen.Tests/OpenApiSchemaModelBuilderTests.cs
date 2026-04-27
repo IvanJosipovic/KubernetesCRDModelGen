@@ -156,6 +156,7 @@ properties:
         list.IsKubernetesEntity.ShouldBeTrue();
         list.BaseTypes.Select(x => x.DisplayName).ShouldBe(["IKubernetesObject<V1ListMeta>", "IItems<V1Widget>"]);
         list.Properties.Select(x => x.Name).ShouldBe(["ApiVersion", "Kind", "Metadata", "Items"]);
+        list.Properties.Single(x => x.Name == "Items").IsRequired.ShouldBeTrue();
         list.Properties.Single(x => x.Name == "ApiVersion").InitializerValue.ShouldBe("example.com/v1");
         list.Properties.Single(x => x.Name == "Kind").InitializerValue.ShouldBe("WidgetList");
 
