@@ -26,7 +26,7 @@ jobs:
       - name: Clean Models
         run: rm -rf crds
 
-      - name: Clean Models
+      - name: Clean Cs
         run: rm -rf Generated
 
       - name: Sync CRDs
