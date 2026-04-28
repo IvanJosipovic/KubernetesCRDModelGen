@@ -3,12 +3,7 @@
   "enabled": true,
   "timezone": "America/Vancouver",
   "dependencyDashboard": true,
-  "dependencyDashboardTitle": "Renovate Dashboard",
   "semanticCommits": "enabled",
-  "suppressNotifications": [
-    "prIgnoreNotification"
-  ],
-  "rebaseWhen": "conflicted",
   "assignees": [
     "@ivanjosipovic"
   ],
@@ -16,17 +11,42 @@
     "config:recommended"
   ],
   "platformAutomerge": true,
+  "prConcurrentLimit": 0,
   "packageRules": [
     {
-      "automerge": true,
       "matchUpdateTypes": [
         "minor",
         "patch",
         "digest"
       ],
-      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
       "matchFileNames": [
-        "src/KubernetesCRDModelGen.Tests/KubernetesCRDModelGen.Tests.csproj"
+        "global.json"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "automerge": true,
+      "semanticCommitType": "fix",
+      "matchFileNames": [
+        "src/**"
+      ]
+    },
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "digest"
+      ],
+      "automerge": true,
+      "matchFileNames": [
+        ".github/workflows/**",
+        "tests/**",
+        "benchmarks/**"
       ]
     },
     {
