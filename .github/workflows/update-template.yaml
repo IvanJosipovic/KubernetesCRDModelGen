@@ -26,6 +26,9 @@ jobs:
       - name: Clean Models
         run: rm -rf crds
 
+      - name: Clean Models
+        run: rm -rf Generated
+
       - name: Sync CRDs
         run: KubernetesCRDModelGen.Sync --ModelDir=crds
 
@@ -43,6 +46,18 @@ jobs:
 
       - name: Build
         run: dotnet build
+
+      - name: Validate Yamls
+        working-directory: Generated/KubernetesCRDModelGen.SourceGenerator
+        shell: pwsh
+        run: |
+          foreach ($Dir in Get-ChildItem -Directory) {
+            $CsFiles = Get-ChildItem -Path $Dir.FullName -Filter *.cs -File -ErrorAction SilentlyContinue
+
+            if ($CsFiles.Count -eq 0) {
+              throw "No .cs file found in directory: $($Dir.FullName)"
+            }
+          }
 
       - name: Check Files Changed
         id: checkfiles
