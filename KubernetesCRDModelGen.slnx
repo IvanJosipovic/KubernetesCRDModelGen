@@ -24,6 +24,7 @@
     <Project Path="src/KubernetesCRDModelGen/KubernetesCRDModelGen.csproj" />
   </Folder>
   <Folder Name="/tests/">
+    <Project Path="tests/KubernetesCRDModelGen.SourceGenerator.Tests/KubernetesCRDModelGen.SourceGenerator.Tests.csproj" />
     <Project Path="tests/KubernetesCRDModelGen.Tests/KubernetesCRDModelGen.Tests.csproj" />
   </Folder>
 
