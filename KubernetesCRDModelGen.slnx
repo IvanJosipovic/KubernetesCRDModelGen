@@ -20,13 +20,12 @@
   <Folder Name="/src/">
     <Project Path="src/KubernetesCRDModelGen.Base/KubernetesCRDModelGen.Base.csproj" />
     <Project Path="src/KubernetesCRDModelGen.SourceGenerator/KubernetesCRDModelGen.SourceGenerator.csproj" />
-    <Project Path="src/KubernetesCRDModelGen.Sync/KubernetesCRDModelGen.Sync.csproj" />
     <Project Path="src/KubernetesCRDModelGen.Tool/KubernetesCRDModelGen.Tool.csproj" />
     <Project Path="src/KubernetesCRDModelGen/KubernetesCRDModelGen.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/KubernetesCRDModelGen.Tests/KubernetesCRDModelGen.Tests.csproj" />
     <Project Path="tests/KubernetesCRDModelGen.SourceGenerator.Tests/KubernetesCRDModelGen.SourceGenerator.Tests.csproj" />
+    <Project Path="tests/KubernetesCRDModelGen.Tests/KubernetesCRDModelGen.Tests.csproj" />
   </Folder>
 
 </Solution>

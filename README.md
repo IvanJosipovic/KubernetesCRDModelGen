@@ -13,8 +13,6 @@ This project contains components which allow generation of C# Classes/Assemblies
   - Yaml to C# Source Generator
 - KubernetesCRDModelGen.Tool
   - Yaml to C# Class Generator
-- KubernetesCRDModelGen.Sync
-  - Synchronizes Custom Resource Definitions from numerous sources
 
 ## How to use
 
@@ -84,43 +82,10 @@ Update the .csproj with the following settings. The Models will be generated in 
 
 ## Published Packages
 
-We publish the following premade packages
+We publish premade packages for popular projects at the following repo:
 
-| Group | NuGet |
-|---|---|
-| aquasecurity.github.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.aquasecurity.github.io/) |
-| argoproj.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.argoproj.io/) |
-| aws.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.aws.upbound.io/) |
-| azapi.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azapi.upbound.io/) |
-| azure.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.com/)  |
-| azure.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azure.upbound.io/) |
-| azuread.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.azuread.upbound.io/) |
-| cnrm.cloud.google.com | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.cnrm.cloud.google.com/) |
-| crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.crossplane.io/) |
-| databricks.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.databricks.crossplane.io/) |
-| databricks.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.databricks.upbound.io/) |
-| fluxcd.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.fluxcd.io/) |
-| gateway.networking.k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.gateway.networking.k8s.io/) |
-| gcp.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.gcp.upbound.io/) |
-| github.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.github.upbound.io/) |
-| helm.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.helm.crossplane.io/) |
-| http.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.http.crossplane.io/) |
-| istio.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.istio.io/) |
-| jetstack.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.jetstack.io/) |
-| keda.sh | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.keda.sh/) |
-| knative.dev | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.knative.dev/) |
-| kubernetes.crossplane.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.kubernetes.crossplane.io/) |
-| kubevirt.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.kubevirt.io/) |
-| longhorn.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.longhorn.io/) |
-| opentofu.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.opentofu.upbound.io/) |
-| postgresql.cnpg.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.postgresql.cnpg.io/) |
-| projectcalico.org | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.projectcalico.org/) |
-| secrets-store.csi.x-k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.secrets-store.csi.x-k8s.io) |
-| storage.k8s.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.storage.k8s.io) |
-| tf.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.tf.upbound.io/) |
-| traefik.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.traefik.io/) |
-| upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.upbound.io/) |
-| vault.upbound.io | [Link](https://www.nuget.org/packages/KubernetesCRDModelGen.Models.vault.upbound.io/) |
+[KubernetesCRDModelGen.Models](https://github.com/IvanJosipovic/KubernetesCRDModelGen.Models)
+
 
 ## Type Mappings
 
