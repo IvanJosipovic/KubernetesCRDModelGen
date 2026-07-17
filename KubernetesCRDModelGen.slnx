@@ -9,9 +9,6 @@
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
-    <File Path=".github/workflows/cicd-template.yaml" />
-    <File Path=".github/workflows/cicd.yaml" />
-    <File Path=".github/workflows/update-template.yaml" />
     <File Path=".releaserc.json" />
     <File Path="global.json" />
     <File Path="README.md" />
