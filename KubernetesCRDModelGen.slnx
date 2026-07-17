@@ -9,13 +9,9 @@
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
-    <File Path=".github/workflows/cicd-template.yaml" />
-    <File Path=".github/workflows/cicd.yaml" />
-    <File Path=".github/workflows/update-template.yaml" />
     <File Path=".releaserc.json" />
     <File Path="global.json" />
     <File Path="README.md" />
-    <File Path="src/Models/Directory.Build.props" />
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/KubernetesCRDModelGen.Base/KubernetesCRDModelGen.Base.csproj" />

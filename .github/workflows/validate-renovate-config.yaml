@@ -9,6 +9,7 @@ on:
 
 jobs:
   call-workflow:
+    name: Validate Renovate Config
     permissions:
       contents: read
     uses: IvanJosipovic/templates/.github/workflows/validate-renovate-config.yaml@main
