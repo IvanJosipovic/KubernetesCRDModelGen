@@ -8,7 +8,6 @@
         <LangVersion>latest</LangVersion>
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
-        <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
         <WarningsAsErrors>$(WarningsAsErrors);CS8785</WarningsAsErrors>
     </PropertyGroup>
 
