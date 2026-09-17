@@ -1789,7 +1789,12 @@ spec:
         spec.GetType().GetProperty("TestEnum").GetValue(spec).ShouldBe(Enum.Parse(enumType, "Option1"));
 
         var testYaml2 = KubernetesYaml.Serialize(@object);
-        testYaml2.ShouldBe("apiVersion: kubeui.com/v1beta1\r\nkind: Test\r\nspec:\r\n  testEnum: ''");
+        testYaml2.ReplaceLineEndings("\n").ShouldBe("""
+apiVersion: kubeui.com/v1beta1
+kind: Test
+spec:
+  testEnum: ''
+""".ReplaceLineEndings("\n"));
     }
 
     [Fact]
