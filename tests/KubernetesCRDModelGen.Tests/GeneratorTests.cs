@@ -1638,16 +1638,13 @@ spec:
 
         var specType = type.GetProperty("Spec").PropertyType;
 
-        var enumType = specType.GetProperty("TestEnum").PropertyType;
+        var enumType = Nullable.GetUnderlyingType(specType.GetProperty("TestEnum").PropertyType);
 
-        enumType.ShouldBe(typeof(string));
+        enumType.ShouldNotBeNull();
+        enumType.IsEnum.ShouldBeTrue();
     }
 
-    /// <summary>
-    /// Enums with blank values are not supported by JsonStringEnumConverter
-    /// https://github.com/dotnet/runtime/issues/107367
-    /// </summary>
-    [Fact(Skip = "Enums with empty values are not supported")]
+    [Fact]
     public void TestEnumStringEmptyJson()
     {
         var yaml = @"
@@ -1693,8 +1690,9 @@ spec:
         var specType = type.GetProperty("Spec").PropertyType;
 
         var enumType = specType.GetProperty("TestEnum").PropertyType;
+        enumType = Nullable.GetUnderlyingType(enumType);
 
-        Nullable.GetUnderlyingType(enumType).IsEnum.ShouldBeTrue();
+        enumType.IsEnum.ShouldBeTrue();
 
         var members = GetMembers(enumType);
 
@@ -1707,7 +1705,7 @@ spec:
         members[2].Name.ShouldBe("Never");
         members[2].GetCustomAttribute<EnumMemberAttribute>().Value.ShouldBe("never");
 
-        var testJson = "{\"spec\": {\"testEnum\\: \"\" } }";
+        var testJson = "{\"spec\": {\"testEnum\": \"\" } }";
 
         var @object = DeserializeKubeJson(testJson, type);
 
@@ -1717,14 +1715,10 @@ spec:
 
         var testJson2 = KubernetesJson.Serialize(@object);
 
-        testJson2.ShouldBe(testJson);
+        testJson2.ShouldBe("{\"apiVersion\":\"kubeui.com/v1beta1\",\"kind\":\"Test\",\"spec\":{\"testEnum\":\"\"}}");
     }
 
-    /// <summary>
-    /// Enums with blank values are not supported by JsonStringEnumConverter
-    /// https://github.com/dotnet/runtime/issues/107367
-    /// </summary>
-    [Fact(Skip = "Enums with empty values are not supported")]
+    [Fact]
     public void TestEnumStringEmptyYaml()
     {
         var yaml = @"
@@ -1795,7 +1789,12 @@ spec:
         spec.GetType().GetProperty("TestEnum").GetValue(spec).ShouldBe(Enum.Parse(enumType, "Option1"));
 
         var testYaml2 = KubernetesYaml.Serialize(@object);
-        testYaml2.ShouldBe(testYaml);
+        testYaml2.ReplaceLineEndings("\n").ShouldBe("""
+apiVersion: kubeui.com/v1beta1
+kind: Test
+spec:
+  testEnum: ''
+""".ReplaceLineEndings("\n"));
     }
 
     [Fact]
