@@ -402,7 +402,7 @@ internal sealed class OpenApiSchemaModelBuilder
         for (var i = 0; i < values.Count; i++)
         {
             var value = values[i];
-            if (value is null || value.GetValueKind() != JsonValueKind.String || string.IsNullOrEmpty(value.GetValue<string>()))
+            if (value is null || value.GetValueKind() != JsonValueKind.String)
             {
                 return false;
             }
