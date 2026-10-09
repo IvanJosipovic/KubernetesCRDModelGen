@@ -43,7 +43,9 @@
         <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths</GetTargetPathDependsOn>
     </PropertyGroup>
 
-    <Target Name="GetDependencyTargetPaths" AfterTargets="ResolvePackageDependenciesForBuild">
+    <Target Name="GetDependencyTargetPaths"
+            BeforeTargets="_GetPackageFiles"
+            DependsOnTargets="ResolvePackageDependenciesForBuild">
         <ItemGroup>
             <DllDependencies
                  Include="@(ResolvedCompileFileDefinitions->'%(FullPath)')"
