@@ -16,6 +16,7 @@ public class SourceGeneratorPackageTests
         var repositoryRoot = FindRepositoryRoot();
         var configuration = new DirectoryInfo(AppContext.BaseDirectory).Parent?.Name
             ?? throw new InvalidOperationException("Could not determine the test build configuration.");
+        var packageVersion = $"0.0.1-package-test-{Guid.NewGuid():N}";
         var projectPath = Path.Combine(
             repositoryRoot,
             "src",
@@ -45,7 +46,7 @@ public class SourceGeneratorPackageTests
                 "--no-build",
                 "--output",
                 packageOutputDirectory,
-                "-p:Version=0.0.1-package-test");
+                $"-p:Version={packageVersion}");
 
             var packagePath = Directory.GetFiles(packageOutputDirectory, "*.nupkg").Single();
             string[] packageEntries;
@@ -77,7 +78,7 @@ public class SourceGeneratorPackageTests
             var consumerProjectPath = Path.Combine(consumerDirectory, "Consumer.csproj");
             File.WriteAllText(
                 consumerProjectPath,
-                """
+                $"""
                 <Project Sdk="Microsoft.NET.Sdk">
                     <PropertyGroup>
                         <TargetFramework>net10.0</TargetFramework>
@@ -89,7 +90,7 @@ public class SourceGeneratorPackageTests
                     </PropertyGroup>
                     <ItemGroup>
                         <PackageReference Include="KubernetesClient" Version="19.0.2" />
-                        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="0.0.1-package-test">
+                        <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="{packageVersion}">
                             <PrivateAssets>all</PrivateAssets>
                         </PackageReference>
                         <AdditionalFiles Include="kubevirts.kubevirt.io.yaml" />
@@ -190,9 +191,26 @@ public class SourceGeneratorPackageTests
             throw new InvalidOperationException("Could not start dotnet.");
         }
 
-        var standardOutputTask = process.StandardOutput.ReadToEndAsync(cancellationToken);
-        var standardErrorTask = process.StandardError.ReadToEndAsync(cancellationToken);
-        await process.WaitForExitAsync(cancellationToken);
+        var standardOutputTask = process.StandardOutput.ReadToEndAsync();
+        var standardErrorTask = process.StandardError.ReadToEndAsync();
+        try
+        {
+            await process.WaitForExitAsync(cancellationToken);
+        }
+        catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
+        {
+            try
+            {
+                process.Kill(entireProcessTree: true);
+            }
+            catch (InvalidOperationException) when (process.HasExited)
+            {
+            }
+
+            await process.WaitForExitAsync(CancellationToken.None);
+            await Task.WhenAll(standardOutputTask, standardErrorTask);
+            throw;
+        }
 
         var standardOutput = await standardOutputTask;
         var standardError = await standardErrorTask;
