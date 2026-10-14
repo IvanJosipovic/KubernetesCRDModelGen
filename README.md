@@ -58,12 +58,12 @@ Update the .csproj with the following settings. The Models will be generated in 
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="KubernetesClient" Version="19.0.2" />
+    <PackageReference Include="KubernetesClient" Version="21.0.8" />
     <PackageReference Include="KubernetesCRDModelGen.SourceGenerator" Version="1.*" />
   </ItemGroup>
 
   <ItemGroup Condition="''$(TargetFramework)' == 'net10.0'">
-    <PackageReference Include="System.Text.Json" Version="11.0.0-rc.1.26425.128" />
+    <PackageReference Include="System.Text.Json" Version="****11.0.0-rc.1.26425.128**" />
   </ItemGroup>
 
   <!-- For local CRD files -->
