@@ -63,7 +63,7 @@ Update the .csproj with the following settings. The Models will be generated in 
   </ItemGroup>
 
   <ItemGroup Condition="''$(TargetFramework)' == 'net10.0'">
-    <PackageReference Include="System.Text.Json" Version="****11.0.0-rc.1.26425.128**" />
+    <PackageReference Include="System.Text.Json" Version="11.0.0-rc.2.26504.105" />
   </ItemGroup>
 
   <!-- For local CRD files -->
